@@ -1,5 +1,7 @@
 import { ChevronDown, Shield, Users, Building, Lightbulb, MapPin, Zap, Star } from "lucide-react"
 import homeBg from "../../images/home-bg.png"
+import Header from "@components/Header"
+import EmergencyBanner from "@components/EmergencyBanner"
 
 const Home = () => {
   return (
@@ -17,62 +19,9 @@ const Home = () => {
       <div className="relative z-10">
         {/* Emergency Banner */}
         <div className="rounded-t-2xl mx-4">
-          <div className="bg-gradient-to-r from-orange-500 via-orange-400 to-pink-500 px-6 py-3">
-            <div className="container mx-auto flex items-center justify-center space-x-4">
-              <span className="text-white font-medium">Under Attack or Suspect a Breach?</span>
-              <button className="bg-white text-slate-900 hover:bg-gray-100 px-4 py-1 text-sm font-semibold rounded">
-                GET HELP NOW
-              </button>
-            </div>
-          </div>
-
+          <EmergencyBanner></EmergencyBanner>
           {/* Main Header */}
-          <header className="bg-slate-800/90 backdrop-blur-sm border-b border-slate-700">
-            <div className="container mx-auto px-6 py-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-8">
-                  <a href="/" className="text-white text-2xl font-bold">
-                    vijilan
-                  </a>
-                  <nav className="hidden md:flex space-x-8">
-                    <div className="relative group">
-                      <a href="#" className="text-white hover:text-cyan-400 flex items-center space-x-1">
-                        <span>Solutions</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <div className="relative group">
-                      <a href="#" className="text-white hover:text-cyan-400 flex items-center space-x-1">
-                        <span>Platform</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <div className="relative group">
-                      <a href="#" className="text-white hover:text-cyan-400 flex items-center space-x-1">
-                        <span>Customers</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <div className="relative group">
-                      <a href="#" className="text-white hover:text-cyan-400 flex items-center space-x-1">
-                        <span>Insights</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </a>
-                    </div>
-                    <a href="#" className="text-white hover:text-cyan-400">
-                      About
-                    </a>
-                    <a href="#" className="text-white hover:text-cyan-400">
-                      Contact
-                    </a>
-                  </nav>
-                </div>
-                <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 font-semibold rounded">
-                  BOOK A CALL
-                </button>
-              </div>
-            </div>
-          </header>
+          <Header></Header>
         </div>
 
         {/* Hero Section */}
@@ -85,10 +34,7 @@ const Home = () => {
             Securing the Enterprise.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Vijilan delivers comprehensive cybersecurity solutions designed specifically for Managed Service Providers
-            (MSPs) and their clients. Our intelligent platform provides advanced threat detection, automated response
-            capabilities, and seamless integration to help MSPs scale their security offerings while ensuring
-            enterprise-grade protection.
+          Vijilan: Intelligent, Resilient Cybersecurity. Empowering MSP Growth. Securing the Enterprise.
           </p>
           <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 text-lg rounded">
             Discover Vijilan
