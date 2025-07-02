@@ -8,6 +8,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
 import VisilanPartner from '@app/MsgPartner/VijilanMspPartner';
 import ThreatResponse from '@app/MsgPartner/threatRespondService';
+import VisislanProfessional from "@app/MsgPartner/VijilanProfessionalServices"
 
 const router = createBrowserRouter([
     {
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
             {
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
-            }
+            },
+            {
+                path: "visilan-professional-service",
+                element: <VisislanProfessional />,
+            },
         ],
     },
 ]);
