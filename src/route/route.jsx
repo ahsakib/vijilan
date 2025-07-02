@@ -5,6 +5,7 @@ import About from '@app/About/About';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
+import VisilanPartner from '@app/MsgPartner/VijilanMspPartner'
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "blog-landing",
                 element: <Blog_landing_page />,
+            },
+            {
+                path: "visilan-msg-partner",
+                element: <VisilanPartner />,
             },
         ],
     },

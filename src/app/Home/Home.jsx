@@ -13,13 +13,6 @@ const Home = () => {
 
       {/* Content Overlay */}
       <div className="relative z-10">
-        {/* Emergency Banner */}
-        <div className="rounded-t-2xl mx-4">
-          <EmergencyBanner></EmergencyBanner>
-          {/* Main Header */}
-          <Header></Header>
-        </div>
-
         {/* Hero Section */}
         <HeroSection />
 

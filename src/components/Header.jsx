@@ -2,9 +2,12 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import homeBg from "../images/home-bg.png"
+import EmergencyBanner from './EmergencyBanner';
 
 const Header = () => {
   return (
+    <>
+    <EmergencyBanner/>
     <div>
       <img
         src={homeBg}
@@ -58,6 +61,7 @@ const Header = () => {
         </div>
       </header>
     </div>
+    </>
   );
 };
 
