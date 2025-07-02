@@ -4,6 +4,7 @@ import banner from "../../Assets/Blog-banner.png";
 import linkdin from "../../Assets/linkdin.png";
 import mail from "../../Assets/mail.png";
 import x from "../../Assets/x.png";
+import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
 
 
 
@@ -169,24 +170,13 @@ const Blog = () => {
                 <div className='col-span-2 text-center'
                 // style={{   background: 'linear-gradient(to right, #F89B29, #FF0F7B)'}}
                 >
-
-                    <div className="bg-slate-800 p-6 mx-1 rounded-lg text-center b">
-                        <h3 className="text-xl text-center font-bold mb-4">Is your organization vulnerable to malware-free attacks?</h3>
-
-                        <p className='text-sm font-semibold py-5'>
-                            Vijilan's ThreatRemediate™ service provides behavioral-based detection and active containment capabilities specifically designed to identify and stop these sophisticated threats. Our expert SOC doesn't just alert you—we take direct action to neutralize the threat.
-                        </p>
-
-                        <div className="w-1/2  px-4 py-2 mx-auto rounded font-semibold   text-sm  mb-5"
-                            style={{
-                                background: 'linear-gradient(to right, #F89B29, #FF0F7B)',
-                            }}
-                        >
-                            LEARN ABOUT THREATREMEDIATE
-                        </div>
+                    <Blog_Subscribe_Component_Btn
+                        H1="Is your organization vulnerable to malware-free attacks?"
+                        Desc="Vijilan's ThreatRemediate™ service provides behavioral-based detection and active containment capabilities specifically designed to identify and stop these sophisticated threats. Our expert SOC doesn't just alert you—we take direct action to neutralize the threat."
+                        Btn=" LEARN ABOUT THREATREMEDIATE"
+                    />
 
 
-                    </div>
                 </div>
 
 

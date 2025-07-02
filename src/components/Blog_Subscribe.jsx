@@ -5,8 +5,8 @@ const Blog_Subscribe = () => {
         <div className="w-full my-8 py-8 bg-linear-to-t from-[#082235]  to-[#00445d] rounded-xl  
             ">
             <div className='w-3/4 mx-auto py-6 '>
-                <h1 className='font-semibold text-center my-4 text-4xl'>Get Security Insights Delivered to Your Inbox.</h1>
-                <p className='font-thin text-center my-3'>Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan.</p>
+                <h1 className='font-semibold text-center my-4 text-4xl'></h1>
+                <p className='font-thin text-center my-3'></p>
 
                 <div className='relative'>
                     <input className='w-full mt-2 py-5 rounded-lg' placeholder='Enter Your Email ' type="search" />

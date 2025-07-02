@@ -17,7 +17,7 @@ const Home = () => {
         <div className="rounded-t-2xl mx-4">
           <EmergencyBanner></EmergencyBanner>
           {/* Main Header */}
-          <Header></Header>
+          {/* <Header></Header> */}
         </div>
 
         {/* Hero Section */}
