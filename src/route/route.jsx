@@ -6,6 +6,7 @@ import Sarve from '@app/Sarve/Sarve';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
+import VisilanPartner from '@app/MsgPartner/VijilanMspPartner'
 
 const router = createBrowserRouter([
     {
@@ -32,7 +33,10 @@ const router = createBrowserRouter([
                 path: "sarve",
                 element: <Sarve />,
             },
-
+            {
+                path: "visilan-msg-partner",
+                element: <VisilanPartner />,
+            },
         ],
     },
 ]);
