@@ -4,7 +4,8 @@ import Header from "@components/Header"
 import EmergencyBanner from "@components/EmergencyBanner"
 import HeroSection from "./HeroSection"
 import GroupIcon from '../../images/Group.svg';
-import GroupIcon2 from '../../images/Frame 1171275073 (1).svg';
+import GroupIcon2 from '../../images/Group (1).svg';
+import CardContent from "@components/CardContent"
 
 const Home = () => {
   return (
@@ -45,53 +46,22 @@ const Home = () => {
               {/* Cards Container */}
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Left Card - MSPs */}
-                <div className="card-gradient-border rounded-3xl p-8 text-center">
-                  {/* Icon Illustration */}
-                  <div className="mb-8 flex justify-center">
-                    <div className="relative">
-                      <img src={GroupIcon} alt="Cybersecurity Illustration" className="w-24 h-24 mx-auto" />
-                    </div>
-                  </div>
 
-
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">For MSPs, VARs & MSSPs</h3>
-
-                  <p className="text-white/90 text-lg leading-relaxed mb-8">
-                    Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance
-                    your service portfolio, and drive profitable growth.
-                  </p>
-
-                  <button
-                    className="bg-white text-slate-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-xl text-lg"
-                    size="lg"
-                  >
-                    EMPOWER YOUR MSP/VAR/MSSP
-                  </button>
-                </div>
+                <CardContent 
+                   icon={GroupIcon}
+                   title="For MSPs, VARs & MSSPs"
+                   description="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
+                   buttonText="EMPOWER YOUR MSP/VAR/MSSP"
+                />
 
                 {/* Right Card - SMBs */}
-                <div className="card-gradient-border rounded-3xl p-8 text-center">
-                  {/* Icon Illustration */}
-                  <div className="mb-8 flex justify-center">
-                    <div className="relative">
-                      <img src={GroupIcon2} alt="Cybersecurity Illustration" className="w-24 h-24 mx-auto" />
-                    </div>
-                  </div>
-
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">For SMBs & Mid-Market Enterprises</h3>
-
-                  <p className="text-white/90 text-lg leading-relaxed mb-8">
-                    Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
-                    tailored to your size and industry needs.
-                  </p>
-
-                  <button
-                    className="bg-white text-slate-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-xl text-lg"
-                    size="lg"
-                  >
-                    SECURE YOUR BUSINESS
-                  </button>
-                </div>
+                <CardContent 
+                   icon={GroupIcon2}
+                   title="For SMBs & Mid-Market Enterprises"
+                   description="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
+                    tailored to your size and industry needs."
+                   buttonText="SECURE YOUR BUSINESS"
+                />
               </div>
             </div>
           </div>

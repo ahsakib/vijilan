@@ -158,6 +158,78 @@
 /* Fill for SVG stars */
 .fill-current { fill: currentColor; }
 
+
+.cyber-card {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: 
+    linear-gradient(to left, #00AEEF 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, #00AEEF 2px, transparent 2px) 0 0,
+    linear-gradient(to right, #00AEEF 2px, transparent 2px) 100% 100%,
+    linear-gradient(to top, #00AEEF 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom right, #00AEEF, #08223500) 100% 0,
+    linear-gradient(to top left, #00AEEF, #08223500) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%, 200px 200px, 200px 200px;
+}
+
+.card-content {
+  border-radius: 1.5rem;
+  background-color: #153B55;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+}
+
+.icon-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.icon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: white;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #f1f5f9;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}
+
 /* Responsive utilities */
 @media (min-width: 768px) {
   .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
