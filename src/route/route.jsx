@@ -1,4 +1,5 @@
 import Blog from '@app/Blog/Blog';
+import Blog_landing_page from '@app/Blog/Blog_landing_page';
 import Home from '@app/Home/Home';
 import About from '@app/About/About';
 import React from 'react';
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <About />,
+            },
+            {
+                path: "blog-landing",
+                element: <Blog_landing_page />,
             },
         ],
     },
