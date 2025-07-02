@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="container mx-auto px-6 py-20 text-center">
+    <section className="container mx-auto px-6 py-20 text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Vijilan: Intelligent, Resilient<br />
             <span className="text-cyan-400">Cybersecurity.</span> Empowering MSP Growth.<br />

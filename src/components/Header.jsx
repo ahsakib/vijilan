@@ -1,8 +1,16 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import homeBg from "../images/home-bg.png"
 
 const Header = () => {
   return (
+    <div>
+            <img
+        src={homeBg}
+        alt="Home Background"
+        className="w-full h-auto absolute"
+      />
     <header className="bg-slate-800/90 backdrop-blur-sm border-b border-slate-700">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -35,9 +43,9 @@ const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </a>
               </div>
-              <a href="#" className="text-white hover:text-cyan-400">
+              <Link to={'about'} className="text-white hover:text-cyan-400">
                 About
-              </a>
+              </Link>
               <a href="#" className="text-white hover:text-cyan-400">
                 Contact
               </a>
@@ -49,6 +57,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </div>
   );
 };
 

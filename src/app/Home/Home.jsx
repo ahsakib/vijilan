@@ -1,5 +1,4 @@
 import { ChevronDown, Shield, Users, Building, Lightbulb, MapPin, Zap, Star } from "lucide-react"
-import homeBg from "../../images/home-bg.png"
 import Header from "@components/Header"
 import EmergencyBanner from "@components/EmergencyBanner"
 import HeroSection from "./HeroSection"
@@ -11,13 +10,6 @@ const Home = () => {
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#191624" }}>
       {/* Background Pattern */}
-
-      <img
-        src={homeBg}
-        alt="Home Background"
-        className="w-full h-auto absolute"
-      />
-
 
       {/* Content Overlay */}
       <div className="relative z-10">
