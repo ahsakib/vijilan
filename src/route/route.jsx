@@ -1,4 +1,4 @@
-import Blog from '@app/Home/Blog/blog';
+import Blog from '@app/Blog/Blog';
 import Home from '@app/Home/Home';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
