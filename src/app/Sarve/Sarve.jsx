@@ -16,11 +16,11 @@ const Sarve = () => {
 
 
                 {/* video section */}
-                <div>
+                <div className='my-8'>
                     <h1 className='capitalize text-center text-5xl mb-8'>A message from our ceo</h1>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className='col-span-1 border-2 bg-[#133A55] '>
-                            <iframe width="260" height="315" src="https://www.youtube.com/embed/sUf2PtEZris?si=I-RlYjaQ9oYy0pXc&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                             
                         </div>
 
                         <div className='col-span-1 '>
