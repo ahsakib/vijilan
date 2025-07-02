@@ -34,3 +34,4 @@ Thumbs.db
 
 # Vite
 .cache/
+package-lock.json

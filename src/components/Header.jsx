@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import homeBg from "../images/home-bg.png"
 
-const Header = () => {
+const Header1 = () => {
   return (
     <div>
             <img
@@ -61,4 +61,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header1;
