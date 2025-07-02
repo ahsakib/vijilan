@@ -6,7 +6,8 @@ import Sarve from '@app/Sarve/Sarve';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
-import VisilanPartner from '@app/MsgPartner/VijilanMspPartner'
+import VisilanPartner from '@app/MsgPartner/VijilanMspPartner';
+import ThreatResponse from '@app/MsgPartner/threatRespondService';
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 path: "visilan-msg-partner",
                 element: <VisilanPartner />,
             },
+            {
+                path: "threat-respond-service",
+                element: <ThreatResponse />,
+            }
         ],
     },
 ]);

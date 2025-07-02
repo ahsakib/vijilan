@@ -12,9 +12,15 @@ import {
     BarChart3,
     ClipboardCheck,
 } from "lucide-react"
-import Clipboard  from "@images/Clipboard Approve.png"
-import RocketIcon  from "@images/Rocket.png"
-import GraphReport  from "@images/Graph Report.png"
+import Clipboard from "@images/Clipboard Approve.png"
+import GraphReport from "@images/Graph Report.png"
+import CardContent from "@components/CardContent"
+import lockIcon from "@images/lock.png"
+import chainIcon from "@images/chain-icons.png"
+import RocketIcon from "@images/rocketIcon.png"
+import sheildIcon from "@images/sheildIcon.png"
+import TaskCheck from "@images/task-check.png"
+import TimeIcon from "@images/timeIcon.png"
 
 // Custom Button Component
 const Button = ({ children, className = "", variant = "default", ...props }) => {
@@ -38,17 +44,17 @@ const Card = ({ children, className = "", ...props }) => {
         <div className={`rounded-lg border shadow-sm ${className}`} {...props}>
             {children}
         </div>
-    )
-}
+    );
+};
 
-// Custom CardContent Component
-const CardContent = ({ children, className = "", ...props }) => {
+const CardContentData = ({ children, className = "", ...props }) => {
     return (
         <div className={`p-6 ${className}`} {...props}>
             {children}
         </div>
-    )
-}
+    );
+};
+
 
 export default function VijilianLanding() {
     return (
@@ -103,7 +109,7 @@ export default function VijilianLanding() {
                     <h2 className="text-5xl font-bold text-center mb-16 text-white">Go-to-Market in Days not Months</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <Card className="bg-gray-800/50 border-gray-700 p-6">
-                            <CardContent className="p-0">
+                            <CardContentData className="p-0">
                                 <div className="flex items-center mb-4">
                                     <img src={Clipboard} alt="" />
                                     <span className="text-blue-400 font-semibold">1. Apply Online</span>
@@ -111,31 +117,31 @@ export default function VijilianLanding() {
                                 <p className="text-gray-300">
                                     Our simple, no-obligation application takes less than 5 minutes to complete.
                                 </p>
-                            </CardContent>
+                            </CardContentData>
                         </Card>
                         <Card className="bg-gray-800/50 border-gray-700 p-6">
-                            <CardContent className="p-0">
+                            <CardContentData className="p-0">
                                 <div className="flex items-center mb-4">
-                                <img src={RocketIcon} alt="" />
+                                    <img src={RocketIcon} alt="" />
 
                                     <span className="text-blue-400 font-semibold">2. Fast Onboarding</span>
                                 </div>
                                 <p className="text-gray-300">
                                     Get access to our partner portal, training, and sales materials within 24 hours.
                                 </p>
-                            </CardContent>
+                            </CardContentData>
                         </Card>
                         <Card className="bg-gray-800/50 border-gray-700 p-6">
-                            <CardContent className="p-0">
+                            <CardContentData className="p-0">
                                 <div className="flex items-center mb-4">
-                                <img src={GraphReport} alt="" />
+                                    <img src={GraphReport} alt="" />
 
                                     <span className="text-blue-400 font-semibold">3. Start Selling</span>
                                 </div>
                                 <p className="text-gray-300">
                                     Use our comprehensive sales enablement kit to close your first deal this week.
                                 </p>
-                            </CardContent>
+                            </CardContentData>
                         </Card>
                     </div>
                 </div>
@@ -143,71 +149,50 @@ export default function VijilianLanding() {
 
             {/* Partnership Features */}
             <section className="relative z-10 px-6 py-16">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-16">A Partnership Designed for Your Growth</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <Card className="bg-teal-900/30 border-teal-700 p-6">
-                            <CardContent className="p-0">
-                                <Shield className="w-12 h-12 text-teal-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Unlock New MRR</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Add high-margin security services to your existing client base and grow your Monthly Recurring Revenue
-                                    and profitability.
-                                </p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-blue-900/30 border-blue-700 p-6">
-                            <CardContent className="p-0">
-                                <Search className="w-12 h-12 text-blue-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Your Instant 24/7 SOC</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Get access to our US-based, certified security Operations Center without the overhead. Our experts
-                                    become an extension of your team.
-                                </p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-purple-900/30 border-purple-700 p-6">
-                            <CardContent className="p-0">
-                                <Rocket className="w-12 h-12 text-purple-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Go-to-Market Enablement</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Access our comprehensive "ThreatRemediator™" sales content kit with battle-tested materials, sales
-                                    training, and more deals.
-                                </p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-green-900/30 border-green-700 p-6">
-                            <CardContent className="p-0">
-                                <CheckCircle className="w-12 h-12 text-green-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Radical Flexibility & No Risk</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Benefit from our channel-first approach. No long-term contracts, commitments, full white-labeling, and
-                                    a 30-day risk-free opt-out trial.
-                                </p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-cyan-900/30 border-cyan-700 p-6">
-                            <CardContent className="p-0">
-                                <BarChart3 className="w-12 h-12 text-cyan-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Simplified Compliance</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Effortlessly support your clients' compliance requirements, including HIPAA, PCI, SOX, and more.
-                                    Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise to your
-                                    workload and minimizing regulatory risks.
-                                </p>
-                            </CardContent>
-                        </Card>
-                        <Card className="bg-indigo-900/30 border-indigo-700 p-6">
-                            <CardContent className="p-0">
-                                <Settings className="w-12 h-12 text-indigo-400 mb-4" />
-                                <h3 className="text-xl font-bold mb-3 text-white">Vendor-Agnostic Integration</h3>
-                                <p className="text-gray-300 text-sm">
-                                    Seamlessly integrate with your existing security tools and infrastructure. Vijilan supports hundreds
-                                    of security platforms, cloud platforms, and identity solutions, giving you unmatched flexibility
-                                    without vendor lock-in.
-                                </p>
-                            </CardContent>
-                        </Card>
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-16 text-white">
+                        A Partnership Designed for Your Growth
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                        <CardContent
+                            title={"Unlock New MRR"}
+                            description={`Add high-margin security services to your portfolio. Our model is built to maximize your Monthly
+                                    Recurring Revenue and profitability.`}
+                            icon={lockIcon}
+                        />
+                        <CardContent
+                            title={"Your Instant 24/7 SOC"}
+                            description={`Gain an immediate SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts
+                                    become an extension of your team.`}
+                            icon={TimeIcon}
+                        />
+                        <CardContent
+                            title={"Go-to-Market Enablement"}
+                            description={`Access our comprehensive "ThreatRemediator™" Enablement Kit with co-brandable materials, sales decks,
+                                    and proposal generators to win more deals.`}
+                            icon={RocketIcon}
+                        />
+                        <CardContent
+                            title={"Radical Flexibility & No Risk"}
+                            description={`Benefit from our channel-first approach with no minimum commitments. Full white-labeling, and a 30-day
+                                    risk-free opt-out trial.`}
+                            icon={sheildIcon}
+                        />
+                        <CardContent
+                            title={"Simplified Compliance"}
+                            description={`Effortlessly support your clients' compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC.
+                                    Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your
+                                    workload and minimizing regulatory risks.`}
+                            icon={TaskCheck}
+                        />
+                        <CardContent
+                            title={"Vendor-Agnostic Integration"}
+                            description={`Seamlessly integrate with your clients' existing security tools and infrastructure. Vijilan supports
+                                    extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving
+                                    you unmatched flexibility without vendor lock-in.`}
+                            icon={chainIcon}
+                        />
                     </div>
                 </div>
             </section>
@@ -215,52 +200,77 @@ export default function VijilianLanding() {
             {/* Partnership Tiers */}
             <section className="relative z-10 px-6 py-16">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold mb-8">
-                        A Partnership Tier for Every Stage of
-                        <br />
-                        Your Growth
-                    </h2>
-                    <p className="text-gray-300 mb-12">
-                        Our program is designed to meet you where you are and help you scale your security offerings profitably.
+                <h2 className="text-4xl font-bold mb-8 text-white">
+                    A Partnership Tier for Every Stage of
+                    <br />
+                    Your Growth
+                </h2>
+                <p className="text-gray-300 mb-12">
+                    Our program is designed to meet you where you are and help you scale your security offerings profitably.
+                </p>
+                <Card
+                    className="p-8 rounded-xl border-2"
+                    style={{
+                    backgroundColor: "rgba(0, 174, 239, 0.24)",
+                    borderColor: "rgba(8, 34, 53, 1)",
+                    }}
+                >
+                    <CardContentData className="p-0">
+                    <p className="text-white text-left">
+                        A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining
+                        services, support, and benefits for each level as defined in the development plan.
                     </p>
-                    <Card className="bg-teal-900/20 border-teal-700 p-8">
-                        <CardContent className="p-0">
-                            <p className="text-gray-300">
-                                A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining
-                                services, support, and benefits for each level as outlined in the development plan.
-                            </p>
-                        </CardContent>
-                    </Card>
+                    </CardContentData>
+                </Card>
                 </div>
             </section>
+
 
             {/* Testimonials */}
             <section className="relative z-10 px-6 py-16">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <div>
-                            <h3 className="text-2xl font-bold mb-4">What Our Partners Say</h3>
-                            <blockquote className="text-gray-300 italic">
-                                "Our security MSP increased by 30% within six months of partnering with Vijilan. Their SOC is
-                                world-class, and the active remediation in ThreatRemediator is a game-changer for our clients."
-                            </blockquote>
-                            <p className="text-blue-400 mt-4">- Partners, Chief of New Vendor Partner</p>
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold mb-4">A Message to Our Future Partners</h3>
-                            <blockquote className="text-gray-300 italic">
-                                "We built our partner program on a foundation of trust and mutual success. We succeed when you succeed.
-                                That's why we provide the best technology, an expert SOC, and the GTM support you need to win."
-                            </blockquote>
-                        </div>
-                    </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                    <Card
+                    className="p-8 rounded-xl border-2"
+                    style={{
+                        backgroundColor: "rgba(0, 174, 239, 0.24)",
+                        borderColor: "rgba(8, 34, 53, 1)",
+                    }}
+                    >
+                    <CardContentData className="p-0 text-center">
+                        <h3 className="text-2xl font-bold mb-6 text-white">What Our Partners say</h3>
+                        <blockquote className="text-white mb-6 text-lg leading-relaxed">
+                        "Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is
+                        world-class, and the active remediation in ThreatRemediate is a game- changer for our clients."
+                        </blockquote>
+                        <p className="text-blue-400 font-medium">— Alex Johnson, CEO of a Silver Tier MSP Partner</p>
+                    </CardContentData>
+                    </Card>
+
+                    <Card
+                    className="p-8 rounded-xl border-2"
+                    style={{
+                        backgroundColor: "rgba(0, 174, 239, 0.24)",
+                        borderColor: "rgba(8, 34, 53, 1)",
+                    }}
+                    >
+                    <CardContentData className="p-0 text-center">
+                        <h3 className="text-2xl font-bold mb-6 text-white">A Message to Our Future Partners</h3>
+                        <blockquote className="text-white text-lg leading-relaxed">
+                        "We built our partner program on a foundation of trust and mutual success. We succeed when you
+                        succeed. That's why we provide the best technology, an expert SOC, and the GTM support you need to
+                        win."
+                        </blockquote>
+                    </CardContentData>
+                    </Card>
+                </div>
                 </div>
             </section>
 
             {/* FAQ Section */}
             <section className="relative z-10 px-6 py-16">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                    <h2 className="text-4xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {[
                             "What does Vijilan do for MSPs?",
@@ -270,63 +280,17 @@ export default function VijilianLanding() {
                             "What does Vijilan do for MSPs?",
                         ].map((question, index) => (
                             <Card key={index} className="bg-gray-800/50 border-gray-700">
-                                <CardContent className="p-6">
+                                <CardContentData className="p-6">
                                     <div className="flex items-center justify-between">
                                         <span className="text-white">{question}</span>
                                         <Plus className="w-5 h-5 text-gray-400" />
                                     </div>
-                                </CardContent>
+                                </CardContentData>
                             </Card>
                         ))}
                     </div>
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer className="relative z-10 px-6 py-16 border-t border-gray-800">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-4 gap-8 mb-8">
-                        <div>
-                            <div className="text-2xl font-bold text-white mb-4">vijilan</div>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4 text-white">Our Company</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>Blog</li>
-                                <li>Careers</li>
-                                <li>Papers</li>
-                                <li>Podcast</li>
-                                <li>Videos</li>
-                                <li>Press releases and news</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4 text-white">Platform</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>About Us</li>
-                                <li>Become a partner</li>
-                                <li>Contact Us</li>
-                                <li>Pricing</li>
-                                <li>Request a Demo</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4 text-white">Vijilan</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li>Information Security</li>
-                                <li>Privacy Policy</li>
-                                <li>Terms and Conditions</li>
-                                <li>Cookie Policy</li>
-                            </ul>
-                            <Button className="bg-orange-500 hover:bg-orange-600 text-white mt-4">CONTACT US</Button>
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                        Copyright © 2024 All Rights Reserved – Vijilan Security, LLC – 24/7 Cybersecurity Threat Monitoring, SOCs,
-                        and SOC
-                    </div>
-                </div>
-            </footer>
         </div>
     )
 }
