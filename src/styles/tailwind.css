@@ -4,4 +4,5 @@
 @plugin '@tailwindcss/typography';
 
 @import './styles.css';
+@import './globals.css';
 

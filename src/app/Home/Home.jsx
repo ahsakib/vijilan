@@ -2,10 +2,13 @@ import { ChevronDown, Shield, Users, Building, Lightbulb, MapPin, Zap, Star } fr
 import homeBg from "../../images/home-bg.png"
 import Header from "@components/Header"
 import EmergencyBanner from "@components/EmergencyBanner"
+import HeroSection from "./HeroSection"
+import GroupIcon from '../../images/Group.svg';
+import GroupIcon2 from '../../images/Frame 1171275073 (1).svg';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#191624" }}>
       {/* Background Pattern */}
 
       <img
@@ -25,65 +28,76 @@ const Home = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-20 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Vijilan: Intelligent, Resilient
-            <br />
-            <span className="text-cyan-400">Cybersecurity</span>. Empowering MSP Growth.
-            <br />
-            Securing the Enterprise.
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Vijilan: Intelligent, Resilient Cybersecurity. Empowering MSP Growth. Securing the Enterprise.
-          </p>
-          <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 text-lg rounded">
-            Discover Vijilan
-          </button>
-        </section>
+        <HeroSection />
 
         {/* Tailored Solutions Section */}
         <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-cyan-400">Tailored Cybersecurity Solutions</span>
-              <br />
-              For Your Needs
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-lg">
-              <div className="flex items-center mb-6">
-                <div className="bg-cyan-500/20 p-3 rounded-lg mr-4">
-                  <Users className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">For MSPs, MSSPs & MDRs</h3>
+          <div className="min-h-screen px-4 py-12">
+            <div className="max-w-6xl mx-auto">
+              {/* Header */}
+              <div className="text-center mb-16">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 mb-4">
+                  Tailored Cybersecurity Solutions
+                </h1>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">For Your Needs</h2>
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Scale your cybersecurity offerings with our comprehensive platform designed specifically for service
-                providers. Deliver enterprise-grade security to your clients while streamlining operations and
-                increasing profitability.
-              </p>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 bg-transparent px-4 py-2 rounded">
-                Learn More About MSP Solutions
-              </button>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-8 rounded-lg">
-              <div className="flex items-center mb-6">
-                <div className="bg-cyan-500/20 p-3 rounded-lg mr-4">
-                  <Building className="w-8 h-8 text-cyan-400" />
+
+              {/* Cards Container */}
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Left Card - MSPs */}
+                <div className="card-gradient-border rounded-3xl p-8 text-center">
+                  {/* Icon Illustration */}
+                  <div className="mb-8 flex justify-center">
+                    <div className="relative">
+                      <img src={GroupIcon} alt="Cybersecurity Illustration" className="w-24 h-24 mx-auto" />
+                    </div>
+                  </div>
+
+
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">For MSPs, VARs & MSSPs</h3>
+
+                  <p className="text-white/90 text-lg leading-relaxed mb-8">
+                    Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance
+                    your service portfolio, and drive profitable growth.
+                  </p>
+
+                  <button
+                    className="bg-white text-slate-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-xl text-lg"
+                    size="lg"
+                  >
+                    EMPOWER YOUR MSP/VAR/MSSP
+                  </button>
                 </div>
-                <h3 className="text-2xl font-bold text-white">For SMBs & Mid-Market Enterprises</h3>
+
+                {/* Right Card - SMBs */}
+                <div className="card-gradient-border rounded-3xl p-8 text-center">
+                  {/* Icon Illustration */}
+                  <div className="mb-8 flex justify-center">
+                    <div className="relative">
+                      <img src={GroupIcon2} alt="Cybersecurity Illustration" className="w-24 h-24 mx-auto" />
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">For SMBs & Mid-Market Enterprises</h3>
+
+                  <p className="text-white/90 text-lg leading-relaxed mb-8">
+                    Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
+                    tailored to your size and industry needs.
+                  </p>
+
+                  <button
+                    className="bg-white text-slate-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-xl text-lg"
+                    size="lg"
+                  >
+                    SECURE YOUR BUSINESS
+                  </button>
+                </div>
               </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Protect your business with intelligent cybersecurity solutions that adapt to your unique needs. Get
-                enterprise-level protection without the complexity, backed by expert support and monitoring.
-              </p>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 bg-transparent px-4 py-2 rounded">
-                Explore Enterprise Solutions
-              </button>
             </div>
           </div>
         </section>
+
+
 
         {/* Threat Landscape Section */}
         <section className="container mx-auto px-6 py-16">
