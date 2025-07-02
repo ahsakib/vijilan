@@ -1,0 +1,58 @@
+// src/components/TechnologyFoundation.jsx
+import React from 'react';
+import ExperienceSection from '../ExperienceSection/ExperienceSection';
+
+const partners = [
+    'crowdstrike.png',
+    'fortinet.png',
+    'okta.png',
+    'cribl.png',
+    'connectwise.png',
+    'aws.png',
+];
+
+const TechnologyFoundation = () => {
+    return (
+        <div className=" text-white pt-20 px-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-center mb-4">
+                Built on an Elite <span className="text-cyan-400">Technology</span> <br className="md:hidden" /> Foundation
+            </h2>
+
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-6 mb-12">
+                {partners.map((src, idx) => (
+                    <img
+                        key={idx}
+                        src={`./assets/${src}`}
+                        alt="partner logo"
+                        className="h-10 object-contain hover:scale-105 transition-transform"
+                    />
+                ))}
+            </div>
+
+            <div className="max-w-md mx-auto bg-[#00000062] text-white p-6 rounded-lg shadow-md border border-cyan-600">
+                <div className="flex flex-col items-center">
+                    <div className="relative w-24 h-24 rounded-full bg-cyan-500 flex items-center justify-center text-center text-sm font-bold text-white mb-4">
+                        SOC 2 <br /> Type 2
+                    <button className="absolute -bottom-3 text-sm text-cyan-300 font-semibold mb-2 bg-[#202c3d] px-4 py-2 rounded">Certified</button>
+
+                    </div>
+                    <p className="text-sm text-gray-300 text-center">
+                        Independently Audited & Certified for Your Peace of Mind<br />
+                        Our customers can be sure of our commitment to data protection. We’re SOC 2 Type 2 compliant, a rigorous security standard that validates our service controls.
+                        Frameworks include HIPAA, PCI DSS, GDPR, and CMMC.
+                    </p>
+                </div>
+            </div>
+
+            <ExperienceSection />
+
+        </div>
+    );
+};
+
+export default TechnologyFoundation;
+
+
+
+
+// bg =>         bg-gradient-to-br from-[#090d1f] to-[#1a203f]
