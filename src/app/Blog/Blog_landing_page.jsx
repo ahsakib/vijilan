@@ -47,7 +47,7 @@ const Blog_landing_page = () => {
 
 
                 {/* tabs */}
-                <div className=' flex flex-wrap gap-3 md:gap-10 mt-10'>
+                <div className=' flex flex-wrap gap-3 md:gap-7 mt-10'>
                     {tabs.map((tab, index) => (
                         <p
                             key={index}
