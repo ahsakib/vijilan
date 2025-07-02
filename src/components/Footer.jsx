@@ -6,12 +6,18 @@ import j from "../images/logo/j.svg";
 import l from "../images/logo/l.svg";
 import a from "../images/logo/a.svg";
 import n from "../images/logo/n.svg";
+import logo from "../Assets/logo.png";
+import logoSub from "../Assets/logoSub.png";
+import footerBg from "../Assets/footer_bg_logo.png";
+import vendor from "../Assets/vendor.png";
+import smallVendor from "../Assets/smallVendor.png";
 
 const Footer = () => {
     return (
         <footer
-            className="relative z-10 px-6 py-16"
+            className="relative z-10 px-6 pt-24 pb-10"
             style={{
+                background: "linear-gradient(180deg, #191624 11.15%, rgba(25, 22, 36, 0.64) 26.08%, #191624 38.29%)",
                 backgroundImage: `url(${footerGradiant})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -19,8 +25,12 @@ const Footer = () => {
             }}
         >
             {/* Background logo */}
-            <div className="absolute top-8 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden">
-                <div className="flex items-center space-x-1 opacity-10">
+            <div className="container mx-auto px-6 absolute top-16 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden">
+                <div className="h-full w-full flex items-center space-x-1 opacity-10">
+                    <img src={footerBg} alt="V"  className="h-[200px] w-full" />
+                    
+                </div>
+                {/* <div className="flex items-center space-x-1 opacity-10">
                     <img src={v} alt="V" width={180} height={200} className="h-32 w-auto" />
                     <img src={i} alt="I" width={40} height={200} className="h-32 w-auto" />
                     <img src={j} alt="J" width={120} height={200} className="h-32 w-auto" />
@@ -28,73 +38,71 @@ const Footer = () => {
                     <img src={l} alt="L" width={120} height={200} className="h-32 w-auto" />
                     <img src={a} alt="A" width={180} height={200} className="h-32 w-auto" />
                     <img src={n} alt="N" width={180} height={200} className="h-32 w-auto" />
-                </div>
+                </div> */}
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="pt-24">
                     <div className="grid md:grid-cols-5 gap-8 mb-12">
-                        <div>
+                        <div className="">
                             {/* Footer Logo */}
-                            <div className="flex items-center space-x-1 mb-6">
-                                <img src={v} alt="V" width={20} height={24} className="h-6 w-auto" />
-                                <img src={i} alt="I" width={6} height={24} className="h-6 w-auto" />
-                                <img src={j} alt="J" width={16} height={24} className="h-6 w-auto" />
-                                <img src={i} alt="I" width={6} height={24} className="h-6 w-auto" />
-                                <img src={l} alt="L" width={16} height={24} className="h-6 w-auto" />
-                                <img src={a} alt="A" width={20} height={24} className="h-6 w-auto" />
-                                <img src={n} alt="N" width={20} height={24} className="h-6 w-auto" />
+                            <div className=" flex flex-col mb-6">
+                                <img src={logo} alt="company logo" className='w-[100px] h-[34px]' />
+                                <img src={logoSub} alt="logo text" className=' w-[56px] h-[5px] ml-[38px] -mt-[6px]' />
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-cyan-400 font-semibold mb-4">Insights</h4>
+                            <h4 className="text-[#00AEEF] text-[18px] mb-4">Insights</h4>
                             <div className="space-y-2 text-gray-300">
-                                <p>All Categories</p>
-                                <p>Blog</p>
-                                <p>Events</p>
-                                <p>Papers</p>
-                                <p>Podcast</p>
-                                <p>Videos</p>
-                                <p>Press release and news</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> All Categories</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Blog</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Events</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Papers</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Podcast</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Videos</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Press release and news</p>
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-cyan-400 font-semibold mb-4">Platform</h4>
+                            <h4 className="text-[#00AEEF] text-[18px] mb-4">Platform</h4>
                             <div className="space-y-2 text-gray-300">
-                                <p>About Us</p>
-                                <p>Become a partner</p>
-                                <p>Contact us</p>
-                                <p>Pricing</p>
-                                <p>Request a Demo</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> About Us</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Become a partner</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Contact us</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Pricing</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Request a Demo</p>
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-cyan-400 font-semibold mb-4">Others</h4>
+                            <h4 className="text-[#00AEEF] text-[18px] mb-4">Others</h4>
                             <div className="space-y-2 text-gray-300 mb-6">
-                                <p>FAQ</p>
-                                <p>Information Security</p>
-                                <p>Privacy Policy</p>
-                                <p>Terms and Conditions</p>
-                                <p>Cookie Policy</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> FAQ</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Information Security</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Privacy Policy</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Terms and Conditions</p>
+                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Cookie Policy</p>
                             </div>
                         </div>
 
                         <div className="flex justify-end">
                             <button
-                                className="px-6 py-2 font-semibold rounded-lg text-white h-fit"
+                                className="px-[24px] py-[16px] font-medium text-[18px] rounded-[8px] text-white h-fit"
                                 style={{
-                                    background: "linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FF6B35 100%)",
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                 }}
                             >
                                 CONTACT US
                             </button>
+
                         </div>
                     </div>
 
-                    <div className="border-t border-gray-600 pt-8 text-center text-gray-400 text-sm">
+                    <img src={vendor} alt="vendor" className="w-full h-[1px]" />
+
+                    <div className=" pt-6 text-center text-[#9C9A9B] text-[16px]">
                         <p>
                             Copyright © 2024 All Rights Reserved - Vijilan Security, LLC - 24/7 Cybersecurity Threat
                             Monitoring, SIEM, and SOC
