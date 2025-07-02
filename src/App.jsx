@@ -190,7 +190,9 @@ import { FaShieldAlt, FaBolt, FaCogs, FaHandshake } from 'react-icons/fa';
 import "./index.css";
 import FeatureCard from './components/FeatureCard/FeatureCard';
 import TechnologyFoundation from './components/TechnologyFoundation/TechnologyFoundation';
-import ExperienceSection from './components/ExperienceSection/ExperienceSection';
+// import ExperienceSection from './components/ExperienceSection/ExperienceSection';
+import image from "../src/assets/abcd.png"; // use your image path
+
 
 function App() {
   const features = [
@@ -227,7 +229,7 @@ function App() {
         <Hero />
 
         {/* Features Section */}
-        <div className=" bg-gradient-to-br from-[#090d1f] to-[#1a203f] text-white py-16 px-6">
+        {/* <div className=" bg-gradient-to-br from-[#090d1f] to-[#1a203f] text-white py-16 px-6">
           <h2 className="text-3xl font-bold text-center mb-12">What Truly Sets Us Apart</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {features.map((feature, index) => (
@@ -241,6 +243,52 @@ function App() {
           </div>
 
           <TechnologyFoundation />
+        </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className="relative min-h-screen text-white py-16 px-6 overflow-hidden">
+          {/* Background Gradient + Drag Image */}
+          <div className="absolute inset-0 -z-10">
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#090d1f] to-[#1a203f]/90" />
+
+            {/* Drag Wave Image */}
+            <img
+              src={image}
+              alt="wave"
+              className="absolute bottom-0 left-1/2 -translate-x-[5%] -translate-y-[160px] w-[700px] opacity-80 pointer-events-none select-none"
+            />
+          </div>
+
+          {/* Foreground Content */}
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold text-center mb-12">What Truly Sets Us Apart</h2>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              {features.map((feature, index) => (
+                <FeatureCard
+                  key={index}
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              ))}
+            </div>
+
+            <TechnologyFoundation />
+          </div>
         </div>
 
         {/* Technology Foundation Section */}

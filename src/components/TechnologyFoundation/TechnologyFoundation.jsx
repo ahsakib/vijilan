@@ -1,19 +1,20 @@
 // src/components/TechnologyFoundation.jsx
-import React from 'react';
+// import React from 'react';
 import ExperienceSection from '../ExperienceSection/ExperienceSection';
 
+
 const partners = [
-    '/src/assets/crowdstrike.png',
-    '/src/assets/fortinet.png',
-    '/src/assets/corelight.png',
-    '/src/assets/cribl.png',
-    '/src/assets/microsoft.png',
-    '/src/assets/aws.png',
+    'https://i.ibb.co/PpkQX8w/crowdstrike.png',
+    'https://i.ibb.co/pjPYJXWC/fortinet.png',
+    'https://i.ibb.co/LzrnMgvr/corelight.png',
+    'https://i.ibb.co/Wv4rGNpK/cribl.png',
+    'https://i.ibb.co/nsTSvqc8/microsoft.png',
+    'https://i.ibb.co/bMC11Tjh/aws.png',
 ];
 
 const TechnologyFoundation = () => {
     return (
-        <div className=" text-white pt-20 px-6">
+        <div className=" text-white pt-20 px-6 ">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-4">
                 Built on an Elite <span className="text-cyan-400">Technology</span> <br className="md:hidden" /> Foundation
             </h2>
