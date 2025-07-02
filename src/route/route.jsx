@@ -5,6 +5,7 @@ import About from '@app/About/About';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
+import Sarve from '@app/Sarve/Sarve';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "blog-landing",
                 element: <Blog_landing_page />,
+            },
+            {
+                path: "sarve",
+                element: <Sarve />,
             },
         ],
     },

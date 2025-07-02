@@ -1,9 +1,10 @@
 import React from 'react';
 import blog_ai from "../../Assets/blog_AI.png";
-import Blog_Subscribe from '@components/Blog_Subscribe';
-import Blog_landing_Data from '@app/Constant/Constant';
+import Blog_Subscribe from '@components/Blog_Subscribe_Component_Btn';
 import LandingPageCard from '@components/LandingPageCard';
 import { FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft } from 'react-icons/fa';
+import { Blog_landing_Data } from '@app/Constant/Constant';
+import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
 
 const tabs = [
     " All posts", " Threat and Intelligence", "Enterprise Security", "Compliance and Risk", "Product & Partner News"
@@ -62,7 +63,12 @@ const Blog_landing_page = () => {
 
                 {/* Subscribe Button  */}
 
-                <Blog_Subscribe />
+
+                <Blog_Subscribe_Component_Btn
+                    H1='Get Security Insights Delivered to Your Inbox.'
+                    Desc='Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan.'
+                    Input='Subscribe'
+                />
 
 
                 {/* Blog  Cards */}
