@@ -1,18 +1,15 @@
-import Home from '@app/Home/Home';
-import Header1 from '@components/Header';
+import Footer from '@components/Footer';
 import Header from '@components/Header';
 import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return <>
-   <Header1/>
+   <Header/>
     <div className=''>
       <Outlet />
     </div>
-    {/* <Footer /> */}
+    <Footer/>
   </>
-
-
 };
 
 export default App;
