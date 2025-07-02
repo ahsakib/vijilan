@@ -11,15 +11,4 @@
   
 }
 
-.card-border {
-  border: 1px solid solid transparent;
-  border-image-slice: 1;
-  border-image-source: conic-gradient(
-    from 180deg at 50% 50%,
-    #FF98E2 0deg,
-    #FFC876 35.77deg,
-    #79FFF7 153.75deg,
-    #9F53FF 258.75deg,
-    #FF98E2 360deg
-  );
-}
+
