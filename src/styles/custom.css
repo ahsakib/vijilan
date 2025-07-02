@@ -241,7 +241,9 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
+.common-bg{
+ background-color: #191624; 
+}
 button:hover {
   transform: translateY(-1px);
 }
@@ -254,3 +256,4 @@ a {
 
 /* Background transparency utilities */
 .bg-transparent { background-color: transparent; }
+

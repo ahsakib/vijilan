@@ -9,15 +9,11 @@ import x from "../../Assets/x.png";
 
 
 const Blog = () => {
-
-
-
-
     return (
         <div className="bg-slate-900 text-white py-10 lg:px-8 mb-96 px-11">
 
-
-            <section className="bg-slate-900 py-8">
+            {/* top part */}
+            <section className=" py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-6">
                         <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-white">
@@ -40,7 +36,7 @@ const Blog = () => {
             </section>
             {/* banner section  */}
 
-
+            {/* middle part */}
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
                 {/* Main content */}
                 <div className="sm:col-span-3 md:col-span-2">
@@ -332,6 +328,7 @@ const Blog = () => {
                 </div>
             </div>
 
+            {/* end part */}
             <div className='max-w-7xl mx-auto'>
 
                 {/* subscribe  */}
