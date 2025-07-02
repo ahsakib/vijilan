@@ -6,6 +6,8 @@ import HeroSection from "./HeroSection"
 import GroupIcon from '../../images/Group.svg';
 import GroupIcon2 from '../../images/Group (1).svg';
 import CardContent from "@components/CardContent"
+import Partnership from "@app/Landing/Partnership"
+import Quotes from "@app/Landing/Quotes"
 
 const Home = () => {
   return (
@@ -30,6 +32,12 @@ const Home = () => {
 
         {/* Hero Section */}
         <HeroSection />
+
+        {/* partnership section */}
+        <Partnership/>
+
+        {/* quote section */}
+        <Quotes/>
 
         {/* Tailored Solutions Section */}
         <section className="container mx-auto px-6 py-16">
