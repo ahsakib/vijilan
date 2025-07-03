@@ -1,35 +1,63 @@
 import React from "react";
 
-const CardContent = ({ icon, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
   return (
-    <div className="relative rounded-[24px]" >
+    <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "mt-10 ml-5" : "mb-10 ml-5"}`} >
       {/* Gradient border using pseudo */}
       <div
         className="absolute inset-0 rounded-[24px] p-[2px] z-0"
-        style={{
-          background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
-          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-          WebkitMaskComposite: "xor",
-          maskComposite: "exclude"
-        }}
+        style={
+          !banner
+            ? {
+              background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+            linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude"
+            }
+            : undefined
+        }
+
       />
 
 
-      <div className="card-content text-center p-6">
+      <div className={`relative rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
+
         {icon && <div className="icon-container flex justify-center mb-4">
-          <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px" />
+          <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px]" />
         </div>}
+
+
+        {banner && (
+          <div className="relative flex justify-center mb-4">
+            <img src={banner} alt="banner" className="w-full rounded-[16px]" />
+            {badge && (
+              <span className="absolute top-2 left-2 bg-cyan-500 text-white text-xs px-3 py-1 rounded-full">
+                {badge}
+              </span>
+            )}
+          </div>
+        )}
+
+
+
         {iconed && <div className="iconed flex justify-center mb-4">
-          <img src={iconed} alt="Icon" className="iconed w-[77px] h-[77px]" />
+          <img src={iconed} alt="Icon" className="iconed w-[77px] text-white h-[77px]" />
         </div>}
+        {
+          Cardsticket && <div className='bg-[#D9D9D9] w-[250px] p-6 h-[190px] mx-auto rounded-2xl my-5 flex justify-center items-center'>
+            <h4 className='text-center text-black  text-2xl'>{Cardsticket}</h4>
+          </div>
+        }
         {head && <h3 className="head text-[25px] text-white font-medium mb-2">{head}</h3>}
         <h3 className="title text-[37px] font-medium mb-2">{title}</h3>
         {
           description && (
-            <p className="description text-[27px] mb-4">{description}</p>
+            <p className={`  mb-4 ${banner ? "text-sm" : " description"}`}   >{description}</p>
           )
         }
+
         {
           sub && (
             <p className="sub text-[18px] text-white mb-4" style={{ whiteSpace: 'pre-line' }}>{sub}</p>
@@ -41,7 +69,7 @@ const CardContent = ({ icon, title, description, buttonText, designDescription, 
           )
         }
         {
-          grdBtn && <button className="w-auto grdBtn mt-16 px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
+          grdBtn && <button className="w-auto grdBtn mt-16 text-white  px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
           }}>{grdBtn}</button>
         }
@@ -92,12 +120,12 @@ const CardContent = ({ icon, title, description, buttonText, designDescription, 
           )
         }
         {buttonText && (
-          <button className="cta-button mt-3 text-[18px] p-[20px] text-[#082235] rounded-[8px]  transition">
+          <button className={`${banner ? "text-blue-600" : "cta-button px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition"}`}>
             {buttonText}
           </button>
         )}
       </div>
-    </div>
+    </div >
   );
 };
 

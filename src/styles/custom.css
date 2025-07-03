@@ -584,7 +584,10 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 .common-bg {
   background-color: #191624;
 }

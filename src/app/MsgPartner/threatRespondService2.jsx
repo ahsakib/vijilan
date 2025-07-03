@@ -1,23 +1,24 @@
-import { Play, Search, Shield, Users, MessageSquare, CheckCircle, ArrowRight, Menu } from "lucide-react"
+import { Play, Search, Users, MessageSquare, CheckCircle, ArrowRight, Menu } from "lucide-react"
 import detect from "../../Assets/detect.png"
-import arrow from "../../Assets/arrow.png";
-import right from "../../Assets/right.png";
-import head from "../../Assets/head.png";
-import wa from "../../Assets/wa.png";
-import note from "../../Assets/note.png";
-import GradientButton from "@components/GradientButton";
-import OutlineGradientButton from "@components/OutlineGradientButton";
+import shield from "../../Assets/sheildIcon.png";
+import investigation from "../../Assets/Capa_1.svg";
+import thumsup from "../../Assets/thumsup.svg";
+import reportIcon from "../../Assets/report.svg";
+import EyeIcon from "../../Assets/eye.svg";
 import Heading_Btn from "@components/Heading_Btn";
+import CardContent from "@components/CardContent";
+import GradientButton from "@components/GradientButton";
+
 export default function Component() {
 
     return (
         <div className="min-h-screen">
 
-            {/* Hero Section */} 
+            {/* Hero Section */}
             <Heading_Btn
-                h1=" Expert Detection. Actionable Guidance."
-                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively."
-                btn1="Jwatch the service overview"
+                h1="Beyond Detection: We Stop Breaches with ThreatRemediate™"
+                desc="Our flagship fully managed XDR service. We don't just send alerts—our 24/7 expert SOC actively contains and remediates threats across your entire digital ecosystem, powered by CrowdStrike."
+                btn1="watch a 2-minute  overview"
                 btn2="get an instant quote"
             />
 
@@ -26,10 +27,10 @@ export default function Component() {
             <section className="px-4 py-16 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-[40px] font-bold tracking-tight text-white sm:text-4xl">
-                        Understand ThreatRespond in 90 Seconds
+                        See ThreatRemediate in Action
                     </h2>
                     <p className="mt-2 text-[18px] text-[#FFFFFF]">
-                        See how our expert guidance empowers your internal team to handle threats efficiently.
+                        Watch how our expert SOC transforms threat detection into active remediation
                     </p>
                     <div className="mt-12 relative">
                         <div className="relative aspect-video w-[621px] mx-auto h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
@@ -51,105 +52,15 @@ export default function Component() {
                 </div>
             </section>
 
-            {/* Service Comparison */}
-            <section className="container mx-auto px-6 py-16  relative overflow-hidden">
-                {/* Background decorative elements */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-20 right-10 w-96 h-96 border border-purple-500/20 rounded-full"></div>
-                    <div className="absolute bottom-20 left-10 w-64 h-64 border border-purple-500/20 rounded-full"></div>
-                    <svg
-                        className="absolute top-40 right-1/4 w-32 h-32 text-purple-500/10"
-                        fill="currentColor"
-                        viewBox="0 0 100 100"
-                    >
-                        <path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                        <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                    </svg>
-                </div>
-
-                <div className="mx-auto max-w-7xl relative z-10">
-                    <div className="text-center mb-10">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-4">
-                            The Right Service for Your In-House Team
-                        </h2>
-                        <p className="text-[18px] text-[#FFFFFF]">
-                            Choose the solution that matches your organization's capabilities and needs
-                        </p>
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-8">
-                        {/* Left Card */}
-                        <div className="bg-[#082235] p-8 rounded-[10px] backdrop-blur-sm h-fit">
-                            <h3 className="text-[24px] font-medium text-white mb-8">ThreatRespond is a perfect fit if you...</h3>
-                            <ul className="space-y-6 text-[20px]">
-                                <li className="flex items-start gap-4">
-                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                                    <span className="text-white text-lg leading-relaxed">
-                                        ...have an internal IT team capable of performing remediation.
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                                    <span className="text-white text-lg leading-relaxed">
-                                        ...want to offload the burden of 24/7 alert monitoring.
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                                    <span className="text-white text-lg leading-relaxed">
-                                        ...need expert investigation to eliminate false positives.
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-4">
-                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
-                                    <span className="text-white text-lg leading-relaxed">
-                                        ...want clear, step-by-step guidance to resolve incidents.
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Right Card */}
-                        <div className="bg-[#082235] p-8 rounded-2xl backdrop-blur-sm">
-                            <h3 className="text-[24px] font-bold text-white mb-6">Looking for hands-on, active remediation?</h3>
-                            <p className="text-white text-[20px] font-medium leading-relaxed mb-8">
-                                If you need a fully managed service where our SOC takes direct action to contain and remediate threats,
-                                explore our flagship ThreatRemediate™ service.
-                            </p>
-                            <p className="text-[#00AEEF] text-[18px] leading-relaxed mb-6">
-                                ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
-                                and neutralizes threats in real-time while you sleep.
-                            </p>
-                            <button
-                                className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                                style={{
-                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-
-                                }}>
-
-                                <span className="uppercase">learn about threat remediate</span>
-                                <div className="w-6 h-6  flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 16 16 12 12 8"></polyline>
-                                        <line x1="8" y1="12" x2="16" y2="12"></line>
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Process Flow */}
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
                         <h2 className="text-5xl font-bold tracking-tight text-white">
-                            From Detection to Guided Resolution
+                            How We Deliver Complete Protection
                         </h2>
                         <p className="mt-4 text-[18px] text-white">
-                            Our comprehensive security process helps keep your organization secure from end to end.
+                            The comprehensive 6-step security lifecycle that sets ThreatRemediate apart
                         </p>
                     </div>
 
@@ -166,11 +77,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={detect} alt="" />
+                                <img src={shield} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-medium text-white mb-3">Detect</h3>
+                            <h3 className="text-[24px] font-medium text-white mb-3">Prepare & Prevent</h3>
                             <p className="text-white text-[18px] text-center">
-                                Add high-margin security services to <br /> your portfolio. Our model is built to <br /> maximize your Monthly Recurring <br /> Revenue and profitability
+                                We build your playbooks, train teams, and implement preventive controls to stop incidents before they start
                             </p>
                         </div>
 
@@ -186,11 +97,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={arrow} alt="" />
+                                <img src={detect} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Investigate & Validate</h3>
+                            <h3 className="text-[24px] font-bold text-white mb-3">Detect</h3>
                             <p className="text-white text-[18px] text-center">
-                                Gain an immediate, SOC 2 Type 2 <br /> certified Security Operations Center <br /> without the overhead. Our experts <br /> become an extension of your team
+                                Our platform uses AI-powered detection across all vectors—endpoints, cloud, identity, and network—to identify threats in real-time.
                             </p>
                         </div>
 
@@ -206,11 +117,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={wa} alt="" />
+                                <img src={investigation} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Fully Managed Cloud SIEM</h3>
+                            <h3 className="text-[24px] font-bold text-white mb-3">Investigate</h3>
                             <p className="text-white text-[18px] text-center">
-                                Access our comprehensive <br /> ThreatRemediate™ Enablement Kit <br /> with co-brandable materials, sales <br /> decks, and proposal generators to win <br /> more deals.
+                                Our 24/7 SOC analysts instantly investigate and confirm every potential threat, eliminating false positives so your team isn't disturbed.
                             </p>
                         </div>
 
@@ -226,11 +137,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={head} alt="" />
+                                <img src={thumsup} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Always-On SOC Support</h3>
+                            <h3 className="text-[24px] font-bold text-white mb-3">We Take Action</h3>
                             <p className="text-white text-[18px] text-center">
-                                Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.
+                                Our SOC takes direct, hands-on action: isolating endpoints, disabling compromised accounts, blocking malicious processes, and actively neutralizing the threat.
                             </p>
                         </div>
                         {/* 5th */}
@@ -246,11 +157,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={note} alt="" />
+                                <img src={reportIcon} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Deliver Actionable Guidance</h3>
+                            <h3 className="text-[24px] font-bold text-white mb-3">Report & Harden</h3>
                             <p className="text-white text-[18px] text-center">
-                                Effortlessly support your clients' <br /> compliance requirements, including <br /> HIPAA, GDPR, PCI DSS, and CMMC. <br /> Vijilan provides detailed reporting, <br /> audit-ready documentation, and <br /> compliance expertise—reducing your <br /> workload and minimizing regulatory <br /> risks.
+                                We provide a full incident report detailing the attack, the actions taken, and expert recommendations to harden your defenses against future attacks.
                             </p>
                         </div>
 
@@ -266,11 +177,11 @@ export default function Component() {
                                 }}
                             />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={right} alt="" />
+                                <img src={EyeIcon} alt="" />
                             </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Confirm & Close</h3>
+                            <h3 className="text-[24px] font-bold text-white mb-3">Review & Refine</h3>
                             <p className="text-white text-center text-[14px]">
-                                We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
+                                Post-incident, we analyze outcomes and continuously improve your detection, response, and prevention capabilities for ever-increasing resilience.
                             </p>
                         </div>
                     </div>
@@ -368,11 +279,43 @@ export default function Component() {
                 </div>
             </section>
 
+
+            <section className="container mx-auto px-6 py-20 lg:px-8 text-center">
+                <div className="mx-auto max-w-7xl">
+                    <div className="text-center mb-16">
+                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-3">
+                            A Package for Every Need
+                        </h2>
+                        <p className="text-[20px] text-white">Choose the ThreatRemediate tier that matches your security requirements</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <CardContent
+                            title={"Core"}
+                            description={"Essential EDR/XDR for comprehensive endpoint protection with 24/7 monitoring and active remediation."}
+                        />
+                        <CardContent
+                            title={"Complete"}
+                            description={"Expands Core to include cloud workload security and foundational identity threat detection for hybrid environments."}
+                        />
+                        <CardContent
+                            title={"Complete"}
+                            description={"Expands Core to include cloud workload security and foundational identity threat detection for hybrid environments."}
+                        />
+
+                    </div>
+
+                    <GradientButton children={"compare Tiers and run pricing scenerios"}/>
+
+                </div>
+            </section>
+
+
             {/* Final CTA */}
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white">Ready to Empower Your Team?</h2>
+                        <h2 className="text-[40px] font-bold tracking-tight text-white">Ready to Get Started?</h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -416,7 +359,7 @@ export default function Component() {
                                 }}
                             />
                             <div className="py-8">
-                                <h3 className="text-[24px] font-medium text-white mb-4">Get a ThreatRespond Quote</h3>
+                                <h3 className="text-[24px] font-medium text-white mb-4">Access Pricing Simulator</h3>
                                 <p className="text-white text-[18px] mb-6">
                                     Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
                                 </p>
@@ -433,7 +376,7 @@ export default function Component() {
                                 }}
 
                             >
-                                ACCESS PRICING SIMULATOR
+                                LOG IN TO PORTAL
                             </button>
                         </div>
 
