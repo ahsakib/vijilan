@@ -1,5 +1,6 @@
 import CardBorder from "@components/CardBorder"
 import GradientButton from "@components/GradientButton"
+import Heading_Btn from "@components/Heading_Btn"
 import OutlineGradientButton from "@components/OutlineGradientButton"
 import SmallCard from "@components/SmallCard"
 import { Star, ArrowRight, Menu, Play } from "lucide-react"
@@ -222,54 +223,7 @@ export default function CaseStudiesPage() {
             </section>
 
             {/* Success Stories Grid */}
-            {/* <section className="py-16 px-4">
-                <div className="container mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-white mb-4">Success Stories Across Industries</h2>
-                        <p className="text-slate-300 max-w-2xl mx-auto">
-                            Browse our comprehensive collection of client success stories and discover how businesses like yours have
-                            achieved remarkable growth.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {Array.from({ length: 8 }).map((_, index) => (
-                            <Card
-                                key={index}
-                                className="bg-slate-800/50 border-slate-700/50 hover:border-teal-500/50 transition-colors"
-                            >
-                                <CardContent className="p-6">
-                                    <Badge className="bg-orange-500 text-white mb-4">Success Story</Badge>
-                                    <h3 className="text-xl font-bold text-white mb-3">MSP Achieves 30% MRR Growth with ThreeAmendment</h3>
-                                    <p className="text-slate-300 mb-6 text-sm">
-                                        Learn how this managed service provider transformed their operations and achieved sustainable growth
-                                        through our comprehensive platform.
-                                    </p>
-                                    <div className="grid grid-cols-2 gap-4 mb-6">
-                                        <div>
-                                            <div className="text-2xl font-bold text-teal-400">30%</div>
-                                            <div className="text-slate-400 text-xs">Growth</div>
-                                        </div>
-                                        <div>
-                                            <div className="text-2xl font-bold text-teal-400">50%</div>
-                                            <div className="text-slate-400 text-xs">Efficiency</div>
-                                        </div>
-                                    </div>
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="border-slate-600 text-slate-300 hover:bg-slate-700 bg-transparent"
-                                    >
-                                        Read Case Study <ArrowRight className="ml-2 h-3 w-3" />
-                                    </Button>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
-
-            <section className="py-16 px-4 bg-gradient-to-br from-purple-900/50 via-slate-900 to-purple-800/30 relative overflow-hidden">
+            <section className="py-16 px-4 bg-transparent relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
@@ -278,71 +232,79 @@ export default function CaseStudiesPage() {
 
                 <div className="container mx-auto relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Success Stories Across Industries</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            Success Stories Across Industries
+                        </h2>
                         <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
                             Browse our comprehensive collection of client success stories and measurable business results across
                             diverse industries and use cases.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-                        {/* Case Study Card 1 */}
-                        <div
-                            className="p-8 shadow-2xl border backdrop-blur-sm"
-                            style={{
-                                borderRadius: "22.184px",
-                                background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
-                                borderColor: "rgba(0, 174, 239, 0.3)",
-                                borderWidth: "1px"
-                            }}
-                        >
-
-                            <Badge className="bg-orange-500 hover:bg-orange-600 text-white mb-6 px-4 py-2 text-sm font-semibold">
-                                MS PARTNER SUCCESS
-                            </Badge>
-
-                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
-                                MSP Achieves 30% MRR Growth with ThreatRemediate
-                            </h3>
-
-                            <p className="text-slate-200 mb-8 text-base leading-relaxed">
-                                See how this partner leveraged our flagship XDR service to build a profitable security practice and
-                                deliver hands-off cybersecurity to their clients while reducing operational overhead.
-                            </p>
-
-                            <div className="grid grid-cols-2 gap-6 mb-8">
-                                <div className="bg-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-500/30 text-center">
-                                    <div className="text-4xl font-bold text-white mb-2">30%</div>
-                                    <div className="text-slate-300 text-sm font-medium">MRR Growth</div>
-                                </div>
-                                <div className="bg-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-500/30 text-center">
-                                    <div className="text-4xl font-bold text-white mb-2">50%</div>
-                                    <div className="text-slate-300 text-sm font-medium">Alert Reduction</div>
-                                </div>
-                            </div>
-
-                            <button
-                                className="border-2 border-red text-slate-300 hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                        {Array.from({ length: 8 }).map((_, index) => (
+                            <div
+                                key={index}
+                                className="p-8 shadow-2xl border backdrop-blur-sm"
+                                style={{
+                                    borderRadius: "22.184px",
+                                    background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
+                                    borderColor: "rgba(0, 174, 239, 0.3)",
+                                    borderWidth: "1px",
+                                }}
                             >
-                                READ THE FULL STORY
-                                <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-                                    <ArrowRight className="h-3 w-3 text-white" />
+                                <Badge className="bg-orange-500 hover:bg-orange-600 text-white mb-6 px-4 py-2 text-sm font-semibold">
+                                    MS PARTNER SUCCESS
+                                </Badge>
+
+                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+                                    MSP Achieves 30% MRR Growth with ThreatRemediate
+                                </h3>
+
+                                <p className="text-slate-200 mb-4 text-base leading-relaxed">
+                                    See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.
+                                </p>
+
+                                <div className="grid grid-cols-2 gap-0 mb-8">
+
+                                    <CardBorder height="171px" width="166px">
+                                        <div>
+                                            <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
+                                            <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
+                                        </div>
+                                    </CardBorder>
+                                    <CardBorder height="171px" width="166px">
+                                        <div>
+                                            <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
+                                            <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
+                                        </div>
+                                    </CardBorder>
                                 </div>
-                            </button>
 
-                        </div>
-
+                                <button
+                                    className="border-2 border-white text-slate-300 hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+                                >
+                                    READ THE FULL STORY
+                                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                        <ArrowRight className="h-3 w-3 text-white" />
+                                    </div>
+                                </button>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* Client Testimonials */}
-            <section className="py-16 px-4">
+            <section className="py-16 px-4 bg-transparent">
                 <div className="container mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-                        <p className="text-slate-300">
-                            Real feedback from real clients who have experienced transformational growth with our solutions.
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            What Our Clients Say
+                        </h2>
+                        <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                            Real feedback from security leaders who've transformed their operations with Vijilan
                         </p>
                     </div>
 
@@ -385,33 +347,37 @@ export default function CaseStudiesPage() {
                                 title: "Managing Director, TechAdvantage",
                             },
                         ].map((testimonial, index) => (
-                            <Card key={index} className="bg-slate-800/50 border-slate-700/50">
-                                <CardContent className="p-6">
-                                    <div className="flex mb-4">
-                                        {Array.from({ length: 5 }).map((_, i) => (
-                                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                                        ))}
-                                    </div>
-                                    <blockquote className="text-slate-300 mb-4 italic">"{testimonial.quote}"</blockquote>
-                                    <div>
-                                        <div className="font-semibold text-white">{testimonial.author}</div>
-                                        <div className="text-slate-400 text-sm">{testimonial.title}</div>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <div
+                                key={index}
+                                className="backdrop-blur-sm p-8 shadow-2xl h-70"
+                                style={{
+                                    borderRadius: '22.184px',
+                                    background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
+                                }}
+                            >
+                                <blockquote className="text-white text-lg leading-relaxed mb-6">
+                                    "{testimonial.quote}"
+                                </blockquote>
+                                <div className="text-orange-400 font-semibold">
+                                    — {testimonial.author}, {testimonial.title}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
+
+
             {/* ROI Calculator */}
             <section className="py-16 px-4">
                 <div className="container mx-auto">
-                    <Card className="bg-slate-800/50 border-slate-700/50 max-w-4xl mx-auto">
-                        <CardContent className="p-8">
-                            <div className="text-center mb-8">
-                                <h2 className="text-3xl font-bold text-white mb-4">Calculate Your Potential ROI</h2>
-                                <p className="text-slate-300">See how much you could save and earn with our solutions</p>
+   
+                    <CardBorder width="1215px" height="492px">
+                        <div className="p-8">
+                        <div className="text-center mb-8">
+                                <h2 className="text-5xl font-bold text-white mb-4">Calculate Your Potential ROI</h2>
+                                <p className="text-slate-300 font-bold">See how much you could save and earn with our solutions</p>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                                 <div>
@@ -432,36 +398,22 @@ export default function CaseStudiesPage() {
                                     <label className="block text-slate-300 text-sm mb-2">Industry</label>
                                     <Input placeholder="Managed Services" className="bg-slate-700/50 border-slate-600 text-white" />
                                 </div>
-                                <Button className="bg-teal-500 hover:bg-teal-600 text-white md:mt-6">Calculate ROI</Button>
+                                {/* <Button className="bg-teal-500 hover:bg-teal-600 text-white md:mt-6">Calculate ROI</Button> */}
                             </div>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </CardBorder>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section className="py-20 px-4">
-                <div className="container mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-white mb-6">Ready to Write Your Own Success Story?</h2>
-                    <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                        Join hundreds of successful businesses that have transformed their operations and achieved remarkable growth
-                        with our proven solutions.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                            Get Started Today
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-slate-600 text-slate-300 hover:bg-slate-700 bg-transparent"
-                        >
-                            Get a Free Consultation
-                        </Button>
-                    </div>
-                </div>
-            </section>
 
+            <Heading_Btn    
+                h1={"Ready to Write Your Own Success Story?"}
+                desc={`Join hundreds of successful businesses that have transformed their operations and achieved remarkable growth
+                        with our proven solutions.`}
+                btn1={"Get Started Today"}
+                btn2={"Get a Free Consultation"}
+            />
 
         </div>
     )

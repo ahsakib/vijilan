@@ -1,16 +1,6 @@
 import {
-    ChevronDown,
     Plus,
-    FileText,
-    Zap,
-    ShoppingCart,
-    Shield,
-    Search,
-    Rocket,
-    CheckCircle,
-    Settings,
-    BarChart3,
-    ClipboardCheck,
+
 } from "lucide-react"
 import Clipboard from "@images/Clipboard Approve.png"
 import GraphReport from "@images/Graph Report.png"
@@ -18,26 +8,9 @@ import CardContent from "@components/CardContent"
 
 import chainIcon from "@images/chain-icons.png"
 import RocketIcon from "@images/rocketIcon.png"
-import sheildIcon from "@images/sheildIcon.png"
+import sheildIcon from "../../Assets/sheildIcon.png";
 import TaskCheck from "@images/task-check.png"
 import TimeIcon from "@images/timeIcon.png"
-import lockIcon from "../../Assets/lock.png";
-
-// Custom Button Component
-const Button = ({ children, className = "", variant = "default", ...props }) => {
-    const baseClasses =
-        "px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-    const variantClasses = {
-        default: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
-        outline: "border border-gray-300 bg-transparent hover:bg-gray-50 text-gray-700 focus:ring-gray-500",
-    }
-
-    return (
-        <button className={`${baseClasses} ${variantClasses[variant]} ${className}`} {...props}>
-            {children}
-        </button>
-    )
-}
 
 // Custom Card Component
 const Card = ({ children, className = "", ...props }) => {
