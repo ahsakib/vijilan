@@ -1,11 +1,11 @@
 import React from "react";
 
-const CardContent = ({ icon, title, description, buttonText, designDescription }) => {
+const CardContent = ({ icon, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
   return (
     <div className="relative rounded-[24px]" >
       {/* Gradient border using pseudo */}
       <div
-        className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+        className="absolute inset-0 rounded-[24px] p-[2px] z-0"
         style={{
           background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
                  linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
@@ -15,15 +15,35 @@ const CardContent = ({ icon, title, description, buttonText, designDescription }
         }}
       />
 
+
       <div className="card-content text-center p-6">
-        <div className="icon-container flex justify-center mb-4">
+        {icon && <div className="icon-container flex justify-center mb-4">
           <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px" />
-        </div>
-        <h3 className="title text-[24px] font-medium mb-2">{title}</h3>
+        </div>}
+        {iconed && <div className="iconed flex justify-center mb-4">
+          <img src={iconed} alt="Icon" className="iconed w-[77px] h-[77px]" />
+        </div>}
+        {head && <h3 className="head text-[25px] text-white font-medium mb-2">{head}</h3>}
+        <h3 className="title text-[37px] font-medium mb-2">{title}</h3>
         {
           description && (
-            <p className="description text-[18px] mb-4">{description}</p>
+            <p className="description text-[27px] mb-4">{description}</p>
           )
+        }
+        {
+          sub && (
+            <p className="sub text-[18px] text-white mb-4" style={{ whiteSpace: 'pre-line' }}>{sub}</p>
+          )
+        }
+        {
+          cardFooter && (
+            <p className="cardFooter text-[24px] text-[#00AEEF]">{cardFooter}</p>
+          )
+        }
+        {
+          grdBtn && <button className="w-auto grdBtn mt-16 px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
+            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+          }}>{grdBtn}</button>
         }
         {
           designDescription && (

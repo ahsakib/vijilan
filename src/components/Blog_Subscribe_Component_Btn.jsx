@@ -2,28 +2,34 @@ import React from 'react';
 
 const Blog_Subscribe_Component_Btn = ({ H1, Desc, Input, Btn }) => {
     return (
-        <div className="w-full my-8 py-8 bg-linear-to-t from-[#082235]  to-[#00445d] rounded-xl  
-            ">
-            <div className='w-3/4 mx-auto py-6 '>
-                <h1 className='font-semibold text-center my-4 text-4xl'>{H1}</h1>
-                <p className='font-thin text-center my-3'>{Desc}</p>
+        <div className="relative w-full my-8 py-8 bg-[#00AEEF3D] rounded-[24px]  
+            " >
+            <div
+                className="absolute inset-0 rounded-[24px] p-[2px] z-0"
+                style={{
+                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude"
+                }}
+            />
+            <div className='w-3/4 mx-auto space-y-5'>
+                <h1 className='font-bold text-center  text-[32px]'>{H1}</h1>
+                <p className='text-[20px] text-center '>{Desc}</p>
 
                 {Input && <div className='relative'>
                     <input className='w-full mt-2 py-5 rounded-lg' placeholder='Enter Your Email ' type="search" />
 
                     <button
-                        className="absolute right-3 top-4 w-56 py-2 mt-1 px-5   bg-radial from-[#FF0F7B]  to-[#F89B29] rounded-md font-bold text-white transition-opacity hover:opacity-90"
-
-                    >
+                        className="absolute right-3 top-4 w-56 py-2 mt-1 px-5   bg-radial from-[#FF0F7B]  to-[#F89B29] rounded-md font-bold text-white transition-opacity hover:opacity-90">
                         {Input}
                     </button>
                 </div>}
 
                 {
                     Btn && <div className='flex justify-center'>
-                        <button className=" mx-auto py-2 mt-1 px-5  bg-radial from-[#FF0F7B]  to-[#F89B29] rounded-md font-bold text-white transition-opacity hover:opacity-90"
-
-                        >
+                        <button className=" mx-auto py-[20px] px-[24px] mt-1 rounded-[8px] text-[18px] font-medium  text-white transition-opacity hover:opacity-90" style={{ background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)" }}>
                             {Btn}
                         </button>
                     </div>
