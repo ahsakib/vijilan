@@ -10,7 +10,7 @@ import Quotes from "@app/Landing/Quotes"
 
 const Home = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#191624" }}>
+    <div className="min-h-screen">
       {/* Background Pattern */}
 
       {/* Content Overlay */}

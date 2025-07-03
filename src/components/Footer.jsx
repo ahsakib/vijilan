@@ -16,32 +16,24 @@ const Footer = () => {
     return (
         <footer
             className="relative z-10 px-6 pt-24 pb-10"
-            style={{
-                background: "linear-gradient(180deg, #191624 11.15%, rgba(25, 22, 36, 0.64) 26.08%, #191624 38.29%)",
-                backgroundImage: `url(${footerGradiant})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-            }}
+
         >
             {/* Background logo */}
-            <div className="container mx-auto px-6 absolute top-16 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden">
+            {/* <div className="container mx-auto px-6 absolute top-16 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden">
                 <div className="h-full w-full flex items-center space-x-1 opacity-10">
                     <img src={footerBg} alt="V"  className="h-[200px] w-full" />
                     
                 </div>
-                {/* <div className="flex items-center space-x-1 opacity-10">
-                    <img src={v} alt="V" width={180} height={200} className="h-32 w-auto" />
-                    <img src={i} alt="I" width={40} height={200} className="h-32 w-auto" />
-                    <img src={j} alt="J" width={120} height={200} className="h-32 w-auto" />
-                    <img src={i} alt="I" width={40} height={200} className="h-32 w-auto" />
-                    <img src={l} alt="L" width={120} height={200} className="h-32 w-auto" />
-                    <img src={a} alt="A" width={180} height={200} className="h-32 w-auto" />
-                    <img src={n} alt="N" width={180} height={200} className="h-32 w-auto" />
-                </div> */}
-            </div>
+            </div> */}
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-6 relative z-10"
+                style={{
+                    backgroundImage: `url('/footer-bg.svg')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "bottom",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
                 <div className="pt-24">
                     <div className="grid md:grid-cols-5 gap-8 mb-12">
                         <div className="">
