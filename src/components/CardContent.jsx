@@ -1,8 +1,8 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
   return (
-    <div className="relative rounded-[24px] p-5" >
+    <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "my-8" : "-my-8"}`} >
       {/* Gradient border using pseudo */}
       <div
         className="absolute inset-0 rounded-[24px] p-[2px] z-0"
@@ -22,9 +22,7 @@ const CardContent = ({ icon, banner, Cardsticket, badge, title, description, but
       />
 
 
-      <div
-        className={`relative rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`}
-      >
+      <div className={`relative rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
 
         {icon && <div className="icon-container flex justify-center mb-4">
           <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px]" />
@@ -45,7 +43,7 @@ const CardContent = ({ icon, banner, Cardsticket, badge, title, description, but
 
 
         {iconed && <div className="iconed flex justify-center mb-4">
-          <img src={iconed} alt="Icon" className="iconed w-[77px] h-[77px]" />
+          <img src={iconed} alt="Icon" className="iconed w-[77px] text-white h-[77px]" />
         </div>}
         {
           Cardsticket && <div className='bg-[#D9D9D9] w-[250px] p-6 h-[190px] mx-auto rounded-2xl my-5 flex justify-center items-center'>

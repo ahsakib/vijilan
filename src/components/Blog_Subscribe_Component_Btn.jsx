@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn }) => {
     return (
-        <div className={`relative w-full my-8 py-8 ${background ? "bg-[#00AEEF3D]" : "bg-transparent"}  rounded-[24px]  `}>
+        <div className={`relative w-full my-8 py-8 text-white ${background ? "bg-[#00AEEF3D]" : "bg-transparent"}  rounded-[24px]  `}>
             <div
                 className="absolute inset-0 rounded-[24px] p-[2px] z-0"
                 style={

@@ -81,11 +81,11 @@ const Resources = () => {
                 {/* apply */}
                 <div>
                     <Blog_Subscribe_Component_Btn
-                     
-                     H1="Ready to Apply These Insights?"
-                     Desc="Knowledge is power, but action is key. Let's discuss how Vijilan's services can turn these strategies into a reality for your organization or your clients."
-                     Btn="schedule a Strategic consultation"
-                     />
+
+                        H1="Ready to Apply These Insights?"
+                        Desc="Knowledge is power, but action is key. Let's discuss how Vijilan's services can turn these strategies into a reality for your organization or your clients."
+                        Btn="schedule a Strategic consultation"
+                    />
                 </div>
             </div>
         </section>);

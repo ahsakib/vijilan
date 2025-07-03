@@ -7,29 +7,20 @@ import wa from "../../Assets/wa.png";
 import note from "../../Assets/note.png";
 import GradientButton from "@components/GradientButton";
 import OutlineGradientButton from "@components/OutlineGradientButton";
+import Heading_Btn from "@components/Heading_Btn";
 export default function Component() {
 
     return (
         <div className="min-h-screen">
 
-            {/* Hero Section */}
-            <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
-                <div className="mx-auto max-w-7xl text-center space-y-8">
-                    <h1 className="text-5xl font-bold tracking-tight text-white">
-                        Expert Detection. Actionable Guidance.
-                    </h1>
-                    <p className=" text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto">
-                        Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering
-                        clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-10 justify-center">
-                        <GradientButton
-                            children={"watch the service overview"}
-                        />
-                        <OutlineGradientButton children={"get an instant quote"}/>
-                    </div>
-                </div>
-            </section>
+            {/* Hero Section */} 
+            <Heading_Btn
+                h1=" Expert Detection. Actionable Guidance."
+                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively."
+                btn1="Jwatch the service overview"
+                btn2="get an instant quote"
+            />
+
 
             {/* Video Section */}
             <section className="px-4 py-16 lg:px-8">
@@ -242,7 +233,7 @@ export default function Component() {
                                 Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.
                             </p>
                         </div>
-                                {/* 5th */}
+                        {/* 5th */}
                         <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                             <div
                                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -279,7 +270,7 @@ export default function Component() {
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3">Confirm & Close</h3>
                             <p className="text-white text-center text-[14px]">
-                               We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
+                                We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
                             </p>
                         </div>
                     </div>
