@@ -97,7 +97,7 @@ const industries = [
 
 export default function Component() {
     return (
-        <div className="bg-transparent">
+        <div className="bg-transparent max-w-[90%] mx-auto">
 
             {/* Hero Section */}
             <section className="px-6 py-16 text-white">
@@ -310,16 +310,29 @@ export default function Component() {
 
             {/* Ready to Scale Section */}
 
-            <section className="py-16 px-4 bg-transparent relative overflow-hidden max-w-7xl mx-auto">
-                <section className="grid grid-cols-2 gap-6">
 
+                <section className='flex gap-5 flex-col md:flex-row max-w-7xl mx-auto'>
                     <CardContent
                         icon={JnAi}
-                        title={"JEN AI"}
-                        description={`"I can help you find case studies similar to your business, calculate potential ROI, and connect you with relevant success stories. What would you like to explore?"`}
+                        head="Partner Tier Comparison"
+                        description="A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining services, support, and benefits for each level as defined in the development plan."
+                        grdBtn={"Find my success story"}
                     />
+                    <div className=' p-5 flex flex-col items-center justify-center border-[3px] rounded-2xl border-[#035882]'>
+                        <div className='-mb-10 flex flex-col items-center justify-center  gap-3'>
+                            <div className='bg-gradient-to-t h-24 w-24  rounded-full flex justify-center items-center text-white text-lg font-bold from-[#07ADE9] to-[#EB9C33]'>
+                                JN </div>
+                            <h3 className='font-bold text-xl text-white'>JEN AI</h3>
+                        </div>
+
+                        <Heading_Btn
+                            desc='"Ask me which Vijilan services are best suited for meeting HIPAA compliance requirements, or how we can help you achieve CMMC Level 2 certification."'
+                            btn1="start a chat"
+                        />
+                    </div>
+
                 </section>
-            </section>
+                    
         </div>
     )
 }
