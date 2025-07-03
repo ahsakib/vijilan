@@ -9,6 +9,15 @@ import a2 from "../../Assets/a2.png";
 import a3 from "../../Assets/a3.png";
 import a4 from "../../Assets/a4.png";
 
+import r1 from "../../Assets/r1.png"; 
+import r2 from "../../Assets/r2.png"; 
+import r3 from "../../Assets/r3.png"; 
+import r4 from "../../Assets/r4.png"; 
+import r5 from "../../Assets/r5.png"; 
+import r6 from "../../Assets/r6.png"; 
+
+
+
 export const Blog_landing_Data = [
   {
     category: "MSP GROWTH",
@@ -60,7 +69,7 @@ export const Blog_landing_Data = [
   }
 ];
 
-export const weSarve=[
+export const weSarve = [
   {
     audience: "MSPs, VARs, & MSSPs",
     icon: a1,
@@ -75,7 +84,7 @@ export const weSarve=[
       "Transform your security operations, gain complete control over your data, and stop breaches faster with Vijilan's AI-driven, expert-managed cybersecurity services.",
     action: "View Enterprise Solutions"
   },
-   {
+  {
     audience: "IT Consultants & vCISOs",
     icon: a3,
     description:
@@ -89,9 +98,9 @@ export const weSarve=[
       "Robust cybersecurity tailored for your business. We provide industry-leading protection and expert management through our network of trusted and certified Vijilan partners.",
     action: "Find a Vijilan Partner"
   },
- 
+
 ];
-export const StrategicData= [
+export const StrategicData = [
   {
     title: "The MSP's Playbook for Profitable Security Services",
     description:
@@ -111,3 +120,55 @@ export const StrategicData= [
     action: "Download now"
   }
 ];
+
+export const resourceData = [
+  {
+    banner:r1,
+    tab:"Whitepaper",
+    title: "Mastering Cross-Domain Defense: A Strategic Guide for MSPs",
+    description:
+      "Comprehensive strategies for implementing unified security across endpoints, cloud, and network environments to maximize protection while minimizing complexity.",
+    cta: "Download Pdf"
+  },
+  {
+    banner:r2,
+    tab:"CaseStudy",
+    title: "How a Gold Tier MSP Increased MRR by 30% with ThreatRemediate",
+    description:
+      "Real-world results from a 150-employee MSP that transformed their security practice, reduced operational overhead, and significantly boosted recurring revenue.",
+    cta: "Read More..."
+  },
+  {
+    banner:r3,
+    tab:"Webinars",
+    title: "On-Demand Webinar: Deconstructing a Real-World Ransomware Attack",
+    description:
+      "Step-by-step analysis of an actual ransomware incident, from initial compromise to containment, with expert commentary from our SOC team.",
+    cta: "Read More..."
+  },
+  {
+    banner:r4,
+    tab:"Blog Article",
+    title: "5 Ways Our Cribl Integration Slashes SIEM Costs",
+    description:
+      "Endpoint protection is just the beginning. Learn why network detection and response (NDR) capabilities are essential for comprehensive threat visibility.",
+    cta: "Read More..."
+  },
+  {
+    banner:r5,
+    tab:"Case Study",
+    title: "The CISO's Handbook to Combating AI-Driven Attacks",
+    description:
+      "Advanced defensive strategies for protecting against sophisticated AI-powered threats, including detection techniques and response frameworks for modern enterprise environments.",
+    cta: "Read More..."
+  },
+  {
+    banner:r6,
+    tab:"Webinars",
+    title: "How a Mid-Market Enterprise Reduced Alert Fatigue by 99%",
+    description:
+      "Learn how a 500-employee company eliminated false positives and transformed their security operations with intelligent alert correlation and automated response.",
+    cta: "Read More..."
+  }
+];
+
