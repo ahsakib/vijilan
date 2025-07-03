@@ -79,8 +79,7 @@ const Blog_landing_page = () => {
                             className="h-[304px] rounded-[24px] flex justify-center items-center relative overflow-hidden"
                             style={{
                                 background: "linear-gradient(90deg, #082135 0%, #082135 40%, #1a3a4f 60%, #1a3a4f 100%)",
-                            }}
-                        >
+                            }}>
                             {/* Left side solid background */}
                             <div
                                 className="absolute inset-0"

@@ -92,7 +92,7 @@ const CardContent = ({ icon, title, description, buttonText, designDescription, 
           )
         }
         {buttonText && (
-          <button className="cta-button px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition">
+          <button className="cta-button mt-3 text-[18px] p-[20px] text-[#082235] rounded-[8px]  transition">
             {buttonText}
           </button>
         )}

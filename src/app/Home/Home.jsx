@@ -8,6 +8,57 @@ import CardContent from "@components/CardContent"
 import Partnership from "@app/Landing/Partnership"
 import Quotes from "@app/Landing/Quotes"
 import JoinMissionSection from "@components/JoinMissionSection";
+import image from "../../Assets/image.png";
+import setting from "../../Assets/setting.png";
+import target from "../../Assets/target.png";
+import light from "../../Assets/light.png";
+import object from "../../Assets/object.png";
+import question from "../../Assets/question.png";
+import quote from "../../Assets/quote.png";
+import aws from "../../Assets/aws.png";
+import corelight from "../../Assets/corelight.png";
+import microsoft from "../../Assets/microsoft.png";
+import crible from "../../Assets/crible.png";
+import rowstrike from "../../Assets/rowstrike.png";
+import fortinet from "../../Assets/fortinet.png";
+import badge from "../../Assets/badge.png";
+import avater from "../../Assets/avater.png";
+import vector from "../../Assets/Vector.png";
+import vendor from "../../Assets/vendor.png";
+import mask from "../../Assets/mask.png";
+import lights from "../../Assets/lights.png"
+import objects from "../../Assets/objects.png";
+import dollar from "../../Assets/dollar.png"
+
+
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
+const data = [
+  {
+    category: "Security Infrastructure & Network Security",
+    items: ["Fortinet", "Palo Alto", "Cisco", "Juniper", "Check Point"],
+  },
+  {
+    category: "Cloud Security & SaaS Platforms",
+    items: ["SonicWall", "WatchGuard", "Sophos", "UniFi (Ubiquiti)"],
+  },
+  {
+    category: "Endpoint Detection & Response (EDR)",
+    items: ["pfSense", "Windows (WEF)", "Windows (Syslog)", "Microsoft IIS"],
+  },
+  {
+    category: "ITSM & Ticketing System Integration",
+    items: [
+      "MS Exchange",
+      "Netskope (syslog)",
+      "Ordr (syslog)",
+      "RSA (syslog)",
+      "Linux (Syslog)",
+    ],
+  },
+];
+
+
 
 const Home = () => {
   return (
@@ -21,41 +72,41 @@ const Home = () => {
         <HeroSection />
 
         {/* partnership section */}
-        <Partnership/>
+        {/* <Partnership/> */}
 
         {/* quote section */}
-        <Quotes/>
+        {/* <Quotes/> */}
 
         {/* Tailored Solutions Section */}
-        <section className="container mx-auto py-16">
+        <section className="container mx-auto pb-16">
           <div className="min-h-screen px-4 py-12">
             <div className="max-w-6xl mx-auto">
               {/* Header */}
               <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cyan-400 mb-4">
+                <h1 className="text-4xl md:text-[40px] font-bold text-[#00AEEF] mb-4">
                   Tailored Cybersecurity Solutions
                 </h1>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">For Your Needs</h2>
+                <h2 className="text-4xl md:text-[40px] font-bold text-white">For Your Needs </h2>
               </div>
 
               {/* Cards Container */}
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 mx-auto">
                 {/* Left Card - MSPs */}
 
-                <CardContent 
-                   icon={GroupIcon}
-                   title="For MSPs, VARs & MSSPs"
-                   description="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
-                   buttonText="EMPOWER YOUR MSP/VAR/MSSP"
+                <CardContent
+                  icon={GroupIcon}
+                  head="For MSPs, VARs & MSSPs"
+                  sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
+                  buttonText="EMPOWER YOUR MSP/VAR/MSSP"
                 />
 
                 {/* Right Card - SMBs */}
-                <CardContent 
-                   icon={GroupIcon2}
-                   title="For SMBs & Mid-Market Enterprises"
-                   description="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
+                <CardContent
+                  icon={GroupIcon2}
+                  head="For SMBs & Mid-Market Enterprises"
+                  sub="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
                     tailored to your size and industry needs."
-                   buttonText="SECURE YOUR BUSINESS"
+                  buttonText="SECURE YOUR BUSINESS"
                 />
               </div>
             </div>
@@ -65,207 +116,457 @@ const Home = () => {
 
 
         {/* Threat Landscape Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                The Evolving Threat
-                <br />
-                Landscape Demands
-                <br />
-                <span className="text-cyan-400">a New Defense</span>
-              </h2>
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded">
-                Learn More
-              </button>
-            </div>
-            <div className="text-gray-300 space-y-4 leading-relaxed">
-              <p>
-                Today's cyber threats are more sophisticated and persistent than ever before. Traditional security
-                approaches are no longer sufficient to protect against advanced persistent threats, zero-day exploits,
-                and targeted attacks.
-              </p>
-              <p>
-                Organizations need intelligent, adaptive security solutions that can detect, analyze, and respond to
-                threats in real-time. Vijilan's platform leverages advanced AI and machine learning to provide proactive
-                threat hunting, automated incident response, and comprehensive security orchestration.
-              </p>
-              <p>
-                Our approach combines human expertise with cutting-edge technology to deliver security solutions that
-                evolve with the threat landscape, ensuring your organization stays protected against both known and
-                unknown threats.
-              </p>
+        <section
+          className="relative container mx-auto px-6 rounded-[24px] overflow-hidden">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 "
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          ></div>
+
+          {/* Gradient Overlay */}
+          <div
+            className="absolute inset-0 z-10"
+            style={{
+              background: "linear-gradient(0deg, rgba(8,34,53,0.8) 53.83%, rgba(0,174,239,0.8) 328.5%)",
+            }}
+          ></div>
+          <div className="relative z-20 container mx-auto px-6 py-16 rounded-[24px]">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-5xl font-bold text-white mb-6">
+                  The Evolving Threat
+                  <br />
+                  Landscape Demands
+                  <br />
+                  a New Defense
+                </h2>
+                <button
+                  className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                  style={{
+                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                  }}>
+
+                  <span>GET STARTED FREE</span>
+                  <div className="w-6 h-6  flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 16 16 12 12 8"></polyline>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              <div className="relative text-white text-[18px] bg-[#00AEEF3D] rounded-[24px] p-[24px] space-y-4 leading-relaxed overflow-hidden">
+                <div
+                  className="absolute inset-0 rounded-[24px] p-[1px] z-0 h-full "
+                  style={{
+                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude"
+                  }}
+                />
+                <p>
+                  Modern cyber threats are more sophisticated and faster than ever. Adversaries execute complex cross-domain attacks, exploiting vulnerabilities across endpoints, identities, and cloud environments simultaneously. A staggering 75% of attacks are now malware-free, often leveraging stolen credentials to bypass traditional defenses. Siloed security tools can't keep up, leaving your organization exposed.
+                </p>
+
+                <p>
+                  <span className="text-[#00AEEF]">Vijilan's Unified Security Platform</span> – powered by industry leaders like CrowdStrike, Fortinet, Corelight, Cribl, and an extensive integration ecosystem – combined with our 24/7 Expert Services, provides the comprehensive answer.
+                </p>
+              </div>
             </div>
           </div>
         </section>
+
 
         {/* Vijilan Advantage Section */}
         <section className="container mx-auto px-6 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              The <span className="text-cyan-400">Vijilan Advantage</span>:<br />
+            <h2 className="text-[40px] font-bold text-white mb-4">
+              <span className="text-[#00AEEF]"> The Vijilan Advantage</span>:<br />
               Secure. Compliant. Partner-Focused.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {[
-              {
-                icon: <Shield className="w-8 h-8 text-cyan-400" />,
-                title: "24/7 Security Operations Center",
-                description:
-                  "Our expert security analysts monitor your environment around the clock, providing continuous threat detection, analysis, and response to keep your organization protected.",
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-cyan-400" />,
-                title: "AI-Powered Compliance Automation",
-                description:
-                  "Streamline compliance management with automated reporting, continuous monitoring, and intelligent policy enforcement across multiple frameworks and regulations.",
-              },
-              {
-                icon: <Lightbulb className="w-8 h-8 text-cyan-400" />,
-                title: "Powered by Industry Leaders",
-                description:
-                  "Built on proven technologies from industry leaders, our platform integrates seamlessly with your existing security stack while providing enhanced capabilities.",
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-cyan-400" />,
-                title: "Proactive Remediation & Response",
-                description:
-                  "Automated incident response and remediation capabilities ensure threats are contained and neutralized quickly, minimizing business impact and reducing recovery time.",
-              },
-              {
-                icon: <MapPin className="w-8 h-8 text-cyan-400" />,
-                title: "Partner-Centric Model",
-                description:
-                  "Designed specifically for MSPs and partners, our platform provides the tools, training, and support needed to successfully deliver cybersecurity services to your clients.",
-              },
-              {
-                icon: <Zap className="w-8 h-8 text-cyan-400" />,
-                title: "SOAR Platform Integration",
-                description:
-                  "Security Orchestration, Automation, and Response capabilities that integrate with your existing tools to provide comprehensive security management and workflow automation.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-6 rounded-lg">
-                <div className="bg-cyan-500/20 p-3 rounded-lg w-fit mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* 1st */}
+            <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[110px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={target} alt="" />
               </div>
-            ))}
+              <h3 className="text-[24px] font-medium text-white mb-3">24/7 US-Based SOC</h3>
+              <p className="text-white text-[18px] text-center">
+                Expert eyes on your security, around <br /> the clock. Our certified analysts <br /> provide continuous monitoring and <br /> rapid incident response from our SOC 2 <br /> Type 2 certified Security Operations <br /> Center.
+              </p>
+            </div>
+
+            <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[90px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={light} alt="" />
+              </div>
+              <h3 className="text-[24px] font-bold text-white mb-3">AI-Powered Intelligence</h3>
+              <p className="text-white text-[18px] text-center">
+                Advanced analytics and AI to detect <br /> known and unknown threats faster, <br /> reducing false positives and enabling <br /> proactive defense.
+              </p>
+            </div>
+
+            <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[130px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={setting} alt="" />
+              </div>
+              <h3 className="text-[23px] font-bold text-white mb-3 text-center">Powered by Industry Leaders <br /> & Broad Integrations</h3>
+              <p className="text-white text-[18px] text-center">
+                Leveraging best-in-class technology <br /> from CrowdStrike, Fortinet, Corelight, <br /> and Cribl, and seamlessly integrating <br /> with your existing ecosystem including <br /> Palo Alto, Cisco, Microsoft 365, AWS, <br />Azure, SentinelOne, Okta, and many <br /> more.
+              </p>
+            </div>
+
+            <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[156px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={question} alt="" />
+              </div>
+              <h3 className="text-[24px] font-bold text-white mb-3">Proactive Remediation</h3>
+              <p className="text-white text-[18px] text-center">
+                We don't just alert; our experts act to <br /> contain and neutralize threats, <br /> minimizing impact and ensuring <br /> business continuity.
+              </p>
+            </div>
+            {/* 5th */}
+            <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[110px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={target} alt="" />
+              </div>
+              <h3 className="text-[24px] font-bold text-white mb-3">Partner-Centric Model</h3>
+              <p className="text-white text-[18px] text-center">
+                Dedicated to empowering MSP, VAR, <br /> and MSSP success with comprehensive <br /> enablement (including our unique <br /> Partner Sales & Marketing Portal), <br /> flexible programs, and a focus on your <br /> growth.
+              </p>
+            </div>
+
+            <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+              <div
+                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                style={{
+                  background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                           linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                  WebkitMaskComposite: "xor",
+                  maskComposite: "exclude"
+                }}
+              />
+              <div className="w-[197px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+                <img src={object} alt="" />
+              </div>
+              <h3 className="text-[24px] font-bold text-white mb-3">SOC 2 Type 2 Certified</h3>
+              <p className="text-white text-center text-[14px]">
+                Our commitment to the highest <br /> security and operational standards is <br /> validated by our SOC 2 Type 2 <br /> certification by A-LIGN, giving you <br /> independently verified trust.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Innovation Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-cyan-400">Trusted by Leaders</span>,<br />
-              Powered by Innovation
-            </h2>
+        <div className="relative container mx-auto overflow-hidden " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+          {/* Left side solid background */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, #082135 0%, #082135 50%, rgba(23, 51, 71, 0.8) 70%, rgba(23, 51, 71, 0.4) 100%)",
+            }}
+          />
+
+          {/* Right side pattern with smooth blend */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${mask})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.8,
+              maskImage:
+                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+              WebkitMaskImage:
+                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+            }}
+          />
+
+          {/* Overlay for color consistency */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(23, 51, 71, 0.9) 0%, rgba(23, 51, 71, 0.7) 40%, rgba(26, 58, 79, 0.5) 60%, rgba(26, 58, 79, 0.3) 100%)",
+            }}
+          />
+
+          {/* Background decorative circles */}
+          <div className="absolute w-[243px] h-[152px]">
+            <img src={quote} alt="" />
           </div>
-          <div className="grid md:grid-cols-4 gap-4 mb-12">
-            {["Microsoft", "CrowdStrike", "Sentinel One", "Palo Alto"].map((partner) => (
-              <div
-                key={partner}
-                className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-center"
-              >
-                <div className="text-cyan-400 font-semibold">{partner}</div>
-              </div>
-            ))}
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-              <div className="flex items-start space-x-4">
-                <div className="bg-red-500 rounded-full p-2 flex-shrink-0">
-                  <span className="text-white font-bold text-sm">JL</span>
-                </div>
-                <div>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    "Vijilan has transformed our security operations. The platform's intelligent automation and
-                    comprehensive monitoring have significantly improved our threat detection capabilities while
-                    reducing operational overhead."
-                  </p>
-                  <div className="text-white font-semibold">John Smith</div>
-                  <div className="text-gray-400 text-sm">CISO, Enterprise Corp</div>
-                  <div className="flex text-yellow-400 mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
+
+
+          <div className="relative max-w-6xl mx-auto">
+            {/* Header Section */}
+            <div className="text-center py-10 space-y-6">
+              <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white ">
+                <span className="text-[#00AEEF]">Trusted by Leaders,</span>
+                <br />
+                <span className="text-white">Powered by Innovation</span>
+              </h2>
+
+              {/* Company Logos */}
+              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+                {[
+                  { src: rowstrike, },
+                  { src: fortinet, },
+                  { src: corelight },
+                  { src: crible },
+                  { src: microsoft },
+                  { src: aws },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#00AEEF] w-fit h-[40px] flex items-center justify-center rounded-[8px] px-[16px] py-[10px]"
+                  >
+                    <img src={item.src} alt="" className={item.height || "h-[24px]"} />
                   </div>
+                ))}
+              </div>
+
+
+              <p className="text-white text-[18px] max-w-3xl mx-auto">
+                Our platform is built on leading technologies and integrates with hundreds of <br /> security products and cloud
+                services you already use.
+              </p>
+            </div>
+
+            {/* Testimonial and Certification Section */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Testimonial */}
+              <div className=" mx-auto max-w-md ">
+                <div className="flex flex-col space-y-5 text-left">
+                  <div className=" gap-4">
+                    <div className="text-left w-16 h-16 rounded-full overflow-hidden ">
+                      <img
+                        src={avater}
+                        alt="Customer testimonial"
+                        width={52}
+                        height={52}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                  </div>
+
+                  <blockquote className="text-white text-[15px] leading-relaxed">
+                    "Vijilan has transformed our security posture and <br /> empowered our team to focus on strategic growth <br /> while
+                    ensuring our clients are protected with <br /> enterprise-grade cybersecurity."
+                  </blockquote>
+
+                  <div>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-2 h-2 fill-[#FFD300] text-[#FFD300]" />
+                      ))}
+                    </div>
+                  </div>
+
+                  <p className="text-[#00AEEF] text-[15px]">Leading MSP Partner</p>
+                </div>
+              </div>
+
+              {/* Certification Badge */}
+              <div className=" flex justify-center">
+                <div className="relative  bg-[#00AEEF3D] py-[50px] rounded-[24px] px-[24px] text-center backdrop-blur-sm space-y-3">
+                  <div
+                    className="absolute inset-0 rounded-[24px] p-[1px] z-0 h-full"
+                    style={{
+                      background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                      WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                      WebkitMaskComposite: "xor",
+                      maskComposite: "exclude"
+                    }}
+                  />
+                  <div className="w-[100px] h-[100px] mx-auto">
+                    <div className="text-white font-bold text-xs">
+                      <img src={badge} alt="" />
+                    </div>
+                  </div>
+                  <h3 className="text-white text-[24px] font-medium mb-2">SOC 2 Type 2 Certified</h3>
+                  <p className="text-white text-[15px]">
+                    Independently audited for security, availability, processing <br />integrity, confidentiality, and privacy.
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="text-center">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">SOC 2 Type 2 Certified</h3>
-                <p className="text-gray-300 mb-4">
-                  Independently verified security, availability, processing integrity, confidentiality, and privacy
-                  controls.
-                </p>
-                <span className="border border-cyan-400 text-cyan-400 px-3 py-1 rounded text-sm">Certified</span>
+
+            {/* Navigation Arrows */}
+            <div className="flex ml-[110px]  gap-4 mt-5">
+              <div className='bg-[#00AEEF] rounded-[6px] p-2'>
+                <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+              </div>
+              <div className='bg-[#00AEEF] rounded-[6px] p-2'>
+                <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
               </div>
             </div>
+            {/* vendor image */}
+            <div className="pb-[60px]">
+              <img src={vendor} alt="" />
+            </div>
           </div>
-        </section>
+        </div>
+        <div className="flex items-center justify-center mt-5">
+          <button
+            className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+            style={{
+              background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+            }}>
+
+            <span className="uppercase">Read More Success Stories</span>
+            <div className="w-6 h-6  flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 16 16 12 12 8"></polyline>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+        </div>
 
         {/* Integrations Section */}
         <section className="container mx-auto px-6 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-cyan-400">Comprehensive Security</span>
+            <h2 className="text-[40px] font-bold text-white mb-4">
+              <span className="text-[#00AEEF]">Comprehensive Security</span>
               <br />
               Ecosystem Integrations
             </h2>
+            <p className="text-[18px] text-white">Vijilan seamlessly integrates with your existing security infrastructure, providing <br /> unified visibility and management across all your security tools and platforms.</p>
           </div>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {[
-              {
-                category: "Security Information & Event Management (SIEM)",
-                tools: ["Splunk", "QRadar", "ArcSight", "LogRhythm", "Sentinel"],
-              },
-              {
-                category: "Endpoint Detection & Response (EDR)",
-                tools: ["CrowdStrike", "SentinelOne", "Carbon Black", "Cortex XDR"],
-              },
-              {
-                category: "Extended Detection & Response (XDR)",
-                tools: ["Microsoft Defender", "Palo Alto Cortex", "Trend Micro Vision One"],
-              },
-              {
-                category: "Security Orchestration, Automation & Response (SOAR)",
-                tools: ["Phantom", "Demisto", "Swimlane", "Rapid7"],
-              },
-            ].map((section, index) => (
-              <div key={index}>
-                <h3 className="text-white font-semibold mb-3">{section.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {section.tools.map((tool) => (
-                    <span
-                      key={tool}
-                      className="bg-cyan-500/20 text-cyan-400 border border-cyan-400/30 px-3 py-1 rounded text-sm"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
+          <div className="max-w-7xl mx-auto px-6 ">
+            <div className="grid md:grid-cols-2 gap-10">
+              {/* Left Side - Categories */}
+              <div className="flex flex-col gap-4">
+                {data.map((section, index) => (
+                  <div
+                    key={index}
+                    className={`relative rounded-md px-4 py-3 text-white font-medium text-sm ${index === 0
+                      ? "bg-[#0A7FBF] text-white"
+                      : "bg-[#2D2D2D] border border-[#00AEEF80]"
+                      }`} style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))` }}
+                  >
+                    <div
+                      className="absolute inset-0 rounded-[8px] p-[1px] z-0"
+                      style={{
+                        background: `conic-gradient(from 180deg at 50% 50%, #FF98E2 0deg, #FFC876 35.77deg, #79FFF7 153.75deg, #9F53FF 258.75deg, #FF98E2 360deg)`,
+                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                        WebkitMaskComposite: "xor",
+                        maskComposite: "exclude",
+
+                      }}
+                    />
+                    {section.category}
+                  </div>
+                ))}
               </div>
-            ))}
+
+              {/* Right Side - Tags */}
+              <div className="flex flex-wrap gap-3 items-start">
+                {data.map((section) =>
+                  section.items.map((item, i) => (
+                    <div
+                      key={item + i}
+                      className="bg-[#00AEEF] text-white text-[16px] px-[16px] py-[10px] rounded-[8px]"
+                    >
+                      {item}
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
+
           </div>
-          <div className="text-center mt-8">
-            <p className="text-gray-300 mb-6">
-              Don't see your security tools listed? We integrate with hundreds of security solutions.
+          <div className="text-center mt-10">
+            <p className="text-gray-300 mb-5">
+              Don't see your security tool listed? Our platform supports hundreds of integrations <br /> through APIs, syslog, and custom connectors.
             </p>
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded">
-              View All Integrations
+            <button
+              className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+              style={{
+                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+              }}>
+
+              <span className="uppercase">Request Integration Consultation</span>
+              <div className="w-6 h-6  flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 16 16 12 12 8"></polyline>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+              </div>
             </button>
           </div>
         </section>
 
         {/* Success Stories Section */}
         <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Partners' <span className="text-cyan-400">Success Stories</span>
+          <div className="text-center mb-10">
+            <h2 className="text-[40px] font-bold text-white">
+              Our Partners' <span className="text-[#00AEEF]">Success Stories</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -286,25 +587,47 @@ const Home = () => {
                   "Global Manufacturing Corp enhanced their security posture and achieved comprehensive visibility across their infrastructure.",
               },
             ].map((story, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-3">{story.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{story.description}</p>
-                <div className="text-cyan-400 text-sm font-semibold cursor-pointer">Read Success Story →</div>
+              <div key={index} className="relative bg-[#00AEEF3D] rounded-[24px] backdrop-blur-sm  p-[40px]">
+                <div
+                  className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
+                  style={{
+                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude"
+                  }}
+                />
+                <h3 className="text-[24px] font-medium text-white mb-3 text-center">{story.title}</h3>
+                <p className="text-white text-[15px] mb-4 leading-relaxed text-center">{story.description}</p>
+                <div className="text-[#00AEEF] text-[15px] cursor-pointer text-center">Read Full Story →</div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-2 rounded">
-              View All Success Stories
+          <div className="ml-[230px] mt-5">
+            <button
+              className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+              style={{
+                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+              }}>
+
+              <span className="uppercase">View All Partner Success Stories</span>
+              <div className="w-6 h-6  flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 16 16 12 12 8"></polyline>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+              </div>
             </button>
           </div>
         </section>
 
         {/* Deep Dive Section */}
         <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-cyan-400">Dive Deeper</span> Into Vijilan's
+          <div className="text-center mb-10">
+            <h2 className="text-[40px] font-bold text-white">
+              <span className="text-[#00AEEF]">Dive Deeper</span> Into Vijilan's
               <br />
               Cybersecurity Ecosystem
             </h2>
@@ -312,32 +635,42 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                icon: <Shield className="w-8 h-8 text-cyan-400" />,
-                title: "Security Operations Center",
+                icon: <img src={lights} alt="" className="w-[164px] h-[110px]" />,
+                title: "Our Solutions",
                 description:
-                  "Learn how our 24/7 SOC provides continuous monitoring, threat hunting, and incident response to keep your organization protected around the clock.",
-                buttonText: "Explore SOC Services",
+                  "Discover our full suite of managed security services, from mXDR and ThreatRemediate to specialized cloud and identity protection.",
+                buttonText: "Explore All Solutions",
               },
               {
-                icon: <Zap className="w-8 h-8 text-cyan-400" />,
-                title: "Platform Integrations",
+                icon: <img src={objects} alt="" className="w-[164px] h-[110px]" />,
+                title: "Our Technology & Integrations",
                 description:
-                  "Discover how Vijilan seamlessly integrates with your existing security tools and infrastructure to provide comprehensive protection without disruption.",
-                buttonText: "View Integrations",
+                  "Learn how our platform, powered by CrowdStrike, AI, and extensive integrations (Fortinet, Palo Alto, Microsoft 365, etc.), delivers unparalleled visibility and control.",
+                buttonText: "View Our Integrations",
               },
               {
-                icon: <Shield className="w-8 h-8 text-cyan-400" />,
-                title: "Compliance & Reporting",
+                icon: <img src={dollar} alt="" className="w-[100px] h-[110px]" />,
+                title: "Resources & Insights",
                 description:
-                  "Streamline compliance management with automated reporting, continuous monitoring, and comprehensive audit trails across multiple regulatory frameworks.",
-                buttonText: "Learn About Compliance",
+                  "Stay informed with our latest threat research, whitepapers, cybersecurity guides, and expert blog posts.",
+                buttonText: "Access Security Resources",
               },
             ].map((item, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 p-6 rounded-lg">
-                <div className="bg-cyan-500/20 p-3 rounded-lg w-fit mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{item.description}</p>
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 w-full bg-transparent px-4 py-2 rounded">
+              <div key={index} className="relative bg-[#00AEEF3D] backdrop-blur-sm p-6 rounded-[24px] flex flex-col items-center justify-center">
+                <div
+                  className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
+                  style={{
+                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude"
+                  }}
+                />
+                <div className=" mb-4">{item.icon}</div>
+                <h3 className="text-[24px] text-center font-medium text-white mb-3">{item.title}</h3>
+                <p className="text-white text-[18px] mb-4 leading-relaxed text-center">{item.description}</p>
+                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium text-[#082235] ">
                   {item.buttonText}
                 </button>
               </div>
@@ -345,12 +678,13 @@ const Home = () => {
           </div>
         </section>
 
+
         <JoinMissionSection
-                title="Ready to Elevate Your"
-                highlightedText="Security"
-                subtitle="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need."
-                buttonText="Get Your Free Security Consultation"
-            />
+          title="Ready to Elevate Your"
+          highlightedText="Security"
+          subtitle="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need."
+          buttonText="Get Your Free Security Consultation"
+        />
       </div>
     </div>
   )
