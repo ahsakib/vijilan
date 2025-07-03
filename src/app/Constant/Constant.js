@@ -29,6 +29,12 @@ import p2 from "../../Assets/p2.png";
 import p3 from "../../Assets/p3.png";
 
 
+import cp1 from "../../Assets/cp1.png";
+import cp2 from "../../Assets/cp2.png";
+import cp3 from "../../Assets/cp3.png";
+import cp4 from "../../Assets/cp4.png";
+
+
 
 export const Blog_landing_Data = [
   {
@@ -270,7 +276,7 @@ export const Empower = [
 
 export const Automation = [
   {
-    "icon":  a1,
+    "icon": a1,
     "title": "Live Pricing Calculator",
     "description": "Generate accurate quotes instantly. Input client assets and get real-time pricing with margin calculations.",
     "buttonText": "Launch calculator"
@@ -289,9 +295,46 @@ export const Automation = [
     "buttonText": "Calculate ROI"
   },
   {
-    "icon":a2,
+    "icon": a2,
     "title": "Jen AI Sales Assistant",
     "description": "Get instant answers about pricing, technical specs, and competitive positioning. Available 24/7.",
     "buttonText": "Start chat"
+  }
+]
+
+
+export const ComplainSays = [
+
+  {
+    "title": "For Your Business",
+    "description": "Meet your direct and often complex compliance obligations with our audit-ready reporting and long-term data retention, mapped to frameworks like NIST and ISO 27001. Reduce compliance workload while maintaining the highest security standards."
+  },
+  {
+    "title": "For Your Clients",
+    "description": "Empower your MSP to serve clients in regulated industries like healthcare and finance. Offer compliance-ready security services that open up new, profitable markets while providing the expertise your clients trust."
+  },
+]
+
+export const complianceFeatures = [
+
+  {
+    "icon": cp1,
+    "title": "7-Year Raw Log Retention",
+    "description": "Meet long-term data retention requirements for forensics and audits with our secure, cost-effective raw log storage that exceeds industry standards."
+  },
+  {
+    "icon": cp2,
+    "title": "Audit-Ready Reporting",
+    "description": "Generate comprehensive, on-demand reports mapped to specific compliance controls, simplifying your audit process and demonstrating due diligence."
+  },
+  {
+    "icon":cp3,
+    "title": "24/7 Continuous Monitoring",
+    "description": "Our SOC provides continuous monitoring of your environment to detect and respond to potential compliance violations or security incidents in real time."
+  },
+  {
+    "icon": cp4,
+    "title": "SOC 2 Type 2 Certified",
+    "description": "Our own operations are independently audited and SOC 2 Type 2 certified, giving you confidence in our security, processes, and integrity."
   }
 ]

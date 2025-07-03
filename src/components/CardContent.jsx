@@ -1,6 +1,8 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+
+  console.log(side_text)
   return (
     <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "mt-10 ml-5" : "mb-10 ml-5"}`} >
       {/* Gradient border using pseudo */}
@@ -42,7 +44,7 @@ const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, descripti
 
 
 
-        {iconed && <div className="iconed flex justify-center mb-4">
+        {iconed && <div className={`iconed flex ${side_text ? "justify-start" : "justify-center"}  mb-4`}>
           <img src={iconed} alt="Icon" className="iconed w-[77px] text-white h-[77px]" />
         </div>}
         {
@@ -50,11 +52,15 @@ const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, descripti
             <h4 className='text-center text-black  text-2xl'>{Cardsticket}</h4>
           </div>
         }
-        {head && <h3 className="head text-[25px] text-white font-medium mb-2">{head}</h3>}
+        {head && <h3 className={`head text-[25px] text-white font-medium mb-2 ${side_text ? "text-left" : "text-center"} `}>{head}</h3>}
         <h3 className="title text-[37px] font-medium mb-2">{title}</h3>
         {
           description && (
-            <p className={`  mb-4 ${banner ? "text-sm" : " description"}`}   >{description}</p>
+            <p
+              className={`mb-4 ${banner ? "text-sm" : "description"} ${side_text ? "text-left" : "text-center"}`}
+            >
+              {description}
+            </p>
           )
         }
 
