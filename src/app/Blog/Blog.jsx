@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMailBulk } from 'react-icons/fa';
+import { FaMailBulk } from 'react-icons/fa' 
 import banner from "../../Assets/Blog-banner.png";
 import linkdin from "../../Assets/linkdin.png";
 import mail from "../../Assets/mail.png";
@@ -13,7 +13,7 @@ import mask from "../../Assets/mask.png";
 
 const Blog = () => {
     return (
-        <div className="bg-[#191624] text-white py-10 lg:px-8 mb-96 px-11">
+        <div className="bg-[#191624] text-white pt-52 pb-10 lg:px-8  px-11">
 
             {/* top part */}
             <section className="container mx-auto px-6">
