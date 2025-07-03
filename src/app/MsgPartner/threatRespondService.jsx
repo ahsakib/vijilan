@@ -1,36 +1,69 @@
 import { Play, Search, Shield, Users, MessageSquare, CheckCircle, ArrowRight, Menu } from "lucide-react"
-
+import detect from "../../Assets/detect.png"
+import arrow from "../../Assets/arrow.png";
+import right from "../../Assets/right.png";
+import head from "../../Assets/head.png";
+import wa from "../../Assets/wa.png";
+import note from "../../Assets/note.png";
 export default function Component() {
 
     return (
         <div className="min-h-screen">
 
             {/* Hero Section */}
-            <section className="px-6 py-24 relative z-10 sm:py-32 lg:px-8">
-                <div className="mx-auto max-w-7xl text-center">
-                    <h1 className="text-7xl font-bold tracking-tight text-white sm:text-6xl">
+            <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
+                <div className="mx-auto max-w-7xl text-center space-y-8">
+                    <h1 className="text-5xl font-bold tracking-tight text-white">
                         Expert Detection. Actionable Guidance.
                     </h1>
-                    <p className="mt-6 text-2xl leading-8 text-gray-300 max-w-5xl font-bold mx-auto">
-                        Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from our expert SOC, delivering
-                        clear, step-by-step instructions for your internal team to remediate threats quickly and effectively.
+                    <p className=" text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto">
+                        Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering
+                        clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-                        <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg rounded-md transition-colors duration-200 flex items-center justify-center gap-2">
-                            WATCH THE SERVICE OVERVIEW
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 16 16 12 12 8"></polyline>
-                                <line x1="8" y1="12" x2="16" y2="12"></line>
-                            </svg>
+                    <div class="flex flex-col sm:flex-row gap-10 justify-center">
+                        <button
+                            className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                            style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+
+                            }}>
+
+                            <span>watch the service overview</span>
+                            <div className="w-6 h-6  flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 16 16 12 12 8"></polyline>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                            </div>
                         </button>
-                        <button class="border border-gray-600 hover:bg-gray-800/20 text-white px-8 py-3 text-lg rounded-md transition-colors duration-200 flex items-center justify-center gap-2 bg-transparent">
-                            GET AN INSTANT QUOTE
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 16 16 12 12 8"></polyline>
-                                <line x1="8" y1="12" x2="16" y2="12"></line>
-                            </svg>
+                        <button
+                            className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
+                            style={{
+                                border: '1px solid',
+                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                borderImageSlice: 1,
+                                borderRadius: '8px',
+                            }}
+                        >
+                            <span className="uppercase">get an instant quote</span>
+                            <div className="w-6 h-6 flex items-center justify-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 16 16 12 12 8"></polyline>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                            </div>
                         </button>
                     </div>
                 </div>
@@ -39,14 +72,24 @@ export default function Component() {
             {/* Video Section */}
             <section className="px-4 py-16 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-5xl font-bold tracking-tight text-white sm:text-4xl">
+                    <h2 className="text-[40px] font-bold tracking-tight text-white sm:text-4xl">
                         Understand ThreatRespond in 90 Seconds
                     </h2>
-                    <p className="mt-4 text-xl text-gray-300 font-bold">
+                    <p className="mt-2 text-[18px] text-[#FFFFFF]">
                         See how our expert guidance empowers your internal team to handle threats efficiently.
                     </p>
                     <div className="mt-12 relative">
-                        <div className="aspect-video bg-gradient-to-br from-teal-900 to-blue-900 rounded-lg flex items-center justify-center">
+                        <div className="relative aspect-video w-[621px] mx-auto h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
+                            <div
+                                className="absolute inset-0 rounded-[26px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <button className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center hover:bg-cyan-300 transition-colors">
                                 <Play className="w-8 h-8 text-white ml-1" />
                             </button>
@@ -56,7 +99,7 @@ export default function Component() {
             </section>
 
             {/* Service Comparison */}
-            <section className="px-6 py-20 lg:px-8 relative overflow-hidden">
+            <section className="container mx-auto px-6 py-16  relative overflow-hidden">
                 {/* Background decorative elements */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-20 right-10 w-96 h-96 border border-purple-500/20 rounded-full"></div>
@@ -72,40 +115,40 @@ export default function Component() {
                 </div>
 
                 <div className="mx-auto max-w-7xl relative z-10">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
+                    <div className="text-center mb-10">
+                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-4">
                             The Right Service for Your In-House Team
                         </h2>
-                        <p className="text-xl text-gray-300">
+                        <p className="text-[18px] text-[#FFFFFF]">
                             Choose the solution that matches your organization's capabilities and needs
                         </p>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-8">
                         {/* Left Card */}
-                        <div className="bg-gradient-to-br from-teal-900/80 to-teal-800/80 p-8 rounded-2xl border border-teal-700/50 backdrop-blur-sm">
-                            <h3 className="text-2xl font-bold text-white mb-8">ThreatRespond is a perfect fit if you...</h3>
-                            <ul className="space-y-6">
+                        <div className="bg-[#082235] p-8 rounded-[10px] backdrop-blur-sm h-fit">
+                            <h3 className="text-[24px] font-medium text-white mb-8">ThreatRespond is a perfect fit if you...</h3>
+                            <ul className="space-y-6 text-[20px]">
                                 <li className="flex items-start gap-4">
-                                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
                                     <span className="text-white text-lg leading-relaxed">
                                         ...have an internal IT team capable of performing remediation.
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-4">
-                                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
                                     <span className="text-white text-lg leading-relaxed">
                                         ...want to offload the burden of 24/7 alert monitoring.
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-4">
-                                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
                                     <span className="text-white text-lg leading-relaxed">
                                         ...need expert investigation to eliminate false positives.
                                     </span>
                                 </li>
                                 <li className="flex items-start gap-4">
-                                    <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                                    <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
                                     <span className="text-white text-lg leading-relaxed">
                                         ...want clear, step-by-step guidance to resolve incidents.
                                     </span>
@@ -114,31 +157,32 @@ export default function Component() {
                         </div>
 
                         {/* Right Card */}
-                        <div className="bg-gradient-to-br from-teal-900/80 to-teal-800/80 p-8 rounded-2xl border border-teal-700/50 backdrop-blur-sm">
-                            <h3 className="text-2xl font-bold text-white mb-8">Looking for hands-on, active remediation?</h3>
-                            <p className="text-white text-lg leading-relaxed mb-8">
+                        <div className="bg-[#082235] p-8 rounded-2xl backdrop-blur-sm">
+                            <h3 className="text-[24px] font-bold text-white mb-6">Looking for hands-on, active remediation?</h3>
+                            <p className="text-white text-[20px] font-medium leading-relaxed mb-8">
                                 If you need a fully managed service where our SOC takes direct action to contain and remediate threats,
                                 explore our flagship ThreatRemediate™ service.
                             </p>
-                            <p className="text-cyan-400 text-lg leading-relaxed mb-10">
+                            <p className="text-[#00AEEF] text-[18px] leading-relaxed mb-6">
                                 ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
                                 and neutralizes threats in real-time while you sleep.
                             </p>
-                            <a
-                                href="#"
-                                className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 px-8 py-4 rounded-xl text-white font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
-                            >
-                                LEARN ABOUT THREAT REMEDIATE
-                                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                            clipRule="evenodd"
-                                        />
+                            <button
+                                className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                                style={{
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+
+                                }}>
+
+                                <span className="uppercase">learn about threat remediate</span>
+                                <div className="w-6 h-6  flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 16 16 12 12 8"></polyline>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
                                     </svg>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -147,78 +191,133 @@ export default function Component() {
             {/* Process Flow */}
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    <div className="text-center mb-10">
+                        <h2 className="text-5xl font-bold tracking-tight text-white">
                             From Detection to Guided Resolution
                         </h2>
-                        <p className="mt-4 text-lg text-gray-300">
+                        <p className="mt-4 text-[18px] text-white">
                             Our comprehensive security process helps keep your organization secure from end to end.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <Search className="w-6 h-6 text-white" />
+                                <img src={detect} alt="" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Detect</h3>
-                            <p className="text-gray-300 text-sm">
-                                Our high-performance security tools continuously monitor your environment for threats, suspicious
-                                activity, and anomalies to maximize your Security Operating Center.
+                            <h3 className="text-[24px] font-medium text-white mb-3">Detect</h3>
+                            <p className="text-white text-[18px] text-center">
+                                Add high-margin security services to <br /> your portfolio. Our model is built to <br /> maximize your Monthly Recurring <br /> Revenue and profitability
                             </p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
+                        <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <Shield className="w-6 h-6 text-white" />
+                                <img src={arrow} alt="" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Investigate & Validate</h3>
-                            <p className="text-gray-300 text-sm">
-                                Get an immediate SOC 1, Tier 2 certified Security Operations Center analyst assigned to investigate and
-                                validate all threats or incidents at your sites.
+                            <h3 className="text-[24px] font-bold text-white mb-3">Investigate & Validate</h3>
+                            <p className="text-white text-[18px] text-center">
+                                Gain an immediate, SOC 2 Type 2 <br /> certified Security Operations Center <br /> without the overhead. Our experts <br /> become an extension of your team
                             </p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
+                        <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <Users className="w-6 h-6 text-white" />
+                                <img src={wa} alt="" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Fully Managed Cloud SIEM</h3>
-                            <p className="text-gray-300 text-sm">
-                                Deploy and manage your technology with our innovative approach, sales alerts, and progressive services
-                                we can deliver to your team.
+                            <h3 className="text-[24px] font-bold text-white mb-3">Fully Managed Cloud SIEM</h3>
+                            <p className="text-white text-[18px] text-center">
+                                Access our comprehensive <br /> ThreatRemediate™ Enablement Kit <br /> with co-brandable materials, sales <br /> decks, and proposal generators to win <br /> more deals.
                             </p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
+                        <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <MessageSquare className="w-6 h-6 text-white" />
+                                <img src={head} alt="" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Always-On SOC Support</h3>
-                            <p className="text-gray-300 text-sm">
-                                Access to our talented live security operations center demonstrations, full white-labeling, and a 24-day
-                                trial to see our trial.
+                            <h3 className="text-[24px] font-bold text-white mb-3">Always-On SOC Support</h3>
+                            <p className="text-white text-[18px] text-center">
+                                Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.
+                            </p>
+                        </div>
+                                {/* 5th */}
+                        <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
+                                <img src={note} alt="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3">Deliver Actionable Guidance</h3>
+                            <p className="text-white text-[18px] text-center">
+                                Effortlessly support your clients' <br /> compliance requirements, including <br /> HIPAA, GDPR, PCI DSS, and CMMC. <br /> Vijilan provides detailed reporting, <br /> audit-ready documentation, and <br /> compliance expertise—reducing your <br /> workload and minimizing regulatory <br /> risks.
                             </p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
+                        <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <ArrowRight className="w-6 h-6 text-white" />
+                                <img src={right} alt="" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Deliver Actionable Guidance</h3>
-                            <p className="text-gray-300 text-sm">
-                                Effectively resolve your security incidents with GDPR, PCI DSS, and CJIS compliance standards that help
-                                your workload and monitoring regulatory compliance.
-                            </p>
-                        </div>
-
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-6 rounded-lg border border-teal-800">
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <CheckCircle className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-3">Confirm & Close</h3>
-                            <p className="text-gray-300 text-sm">
-                                We confirm with your team that the threat has been successfully resolved.
+                            <h3 className="text-[24px] font-bold text-white mb-3">Confirm & Close</h3>
+                            <p className="text-white text-center text-[14px]">
+                               We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
                             </p>
                         </div>
                     </div>
@@ -226,31 +325,55 @@ export default function Component() {
             </section>
 
             {/* FAQ Section */}
-            <section className="px-6 py-20 lg:px-8">
+            <section className="container mx-auto px-6 py-20 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-6">
+                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-3">
                             Questions About Guided Response?
                         </h2>
-                        <p className="text-xl text-gray-300">Ask Jen AI, our 24/7 AI-powered Cyber Security Sales Agent.</p>
+                        <p className="text-[20px] text-white">Ask Jen AI, our 24/7 AI-powered Cyber Security Sales Agent.</p>
                     </div>
 
-                    <div className="rounded-3xl p-8 border border-cyan-500/30" style={{ backgroundColor: "rgba(8, 34, 53, 1)" }}>
+                    <div className="rounded-3xl px-8 py-14 " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             {/* Left Side - Chat Interface */}
                             <div className="space-y-6">
-                                <div className="bg-gradient-to-br from-teal-800/60 to-blue-800/60 p-6 rounded-2xl border border-cyan-500/30">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-blue-400 rounded-full flex items-center justify-center">
+                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-[60px]">
+                                    <div
+                                        className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+                                        style={{
+                                            background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                            WebkitMaskComposite: "xor",
+                                            maskComposite: "exclude"
+                                        }}
+                                    />
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center"
+                                            style={{
+                                                background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
+                 linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
+                                            }}>
                                             <span className="text-white font-bold text-sm">JN</span>
                                         </div>
                                         <div>
-                                            <h3 className="text-white font-bold text-lg">JEN AI</h3>
-                                            <p className="text-cyan-400 text-sm">Cyber security Sales Agent</p>
+                                            <h3 className="text-white font-bold text-[20px]">JEN AI</h3>
+                                            <p className="text-[#00AEEF] text-[13px] font-medium">Cyber security Sales Agent</p>
                                         </div>
                                     </div>
-                                    <div className="bg-gradient-to-br from-teal-700/40 to-blue-700/40 p-6 rounded-xl border border-cyan-500/20">
-                                        <p className="text-white text-center leading-relaxed">
+                                    <div className="relative bg-[#00AEEF4D] p-6 rounded-[16px] w-fit flex justify-center items-center mx-auto">
+                                        <div
+                                            className="absolute inset-0 rounded-[16px] p-[1px] z-0"
+                                            style={{
+                                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                                WebkitMaskComposite: "xor",
+                                                maskComposite: "exclude"
+                                            }}
+                                        />
+                                        <p className="text-white text-[13px] text-center leading-relaxed">
                                             Jen AI chatbot interface would be
                                             <br />
                                             embedded here
@@ -264,16 +387,26 @@ export default function Component() {
                             </div>
 
                             {/* Right Side - Suggested Questions */}
-                            <div className="space-y-6">
-                                <h3 className="text-3xl font-bold text-white">Try asking Jen AI:</h3>
+                            <div className=" space-y-5">
+                                <h3 className="text-[40px] font-bold text-white">Try asking Jen AI:</h3>
                                 <div className="space-y-4">
                                     {[1, 2, 3, 4, 5].map((index) => (
-                                        <button
+                                        <div
                                             key={index}
-                                            className="w-full text-left bg-gradient-to-r from-teal-800/50 to-blue-800/50 hover:from-teal-700/60 hover:to-blue-700/60 p-4 rounded-xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-200"
+                                            className="relative p-2" style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))` }}
                                         >
-                                            <p className="text-gray-300 text-lg">"What kind of guidance do you provide?"</p>
-                                        </button>
+                                            <div
+                                                className="absolute inset-0 rounded-[8px] p-[1px] z-0"
+                                                style={{
+                                                    background: `conic-gradient(from 180deg at 50% 50%, #FF98E2 0deg, #FFC876 35.77deg, #79FFF7 153.75deg, #9F53FF 258.75deg, #FF98E2 360deg)`,
+                                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                                    WebkitMaskComposite: "xor",
+                                                    maskComposite: "exclude",
+
+                                                }}
+                                            />
+                                            <p className=" text-[13px] text-white">"What kind of guidance do you provide?"</p>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -285,48 +418,105 @@ export default function Component() {
             {/* Final CTA */}
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to Empower Your Team?</h2>
+                    <div className="text-center mb-10">
+                        <h2 className="text-[40px] font-bold tracking-tight text-white">Ready to Empower Your Team?</h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-8 rounded-lg border border-teal-800 text-center">
-                            <h3 className="text-xl font-bold text-white mb-4">Become a Partner</h3>
-                            <p className="text-gray-300 text-sm mb-6">
-                                Start the application process to become a Vijilan partner and add our services to your portfolio.
-                            </p>
-                            <a
-                                href="#"
-                                className="inline-block rounded-md bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-400"
+                        <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
+                            <div
+                                className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
+                            <div className="py-8">
+                                <h3 className="text-[24px] font-medium text-white mb-4">Become a Partner</h3>
+                                <p className="text-white text-[18px] mb-6">
+                                    Start the application <br /> process now. Get <br /> access to our portal <br /> and resources in <br /> minutes
+                                </p>
+                            </div>
+                            <button
+
+                                className="inline-block rounded-md  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+
+                                }}
                             >
                                 APPLY NOW
-                            </a>
+                            </button>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-8 rounded-lg border border-teal-800 text-center">
-                            <h3 className="text-xl font-bold text-white mb-4">Get a ThreatRespond Quote</h3>
-                            <p className="text-gray-300 text-sm mb-6">
-                                Already a partner? Log into our portal to access expert pricing templates.
-                            </p>
-                            <a
-                                href="#"
-                                className="inline-block rounded-md border border-cyan-400 px-6 py-3 text-sm font-semibold text-cyan-400 hover:bg-cyan-400 hover:text-white"
+                        <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center" >
+                            <div
+                                className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
+                            <div className="py-8">
+                                <h3 className="text-[24px] font-medium text-white mb-4">Get a ThreatRespond Quote</h3>
+                                <p className="text-white text-[18px] mb-6">
+                                    Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
+                                </p>
+                            </div>
+
+                            <button
+
+                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
+                                    border: "1px solid",
+                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                    borderImageSlice: 1,
+                                    borderRadius: "8px",
+                                    backgroundColor: "transparent",
+                                }}
+
                             >
                                 ACCESS PRICING SIMULATOR
-                            </a>
+                            </button>
                         </div>
 
-                        <div className="bg-gradient-to-br from-teal-900/30 to-blue-900/30 p-8 rounded-lg border border-teal-800 text-center">
-                            <h3 className="text-xl font-bold text-white mb-4">Call Our AI Agent</h3>
-                            <p className="text-gray-300 text-sm mb-6">
-                                For instant voice assistance, call our AI agent available 24/7.
-                            </p>
-                            <a
-                                href="#"
-                                className="inline-block rounded-md border border-cyan-400 px-6 py-3 text-sm font-semibold text-cyan-400 hover:bg-cyan-400 hover:text-white"
+                        <div className=" relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
+                            <div
+                                className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }}
+                            />
+                            <div className="py-8">
+                                <h3 className="text-[24px] font-medium text-white mb-4">Call Our AI Agent</h3>
+                                <p className="text-white text-[18px] mb-6">
+                                    For instant voice <br /> assistance, call Jen AI <br /> to get your questions <br /> answered now.
+
+                                </p>
+                                <p className="text-[#00AEEF] text-[18px] ">1 (954) 440-7608</p>
+                            </div>
+
+                            <button
+                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
+                                    border: "1px solid",
+                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                    borderImageSlice: 1,
+                                    borderRadius: "8px",
+                                    backgroundColor: "transparent",
+                                }}
+
                             >
                                 CALL NOW
-                            </a>
+                            </button>
+
                         </div>
                     </div>
                 </div>
