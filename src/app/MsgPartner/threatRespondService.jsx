@@ -3,7 +3,7 @@ import { Play, Search, Shield, Users, MessageSquare, CheckCircle, ArrowRight, Me
 export default function Component() {
 
     return (
-        <div className="min-h-screen" style={{ backgroundColor: "#191624" }}>
+        <div className="min-h-screen">
 
             {/* Hero Section */}
             <section className="px-6 py-24 relative z-10 sm:py-32 lg:px-8">

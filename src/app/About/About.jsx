@@ -39,7 +39,7 @@ const teamData = [
 
 export default function About() {
     return (
-        <div className="min-h-screen " style={{ backgroundColor: "#191624" }}>
+        <div className="min-h-screen">
 
             <section className="relative z-10 w-full py-16 text-center">
                 <div className="w-full px-6">

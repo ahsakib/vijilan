@@ -15,24 +15,16 @@ import smallVendor from "../Assets/smallVendor.png";
 const Footer = () => {
     return (
         <footer
-            className="relative z-10 px-6 pt-24 pb-10"
-
+            className="relative z-10 px-6 pt-100 pb-10"
+            style={{
+                backgroundImage: `url('/footer-bg.svg')`,
+                backgroundSize: "cover",
+                backgroundPosition: "bottom",
+                backgroundRepeat: "no-repeat",
+            }}
         >
-            {/* Background logo */}
-            {/* <div className="container mx-auto px-6 absolute top-16 left-0 right-0 flex items-center justify-center pointer-events-none overflow-hidden">
-                <div className="h-full w-full flex items-center space-x-1 opacity-10">
-                    <img src={footerBg} alt="V"  className="h-[200px] w-full" />
-                    
-                </div>
-            </div> */}
-
             <div className="container mx-auto px-6 relative z-10"
-                style={{
-                    backgroundImage: `url('/footer-bg.svg')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "bottom",
-                    backgroundRepeat: "no-repeat",
-                }}
+                
             >
                 <div className="pt-24">
                     <div className="grid md:grid-cols-5 gap-8 mb-12">

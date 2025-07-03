@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import homeBg from "../images/home-bg.png";
 import EmergencyBanner from './EmergencyBanner';
 import logo from "../Assets/logo.png";
@@ -8,6 +8,7 @@ import logoSub from "../Assets/logoSub.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   // Detect scroll position
   const handleScroll = () => {
@@ -30,7 +31,7 @@ const Header = () => {
 
   return (
     <div className='w-full fixed z-50 top-4'>
-      <EmergencyBanner />
+      {location.pathname === '/' && <EmergencyBanner />}
 
       <header className={`w-[1160px] mx-auto rounded-[24px] h-[96px] flex items-center backdrop-blur-sm border-b border-slate-700 mt-4 transition-all duration-300 ease-in-out 
         ${scrolled ? 'bg-opacity-50 bg-white' : 'bg-transparent'}`}

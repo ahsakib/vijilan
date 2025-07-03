@@ -10,7 +10,7 @@ import Quotes from "@app/Landing/Quotes"
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="">
       {/* Background Pattern */}
 
       {/* Content Overlay */}
@@ -26,7 +26,7 @@ const Home = () => {
         <Quotes/>
 
         {/* Tailored Solutions Section */}
-        <section className="container mx-auto px-6 py-16">
+        <section className="container mx-auto py-16">
           <div className="min-h-screen px-4 py-12">
             <div className="max-w-6xl mx-auto">
               {/* Header */}

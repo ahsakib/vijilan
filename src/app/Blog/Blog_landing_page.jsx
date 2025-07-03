@@ -17,7 +17,7 @@ const pages = [
 ]
 const Blog_landing_page = () => {
     return (
-        <section className='common-bg text-white mb-20'>
+        <section className='text-white mb-20'>
 
             <div className='container px-6 mx-auto py-12  '>
                 <div className='grid grid-cols-1 md:grid-cols-6 justify-between '>

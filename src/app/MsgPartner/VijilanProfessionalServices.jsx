@@ -51,7 +51,7 @@ function CardContent({ className = "", children, ...props }) {
 
 export default function VijilianLanding() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "rgba(25, 22, 36, 1)" }}>
+    <div className="min-h-screen">
 
 
       {/* Hero Section */}

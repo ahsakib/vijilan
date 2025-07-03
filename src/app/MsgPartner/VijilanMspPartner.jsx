@@ -59,7 +59,7 @@ const CardContentData = ({ children, className = "", ...props }) => {
 
 export default function VijilianLanding() {
     return (
-        <div className="min-h-screen" style={{ backgroundColor: "#191624" }}>
+        <div className="min-h-screen">
 
             {/* Hero Section */}
             <section className="relative z-10 px-6 py-20 text-center">

@@ -7,7 +7,7 @@ import backgroundPattern from "../../Assets/Background pattern.png";
 
 const Sarve = () => {
     return (
-        <section className='common-bg text-white'>
+        <section className='text-white'>
             <div className='container mx-auto px-6 py-12  '>
                 <div className='py-8 space-y-3'>
                     <h1 className='text-3xl md:text-5xl font-bold text-center '>  Tailored Cybersecurity for Every <br /> Organization</h1>

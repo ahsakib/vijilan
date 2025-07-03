@@ -13,7 +13,7 @@ import mask from "../../Assets/mask.png";
 
 const Blog = () => {
     return (
-        <div className="bg-[#191624] text-white py-10 lg:px-8 mb-96 px-11">
+        <div className="text-white py-10 lg:px-8 mb-96 px-11">
 
             {/* top part */}
             <section className="container mx-auto px-6">
