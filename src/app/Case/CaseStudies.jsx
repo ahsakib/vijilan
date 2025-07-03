@@ -1,4 +1,8 @@
-import { Star, ArrowRight, Menu } from "lucide-react"
+import CardBorder from "@components/CardBorder"
+import GradientButton from "@components/GradientButton"
+import OutlineGradientButton from "@components/OutlineGradientButton"
+import SmallCard from "@components/SmallCard"
+import { Star, ArrowRight, Menu, Play } from "lucide-react"
 
 // Custom Button Component
 const Button = ({ children, className = "", variant = "default", size = "default", ...props }) => {
@@ -77,34 +81,58 @@ export default function CaseStudiesPage() {
                         strategies and innovative solutions.
                     </p>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-  <div className="uptime-card">
-    <div className="text-center w-full">
-      <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
-      <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
-    </div>
-  </div>
-</div>
+                    {/* Stats - Improved Grid */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-4xl mx-auto">
 
+                        <CardBorder height="171px" width="166px">
+                            <div>
+                                <div className="text-white text-[32px] font-bold mb-2">30%</div>
+                                <div className="text-slate-300 text-sm font-medium"> Average MRR
+                                    <br />
+                                    Growth for MSP
+                                    <br />
+                                    Partners</div>
+                            </div>
+                        </CardBorder>
+                        <CardBorder height="171px" width="166px">
+                            <div>
+                                <div className="text-white text-[32px] font-bold mb-2">40%</div>
+                                <div className="text-slate-300 text-sm font-medium">
+                                    Reduction in
+                                    <br />
+                                    SIEM Costs
+                                </div>
+                            </div>
+                        </CardBorder>
+                        <CardBorder height="171px" width="166px">
+                            <div>
+                                <div className="text-white text-[32px] font-bold mb-2">60%</div>
+                                <div className="text-slate-300 text-sm font-medium">
+                                    Faster Threat
+                                    <br />
+                                    Detection
+                                </div>
+                            </div>
+                        </CardBorder>
+                        <CardBorder height="171px" width="166px">
+                            <div>
+                                <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
+                                <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
+                            </div>
+                        </CardBorder>
+                    </div>
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                        <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                            View Case Studies
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-slate-600 text-slate-300 hover:bg-slate-700 bg-transparent"
-                        >
-                            Watch Our Story
-                        </Button>
+                        <GradientButton children={"EXPLORE SUCCESS STORIES"} />
+                        <OutlineGradientButton children={"CALCULATE YOUR ROI"} />
                     </div>
 
                     {/* Lead Form */}
-                    <div className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-8 border border-slate-700/50 max-w-4xl mx-auto">
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <CardBorder height={"130px"} width="1440px">
+
+
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-6">
                             <Input
                                 placeholder="Full Name"
                                 className="bg-slate-700/50 border-slate-600 text-white placeholder:text-slate-400"
@@ -121,51 +149,80 @@ export default function CaseStudiesPage() {
                             />
                             <Button className="bg-teal-500 hover:bg-teal-600 text-white">Start My Project</Button>
                         </div>
-                    </div>
+                    </CardBorder>
                 </div>
             </section>
 
             {/* Featured Case Study */}
-            <section className="py-16 px-4">
+            <section className="py-20 px-4">
                 <div className="container mx-auto">
-                    <Card className="bg-gradient-to-r from-teal-900/50 to-slate-800/50 border-teal-500/30 max-w-4xl mx-auto">
-                        <CardContent className="p-8">
-                            <Badge className="bg-orange-500 text-white mb-4">Featured</Badge>
-                            <h3 className="text-2xl font-bold text-white mb-4">
-                                How TechFlow MSP Increased MRR by 55% with ThreeAmendment
-                            </h3>
-                            <p className="text-slate-300 mb-6">
-                                Discover how TechFlow transformed their managed service operations and achieved unprecedented growth
-                                through our comprehensive platform and strategic guidance.
-                            </p>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
-                                <div>
-                                    <div className="text-3xl font-bold text-teal-400">30%</div>
-                                    <div className="text-slate-400 text-sm">MRR Growth</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-teal-400">50%</div>
-                                    <div className="text-slate-400 text-sm">Efficiency</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-teal-400">55%</div>
-                                    <div className="text-slate-400 text-sm">Revenue</div>
-                                </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-teal-400">6.91x</div>
-                                    <div className="text-slate-400 text-sm">ROI</div>
+                    <div
+                        className="backdrop-blur-md rounded-3xl p-12 max-w-5xl mx-auto shadow-2xl border border-[#00AEEF]/40"
+                        style={{
+                            background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
+                        }}
+                    >
+                        <Badge className="bg-orange-500 hover:bg-orange-600 text-white  px-4 py-2 text-sm font-semibold">
+                            MS PARTNER SUCCESS
+                        </Badge>
+
+                        <div className="mt-10 relative">
+                            <div className="relative bg-[#00AEEF]/20 rounded-[26px] overflow-hidden flex items-center justify-center">
+                                {/* Gradient Border Overlay */}
+                                <div
+                                    className="absolute inset-0 rounded-[26px] p-[2px] z-0"
+                                    style={{
+                                        background:
+                                            "linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)",
+                                        WebkitMask:
+                                            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
+
+                                {/* Main Content */}
+                                <div className="z-10 text-left px-10 py-12 w-full">
+                                    <h3 className="text-xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                                        How a Gold Tier MSP Increased MRR by 30% with ThreatRemediate
+                                    </h3>
+                                    <p className="text-slate-200 mb-10 text-lg leading-relaxed max-w-4xl mx-auto">
+                                        Discover how a Gold Tier MSP partner leveraged Vijilan's flagship
+                                        ThreatRemediate service to expand their security offerings,
+                                        increase monthly recurring revenue, and deliver hands-off
+                                        cybersecurity to their clients while reducing operational
+                                        overhead.
+                                    </p>
+
+                                    {/* Stats Grid */}
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                                        {[
+                                            { value: "30%", label: "Increase in Security MRR" },
+                                            { value: "50%", label: "Reduction in Alert Fatigue" },
+                                            { value: "95%", label: "Client Retention Rate" },
+                                            { value: "6 wks", label: "Implementation Time" },
+                                        ].map((stat, index) => (
+                                            <CardBorder>
+                                                <div className="text-4xl font-bold text-white mb-2">
+                                                    {stat.value}
+                                                </div>
+                                                <div className="text-slate-300 text-sm font-medium leading-tight">
+                                                    {stat.label}
+                                                </div>
+                                            </CardBorder>
+                                        ))}
+                                    </div>
+
+                                    <OutlineGradientButton>READ THE FULL CASE STUDY</OutlineGradientButton>
                                 </div>
                             </div>
-                            <Button variant="outline" className="border-teal-500 text-teal-400 hover:bg-teal-500/10 bg-transparent">
-                                Read Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                            </Button>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Success Stories Grid */}
-            <section className="py-16 px-4">
+            {/* <section className="py-16 px-4">
                 <div className="container mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-white mb-4">Success Stories Across Industries</h2>
@@ -208,6 +265,73 @@ export default function CaseStudiesPage() {
                                 </CardContent>
                             </Card>
                         ))}
+                    </div>
+                </div>
+            </section> */}
+
+            <section className="py-16 px-4 bg-gradient-to-br from-purple-900/50 via-slate-900 to-purple-800/30 relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="container mx-auto relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Success Stories Across Industries</h2>
+                        <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                            Browse our comprehensive collection of client success stories and measurable business results across
+                            diverse industries and use cases.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                        {/* Case Study Card 1 */}
+                        <div
+                            className="p-8 shadow-2xl border backdrop-blur-sm"
+                            style={{
+                                borderRadius: "22.184px",
+                                background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
+                                borderColor: "rgba(0, 174, 239, 0.3)",
+                                borderWidth: "1px"
+                            }}
+                        >
+
+                            <Badge className="bg-orange-500 hover:bg-orange-600 text-white mb-6 px-4 py-2 text-sm font-semibold">
+                                MS PARTNER SUCCESS
+                            </Badge>
+
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+                                MSP Achieves 30% MRR Growth with ThreatRemediate
+                            </h3>
+
+                            <p className="text-slate-200 mb-8 text-base leading-relaxed">
+                                See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                                deliver hands-off cybersecurity to their clients while reducing operational overhead.
+                            </p>
+
+                            <div className="grid grid-cols-2 gap-6 mb-8">
+                                <div className="bg-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-500/30 text-center">
+                                    <div className="text-4xl font-bold text-white mb-2">30%</div>
+                                    <div className="text-slate-300 text-sm font-medium">MRR Growth</div>
+                                </div>
+                                <div className="bg-teal-700/50 backdrop-blur-sm rounded-2xl p-6 border border-teal-500/30 text-center">
+                                    <div className="text-4xl font-bold text-white mb-2">50%</div>
+                                    <div className="text-slate-300 text-sm font-medium">Alert Reduction</div>
+                                </div>
+                            </div>
+
+                            <button
+                                className="border-2 border-red text-slate-300 hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+                            >
+                                READ THE FULL STORY
+                                <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                    <ArrowRight className="h-3 w-3 text-white" />
+                                </div>
+                            </button>
+
+                        </div>
+
                     </div>
                 </div>
             </section>

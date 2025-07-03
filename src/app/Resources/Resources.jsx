@@ -13,7 +13,7 @@ const pages = [
 ]
 const Resources = () => {
     return (
-        <section className='common-bg text-white mb-20 mt-56'>
+        <section className=' bg-transparent text-white my-6'>
 
             <div className='container px-6 mx-auto py-12  '>
 
