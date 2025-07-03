@@ -10,6 +10,7 @@ import VisilanPartner from '@app/MsgPartner/VijilanMspPartner';
 import ThreatResponse from '@app/MsgPartner/threatRespondService';
 import VisislanProfessional from "@app/MsgPartner/VijilanProfessionalServices"
 import CaseStudies from "@app/Case/CaseStudies";
+import Resources from '@app/Resources/Resources';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "sarve",
                 element: <Sarve />,
+            },
+            {
+                path: "resources",
+                element: <Resources />,
             },
             {
                 path: "visilan-msg-partner",

@@ -1,18 +1,22 @@
 import React from 'react';
 
-const Blog_Subscribe_Component_Btn = ({ H1, Desc, Input, Btn }) => {
+const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn }) => {
     return (
-        <div className="relative w-full my-8 py-8 bg-[#00AEEF3D] rounded-[24px]  
-            " >
+        <div className={`relative w-full my-8 py-8 ${background ? "bg-[#00AEEF3D]" : "bg-transparent"}  rounded-[24px]  `}>
             <div
                 className="absolute inset-0 rounded-[24px] p-[2px] z-0"
-                style={{
-                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    WebkitMaskComposite: "xor",
-                    maskComposite: "exclude"
-                }}
+                style={
+                    background
+                        ? {
+                            background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+            linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+                            WebkitMask:
+                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "xor",
+                            maskComposite: "exclude"
+                        }
+                        : undefined
+                }
             />
             <div className='w-3/4 mx-auto space-y-5'>
                 <h1 className='font-bold text-center  text-[32px]'>{H1}</h1>
