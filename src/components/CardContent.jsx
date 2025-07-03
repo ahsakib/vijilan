@@ -2,7 +2,7 @@ import React from "react";
 
 const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
   return (
-    <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "my-8" : "-my-8"}`} >
+    <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "mt-10 ml-5" : "mb-10 ml-5"}`} >
       {/* Gradient border using pseudo */}
       <div
         className="absolute inset-0 rounded-[24px] p-[2px] z-0"
@@ -69,7 +69,7 @@ const CardContent = ({ icon, banner, Cardsticket, Index, badge, title, descripti
           )
         }
         {
-          grdBtn && <button className="w-auto grdBtn mt-16 px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
+          grdBtn && <button className="w-auto grdBtn mt-16 text-white  px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
           }}>{grdBtn}</button>
         }
