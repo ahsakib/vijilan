@@ -482,6 +482,12 @@ body {
   background-size: cover;
 }
 
+.join-mission-body {
+  background-image: url('/join-mission.svg');
+  background-position: center-top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 body::before {
   content: '';
   position: absolute;

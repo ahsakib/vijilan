@@ -7,6 +7,7 @@ import GroupIcon2 from '../../images/Group (1).svg';
 import CardContent from "@components/CardContent"
 import Partnership from "@app/Landing/Partnership"
 import Quotes from "@app/Landing/Quotes"
+import JoinMissionSection from "@components/JoinMissionSection";
 
 const Home = () => {
   return (
@@ -344,19 +345,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="container mx-auto px-6 py-16 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Elevate Your <span className="text-cyan-400">Security</span>?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of MSPs and enterprises who trust Vijilan to protect their most critical assets. Get started
-            today and experience the power of intelligent cybersecurity.
-          </p>
-          <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 text-lg rounded">
-            Get Started Today
-          </button>
-        </section>
+        <JoinMissionSection
+                title="Ready to Elevate Your"
+                highlightedText="Security"
+                subtitle="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need."
+                buttonText="Get Your Free Security Consultation"
+            />
       </div>
     </div>
   )

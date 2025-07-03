@@ -1,7 +1,5 @@
 import React from "react";
 
-import ctaBgPattern from "../images/Background pattern.png";
-
 const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) => {
   return (
     <section className="relative z-10 px-6 py-16">
@@ -23,27 +21,12 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) =>
 
           {/* Right side pattern with smooth blend */}
           <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${ctaBgPattern})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              opacity: 0.8,
-              maskImage:
-                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
-              WebkitMaskImage:
-                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
-            }}
+            className="absolute inset-0 join-mission-body"
           />
 
           {/* Overlay for color consistency */}
           <div
             className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(23, 51, 71, 0.9) 0%, rgba(23, 51, 71, 0.7) 40%, rgba(26, 58, 79, 0.5) 60%, rgba(26, 58, 79, 0.3) 100%)",
-            }}
           />
 
           <div className="relative z-10 text-center">

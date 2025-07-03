@@ -142,8 +142,6 @@ export default function About() {
                 subtitle="We're always looking for passionate, talented individuals to join our team. If you're driven to solve complex challenges and want to make a real impact in the cybersecurity industry, we want to hear from you."
                 buttonText="VIEW OPEN POSITIONS"
             />
-
-            {/* <Footer /> */}
         </div>
     )
 }
