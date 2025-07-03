@@ -5,6 +5,8 @@ import LandingPageCard from '@components/LandingPageCard';
 import { FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft } from 'react-icons/fa';
 import { Blog_landing_Data } from '@app/Constant/Constant';
 import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
+import backgroundPattern from "../../images/Background pattern.png";
+import vector from '../../Assets/Vector.png';
 
 const tabs = [
     " All posts", " Threat and Intelligence", "Enterprise Security", "Compliance and Risk", "Product & Partner News"
@@ -17,30 +19,30 @@ const Blog_landing_page = () => {
     return (
         <section className='common-bg text-white mb-20'>
 
-            <div className='w-[95%] px-10 mx-auto py-12  '>
+            <div className='container px-6 mx-auto py-12  '>
                 <div className='grid grid-cols-1 md:grid-cols-6 justify-between '>
-                    <div className='col-span-1 md:col-span-3  '>
-                        <div className="mb-6">
-                            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-white">
-                                Threat Intelligence
+                    <div className='col-span-1 md:col-span-3 space-y-5  '>
+                        <div className="">
+                            <span className="inline-block bg-[#00AEEF] text-white px-[24px] py-[16px] rounded-[13px] text-[16px] font-medium uppercase tracking-wide">
+                                THREAT INTELLIGENCE
                             </span>
                         </div>
-                        <h1 className='text-7xl font-sans font-bold capitalize my-3 space-y-2'>
+                        <h1 className='text-3xl md:text-[47px] font-sans font-bold capitalize space-y-2'>
                             Threat Intelligence <br />
                             The Rise of Malware-Free Attacks: How to Defend Your Organization</h1>
 
-                        <p className='my-5'> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
-                        <div className="mt-3 py-4 pl-2 w-2/5 bg-linear-to-l to-[#F89B29] from-[#FF0F7B] rounded font-semibold ml-4 "
-
-                        >
+                        <p className='text-[18px]'> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
+                        <div className="mt-3 p-[20px] pl-2 w-2/5 text-[18px]  rounded-[8px] font-medium ml-4 " style={{
+                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                        }}>
                             Read the full story
                         </div>
 
                     </div>
 
                     <div className='col-span-1 md:col-span-3  '>
-                        <div className=' text-left '>
-                            <img className='' src={blog_ai} alt="" />
+                        <div className=' flex justify-end items-end '>
+                            <img className='w-[500px] h-[458px]' src={blog_ai} alt="" />
                         </div>
 
                     </div>
@@ -52,7 +54,7 @@ const Blog_landing_page = () => {
                     {tabs.map((tab, index) => (
                         <p
                             key={index}
-                            className={`text-xl inline px-9 py-2 cursor-pointer rounded-2xl border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
+                            className={`text-xl inline px-[40px] py-[15px] cursor-pointer font-bold text-[14px] rounded-[40px] border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
                                 }`}
                         >
                             {tab}
@@ -64,17 +66,87 @@ const Blog_landing_page = () => {
                 {/* Subscribe Button  */}
 
                 {/* <Blog_Subscribe /> */}
-                <Blog_Subscribe_Component_Btn H1="Get Security Insights Delivered to Your Inbox."
+                {/* <Blog_Subscribe_Component_Btn H1="Get Security Insights Delivered to Your Inbox."
 
                     Desc="Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan."
                     // BtInn="Subscribe"
                     Input="Subscribe"
-                />
+                /> */}
+
+                <section className="relative z-10 py-16">
+                    <div className="container mx-auto ">
+                        <div
+                            className="h-[304px] rounded-[24px] flex justify-center items-center relative overflow-hidden"
+                            style={{
+                                background: "linear-gradient(90deg, #082135 0%, #082135 40%, #1a3a4f 60%, #1a3a4f 100%)",
+                            }}
+                        >
+                            {/* Left side solid background */}
+                            <div
+                                className="absolute inset-0"
+                                style={{
+                                    background:
+                                        "linear-gradient(90deg, #082135 0%, #082135 50%, rgba(23, 51, 71, 0.8) 70%, rgba(23, 51, 71, 0.4) 100%)",
+                                }}
+                            />
+
+                            {/* Right side pattern with smooth blend */}
+                            <div
+                                className="absolute inset-0"
+                                style={{
+                                    backgroundImage: `url(${backgroundPattern})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    backgroundRepeat: "no-repeat",
+                                    opacity: 0.8,
+                                    maskImage:
+                                        "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+                                    WebkitMaskImage:
+                                        "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+                                }}
+                            />
+
+                            {/* Overlay for color consistency */}
+                            <div
+                                className="absolute inset-0"
+                                style={{
+                                    background:
+                                        "linear-gradient(90deg, rgba(23, 51, 71, 0.9) 0%, rgba(23, 51, 71, 0.7) 40%, rgba(26, 58, 79, 0.5) 60%, rgba(26, 58, 79, 0.3) 100%)",
+                                }}
+                            />
+
+                            <div className="relative z-10 text-center space-y-5">
+                                <h2 className="text-[40px] font-bold text-white ">
+                                    Get Security Insights Delivered to Your Inbox.
+                                </h2>
+                                <p className="text-[16px] font-medium text-white  leading-relaxed max-w-2xl mx-auto">
+                                    Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan.
+                                </p>
+                                <div className="relative max-w-2xl w-full mx-auto">
+                                    <input
+                                        className="w-full py-[14px] pr-[130px] pl-[14px] text-[#0000007A] rounded-[10px]"
+                                        placeholder="Enter Your Email"
+                                        type="search"
+                                    />
+
+                                    <button
+                                        className="absolute top-1/2 right-3 -translate-y-1/2 py-[6px] px-[16px] rounded-[16px] text-[16px] font-bold text-white transition-opacity hover:opacity-90 whitespace-nowrap"
+                                        style={{
+                                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                        }}
+                                    >
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
                 {/* Blog  Cards */}
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {Blog_landing_Data.map((card, index) => (
                         <LandingPageCard
                             key={index}
@@ -89,17 +161,22 @@ const Blog_landing_page = () => {
                 </div>
 
                 <div className='flex justify-between items-center mt-12'>
-                    <FaAngleDoubleLeft className='text-[#00AEEF] text-3xl' />
-                    <div className='flex gap-3 md:gap-10'>
+                   <div className='bg-[#00AEEF] rounded-[6px] p-2'>
+                        <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+                    </div>
+                    <div className='flex gap-3 md:gap-8'>
                         {pages.map((n, index) => <p
                             key={index}
-                            className='text-xl inline px-6 py-2 cursor-pointer rounded-2xl border border-[#00AEEF]'
+                            className='text-[24px] font-medium inline px-[21px] py-[8px] cursor-pointer rounded-[14px] border border-[#CDCDD466] hover:border-[#00AEEF]'
 
                         >
                             {n}
                         </p>)}
                     </div>
-                    <FaAngleDoubleRight className='text-[#00AEEF] text-3xl' />
+                    {/* <FaAngleDoubleRight className='text-[#00AEEF] text-3xl' /> */}
+                    <div className='bg-[#00AEEF] rounded-[6px] p-2'>
+                        <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+                    </div>
                 </div>
 
             </div>
