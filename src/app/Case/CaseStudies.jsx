@@ -3,6 +3,7 @@ import GradientButton from "@components/GradientButton"
 import Heading_Btn from "@components/Heading_Btn"
 import OutlineGradientButton from "@components/OutlineGradientButton"
 import SmallCard from "@components/SmallCard"
+import TestimonialCard from "@components/TestimonialCard"
 import { Star, ArrowRight, Menu, Play } from "lucide-react"
 
 // Custom Button Component
@@ -243,54 +244,18 @@ export default function CaseStudiesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
                         {Array.from({ length: 8 }).map((_, index) => (
-                            <div
-                                key={index}
-                                className="p-8 shadow-2xl border backdrop-blur-sm"
-                                style={{
-                                    borderRadius: "22.184px",
-                                    background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
-                                    borderColor: "rgba(0, 174, 239, 0.3)",
-                                    borderWidth: "1px",
-                                }}
+                            <TestimonialCard
+                                badgeText={"MS PARTNER SUCCESS"}
+                                heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
+                                description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
+                                stats={[
+                                    { value: "99.9%", label: "Uptime Maintained" },
+                                    { value: "30%", label: "MRR Growth" },
+                                  ]}
+                                
                             >
-                                <Badge className="bg-orange-500 hover:bg-orange-600 text-white mb-6 px-4 py-2 text-sm font-semibold">
-                                    MS PARTNER SUCCESS
-                                </Badge>
-
-                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
-                                    MSP Achieves 30% MRR Growth with ThreatRemediate
-                                </h3>
-
-                                <p className="text-slate-200 mb-4 text-base leading-relaxed">
-                                    See how this partner leveraged our flagship XDR service to build a profitable security practice and
-                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.
-                                </p>
-
-                                <div className="grid grid-cols-2 gap-0 mb-8">
-
-                                    <CardBorder height="171px" width="166px">
-                                        <div>
-                                            <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
-                                            <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
-                                        </div>
-                                    </CardBorder>
-                                    <CardBorder height="171px" width="166px">
-                                        <div>
-                                            <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
-                                            <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
-                                        </div>
-                                    </CardBorder>
-                                </div>
-
-                                <button
-                                    className="border-2 border-white text-slate-300 hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
-                                >
-                                    READ THE FULL STORY
-                                    <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
-                                        <ArrowRight className="h-3 w-3 text-white" />
-                                    </div>
-                                </button>
-                            </div>
+                            </TestimonialCard>
                         ))}
                     </div>
                 </div>

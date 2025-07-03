@@ -1,3 +1,5 @@
+import Heading_Btn from "@components/Heading_Btn"
+import TestimonialCard from "@components/TestimonialCard"
 import { Calculator, Users, Building, Shield, Zap, Globe, Settings, Award, Play } from "lucide-react"
 
 // Custom Button Component
@@ -51,10 +53,10 @@ export default function Component() {
         <div className="bg-transparent">
 
             {/* Hero Section */}
-            <section className="px-6 py-16 text-center text-white">
+            <section className="px-6 py-16 text-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="text-left">
+                        {/* <div className="text-left">
                             <h1 className="text-5xl font-bold mb-6">
                                 Real-World Results,
                                 <br />
@@ -73,25 +75,29 @@ export default function Component() {
                                     Watch Success Stories
                                 </Button>
                             </div>
-                        </div>
-                        <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-                            <h3 className="text-xl font-semibold mb-6">MSP Achieves 35% MRR Growth with ThreatLocker</h3>
-                            <p className="text-sm text-blue-200 mb-6">
-                                See how this MSP transformed their security offering and achieved remarkable growth through our
-                                comprehensive solution.
-                            </p>
-                            <div className="grid grid-cols-2 gap-6">
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-orange-400">30%</div>
-                                    <div className="text-sm text-blue-200">Revenue Growth</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-orange-400">50%</div>
-                                    <div className="text-sm text-blue-200">Client Retention</div>
-                                </div>
-                            </div>
-                            <Button className="w-full mt-6 bg-orange-500 hover:bg-orange-600">Read Full Case Study</Button>
-                        </div>
+                        </div> */}
+
+                        <Heading_Btn
+                            h1="Real-World Results
+                                Proven Success"
+                            desc={`See how our clients achieved remarkable growth and transformed their businesses with our proven
+                                solutions. Calculate your potential success and join our community of thriving organizations.`}
+                            btn1={"Get Started Today"}
+                            btn2={"Watch Success Stories"}
+                        />
+
+                        <TestimonialCard
+                            badgeText={"MS PARTNER SUCCESS"}
+                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
+                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
+                            stats={[
+                                { value: "99.9%", label: "Uptime Maintained" },
+                                { value: "30%", label: "MRR Growth" },
+                            ]}
+
+                        >
+                        </TestimonialCard>
                     </div>
                 </div>
             </section>
