@@ -2,16 +2,27 @@ import React from "react";
 
 const CardContent = ({ icon, title, description, buttonText, designDescription }) => {
   return (
-    <div className="cyber-card">
+    <div className="relative rounded-[24px]" >
+      {/* Gradient border using pseudo */}
+      <div
+        className="absolute inset-0 rounded-[24px] p-[1px] z-0"
+        style={{
+          background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude"
+        }}
+      />
 
       <div className="card-content text-center p-6">
         <div className="icon-container flex justify-center mb-4">
-          <img src={icon} alt="Cybersecurity Illustration" className="icon w-14 h-14" />
+          <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px" />
         </div>
-        <h3 className="title text-xl font-semibold mb-2">{title}</h3>
+        <h3 className="title text-[24px] font-medium mb-2">{title}</h3>
         {
           description && (
-            <p className="description text-gray-300 mb-4">{description}</p>
+            <p className="description text-[18px] mb-4">{description}</p>
           )
         }
         {

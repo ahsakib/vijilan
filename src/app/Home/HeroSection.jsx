@@ -8,7 +8,7 @@ const HeroSection = () => {
         Cybersecurity.Empowering MSP Growth.<br />
         Securing the Enterprise.
       </h1>
-      <p className="text-[18px] text-[#FFFFFF] mb-8 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-[18px] text-[#FFFFFF] mb-8 max-w-2xl mx-auto leading-relaxed">
         Expert-Led Threat Detection, Response & Active Remediation from our SOC 2 Type 2 Certified, US-based Security Operations Center. Delivering turnkey cybersecurity solutions for MSPs and comprehensive protection for enterprises through AI-driven, fully managed security services.
       </p>
       <button className=" text-white rounded-[8px] p-[24px] font-medium text-[18px] flex items-center justify-center gap-2 mx-auto" style={{

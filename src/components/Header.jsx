@@ -14,7 +14,7 @@ const Header = () => {
       <EmergencyBanner />
       <div className='' >
 
-        <header className="w-[1160px] mx-auto rounded-[24px] h-[96px] flex items-center backdrop-blur-sm border-b border-slate-700 mt-[12px]" style={{
+        <header className="w-[1160px] mx-auto rounded-[24px] h-[96px] flex items-center backdrop-blur-sm border-b border-slate-700 mt-[10px]" style={{
           background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)",
         }}>
           <div className="container mx-auto px-6">

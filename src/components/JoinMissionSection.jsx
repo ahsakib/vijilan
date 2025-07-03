@@ -5,9 +5,9 @@ import ctaBgPattern from "../images/Background pattern.png";
 const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) => {
   return (
     <section className="relative z-10 px-6 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto px-6 ">
         <div
-          className="rounded-3xl p-16 relative overflow-hidden"
+          className="h-[304px] rounded-[24px] px-[8px] py-[24px] relative overflow-hidden"
           style={{
             background: "linear-gradient(90deg, #082135 0%, #082135 40%, #1a3a4f 60%, #1a3a4f 100%)",
           }}
@@ -47,19 +47,20 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) =>
           />
 
           <div className="relative z-10 text-center">
-            <h2 className="text-5xl font-bold text-white mb-8">
-              {title} <span className="text-cyan-400">{highlightedText}</span>
+            <h2 className="text-[40px] font-bold text-white mb-4">
+              {title} <span className="text-[#00AEEF]">{highlightedText}</span>
             </h2>
-            <p className="text-xl text-white mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-[16px] font-medium text-white mb-8 leading-relaxed max-w-2xl mx-auto">
               {subtitle}
             </p>
             <button
-              className="px-8 py-4 text-lg font-bold rounded-2xl text-white inline-flex items-center space-x-3 transition hover:scale-105"
+              className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
               style={{
-                background: "linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FF1744 100%)",
+                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                 boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
               }}
             >
+
               <span>{buttonText}</span>
               <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                 <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

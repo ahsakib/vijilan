@@ -5,6 +5,7 @@ import linkdin from "../../Assets/linkdin.png";
 import mail from "../../Assets/mail.png";
 import x from "../../Assets/x.png";
 import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
+import { ChevronRight } from 'lucide-react';
 
 
 
@@ -14,23 +15,57 @@ const Blog = () => {
         <div className="bg-slate-900 text-white py-10 lg:px-8 mb-96 px-11">
 
             {/* top part */}
-            <section className=" py-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="mb-6">
-                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-cyan-500 text-white">
-                            CYBERSECURITY
+            <section className="container mx-auto px-6">
+                <div className="mb-8">
+                    <nav className="flex items-center text-[12px]">
+                        <span className="hover:text-white cursor-pointer">Home</span>
+                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <span className="hover:text-white cursor-pointer">blog</span>
+                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
+                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <span className="text-white">The Rise of Malware-Free Attacks</span>
+                    </nav>
+                </div>
+
+                {/* Main Content */}
+                <div className="space-y-8">
+                    {/* Category Badge */}
+                    <div className="">
+                        <span className="inline-block bg-[#00AEEF] text-white px-[16px] py-[24px] rounded-md text-[16px] font-medium uppercase tracking-wide">
+                            THREAT INTELLIGENCE
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight max-w-4xl">
-                        The Rise of Malware-Free Attacks: How to Defend Your Organization
+                    {/* Main Heading */}
+                    <h1 className="text-4xl md:text-5xl  font-bold leading-tight">
+                        The Rise of Malware-Free Attacks: How to <br /> Defend Your Organization
                     </h1>
 
-                    <div className="relative rounded-lg overflow-hidden mb-8">
+                    {/* Author Information */}
+                    <div className="flex items-center gap-3" >
+                        <div
+                            className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-white font-medium text-sm"
+                            style={{
+                                background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
+                 linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
+                            }}
+                        >
+                            KN
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <span className="text-white text-[13px] font-medium">Kevin Nejad</span>
+                            <span className='font-light text-[13px] text-[#F1EAFA]'>June 13, 2025</span>
+                            <span className='font-light text-[13px] text-[#F1EAFA]'>7 min read</span>
+                        </div>
+                    </div>
+
+                    <div className="relative rounded-[22px] overflow-hidden mb-8">
                         <img
                             src={banner}
                             alt="Cybersecurity threat landscape"
-                            className="w-full h-auto object-cover"
+                            className="w-full h-[400px] object-cover"
                         />
                     </div>
                 </div>
@@ -38,11 +73,11 @@ const Blog = () => {
             {/* banner section  */}
 
             {/* middle part */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
                 {/* Main content */}
                 <div className="sm:col-span-3 md:col-span-2">
 
-                    <p className="text-gray-300 mb-6">
+                    <p className="text-[18px] mb-6">
                         Modern cyber attackers are evolving rapidly, and one of the trends we’re
                         seeing at Vijilan is the dramatic rise in malware-free attacks. These
                         sophisticated threats leverage legitimate tools and processes already present
@@ -54,36 +89,36 @@ const Blog = () => {
                         systems and presents a significant challenge for security teams worldwide.
                     </p>
 
-                    <h2 className="text-2xl font-bold mb-4">
-                        Understanding the Malware-Free Attack Landscape
+                    <h2 className="text-[32px] font-bold mb-4">
+                        Understanding the Malware-Free Attack <br /> Landscape
                     </h2>
 
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-[18px] mb-4">
                         In our analysis of over 10,000 security incidents in the past year, Vijilan’s SOC
                         team has observed a 300% increase in malware-free attack attempts. These
                         attacks typically follow a predictable pattern:
                     </p>
 
-                    <ul className="list-disc pl-6 text-gray-300 mb-6">
+                    <ul className="list-disc pl-6 text-[18px] mb-6">
                         <li>Initial Access: Attackers gain entry through compromised credentials, phishing, or exploiting unpatched vulnerabilities.</li>
                         <li>Privilege Escalation: Using legitimate Windows tools like PowerShell, WMI, or scheduled tasks to gain higher-level access.</li>
                         <li>Lateral Movement: Leveraging built-in networking tools and protocols to move through your environment.</li>
                         <li>Data Exfiltration: Using legitimate file transfer utilities or cloud services to steal sensitive information.</li>
                     </ul>
 
-                    <blockquote className="bg-slate-800 p-6 rounded-lg border-l-4 border-cyan-500 mb-6">
-                        <p className="italic text-gray-200">
-                            “The most dangerous attacks today don’t look like attacks at all.
-                            They blend seamlessly into normal business operations, which is
-                            exactly what makes them so effective — and so challenging to defend against.”
+                    <blockquote className="bg-[#082235] h-[263px]  rounded-[10px] border-l-4 border-[#00AEEF] mb-6">
+                        <p className="italic text-[20px] w-full h-full flex justify-center items-center">
+                            “The most dangerous attacks today don’t look like attacks at all. <br />
+                            They blend seamlessly into normal business operations, which is <br />
+                            exactly what makes them so effective — and so challenging to <br /> defend against.”
                         </p>
                     </blockquote>
 
-                    <h2 className="text-2xl font-bold mb-4">
+                    <h2 className="text-[32px] font-bold mb-4">
                         Why Traditional Security Fails Against These Threats
                     </h2>
 
-                    <p className="text-gray-300">
+                    <p className=" text-[18px]">
                         Traditional antivirus and endpoint protection solutions rely heavily on
                         signature-based detections — looking for known malicious files and patterns.
                         But when attackers use legitimate tools like PowerShell, Windows Management
@@ -95,17 +130,29 @@ const Blog = () => {
                 {/* Sidebar */}
                 <aside className="space-y-8 sm:col-span-3 md:col-span-1">
                     {/* social media share */}
-                    <div className="bg-slate-800  p-6 rounded-lg">
-                        <h3 className="text-xl font-bold mb-4">Share this Article</h3>
+                    <div className="relative bg-[#00AEEF3D]  p-6 rounded-[16px]">
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[1px] z-0"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude"
+                            }}
+                        />
+                        <h3 className="text-[24px] font-bold mb-4 text-center">Share this Article</h3>
+
+
                         <div className="space-y-3">
-                            <button className="w-full flex items-center gap-2 justify-center   bg-[#557185]    hover:bg-cyan-700 px-4 py-2 rounded">
-                                <img src={linkdin} className='w-7' alt="" />     Share on LinkedIn
+                            <button className="w-full flex items-center gap-2 justify-center   bg-[#FFFFFF47]  px-[30px] py-[14px] rounded-[10px] ">
+                                <img src={linkdin} className='w-[32px] h-[32px] rounded-[5px]' alt="" />    <span className='text-[18px]'>Share on LinkedIn</span>
                             </button>
-                            <button className="w-full flex items-center gap-2 justify-center bg-[#557185]  hover:bg-cyan-700 px-4 py-2 rounded">
-                                <img src={x} className='w-7' alt="" />   Share on Twitter
+                            <button className="w-full flex items-center gap-2 justify-center   bg-[#FFFFFF47]  px-[30px] py-[14px] rounded-[10px] ">
+                                <img src={x} className='w-[32px] h-[32px] rounded-[5px]' alt="" />   <span className='text-[18px]'>Share on Twitter</span>
                             </button>
-                            <button className="w-full flex items-center gap-2 justify-center bg-[#557185]  hover:bg-cyan-700 px-4 py-2 rounded">
-                                <img src={mail} className='w-7' alt="" />   Share via Email
+                            <button className="w-full flex items-center gap-2 justify-center   bg-[#FFFFFF47]  px-[30px] py-[14px] rounded-[10px] ">
+                                <img src={mail} className='w-[32px] h-[32px] rounded-[5px]' alt="" />   <span className='text-[18px]'>Share on Email</span>
                             </button>
                         </div>
                     </div>
