@@ -39,21 +39,21 @@ const teamData = [
 
 export default function About() {
     return (
-        <div className="min-h-screen" style={{ backgroundColor: "#191624" }}>
+        <div className="min-h-screen " style={{ backgroundColor: "#191624" }}>
 
             <section className="relative z-10 w-full py-16 text-center">
                 <div className="w-full px-6">
                     <div className="max-w-7xl mx-auto">
-                        <div className="max-w-3xl mx-auto">
-                            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">The People Behind Your Protection</h1>
-                            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                                We are a team of passionate cybersecurity experts, problem solvers, and client advocates dedicated to one
+                        <div className="max-w-4xl mx-auto">
+                            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">The People Behind Your Protection</h1>
+                            <p className="text-[18px] text-[#FFFFFF] mb-12 leading-relaxed">
+                                We are a team of passionate cybersecurity experts, problem solvers, and client <br/> advocates dedicated to one
                                 mission: keeping you and your customers safe and thriving.
                             </p>
                         </div>
 
                         {/* Video/Image Placeholder - now full width within the container */}
-                        <div className="bg-gray-400 rounded-lg aspect-video w-full max-w-7xl mx-auto mb-16">
+                        <div className="bg-[#D9D9D9] rounded-[16px] aspect-video w-full max-w-[1160px] h-[490px] mx-auto ">
                             {/* Placeholder for video content */}
                         </div>
                     </div>
@@ -75,9 +75,9 @@ export default function About() {
             {/* Mission, Vision, Values */}
 
             <section className="relative z-10 px-6 py-16">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center text-white mb-16">
-                        Our <span className="text-cyan-400">Mission</span>, Vision, and Values
+                <div className="container mx-auto px-6">
+                    <h2 className="text-[40px] font-bold text-center text-white mb-12">
+                         <span className="text-[#00AEEF]">Our Mission</span>, Vision, and Values
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -108,8 +108,8 @@ export default function About() {
             </section>
 
             <section className="relative z-10 px-6 py-16">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center text-white mb-16">Meet Our Leadership</h2>
+                <div className="container mx-auto px-6">
+                    <h2 className="text-[40px] font-bold text-center text-white mb-12">Meet Our Leadership</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {teamData.map((leader, index) => (
                             <LeaderCard
