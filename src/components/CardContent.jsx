@@ -71,7 +71,7 @@ const CardContent = ({ icon, banner, Cardsticket, side_text, Index, badge, title
         }
         {
           cardFooter && (
-            <p className="cardFooter text-[24px] text-[#00AEEF]">{cardFooter}</p>
+            <p className="cardFooter text-[18px] text-[#00AEEF]">{cardFooter}</p>
           )
         }
         {

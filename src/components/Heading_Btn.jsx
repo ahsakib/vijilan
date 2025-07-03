@@ -1,16 +1,19 @@
 import React from 'react';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2, btn3 }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, rating }) => {
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-7xl text-center space-y-8">
-                    {h1 && <h1 className="text-5xl font-bold tracking-tight text-white">
+                    {h1 && <h1 className="text-5xl capitalize font-bold tracking-tight text-white">
                         {h1}
                     </h1>}
                     {
-                        desc && <p className=" text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto"> {desc} </p>
+                        desc && <p className=" text-[18px] capitalize leading-8 max-w-5xl text-[#FFFFFF] mx-auto"> {desc} </p>
                     }
+                    {rating &&
+                        <p className='text-yellow-400 capitalize'> {rating}
+                        </p>}
 
                     <div class="flex flex-col sm:flex-row gap-10 justify-center">
                         {
@@ -66,7 +69,7 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3 }) => {
 
 
                         {btn3 && <div className="bg-[#0784c3]  rounded-lg  ">
-                            <button className="p-[18px] bg-[#064462] m-[2px] text-lg rounded-[8px] text-white border-2 border-white  ">
+                            <button className="p-[18px] capitalize bg-[#064462] m-[2px] text-lg rounded-[8px] text-white border-2 border-white  ">
                                 {btn3}
                             </button>
                         </div>}

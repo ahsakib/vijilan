@@ -14,6 +14,7 @@ import Resources from '@app/Resources/Resources';
 import Vars_consultants_page from '@app/Vars_consultants_page/Vars_consultants_page'; 
 import Automation_Focused from '@app/Automotion Focused/Automation_Focused';
 import Complain_Solution from '@app/Complain Solution/Complian_Solution';
+import Corrected_MSP_Program from '@app/Corrected MSP Partner Program/Corrected_MSP_Program';
 
 const router = createBrowserRouter([
     {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
             {
                 path: "complain-solution",
                 element: <Complain_Solution />,
+            },
+            {
+                path: "corrected-msp",
+                element: <Corrected_MSP_Program />,
             },
         ],
     },
