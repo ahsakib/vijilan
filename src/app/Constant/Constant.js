@@ -266,3 +266,32 @@ export const Empower = [
     icon: "/icons/threatremediate-guide.svg"
   }
 ]
+
+
+export const Automation = [
+  {
+    "icon":  a1,
+    "title": "Live Pricing Calculator",
+    "description": "Generate accurate quotes instantly. Input client assets and get real-time pricing with margin calculations.",
+    "buttonText": "Launch calculator"
+  },
+  {
+    "icon": a2,
+    "title": "Quote Builder & Proposal Generator",
+    "description": "Build professional proposals in minutes. Automated formatting, co-branding, and instant PDF generation.",
+    "buttonText": "Build quote"
+  },
+
+  {
+    "icon": a3,
+    "title": "Partner ROI Calculator",
+    "description": "Show prospects their security ROI and payback period. Interactive financial modeling built-in.",
+    "buttonText": "Calculate ROI"
+  },
+  {
+    "icon":a2,
+    "title": "Jen AI Sales Assistant",
+    "description": "Get instant answers about pricing, technical specs, and competitive positioning. Available 24/7.",
+    "buttonText": "Start chat"
+  }
+]
