@@ -603,3 +603,32 @@ a {
 .bg-transparent {
   background-color: transparent;
 }
+
+
+.uptime-card {
+  width: 166px;
+  height: 171px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+
+  /* Solid border with the desired color */
+  border: 2px solid #00AEEF;
+
+  /* Background base */
+  background-color: rgba(0, 174, 239, 0.24);
+
+  /* You can keep or remove these gradients if you want */
+  background-image:
+    linear-gradient(146.58deg, rgba(0, 174, 239, 0.24) 0.86%, rgba(8, 34, 53, 0) 50%),
+    linear-gradient(326.95deg, rgba(0, 174, 239, 0.24) 0.69%, rgba(8, 34, 53, 0) 66.77%),
+    linear-gradient(to bottom right, rgba(0, 174, 239, 0.24), rgba(8, 34, 53, 0));
+
+  background-origin: border-box;
+  background-clip: content-box, content-box, border-box;
+
+  background-blend-mode: overlay;
+  backdrop-filter: blur(44px);
+  -webkit-backdrop-filter: blur(44px);
+}

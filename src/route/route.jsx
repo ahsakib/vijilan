@@ -9,6 +9,7 @@ import App from 'src/App';
 import VisilanPartner from '@app/MsgPartner/VijilanMspPartner';
 import ThreatResponse from '@app/MsgPartner/threatRespondService';
 import VisislanProfessional from "@app/MsgPartner/VijilanProfessionalServices"
+import CaseStudies from "@app/Case/CaseStudies";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: "visilan-professional-service",
                 element: <VisislanProfessional />,
+            },
+            {
+                path: "case-studies",
+                element: <CaseStudies />,
             },
         ],
     },
