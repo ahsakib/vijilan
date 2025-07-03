@@ -1,6 +1,19 @@
+import CardBorder from "@components/CardBorder"
 import Heading_Btn from "@components/Heading_Btn"
 import TestimonialCard from "@components/TestimonialCard"
 import { Calculator, Users, Building, Shield, Zap, Globe, Settings, Award, Play } from "lucide-react"
+import CalculatorInput from "@components/CalculatorInput"
+import NavyBlueBackground from "@components/NavyBlueBackground"
+import Msp from "../../Assets/msp.svg"
+import Enterprise from "../../Assets/enterprise.svg";
+import Manufacturing from "../../Assets/manufacturing.svg";
+import HealthCare from "../../Assets/healthcare.svg";
+import dollar from "../../Assets/dollar-circle.svg";
+import bank from "../../Assets/bank.svg";
+import cpu from "../../Assets/cup.svg";
+import smb from "../../Assets/cup.svg";
+import JnAi from "../../Assets/jnai.svg";
+import CardContent from "@components/CardContent"
 
 // Custom Button Component
 function Button({ children, className = "", variant = "default", ...props }) {
@@ -21,16 +34,6 @@ function Button({ children, className = "", variant = "default", ...props }) {
     )
 }
 
-// Custom Input Component
-function Input({ className = "", ...props }) {
-    return (
-        <input
-            className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-            {...props}
-        />
-    )
-}
-
 // Custom Card Components
 function Card({ children, className = "", ...props }) {
     return (
@@ -40,13 +43,57 @@ function Card({ children, className = "", ...props }) {
     )
 }
 
-function CardContent({ children, className = "", ...props }) {
+function CardcontentData({ children, className = "", ...props }) {
     return (
         <div className={`p-6 pt-0 ${className}`} {...props}>
             {children}
         </div>
     )
 }
+
+const industries = [
+    {
+        icon: Msp,
+        title: "MSP/VAR",
+        description: "Managed service provider seeking growth",
+    },
+    {
+        icon: Enterprise,
+        title: "Enterprise",
+        description: "Large organization needing security",
+    },
+    {
+        icon: Manufacturing,
+        title: "Manufacturing",
+        description: "Industrial/operational technology",
+    },
+    {
+        icon: HealthCare,
+        title: "Healthcare",
+        description: "Compliance-focused organization",
+    },
+    {
+        icon: dollar,
+        title: "Financial Services",
+        description: "Banks, credit unions, fintech",
+    },
+    {
+        icon: bank,
+        title: "Government",
+        description: "Federal, state, local agencies",
+    },
+    {
+        icon: cpu,
+        title: "Technology",
+        description: "Software, SaaS, tech companies",
+    },
+    {
+        icon: smb,
+        title: "SMB",
+        description: "Small to medium business",
+    },
+];
+
 
 export default function Component() {
     return (
@@ -56,27 +103,6 @@ export default function Component() {
             <section className="px-6 py-16 text-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        {/* <div className="text-left">
-                            <h1 className="text-5xl font-bold mb-6">
-                                Real-World Results,
-                                <br />
-                                Proven Success
-                            </h1>
-                            <p className="text-lg mb-8 text-blue-200">
-                                See how our clients achieved remarkable growth and transformed their businesses with our proven
-                                solutions. Calculate your potential success and join our community of thriving organizations.
-                            </p>
-                            <div className="flex space-x-4">
-                                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">Get Started Today</Button>
-                                <Button
-                                    variant="outline"
-                                    className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 bg-transparent"
-                                >
-                                    Watch Success Stories
-                                </Button>
-                            </div>
-                        </div> */}
-
                         <Heading_Btn
                             h1="Real-World Results
                                 Proven Success"
@@ -102,194 +128,197 @@ export default function Component() {
                 </div>
             </section>
 
-            {/* Calculator Section */}
-            <section className="px-6 py-16">
-                <div className="max-w-4xl mx-auto text-center text-white">
-                    <h2 className="text-3xl font-bold mb-4">Calculate Your Potential Success</h2>
-                    <p className="text-blue-200 mb-12">
-                        Enter your details to see estimated results based on similar client outcomes
-                    </p>
 
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-                        <h3 className="text-xl font-semibold mb-8 text-center">Business Success Calculator</h3>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="space-y-4">
-                                <Input
-                                    placeholder="Current Monthly Revenue"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+            <NavyBlueBackground>
+                <div>
+                    <div className="text-white text-center">
+                        <h2 className="text-3xl font-bold mb-4">Calculate Your Potential Success</h2>
+                        <p className="text-blue-200 mb-12">
+                            Enter your details to see estimated results based on similar client outcomes
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-12">
+                        <CardBorder width="452px" height="424px">
+                            <div className="space-y-4 p-8 text-white text-left">
+                                <h1>Your Business Profile</h1>
+                                <CalculatorInput
+                                    id="businessType"
+                                    label="Business Type"
+                                    placeholder="Select Your Business Type"
                                 />
-                                <Input
-                                    placeholder="Number of Clients"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                                <CalculatorInput
+                                    id="annualRevenue"
+                                    label="Current Annual Revenue/MRR"
+                                    placeholder="1000000"
                                 />
-                                <Input
-                                    placeholder="Average Client Value"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                                <CalculatorInput
+                                    id="clients"
+                                    label="Number of Clients/Endpoints"
+                                    placeholder="50"
                                 />
-                                <Input
-                                    placeholder="Current Growth Rate %"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                                <CalculatorInput
+                                    id="securityBudget"
+                                    label="Current Security Budget"
+                                    placeholder="5000000"
                                 />
                             </div>
-                            <div className="space-y-4">
-                                <Input
-                                    placeholder="Target Revenue Goal"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                        </CardBorder>
+                        <CardBorder width="452px" height="424px">
+                            <div className="space-y-4 p-8 text-white text-left">
+                                <h1>Your Goals</h1>
+                                <CalculatorInput
+                                    id="businessType"
+                                    label="Primary Objective"
+                                    placeholder="Select Your main goal"
                                 />
-                                <Input
-                                    placeholder="Industry Type"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                                <CalculatorInput
+                                    id="annualRevenue"
+                                    label="Target Timeframe"
+                                    placeholder="Select Timeframe"
                                 />
-                                <Input
-                                    placeholder="Team Size"
-                                    className="bg-slate-700 border-slate-600 text-white placeholder:text-slate-400"
+
+                                <CalculatorInput
+                                    id="clients"
+                                    label="Industry"
+                                    placeholder="Select Your industry"
                                 />
-                                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Calculate My Potential</Button>
+                            </div>
+
+                        </CardBorder>
+                    </div>
+                </div>
+            </NavyBlueBackground>
+
+            <NavyBlueBackground>
+                <div>
+                    <div className="text-white text-center">
+                        <h2 className="text-3xl font-bold mb-4">Calculate Your Potential Success</h2>
+                        <p className="text-blue-200 mb-12">
+                            Enter your details to see estimated results based on similar client outcomes
+                        </p>
+
+                        <div className="grid grid-cols-4 gap-x-10 gap-y-[27px]">
+                            {industries.map((item, index) => (
+                                <CardBorder key={index} width="235.846px">
+                                    <div className="flex flex-col justify-center items-center">
+                                        <img src={item.icon} alt={item.title} className="w-12 mb-2" />
+                                        <h2 className="font-bold mb-2">{item.title}</h2>
+                                        <p className="text-sm">{item.description}</p>
+                                    </div>
+                                </CardBorder>
+                            ))}
+                        </div>
+                        <div className="text-left p-6">
+                            <div className="max-w-4xl w-full">
+                                {/* SMB Success Badge */}
+                                <div className="mb-8">
+                                    <span className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium">SMB SUCCESS</span>
+                                </div>
+
+                                {/* Main Headline */}
+                                <h1 className="text-white text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                                    Small Business Survives Ransomware Attack
+                                </h1>
+
+                                {/* Subtitle */}
+                                <p className="text-white text-lg md:text-xl mb-16 opacity-90">Quick response prevents data loss and downtime</p>
+
+                                {/* Statistics */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+                                    <div className="text-center">
+                                        <div className="text-white text-6xl md:text-7xl font-bold mb-2">0%</div>
+                                        <div className="text-gray-400 text-sm uppercase tracking-wider">DATA LOSS</div>
+                                    </div>
+                                    <div className="text-center">
+                                        <div className="text-white text-6xl md:text-7xl font-bold mb-2">4 Hrs</div>
+                                        <div className="text-gray-400 text-sm uppercase tracking-wider">RECOVERY TIME</div>
+                                    </div>
+                                </div>
+
+                                {/* CTA Button */}
+                                <div className="text-center">
+                                    <button className="border border-red-400 text-white px-8 py-3 rounded-md hover:bg-white hover:text-slate-900 transition-colors duration-200 text-sm font-medium uppercase tracking-wider">
+                                        READ THE FULL STORY
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </NavyBlueBackground>
 
-            {/* Organization Type Section */}
-            <section className="px-6 py-16">
-                <div className="max-w-6xl mx-auto text-center text-white">
-                    <h2 className="text-3xl font-bold mb-4">Find Success Stories Like Yours</h2>
-                    <p className="text-blue-200 mb-12">
-                        Discover how organizations similar to yours have achieved remarkable results
-                    </p>
-
-                    <div className="mb-8">
-                        <h3 className="text-xl font-semibold mb-8">What Best Describes Your Organisation?</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {[
-                                { icon: Building, label: "Enterprise" },
-                                { icon: Users, label: "SMB" },
-                                { icon: Shield, label: "Security" },
-                                { icon: Globe, label: "Global" },
-                                { icon: Zap, label: "Startup" },
-                                { icon: Settings, label: "Technology" },
-                                { icon: Award, label: "Consulting" },
-                                { icon: Calculator, label: "Finance" },
-                            ].map((item, index) => {
-                                const IconComponent = item.icon
-                                return (
-                                    <Card
-                                        key={index}
-                                        className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 cursor-pointer transition-colors"
-                                    >
-                                        <CardContent className="p-6 pt-6 text-center">
-                                            <IconComponent className="w-8 h-8 mx-auto mb-3 text-orange-400" />
-                                            <div className="text-white font-medium">{item.label}</div>
-                                        </CardContent>
-                                    </Card>
-                                )
-                            })}
-                        </div>
-                    </div>
-
-                    {/* Benchmarking Section */}
-                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 mb-12">
-                        <h3 className="text-xl font-semibold mb-6">Small Business Services Benchmarking Attack</h3>
-                        <p className="text-blue-200 mb-8">Compare your performance against industry standards</p>
-                        <div className="grid grid-cols-2 gap-8">
-                            <div className="text-center">
-                                <div className="text-4xl font-bold text-orange-400">0%</div>
-                                <div className="text-sm text-blue-200 mt-2">Security Incidents</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-4xl font-bold text-orange-400">4 Hrs</div>
-                                <div className="text-sm text-blue-200 mt-2">Average Response Time</div>
-                            </div>
-                        </div>
-                        <div className="w-full bg-slate-700 rounded-full h-2 mt-6">
-                            <div className="bg-orange-500 h-2 rounded-full w-3/4"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Success Stories Grid */}
-            <section className="px-6 py-16">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center text-white mb-12">All Success Stories</h2>
-                    <div className="grid md:grid-cols-2 gap-8">
+            <section className="py-16 px-4 bg-transparent relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="container mx-auto relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            All Success Stories
+                        </h2>
+                        <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                            Browse our complete collection of client success stories and measurable business results.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
                         {Array.from({ length: 8 }).map((_, index) => (
-                            <Card key={index} className="bg-slate-800/50 border-slate-700">
-                                <CardContent className="p-6 pt-6">
-                                    <div className="flex items-start justify-between mb-4">
-                                        <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                                            FEATURED
-                                        </span>
-                                        <Play className="w-5 h-5 text-orange-400" />
-                                    </div>
-                                    <h3 className="text-lg font-semibold text-white mb-3">
-                                        MSP Achieves 30% MRR Growth with ThreatLocker
-                                    </h3>
-                                    <p className="text-blue-200 text-sm mb-6">
-                                        Discover how this managed service provider transformed their security offering and achieved
-                                        remarkable growth through our comprehensive solution platform.
-                                    </p>
-                                    <div className="grid grid-cols-2 gap-4 mb-6">
-                                        <div className="text-center">
-                                            <div className="text-2xl font-bold text-orange-400">30%</div>
-                                            <div className="text-xs text-blue-200">Revenue Growth</div>
-                                        </div>
-                                        <div className="text-center">
-                                            <div className="text-2xl font-bold text-orange-400">50%</div>
-                                            <div className="text-xs text-blue-200">Client Satisfaction</div>
-                                        </div>
-                                    </div>
-                                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Read Full Case Study</Button>
-                                </CardContent>
-                            </Card>
+                            <TestimonialCard
+                                badgeText={"MS PARTNER SUCCESS"}
+                                heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
+                                description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
+                                stats={[
+                                    { value: "99.9%", label: "Uptime Maintained" },
+                                    { value: "30%", label: "MRR Growth" },
+                                ]}
+
+                            >
+                            </TestimonialCard>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="px-6 py-16">
-                <div className="max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-center text-white">
-                        <h2 className="text-2xl font-bold mb-4">
-                            Vylon's team functions as a seamless extension of our team. Their ability to strategically plan and
-                            execute complex projects while maintaining the highest standards of quality has been instrumental in our
-                            success.
-                        </h2>
-                        <p className="mb-6">- CEO, TechnoServe Pro</p>
-                        <Button className="bg-white text-orange-500 hover:bg-orange-50 px-8 py-3">Start Your Success Story</Button>
+            <section className="py-16 px-4 bg-transparent relative overflow-hidden max-w-7xl mx-auto">
+                <div
+                    className="backdrop-blur-sm p-8 shadow-2xl h-70"
+                    style={{
+                        borderRadius: '22.184px',
+                        background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
+                    }}
+                >
+                    <blockquote className="text-white text-lg leading-relaxed mb-6">
+                        ""Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier.""
+                    </blockquote>
+                    <div className="text-orange-400 font-semibold">
+                        — "CISO", "Manufacturing Firm"
                     </div>
                 </div>
             </section>
 
             {/* Ready to Scale Section */}
-            <section className="px-6 py-16">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 text-center">
-                            <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Zap className="w-8 h-8 text-white" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-4">Ready to Scale Your Business?</h3>
-                            <p className="text-blue-200 mb-6">
-                                Join thousands of successful businesses that have transformed their operations with our proven
-                                solutions.
-                            </p>
-                            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">Get Started Today</Button>
-                        </div>
-                        <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 text-center">
-                            <h3 className="text-xl font-semibold text-white mb-4">Ready to Write Your Own Success Story?</h3>
-                            <p className="text-blue-200 mb-6">
-                                Get personalized recommendations and see how our solutions can transform your business operations and
-                                drive growth.
-                            </p>
-                            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
-                                Schedule a Consultation
-                            </Button>
-                        </div>
-                    </div>
-                </div>
+
+            <section className="py-16 px-4 bg-transparent relative overflow-hidden max-w-7xl mx-auto">
+                <section className="grid grid-cols-2 gap-6">
+
+                    <CardContent
+                        icon={JnAi}
+                        title={"JEN AI"}
+                        description={`"I can help you find case studies similar to your business, calculate potential ROI, and connect you with relevant success stories. What would you like to explore?"`}
+                    />
+                </section>
             </section>
         </div>
     )
