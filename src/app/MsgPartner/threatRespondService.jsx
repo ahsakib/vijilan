@@ -5,69 +5,20 @@ import right from "../../Assets/right.png";
 import head from "../../Assets/head.png";
 import wa from "../../Assets/wa.png";
 import note from "../../Assets/note.png";
+import Heading_Btn from "@components/Heading_Btn";
 export default function Component() {
 
     return (
         <div className="min-h-screen">
 
-            {/* Hero Section */}
-            <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
-                <div className="mx-auto max-w-7xl text-center space-y-8">
-                    <h1 className="text-5xl font-bold tracking-tight text-white">
-                        Expert Detection. Actionable Guidance.
-                    </h1>
-                    <p className=" text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto">
-                        Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering
-                        clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-10 justify-center">
-                        <button
-                            className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                            style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+            {/* Hero Section */} 
+            <Heading_Btn
+                h1=" Expert Detection. Actionable Guidance."
+                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively."
+                btn1="Jwatch the service overview"
+                btn2="get an instant quote"
+            />
 
-                            }}>
-
-                            <span>watch the service overview</span>
-                            <div className="w-6 h-6  flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-                        <button
-                            className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
-                            style={{
-                                border: '1px solid',
-                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                borderImageSlice: 1,
-                                borderRadius: '8px',
-                            }}
-                        >
-                            <span className="uppercase">get an instant quote</span>
-                            <div className="w-6 h-6 flex items-center justify-center">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </section>
 
             {/* Video Section */}
             <section className="px-4 py-16 lg:px-8">
@@ -280,7 +231,7 @@ export default function Component() {
                                 Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.
                             </p>
                         </div>
-                                {/* 5th */}
+                        {/* 5th */}
                         <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                             <div
                                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -317,7 +268,7 @@ export default function Component() {
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3">Confirm & Close</h3>
                             <p className="text-white text-center text-[14px]">
-                               We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
+                                We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
                             </p>
                         </div>
                     </div>
