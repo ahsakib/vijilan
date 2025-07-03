@@ -15,6 +15,7 @@ import Resources from '@app/Resources/Resources';
 import Vars_consultants_page from '@app/Vars_consultants_page/Vars_consultants_page'; 
 import Automation_Focused from '@app/Automotion Focused/Automation_Focused';
 import AutomationCaseStudies from '@app/Case/AutoMationCase';
+import Complain_Solution from '@app/Complain Solution/Complian_Solution';
 
 const router = createBrowserRouter([
     {
@@ -79,7 +80,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "automotion-focused",
+                path: "automation-focused",
                 element: <Automation_Focused />,
+            },
+            {
+                path: "complain-solution",
+                element: <Complain_Solution />,
             },
         ],
     },

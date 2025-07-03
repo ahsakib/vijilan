@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2 }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, btn3 }) => {
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
@@ -31,34 +31,46 @@ const Heading_Btn = ({ h1, desc, btn1, btn2 }) => {
                                 </div>
                             </button>
                         }
-                        {btn2 && <button
-                            className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
-                            style={{
-                                border: '1px solid',
-                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                borderImageSlice: 1,
-                                borderRadius: '8px',
-                            }}
-                        >
-                            <span className="uppercase">{btn2}</span>
-                            <div className="w-6 h-6 flex items-center justify-center">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
+                        {btn2 &&
+                            <div className="  rounded-lg  ">
+                                <button
+                                    className="p-[18px] text-lg font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg"
+                                    style={{
+                                        border: '1px solid',
+                                        borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                        borderImageSlice: 1,
+                                        borderRadius: '8px',
+                                    }}
                                 >
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                    <span className="uppercase">{btn2}</span>
+                                    <div className="w-6 h-6 flex items-center justify-center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 16 16 12 12 8"></polyline>
+                                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </button>
                             </div>
-                        </button>}
+                        }
+
+
+                        {btn3 && <div className="bg-[#0784c3]  rounded-lg  ">
+                            <button className="p-[18px] bg-[#064462] m-[2px] text-lg rounded-[8px] text-white border-2 border-white  ">
+                                {btn3}
+                            </button>
+                        </div>}
+
 
                     </div>
                 </div>
