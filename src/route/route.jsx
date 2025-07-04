@@ -17,6 +17,7 @@ import Automation_Focused from '@app/Automotion Focused/Automation_Focused';
 import AutomationCaseStudies from '@app/Case/AutoMationCase';
 import Complain_Solution from '@app/Complain Solution/Complian_Solution';
 import Corrected_MSP_Program from '@app/Corrected MSP Partner Program/Corrected_MSP_Program';
+import DistributionPartner from "@app/MsgPartner/DestribuationPartner"
 
 const router = createBrowserRouter([
     {
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
             {
                 path: "corrected-msp",
                 element: <Corrected_MSP_Program />,
+            },
+            {
+                path: "distribution-partner",
+                element: <DistributionPartner />,
             },
         ],
     },

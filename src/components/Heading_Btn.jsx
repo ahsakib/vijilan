@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, rating }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, rating, btn4 }) => {
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
@@ -73,6 +73,14 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, rating }) => {
                                 {btn3}
                             </button>
                         </div>}
+                        {btn4 && (
+                            <div className="rounded-lg">
+                                <button className="p-[18px] capitalize bg-transparent m-[2px] text-lg rounded-[8px] text-[#00AEEF] border-2 border-[#00AEEF] hover:bg-[#00AEEF] hover:text-white transition duration-300">
+                                    {btn4}
+                                </button>
+                            </div>
+                        )}
+
 
 
                     </div>
