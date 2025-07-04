@@ -4,5 +4,5 @@
 @plugin '@tailwindcss/typography';
 
 @import './styles.css';
-@import './globals.css';
-
+@import './globals.css'; 
+@plugin "daisyui";

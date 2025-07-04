@@ -29,6 +29,25 @@ import p2 from "../../Assets/p2.png";
 import p3 from "../../Assets/p3.png";
 
 
+import cp1 from "../../Assets/cp1.png";
+import cp2 from "../../Assets/cp2.png";
+import cp3 from "../../Assets/cp3.png";
+import cp4 from "../../Assets/cp4.png";
+
+
+import clip from "../../Assets/Clipboard Approve.png";
+import rocket from "../../Assets/Rocket.png";
+import graph from "../../Assets/Graph Report.png";
+
+
+
+// react icon
+
+// import { TiLockOpenOutline } from "react-icons/ti";
+// import { BsClockHistory } from "react-icons/bs";
+
+
+
 
 export const Blog_landing_Data = [
   {
@@ -270,7 +289,7 @@ export const Empower = [
 
 export const Automation = [
   {
-    "icon":  a1,
+    "icon": a1,
     "title": "Live Pricing Calculator",
     "description": "Generate accurate quotes instantly. Input client assets and get real-time pricing with margin calculations.",
     "buttonText": "Launch calculator"
@@ -289,9 +308,114 @@ export const Automation = [
     "buttonText": "Calculate ROI"
   },
   {
-    "icon":a2,
+    "icon": a2,
     "title": "Jen AI Sales Assistant",
     "description": "Get instant answers about pricing, technical specs, and competitive positioning. Available 24/7.",
     "buttonText": "Start chat"
   }
 ]
+
+
+export const ComplainSays = [
+
+  {
+    "title": "For Your Business",
+    "description": "Meet your direct and often complex compliance obligations with our audit-ready reporting and long-term data retention, mapped to frameworks like NIST and ISO 27001. Reduce compliance workload while maintaining the highest security standards."
+  },
+  {
+    "title": "For Your Clients",
+    "description": "Empower your MSP to serve clients in regulated industries like healthcare and finance. Offer compliance-ready security services that open up new, profitable markets while providing the expertise your clients trust."
+  },
+]
+
+export const complianceFeatures = [
+
+  {
+    "icon": cp1,
+    "title": "7-Year Raw Log Retention",
+    "description": "Meet long-term data retention requirements for forensics and audits with our secure, cost-effective raw log storage that exceeds industry standards."
+  },
+  {
+    "icon": cp2,
+    "title": "Audit-Ready Reporting",
+    "description": "Generate comprehensive, on-demand reports mapped to specific compliance controls, simplifying your audit process and demonstrating due diligence."
+  },
+  {
+    "icon": cp3,
+    "title": "24/7 Continuous Monitoring",
+    "description": "Our SOC provides continuous monitoring of your environment to detect and respond to potential compliance violations or security incidents in real time."
+  },
+  {
+    "icon": cp4,
+    "title": "SOC 2 Type 2 Certified",
+    "description": "Our own operations are independently audited and SOC 2 Type 2 certified, giving you confidence in our security, processes, and integrity."
+  }
+]
+
+
+export const partnerShip = [
+
+  {
+    title: "Market Positioning",
+    description: "Position yourself as the premium cybersecurity provider with enterprise-grade solutions and 24/7 SOC capabilities.",
+    icon: clip
+  },
+  {
+    title: "Sales Enablement",
+    description: "Leverage our comprehensive sales toolkit, including co-brandable materials, pricing simulators, and proposal generators.",
+    icon: rocket
+  },
+  {
+    title: "Technical Training",
+    description: " Get your team certified on our platform with hands-on training from our technical success managers.",
+    icon: graph
+  }
+]
+
+
+export const partnerShipDesign=[
+  {
+    title: "Unlock New MRR",
+    description: "Add high-margin security services to your portfolio. Our model is built to maximize your Monthly Recurring Revenue and profitability",
+    icon:  "TiLockOpenOutline"
+  },
+  {
+    title: "Your Instant 24/7 SOC",
+    description: "Gain an immediate, SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts become an extension of your team",
+    icon: "iconSOC"
+  },
+  {
+    title: "Go-to-Market Enablement",
+    description: "Access our comprehensive ThreatRemediate Enablement Kit with co-brandable materials, sales decks, and proposal generators to win more deals.",
+    icon:  'x'
+  },
+  {
+    title: "Radical Flexibility & No Risk",
+    description: "Benefit from our channel-first approach with no minimum commitments, full white-labeling, and a 30-day risk-free opt-out trial.",
+    icon: "iconFlexibility"
+  },
+  {
+    title: "Simplified Compliance",
+    description: "Effortlessly support your clients’ compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC. Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your workload and minimizing regulatory risks.",
+    icon: "iconCompliance"
+  },
+  {
+    title: "Vendor-Agnostic Integration",
+    description: "Seamlessly integrate with your clients’ existing security tools and infrastructure. Vijilan supports extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving you unmatched flexibility without vendor lock-in.",
+    icon: "iconIntegration"
+  }
+]
+
+export const partnerFeedback=[
+  {
+    sectionTitle: "What Our Partners say",
+    testimonial: "Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is world-class, and the active remediation in ThreatRemediate is a game-changer for our clients.",
+    author: "Alex Johnson, CEO of a Silver Tier MSP Partner"
+  },
+  {
+    sectionTitle: "A Message to Our Future Partners",
+    testimonial: "We built our partner program on a foundation of trust and mutual success. We succeed when you succeed. That's why we provide the best technology, an expert SOC, and the GTM support you need to win.",
+    author: "Alex Johnson, CEO of a Silver Tier MSP Partner"
+  }
+]
+

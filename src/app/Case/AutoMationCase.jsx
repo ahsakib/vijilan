@@ -1,3 +1,4 @@
+import CardBorder from "@components/CardBorder"
 import Heading_Btn from "@components/Heading_Btn"
 import TestimonialCard from "@components/TestimonialCard"
 import { Calculator, Users, Building, Shield, Zap, Globe, Settings, Award, Play } from "lucide-react"
@@ -30,16 +31,6 @@ function Button({ children, className = "", variant = "default", ...props }) {
     )
 }
 
-// Custom Input Component
-function Input({ className = "", ...props }) {
-    return (
-        <input
-            className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-            {...props}
-        />
-    )
-}
-
 // Custom Card Components
 function Card({ children, className = "", ...props }) {
     return (
@@ -49,7 +40,7 @@ function Card({ children, className = "", ...props }) {
     )
 }
 
-function CardContent({ children, className = "", ...props }) {
+function CardcontentData({ children, className = "", ...props }) {
     return (
         <div className={`p-6 pt-0 ${className}`} {...props}>
             {children}
@@ -70,7 +61,7 @@ const categories = [
 
 export default function Component() {
     return (
-        <div className="bg-transparent">
+        <div className="bg-transparent max-w-[90%] mx-auto">
 
             {/* Hero Section */}
             <section className="px-6 py-16 text-white">
@@ -294,8 +285,7 @@ export default function Component() {
                         </div>
                     </div>
                 </div>
-            </section>
-
+                </section>
             {/* Organization Type Section */}
             <section className="px-6 py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
