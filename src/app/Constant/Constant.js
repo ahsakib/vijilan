@@ -419,3 +419,35 @@ export const partnerFeedback=[
   }
 ]
 
+export const dashbordTabs=[
+  
+  {
+    type: "add icon",
+    title: "Upsell Playbook",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Competitive Battlecards",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Technical Guides",
+    action: "access"
+  },
+ ,
+ ,
+  {
+    type: "add icon",
+    title: "Master Services Agreement",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Statement of Work (SOW)",
+    action: "access"
+  },
+ 
+   
+]

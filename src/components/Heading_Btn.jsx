@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, isSmallHeading, btn4, rating, state,btn2Icon = true }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, btn3,btn4, isSmallHeading, rating, state,btn2Icon = true }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
@@ -94,13 +94,12 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, isSmallHeading, btn4, rating,
                                 {btn3}
                             </button>
                         </div>}
-                        {btn4 && (
-                            <div className="rounded-lg">
-                                <button className="p-[18px] capitalize bg-transparent m-[2px] text-lg rounded-[8px] text-[#00AEEF] border-2 border-[#00AEEF] hover:bg-[#00AEEF] hover:text-white transition duration-300">
-                                    {btn4}
-                                </button>
-                            </div>
-                        )}
+                        {btn4 && <div className="bg-[#0784c3]  rounded-lg  ">
+                            <button className="p-[18px] uppercase   m-[2px] text-lg rounded-[8px] text-white border-2 border-white  ">
+                                {btn4}
+                            </button>
+                        </div>}
+                         
 
 
 
