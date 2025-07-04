@@ -22,6 +22,7 @@ import ManagedAutomation from "@app/Automotion Focused/ManagedAutomation"
 import PlatformTechnology from "@app/Platform/PlatformTechnology"
 import ManagedSiemSoc from "@app/Managed_siem_logscale/ManagedSiemSoc"
 import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLogScaleService';
+import EnterpriseLanding from '@app/Enterprise/EnterpriseLanding';
 
 const router = createBrowserRouter([
     {
@@ -116,7 +117,11 @@ const router = createBrowserRouter([
             {
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService/>
-            }
+            },
+            {
+                path: "enterprise-landing",
+                element: <EnterpriseLanding/>
+            },
         ],
     },
 ]);

@@ -1,19 +1,59 @@
-import { Play, Search, Shield, Users, MessageSquare, CheckCircle, ArrowRight, Menu } from "lucide-react"
+import { Play } from "lucide-react"
 import detect from "../../Assets/detect.png"
 import arrow from "../../Assets/arrow.png";
 import right from "../../Assets/right.png";
 import head from "../../Assets/head.png";
 import wa from "../../Assets/wa.png";
 import note from "../../Assets/note.png";
-import GradientButton from "@components/GradientButton";
-import OutlineGradientButton from "@components/OutlineGradientButton";
 import Heading_Btn from "@components/Heading_Btn";
+import SecurityCard from "@components/SecurityCard";
 export default function Component() {
+
+    const cardData = [
+        {
+            icon: detect,
+            title: "Detect",
+            description: `Add high-margin security services to <br /> your portfolio. Our model is built to <br /> maximize your Monthly Recurring <br /> Revenue and profitability`,
+            height: "390px",
+        },
+        {
+            icon: arrow,
+            title: "Investigate & Validate",
+            description: `Gain an immediate, SOC 2 Type 2 <br /> certified Security Operations Center <br /> without the overhead. Our experts <br /> become an extension of your team`,
+            height: "300px",
+        },
+        {
+            icon: wa,
+            title: "Fully Managed Cloud SIEM",
+            description: `Access our comprehensive <br /> ThreatRemediate™ Enablement Kit <br /> with co-brandable materials, sales <br /> decks, and proposal generators to win <br /> more deals.`,
+            height: "434px",
+        },
+        {
+            icon: head,
+            title: "Always-On SOC Support",
+            description: `Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.`,
+            height: "335px",
+            marginTop: "40px",
+        },
+        {
+            icon: note,
+            title: "Deliver Actionable Guidance",
+            description: `Effortlessly support your clients' <br /> compliance requirements, including <br /> HIPAA, GDPR, PCI DSS, and CMMC. <br /> Vijilan provides detailed reporting, <br /> audit-ready documentation, and <br /> compliance expertise—reducing your <br /> workload and minimizing regulatory <br /> risks.`,
+            height: "405px",
+            marginTop: "130px",
+        },
+        {
+            icon: right,
+            title: "Confirm & Close",
+            description: `We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.`,
+            height: "420px",
+        },
+    ];
 
     return (
         <div className="min-h-screen">
 
-            {/* Hero Section */} 
+            {/* Hero Section */}
             <Heading_Btn
                 h1=" Expert Detection. Actionable Guidance."
                 desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively."
@@ -154,127 +194,12 @@ export default function Component() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={detect} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-medium text-white mb-3">Detect</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Add high-margin security services to <br /> your portfolio. Our model is built to <br /> maximize your Monthly Recurring <br /> Revenue and profitability
-                            </p>
-                        </div>
-
-                        <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={arrow} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Investigate & Validate</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Gain an immediate, SOC 2 Type 2 <br /> certified Security Operations Center <br /> without the overhead. Our experts <br /> become an extension of your team
-                            </p>
-                        </div>
-
-                        <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={wa} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Fully Managed Cloud SIEM</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Access our comprehensive <br /> ThreatRemediate™ Enablement Kit <br /> with co-brandable materials, sales <br /> decks, and proposal generators to win <br /> more deals.
-                            </p>
-                        </div>
-
-                        <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={head} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Always-On SOC Support</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Benefit from our channel-first <br /> approach with no minimum <br />commitments, full white-labeling, and a <br /> 30-day risk-free opt-out trial.
-                            </p>
-                        </div>
-                        {/* 5th */}
-                        <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={note} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Deliver Actionable Guidance</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Effortlessly support your clients' <br /> compliance requirements, including <br /> HIPAA, GDPR, PCI DSS, and CMMC. <br /> Vijilan provides detailed reporting, <br /> audit-ready documentation, and <br /> compliance expertise—reducing your <br /> workload and minimizing regulatory <br /> risks.
-                            </p>
-                        </div>
-
-                        <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={right} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Confirm & Close</h3>
-                            <p className="text-white text-center text-[14px]">
-                                We work with your team via the portal <br /> or ticketing system to confirm the <br /> threat has been successfully resolved.
-                            </p>
-                        </div>
+                        {cardData.map((item, index) => (
+                            <SecurityCard key={index} data={item} />
+                        ))}
                     </div>
                 </div>
+
             </section>
 
             {/* FAQ Section */}

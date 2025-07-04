@@ -134,8 +134,8 @@ const PlatformTechnology = ({ }) => {
                     <h1 className="font-bold mb-8 text-5xl">An Architecture Built for Speed, Scale, and Security</h1>
                     <p className="font-bold text-xl">Three integrated technology layers work in perfect harmony to deliver superior security outcomes <br /> while reducing complexity and cost.</p>
                 </div>
-                <div className="flex items-center justify-center p-8">
-                    <div className="flex items-stretch gap-8 overflow-x-auto pb-4">
+                <div className="flex flex-col md:flex-row items-center justify-center p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-x-auto pb-4">
                         {cards2.map((card, index) => (
                             <CardBorder key={index} width="291px" height="442px">
                                 <div
