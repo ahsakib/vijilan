@@ -3,7 +3,7 @@ import React from "react";
 const OutlineGradientButton = ({ children }) => {
   return (
     <button
-      className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
+      className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
       style={{
         border: '1px solid',
         borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',

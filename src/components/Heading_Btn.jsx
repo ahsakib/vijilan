@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2 }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, isSmallHeading }) => {
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-7xl text-center space-y-8">
-                    {h1 && <h1 className="text-5xl font-bold tracking-tight text-white">
+                    {h1 && <h1 className={`${isSmallHeading ? "text-[40px]" : "text-5xl"} font-bold tracking-tight text-white`}>
                         {h1}
                     </h1>}
                     {
-                        desc && <p className=" text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto"> {desc} </p>
+                        desc && <p className="whitespace-pre-line text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto"> {desc} </p>
                     }
 
                     <div class="flex flex-col sm:flex-row gap-10 justify-center">
