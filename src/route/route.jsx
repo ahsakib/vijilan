@@ -25,7 +25,8 @@ import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLo
 import EnterpriseLanding from '@app/Enterprise/EnterpriseLanding';
 import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterPrice';
 import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi';
-import Dashbord from '@app/DashBord/Dashbord';
+import Dashbord from '@app/DashBord/Page/Dashbord';
+import SMB from '@app/DashBord/Page/SMB';
 
 const router = createBrowserRouter([
     {
@@ -88,8 +89,7 @@ const router = createBrowserRouter([
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
-            {
-                path: "automotion-focused",
+            { 
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
@@ -136,6 +136,10 @@ const router = createBrowserRouter([
             {
                 path: "dashbord",
                 element: <Dashbord/>
+            },
+            {
+                path: "smb",
+                element: <SMB/>
             }
         ],
     },

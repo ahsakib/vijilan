@@ -4,7 +4,7 @@ import { dashbordTabs } from '@app/Constant/Constant';
 import CardContent from '@components/CardContent';
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
-import DashBoardCard from './component/DashBoardCard';
+import DashBoardCard from '../component/DashBoardCard';
 
 export const InputField = ({ heading, desc, Input, number }) => {
     return (
