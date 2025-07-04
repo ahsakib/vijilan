@@ -53,7 +53,7 @@ text-center select-none uppercase">
     );
 
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 items-center ${design1 ? "max-w-6xl" :"max-w-7xl"} mx-auto`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${design1 ? "max-w-6xl" :"max-w-7xl"} mx-auto`}>
             {position === "left" ? (
                 <>
                     {image}

@@ -23,7 +23,7 @@ import PlatformTechnology from "@app/Platform/PlatformTechnology"
 import ManagedSiemSoc from "@app/Managed_siem_logscale/ManagedSiemSoc"
 import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLogScaleService';
 import EnterpriseLanding from '@app/Enterprise/EnterpriseLanding';
-import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterprice';
+import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterPrice';
 import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi';
 
 const router = createBrowserRouter([

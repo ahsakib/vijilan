@@ -127,20 +127,64 @@ const EnterpriseLanding = ({ }) => {
             </section>
             <section className="px-6 py-16 max-w-8xl mx-auto">
                 <NavyBlueBackground>
-                    <div class="flex flex-col items-center justify-center gap-6 text-center">
-                        <div class="flex items-center justify-center w-[256.96px] h-[62.29px] bg-transparent border border-[#00AEEF] rounded-full shadow-sm font-sans">
+                    <div class="flex flex-col items-center justify-center gap-8 text-center px-4 py-12">
+                        <div class="flex items-center justify-center w-[256.96px] h-[62.29px] bg-transparent border-2 border-[#00AEEF] rounded-full shadow-sm font-sans hover:bg-[#00AEEF]/10 transition-colors duration-200">
                             <span class="text-white font-bold text-xl tracking-wide">SOC 2 Type II Certified</span>
                         </div>
-                        <h1 class="font-bold text-5xl text-white">Achieve and Maintain Compliance with Confidence</h1>
-                        <p>Our services are designed to help you meet rigorous regulatory standards. <br />We provide detailed, audit-ready reporting and long-term log retention to support your <br /> compliance needs for HIPAA, GDPR, PCI DSS, CMMC, and more.</p>
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-center w-[120px] h-[36px] bg-transparent border border-[#FFFFFF] rounded-full font-sans p-6">
-                            <span class="text-white font-bold text-xl tracking-wide">HIPAA</span>
+
+                        <div class="space-y-6 max-w-4xl">
+                            <h1 class="font-bold text-5xl text-white leading-tight">
+                                Achieve and Maintain Compliance with Confidence
+                            </h1>
+                            <p class="text-lg text-white/80 leading-relaxed">
+                                Our services are designed to help you meet rigorous regulatory standards.
+                                We provide detailed, audit-ready reporting and long-term log retention to support your
+                                compliance needs for HIPAA, GDPR, PCI DSS, CMMC, and more.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-3 mt-8 max-w-4xl">
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">HIPAA</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">GDPR</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">PCI DSS</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">CMMC</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">SOX</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">NIST</span>
+                            </div>
+                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
+                                <span class="text-white font-bold text-sm tracking-wide">ISO 27001</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                        <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md 
+border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
+transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
+text-center select-none uppercase">
+                            request a compliance consultation
+                        </div>
                         </div>
                     </div>
                 </NavyBlueBackground>
 
+            </section>
+            <section>
+                <Heading_Btn
+                    h1={"Ready to Build a More Resilient Security Posture?"}
+                    desc={"See exactly how Vijilan can integrate with your environment and augment your team. Schedule a technical, no-obligation demo with one of our security architects."}
+                    btn1={"schedule a security architect demo"}
+                />
             </section>
         </div>
     </>
