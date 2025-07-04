@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2, isSmallHeading,btn4 }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2,btn3, isSmallHeading,btn4,rating }) => {
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
