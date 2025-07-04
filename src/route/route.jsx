@@ -28,6 +28,8 @@ import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi'
 import MspLaunchpad from '@app/Corrected MSP Partner Program/MspLaunchpad';
 import Tier1Landing from '@app/Corrected MSP Partner Program/Tier1Landing';
 import Tier3PartnerPortal from '@app/Corrected MSP Partner Program/Tier3PartnerPortal';
+import Dashbord from '@app/DashBord/Page/Dashbord';
+import SMB from '@app/DashBord/Page/SMB';
 
 const router = createBrowserRouter([
     {
@@ -90,8 +92,7 @@ const router = createBrowserRouter([
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
-            {
-                path: "automotion-focused",
+            { 
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
@@ -148,7 +149,14 @@ const router = createBrowserRouter([
                 element: <Tier3PartnerPortal/>
             },
 
-
+            {
+                path: "dashbord",
+                element: <Dashbord/>
+            },
+            {
+                path: "smb",
+                element: <SMB/>
+            }
         ],
     },
 ]);

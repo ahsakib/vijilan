@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
 
   console.log(side_text)
   return (
@@ -52,8 +52,20 @@ const CardContent = ({ icon, banner, Cardsticket, side_text, Index, badge, title
             <h4 className='text-center text-black  text-2xl'>{Cardsticket}</h4>
           </div>
         }
+
         {head && <h3 className={`head text-[25px] text-white font-medium mb-2 ${side_text ? "text-left" : "text-center"} `}>{head}</h3>}
+        {
+          side_text && <>
+            <h1 className="text-left text-[#00aeef]">{ColorHeading} </h1>
+            <h3 className="text-left text-[37px] font-bold mb-2">{Number}</h3>
+            <p className="text-left text-green-500">{linkBtn}</p>
+          </>
+
+        }
+
         <h3 className="title text-[37px] font-medium mb-2">{title}</h3>
+
+
         {
           description && (
             <p

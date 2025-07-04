@@ -289,28 +289,28 @@ export const Empower = [
 
 export const Automation = [
   {
-    "icon": a1,
-    "title": "Live Pricing Calculator",
-    "description": "Generate accurate quotes instantly. Input client assets and get real-time pricing with margin calculations.",
+    icon: a1,
+    title: "Live Pricing Calculator",
+    description: "Generate accurate quotes instantly. Input client assets and get real-time pricing with margin calculations.",
     "buttonText": "Launch calculator"
   },
   {
-    "icon": a2,
-    "title": "Quote Builder & Proposal Generator",
-    "description": "Build professional proposals in minutes. Automated formatting, co-branding, and instant PDF generation.",
+    icon: a2,
+    title: "Quote Builder & Proposal Generator",
+    description: "Build professional proposals in minutes. Automated formatting, co-branding, and instant PDF generation.",
     "buttonText": "Build quote"
   },
 
   {
-    "icon": a3,
-    "title": "Partner ROI Calculator",
-    "description": "Show prospects their security ROI and payback period. Interactive financial modeling built-in.",
+    icon: a3,
+    title: "Partner ROI Calculator",
+    description: "Show prospects their security ROI and payback period. Interactive financial modeling built-in.",
     "buttonText": "Calculate ROI"
   },
   {
-    "icon": a2,
-    "title": "Jen AI Sales Assistant",
-    "description": "Get instant answers about pricing, technical specs, and competitive positioning. Available 24/7.",
+    icon: a2,
+    title: "Jen AI Sales Assistant",
+    description: "Get instant answers about pricing, technical specs, and competitive positioning. Available 24/7.",
     "buttonText": "Start chat"
   }
 ]
@@ -319,36 +319,36 @@ export const Automation = [
 export const ComplainSays = [
 
   {
-    "title": "For Your Business",
-    "description": "Meet your direct and often complex compliance obligations with our audit-ready reporting and long-term data retention, mapped to frameworks like NIST and ISO 27001. Reduce compliance workload while maintaining the highest security standards."
+    title: "For Your Business",
+    description: "Meet your direct and often complex compliance obligations with our audit-ready reporting and long-term data retention, mapped to frameworks like NIST and ISO 27001. Reduce compliance workload while maintaining the highest security standards."
   },
   {
-    "title": "For Your Clients",
-    "description": "Empower your MSP to serve clients in regulated industries like healthcare and finance. Offer compliance-ready security services that open up new, profitable markets while providing the expertise your clients trust."
+    title: "For Your Clients",
+    description: "Empower your MSP to serve clients in regulated industries like healthcare and finance. Offer compliance-ready security services that open up new, profitable markets while providing the expertise your clients trust."
   },
 ]
 
 export const complianceFeatures = [
 
   {
-    "icon": cp1,
-    "title": "7-Year Raw Log Retention",
-    "description": "Meet long-term data retention requirements for forensics and audits with our secure, cost-effective raw log storage that exceeds industry standards."
+    icon: cp1,
+    title: "7-Year Raw Log Retention",
+    description: "Meet long-term data retention requirements for forensics and audits with our secure, cost-effective raw log storage that exceeds industry standards."
   },
   {
-    "icon": cp2,
-    "title": "Audit-Ready Reporting",
-    "description": "Generate comprehensive, on-demand reports mapped to specific compliance controls, simplifying your audit process and demonstrating due diligence."
+    icon: cp2,
+    title: "Audit-Ready Reporting",
+    description: "Generate comprehensive, on-demand reports mapped to specific compliance controls, simplifying your audit process and demonstrating due diligence."
   },
   {
-    "icon": cp3,
-    "title": "24/7 Continuous Monitoring",
-    "description": "Our SOC provides continuous monitoring of your environment to detect and respond to potential compliance violations or security incidents in real time."
+    icon: cp3,
+    title: "24/7 Continuous Monitoring",
+    description: "Our SOC provides continuous monitoring of your environment to detect and respond to potential compliance violations or security incidents in real time."
   },
   {
-    "icon": cp4,
-    "title": "SOC 2 Type 2 Certified",
-    "description": "Our own operations are independently audited and SOC 2 Type 2 certified, giving you confidence in our security, processes, and integrity."
+    icon: cp4,
+    title: "SOC 2 Type 2 Certified",
+    description: "Our own operations are independently audited and SOC 2 Type 2 certified, giving you confidence in our security, processes, and integrity."
   }
 ]
 
@@ -419,3 +419,72 @@ export const partnerFeedback=[
   }
 ]
 
+export const dashbordTabs=[
+  
+  {
+    type: "add icon",
+    title: "Upsell Playbook",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Competitive Battlecards",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Technical Guides",
+    action: "access"
+  },
+ ,
+ ,
+  {
+    type: "add icon",
+    title: "Master Services Agreement",
+    action: "access"
+  },
+  {
+    type: "add icon",
+    title: "Statement of Work (SOW)",
+    action: "access"
+  },
+ 
+   
+]
+
+
+export const SMBCard=[
+  {
+    title: "I Need IT Services",
+    description: "Find a trusted, local provider for cybersecurity, managed IT, cloud solutions, and more.",
+    button: "Find a Partner →"
+  },
+  {
+    title: "I Provide IT Services",
+    description: "Join our marketplace to connect with qualified SMBs and grow your MSP business.",
+    button: "Join the Marketplace →"
+  },
+  {
+    title: "I Build IT Technology",
+    description: "Integrate your solution and reach thousands of MSPs and SMBs through our partner ecosystem.",
+    button: "Become a Vendor →"
+  }
+]
+
+export const benefitsData = [
+  {
+    icon: p1,
+    title: "Receive Qualified Leads",
+    description: "Get inbound requests from local businesses who have already specified their needs."
+  },
+  {
+    icon:p2 ,
+    title: "Showcase Your Expertise",
+    description: "Build a detailed profile highlighting your services, tech stack, and certifications to attract the right clients."
+  },
+  {
+    icon: p3,
+    title: "Leverage a Powerful Ecosystem",
+    description: "Utilize our integrated solutions and technology alliances to deliver superior service and build client trust."
+  }
+];
