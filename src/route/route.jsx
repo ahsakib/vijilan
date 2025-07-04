@@ -22,6 +22,8 @@ import ManagedAutomation from "@app/Automotion Focused/ManagedAutomation"
 import PlatformTechnology from "@app/Platform/PlatformTechnology"
 import ManagedSiemSoc from "@app/Managed_siem_logscale/ManagedSiemSoc"
 import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLogScaleService';
+import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterprice';
+import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi';
 
 const router = createBrowserRouter([
     {
@@ -116,6 +118,14 @@ const router = createBrowserRouter([
             {
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService/>
+            },
+            {
+                path: "mid-market-enterprice",
+                element: <MidMarketEnterPrice/>
+            },
+            {
+                path: "msp-partner-program-ai",
+                element: <MspPartnerProgramAi/>
             }
         ],
     },
