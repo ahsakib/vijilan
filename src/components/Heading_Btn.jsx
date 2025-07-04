@@ -1,6 +1,10 @@
 import React from 'react';
+import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2,btn3, isSmallHeading,btn4,rating }) => {
+const Heading_Btn = ({ h1, desc, btn1, btn2, btn3, isSmallHeading, btn4, rating, state,btn2Icon = true }) => {
+    const colCount = Math.min(state?.length || 1, 6);
+    const gridColsClass = `grid-cols-${colCount}`;
+
     return (
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
@@ -14,6 +18,21 @@ const Heading_Btn = ({ h1, desc, btn1, btn2,btn3, isSmallHeading,btn4,rating }) 
                     {rating &&
                         <p className='text-yellow-400 capitalize'> {rating}
                         </p>}
+
+                    {state && state.length > 0 && (
+                        <div className={`grid ${gridColsClass} max-w-xl mx-auto gap-4`}>
+                            {state.map((item, index) => (
+                                <CardBorder key={index} width="166px" height="171px">
+                                    <div>
+                                        <div className="text-white text-[32px] font-bold mb-2">{item.percentage}</div>
+                                        <div className="text-slate-300 text-sm font-medium whitespace-pre-line">
+                                            {item.description}
+                                        </div>
+                                    </div>
+                                </CardBorder>
+                            ))}
+                        </div>
+                    )}
 
                     <div class="flex flex-col sm:flex-row gap-10 justify-center">
                         {
@@ -46,6 +65,7 @@ const Heading_Btn = ({ h1, desc, btn1, btn2,btn3, isSmallHeading,btn4,rating }) 
                                     }}
                                 >
                                     <span className="uppercase">{btn2}</span>
+                                    {btn2Icon && (
                                     <div className="w-6 h-6 flex items-center justify-center">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +83,7 @@ const Heading_Btn = ({ h1, desc, btn1, btn2,btn3, isSmallHeading,btn4,rating }) 
                                             <line x1="8" y1="12" x2="16" y2="12"></line>
                                         </svg>
                                     </div>
+                                    )}
                                 </button>
                             </div>
                         }

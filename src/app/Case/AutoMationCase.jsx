@@ -10,43 +10,9 @@ import technology from "../../Assets/tecnology.png";
 import smb from "../../Assets/smb.png";
 import menu from "../../Assets/manu.png";
 import heathCare from "../../Assets/heathcare.png";
-import GradientButton from "@components/GradientButton";
+import InputSection from "@components/InputSection";
+import SuccessCard from "@components/SuccessCard";
 
-// Custom Button Component
-function Button({ children, className = "", variant = "default", ...props }) {
-    const baseStyles =
-        "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background px-4 py-2"
-
-    const variants = {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        outline: "border border-input hover:bg-accent hover:text-accent-foreground",
-    }
-
-    const variantStyles = variants[variant] || variants.default
-
-    return (
-        <button className={`${baseStyles} ${variantStyles} ${className}`} {...props}>
-            {children}
-        </button>
-    )
-}
-
-// Custom Card Components
-function Card({ children, className = "", ...props }) {
-    return (
-        <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`} {...props}>
-            {children}
-        </div>
-    )
-}
-
-function CardcontentData({ children, className = "", ...props }) {
-    return (
-        <div className={`p-6 pt-0 ${className}`} {...props}>
-            {children}
-        </div>
-    )
-}
 
 const categories = [
     { title: "MSP/VAR", desc: "Managed service provider seeking growth", icon: growth },
@@ -57,6 +23,47 @@ const categories = [
     { title: "Government", desc: "Federal, state, local agencies", icon: enterprise },
     { title: "Technology", desc: "Software, SaaS, tech companies", icon: technology },
     { title: "SMB", desc: "Small to medium business", icon: smb },
+];
+
+const businessFields = [
+    {
+        label: "Business Type",
+        placeholder: "Select Business Type",
+        options: [{ value: "1", label: "Type 1" }, { value: "2", label: "Type 2" }],
+    },
+    {
+        label: "Current Annual Revenue/MRR",
+        placeholder: "Current Annual Revenue",
+        options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
+    {
+        label: "Number Of Clients/Endpoints",
+        placeholder: "Number Of Clients",
+        options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
+    {
+        label: "Current Security Budget",
+        placeholder: "Current Security Budget",
+        options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
+];
+
+const businessFields2 = [
+    {
+        label: "Primary Objective",
+        placeholder: "Select Your main goal",
+        options: [{ value: "1", label: "Type 1" }, { value: "2", label: "Type 2" }],
+    },
+    {
+        label: "Target Timeframe",
+        placeholder: "Select Timeframe",
+        options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
+    {
+        label: "Industry",
+        placeholder: "Select Your Industry",
+        options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
 ];
 
 export default function Component() {
@@ -154,138 +161,17 @@ export default function Component() {
                     <p className="text-white text-center text-[18px] mb-12">
                         Use our interactive calculator to estimate your potential results based on companies similar to <br /> yours.
                     </p>
-
                     <div className=" backdrop-blur-sm rounded-[24px] p-8" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                         <h3 className="text-[40px] font-bold text-center">Business Success Calculator</h3>
                         <p className="text-white text-center text-[18px] mb-10">Enter your details to see potential results based on similar client outcomes</p>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="relative rounded-[24px] space-y-3 bg-[#00AEEF3D] px-[30px] py-[20px]">
-                                <div
-                                    className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
-                                    style={{
-                                        background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                        WebkitMaskComposite: "xor",
-                                        maskComposite: "exclude",
-                                    }}
-                                />
-                                <h2 className="text-[#00AEEF] text-[16px] font-bold text-left mb-2">Your Business Profile</h2>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Business Type
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Select Business Type
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="2" className="text-black">1</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Current Annual Revenue/MRR
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Current Annual Revenue
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Number Of Clients/Endpoints
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Number Of Clients
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Current Security Budget
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] text-[#00000080] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Current Security Budget
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div className="relative rounded-[24px] space-y-3 bg-[#00AEEF3D] px-[30px] py-[20px]">
-                                <div
-                                    className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
-                                    style={{
-                                        background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                        WebkitMaskComposite: "xor",
-                                        maskComposite: "exclude",
-                                    }}
-                                />
-                                <h2 className="text-[#00AEEF] text-[16px] font-bold text-left mb-2">Your Goals</h2>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Primary Objective
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Select Your main goal
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="2" className="text-black">1</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Target Timeframe
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Select Timeframe
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-1 relative z-10">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Industry
-                                    </label>
-                                    <select
-                                        id="endpoints"
-                                        className="p-2 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none text-[#00000080] focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Select Your Industry
-                                        </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
-                                    </select>
-                                </div>
 
-                            </div>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <InputSection title="Your Business Profile" fields={businessFields} />
+                            <InputSection title="Your Goals" fields={businessFields2} />
                         </div>
                     </div>
                 </div>
-                </section>
+            </section>
             {/* Organization Type Section */}
             <section className="px-6 py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
@@ -455,92 +341,24 @@ export default function Component() {
             {/* Ready to Scale Section */}
             <section className="max-w-6xl mx-auto px-6 py-16">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* Left Side */}
-                    <div className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[24px] p-8 text-center">
-                        <div
-                            className="absolute inset-0 rounded-[26px] p-[1px] z-0"
-                            style={{
-                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                            }}
-                        />
-                        <div className="w-[61px] h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
-                            style={{
-                                background: `linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)),linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`,
-                                backgroundBlendMode: "overlay"
-                            }}>
 
-                            <h3 className="text-[20px] font-bold text-white ">JN</h3>
-                        </div>
-                        <h3 className="text-[20px] font-bold text-white mb-6">JEN AI</h3>
-                        <p className="text-white text-[16px] mb-12">
-                            "I can help you find case studies similar to your <br /> business, calculate potential ROI, and connect <br /> you with relevant success stories. What would <br />you like to explore?"
-                        </p>
-                        <button
-                            className="p-[16px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                            style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
-                            }}>
-
-                            <span className='uppercase'>Find my success story</span>
-                            <div className="w-6 h-6  flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-                    </div>
-
-                    {/* Right Side */}
-                    <div className="relative backdrop-blur-sm rounded-[24px] p-8 text-center">
-                        <div
-                            className="absolute inset-0 rounded-[24px] p-[1px] z-0"
-                            style={{
-                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                            }}
-                        />
-                        <h3 className="text-[24px] font-bold text-white mb-4">
-                            Ready to Write Your Own <br /> Success Story?
-                        </h3>
-                        <p className="text-[16px] text-center text-white mb-8">
-                            Let's discuss how Vijilan's services can help you <br /> achieve the security outcomes and business <br /> growth you're looking for.
-                        </p>
-                        <button
-                            className="p-[16px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                            style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-
-                            }}>
-
-                            <span className='uppercase'>schedule a consultation</span>
-                            <div className="w-6 h-6  flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-                        <button
-                            className="mt-[16px] p-[16px] text-[13px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
-                            style={{
-                                border: '1px solid',
-                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                borderImageSlice: 1,
-                                borderRadius: '8px',
-                            }}>
-                            <span className="uppercase">download success kit</span>
-                            
-                        </button>
-                    </div>
+                    <SuccessCard
+                        showIcon
+                        iconText="JN"
+                        subheading="JEN AI"
+                        description={`"I can help you find case studies similar to your \nbusiness, calculate potential ROI, and connect \nyou with relevant success stories. What would \nyou like to explore?"`}
+                        buttonText="Find my success story"
+                        bgColor="#00AEEF3D"
+                    />
+                    <SuccessCard
+                        heading={`Ready to Write Your Own \nSuccess Story?`}
+                        description={`Let's discuss how Vijilan's services can help you \nachieve the security outcomes and business \ngrowth you're looking for.`}
+                        buttonText="Schedule a consultation"
+                        isOutlineButton
+                        outlineButtonText="Download success kit"
+                        bgColor="transparent"
+                    />
                 </div>
             </section>
         </div >
