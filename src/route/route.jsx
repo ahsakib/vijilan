@@ -19,6 +19,7 @@ import Complain_Solution from '@app/Complain Solution/Complian_Solution';
 import Corrected_MSP_Program from '@app/Corrected MSP Partner Program/Corrected_MSP_Program';
 import DistributionPartner from "@app/MsgPartner/DestribuationPartner"
 import ManagedAutomation from "@app/Automotion Focused/ManagedAutomation"
+import PlatformTechnology from "@app/Platform/PlatformTechnology"
 
 const router = createBrowserRouter([
     {
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
             {
                 path: "managed-automation",
                 element: <ManagedAutomation />,
+            },
+            {
+                path: "platform-technology",
+                element: <PlatformTechnology />,
             },
         ],
     },
