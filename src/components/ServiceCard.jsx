@@ -32,7 +32,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
 
             {/* Title */}
             {
-                service.title && (
+                service?.title && (
                     <h2 className="text-white text-[24px] font-medium text-center mb-4 z-10 relative">
                         {service.title}
                     </h2>
@@ -41,7 +41,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
 
             {/* Badge */}
             {
-                service.badge && (
+                service?.badge && (
 
                     <div className="flex justify-center mb-6 z-10 relative">
                         <span className="bg-[#F1511B] text-white text-[10px] font-bold px-4 py-2 rounded-[15px]">
@@ -53,14 +53,14 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
 
             {/* Description */}
             {
-                service.description && (
+                service?.description && (
                     <p className="text-white text-center text-[16px] mb-8 leading-relaxed z-10 relative">
                         {service.description}
                     </p>
                 )
             }
 
-            {service.designedDesc && (
+            {service?.designedDesc && (
 
                 <div class="max-w-md p-6 mb-10">
                     <h2 class="text-lg font-semibold text-white mb-4">
@@ -79,7 +79,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
 
             {/* Feature List */}
             {
-                service.features && (
+                service?.features && (
                     <ul className="space-y-3 mb-8 z-10 relative">
                         {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-white text-[18px]">
@@ -92,26 +92,26 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             }
 
             {/* Learn More Button */}
-            {service.designBtn ? (
+            {service?.designBtn ? (
                 <div className="flex justify-center items-center rounded-lg">
-                <OutlineGradientButton>
-                  {service.designBtn}
-                </OutlineGradientButton>
-              </div>
-            ):(
+                    <OutlineGradientButton icon={service?.btnIcon}>
+                        {service.designBtn}
+                    </OutlineGradientButton>
+                </div>
+            ) : (
                 <div
-                className="flex justify-center items-center mx-auto w-fit z-10 relative"
-                style={{
-                    border: "1px solid",
-                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                    borderImageSlice: 1,
-                    borderRadius: "8px",
-                }}
-            >
-                <button className="font-medium text-[16px] text-white px-8 py-3 rounded-[7px]">
-                    LEARN MORE
-                </button>
-            </div>
+                    className="flex justify-center items-center mx-auto w-fit z-10 relative"
+                    style={{
+                        border: "1px solid",
+                        borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                        borderImageSlice: 1,
+                        borderRadius: "8px",
+                    }}
+                >
+                    <button className="font-medium text-[16px] text-white px-8 py-3 rounded-[7px]">
+                        LEARN MORE
+                    </button>
+                </div>
             )}
         </div>
     );
