@@ -18,6 +18,8 @@ import AutomationCaseStudies from '@app/Case/AutoMationCase';
 import Complain_Solution from '@app/Complain Solution/Complian_Solution';
 import Corrected_MSP_Program from '@app/Corrected MSP Partner Program/Corrected_MSP_Program';
 import DistributionPartner from "@app/MsgPartner/DestribuationPartner"
+import ManagedSiemSoc from '@app/Managed_siem_logscale/managedSiemSoc';
+import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLogScaleService';
 
 const router = createBrowserRouter([
     {
@@ -97,6 +99,14 @@ const router = createBrowserRouter([
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
+            {
+                path: "managed-siem-soc",
+                element:<ManagedSiemSoc/>
+            },
+            {
+                path: "managed-siem-logscale-service",
+                element: <ManagedSiemLogScaleService/>
+            }
         ],
     },
 ]);
