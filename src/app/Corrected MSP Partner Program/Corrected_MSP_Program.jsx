@@ -6,7 +6,7 @@ import React from 'react';
 
 const Corrected_MSP_Program = () => {
     return (
-        <div className='max-w-[90%] mx-auto border-2 border-white'>
+        <div className='max-w-[90%] mx-auto '>
             {/* Corrected MSP Partner Program */}
 
             {/* hero section */}
@@ -70,7 +70,7 @@ const Corrected_MSP_Program = () => {
                     desc="Our program is designed to meet you where you are and help you scale your security offerings profitably."
                 />
 
-                <div className='flex gap-5 flex-col md:flex-row'>
+                <div className='grid grid-cols-1 md:grid-cols-2  gap-5 justify-between'>
                     <CardContent
                         head="Partner Tier Comparison"
                         description="A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining services, support, and benefits for each level as defined in the development plan."
@@ -91,8 +91,9 @@ const Corrected_MSP_Program = () => {
                 </div>
             </div>
 
+            {/* feedback */}
 
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-2  gap-5 justify-between'>
                 {
                     partnerFeedback.map((card, index) =>
                         <CardContent
@@ -102,6 +103,31 @@ const Corrected_MSP_Program = () => {
                         />)
                 }
             </div>
+
+            {/* Question and answer */}
+
+
+            <div className=' mt-16 pt-8  '>
+
+                <h1 className='text-5xl font-bold text-center my-4 py-5'>Frequently Asked Questions</h1>
+                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
+                    <input type="radio" name="my-accordion-3" defaultChecked />
+                    <div className="collapse-title font-semibold">How do I create an account?</div>
+                    <div className="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+                </div>
+                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
+                    <input type="radio" name="my-accordion-3" />
+                    <div className="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                    <div className="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+                </div>
+                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
+                    <input type="radio" name="my-accordion-3" />
+                    <div className="collapse-title font-semibold">How do I update my profile information?</div>
+                    <div className="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                </div>
+            </div>
+
+
 
         </div>
     );
