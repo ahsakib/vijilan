@@ -20,6 +20,8 @@ import Corrected_MSP_Program from '@app/Corrected MSP Partner Program/Corrected_
 import DistributionPartner from "@app/MsgPartner/DestribuationPartner"
 import ManagedAutomation from "@app/Automotion Focused/ManagedAutomation"
 import PlatformTechnology from "@app/Platform/PlatformTechnology"
+import ManagedSiemSoc from '@app/Managed_siem_logscale/managedSiemSoc';
+import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLogScaleService';
 
 const router = createBrowserRouter([
     {
@@ -107,6 +109,14 @@ const router = createBrowserRouter([
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
+            {
+                path: "managed-siem-soc",
+                element:<ManagedSiemSoc/>
+            },
+            {
+                path: "managed-siem-logscale-service",
+                element: <ManagedSiemLogScaleService/>
+            }
         ],
     },
 ]);

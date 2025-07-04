@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SimpleCard = ({ icon, title, desc, h, w,designedTitle }) => {
+const SimpleCard = ({ icon, title, desc, h, w,designedTitle, center }) => {
     return (
         <div
             className="bg-gradient-to-l to-[#A5EDCD] from-[#B563F8] my-5 rounded-lg"
@@ -10,7 +10,7 @@ const SimpleCard = ({ icon, title, desc, h, w,designedTitle }) => {
                 className={`bg-[#413F46] p-8 text-left rounded-lg m-[2px] ${h ? `` : 'min-h-52'}`}
                 style={{ height: h}}
             >
-                <div className={`flex items-center gap-3 my-2 ${designedTitle ? `justify-center` :`justify-start`}`}>
+                <div className={`flex items-center gap-3 my-2 ${center ? "justify-center items-center w-full h-full" : ""} ${designedTitle ? `flex items-center justify-center h-full w-full` :`justify-start`}`}>
                 {icon && (
                     <img
                         src={icon}
@@ -19,7 +19,7 @@ const SimpleCard = ({ icon, title, desc, h, w,designedTitle }) => {
                     />
                 )}
                     {title && <p className='text-blue-500'>{title}</p>}
-                    {designedTitle && <h1 className='text-white-500 text-center font-bold text-4xl'>{designedTitle}</h1>}
+                    {designedTitle && <h1 className='text-white  font-bold text-[37px]'>{designedTitle}</h1>}
                 </div>
                 {desc && <p className='text-white'>{desc}</p>}
             </div>
