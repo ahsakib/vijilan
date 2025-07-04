@@ -27,6 +27,7 @@ import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterPrice'
 import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi';
 import MspLaunchpad from '@app/Corrected MSP Partner Program/MspLaunchpad';
 import Tier1Landing from '@app/Corrected MSP Partner Program/Tier1Landing';
+import Tier3PartnerPortal from '@app/Corrected MSP Partner Program/Tier3PartnerPortal';
 
 const router = createBrowserRouter([
     {
@@ -141,7 +142,12 @@ const router = createBrowserRouter([
             {
                 path: "tier-landing",
                 element: <Tier1Landing/>
-            }
+            },
+            {
+                path: "tier3-partner-portal",
+                element: <Tier3PartnerPortal/>
+            },
+
 
         ],
     },
