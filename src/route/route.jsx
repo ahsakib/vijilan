@@ -25,6 +25,7 @@ import ManagedSiemLogScaleService from '@app/Managed_siem_logscale/ManagedSiemLo
 import EnterpriseLanding from '@app/Enterprise/EnterpriseLanding';
 import MidMarketEnterPrice from '@app/Managed_siem_logscale/MidMarketEnterPrice';
 import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi';
+import MspLaunchpad from '@app/Corrected MSP Partner Program/MspLaunchpad';
 
 const router = createBrowserRouter([
     {
@@ -131,7 +132,12 @@ const router = createBrowserRouter([
             {
                 path: "msp-partner-program-ai",
                 element: <MspPartnerProgramAi/>
+            },
+            {
+                path: "msp-launchpad",
+                element: <MspLaunchpad/>
             }
+
         ],
     },
 ]);

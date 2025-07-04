@@ -7,6 +7,7 @@ import gear from "../../Assets/gear.svg";
 import electric from "../../Assets/electric.svg";
 import hand from "../../Assets/hand.svg";
 import TestimonialCard from '@components/TestimonialCard';
+import ServiceCard from '@components/ServiceCard';
 
 const cardData = [
     {
@@ -172,61 +173,12 @@ const ManagedSiemSoc = () => {
                 <p className='text-[18px] text-white text-center mb-12'>We offer a tiered service model, allowing you to choose the level of management and response that best fits your operational needs. Start with data ingestion and scale up to full remediation capabilities.</p>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
-                        <div
+                        <ServiceCard
                             key={index}
-                            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-8"
-                        >
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude",
-                                }}
-                            />
-                            {/* ADD ICON Button */}
-                            <div className="flex justify-center mb-6">
-                                <button className="bg-[#F1511B] text-white text-[10px] font-bold px-4 py-2 rounded-[15px] ">
-                                    ADD ICON
-                                </button>
-                            </div>
-
-                            {/* Service Title */}
-                            <h2 className="text-white text-[24px] font-medium text-center mb-4">{service.title}</h2>
-
-                            {/* Service Badge */}
-                            <div className="flex justify-center mb-6">
-                                <span className="bg-[#F1511B] text-white text-[10px] font-bold px-4 py-2 rounded-[15px]">
-                                    {service.badge}
-                                </span>
-                            </div>
-
-                            {/* Description */}
-                            <p className="text-white text-center text-[16px] mb-8 leading-relaxed">{service.description}</p>
-
-                            {/* Features List */}
-                            <ul className="space-y-3 mb-8">
-                                {service.features.map((feature, featureIndex) => (
-                                    <li key={featureIndex} className="flex items-center text-white text-[18px]">
-                                        <span className="text-white mr-3">•</span>
-                                        <span className="text-sm">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            {/* Learn More Button */}
-                            <div className="flex justify-center items-center mx-auto w-fit" style={{
-                                border: '1px solid',
-                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                borderImageSlice: 1,
-                                borderRadius: '8px',
-                            }}>
-                                <button className=" font-medium text-[16px] text-white px-8 py-3 rounded-[7px]">
-                                    LEARN MORE
-                                </button>
-                            </div>
-                        </div>
+                            index={index}
+                            service={service}
+                            onAddIcon={() => alert(`Add icon clicked for ${service.title}`)}
+                        />
                     ))}
                 </div>
             </div>
