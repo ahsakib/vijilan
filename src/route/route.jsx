@@ -30,6 +30,9 @@ import Tier1Landing from '@app/Corrected MSP Partner Program/Tier1Landing';
 import Tier3PartnerPortal from '@app/Corrected MSP Partner Program/Tier3PartnerPortal';
 import Dashbord from '@app/DashBord/Page/Dashbord';
 import SMB from '@app/DashBord/Page/SMB';
+import MspPricingTool from '@app/Pricing-tool/MspPricingTool';
+import PricingTool from '@app/Pricing-tool/PricingTool';
+import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssentail';
 
 const router = createBrowserRouter([
     {
@@ -156,6 +159,18 @@ const router = createBrowserRouter([
             {
                 path: "smb",
                 element: <SMB/>
+            },
+            {
+                path: "msp-pricing-tool",
+                element: <MspPricingTool/>
+            },
+            {
+                path: "pricing-tool",
+                element: <PricingTool/>
+            },
+            {
+                path: "threatremediate-essentail",
+                element: <ThreatremediateEssentail/>
             }
         ],
     },
