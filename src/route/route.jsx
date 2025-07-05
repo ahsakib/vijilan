@@ -28,6 +28,9 @@ import MspPartnerProgramAi from '@app/Managed_siem_logscale/MspPartnerProgramAi'
 import MspPricingTool from '@app/Pricing-tool/MspPricingTool';
 import PricingTool from '@app/Pricing-tool/PricingTool';
 import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssentail';
+import ThreatremediateRemotePricing from '@app/Theatremediate/ThreatremediateRemotePricing';
+import ThreadRemediateRemoteNoPricing from '@app/Theatremediate/ThreadRemediateRemoteNoPricing';
+import ThreatreMediateManagedXdr from '@app/Theatremediate/ThreatreMediateManagedXdr';
 
 const router = createBrowserRouter([
     {
@@ -92,7 +95,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "automotion-focused",
-                path: "automation-focused",
+                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
             {
@@ -146,6 +149,18 @@ const router = createBrowserRouter([
             {
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail/>
+            },
+            {
+                path: "threatremediate-remote-pricing",
+                element: <ThreatremediateRemotePricing/>
+            },
+            {
+                path: "threatremediate-remote-no-pricing",
+                element: <ThreadRemediateRemoteNoPricing/>
+            },
+            {
+                path: "threatremediate-managed-xdr",
+                element: <ThreatreMediateManagedXdr/>
             }
         ],
     },
