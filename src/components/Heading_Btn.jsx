@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ h1, desc, btn1, btn2, btn3,btn4, isSmallHeading, rating, state,btn2Icon = true }) => {
+const Heading_Btn = ({ h1, h3, desc, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
@@ -9,9 +9,16 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3,btn4, isSmallHeading, rating, 
         <div>
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-7xl text-center space-y-8">
-                    {h1 && <h1 className={`${isSmallHeading ? "text-[40px]" : "text-5xl"} font-bold tracking-tight text-white`}>
-                        {h1}
-                    </h1>}
+                    {h1 &&
+                        <h1 className={`${isSmallHeading ? "text-[40px]" : "text-5xl"} font-bold tracking-tight text-white`}>
+                            {h1}
+                        </h1>
+
+                    }
+                    {h3 &&
+                        <h3 className="text-3xl  tracking-tight text-white">
+                            {h3}
+                        </h3>}
                     {
                         desc && <p className="whitespace-pre-line text-[18px] leading-8 max-w-5xl text-[#FFFFFF] mx-auto"> {desc} </p>
                     }
@@ -66,23 +73,23 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3,btn4, isSmallHeading, rating, 
                                 >
                                     <span className="uppercase">{btn2}</span>
                                     {btn2Icon && (
-                                    <div className="w-6 h-6 flex items-center justify-center">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="12 16 16 12 12 8"></polyline>
-                                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                                        </svg>
-                                    </div>
+                                        <div className="w-6 h-6 flex items-center justify-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            >
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 16 16 12 12 8"></polyline>
+                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                            </svg>
+                                        </div>
                                     )}
                                 </button>
                             </div>
@@ -99,7 +106,7 @@ const Heading_Btn = ({ h1, desc, btn1, btn2, btn3,btn4, isSmallHeading, rating, 
                                 {btn4}
                             </button>
                         </div>}
-                         
+
 
 
 

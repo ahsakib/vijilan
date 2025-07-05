@@ -12,7 +12,7 @@ import ThreatResponse2 from '@app/MsgPartner/threatRespondService2';
 import VisislanProfessional from "@app/MsgPartner/VijilanProfessionalServices"
 import CaseStudies from "@app/Case/CaseStudies";
 import Resources from '@app/Resources/Resources';
-import Vars_consultants_page from '@app/Vars_consultants_page/Vars_consultants_page'; 
+import Vars_consultants_page from '@app/Vars_consultants_page/Vars_consultants_page';
 import Automation_Focused from '@app/Automotion Focused/Automation_Focused';
 import AutomationCaseStudies from '@app/Case/AutoMationCase';
 import Complain_Solution from '@app/Complain Solution/Complian_Solution';
@@ -34,6 +34,10 @@ import MspPricingTool from '@app/Pricing-tool/MspPricingTool';
 import PricingTool from '@app/Pricing-tool/PricingTool';
 import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssentail';
 import Success_study_case from '@app/DashBord/Page/Success_study_case';
+import Resilience_case from '@app/DashBord/Page/Resilience_case';
+import Federal_cmmc_case from '@app/DashBord/Page/Federal_cmmc_case';
+import Financial_Compliance_Case from '@app/DashBord/Page/Financial_Compliance_Case';
+import MSP_logscale_case from '@app/DashBord/Page/MSP_logscale_case';
 
 const router = createBrowserRouter([
     {
@@ -96,7 +100,7 @@ const router = createBrowserRouter([
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
-            { 
+            {
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
@@ -122,60 +126,76 @@ const router = createBrowserRouter([
             },
             {
                 path: "managed-siem-soc",
-                element:<ManagedSiemSoc/>
+                element: <ManagedSiemSoc />
             },
             {
                 path: "managed-siem-logscale-service",
-                element: <ManagedSiemLogScaleService/>
+                element: <ManagedSiemLogScaleService />
             },
             {
                 path: "enterprise-landing",
-                element: <EnterpriseLanding/>
+                element: <EnterpriseLanding />
             },
             {
                 path: "mid-market-enterprice",
-                element: <MidMarketEnterPrice/>
+                element: <MidMarketEnterPrice />
             },
             {
                 path: "msp-partner-program-ai",
-                element: <MspPartnerProgramAi/>
+                element: <MspPartnerProgramAi />
             },
             {
                 path: "msp-launchpad",
-                element: <MspLaunchpad/>
+                element: <MspLaunchpad />
             },
             {
                 path: "tier-landing",
-                element: <Tier1Landing/>
+                element: <Tier1Landing />
             },
             {
                 path: "tier3-partner-portal",
-                element: <Tier3PartnerPortal/>
+                element: <Tier3PartnerPortal />
             },
 
             {
                 path: "dashbord",
-                element: <Dashbord/>
+                element: <Dashbord />
             },
             {
-                path: "dashbord/case-success",
-                element: <Success_study_case/>
+                path: "case-success",
+                element: <Success_study_case />
+            },
+            {
+                path: "resilience-case",
+                element: <Resilience_case />
+            },
+            {
+                path: "federal-cmmc-case",
+                element: <Federal_cmmc_case />
+            },
+            {
+                path: "financial-complianc-case",
+                element: <Financial_Compliance_Case />
+            },
+            {
+                path: "msp-ogscale-case-study",
+                element: <MSP_logscale_case />
             },
             {
                 path: "smb",
-                element: <SMB/>
+                element: <SMB />
             },
             {
                 path: "msp-pricing-tool",
-                element: <MspPricingTool/>
+                element: <MspPricingTool />
             },
             {
                 path: "pricing-tool",
-                element: <PricingTool/>
+                element: <PricingTool />
             },
             {
                 path: "threatremediate-essentail",
-                element: <ThreatremediateEssentail/>
+                element: <ThreatremediateEssentail />
             }
         ],
     },

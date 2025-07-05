@@ -536,3 +536,164 @@ export const SalesProcess = [
   },
 
 ]
+
+export const SecurityCardData = [
+  {
+    icon: p1,
+    "label": "ThreatRemediate Complete",
+    "text": "Fully managed XDR providing robust endpoint protection and active remediation across IT environment"
+  },
+  {
+    icon: p1,
+    "label": "Managed Corelight Services",
+    "text": "Deep network visibility and analytics through Network Detection and Response (NDR) for OT networks"
+  },
+  {
+    icon: p1,
+    "label": "Managed Cribl Services",
+    "text": "Intelligent data ingestion, routing, and management from both IT and OT sources"
+  },
+  {
+    icon: p1,
+    "label": "Unified Visibility",
+    "text": "Single pane of glass for threat detection across converged IT/OT environment"
+  }
+]
+
+export const controllArray = [
+  {
+    icon: p1,
+    "label": "Access Control",
+    text: "22 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Audit & Accountability",
+    text: "13 Controls"
+  },
+  {
+    icon: p1,
+    "label": "System Security",
+    text: "23 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Media Protection",
+    text: "9 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Incident Response",
+    text: "16 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Additional Domains",
+    text: "27 Controls"
+  }
+]
+
+export const awsCard = [
+  {
+    icon: p1,
+    "label": "Rapid Procurement",
+    "text": "Streamlined government buying process"
+  },
+  {
+    icon: p1,
+    "label": "Simplified Billing",
+    "text": "Unified AWS billing and payment"
+  },
+  {
+    icon: p1,
+    "label": "Pre-Approved Solutions",
+    "text": "AWS-vetted security services"
+  },
+  {
+    icon: p1,
+    "label": "Instant Deployment",
+    "text": "Cloud-native rapid activation"
+  }
+]
+
+
+export const IT_IO = [
+  {
+    icon: p1,
+    "label": "Assessment & Planning",
+    "text": "CMMC gap analysis and implementation roadmap development"
+  },
+  {
+    icon: p1,
+    "label": "AWS Marketplace Deployment",
+    "text": "Rapid procurement and initial security platform activation"
+  },
+  {
+    icon: p1,
+    "label": "Security Controls Implementation",
+    "text": "EDR deployment and 24/7 monitoring establishment"
+  },
+  {
+    icon: p1,
+    "label": "CUI Protection Activation",
+    "text": "Specialized controls for Controlled Unclassified Information"
+  },
+  {
+    icon: p1,
+    "label": "Documentation & Reporting",
+    "text": "Audit-ready compliance documentation generation"
+  },
+  {
+    icon: p1,
+    "label": "CMMC Audit Readiness",
+    "text": "Final validation and certification preparation"
+  }
+]
+
+
+export const usExucativeSummary = [
+  {
+    icon: p1,
+    "label": "SEC Cybersecurity",
+    text: "Zero Findings"
+  },
+  {
+    icon: p1,
+    "label": "GLBA Safeguards",
+    text: "Fully Compliant"
+  },
+  {
+    icon: p1,
+    "label": "FFIEC Guidelines",
+    text: "Exceeds Standards"
+  },
+  {
+    icon: p1,
+    "label": "Audit Documentation",
+    text: "Audit-Ready"
+  }
+]
+
+
+export const financialService = [
+  {
+    icon: p1,
+    "label": "Financial Fraud",
+    "metric": "Prevented"
+  },
+  {
+    icon: p1,
+    "label": "APT Groups",
+    "metric": "Detected"
+  },
+  {
+    icon: p1,
+    "label": "Credential Theft",
+    "metric": "Monitored"
+  },
+  {
+    icon: p1,
+    "label": "Data Exfiltration",
+    "metric": "Blocked"
+  }
+]

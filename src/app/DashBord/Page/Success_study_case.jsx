@@ -10,6 +10,8 @@ import ProfileHRCard from '../component/ProfileHRCard';
 import DashboardSideCard from '../component/DashboardSideCard';
 import DashboardSideText from '../component/DashboardSideText';
 import CommonTextCard from '../component/CommonTextCard';
+import ListComponent from '../component/ListComponent';
+import MesurableComponentDashboard from '../component/MesurableComponentDashboard';
 
 const Success_study_case = () => {
 
@@ -176,6 +178,7 @@ const Success_study_case = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
 
+                {/* left col */}
                 <div className='grid-cols-1'>
                     <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12'>
 
@@ -201,20 +204,13 @@ const Success_study_case = () => {
 
                     </div>
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
-                        <h1 className='text-center mt-8 font-semibold'>🎯Sales & Operational Challenges</h1>
-                        <p className='text-left my-8'>
-                            As a sales-focused VAR, the company faced unique challenges in adding cybersecurity to their portfolio :
 
-                        </p>
 
-                        <ul className='mt-4 list-item'>
-                            {
-                                list1.map(li => <li className='list-disc mt-3 ml-4'>{li}</li>)
-                            }
-                        </ul>
-                        <p className='mt-2 text-left'>The Director of Sales emphasized: "We're great at selling technology solutions, but security was always a challenge. The products were too complex, the margins weren't predictable, and we didn't have the expertise to manage them post-sale. We needed something that played to our strengths as a sales organization."</p>
-                    </div>
+                    <ListComponent
+                        heading="🎯Sales & Operational Challenges"
+                        p1="As a sales-focused VAR, the company faced unique challenges in adding cybersecurity to their portfolio"
+                        array={list1}
+                    />
 
                     <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-8 px-12 mt-12'>
                         <h1 className='text-center mt-8 font-semibold'>🛡️ ThreatRemediate Complete: The Perfect VAR Solution</h1>
@@ -251,22 +247,7 @@ const Success_study_case = () => {
 
                     {/* last card */}
 
-                    {/* <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
-                        <h1 className='text-center mt-8 font-semibold'>🎯  Perfect Fit for Sales-Focused VARs</h1>
 
-                       
-
-                        <div className='mt-4  '>
-                            {
-                                fitForSales.map(list =>
-                                    <div className='mt-3'>
-                                        <p className='font-extrabold mb-1'>{list.label}</p>
-                                        <p>{list.text}</p>
-                                    </div>)
-                            }
-                        </div>
-
-                    </div> */}
 
                     <CommonTextCard array={fitForSales}
                         heading="🎯  Perfect Fit for Sales-Focused VARs"
@@ -274,6 +255,8 @@ const Success_study_case = () => {
 
 
                 </div>
+
+                {/* right col */}
 
                 <div className='grid-cols-1'>
 
@@ -294,15 +277,11 @@ const Success_study_case = () => {
                         l6r="Regional"
                     />
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px- mt-10'>
 
-                        <div className='w-1/2 mx-auto'>
-                            <h1 className='text-gray-500 text-3xl font-bold my-6'>Measurable Sales & Business Impact</h1>
-                            <div className='grid grid-cols-1 gap-6'>
-                                {MeasurabeCard.map(card => <DashboardSideCard head={card.metric} text={card.label} desc={card.text} />)}
-                            </div>
-                        </div>
-                    </div>
+                    <MesurableComponentDashboard
+                        heading="Measurable Sales & Business Impact"
+                        array={MeasurabeCard}
+                    />
 
                     <DashboardSideText
                         desc="Vijilan's ThreatRemediate Complete is the perfect solution for a sales-focused VAR. It's easy to sell, requires zero post-sale management from our team, and our margins have never been better. The partner enablement toolkit had our team closing deals in the first week. It's a true 'sell it and forget it' model with recurring revenue."

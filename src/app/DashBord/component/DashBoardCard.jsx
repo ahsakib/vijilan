@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashBoardCard = ({ icon,title,bg, heading,desc, btn,head,text,linkUp, txtIcon }) => {
+const DashBoardCard = ({ icon,title,bg,Number, heading,desc, btn,head,text,linkUp, txtIcon }) => {
     return (
         <div
             className={`relative bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center `}
@@ -22,7 +22,10 @@ const DashBoardCard = ({ icon,title,bg, heading,desc, btn,head,text,linkUp, txtI
 
                 </div>
             }
+
+
             <p className='text-white text-sm'>{txtIcon}</p>
+            <h3 className="text-3xl text-center font-bold   mb-3">{Number}</h3>
             <h3 className="text-xl text-center font-bold text-[#00AEEF] mb-3">{heading}</h3>
             <h3 className="text-xl text-center font-bold   mb-3">{head}</h3>
            {
