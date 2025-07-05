@@ -1,12 +1,12 @@
-import NavyBlueBackground from "@components/NavyBlueBackground";
-import React from "react";
 
+import React from "react";
+import name from "../../Assets/name.svg"
 const Tier3PartnerPortal = () => {
 
     const GradientCard = ({ children }) => {
         return (
             <div
-                className={`backdrop-blur-md rounded-3xl p-12 mx-auto my-8 shadow-2xl border border-[#00AEEF]/40`}
+                className={`backdrop-blur-md rounded-3xl mb-4 p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
                 style={{
                     background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                 }}
@@ -15,6 +15,8 @@ const Tier3PartnerPortal = () => {
             </div>
         );
     };
+
+
 
     return <>
         <div className="w-full">
@@ -46,9 +48,10 @@ text-center select-none uppercase">
                 </div>
             </div>
         </div>
-        <section className="max-w-[96%] mx-auto">
+        <section className="max-w-[96%] mx-auto mt-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="col-span-1">
+
                     <GradientCard>
                         <div className="bg-transparent rounded-lg shadow-md p-6 w-full">
                             <div className="flex justify-center">
@@ -124,9 +127,9 @@ text-center select-none uppercase">
                 </div>
                 <div className="col-span-1">
                     <GradientCard>
-                        <h1>🔧 Select Your ThreatRemediate Modules</h1>
-                        <p>ThreatRemediate Essentials: Starting at $5/endpoint - Pick and choose what you want to monitor</p>
-                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] p-8">
+                        <h1 className="font-bold mb-2">🔧 Select Your ThreatRemediate Modules</h1>
+                        <p className="font-semibold">ThreatRemediate Essentials: Starting at $5/endpoint - Pick and choose what you want to monitor</p>
+                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] my-8 p-8">
 
                             <div className="max-w-3xl mx-auto">
                                 <h1 className="text-2xl font-bold text-white mb-6">🛡️ Core TRX Modules</h1>
@@ -162,7 +165,7 @@ text-center select-none uppercase">
                                         <div className="">
                                             <h3 className="text-lg font-semibold text-black mb-2">TRX Identity (ITDR)</h3>
                                             <p className="text-sm text-black font-bold leading-relaxed">
-                                            Conditional access, bi-directional Entra ID integration
+                                                Conditional access, bi-directional Entra ID integration
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
@@ -183,7 +186,7 @@ text-center select-none uppercase">
                                         <div className="">
                                             <h3 className="text-lg font-semibold text-black mb-2">TRX Visibility (Exposure)</h3>
                                             <p className="text-sm text-black font-bold leading-relaxed">
-                                            Falcon Discover + Spotlight for asset visibility
+                                                Falcon Discover + Spotlight for asset visibility
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
@@ -195,17 +198,362 @@ text-center select-none uppercase">
                                     </div>
                                 </div>
 
-                               
+
+                            </div>
+                        </div>
+                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] p-8">
+
+                            <div className="max-w-3xl mx-auto">
+                                <h1 className="text-2xl font-bold text-white mb-6">🏢 Infrastructure Modules</h1>
+
+                                <div className="py-4">
+                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
+
+                                        <div>
+                                            <div className="border border-white w-5 h-5">
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <h3 className="text-lg font-semibold text-black mb-2">Critical Servers</h3>
+                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                                Domain Controllers, File Servers - Security Event Monitoring
+                                            </p>
+                                        </div>
+                                        <div className="flex-shrink-0 text-center">
+                                            <h2 className="block font-bold text-[#37D962]">$30.00/server</h2>
+                                            <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
+                                                <span className="text-sm font-medium text-gray-700">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="py-4">
+                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
+
+                                        <div>
+                                            <div className="border border-white w-5 h-5">
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <h3 className="text-lg font-semibold text-black mb-2">Member Servers</h3>
+                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                                Print servers, web hosting, general purpose servers - Monitored through Falcon EDR/XDR
+                                            </p>
+                                        </div>
+                                        <div className="flex-shrink-0 text-center">
+                                            <h2 className="block font-bold text-[#37D962]">$8.00/server</h2>
+                                            <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
+                                                <span className="text-sm font-medium text-gray-700">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="py-4">
+                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
+
+                                        <div>
+                                            <div className="border border-white w-5 h-5">
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <h3 className="text-lg font-semibold text-black mb-2">Security Appliances</h3>
+                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                                Firewalls, Network Security with IP blocking
+                                            </p>
+                                        </div>
+                                        <div className="flex-shrink-0 text-center">
+                                            <h2 className="block font-bold text-[#37D962]">$99.00/appliance</h2>
+                                            <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
+                                                <span className="text-sm font-medium text-gray-700">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </GradientCard>
                 </div>
                 <div className="col-span-1">
-                    <NavyBlueBackground>
+                    <div className="grid grid-cols-2 gap-4">
 
-                    </NavyBlueBackground>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">Website Copy Snippets</h3>
+                                <p className="text-sm mb-4">Complete presentation with ROI calculations</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">Competitive Battlecards</h3>
+                                <p className="text-sm mb-4">Objection handling vs competitors</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">ROI Calculator</h3>
+                                <p className="text-sm mb-4">Client-facing ROI assessment tool</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">Legal Templates</h3>
+                                <p className="text-sm mb-4">CompletMSA, SOW, and contract templates</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">Upsell Playbook</h3>
+                                <p className="text-sm mb-4">Strategies for expanding accounts</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                        <GradientCard>
+                            <div className="flex flex-col justify-center items-center text-center">
+
+                                <h4 className="font-semibold mb-2">add icon</h4>
+                                <h3 className="font-semibold mb-2">Technical Guides</h3>
+                                <p className="text-sm mb-4">Implementation and onboarding docs</p>
+                                <div
+                                    className="p-[1.5px] rounded-[16px] w-fit"
+                                    style={{
+                                        background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+                                    }}
+                                >
+                                    <div className="bg-[#103149] rounded-[14px] p-3 text-sm inline-flex items-center space-x-3 text-white uppercase">
+                                        Download
+                                    </div>
+                                </div>
+
+                            </div>
+                        </GradientCard>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+
+                <div className="relative border-2 border-[#37D962] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-[380px] shadow-lg">
+                    {/* Badge */}
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#37D962] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                        Essentials
+                    </div>
+                    <div className="mt-20">
+                        {/* Pricing */}
+                        <div className="mb-12 text-center">
+                            <h1 className="text-[#37D962] font-bold text-5xl mb-2">$0.00<span className="text-xl font-semibold">/month</span></h1>
+                        </div>
+
+                        {/* Module counter */}
+                        <div className="bg-[#37D962] text-white text-xl font-bold text-center px-6 py-8 mb-8 rounded-xl shadow-inner">
+                            0 modules selected
+                        </div>
+
+                        {/* CTA */}
+                        <div className="bg-white border-2 border-black-200 text-gray-700 rounded-xl text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
+                            <p className="font-medium">Select modules to see pricing breakdown</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="relative border-2 border-[#F2981F] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-[380px] shadow-lg">
+                    {/* Badge */}
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#F2981F] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                        trx complete
+                    </div>
+                    <div className="mt-20">
+                        {/* Pricing */}
+                        <div className="mb-12 text-center">
+                            <h1 className="text-[#F2981F] font-bold text-5xl mb-2">15% Bundle Discount</h1>
+                            <h1 className="text-[#F2981F] font-bold text-5xl mb-2">$0.00<span className="text-xl font-semibold">/month</span></h1>
+                        </div>
+
+                        {/* Module counter */}
+                        <div className="bg-[#F2981F] text-white text-xl font-bold text-center px-6 py-8 mb-8 rounded-xl shadow-inner">
+                            0 modules selected
+                        </div>
+
+                        {/* CTA */}
+                        <div className="bg-white border-2 border-black-200 text-gray-700 rounded-xl text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
+                            <p className="font-medium">Requires 3+ modules for discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="max-w-4xl mx-auto py-10 px-6">
+
+            <div className="bg-white border border-[#37D962] rounded-xl p-6 shadow-md space-y-4 text-center">
+                <div className="mb-14">
+                    <h1 className="font-bold text-[#00AEEF] text-4xl mb-8" >Payment Options</h1>
+                    <p className="text-xl text-black">
+                        Choose your preferred billing method to see updated pricing above
+                    </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                    {/* Monthly Billing */}
+                    <div className="bg-[#F3F4F6] border rounded-lg flex items-center gap-3 px-4 py-3 hover:shadow-sm cursor-pointer transition">
+                        <div className="w-3 h-3 rounded-full bg-[#00AEEF]"></div>
+                        <p className="text-sm font-medium text-gray-700">Monthly Billing</p>
+                    </div>
+
+                    {/* Annual Prepay */}
+                    <div className="bg-[#F3F4F6] border border-gray-300 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3 hover:shadow-sm cursor-pointer transition">
+                        <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 rounded-full bg-[#00AEEF]"></div>
+                            <p className="text-sm font-medium text-gray-700">Annual Prepay</p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <span className="bg-[#37D962] text-white text-xs px-3 py-1 rounded-full font-semibold">
+                                Save 15%
+                            </span>
+                            <span className="text-[#37D962] text-sm font-medium whitespace-nowrap">
+                                $0 saved annually
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section className="max-w-6xl mx-auto py-10">
+            <GradientCard>
+                <div className="px-20 py-10">
+                    <div className="text-center">
+
+                        <h1 className="text-4xl font-bold mb-4">🤝 Your Dedicated Support Team</h1>
+                        <p className="text-xl font-semibold">As a validated partner, you have direct access to our partner success specialists.</p>
+                    </div>
+                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex items-center">
+                            <img
+                                src={name}
+                                alt="Sarah Mitchell"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
+                            />
+                            <div className="text-white">
+                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
+                                <p class="font-medium">Partner Success Manager</p>
+                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
+                                contact sarah
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex items-center">
+                            <img
+                                src={name}
+                                alt="Sarah Mitchell"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
+                            />
+                            <div className="text-white">
+                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
+                                <p class="font-medium">Partner Success Manager</p>
+                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
+                                contact sarah
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex items-center">
+                            <img
+                                src={name}
+                                alt="Sarah Mitchell"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
+                            />
+                            <div className="text-white">
+                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
+                                <p class="font-medium">Partner Success Manager</p>
+                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
+                                contact sarah
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </GradientCard>
         </section>
     </>
 }
