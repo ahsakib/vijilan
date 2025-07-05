@@ -215,7 +215,7 @@ const ThreatremediateEssentail = () => {
 
 
 
-            <div className=" relative overflow-hidden">
+            <section className=" relative overflow-hidden">
                 <div className="relative z-10 container mx-auto px-6 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
@@ -259,10 +259,10 @@ const ThreatremediateEssentail = () => {
                 </div>
 
 
-            </div>
+            </section>
 
 
-            <div className="container mx-auto px-6 py-16" >
+            <section className="container mx-auto px-6 py-16" >
                 <div className="rounded-[24px] py-[60px] px-[87px]" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
@@ -390,7 +390,7 @@ const ThreatremediateEssentail = () => {
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
 
 
@@ -443,7 +443,7 @@ const ThreatremediateEssentail = () => {
             </section>
 
 
-            <div className="container mx-auto px-6 py-16">
+            <section className="container mx-auto px-6 py-16">
                 <div className="">
                     <div className=" rounded-3xl py-[50px] px-[113px]" style={{
                         background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
@@ -464,7 +464,7 @@ const ThreatremediateEssentail = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
 
 

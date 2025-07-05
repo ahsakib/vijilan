@@ -33,6 +33,9 @@ import SMB from '@app/DashBord/Page/SMB';
 import MspPricingTool from '@app/Pricing-tool/MspPricingTool';
 import PricingTool from '@app/Pricing-tool/PricingTool';
 import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssentail';
+import ThreatremediateRemotePricing from '@app/Theatremediate/ThreatremediateRemotePricing';
+import ThreadRemediateRemoteNoPricing from '@app/Theatremediate/ThreadRemediateRemoteNoPricing';
+import ThreatreMediateManagedXdr from '@app/Theatremediate/ThreatreMediateManagedXdr';
 
 const router = createBrowserRouter([
     {
@@ -171,6 +174,18 @@ const router = createBrowserRouter([
             {
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail/>
+            },
+            {
+                path: "threatremediate-remote-pricing",
+                element: <ThreatremediateRemotePricing/>
+            },
+            {
+                path: "threatremediate-remote-no-pricing",
+                element: <ThreadRemediateRemoteNoPricing/>
+            },
+            {
+                path: "threatremediate-managed-xdr",
+                element: <ThreatreMediateManagedXdr/>
             }
         ],
     },
