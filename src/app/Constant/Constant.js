@@ -373,11 +373,11 @@ export const partnerShip = [
 ]
 
 
-export const partnerShipDesign=[
+export const partnerShipDesign = [
   {
     title: "Unlock New MRR",
     description: "Add high-margin security services to your portfolio. Our model is built to maximize your Monthly Recurring Revenue and profitability",
-    icon:  "TiLockOpenOutline"
+    icon: "TiLockOpenOutline"
   },
   {
     title: "Your Instant 24/7 SOC",
@@ -387,7 +387,7 @@ export const partnerShipDesign=[
   {
     title: "Go-to-Market Enablement",
     description: "Access our comprehensive ThreatRemediate Enablement Kit with co-brandable materials, sales decks, and proposal generators to win more deals.",
-    icon:  'x'
+    icon: 'x'
   },
   {
     title: "Radical Flexibility & No Risk",
@@ -406,7 +406,7 @@ export const partnerShipDesign=[
   }
 ]
 
-export const partnerFeedback=[
+export const partnerFeedback = [
   {
     sectionTitle: "What Our Partners say",
     testimonial: "Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is world-class, and the active remediation in ThreatRemediate is a game-changer for our clients.",
@@ -419,8 +419,8 @@ export const partnerFeedback=[
   }
 ]
 
-export const dashbordTabs=[
-  
+export const dashbordTabs = [
+
   {
     type: "add icon",
     title: "Upsell Playbook",
@@ -436,8 +436,8 @@ export const dashbordTabs=[
     title: "Technical Guides",
     action: "access"
   },
- ,
- ,
+  ,
+  ,
   {
     type: "add icon",
     title: "Master Services Agreement",
@@ -448,12 +448,12 @@ export const dashbordTabs=[
     title: "Statement of Work (SOW)",
     action: "access"
   },
- 
-   
+
+
 ]
 
 
-export const SMBCard=[
+export const SMBCard = [
   {
     title: "I Need IT Services",
     description: "Find a trusted, local provider for cybersecurity, managed IT, cloud solutions, and more.",
@@ -478,7 +478,7 @@ export const benefitsData = [
     description: "Get inbound requests from local businesses who have already specified their needs."
   },
   {
-    icon:p2 ,
+    icon: p2,
     title: "Showcase Your Expertise",
     description: "Build a detailed profile highlighting your services, tech stack, and certifications to attract the right clients."
   },
@@ -488,3 +488,212 @@ export const benefitsData = [
     description: "Utilize our integrated solutions and technology alliances to deliver superior service and build client trust."
   }
 ];
+
+export const ExucativeSummary = [
+  {
+    icon: p1,
+    label: "Sales Performance",
+    text: "2x increase in security service attach rate across all deals"
+  },
+  {
+    icon: p2,
+    label: "Profit Margins",
+    text: "40% increase in recurring service margins"
+  },
+  {
+    icon: p1,
+    label: "Sales Cycle",
+    text: "Reduced time-to-close with pre-built materials"
+  },
+  {
+    icon: p2,
+    label: "Client Retention",
+    text: "Enhanced loyalty through market-leading security"
+  }
+
+]
+
+export const SalesProcess = [
+  {
+    label: "Discovery",
+    text: "Use provided qualification questions to identify security needs",
+    icon: p1
+  },
+  {
+    label: "Discovery",
+    text: "Use provided qualification questions to identify security needs",
+    icon: p1
+  },
+  {
+    label: "Proposal",
+    text: "Generate professional proposal using automated tools",
+    icon: p1
+  },
+  {
+    label: "Implementation",
+    text: "Vijilan handles complete deployment and ongoing management",
+    icon: p1
+  },
+
+]
+
+export const SecurityCardData = [
+  {
+    icon: p1,
+    "label": "ThreatRemediate Complete",
+    "text": "Fully managed XDR providing robust endpoint protection and active remediation across IT environment"
+  },
+  {
+    icon: p1,
+    "label": "Managed Corelight Services",
+    "text": "Deep network visibility and analytics through Network Detection and Response (NDR) for OT networks"
+  },
+  {
+    icon: p1,
+    "label": "Managed Cribl Services",
+    "text": "Intelligent data ingestion, routing, and management from both IT and OT sources"
+  },
+  {
+    icon: p1,
+    "label": "Unified Visibility",
+    "text": "Single pane of glass for threat detection across converged IT/OT environment"
+  }
+]
+
+export const controllArray = [
+  {
+    icon: p1,
+    "label": "Access Control",
+    text: "22 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Audit & Accountability",
+    text: "13 Controls"
+  },
+  {
+    icon: p1,
+    "label": "System Security",
+    text: "23 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Media Protection",
+    text: "9 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Incident Response",
+    text: "16 Controls"
+  },
+  {
+    icon: p1,
+    "label": "Additional Domains",
+    text: "27 Controls"
+  }
+]
+
+export const awsCard = [
+  {
+    icon: p1,
+    "label": "Rapid Procurement",
+    "text": "Streamlined government buying process"
+  },
+  {
+    icon: p1,
+    "label": "Simplified Billing",
+    "text": "Unified AWS billing and payment"
+  },
+  {
+    icon: p1,
+    "label": "Pre-Approved Solutions",
+    "text": "AWS-vetted security services"
+  },
+  {
+    icon: p1,
+    "label": "Instant Deployment",
+    "text": "Cloud-native rapid activation"
+  }
+]
+
+
+export const IT_IO = [
+  {
+    icon: p1,
+    "label": "Assessment & Planning",
+    "text": "CMMC gap analysis and implementation roadmap development"
+  },
+  {
+    icon: p1,
+    "label": "AWS Marketplace Deployment",
+    "text": "Rapid procurement and initial security platform activation"
+  },
+  {
+    icon: p1,
+    "label": "Security Controls Implementation",
+    "text": "EDR deployment and 24/7 monitoring establishment"
+  },
+  {
+    icon: p1,
+    "label": "CUI Protection Activation",
+    "text": "Specialized controls for Controlled Unclassified Information"
+  },
+  {
+    icon: p1,
+    "label": "Documentation & Reporting",
+    "text": "Audit-ready compliance documentation generation"
+  },
+  {
+    icon: p1,
+    "label": "CMMC Audit Readiness",
+    "text": "Final validation and certification preparation"
+  }
+]
+
+
+export const usExucativeSummary = [
+  {
+    icon: p1,
+    "label": "SEC Cybersecurity",
+    text: "Zero Findings"
+  },
+  {
+    icon: p1,
+    "label": "GLBA Safeguards",
+    text: "Fully Compliant"
+  },
+  {
+    icon: p1,
+    "label": "FFIEC Guidelines",
+    text: "Exceeds Standards"
+  },
+  {
+    icon: p1,
+    "label": "Audit Documentation",
+    text: "Audit-Ready"
+  }
+]
+
+
+export const financialService = [
+  {
+    icon: p1,
+    "label": "Financial Fraud",
+    "metric": "Prevented"
+  },
+  {
+    icon: p1,
+    "label": "APT Groups",
+    "metric": "Detected"
+  },
+  {
+    icon: p1,
+    "label": "Credential Theft",
+    "metric": "Monitored"
+  },
+  {
+    icon: p1,
+    "label": "Data Exfiltration",
+    "metric": "Blocked"
+  }
+]
