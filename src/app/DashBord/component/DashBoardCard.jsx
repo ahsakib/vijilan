@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashBoardCard = ({ icon, heading, btn,head,text,linkUp, txtIcon }) => {
+const DashBoardCard = ({ icon,title,bg, heading,desc, btn,head,text,linkUp, txtIcon }) => {
     return (
         <div
             className={`relative bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center `}
@@ -17,7 +17,7 @@ const DashBoardCard = ({ icon, heading, btn,head,text,linkUp, txtIcon }) => {
                 }}
             />
             {
-                icon && <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
+                icon && <div className={`w-12 h-12 ${bg?"bg-cyan-400":"bg-transparent"}  rounded-lg flex items-center justify-center mb-4`}>
                     <img src={icon} alt={title} />
 
                 </div>
@@ -29,6 +29,7 @@ const DashBoardCard = ({ icon, heading, btn,head,text,linkUp, txtIcon }) => {
             btn && <p className='bg-[#00AEEF] px-6 py-2 rounded-lg uppercase'>{btn}</p>
            }
             <p className='text-white text-sm'>{text}</p>
+            <p className='text-white text-sm text-center'>{desc}</p>
             <p className='text-[#00AEEF]  mt-2 text-sm'>{linkUp}</p>
         </div>
     );

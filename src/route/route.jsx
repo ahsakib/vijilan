@@ -33,6 +33,7 @@ import SMB from '@app/DashBord/Page/SMB';
 import MspPricingTool from '@app/Pricing-tool/MspPricingTool';
 import PricingTool from '@app/Pricing-tool/PricingTool';
 import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssentail';
+import Success_study_case from '@app/DashBord/Page/Success_study_case';
 
 const router = createBrowserRouter([
     {
@@ -155,6 +156,10 @@ const router = createBrowserRouter([
             {
                 path: "dashbord",
                 element: <Dashbord/>
+            },
+            {
+                path: "dashbord/case-success",
+                element: <Success_study_case/>
             },
             {
                 path: "smb",
