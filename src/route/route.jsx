@@ -36,6 +36,10 @@ import ThreatremediateEssentail from '@app/Theatremediate/ThreatremediateEssenta
 import ThreatremediateRemotePricing from '@app/Theatremediate/ThreatremediateRemotePricing';
 import ThreadRemediateRemoteNoPricing from '@app/Theatremediate/ThreadRemediateRemoteNoPricing';
 import ThreatreMediateManagedXdr from '@app/Theatremediate/ThreatreMediateManagedXdr';
+import AccessRequest from '@app/Vijilan/AccessRequest';
+import FixedVijilanPortal from '@app/Vijilan/FixedVijilanPortal';
+import WhyVijilanPage from '@app/Vijilan/WhyVijilanPage';
+import BecomeAPartner from '@app/MsgPartner/BecomeAPartner';
 
 const router = createBrowserRouter([
     {
@@ -186,6 +190,22 @@ const router = createBrowserRouter([
             {
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr/>
+            },
+            {
+                path: "access-request",
+                element: <AccessRequest/>
+            },
+            {
+                path: "fixed-vijilan-portal",
+                element: <FixedVijilanPortal/>
+            },
+            {
+                path: "why-vijilan-page",
+                element: <WhyVijilanPage/>
+            },
+            {
+                path: "become-a-partner",
+                element: <BecomeAPartner/>
             }
         ],
     },

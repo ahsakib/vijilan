@@ -4,9 +4,6 @@ import cp1 from "../../Assets/cp1.png";
 import { Check, Clock, DollarSign, Download, Lock } from 'lucide-react';
 
 
-
-
-
 const modules = [
     {
         id: 1,
