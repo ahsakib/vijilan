@@ -24,8 +24,8 @@ const Footer = () => {
             }}
         >
             <div className="container mx-auto px-6 relative z-10">
-                <div className="pt-24">
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+                <div className=" md:pt-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-12">
                         <div className="">
                             {/* Footer Logo */}
                             <div className=" flex flex-col mb-6">
@@ -69,9 +69,9 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="flex justify-end">
+                        <div className="md:flex justify-end">
                             <button
-                                className="px-[24px] py-[16px] font-medium text-[18px] rounded-[8px] text-white h-fit"
+                                className=" px-[24px] py-[16px] font-medium text-[18px] md:text-[16px] lg:text-[18px] rounded-[8px] text-white h-fit"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                 }}>
@@ -83,7 +83,7 @@ const Footer = () => {
 
                     <img src={vendor} alt="vendor" className="w-full h-[1px]" />
 
-                    <div className=" pt-6 text-center text-[#9C9A9B] text-[16px]">
+                    <div className=" pt-6 text-start sm:text-center text-[#9C9A9B] text-[16px]">
                         <p>
                             Copyright © 2024 All Rights Reserved - Vijilan Security, LLC - 24/7 Cybersecurity Threat
                             Monitoring, SIEM, and SOC
