@@ -41,10 +41,20 @@ import graph from "../../Assets/Graph Report.png";
 
 
 
-// react icon
+import statistics from "../../Assets/statistics.png";
+import refresh from "../../Assets/refresh.png";
+import source from "../../Assets/source.png";
+import pin from "../../Assets/pin.png";
+import cren from "../../Assets/cren.png";
+import parts from "../../Assets/parts.png";
+import vol from "../../Assets/vol.png";
+import signal from "../../Assets/signal.png";
+import user from "../../Assets/user.png";
+import users from "../../Assets/users.png";
+import earth from "../../Assets/earth.png";
+import threat from "../../Assets/threat.png";
 
-// import { TiLockOpenOutline } from "react-icons/ti";
-// import { BsClockHistory } from "react-icons/bs";
+
 
 
 
@@ -697,3 +707,178 @@ export const financialService = [
     "metric": "Blocked"
   }
 ]
+
+
+export const Datapipeline = [
+  {
+    "icon": source,
+    "label": "Data Sources",
+    "text": "Multi-client log collection"
+  },
+  {
+    "icon": refresh,
+    "label": "Cribl Stream",
+    "text": "Route, filter & enrich"
+  },
+  {
+    "icon": statistics,
+    "label": "LogScale",
+    "text": "Real-time analysis"
+  },
+  {
+    "icon": pin,
+    "label": "SOC Operations",
+    "text": "Enhanced investigations"
+  }
+]
+
+export const coreTechnology = [
+  {
+    "icon": cren,
+    "label": "CrowdStrike LogScale",
+    "text": "Index-free architecture enabling real-time search and massive scalability"
+  },
+  {
+    "icon": parts,
+    "label": "Cribl Stream",
+    "text": "Intelligent data processing reducing volume by 50% while enhancing quality"
+  },
+  {
+    "icon": vol,
+    "label": "LogIngest",
+    "text": "Unified log collection and normalization across all client environments"
+  },
+  {
+    "icon": signal,
+    "label": "LogAlert",
+    "text": "Real-time detection rules and automated alerting for SOC operations"
+  }
+]
+
+
+export const detectionArray = [
+  {
+    "time": "2:17 AM",
+    "label": "Ransomware Begins Encryption",
+    "text": "Sophisticated ransomware variant bypasses traditional antivirus and begins encrypting files on endpoint"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Vijilan SOC Detects Anomaly",
+    "text": "Behavioral analysis identifies suspicious encryption patterns and triggers immediate alert"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Active Containment Initiated",
+    "text": "SOC analyst isolates infected endpoint from network, preventing lateral spread"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Threat Fully Remediated",
+    "text": "Malware removed, attack vector identified, and security posture hardened"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "MSP Notified with Full Report",
+    "text": "Comprehensive incident report delivered to MSP with recovery recommendations"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Full Recovery Complete",
+    "text": "Affected files restored from backup, systems verified clean, business ready to open"
+  }
+]
+
+export const complianceArray = [
+  { icon: p1, label: "Administrative Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Technical Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Physical Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Audit Documentation", text: "Audit-Ready" }
+];
+
+
+export const healthcareArray = [
+  { icon: p1, label: "Ransomware", text: "Protected" },
+  { icon: p1, label: "Credential Theft", text: "Monitored" },
+  { icon: p1, label: "Data Exfiltration", text: "Prevented" },
+  { icon: p1, label: "Medical Device Attacks", text: "Secured" }
+];
+
+
+export const threatProtectionArray = [
+  { icon: p1, label: "Financial Fraud", text: "Prevented" },
+  { icon: p1, label: "APT Groups", text: "Detected" },
+  { icon: p1, label: "Credential Theft", text: "Monitored" },
+  { icon: p1, label: "Data Exfiltration", text: "Blocked" }
+];
+export const healthcareSecurity = [
+  {
+    icon: threat,
+    label: "Managed ITDR",
+    text: "Real-time identity threat detection and response protecting patient records from unauthorized access"
+  },
+  {
+    icon: threat,
+    label: "Exposure Management",
+    text: "Continuous asset discovery and AI-powered risk prioritization across healthcare infrastructure"
+  },
+  {
+    icon: threat,
+    label: "Compliance Reporting",
+    text: "Comprehensive audit-ready documentation supporting HIPAA regulatory adherence"
+  }
+];
+
+export const ThreatRemediate_Ultimate = [
+  
+  {
+    icon: threat,
+    label: "CrowdStrike Falcon XDR",
+    text: "Advanced endpoint detection and response with AI-powered threat hunting"
+  },
+  {
+    icon: earth,
+    label: "Corelight Network Detection",
+    text: "Comprehensive network visibility and threat detection capabilities"
+  },
+  {
+    icon: parts,
+    label: "Cribl Data Optimization",
+    text: "Efficient log management and cost optimization for data ingestion"
+  },
+  {
+    icon: user,
+    label: "Identity Protection (ITDR)",
+    text: "Managed Identity Threat Detection and Response capabilities"
+  },
+  {
+    icon: pin,
+    label: "Exposure Management",
+    text: "Proactive vulnerability and exposure assessment and management"
+  },
+  {
+    icon: users,
+    label: "24/7 Expert SOC",
+    text: "US-based Security Operations Center with active remediation"
+  }
+];
+
+export const DeploymentTimeline = [
+  {
+    label: "Week 1: Discovery & Planning",
+    text: "Comprehensive assessment of existing infrastructure, client environments, and security requirements. Development of implementation roadmap and client communication strategy."
+  },
+  {
+    label: "Week 2: Platform Deployment",
+    text: "Installation and configuration of CrowdStrike Falcon agents, Corelight sensors, and Cribl data pipelines across client environments. Initial SOC integration and monitoring setup."
+  },
+  {
+    label: "Week 3: Testing & Optimization",
+    text: "Comprehensive testing of all security components, alert tuning, and optimization of data flows. Training for MSP technical team on new processes and escalation procedures."
+  },
+  {
+    label: "Week 4: Full Production",
+    text: "Complete transition to full production monitoring with Vijilan's SOC providing 24/7 threat detection, investigation, and active remediation services."
+  }
+];
+

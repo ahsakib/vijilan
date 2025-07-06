@@ -10,46 +10,46 @@ const ProfileHRCard = ({ h1, l1l, l1r, l2l, l2r, l3l, l3r, l4l, l4r, l5l, l5r, l
             {l1l && <div className='pl-4'>
                 <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                     <span className='text-gray-400' >{l1l} </span>
-                    <span className='font-bold'> {l1r}</span>
+                    <span className='font-bold text-sm md:text-lg'> {l1r}</span>
                 </p>
             </div>}
             {l2l && <div className='pl-4'>
                 <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                     <span className='text-gray-400' >{l2l}</span>
-                    <span className='font-bold'> {l2r}</span>
+                    <span className='font-bold text-sm md:text-lg'> {l2r}</span>
                 </p>
             </div>}
             {l3l && <div className='pl-4'>
                 <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                     <span className='text-gray-400' >{l3l}</span>
-                    <span className='font-bold'> {l3r}</span>
+                    <span className='font-bold text-sm md:text-lg'> {l3r}</span>
                 </p>
             </div>}
             {l4l && <div className='pl-4'>
                 <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                     <span className='text-gray-400' >{l4l}</span>
-                    <span className='font-bold'> {l4r}</span>
+                    <span className='font-bold text-sm md:text-lg'> {l4r}</span>
                 </p>
             </div>}
             {
                 l5l && <div className='pl-4'>
                     <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                         <span className='text-gray-400' >{l5l}</span>
-                        <span className='font-bold'> {l5r}</span>
+                        <span className='font-bold text-sm md:text-lg'> {l5r}</span>
                     </p>
                 </div>
             }
             {l6l && <div className='pl-4'>
                 <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                     <span className='text-gray-400' >{l6l}</span>
-                    <span className='font-bold'> {l6r}</span>
+                    <span className='font-bold text-sm md:text-lg'> {l6r}</span>
                 </p>
             </div>}
             {
                 l7l && <div className='pl-4'>
                     <p className='flex justify-between mb-4  border-b-2 pb-1 border-gray-500'>
                         <span className='text-gray-400' >{l7l}</span>
-                        <span className='font-bold'> {l7r}</span>
+                        <span className='font-bold text-sm md:text-lg'> {l7r}</span>
                     </p>
                 </div>
             }

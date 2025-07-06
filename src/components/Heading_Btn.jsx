@@ -1,16 +1,18 @@
 import React from 'react';
 import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ h1, h3, desc, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
+const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
     return (
         <div>
-            <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8">
+            <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8"
+                style={{ backgroundColor: bg }}
+            >
                 <div className="mx-auto max-w-7xl text-center space-y-8">
                     {h1 &&
-                        <h1 className={`${isSmallHeading ? "text-[40px]" : "text-5xl"} font-bold tracking-tight text-white`}>
+                        <h1 className={`${isSmallHeading ? "sm:text-3xl md:text-[40px]" : "sm:text-3xl md:text-5xl"} font-bold tracking-tight text-white`}>
                             {h1}
                         </h1>
 
@@ -111,6 +113,13 @@ const Heading_Btn = ({ h1, h3, desc, btn1, btn2, btn3, btn4, isSmallHeading, rat
 
 
                     </div>
+
+                    {btn && (
+                        <div className="p-[18px] capitalize m-[2px] text-xl rounded-lg text-white border-2 border-blue-500 inline-flex">
+                            {btn}
+                        </div>
+                    )}
+
                 </div>
             </section>
         </div>
