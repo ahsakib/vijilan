@@ -1,3 +1,5 @@
+// Responsive complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
 import NumberShow from '../component/NumberShow';
@@ -150,14 +152,14 @@ const Resilience_case = () => {
             {/* top part */}
             <section className="container mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">blog</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-400 text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
                     </nav>
                 </div>
             </section>
@@ -194,7 +196,7 @@ const Resilience_case = () => {
 
                         <div className='my-8'>
 
-                            <div className='grid grid-cols-2  gap-5'>
+                            <div className='grid grid-cols-1 md:grid-cols-2  gap-5'>
                                 {productionArray.map(card => <DashBoardCard
                                     heading={card.label}
                                     Number={card.metric}
@@ -217,8 +219,8 @@ const Resilience_case = () => {
                     <div className=' bg-gradient-to-t to-[#523825] from-[#191624] py-5 px-12 my-12'>
                         <h1 className='text-3xl my-5  text-center '> Converged IT/OT Network Environment</h1>
 
-                        <div className='flex gap-5'>
-                            <div className='w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
+                        <div className='flex flex-col lg:flex-row gap-5'>
+                            <div className='w-full lg:w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
                                 <h1 className='text-xl text-center'>Corporate IT Network</h1>
 
 
@@ -240,7 +242,7 @@ const Resilience_case = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className='w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
+                            <div className='w-full lg:w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
                                 <h1 className='text-xl text-center'>Corporate IT Network</h1>
 
 
@@ -301,21 +303,27 @@ const Resilience_case = () => {
                         l6r="Regional"
                     />
 
-                    <MesurableComponentDashboard
-                        heading="Manufacturing Security & Operational Results"
-                        array={MeasurabeCard}
-                    />
+                    <div className='mt-5'>
+                        <MesurableComponentDashboard
+                            heading="Manufacturing Security & Operational Results"
+                            array={MeasurabeCard}
+                        />
+                    </div>
 
-                    <DashboardSideText
-                        desc="Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier"
-                        author="CISO, Manufacturing Firm"
-                    />
+                    <div className='mt-5'>
+                        <DashboardSideText
+                            desc="Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier"
+                            author="CISO, Manufacturing Firm"
+                        />
+                    </div>
 
 
-                    <CommonTextCard
-                        array={excelList}
-                        heading=" 🏭 Why Vijilan Excels in Manufacturing Security"
-                    />
+                    <div className='mt-5'>
+                        <CommonTextCard
+                            array={excelList}
+                            heading=" 🏭 Why Vijilan Excels in Manufacturing Security"
+                        />
+                    </div>
                 </div>
             </div>
 

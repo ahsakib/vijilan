@@ -2,17 +2,17 @@ import React from 'react';
 
 const ListComponent = ({ heading, LeftHeading, p1, p11, p3, p22, p2, array, array2, array3, bg = true }) => {
     return (
-        <div className={`${bg ? "  bg-gradient-to-t to-[#063853] from-[#082235]  py-5 px-12" : "bg-transparent  py-5 px-6"} mt-12`}>
-            <h1 className='text-center mt-8 font-semibold'> {heading}</h1>
+        <div className={`${bg ? "  bg-gradient-to-t to-[#063853] from-[#082235]  py-5 px-3  md:px-8 lg:px-12" : "bg-transparent  py-5 px-6"} mt-12`}>
+            <h1 className='text-center mt-8 font-semibold '> {heading}</h1>
             <h1 className='text-left mt-8 font-semibold'> {LeftHeading}</h1>
-            <p className='text-left my-8'>
+            <p className='text-left my-8 px-5   '>
                 {p1}
             </p>
 
             {
                 array && <div>
                     <p className='font-semibold mt-5'>{p11}</p>
-                    <ul className='mt-4 list-item'>
+                    <ul className='mt-4 px-0 lg:px-5 list-item'>
                         {array.map((li, index) => (
                             <li key={index} className='list-disc mt-3 ml-4'>
                                 {li}

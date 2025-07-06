@@ -1,4 +1,4 @@
-
+// Responsive 
 
 import { dashbordTabs } from '@app/Constant/Constant';
 import CardContent from '@components/CardContent';
@@ -9,7 +9,7 @@ import DashBoardCard from '../component/DashBoardCard';
 export const InputField = ({ heading, desc, Input, number }) => {
     return (
         <div className='mt-5'>
-            <h1 className='text-left text-xl font-semibold'>{heading}</h1>
+            <h1 className='text-left sm:text-sm md:text-xl font-semibold'>{heading}</h1>
             <div className='flex justify-between mt-2 mb-4 '>
                 <p className='text-left font-thin text-gray-400'>{desc}</p>
                 <p className='text-blue-600'>${number}</p>
@@ -53,13 +53,11 @@ const Dashbord = () => {
                     grdBtn="launch quote builder"
                 />
 
-                <div className='grid grid-cols-2 md:grid-cols-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between'>
                     <CardContent
                         side_text={true}
                         ColorHeading="Build a Quote"
-                        description=" 
-Use our advanced simulator to create custom quotes and start a POC.
-launch quote builder"
+                        description=" Use our advanced simulator to create custom quotes and start a POC.launch quote builder"
                         grdBtn="Lounch quote builder"
                     />
                     <CardContent
@@ -87,17 +85,17 @@ launch quote builder"
 
             <div className='bg-gradient-to-t to-[#063853] from-[#082235] p-8 rounded-xl mt-12 '>
 
-                <h1 className='text-5xl font-bold text-center'>Quote Builder & POC Launcher
+                <h1 className='text-2xl md:text-4xl lg:text-6xl font-bold text-center'>Quote Builder & POC Launcher
                 </h1>
                 <p className='text-center'>Build a custom quote, then launch a risk-free Proof of Concept for your client.</p>
 
 
-                <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 items-start justify-between gap-10'>
 
-                    <div className='col-span-1    '>
-                        <div className='mt-8'>
-                            <button className='text-white bg-[#00AEEF] px-8 py-3 rounded-xl z-10 relative'>Modular Essentials</button>
-                            <button className='text-gray-400 bg-white px-8 py-3 rounded-xl -ml-5 absolute'>User Based (Remote)</button>
+                    <div className='col-span-1  '>
+                        <div className='mt-8 flex flex-col md:flex-row  gap-5'>
+                            <button className='text-white bg-[#00AEEF] px-8 py-3 rounded-xl z-10  '>Modular Essentials</button>
+                            <button className='text-gray-400 bg-white px-8 py-3 rounded-xl ml-0 md:-ml-5  '>User Based (Remote)</button>
                         </div>
 
 
@@ -153,7 +151,7 @@ launch quote builder"
 
                     </div>
 
-                    <div className='col-span-1 min-h-80 border-2 border-[#064462] p-4 rounded-lg flex flex-col justify-between'>
+                    <div className='col-span-1 min-h-80 border-2 border-[#064462] p-4 rounded-3xl  sm:mt-2 md:mt-16 flex lg:mt-24 flex-col justify-between'>
                         <p className='font-semibold text-left mt-3'>Quote Summary</p>
 
                         <div className='mb-6'>
@@ -214,7 +212,7 @@ launch quote builder"
                 <Heading_Btn
                     h1="Dedicated Partner Support"
                     desc="Questions? Need help with a co-pitch? We're here for you."
-                    btn4="contact your partner succeess manager"
+                    btn4="contact your partner success manager"
                 />
             </div>
 

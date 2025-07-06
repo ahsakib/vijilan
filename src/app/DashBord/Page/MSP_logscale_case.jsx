@@ -1,3 +1,5 @@
+// responsive complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -10,7 +12,7 @@ import DashboardSideText from '../component/DashboardSideText';
 import { coreTechnology, Datapipeline } from '@app/Constant/Constant';
 import { FaArrowRight } from 'react-icons/fa';
 
-// import { chart } from "../../../Assets/chart.png";
+import chart from "../../../Assets/chart.png";
 const MSP_logscale_case = () => {
 
     const numberArray = [
@@ -128,16 +130,16 @@ const MSP_logscale_case = () => {
     return (
         <div className='max-w-[90%] mx-auto'>
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className="  mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Resources</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium" Home  >   MSSP SIEM Modernization</span>
+                        <span className="!text-blue-500 text-[13px] font-medium" Home  >   MSSP SIEM Modernization</span>
                     </nav>
                 </div>
             </section>
@@ -172,14 +174,24 @@ const MSP_logscale_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
-                        {/* <h1 className='text-center mt-8 font-semibold'>{heading}</h1> */}
-                        <h1 className='  mb-4 text-left mt-8 font-semibold'>🔧 Executive Summary</h1>
+                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 '>
+                        <h1 className='  mb-4 lg:text-left mt-8 text-lg font-semibold'>🔧 Executive Summary</h1>
                         <p className=' my-3'>An established Managed Security Service Provider (MSSP) with their own 24/7 Security Operations Center faced a critical challenge: their legacy SIEM infrastructure was becoming unsustainable. With telemetry data growing at 28% CAGR, spiraling costs and performance bottlenecks were threatening their service delivery and profitability.</p>
                         <p className=' my-3'>Traditional approaches to SIEM modernization focus only on platform replacement, but Vijilan's unique approach addressed the root cause: data chaos. By combining CrowdStrike LogScale with advanced Cribl data optimization, Vijilan delivered a solution that didn't just replace the MSSP's legacy SIEM—it fundamentally transformed their data economics.</p>
                         <h3 className='my-5 text-xl text-center font-semibold'>SIEM Total Cost of Ownarship: Before After</h3>
 
-                        {/* <img src={chart} alt="" className='w-auto border-2' /> */}
+                        <div className='w-3/4 mx-auto '>
+                            <div className='flex justify-center'>
+                                <img src={chart} alt="" className='w-full ' />
+                            </div>
+                            <div className='flex md:justify-center lg:justify-evenly mt-2 gap-5 font-semibold  '>
+                                <p>Legacy SIEM Costs</p>
+                                <p>LogScale + Cribl Solution</p>
+                            </div>
+
+                        </div>
+
+
 
 
                     </div >
@@ -201,8 +213,8 @@ const MSP_logscale_case = () => {
 
                         <div className='bg-gradient-to-t to-[#567182] from-[#566A7A] py-5 px-12 mt-12 border border-[#F86029]'>
 
-                            <h4 className='text-center text-2xl mb-5'>Intelligent Data Pipeline Architecture</h4>
-                            <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                            <h4 className='text-center text-xl md:text-2xl mb-5'>Intelligent Data Pipeline Architecture</h4>
+                            <div className='grid sm:grid-cols-1  lg:grid-cols-4 gap-5 justify-center'>
                                 {Datapipeline.map((card, index) => (
                                     <div key={index} className='flex  items-center justify-center'>
                                         <div className='flex justify-center flex-col items-center bg-[#2B3840] py-8 px-4 gap-5 rounded-lg text-center  '>
@@ -231,7 +243,7 @@ const MSP_logscale_case = () => {
 
 
 
-                        <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'>
                             {coreTechnology.map((card, index) => (
                                 <div key={index} className='flex  items-center justify-center'>
                                     <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
@@ -252,7 +264,7 @@ const MSP_logscale_case = () => {
 
 
 
-                    <div>
+                    <div className='mt-5'>
                         <CommonTextCard
                             array={ProfessionalService}
                             heading=" ⚙️ Professional Services Excellence"
@@ -284,21 +296,27 @@ const MSP_logscale_case = () => {
 
 
 
-                    <MesurableComponentDashboard
+                  <div className='mt-5'>
+                      <MesurableComponentDashboard
                         heading="Transformational SIEM Modernization Results"
                         array={transformationSIEM}
                     />
+                  </div>
 
-                    <DashboardSideText
+                  <div className='mt-5'>
+                      <DashboardSideText
                         desc="We were drowning in data costs and our SOC was being held back by a slow, legacy SIEM. Vijilan didn't just sell us a new platform; they solved our core data problem. Their expertise with Cribl was the game-changer, cutting our costs by 40% and making our threat hunters more effective overnight. It was a true SOC modernization."
                         author="SOC Director, MSSP Partner"
                     />
+                  </div>
 
 
-                    <CommonTextCard
+                    <div className='mt-5'>
+                        <CommonTextCard
                         array={MSSP_value}
                         heading="🎯 Vijilan's Unique MSSP Value Proposition"
                     />
+                    </div>
                 </div>
             </div>
 
