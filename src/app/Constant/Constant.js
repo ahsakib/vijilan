@@ -41,10 +41,17 @@ import graph from "../../Assets/Graph Report.png";
 
 
 
-// react icon
+import statistics from "../../Assets/statistics.png";
+import refresh from "../../Assets/refresh.png";
+import source from "../../Assets/source.png";
+import pin from "../../Assets/pin.png";
+import cren from "../../Assets/cren.png";
+import parts from "../../Assets/parts.png";
+import vol from "../../Assets/vol.png";
+import signal from "../../Assets/signal.png";
 
-// import { TiLockOpenOutline } from "react-icons/ti";
-// import { BsClockHistory } from "react-icons/bs";
+
+
 
 
 
@@ -695,5 +702,52 @@ export const financialService = [
     icon: p1,
     "label": "Data Exfiltration",
     "metric": "Blocked"
+  }
+]
+
+
+export const Datapipeline = [
+  {
+    "icon": source,
+    "label": "Data Sources",
+    "text": "Multi-client log collection"
+  },
+  {
+    "icon": refresh,
+    "label": "Cribl Stream",
+    "text": "Route, filter & enrich"
+  },
+  {
+    "icon": statistics,
+    "label": "LogScale",
+    "text": "Real-time analysis"
+  },
+  {
+    "icon": pin,
+    "label": "SOC Operations",
+    "text": "Enhanced investigations"
+  }
+]
+
+export const coreTechnology = [
+  {
+    "icon": cren,
+    "label": "CrowdStrike LogScale",
+    "text": "Index-free architecture enabling real-time search and massive scalability"
+  },
+  {
+    "icon": parts,
+    "label": "Cribl Stream",
+    "text": "Intelligent data processing reducing volume by 50% while enhancing quality"
+  },
+  {
+    "icon": vol,
+    "label": "LogIngest",
+    "text": "Unified log collection and normalization across all client environments"
+  },
+  {
+    "icon": signal,
+    "label": "LogAlert",
+    "text": "Real-time detection rules and automated alerting for SOC operations"
   }
 ]

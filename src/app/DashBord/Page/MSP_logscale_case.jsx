@@ -7,7 +7,8 @@ import ListComponent from '../component/ListComponent';
 import ProfileHRCard from '../component/ProfileHRCard';
 import MesurableComponentDashboard from '../component/MesurableComponentDashboard';
 import DashboardSideText from '../component/DashboardSideText';
-
+import { coreTechnology, Datapipeline } from '@app/Constant/Constant';
+import { FaArrowRight } from 'react-icons/fa';
 const MSP_logscale_case = () => {
 
     const numberArray = [
@@ -38,6 +39,16 @@ const MSP_logscale_case = () => {
         "Limited Analytics: Legacy platform struggled to provide real-time analytics needed for modern, fast-moving threats",
         "Client Service Impact: Slow investigations and delayed response times affecting client satisfaction and retention"
     ]
+    const list2 =
+        [
+            "CrowdStrike Falcon LogScale: Modern, index-free SIEM platform with real-time search capabilities",
+            "Managed Cribl Services: Advanced data optimization sitting at the front of the pipeline",
+            "Cribl Stream: Intelligent routing, filtering, and enrichment of all incoming log data",
+            "LogIngest Service: Consolidated third-party log management and normalization",
+            "LogAlert Service: Real-time detection and alerting within LogScale environment",
+            "Custom Parsers: Vijilan-developed workflows for seamless data onboarding"
+
+        ]
 
     const transformationSIEM = [
         {
@@ -158,15 +169,19 @@ const MSP_logscale_case = () => {
 
                 <div className='grid-cols-1'>
 
-                    <CommonTextCard
-                        heading1="🔧 Executive Summary"
-                        p1="An established Managed Security Service Provider (MSSP) with their own 24/7 Security Operations Center faced a critical challenge: their legacy SIEM infrastructure was becoming unsustainable. With telemetry data growing at 28% CAGR, spiraling costs and performance bottlenecks were threatening their service delivery and profitability."
-                        p2="Traditional approaches to SIEM modernization focus only on platform replacement, but Vijilan's unique approach addressed the root cause: data chaos. By combining CrowdStrike LogScale with advanced Cribl data optimization, Vijilan delivered a solution that didn't just replace the MSSP's legacy SIEM—it fundamentally transformed their data economics."
-                        heading2="SIEM Total Cost of Ownarship: Before After"
 
-                        chart='../../../Assets/chart.png'
+                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+                        {/* <h1 className='text-center mt-8 font-semibold'>{heading}</h1> */}
+                        <h1 className='  mb-4 text-left mt-8 font-semibold'>🔧 Executive Summary</h1>
+                        <p className=' my-3'>An established Managed Security Service Provider (MSSP) with their own 24/7 Security Operations Center faced a critical challenge: their legacy SIEM infrastructure was becoming unsustainable. With telemetry data growing at 28% CAGR, spiraling costs and performance bottlenecks were threatening their service delivery and profitability.</p>
+                        <p className=' my-3'>Traditional approaches to SIEM modernization focus only on platform replacement, but Vijilan's unique approach addressed the root cause: data chaos. By combining CrowdStrike LogScale with advanced Cribl data optimization, Vijilan delivered a solution that didn't just replace the MSSP's legacy SIEM—it fundamentally transformed their data economics.</p>
+                        <h3 className='my-5 text-xl text-center font-semibold'>SIEM Total Cost of Ownarship: Before After</h3>
 
-                    />
+                        <img src="../../../Assets/blog_AI.png" alt="" className='w-auto border-2' />
+
+
+                    </div >
+
                     {/*  ⚠️ Legacy SIEM Crisis */}
                     <div>
                         <ListComponent
@@ -177,7 +192,67 @@ const MSP_logscale_case = () => {
                     </div>
 
 
+                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+                        {/* <h1 className='text-center mt-8 font-semibold'>{heading}</h1> */}
+                        <h1 className='  mb-4 text-left mt-8 font-semibold'>🚀 Advanced SIEM Modernization Solution</h1>
+                        <p className=' my-3'>Vijilan implemented a comprehensive SIEM modernization strategy that addressed both technology and data economics through a sophisticated, integrated approach:</p>
 
+                        <div className='bg-gradient-to-t to-[#567182] from-[#566A7A] py-5 px-12 mt-12 border border-[#F86029]'>
+
+                            <h4 className='text-center text-2xl mb-5'>Intelligent Data Pipeline Architecture</h4>
+                            <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                                {Datapipeline.map((card, index) => (
+                                    <div key={index} className='flex  items-center justify-center'>
+                                        <div className='flex justify-center flex-col items-center bg-[#2B3840] py-8 px-4 gap-5 rounded-lg text-center  '>
+                                            <img src={card.icon} alt="" />
+                                            <h4>{card.label}</h4>
+                                            <p>{card.text}</p>
+                                        </div>
+                                        {/* Show arrow only if not last card */}
+                                        {index !== Datapipeline.length - 1 && (
+                                            <FaArrowRight className='mx-2 text-2xl text-black' />
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+
+
+                        {/* <h1 className='text-center mt-8 font-semibold'> {heading}</h1> */}
+                        <p className='text-left font-bold text-2xl my-3'>
+                            Core Technology Components
+                        </p>
+
+
+
+                        <ul className='mt-4 list-item'>
+                            {
+                                list2.map((li, index) => (
+                                    <li key={index} className='list-disc mt-3 ml-4'>
+                                        {li}
+                                    </li>
+                                ))}
+                        </ul>
+
+                        <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                            {coreTechnology.map((card, index) => (
+                                <div key={index} className='flex  items-center justify-center'>
+                                    <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
+                                        <img src={card.icon} alt="" />
+                                        <h4 className='font-semibold'>{card.label}</h4>
+                                        <p>{card.text}</p>
+                                    </div>
+
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* <p className='mt-2 text-left'>{p2}</p> */}
+                        <div>
+
+                        </div>
+                    </div >
 
 
                     <div>
