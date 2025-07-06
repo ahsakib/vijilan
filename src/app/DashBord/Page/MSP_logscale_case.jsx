@@ -9,6 +9,8 @@ import MesurableComponentDashboard from '../component/MesurableComponentDashboar
 import DashboardSideText from '../component/DashboardSideText';
 import { coreTechnology, Datapipeline } from '@app/Constant/Constant';
 import { FaArrowRight } from 'react-icons/fa';
+
+// import { chart } from "../../../Assets/chart.png";
 const MSP_logscale_case = () => {
 
     const numberArray = [
@@ -177,7 +179,7 @@ const MSP_logscale_case = () => {
                         <p className=' my-3'>Traditional approaches to SIEM modernization focus only on platform replacement, but Vijilan's unique approach addressed the root cause: data chaos. By combining CrowdStrike LogScale with advanced Cribl data optimization, Vijilan delivered a solution that didn't just replace the MSSP's legacy SIEM—it fundamentally transformed their data economics.</p>
                         <h3 className='my-5 text-xl text-center font-semibold'>SIEM Total Cost of Ownarship: Before After</h3>
 
-                        <img src="../../../Assets/blog_AI.png" alt="" className='w-auto border-2' />
+                        {/* <img src={chart} alt="" className='w-auto border-2' /> */}
 
 
                     </div >
@@ -219,21 +221,15 @@ const MSP_logscale_case = () => {
                         </div>
 
 
-                        {/* <h1 className='text-center mt-8 font-semibold'> {heading}</h1> */}
-                        <p className='text-left font-bold text-2xl my-3'>
-                            Core Technology Components
-                        </p>
 
 
+                        <ListComponent
+                            LeftHeading=" Core Technology Components"
+                            bg={false}
+                            array={list2}
+                        />
 
-                        <ul className='mt-4 list-item'>
-                            {
-                                list2.map((li, index) => (
-                                    <li key={index} className='list-disc mt-3 ml-4'>
-                                        {li}
-                                    </li>
-                                ))}
-                        </ul>
+
 
                         <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
                             {coreTechnology.map((card, index) => (
@@ -248,7 +244,7 @@ const MSP_logscale_case = () => {
                             ))}
                         </div>
 
-                        {/* <p className='mt-2 text-left'>{p2}</p> */}
+
                         <div>
 
                         </div>

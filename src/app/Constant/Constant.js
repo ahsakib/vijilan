@@ -49,6 +49,7 @@ import cren from "../../Assets/cren.png";
 import parts from "../../Assets/parts.png";
 import vol from "../../Assets/vol.png";
 import signal from "../../Assets/signal.png";
+import threat from "../../Assets/threat.png";
 
 
 
@@ -751,3 +752,77 @@ export const coreTechnology = [
     "text": "Real-time detection rules and automated alerting for SOC operations"
   }
 ]
+
+
+export const detectionArray = [
+  {
+    "time": "2:17 AM",
+    "label": "Ransomware Begins Encryption",
+    "text": "Sophisticated ransomware variant bypasses traditional antivirus and begins encrypting files on endpoint"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Vijilan SOC Detects Anomaly",
+    "text": "Behavioral analysis identifies suspicious encryption patterns and triggers immediate alert"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Active Containment Initiated",
+    "text": "SOC analyst isolates infected endpoint from network, preventing lateral spread"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Threat Fully Remediated",
+    "text": "Malware removed, attack vector identified, and security posture hardened"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "MSP Notified with Full Report",
+    "text": "Comprehensive incident report delivered to MSP with recovery recommendations"
+  },
+  {
+    "time": "2:17 AM",
+    "label": "Full Recovery Complete",
+    "text": "Affected files restored from backup, systems verified clean, business ready to open"
+  }
+]
+
+export const complianceArray = [
+  { icon: p1, label: "Administrative Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Technical Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Physical Safeguards", text: "Fully Compliant" },
+  { icon: p1, label: "Audit Documentation", text: "Audit-Ready" }
+];
+
+
+export const healthcareArray = [
+  { icon: p1, label: "Ransomware", text: "Protected" },
+  { icon: p1, label: "Credential Theft", text: "Monitored" },
+  { icon: p1, label: "Data Exfiltration", text: "Prevented" },
+  { icon: p1, label: "Medical Device Attacks", text: "Secured" }
+];
+
+
+export const threatProtectionArray = [
+  { icon: p1, label: "Financial Fraud", text: "Prevented" },
+  { icon: p1, label: "APT Groups", text: "Detected" },
+  { icon: p1, label: "Credential Theft", text: "Monitored" },
+  { icon: p1, label: "Data Exfiltration", text: "Blocked" }
+];
+export const healthcareSecurity = [
+  {
+    icon: threat,
+    label: "Managed ITDR",
+    text: "Real-time identity threat detection and response protecting patient records from unauthorized access"
+  },
+  {
+    icon: threat,
+    label: "Exposure Management",
+    text: "Continuous asset discovery and AI-powered risk prioritization across healthcare infrastructure"
+  },
+  {
+    icon: threat,
+    label: "Compliance Reporting",
+    text: "Comprehensive audit-ready documentation supporting HIPAA regulatory adherence"
+  }
+];

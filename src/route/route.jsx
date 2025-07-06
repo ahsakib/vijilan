@@ -45,6 +45,8 @@ import Resilience_case from '@app/DashBord/Page/Resilience_case';
 import Federal_cmmc_case from '@app/DashBord/Page/Federal_cmmc_case';
 import Financial_Compliance_Case from '@app/DashBord/Page/Financial_Compliance_Case';
 import MSP_logscale_case from '@app/DashBord/Page/MSP_logscale_case';
+import SMB_Runsomware from '@app/DashBord/Page/SMB_Runsomware';
+import HealthCare_Complain_case from '@app/DashBord/Page/HealthCare_Complain_case';
 
 const router = createBrowserRouter([
     {
@@ -187,6 +189,14 @@ const router = createBrowserRouter([
             {
                 path: "msp-ogscale-case-study",
                 element: <MSP_logscale_case />
+            },
+            {
+                path: "smb-runsomware-case-study",
+                element: <SMB_Runsomware />
+            },
+            {
+                path: "health-compliance",
+                element: <HealthCare_Complain_case />
             },
             {
                 path: "smb",
