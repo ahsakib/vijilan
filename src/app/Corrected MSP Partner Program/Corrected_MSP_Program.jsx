@@ -3,8 +3,29 @@ import CardContent from '@components/CardContent';
 import Heading_Btn from '@components/Heading_Btn';
 import SimpleCard from '@components/SimpleCard';
 import React from 'react';
+import {
+    Car,
+    Plus,
 
+} from "lucide-react"
+
+// Custom Card Component
+const Card = ({ children, className = "", ...props }) => {
+    return (
+        <div className={` ${className}`} {...props}>
+            {children}
+        </div>
+    );
+};
 const Corrected_MSP_Program = () => {
+    const CardContentData = ({ children, className = "", ...props }) => {
+    return (
+        <div className={` ${className}`} {...props}>
+            {children}
+        </div>
+    );
+};
+
     return (
         <div className='max-w-[90%] mx-auto '>
             {/* Corrected MSP Partner Program */}
@@ -110,21 +131,41 @@ const Corrected_MSP_Program = () => {
             <div className=' mt-16 pt-8  '>
 
                 <h1 className='text-5xl font-bold text-center my-4 py-5'>Frequently Asked Questions</h1>
-                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
-                    <input type="radio" name="my-accordion-3" defaultChecked />
-                    <div className="collapse-title font-semibold">How do I create an account?</div>
-                    <div className="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-                </div>
-                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
-                    <input type="radio" name="my-accordion-3" />
-                    <div className="collapse-title font-semibold">I forgot my password. What should I do?</div>
-                    <div className="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-                </div>
-                <div className="collapse collapse-plus bg-[#413F46] border border-[#4CAED9] my-3">
-                    <input type="radio" name="my-accordion-3" />
-                    <div className="collapse-title font-semibold">How do I update my profile information?</div>
-                    <div className="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-                </div>
+
+                {/* FAQ Section */}
+                < section className="relative z-10 px-6 py-16" >
+                    <div className="max-w-3xl mx-auto">
+                        <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+                        <div className="space-y-4">
+                            {[
+                                "What does Vijilan do for MSPs?",
+                                "What does Vijilan do for MSPs?",
+                                "What does Vijilan do for MSPs?",
+                                "What does Vijilan do for MSPs?",
+                                "What does Vijilan do for MSPs?",
+                            ].map((question, index) => (
+                                <Card key={index} className="relative rounded-[8px]" style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))` }}>
+                                    <div
+                                        className="absolute inset-0 rounded-[8px] p-[1px] z-0"
+                                        style={{
+                                            background: `conic-gradient(from 180deg at 50% 50%, #FF98E2 0deg, #FFC876 35.77deg, #79FFF7 153.75deg, #9F53FF 258.75deg, #FF98E2 360deg)`,
+                                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                            WebkitMaskComposite: "xor",
+                                            maskComposite: "exclude",
+
+                                        }}
+                                    />
+                                    <CardContentData className="p-4">
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-white text-[16px]">{question}</span>
+                                            <Plus className="w-5 h-5 text-gray-400" />
+                                        </div>
+                                    </CardContentData>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section >
             </div>
 
 

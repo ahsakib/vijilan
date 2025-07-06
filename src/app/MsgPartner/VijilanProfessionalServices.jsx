@@ -1,6 +1,22 @@
 import React from "react";
-import { ChevronDown, Play, Settings, TrendingUp, Shield, ExternalLink } from "lucide-react";
+import { ChevronDown, Play, Settings, TrendingUp, Shield, ExternalLink, Section } from "lucide-react";
+import Heading_Btn from "@components/Heading_Btn";
 
+
+const ButtonWithGeradiant = ({ btn }) => {
+  return <button
+    className="p-[18px] text-lg font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg"
+    style={{
+      border: '1px solid',
+      borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
+      borderImageSlice: 1,
+      borderRadius: '8px',
+    }}
+  >
+    <span className="uppercase">{btn}</span>
+
+  </button>
+}
 // Custom Button Component
 function Button({ className = "", variant = "default", size = "default", children, ...props }) {
   const baseStyles =
@@ -15,7 +31,7 @@ function Button({ className = "", variant = "default", size = "default", childre
   const variantStyles = {
     default: "bg-orange-500 text-white hover:bg-orange-600 focus-visible:ring-orange-500",
     outline:
-      "border border-teal-400 bg-transparent text-teal-400 hover:bg-teal-400 hover:text-white focus-visible:ring-teal-400",
+      "border border-teal-400 bg-transparent !text-blue-400 hover:bg-teal-400 hover:text-white focus-visible:ring-teal-400",
   };
 
   const combinedClassName = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`.trim();
@@ -30,7 +46,7 @@ function Button({ className = "", variant = "default", size = "default", childre
 // Custom Card Components
 function Card({ className = "", children, ...props }) {
   const cardClassName =
-    `rounded-lg border border-teal-700 bg-teal-900/20 backdrop-blur-sm shadow-lg ${className}`.trim();
+    `rounded-lg border border-[#133A55]  bg-[#133A55]  backdrop-blur-sm shadow-lg ${className}`.trim();
 
   return (
     <div className={cardClassName} {...props}>
@@ -51,32 +67,32 @@ function CardContent({ className = "", children, ...props }) {
 
 export default function VijilianLanding() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[90%] mx-auto">
 
 
       {/* Hero Section */}
-      <section className="text-center py-20 px-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
-          Expert Implementation & Management for Your Security Stack
-        </h1>
-        <p className="text-gray-300 text-lg mb-8 max-w-3xl mx-auto">
-          Maximize your technology investment. Our certified experts deliver seamless implementation, optimization, and
+      <section>
+        <Heading_Btn
+          h1="Expert Implementation & Management for Your Security Stack"
+          desc="Maximize your technology investment. Our certified experts deliver seamless implementation, optimization, and
           ongoing management for CrowdStrike, CriblI, and CoreLight platforms, turning powerful tools into strategic
-          assets.
-        </p>
-        <Button size="lg" className="text-lg">
-          <Play className="w-5 h-5 mr-2" />
-          WATCH THE SERVICE OVERVIEW
-        </Button>
+          assets."
+          btn1="WATCH THE SERVICE OVERVIEW"
+        />
       </section>
+
+
+
 
       {/* End-to-End Expert Services */}
       <section className="py-16 px-6">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">End-to-End Expert Services</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-12">End-to-End Expert Services</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+
           <Card>
             <CardContent className="text-center">
-              <Settings className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+              <Settings className="w-12 h-12 !text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Implementation & Installation</h3>
               <p className="text-gray-300 text-sm">
                 Expert deployment, configuration, and integration of enterprise-level security and observability
@@ -87,7 +103,7 @@ export default function VijilianLanding() {
 
           <Card>
             <CardContent className="text-center">
-              <TrendingUp className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 !text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Optimization & Health Checks</h3>
               <p className="text-gray-300 text-sm">
                 Ensuring your security technologies perform optimally and provide maximum value aligned with your
@@ -98,7 +114,7 @@ export default function VijilianLanding() {
 
           <Card>
             <CardContent className="text-center">
-              <Shield className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+              <Shield className="w-12 h-12 !text-blue-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Ongoing Management</h3>
               <p className="text-gray-300 text-sm">
                 Day-to-day operations, maintenance, and support to ensure your security stack remains effective and
@@ -111,14 +127,14 @@ export default function VijilianLanding() {
 
       {/* Deep Expertise Section */}
       <section className="py-16 px-6">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">Deep Expertise in Leading Technologies</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-12">Deep Expertise in Leading Technologies</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* CriblI Professional Services */}
-          <Card>
+          <Card className=" bg-[#082235]">
             <CardContent>
-              <h3 className="text-xl font-bold text-teal-400 mb-4">• CriblI Professional Services</h3>
-              <p className="text-white font-semibold mb-2">Unlock the Full Power of Your CriblI and CriblI</p>
+              <h3 className="text-xl font-bold !text-blue-400 mb-4">• CriblI Professional Services</h3>
+              <p className="!text-blue-300 font-semibold mb-2">Unlock the Full Power of Your CriblI and CriblI</p>
               <p className="text-gray-300 text-sm mb-4">
                 We implement, manage, and optimize CriblI Stream, Edge, Lake, and Search to streamline your data flows,
                 reduce costs, and enhance observability.
@@ -129,15 +145,17 @@ export default function VijilianLanding() {
                 <li>• Agent Aggregation with CriblI Edge</li>
                 <li>• Kubernetes Instrumentation</li>
               </ul>
-              <Button variant="outline">REQUEST A CRIBL CONSULTATION</Button>
+              <ButtonWithGeradiant btn="REQUEST A CRIBL CONSULTATION"
+
+              />
             </CardContent>
           </Card>
 
           {/* CrowdStrike Falcon Professional Services */}
-          <Card>
+          <Card className=" bg-[#082235]" >
             <CardContent>
-              <h3 className="text-xl font-bold text-teal-400 mb-4">• CrowdStrike Falcon Professional Services</h3>
-              <p className="text-white font-semibold mb-2">Maximize Your CrowdStrike Falcon Investment</p>
+              <h3 className="text-xl font-bold !text-blue-400 mb-4">• CrowdStrike Falcon Professional Services</h3>
+              <p className="!text-blue-300 font-semibold mb-2">Maximize Your CrowdStrike Falcon Investment</p>
               <p className="text-gray-300 text-sm mb-4">
                 Vijilan provides expert implementation and ongoing management for CrowdStrike Falcon modules, from
                 Next-Gen AV to Identity Protection and Data Security.
@@ -149,15 +167,17 @@ export default function VijilianLanding() {
                 <li>• Falcon LogScale Implementation & Management</li>
                 <li>• Platform Health Checks & Optimization</li>
               </ul>
-              <Button variant="outline">OPTIMIZE YOUR CROWDSTRIKE DEPLOYMENT</Button>
+              <ButtonWithGeradiant btn="OPTIMIZE YOUR CROWDSTRIKE DEPLOYMENT"
+
+              />
             </CardContent>
           </Card>
 
           {/* CriblI Professional Services (Second) */}
-          <Card>
+          <Card className=" bg-[#082235]" >
             <CardContent>
-              <h3 className="text-xl font-bold text-teal-400 mb-4">• CriblI Professional Services</h3>
-              <p className="text-white font-semibold mb-2">Unlock the Full Power of Your CriblI and CriblI</p>
+              <h3 className="text-xl font-bold !text-blue-400 mb-4">• CriblI Professional Services</h3>
+              <p className="!text-blue-300 font-semibold mb-2">Unlock the Full Power of Your CriblI and CriblI</p>
               <p className="text-gray-300 text-sm mb-4">
                 We implement, manage, and optimize CriblI Stream, Edge, Lake, and Search to streamline your data flows,
                 reduce costs, and enhance observability.
@@ -167,15 +187,17 @@ export default function VijilianLanding() {
                 <li>• Network Traffic Analysis</li>
                 <li>• Threat Hunting Workshops</li>
               </ul>
-              <Button variant="outline">DISCUSS YOUR NDR PROJECT</Button>
+              <ButtonWithGeradiant btn="DISCUSS YOUR NDR PROJECT"
+
+              />
             </CardContent>
           </Card>
 
           {/* CoreLight Professional Services */}
-          <Card>
+          <Card className=" bg-[#082235]" >
             <CardContent>
-              <h3 className="text-xl font-bold text-teal-400 mb-4">• CoreLight Professional Services</h3>
-              <p className="text-white font-semibold mb-2">Gain Unparalleled Visibility into Your Network Traffic</p>
+              <h3 className="text-xl font-bold !text-blue-400 mb-4">• CoreLight Professional Services</h3>
+              <p className="!text-blue-300 font-semibold mb-2">Gain Unparalleled Visibility into Your Network Traffic</p>
               <p className="text-gray-300 text-sm mb-4">
                 Our certified experts implement, manage, and optimize CoreLight's industry-leading Network Detection and
                 Response (NDR) platform. We transform raw network traffic into comprehensive evidence and actionable
@@ -188,7 +210,9 @@ export default function VijilianLanding() {
                 <li>• Incident Response with Network Forensics</li>
                 <li>• Integration with SIEM & XDR Platforms</li>
               </ul>
-              <Button variant="outline">REQUEST A CORELIGHT CONSULTATION</Button>
+              <ButtonWithGeradiant btn="REQUEST A CORELIGHT CONSULTATION"
+
+              />
             </CardContent>
           </Card>
         </div>
@@ -202,7 +226,7 @@ export default function VijilianLanding() {
               <h2 className="text-2xl font-bold text-white text-center mb-8">Proven Results in Complex Environments</h2>
 
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-teal-400 mb-4">
+                <h3 className="text-xl font-bold !text-blue-400 mb-4">
                   Success Story: How a Major Retailer Reduced SIEM Costs by 40%
                 </h3>
                 <p className="text-gray-300 text-sm mb-6">
@@ -212,7 +236,7 @@ export default function VijilianLanding() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 mb-8">
+              <div className="flex flex-wrap justify-center gap-8 mb-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-white mb-2">40%</div>
                 </div>
@@ -236,19 +260,15 @@ export default function VijilianLanding() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Let's Build a More Powerful & Efficient Security Architecture.
-        </h2>
-        <p className="text-gray-300 text-lg mb-8 max-w-3xl mx-auto">
-          Whether you're migrating your SIEM, deploying new sensors, or looking to optimize your data strategy, our
-          experts are here to help. Schedule a free, no-obligation architectural review today.
-        </p>
-        <Button size="lg" className="text-lg">
-          SCHEDULE ARCHITECTURE REVIEW
-        </Button>
-      </section>
 
-    </div>
+      <Heading_Btn
+        h1="Let's Build a More Powerful & Efficient Security Architecture."
+        desc=" Whether you're migrating your SIEM, deploying new sensors, or looking to optimize your data strategy, our
+          experts are here to help. Schedule a free, no-obligation architectural review today."
+        btn1="SCHEDULE ARCHITECTURE REVIEW"
+
+      />
+
+    </div >
   );
 }

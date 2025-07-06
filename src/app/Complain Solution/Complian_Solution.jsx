@@ -63,9 +63,9 @@ const Complain_Solution = () => {
             </div>
 
 
-            <div className="mt-10 flex gap-5 text-white bg-[#064462] rounded-lg p-10">
+            <div className="mt-10 flex flex-col lg:flex-row gap-5 text-white bg-[#064462] rounded-lg  p-5 md:p-10">
 
-                <div className=' p-5 flex flex-col items-center justify-center border-[3px] rounded-2xl border-[#035882]'>
+                <div className='p-2 md:p-5 flex flex-col items-center justify-center border-[3px] rounded-2xl border-[#035882]'>
                     <div className='-mb-10 flex flex-col items-center justify-center  gap-3'>
                         <div className='bg-gradient-to-t h-24 w-24  rounded-full flex justify-center items-center text-white text-lg font-bold from-[#07ADE9] to-[#EB9C33]'>
                             JN </div>

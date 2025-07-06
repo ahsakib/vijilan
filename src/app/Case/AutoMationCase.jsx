@@ -73,70 +73,15 @@ export default function Component() {
             {/* Hero Section */}
             <section className="px-6 py-16 text-white">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-end h-full">
-                        <div className="text-left h-full flex flex-col justify-end">
-                            <h1 className="text-5xl font-bold mb-6">
-                                Real-World Results,
-                                <br />
-                                Proven Success
-                            </h1>
-                            <p className="text-[22px] mb-8 font-bold">
-                                Discover how MSPs grow their business and enterprises achieve resilient security posture. Calculate your potential success with our interactive tools.
-                            </p>
-                            <div className="flex space-x-4">
-                                <button
-                                    className="p-[16px] text-[11px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                                    style={{
-                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                    <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
 
-                                    }}>
-
-                                    <span className='uppercase'>calculate your success</span>
-                                    <div className="w-6 h-6  flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="12 16 16 12 12 8"></polyline>
-                                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                                        </svg>
-                                    </div>
-                                </button>
-                                <button
-                                    className="p-[16px] text-[11px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
-                                    style={{
-                                        border: '1px solid',
-                                        borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                        borderImageSlice: 1,
-                                        borderRadius: '8px',
-                                    }}>
-                                    <span className="uppercase">browse success stories</span>
-                                    <div className="w-6 h-6 flex items-center justify-center">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        >
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="12 16 16 12 12 8"></polyline>
-                                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* <Heading_Btn
+                        <Heading_Btn
                             h1="Real-World Results
                                 Proven Success"
                             desc={`Discover how MSPs grow their business and enterprises achieve resilient security posture. Calculate your potential success with our interactive tools.`}
                             btn1={"Get Started Today"}
                             btn2={"Watch Success Stories"}
-                        /> */}
+                        />
 
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
@@ -157,12 +102,12 @@ export default function Component() {
             {/* Calculator Section */}
             <section className="px-6 py-16">
                 <div className="max-w-4xl mx-auto text-center text-white">
-                    <h2 className="text-[40px] font-bold mb-3">Calculate Your Potential Success</h2>
+                    <h2 className="text-3xl md:text-[40px] font-bold mb-3">Calculate Your Potential Success</h2>
                     <p className="text-white text-center text-[18px] mb-12">
                         Use our interactive calculator to estimate your potential results based on companies similar to <br /> yours.
                     </p>
                     <div className=" backdrop-blur-sm rounded-[24px] p-8" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                        <h3 className="text-[40px] font-bold text-center">Business Success Calculator</h3>
+                        <h3 className="text-3xl md:text-[40px]  font-bold text-center">Business Success Calculator</h3>
                         <p className="text-white text-center text-[18px] mb-10">Enter your details to see potential results based on similar client outcomes</p>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -175,7 +120,7 @@ export default function Component() {
             {/* Organization Type Section */}
             <section className="px-6 py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
-                    <h2 className="text-[40px] font-bold mb-3">Find Success Stories Like Yours</h2>
+                    <h2 className="text-3xl md:text-[40px]  font-bold mb-3">Find Success Stories Like Yours</h2>
                     <p className="text-[18px] mb-12">
                         Discover how organizations similar to yours have achieved remarkable results
                     </p>
@@ -184,7 +129,7 @@ export default function Component() {
                         <div className="max-w-6xl w-full rounded-2xl p-10 text-white" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                             {/* Title */}
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-[40px] font-bold mb-3">What Best Describes Your Organization?</h2>
+                                <h2 className="text-lg md:text-3xl md:text-[40px] font-bold mb-3">What Best Describes Your Organization?</h2>
                                 <p className="text-[18px]">
                                     Select your industry to see relevant success stories and outcomes
                                 </p>
@@ -234,7 +179,7 @@ export default function Component() {
                             </div>
 
                             {/* Button */}
-                            <div className="w-full max-w-2xl mx-auto border border-[#FFFFFF] text-center">
+                            <div className="w-full max-w-2xl mx-auto border border-[#FFFFFF] text-center rounded-xl">
                                 <button className=" text-white p-[16px] rounded-[6px] ">
                                     READ THE FULL STORY
                                 </button>

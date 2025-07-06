@@ -38,7 +38,11 @@ import cp4 from "../../Assets/cp4.png";
 import clip from "../../Assets/Clipboard Approve.png";
 import rocket from "../../Assets/Rocket.png";
 import graph from "../../Assets/Graph Report.png";
-
+import TimeIcon from "@images/timeIcon.png"
+import chainIcon from "@images/chain-icons.png"
+import RocketIcon from "@images/rocketIcon.png"
+import sheildIcon from "../../Assets/sheildIcon.png";
+import TaskCheck from "@images/task-check.png" 
 
 
 import statistics from "../../Assets/statistics.png";
@@ -53,7 +57,12 @@ import user from "../../Assets/user.png";
 import users from "../../Assets/users.png";
 import earth from "../../Assets/earth.png";
 import threat from "../../Assets/threat.png";
-
+import detect from "../../Assets/detect.png"
+import shield from "../../Assets/sheildIcon.png";
+import investigation from "../../Assets/Capa_1.svg";
+import thumsup from "../../Assets/thumsup.svg";
+import reportIcon from "../../Assets/report.svg";
+import EyeIcon from "../../Assets/eye.svg";
 
 
 
@@ -110,7 +119,7 @@ export const Blog_landing_Data = [
   }
 ];
 
-export const weSarve = [
+export const weServe = [
   {
     audience: "MSPs, VARs, & MSSPs",
     icon: a1,
@@ -141,6 +150,73 @@ export const weSarve = [
   },
 
 ];
+export const CardContentData1 = [
+  {
+    head: "Unlock New MRR",
+    sub: "Add high-margin security services to your portfolio. Our model is built to maximize your Monthly Recurring Revenue and profitability.",
+    iconed: TimeIcon,
+  },
+  {
+    head: "Your Instant 24/7 SOC",
+    sub: "Gain an immediate SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts become an extension of your team.",
+    iconed: TimeIcon,
+  },
+  {
+    head: "Go-to-Market Enablement",
+    sub: "Access our comprehensive \"ThreatRemediator™\" Enablement Kit with co-brandable materials, sales decks, and proposal generators to win more deals.",
+    iconed: RocketIcon,
+  },
+  {
+    head: "Radical Flexibility & No Risk",
+    sub: "Benefit from our channel-first approach with no minimum commitments. Full white-labeling, and a 30-day risk-free opt-out trial.",
+    iconed: sheildIcon,
+  },
+  {
+    head: "Simplified Compliance",
+    sub: "Effortlessly support your clients' compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC. Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your workload and minimizing regulatory risks.",
+    iconed: TaskCheck,
+  },
+  {
+    head: "Vendor-Agnostic Integration",
+    sub: "Seamlessly integrate with your clients' existing security tools and infrastructure. Vijilan supports extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving you unmatched flexibility without vendor lock-in.",
+    iconed: chainIcon,
+  },
+];
+
+export const processSteps = [
+  {
+    icon: shield,
+    head: "Prepare & Prevent",
+    text: "We build your playbooks, train teams, and implement preventive controls to stop incidents before they start",
+  },
+  {
+    icon: detect,
+    head: "Detect",
+    text: "Our platform uses AI-powered detection across all vectors—endpoints, cloud, identity, and network—to identify threats in real-time.",
+  },
+  {
+    icon: investigation,
+    head: "Investigate",
+    text: "Our 24/7 SOC analysts instantly investigate and confirm every potential threat, eliminating false positives so your team isn't disturbed.",
+  },
+  {
+    icon: thumsup,
+    head: "We Take Action",
+    text: "Our SOC takes direct, hands-on action: isolating endpoints, disabling compromised accounts, blocking malicious processes, and actively neutralizing the threat.",
+  },
+  {
+    icon: reportIcon,
+    head: "Report & Harden",
+    text: "We provide a full incident report detailing the attack, the actions taken, and expert recommendations to harden your defenses against future attacks.",
+  },
+  {
+    icon: EyeIcon,
+    head: "Review & Refine",
+    text: "Post-incident, we analyze outcomes and continuously improve your detection, response, and prevention capabilities for ever-increasing resilience.",
+  },
+];
+
+
 export const StrategicData = [
   {
     title: "The MSP's Playbook for Profitable Security Services",

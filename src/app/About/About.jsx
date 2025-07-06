@@ -47,7 +47,7 @@ export default function About() {
                         <div className="max-w-4xl mx-auto">
                             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">The People Behind Your Protection</h1>
                             <p className="text-[18px] text-[#FFFFFF] mb-12 leading-relaxed">
-                                We are a team of passionate cybersecurity experts, problem solvers, and client <br/> advocates dedicated to one
+                                We are a team of passionate cybersecurity experts, problem solvers, and client <br /> advocates dedicated to one
                                 mission: keeping you and your customers safe and thriving.
                             </p>
                         </div>
@@ -62,25 +62,27 @@ export default function About() {
 
             {/* Company Story Section */}
 
-            <JourneySection
-                tealBg={tealBg}
-                networkBg={networkBg}
-                heading={"From Log Analysis to Market Leader"}
-                description={`Founded in 2014 with a mission to bring clarity to complex security data, Vijilan has evolved from
+            <div className="my-5">
+                <JourneySection
+                    tealBg={tealBg}
+                    networkBg={networkBg}
+                    heading={"From Log Analysis to Market Leader"}
+                    description={`Founded in 2014 with a mission to bring clarity to complex security data, Vijilan has evolved from
                     a specialized log analysis firm into a leading managed cybersecurity provider. Our journey has
                     been driven by a relentless focus on innovation, a deep commitment to our partners, and the core
                     belief that every business deserves enterprise-grade security.`}
-            />
+                />
+            </div>
 
             {/* Mission, Vision, Values */}
 
-            <section className="relative z-10 px-6 py-16">
-                <div className="container mx-auto px-6">
+            <section className="mt-96 md:mt-5 px-1 md:px-4 py-16">
+                <div className="  mx-auto px-6">
                     <h2 className="text-[40px] font-bold text-center text-white mb-12">
-                         <span className="text-[#00AEEF]">Our Mission</span>, Vision, and Values
+                        <span className="text-[#00AEEF]">Our Mission</span>, Vision, and Values
                     </h2>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8  w-full">
                         <CardContentData
                             icon={missionIcon}
                             title="Our Mission"
@@ -108,9 +110,9 @@ export default function About() {
             </section>
 
             <section className="relative z-10 px-6 py-16">
-                <div className="container mx-auto px-6">
+                <div className=" mx-auto px-6">
                     <h2 className="text-[40px] font-bold text-center text-white mb-12">Meet Our Leadership</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {teamData.map((leader, index) => (
                             <LeaderCard
                                 key={index}
@@ -128,20 +130,12 @@ export default function About() {
                 tealBg={tealBg}
                 networkBg={networkBg}
                 headingWithDesign={true}
-                smHeading={`Our SOC's Tier 2 certified Security Operations Center is the operational center for your defense.
-                                        Staffed around the clock by our expert security analysts and powered by advanced AI for incident
-                                        response, our team leverages our advanced platform to protect your business with unparalleled
-                                        vigilance.`}
+                smHeading={`Our SOC's Tier 2 certified Security Operations Center is the operational center for your defense. Staffed around the clock by our expert security analysts and powered by advanced AI for incident response, our team leverages our advanced platform to protect your business with unparalleled vigilance.`}
                 videoPart={true}
 
             />
 
-            <JoinMissionSection
-                title="Join Our"
-                highlightedText="Mission"
-                subtitle="We're always looking for passionate, talented individuals to join our team. If you're driven to solve complex challenges and want to make a real impact in the cybersecurity industry, we want to hear from you."
-                buttonText="VIEW OPEN POSITIONS"
-            />
+           
         </div>
     )
 }

@@ -21,9 +21,9 @@ const Vars_consultants_page = () => {
             {/* Recommendation */}
 
             <div>
-                <h1 className='text-5xl font-bold  text-white text-center m-12'>Recommend with Confidence, Deliver with Ease</h1>
+                <h1 className='text-2xl md:text-5xl font-bold  text-white text-center m-12'>Recommend with Confidence, Deliver with Ease</h1>
                 <div className='mt-20  '>
-                    <div className='grid grid-cols-1 md:grid-cols-3  gap-5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5'>
                         {Recommend.map(((card, index) => <CardContent
                             Index={index}
                             icon={card.icon}
@@ -38,10 +38,10 @@ const Vars_consultants_page = () => {
             {/* A Simple Path to Partnership */}
 
             <div>
-                <h1 className='text-5xl font-bold  text-white text-center m-12'>
+                <h1 className='text-2xl md:text-5xl font-bold  text-white text-center m-12'>
                     A Simple Path to Partnership
                 </h1>
-                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3  gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {PartnershipSteps.map(((card, index) => <CardContent
 
                         icon={card.icon}
@@ -55,14 +55,14 @@ const Vars_consultants_page = () => {
             {/* Key Offerings for Your Clientele */}
 
             <div>
-                <h1 className='text-5xl font-bold  text-white text-center m-12'>
+                <h1 className='text-2xl md:text-5xl font-bold  text-white text-center m-12'>
                     Key Offerings for Your Clientele
                 </h1>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2  gap-8'>
                     {ClientServices.map(((card, index) =>
                         <div className=' bg-[#082235] px-10 py-12 rounded-lg   '>
 
-                            <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
+                            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                                 {card.title}
                             </h1>
                             <p className='  cursor-pointer text-blue-400 my-3'>{card.link}</p>
@@ -77,10 +77,10 @@ const Vars_consultants_page = () => {
             {/* Ready To Empower Your Team? */}
 
             <div>
-                <h1 className='text-5xl font-bold  text-white text-center m-12'>
+                <h1 className='text-2xl md:text-5xl  font-bold  text-white text-center m-12'>
                     Ready To Empower Your Team?
                 </h1>
-                <div className='grid sm:grid-cols-1 md:grid-cols-3  gap-8'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8'>
                     {Empower.map(((card, index) =>
                         <CardContent
                             iconed={card.icon}

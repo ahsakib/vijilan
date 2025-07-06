@@ -23,7 +23,7 @@ const JourneySection = ({
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-800/80"></div>
 
-          <div className="relative z-10 p-12 lg:p-16">
+          <div className="relative z-10 p-8 lg:p-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 {heading && (

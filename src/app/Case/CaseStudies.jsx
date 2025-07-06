@@ -72,7 +72,7 @@ const Badge = ({ children, className = "", ...props }) => {
 
 export default function CaseStudiesPage() {
     return (
-        <div className="">
+        <div className=" max-w-[90%] mx-auto">
 
             {/* Hero Section */}
             <section className="py-20 px-4">
@@ -131,7 +131,7 @@ export default function CaseStudiesPage() {
                     </div>
 
                     {/* Lead Form */}
-                    <CardBorder height={"130px"} width="1440px">
+                    {/* <CardBorder  height={"130px"} width="1440px">
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-6">
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="endpoints" className="text-white text-[14px] font-medium text-left">
@@ -178,25 +178,25 @@ export default function CaseStudiesPage() {
                             </div>
                             <OutlineGradientButton children={"CLEAR ALL FILTERS"} />
                         </div>
-                    </CardBorder>
+                    </CardBorder> */}
                 </div>
             </section>
 
             {/* Featured Case Study */}
-            <section className="py-20 px-4">
+            <section className="py-20 px-1 md:px-4">
                 <div className="container mx-auto">
                     <div
-                        className="backdrop-blur-md rounded-[24px] py-12 px-16 max-w-5xl mx-auto shadow-2xl border border-[#00AEEF]/40"
+                        className="backdrop-blur-md rounded-[24px] py-12 px-2 md:px-16 max-w-5xl mx-auto shadow-2xl border border-[#00AEEF]/40"
                         style={{
                             background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                         }}
                     >
-                        <Badge className="bg-[#F36E21] text-[10px] font-semibold text-white  px-[7px] py-[8px]">
+                        <Badge className="bg-[#F36E21] text-[12px] text-center font-semibold text-white  px-[7px] py-[8px]">
                             MS PARTNER SUCCESS
                         </Badge>
 
                         <div className="mt-10 relative">
-                            <div className="relative bg-[#00AEEF3D] rounded-[24px] overflow-hidden flex items-center justify-center">
+                            <div className="relative bg-[#00AEEF3D] rounded-[24px] overflow-hidden  p-2 flex items-center justify-center">
                                 {/* Gradient Border Overlay */}
                                 <div
                                     className="absolute inset-0 rounded-[26px] p-[2px] z-0"
@@ -211,8 +211,8 @@ export default function CaseStudiesPage() {
                                 />
 
                                 {/* Main Content */}
-                                <div className="z-10 text-left px-10 py-12 w-full">
-                                    <h3 className="text-x[22px] font-bold text-white mb-6 leading-tight">
+                                <div className="z-10 text-left px-1 md:px-10 py-12 w-full">
+                                    <h3 className="text-lg md:text-[22px] font-bold text-white mb-6 leading-tight">
                                         How a Gold Tier MSP Increased MRR by 30% with ThreatRemediate
                                     </h3>
                                     <p className="text-white  text-[18px] leading-relaxed max-w-4xl mx-auto">
@@ -224,7 +224,7 @@ export default function CaseStudiesPage() {
                                     </p>
 
                                     {/* Stats Grid */}
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 px-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-6 mb-10 px-6">
                                         {[
                                             { value: "30%", label: "Increase in Security MRR" },
                                             { value: "50%", label: "Reduction in Alert Fatigue" },
@@ -260,10 +260,10 @@ export default function CaseStudiesPage() {
 
                 <div className="container mx-auto relative z-10">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-[40px] font-bold text-white mb-4">
+                        <h2 className="text-3xl md:text-4xl md:text-[40px] font-bold text-white mb-4">
                             Success Stories Across Industries
                         </h2>
-                        <p className="text-[18px] text-white max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-[18px] text-white max-w-4xl mx-auto leading-relaxed">
                             Browse our comprehensive collection of client success stories and measurable business results <br /> across
                             diverse industries and use cases.
                         </p>
@@ -354,7 +354,7 @@ export default function CaseStudiesPage() {
                         ].map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="backdrop-blur-sm px-12 py-16"
+                                className="backdrop-blur-sm px-4 md:px-12 py-16"
                                 style={{
                                     borderRadius: '22.184px',
                                     background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
@@ -375,9 +375,9 @@ export default function CaseStudiesPage() {
 
             {/* ROI Calculator */}
             <section className="py-16 px-4">
-                <div className="relative container mx-auto bg-[#00AEEF3D]">
+                <div className="relative container mx-auto bg-[#00AEEF3D] ">
                     <div
-                        className="absolute inset-0 p-[2px] z-0"
+                        className="absolute inset-0 p-[2px] z-0 rounded-2xl "
                         style={{
                             background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
                             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
@@ -386,9 +386,9 @@ export default function CaseStudiesPage() {
                         }}
                     />
                     <div>
-                        <div className="py-[74px] px-[58px] ">
+                        <div className="py-[74px] px-5 md:px-[58px] ">
                             <div className="text-center mb-10">
-                                <h2 className="text-[40px] font-bold text-white mb-3">Calculate Your Potential ROI</h2>
+                                <h2 className="text-2xl md:text-[40px] font-bold text-white mb-3">Calculate Your Potential ROI</h2>
                                 <p className="text-white text-[18px]">See how much you could save and grow with Vijilan's cybersecurity solutions</p>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">

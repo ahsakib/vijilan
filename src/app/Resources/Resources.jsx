@@ -18,9 +18,9 @@ const Resources = () => {
             <div className='container px-6 mx-auto py-12  '>
 
                 {/* Banner */}
-                <div className='flex sm:flex-col md:flex-row items-center justify-between gap-5'>
-                    <div className='w-full mg:w-1/2 '>
-                        <h1 className='text-6xl font-bold my-8'>Your Cybersecurity Knowledge Center</h1>
+                <div className='flex  flex-col md:flex-row items-center justify-between gap-5'>
+                    <div className='w-full md:w-1/2 '>
+                        <h1 className='text-2xl  md:text-6xl font-bold my-8'>Your Cybersecurity Knowledge Center</h1>
                         <p className='mt-8'>Explore our library of expert insights, strategic guides, and real-world case studies to navigate the evolving threat landscape and grow your security practice.</p>
                     </div>
                     <div className='w-full mg:w-1/2'>
@@ -38,8 +38,8 @@ const Resources = () => {
 
                 {/* tabs and recourse */}
                 <div>
-                    <div className="flex items-center justify-between  mt-10 ">
-                        <div className="w-3/5  flex flex-wrap gap-3 md:gap-7">
+                    <div className="flex flex-col md:flex-row items-center justify-between  mt-10 ">
+                        <div className="w-full md:w-3/5  flex flex-wrap gap-3 md:gap-3">
                             {tabs.map((tab, index) => (
                                 <p
                                     key={index}
@@ -51,7 +51,7 @@ const Resources = () => {
                             ))}
                         </div>
 
-                        <div className="ml-4 w-2/5">
+                        <div className="ml-4 w-full md:w-2/5">
                             <SearchBtn Input="Search" searchItem="Search Resource" />
                         </div>
                     </div>
@@ -70,7 +70,7 @@ const Resources = () => {
                     <div className='flex gap-3 md:gap-8 justify-center mt-8'>
                         {pages.map((n, index) => <p
                             key={index}
-                            className={`text-[24px]   font-medium inline px-[21px] py-[8px] cursor-pointer rounded-[14px] border border-[#CDCDD466] hover:border-[#00AEEF]  ${index == 1 ? "text-blue-400 border-blue-400" : "text-gray-400 border-gray-400"}`}
+                            className={`text-lg md:text-[24px]   font-medium inline px-2 md:px-[21px] py-[8px] cursor-pointer rounded-[14px] border border-[#CDCDD466] hover:border-[#00AEEF]  ${index == 1 ? "text-blue-400 border-blue-400" : "text-gray-400 border-gray-400"}`}
 
                         >
                             {n}

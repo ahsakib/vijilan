@@ -34,16 +34,16 @@ const TestimonialCard = ({
       </Badge>
 
       <div className="px-4">
-        <h3 className="text-2xl md:text-[30px] font-bold text-white mb-6 mt-4 leading-tight">
+        <h3 className="text-xl md:text-[30px] font-bold text-white mb-6 mt-4 leading-tight">
           {heading}
         </h3>
 
-        <p className="text-white text-[16px] text-base leading-relaxed">{description}</p>
+        <p className="text-white text-[15px] text-base leading-relaxed">{description}</p>
 
-        <div className="grid grid-cols-2 gap-0 mb-10">
+        <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2 gap-5 justify-center  mb-10">
           {stats.map((stat, index) => (
-            <CardBorder key={index} height="171px" width="166px">
-              <div>
+            <CardBorder  key={index} height="171px" width="166px">
+              <div className="mx-auto">
                 <div className="text-white text-[36px] font-medium mb-2">{stat.value}</div>
                 <div className="text-[#E6F7FD] text-[10px] font-medium">{stat.label}</div>
               </div>

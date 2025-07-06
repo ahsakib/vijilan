@@ -4,8 +4,8 @@ const CardBorder = ({ height="171px", width = "166px", children, borderSize, rad
   return (
     <div className="mt-12 relative">
       <div
-        className={`relative bg-[#00AEEF3D] rounded-[26px]  flex items-center justify-center ${borderSize ? "rounded-[16px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
-        style={{ height, width }}
+        className={`relative bg-[#00AEEF3D] rounded-[26px] w-${width}   h-${height}  flex items-center justify-center ${borderSize ? "rounded-[16px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
+        // style={{ height, width }}
       >
         <div
           className={`absolute inset-0 rounded-[26px] p-[2px] z-0 ${borderSize? "rounded-[16px] p-[1px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMailBulk } from 'react-icons/fa' 
+import { FaMailBulk } from 'react-icons/fa'
 import banner from "../../Assets/Blog-banner.png";
 import linkdin from "../../Assets/linkdin.png";
 import mail from "../../Assets/mail.png";
@@ -13,19 +13,19 @@ import mask from "../../Assets/mask.png";
 
 const Blog = () => {
     return (
-        <div className="text-white py-4 lg:px-8 px-11">
+        <div className="text-white py-4 px-2 lg:px-8 ">
 
             {/* top part */}
             <section className="container mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">blog</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-400 text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
                     </nav>
                 </div>
 
@@ -39,14 +39,14 @@ const Blog = () => {
                     </div>
 
                     {/* Main Heading */}
-                    <h1 className="text-4xl md:text-5xl  font-bold leading-tight">
+                    <h1 className="text-2xl   md:text-5xl  font-bold leading-tight">
                         The Rise of Malware-Free Attacks: How to <br /> Defend Your Organization
                     </h1>
 
                     {/* Author Information */}
                     <div className="flex items-center gap-3" >
                         <div
-                            className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-white font-medium text-sm"
+                            className=" rounded-full flex items-center justify-center text-white font-medium text-sm"
                             style={{
                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
                  linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
@@ -71,12 +71,12 @@ const Blog = () => {
                     </div>
                 </div>
             </section>
-            {/* banner section  */}
 
             {/* middle part */}
-            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+            <div className='grid grid-cols-1 md:grid-cols-2'>
                 {/* Main content */}
-                <div className="sm:col-span-3 md:col-span-2">
+                {/* <div className="  ">
 
                     <p className="text-[18px] mb-6">
                         Modern cyber attackers are evolving rapidly, and one of the trends we’re
@@ -90,7 +90,7 @@ const Blog = () => {
                         systems and presents a significant challenge for security teams worldwide.
                     </p>
 
-                    <h2 className="text-[32px] font-bold mb-4">
+                    <h2 className="text-lg md:text-[32px] font-bold mb-4">
                         Understanding the Malware-Free Attack <br /> Landscape
                     </h2>
 
@@ -115,7 +115,7 @@ const Blog = () => {
                         </p>
                     </blockquote>
 
-                    <h2 className="text-[32px] font-bold mb-4">
+                    <h2 className="text-lg md:text-[32px] font-bold mb-4">
                         Why Traditional Security Fails Against These Threats
                     </h2>
 
@@ -126,12 +126,12 @@ const Blog = () => {
                         Instrumentation (WMI), or even trusted applications like browsers and productivity
                         software, these signature-based approaches become largely ineffective.
                     </p>
-                </div>
+                </div> */}
 
                 {/* Sidebar */}
-                <aside className="space-y-8 sm:col-span-3 md:col-span-1">
+                <aside className="space-y-8  ">
                     {/* social media share */}
-                    <div className="relative bg-[#00AEEF3D]  p-6 rounded-[16px]">
+                    <div className="relative bg-[#00AEEF3D] p-2 md:p-6 rounded-[16px] ">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[1px] z-0"
                             style={{
@@ -142,10 +142,10 @@ const Blog = () => {
                                 maskComposite: "exclude"
                             }}
                         />
-                        <h3 className="text-[24px] font-bold mb-4 text-center">Share this Article</h3>
+                        <h3 className="text-lg md:text-[24px] font-bold mb-4 text-center">Share this Article</h3>
 
 
-                        <div className="space-y-3">
+                        <div className="space-y-3 ">
                             <button className="w-full flex items-center gap-2 justify-center   bg-[#FFFFFF47]  px-[30px] py-[14px] rounded-[10px] ">
                                 <img src={linkdin} className='w-[32px] h-[32px] rounded-[5px]' alt="" />    <span className='text-[18px]'>Share on LinkedIn</span>
                             </button>
@@ -172,8 +172,8 @@ const Blog = () => {
                         />
 
                         <div className=" py-[20px] px-[24px] mx-1 rounded-[16px] text-center ">
-                            <h3 className="text-[24px] text-center font-bold mb-4">Free Resources</h3>
-                            <div className="w-full  p-[24px] rounded-[8px] font-bold   text-[24px] "
+                            <h3 className="text-lg md:text-[24px] text-center font-bold mb-4">Free Resources</h3>
+                            <div className="w-full p-2 md:p-[24px] rounded-[8px] font-bold   text-lg md:text-[24px]"
                                 style={{
                                     background: 'linear-gradient(to right, #F89B29, #FF0F7B)',
                                 }}
@@ -187,7 +187,7 @@ const Blog = () => {
 
 
                             <button
-                                className="py-[16px] px-[24px] rounded-[8px] font-medium text-white transition-opacity hover:opacity-90"
+                                className="py-[16px] text-lg md:text-[24px] rounded-[8px] font-medium text-white transition-opacity hover:opacity-90"
                                 style={{
                                     background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
                                 }}
@@ -231,6 +231,9 @@ const Blog = () => {
                         </ul>
                     </div>
                 </aside>
+            </div>
+            <div className=" mx-auto px-6 grid  grid-cols-1 md:grid-cols-2  gap-10">
+
 
 
                 {/* organization value */}
@@ -251,7 +254,7 @@ const Blog = () => {
 
                 <div className='col-span-2 text-left space-y-2'>
                     <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px]'>Advanced Detection Strategies That Actually Work</h1>
+                        <h1 className='font-bold text-lg md:text-[32px]'>Advanced Detection Strategies That Actually Work</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'>Defending against malware-free attacks requires a fundamental shift in approach. Here are the key strategies that have proven effective in our client environments:
 
@@ -259,17 +262,17 @@ const Blog = () => {
                     </div>
 
                     <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px] '> 1. Advanced Detection Strategies That Actually Work</h1>
+                        <h1 className='font-bold text-lg md:text-[32px] '> 1. Advanced Detection Strategies That Actually Work</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'> Instead of looking for malicious files, focus on detecting malicious behavior. This includes monitoring for unusual process execution patterns, abnormal network connections, and suspicious privilege escalation attempts. Machine learning algorithms can establish baselines of normal behavior and flag deviations that may indicate an attack in progress.
 
                         </p>
                     </div>
-                    <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px] '> 1.  Advanced Detection Strategies That Actually Work</h1>
+                    <div className='space-y-6  !p-2'>
+                        <h1 className='font-bold text-lg md:text-[32px] '> 2.  Advanced Detection Strategies That Actually Work</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'>Instead of looking for malicious files, focus on detecting malicious behavior. This includes monitoring for unusual process execution patterns, abnormal network connections, and suspicious privilege escalation attempts. Machine learning algorithms can establish baselines of normal behavior and flag deviations that may indicate an attack in progress. </p>
-                        <ul className="list-disc pl-14 space-y-2 text-gray-200">
+                        <ul className="list-disc pl-2 lg:pl-14 space-y-2 text-gray-200">
                             <li>Script block logging to capture all PowerShell commands</li>
                             <li>Module logging to track loaded PowerShell modules</li>
                             <li>Transcription logging for complete session records</li>
@@ -278,10 +281,10 @@ const Blog = () => {
 
                     </div>
                     <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px]'> 3. Network Traffic Analysis</h1>
+                        <h1 className='font-bold text-lg md:text-[32px]'> 3. Network Traffic Analysis</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'>Even malware-free attacks generate network traffic that can be analyzed for suspicious patterns. Implement network detection and response (NDR) capabilities that can identify:</p>
-                        <ul className="list-disc pl-14 space-y-2 text-gray-200">
+                        <ul className="list-disc  pl-2 lg:pl-14 space-y-2 text-gray-200">
                             <li>Unusual DNS queries or dodiv generation algorithms (DGA)</li>
                             <li>
                                 Abnormal data transfer volumes or destinations</li>
@@ -298,13 +301,13 @@ const Blog = () => {
 
                     </div>
                     <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px] '> The Vijilan Approach: Active Remediation</h1>
+                        <h1 className='font-bold text-lg md:text-[32px] '> The Vijilan Approach: Active Remediation</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'>At Vijilan, we've developed a comprehensive approach to defending against malware-free attacks that goes far beyond traditional detection and alerting. Our ThreatRemediate service combines advanced behavioral analysis with active remediation capabilities, allowing our SOC team to not just identify these threats, but to immediately contain and neutralize them.
                             <br />
                             <span className='  mt-2 block'>Here's how we're different:</span>
                         </p>
-                        <ul className="list-disc pl-14 space-y-2">
+                        <ul className="list-disc  pl-2 lg:pl-14 space-y-2">
                             <li>
                                 <span className='font-semibold'> Real-time Behavioral Analysis: </span>
                                 Our AI-driven platform continuously monitors for suspicious behavior patterns across endpoints, networks, and cloud environments</li>
@@ -329,13 +332,13 @@ const Blog = () => {
 
                     </div>
                     <div className='space-y-6'>
-                        <h1 className='font-bold text-[32px]'> Implementing Your Defense Strategy</h1>
+                        <h1 className='font-bold text-lg md:text-[32px]'> Implementing Your Defense Strategy</h1>
 
                         <p className=' text-[18px]  mx-auto my-4'>Building effective defenses against malware-free attacks requires a multi-layered approach. Start with these essential steps:
                             <br />
                             <span className='  mt-2 block'>Here's how we're different:</span>
                         </p>
-                        <ul className="list-disc pl-14 space-y-2 ">
+                        <ul className="list-disc  pl-2 lg:pl-14 space-y-2 ">
                             <li>
                                 <span className='font-semibold'> Audit Your Current Capabilities:  </span>
                                 Assess whether your existing security tools can detect behavioral anomalies and suspicious use of legitimate tools</li>
@@ -370,7 +373,7 @@ const Blog = () => {
 
             <div className='container mx-auto px-6 pt-6 grid grid-cols-1 lg:grid-cols-3'>
                 <div className='space-y-6 sm:col-span-3 md:col-span-2'>
-                    <h1 className='font-bold text-[32px]'> 1.  Looking Forward: The Future of Threat Detection</h1>
+                    <h1 className='font-bold text-lg md:text-[32px]'> 1.  Looking Forward: The Future of Threat Detection</h1>
 
                     <p className=' text-[18px]  mx-auto my-4   '>
                         <span> As attackers continue to evolve their techniques, organizations must stay ahead of the curve. The future of cybersecurity lies in intelligent, behavior-based detection combined with rapid, automated response capabilities. At Vijilan, we're constantly innovating our detection algorithms and response procedures to stay ahead of emerging threats.
@@ -393,12 +396,12 @@ const Blog = () => {
             <div className='container  mx-auto px-6'>
 
                 {/* subscribe  */}
-                <div className="w-full h-[304px] flex justify-center items-center  my-8 rounded-[24px] " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                    <div className='w-3/4 mx-auto space-y-6 '>
-                        <h1 className='font-bold text-[40px] text-center my-2'>Get Security Insights Delivered to Your Inbox.</h1>
-                        <p className='text-[16px] font-medium text-center'>Subscribe to our newsletter for the latest threat analysis, partner strategies, and <br /> product updates from the experts at Vijilan.</p>
+                <div className="w-full   flex justify-center items-center  my-8 rounded-[24px] " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                    <div className='w-full  md:w-3/4 p-3 mx-auto space-y-6 '>
+                        <h1 className='font-bold text-lg md:text-[40px] text-center my-2'>Get Security Insights Delivered to Your Inbox.</h1>
+                        <p className='text-sm md:text-[24px] font-medium text-center'>Subscribe to our newsletter for the latest threat analysis, partner strategies, and <br /> product updates from the experts at Vijilan.</p>
 
-                        <div className="relative max-w-2xl w-full mx-auto">
+                        <div className="relative  w-full mx-auto">
                             <input
                                 className="w-full py-[14px] pr-[130px] pl-[14px] text-[#0000007A] rounded-[10px]"
                                 placeholder="Enter Your Email"
@@ -419,8 +422,8 @@ const Blog = () => {
 
                 {/* users post */}
 
-                <div className="w-full h-[304px] flex justify-center items-center my-8 rounded-[24px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                    <div className="w-3/4 mx-auto flex items-start gap-4">
+                <div className="w-full h-auto p-4 flex justify-center items-center my-8 rounded-[24px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                    <div className="w-full  md:w-3/4 mx-auto flex  flex-col md:flex-row items-start gap-4">
 
                         {/* Avatar */}
                         <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center" style={{
@@ -443,8 +446,7 @@ const Blog = () => {
                 </div>
 
                 {/* Join Discussion  */}
-                <div className="w-full h-[304px] flex justify-center items-center my-8 rounded-[24px]  
-            " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                <div className="w-full h-auto flex justify-center items-center my-8 rounded-[24px] py-3 " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                     <div className='w-3/4 mx-auto text-center space-y-5'>
                         <h1 className='font-bold text-[40px]'>Join the Discussion</h1>
                         <p className='text-[16px] font-medium text-center'>

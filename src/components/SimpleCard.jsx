@@ -7,7 +7,7 @@ const SimpleCard = ({ icon, title, desc, h, w,designedTitle, center }) => {
             style={{ minWidth: w }}
         >
             <div
-                className={`bg-[#413F46] p-8 text-left rounded-lg m-[2px] ${h ? `` : 'min-h-52'}`}
+                className={`bg-[#413F46] p-8 w-${w} text-left rounded-lg m-[2px] ${h ? `` : 'min-h-52'}`}
                 style={{ height: h}}
             >
                 <div className={`flex items-center gap-3 my-2 ${center ? "justify-center items-center w-full h-full" : ""} ${designedTitle ? `flex items-center justify-center h-full w-full` :`justify-start`}`}>
@@ -15,7 +15,7 @@ const SimpleCard = ({ icon, title, desc, h, w,designedTitle, center }) => {
                     <img
                         src={icon}
                         alt="icon"
-                        className="max-h-full max-w-full object-contain"
+                        className="max-h-full w-60 md:w-auto  object-contain"
                     />
                 )}
                     {title && <p className='text-blue-500'>{title}</p>}

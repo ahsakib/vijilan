@@ -2,7 +2,6 @@ import Blog from '@app/Blog/Blog';
 import Blog_landing_page from '@app/Blog/Blog_landing_page';
 import Home from '@app/Home/Home';
 import About from '@app/About/About';
-import Sarve from '@app/Sarve/Sarve';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from 'src/App';
@@ -48,6 +47,7 @@ import MSP_logscale_case from '@app/DashBord/Page/MSP_logscale_case';
 import SMB_Runsomware from '@app/DashBord/Page/SMB_Runsomware';
 import HealthCare_Complain_case from '@app/DashBord/Page/HealthCare_Complain_case';
 import MSP_growth_case from '@app/DashBord/Page/MSP_growth_case';
+import Serve from '@app/Sarve/Serve';
 
 const router = createBrowserRouter([
     {
@@ -59,6 +59,7 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
+                // responsive complete
                 path: "blog",
                 element: <Blog />,
             },
@@ -67,62 +68,80 @@ const router = createBrowserRouter([
                 element: <About />,
             },
             {
+                // responsive done
                 path: "blog-landing",
                 element: <Blog_landing_page />,
             },
             {
-                path: "sarve",
-                element: <Sarve />,
+                // responsive done
+                path: "serve",
+                element: <Serve />,
             },
             {
+                // responsive done
                 path: "resources",
                 element: <Resources />,
             },
             {
+                // responsive done
                 path: "visilan-msg-partner",
                 element: <VisilanPartner />,
             },
             {
+                // responsive done
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
+            // {
+            //     path: "threat-respond-service",
+            //     element: <ThreatResponse />,
+            // },
             {
-                path: "threat-respond-service",
-                element: <ThreatResponse />,
-            },
-            {
+                // responsive done
                 path: "threat-respond-service-2",
                 element: <ThreatResponse2 />,
             },
             {
+                // responsive done
                 path: "vijilan-vars-consultants-page",
                 element: <Vars_consultants_page />,
             },
             {
+                // responsive done
                 path: "visilan-professional-service",
                 element: <VisislanProfessional />,
             },
             {
+                // responsive done
                 path: "case-studies",
                 element: <CaseStudies />,
             },
             {
+
+                // responsive done
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
             {
+
+                // responsive done
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
             {
+
+                // responsive done
                 path: "complain-solution",
                 element: <Complain_Solution />,
             },
             {
+
+                // responsive done
                 path: "corrected-msp",
                 element: <Corrected_MSP_Program />,
             },
             {
+                 // responsive done
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
@@ -217,35 +236,35 @@ const router = createBrowserRouter([
             },
             {
                 path: "threatremediate-essentail",
-                element: <ThreatremediateEssentail/>
+                element: <ThreatremediateEssentail />
             },
             {
                 path: "threatremediate-remote-pricing",
-                element: <ThreatremediateRemotePricing/>
+                element: <ThreatremediateRemotePricing />
             },
             {
                 path: "threatremediate-remote-no-pricing",
-                element: <ThreadRemediateRemoteNoPricing/>
+                element: <ThreadRemediateRemoteNoPricing />
             },
             {
                 path: "threatremediate-managed-xdr",
-                element: <ThreatreMediateManagedXdr/>
+                element: <ThreatreMediateManagedXdr />
             },
             {
                 path: "access-request",
-                element: <AccessRequest/>
+                element: <AccessRequest />
             },
             {
                 path: "fixed-vijilan-portal",
-                element: <FixedVijilanPortal/>
+                element: <FixedVijilanPortal />
             },
             {
                 path: "why-vijilan-page",
-                element: <WhyVijilanPage/>
+                element: <WhyVijilanPage />
             },
             {
                 path: "become-a-partner",
-                element: <BecomeAPartner/>
+                element: <BecomeAPartner />
             }
         ],
     },

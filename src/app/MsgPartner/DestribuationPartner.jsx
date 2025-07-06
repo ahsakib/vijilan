@@ -46,7 +46,7 @@ const DestribuationPartner = ({ }) => {
 
 
     return <>
-        <div className="container mx-auto px-6 py-16">
+        <div className=" max-w-[90%] mx-auto px-6 py-16">
             <section className="bg-transparent max-w-7xl mx-auto">
                 <div className="text-center text-white font-bold mb-12">
                     <h1 className="text-3xl md:text-[40px] font-bold mb-4">
@@ -56,26 +56,26 @@ const DestribuationPartner = ({ }) => {
                         We partner with the industry's leading technology distributors to make quoting, purchasing, <br /> and deploying our managed security solutions seamless and efficient for our enterprise clients <br /> and channel partners.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 justify-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 justify-items-center  ">
                     {distributors.map((icon, index) => (
                         <SimpleCard
                             key={index}
                             icon={icon}
                             h="148px"
-                            w="362px"
+                            w="332px"
                             center={true}
                         />
                     ))}
                 </div>
             </section>
-            <section className="bg-transparent max-w-7xl mx-auto py-20">
+            <section className="bg-transparent  mx-auto py-20">
                 <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-4">
                     Streamlined Procurement, Simplified Billing
                 </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-14">
                     {cardData.map((card, index) => (
                         <CardBorder key={index} height="290px" width="564px">
-                            <div className="flex flex-col items-start gap-4 text-left text-white px-[32px] py-[40px]">
+                            <div className="flex flex-col items-start gap-4   text-left text-white px-[32px] py-[40px]">
                                 <div className="bg-[#00AEEF] rounded-[8px] w-[64px] h-[64px] flex items-center justify-center">
                                     <img src={card.icon} alt="icon" className="w-[40px] h-[40px]" />
                                 </div>
@@ -100,7 +100,7 @@ const DestribuationPartner = ({ }) => {
                             key={index}
                             designedTitle={title}
                             h="148px"
-                            w="362px"
+                            w="342px"
                         />
                     ))}
                 </div>
@@ -127,12 +127,12 @@ const DestribuationPartner = ({ }) => {
                     </CardBorder>
                 </div>
             </section>
-            <section className="bg-transparent max-w-7xl mx-auto">
+            <section className="bg-transparent   mx-auto">
 
                 <NavyBlueBackground borderCancel={true}>
                     <div>
-                        <div className="grid grid-cols-2">
-                            <div className=' px-5 py-8 flex flex-col items-center justify-center border-[1px] rounded-2xl border-[#00AEEF3D]'>
+                        <div className="grid grid-cols-1 md:grid-cols-2">
+                            <div className='px-2 md:px-5 py-8 flex flex-col items-center justify-center border-[1px] rounded-2xl border-[#00AEEF3D]'>
                                 <div className="w-[61px] h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
                                     style={{
                                         background: `linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)),linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`,
@@ -147,12 +147,12 @@ const DestribuationPartner = ({ }) => {
                                     "Have a question about a specific distributor or <br /> how to add Vijilan to your next order? I can help <br /> guide you."
                                 </p>
 
-                                <div  className="border border-[#00AEEF] rounded-[6px]">
+                                <div className="border border-[#00AEEF] rounded-[6px]">
                                     <button className="border border-[#00AEEF] font-medium rounded-[6px] text-white text-[13px] p-[16px]">ASK JEN AI</button>
                                 </div>
                             </div>
-                            <div class="w-full p-8  rounded-lg ">
-                                <h1 class="text-[40px] font-bold text-white mb-5">Don't See Your Distributor?</h1>
+                            <div class="w-full p-3 md:p-8  rounded-lg ">
+                                <h1 class="text-2xl md:text-[40px] font-bold text-white mb-5">Don't See Your Distributor?</h1>
                                 <p class="text-white text-[18px] text-center mb-6 leading-relaxed">
                                     We're always expanding our distribution network. <br />
                                     Contact our channel team to discuss adding your <br /> preferred distributor or to learn more about our <br /> procurement options.

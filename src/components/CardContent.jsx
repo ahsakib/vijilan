@@ -1,10 +1,10 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
 
   console.log(side_text)
   return (
-    <div className={`relative rounded-[24px] p-5 ${Index % 2 !== 0 ? "mt-10 ml-5" : "mb-10 ml-5"}`} >
+    <div className={`relative rounded-[24px] p-[2px] ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
       {/* Gradient border using pseudo */}
       <div
         className="absolute inset-0 rounded-[24px] p-[2px] z-0"
@@ -29,6 +29,9 @@ const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading,
         {icon && <div className="icon-container flex justify-center mb-4">
           <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px]" />
         </div>}
+        {iconColor && <div className="icon-container flex justify-center mb-4">
+          <img src={iconColor} alt="Cybersecurity Illustration" className="icon bg-cyan-400 rounded-xl p-2 w-[100px] h-[100px]" />
+        </div>}
 
 
         {banner && (
@@ -48,7 +51,7 @@ const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading,
           <img src={iconed} alt="Icon" className="iconed w-[77px] text-white h-[77px]" />
         </div>}
         {
-          Cardsticket && <div className='bg-[#D9D9D9] w-[250px] p-6 h-[190px] mx-auto rounded-2xl my-5 flex justify-center items-center'>
+          Cardsticket && <div className='bg-[#D9D9D9] w-auto md:w-[250px] p-6 h-auto md:h-[190px] mx-auto rounded-2xl my-5 flex justify-center items-center'>
             <h4 className='text-center text-black  text-2xl'>{Cardsticket}</h4>
           </div>
         }
@@ -63,7 +66,7 @@ const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading,
 
         }
 
-        <h3 className="title text-[37px] font-medium mb-2">{title}</h3>
+        <h3 className="title text-3xl md:text-4xl font-medium mb-2">{title}</h3>
 
 
         {
@@ -78,7 +81,7 @@ const CardContent = ({ icon, banner, Cardsticket, linkBtn, Number, ColorHeading,
 
         {
           sub && (
-            <p className="sub text-[18px] text-white mb-4" style={{ whiteSpace: 'pre-line' }}>{sub}</p>
+            <p className="text-sm md:text-[18px] text-white mb-4" style={{ whiteSpace: 'pre-line' }}>{sub}</p>
           )
         }
         {

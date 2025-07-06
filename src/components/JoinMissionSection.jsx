@@ -29,8 +29,8 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) =>
             className="absolute inset-0"
           />
 
-          <div className="relative z-10 text-center">
-            <h2 className="text-[40px] font-bold text-white mb-4">
+          <div className="relative z-10 text-center ">
+            <h2 className="text-lg md:text-[35px] font-bold text-white mb-4">
               {title} <span className="text-[#00AEEF]">{highlightedText}</span>
             </h2>
             <p className="text-[16px] font-medium text-white mb-8 leading-relaxed max-w-2xl mx-auto">

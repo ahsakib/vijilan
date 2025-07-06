@@ -1,18 +1,17 @@
-import { StrategicData, weSarve } from '@app/Constant/Constant';
-import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
+import { StrategicData, weServe } from '@app/Constant/Constant'; 
 import CardContent from '@components/CardContent';
 import React from 'react';
 import play from "../../Assets/play.png";
 import backgroundPattern from "../../Assets/Background pattern.png";
 
-const Sarve = () => {
+const Serve = () => {
     return (
         <section className='text-white'>
             <div className='container mx-auto px-6 py-12  '>
                 <div className='py-8 space-y-3'>
                     <h1 className='text-3xl md:text-5xl font-bold text-center '>  Tailored Cybersecurity for Every <br /> Organization</h1>
                     <p className='text-[22px] font-bold text-center my-5'> Whether you're an MSP looking to grow your security practice or an enterprise defending <br /> against advanced threats, Vijilan has a solution built for your specific needs.
-                        this is sarve system </p>
+                        this is Serve system </p>
                 </div>
 
 
@@ -51,12 +50,12 @@ const Sarve = () => {
 
                 <div className='grid grid-cols-1  lg:grid-cols-2 gap-10 py-16'>
                     {
-                        weSarve.map((sarve, index) => <CardContent
+                        weServe.map((Serve, index) => <CardContent
                             index={index + 2}
-                            icon={sarve.icon}
-                            title={sarve.audience}
-                            description={sarve.description}
-                            cardFooter={sarve.action}
+                            icon={Serve.icon}
+                            title={Serve.audience}
+                            description={Serve.description}
+                            cardFooter={Serve.action}
                         />)
                     }
                 </div>
@@ -132,7 +131,7 @@ const Sarve = () => {
                             />
 
                             <div className="relative z-10 text-center space-y-5">
-                                <h2 className="text-[40px] font-bold text-white ">
+                                <h2 className="text-2xl md:text-[40px] font-bold text-white ">
                                     Not Sure Where to Start?
                                 </h2>
                                 <p className="text-[16px] font-medium text-white  leading-relaxed max-w-2xl mx-auto">
@@ -164,4 +163,4 @@ const Sarve = () => {
     );
 };
 
-export default Sarve;
+export default Serve;

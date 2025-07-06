@@ -1,3 +1,5 @@
+// responsive complete
+
 import { ChevronDown, Shield, Users, Building, Lightbulb, MapPin, Zap, Star } from "lucide-react"
 import Header from "@components/Header"
 import EmergencyBanner from "@components/EmergencyBanner"
@@ -62,7 +64,7 @@ const data = [
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="max-w-[90%] mx-auto">
       {/* Background Pattern */}
 
       {/* Content Overlay */}
@@ -71,42 +73,42 @@ const Home = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        
+
 
         {/* Tailored Solutions Section */}
         <section className="container mx-auto pb-20">
-            <div className="">
-              {/* Header */}
-              <div className="text-center mb-10">
-                <h1 className="text-3xl md:text-[40px] font-bold mb-4" style={{ color: "#00AEEF" }}>
-                  Tailored Cybersecurity Solutions
-                </h1>
-                <h2 className="text-4xl md:text-[40px] font-bold text-white">For Your Needs </h2>
-              </div>
-
-              {/* Cards Container */}
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Left Card - MSPs */}
-
-                <CardContent
-                  icon={GroupIcon}
-                  head="For MSPs, VARs & MSSPs"
-                  sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
-                  buttonText="EMPOWER YOUR MSP/VAR/MSSP"
-                  isLeft={true}
-                  />
-
-                {/* Right Card - SMBs */}
-                <CardContent
-                  icon={GroupIcon2}
-                  head="For SMBs & Mid-Market Enterprises"
-                  sub="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
-                    tailored to your size and industry needs."
-                  buttonText="SECURE YOUR BUSINESS"
-                  isLeft={true}
-                />
-              </div>
+          <div className="">
+            {/* Header */}
+            <div className="text-center mb-10">
+              <h1 className="text-3xl md:text-[40px] font-bold mb-4" style={{ color: "#00AEEF" }}>
+                Tailored Cybersecurity Solutions
+              </h1>
+              <h2 className="text-4xl md:text-[40px] font-bold text-white">For Your Needs </h2>
             </div>
+
+            {/* Cards Container */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Card - MSPs */}
+
+              <CardContent
+                icon={GroupIcon}
+                head="For MSPs, VARs & MSSPs"
+                sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
+                buttonText="EMPOWER YOUR MSP/VAR/MSSP"
+                isLeft={true}
+              />
+
+              {/* Right Card - SMBs */}
+              <CardContent
+                icon={GroupIcon2}
+                head="For SMBs & Mid-Market Enterprises"
+                sub="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
+                    tailored to your size and industry needs."
+                buttonText="SECURE YOUR BUSINESS"
+                isLeft={true}
+              />
+            </div>
+          </div>
         </section>
 
 
@@ -353,7 +355,7 @@ const Home = () => {
           </div>
 
 
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-6xl mx-auto px-8">
             {/* Header Section */}
             <div className="text-center py-10 space-y-6">
               <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white ">
@@ -485,7 +487,7 @@ const Home = () => {
         {/* Integrations Section */}
         <section className="container mx-auto px-6 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-[40px] font-bold text-white mb-4">
+            <h2 className="text-2xl lg:text-[40px] font-bold text-white mb-4">
               <span className="text-[#00AEEF]">Comprehensive Security</span>
               <br />
               Ecosystem Integrations
@@ -666,7 +668,7 @@ const Home = () => {
                 <div className=" mb-4">{item.icon}</div>
                 <h3 className="text-[24px] text-center font-medium text-white mb-3">{item.title}</h3>
                 <p className="text-white text-[18px] mb-4 leading-relaxed text-center">{item.description}</p>
-                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{color:"#082235"}}>
+                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{ color: "#082235" }}>
                   {item.buttonText}
                 </button>
               </div>

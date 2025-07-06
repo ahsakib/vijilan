@@ -8,6 +8,7 @@ import EyeIcon from "../../Assets/eye.svg";
 import Heading_Btn from "@components/Heading_Btn";
 import CardContent from "@components/CardContent";
 import GradientButton from "@components/GradientButton";
+import { processSteps } from "@app/Constant/Constant";
 
 export default function Component() {
 
@@ -26,14 +27,14 @@ export default function Component() {
             {/* Video Section */}
             <section className="px-4 py-16 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-[40px] font-bold tracking-tight text-white sm:text-4xl">
+                    <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white sm:text-4xl">
                         See ThreatRemediate in Action
                     </h2>
-                    <p className="mt-2 text-[18px] text-[#FFFFFF]">
+                    <p className="mt-2 text-sm md:text-[18px] text-[#FFFFFF]">
                         Watch how our expert SOC transforms threat detection into active remediation
                     </p>
                     <div className="mt-12 relative">
-                        <div className="relative aspect-video w-[621px] mx-auto h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
+                        <div className="relative aspect-video w-auto md:w-[621px] mx-auto h-auto md:h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
                             <div
                                 className="absolute inset-0 rounded-[26px] p-[2px] z-0"
                                 style={{
@@ -56,134 +57,26 @@ export default function Component() {
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-5xl font-bold tracking-tight text-white">
+                        <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-white">
                             How We Deliver Complete Protection
                         </h2>
-                        <p className="mt-4 text-[18px] text-white">
+                        <p className="mt-4 text-sm md:text-[18px] text-white">
                             The comprehensive 6-step security lifecycle that sets ThreatRemediate apart
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={shield} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-medium text-white mb-3">Prepare & Prevent</h3>
-                            <p className="text-white text-[18px] text-center">
-                                We build your playbooks, train teams, and implement preventive controls to stop incidents before they start
-                            </p>
-                        </div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {
+                            processSteps.map((card, index) => <CardContent
+                                iconColor={card.icon}
+                                head={card.head}
+                                sub={card.text}
+                                Index={index}
 
-                        <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={detect} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Detect</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Our platform uses AI-powered detection across all vectors—endpoints, cloud, identity, and network—to identify threats in real-time.
-                            </p>
-                        </div>
 
-                        <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={investigation} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Investigate</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Our 24/7 SOC analysts instantly investigate and confirm every potential threat, eliminating false positives so your team isn't disturbed.
-                            </p>
-                        </div>
+                            />)
+                        }
 
-                        <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={thumsup} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">We Take Action</h3>
-                            <p className="text-white text-[18px] text-center">
-                                Our SOC takes direct, hands-on action: isolating endpoints, disabling compromised accounts, blocking malicious processes, and actively neutralizing the threat.
-                            </p>
-                        </div>
-                        {/* 5th */}
-                        <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={reportIcon} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Report & Harden</h3>
-                            <p className="text-white text-[18px] text-center">
-                                We provide a full incident report detailing the attack, the actions taken, and expert recommendations to harden your defenses against future attacks.
-                            </p>
-                        </div>
-
-                        <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
-                            <div
-                                className="absolute inset-0 rounded-[16px] p-[2px] z-0"
-                                style={{
-                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                    WebkitMaskComposite: "xor",
-                                    maskComposite: "exclude"
-                                }}
-                            />
-                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-4">
-                                <img src={EyeIcon} alt="" />
-                            </div>
-                            <h3 className="text-[24px] font-bold text-white mb-3">Review & Refine</h3>
-                            <p className="text-white text-center text-[14px]">
-                                Post-incident, we analyze outcomes and continuously improve your detection, response, and prevention capabilities for ever-increasing resilience.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -192,17 +85,17 @@ export default function Component() {
             <section className="container mx-auto px-6 py-20 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-3">
+                        <h2 className=" text-xl md:text-[40px] font-bold tracking-tight text-white mb-3">
                             Questions About Guided Response?
                         </h2>
-                        <p className="text-[20px] text-white">Ask Jen AI, our 24/7 AI-powered Cyber Security Sales Agent.</p>
+                        <p className=" text-sm md:text-[20px] text-white">Ask Jen AI, our 24/7 AI-powered Cyber Security Sales Agent.</p>
                     </div>
 
                     <div className="rounded-3xl px-8 py-14 " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             {/* Left Side - Chat Interface */}
-                            <div className="space-y-6">
-                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-[60px]">
+                            <div className="space-y-6 ">
+                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-5 md:p-[60px]">
                                     <div
                                         className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                         style={{
@@ -213,8 +106,8 @@ export default function Component() {
                                             maskComposite: "exclude"
                                         }}
                                     />
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center"
+                                    <div className="flex items-center gap-3 mb-3 ">
+                                        <div className="w-[45px] md:w-[60px] h-[30px] md:h-[60px] rounded-full flex flex-col md:flex-row items-center justify-center"
                                             style={{
                                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
                  linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
@@ -222,8 +115,8 @@ export default function Component() {
                                             <span className="text-white font-bold text-sm">JN</span>
                                         </div>
                                         <div>
-                                            <h3 className="text-white font-bold text-[20px]">JEN AI</h3>
-                                            <p className="text-[#00AEEF] text-[13px] font-medium">Cyber security Sales Agent</p>
+                                            <h3 className="text-white font-bold  text-sm md:text-[20px]">JEN AI</h3>
+                                            <p className="text-[#00AEEF]  text-sm md:text-[20px] font-medium">Cyber security Sales Agent</p>
                                         </div>
                                     </div>
                                     <div className="relative bg-[#00AEEF4D] p-6 rounded-[16px] w-fit flex justify-center items-center mx-auto">
@@ -252,7 +145,7 @@ export default function Component() {
 
                             {/* Right Side - Suggested Questions */}
                             <div className=" space-y-5">
-                                <h3 className="text-[40px] font-bold text-white">Try asking Jen AI:</h3>
+                                <h3 className=" text-xl md:text-[40px] font-bold text-white">Try asking Jen AI:</h3>
                                 <div className="space-y-4">
                                     {[1, 2, 3, 4, 5].map((index) => (
                                         <div
@@ -283,13 +176,13 @@ export default function Component() {
             <section className="container mx-auto px-6 py-20 lg:px-8 text-center">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-3">
+                        <h2 className=" text-2xl md:text-[40px] font-bold tracking-tight text-white mb-3">
                             A Package for Every Need
                         </h2>
-                        <p className="text-[20px] text-white">Choose the ThreatRemediate tier that matches your security requirements</p>
+                        <p className=" text-sm md:text-[20px] text-white">Choose the ThreatRemediate tier that matches your security requirements</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                         <CardContent
                             title={"Core"}
                             description={"Essential EDR/XDR for comprehensive endpoint protection with 24/7 monitoring and active remediation."}
@@ -305,7 +198,7 @@ export default function Component() {
 
                     </div>
 
-                    <GradientButton children={"compare Tiers and run pricing scenerios"}/>
+                    <GradientButton children={"compare Tiers and run pricing scenerios"} />
 
                 </div>
             </section>
@@ -315,10 +208,10 @@ export default function Component() {
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white">Ready to Get Started?</h2>
+                        <h2 className=" text-2xl md:text-[40px] font-bold tracking-tight text-white">Ready to Get Started?</h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"

@@ -23,16 +23,16 @@ const Blog_landing_page = () => {
                 <div className='grid grid-cols-1 md:grid-cols-6 justify-between '>
                     <div className='col-span-1 md:col-span-3 space-y-5  '>
                         <div className="">
-                            <span className="inline-block bg-[#00AEEF] text-white px-[24px] py-[16px] rounded-[13px] text-[16px] font-medium uppercase tracking-wide">
+                            <span className="inline-block bg-[#00AEEF] text-white px-2 lg:px-[24px] py-[16px] rounded-[13px] text-[16px] font-medium uppercase tracking-wide">
                                 THREAT INTELLIGENCE
                             </span>
                         </div>
-                        <h1 className='text-3xl md:text-[47px] font-sans font-bold capitalize space-y-2'>
+                        <h1 className='text-xl md:text-3xl md:text-[47px] font-sans font-bold capitalize space-y-2'>
                             Threat Intelligence <br />
                             The Rise of Malware-Free Attacks: How to Defend Your Organization</h1>
 
-                        <p className='text-[18px]'> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
-                        <div className="mt-3 p-[20px] pl-2 w-2/5 text-[18px]  rounded-[8px] font-medium ml-4 " style={{
+                        <p className='text-sm md:text-[18px]'> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
+                        <div className="p-[20px] pl-2  inline px-5 mt-5 text-[18px] md:text-3xl   rounded-[8px] font-medium ml-4 " style={{
                             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
                         }}>
                             Read the full story
@@ -50,11 +50,11 @@ const Blog_landing_page = () => {
 
 
                 {/* tabs */}
-                <div className=' flex flex-wrap gap-3 md:gap-7 mt-10'>
+                <div className=' flex flex-wrap  gap-5 md:gap-7 mt-10'>
                     {tabs.map((tab, index) => (
                         <p
                             key={index}
-                            className={`text-xl inline px-[40px] py-[15px] cursor-pointer font-bold text-[14px] rounded-[40px] border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
+                            className={`text-xl inline px-5 md:px-[40px] py-3 md:py-[15px] cursor-pointer font-bold text-[14px] rounded-[40px] border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
                                 }`}
                         >
                             {tab}
@@ -145,7 +145,7 @@ const Blog_landing_page = () => {
 
                 {/* Blog  Cards */}
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {Blog_landing_Data.map((card, index) => (
                         <LandingPageCard
                             key={index}
@@ -160,21 +160,21 @@ const Blog_landing_page = () => {
                 </div>
 
                 <div className='flex justify-between items-center mt-12'>
-                   <div className='bg-[#00AEEF] rounded-[6px] p-2'>
-                        <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+                    <div className="bg-blue-500 p-2 rounded  md:block">
+                        <img src={vector} alt="" className="w-[22px] h-[22px] mx-auto" />
                     </div>
-                    <div className='flex gap-3 md:gap-8'>
+
+                    <div className='flex flex-wrap gap-3 md:gap-8 '>
                         {pages.map((n, index) => <p
                             key={index}
-                            className='text-[24px] font-medium inline px-[21px] py-[8px] cursor-pointer rounded-[14px] border border-[#CDCDD466] hover:border-[#00AEEF]'
-
+                            className='text-sm md:text-[24px] font-medium inline px-2  md:px-[21px] py-1 md:py-[8px] cursor-pointer rounded-[14px] border border-[#CDCDD466] hover:border-[#00AEEF'
                         >
                             {n}
                         </p>)}
                     </div>
                     {/* <FaAngleDoubleRight className='text-[#00AEEF] text-3xl' /> */}
-                    <div className='bg-[#00AEEF] rounded-[6px] p-2'>
-                        <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+                    <div className='bg-[#00AEEF] rounded-[6px] p-2  md:flex '>
+                        <img src={vector} alt="" className='  md:block md:w-[22px] h-auto md:h-[22px] flex justify-center items-center' />
                     </div>
                 </div>
 

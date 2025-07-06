@@ -1,4 +1,5 @@
 import {
+    Car,
     Plus,
 
 } from "lucide-react"
@@ -11,6 +12,8 @@ import RocketIcon from "@images/rocketIcon.png"
 import sheildIcon from "../../Assets/sheildIcon.png";
 import TaskCheck from "@images/task-check.png"
 import TimeIcon from "@images/timeIcon.png"
+import Heading_Btn from "@components/Heading_Btn"
+import { CardContentData1 } from "@app/Constant/Constant"
 
 // Custom Card Component
 const Card = ({ children, className = "", ...props }) => {
@@ -36,81 +39,20 @@ export default function VijilianLanding() {
 
             {/* Hero Section */}
             <section className="relative z-10 px-6 py-20 text-center">
-                <div className="max-w-7xl mx-auto text-white">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                        Build Your Profitable Security Practice on
-                        <br />
-                        Our Platform
-                    </h1>
-                    <p className="text-[18px] mb-8 max-w-5xl font-bold mx-auto">
-                        Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to<br /> deliver enterprise-grade
-                        cyber security. No minimums, no complexity, no high startup <br /> costs.
-                    </p>
-                    <div className="flex items-center justify-center mb-8">
-                        <div className="flex text-[#FBBC09]">
-                            {"★★★★★".split("").map((star, i) => (
-                                <span key={i} className="text-[18px]">
-                                    {star}
-                                </span>
-                            ))}
-                        </div>
-                        <p className="ml-2 text-yellow-400 font-4xl">Trusted by over 200 MSPs worldwide</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                            className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                            style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
-                            }}>
-
-                            <span>Apply to Become a partner</span>
-                            <div className="w-6 h-6  flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-
-                        <button
-                            className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent"
-                            style={{
-                                border: '1px solid',
-                                borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-                                borderImageSlice: 1,
-                                borderRadius: '8px',
-                            }}
-                        >
-                            <span>DOWNLOAD PARTNER KIT</span>
-                            <div className="w-6 h-6 flex items-center justify-center">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 16 16 12 12 8"></polyline>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
-                            </div>
-                        </button>
-
-                    </div>
-                </div>
+                <Heading_Btn
+                    h1="Build Your Profitable Security Practice on  Our Platform"
+                    desc="Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to<br /> deliver enterprise-grade  cyber security. No minimums, no complexity, no high startup  costs."
+                    rating="★★★★★  |  Trusted by over 200 MSPs worldwide "
+                    btn1="Apply to Become a partner"
+                    btn2="DOWNLOAD PARTNER KIT"
+                />
             </section >
 
             {/* Go-to-Market Section */}
             < section className="relative z-10 px-6 py-16" >
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-[40px] font-bold text-center mb-10 text-white">Go-to-Market in Days not Months</h2>
+                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">Go-to-Market in Days not Months</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <Card
                             className="relative p-6 rounded-[24px] overflow-hidden"
@@ -200,49 +142,20 @@ export default function VijilianLanding() {
             {/* Partnership Features */}
             < section className="relative z-10 px-6 py-16" >
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-[40px] font-bold text-center mb-10 text-white">
+                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">
                         A Partnership Designed for Your Growth
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   mx-auto">
 
-                        <CardContent
-                            head={"Unlock New MRR"}
-                            sub={`Add high-margin security services to your portfolio. Our model is built to maximize your Monthly
-                                    Recurring Revenue and profitability.`}
-                            iconed={TimeIcon}
-                        />
-                        <CardContent
-                            head={"Your Instant 24/7 SOC"}
-                            sub={`Gain an immediate SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts
-                                    become an extension of your team.`}
-                            iconed={TimeIcon}
-                        />
-                        <CardContent
-                            head={"Go-to-Market Enablement"}
-                            sub={`Access our comprehensive "ThreatRemediator™" Enablement Kit with co-brandable materials, sales decks,
-                                    and proposal generators to win more deals.`}
-                            iconed={RocketIcon}
-                        />
-                        <CardContent
-                            head={"Radical Flexibility & No Risk"}
-                            sub={`Benefit from our channel-first approach with no minimum commitments. Full white-labeling, and a 30-day
-                                    risk-free opt-out trial.`}
-                            iconed={sheildIcon}
-                        />
-                        <CardContent
-                            head={"Simplified Compliance"}
-                            sub={`Effortlessly support your clients' compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC.
-                                    Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your
-                                    workload and minimizing regulatory risks.`}
-                            iconed={TaskCheck}
-                        />
-                        <CardContent
-                            head={"Vendor-Agnostic Integration"}
-                            sub={`Seamlessly integrate with your clients' existing security tools and infrastructure. Vijilan supports
-                                    extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving
-                                    you unmatched flexibility without vendor lock-in.`}
-                            iconed={chainIcon}
-                        />
+
+                        {
+                            CardContentData1.map((card,index) => <CardContent
+                                head={card.head}
+                                Index={index}
+                                sub={card.sub}
+                                iconed={card.iconed}
+                            />)
+                        }
                     </div>
                 </div>
             </section >
@@ -250,7 +163,7 @@ export default function VijilianLanding() {
             {/* Partnership Tiers */}
             < section className="relative z-10 py-16" >
                 <div className="container mx-auto px-6 text-center">
-                    <h2 className="text-[40px] font-bold mb-2 text-white">
+                    <h2 className="text-2xl md:text-[40px] font-bold mb-2 text-white">
                         A Partnership Tier for Every Stage of
                         <br />
                         Your Growth
@@ -318,7 +231,7 @@ export default function VijilianLanding() {
             {/* FAQ Section */}
             < section className="relative z-10 px-6 py-16" >
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-[40px] font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {[
                             "What does Vijilan do for MSPs?",
@@ -335,7 +248,7 @@ export default function VijilianLanding() {
                                         WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                         WebkitMaskComposite: "xor",
                                         maskComposite: "exclude",
-                                        
+
                                     }}
                                 />
                                 <CardContentData className="p-4">

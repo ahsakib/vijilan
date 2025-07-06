@@ -51,7 +51,7 @@ export default function Component() {
     ];
 
     return (
-        <div className="min-h-screen">
+        <div className=" max-w-[90%] mx-auto">
 
             {/* Hero Section */}
             <Heading_Btn
@@ -65,14 +65,14 @@ export default function Component() {
             {/* Video Section */}
             <section className="px-4 py-16 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-[40px] font-bold tracking-tight text-white sm:text-4xl">
+                    <h2 className="text-3xl   md:text-[40px] font-bold   text-white sm:text-4xl">
                         Understand ThreatRespond in 90 Seconds
                     </h2>
                     <p className="mt-2 text-[18px] text-[#FFFFFF]">
                         See how our expert guidance empowers your internal team to handle threats efficiently.
                     </p>
                     <div className="mt-12 relative">
-                        <div className="relative aspect-video w-[621px] mx-auto h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
+                        <div className="relative aspect-video w-auto md:w-[621px] mx-auto h-auto md:h-[500px] bg-[#00AEEF3D] rounded-[26px] flex items-center justify-center" >
                             <div
                                 className="absolute inset-0 rounded-[26px] p-[2px] z-0"
                                 style={{
@@ -109,7 +109,7 @@ export default function Component() {
 
                 <div className="mx-auto max-w-7xl relative z-10">
                     <div className="text-center mb-10">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-4">
+                        <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white mb-4">
                             The Right Service for Your In-House Team
                         </h2>
                         <p className="text-[18px] text-[#FFFFFF]">
@@ -119,8 +119,8 @@ export default function Component() {
 
                     <div className="grid lg:grid-cols-2 gap-8">
                         {/* Left Card */}
-                        <div className="bg-[#082235] p-8 rounded-[10px] backdrop-blur-sm h-fit">
-                            <h3 className="text-[24px] font-medium text-white mb-8">ThreatRespond is a perfect fit if you...</h3>
+                        <div className="bg-[#082235] p-5 md:p-10 rounded-[10px] backdrop-blur-sm h-fit">
+                            <h3 className="text-xl md:text-[24px] font-medium text-white mb-8">ThreatRespond is a perfect fit if you...</h3>
                             <ul className="space-y-6 text-[20px]">
                                 <li className="flex items-start gap-4">
                                     <div className="w-1 h-1 bg-white rounded-full mt-3 flex-shrink-0"></div>
@@ -150,24 +150,24 @@ export default function Component() {
                         </div>
 
                         {/* Right Card */}
-                        <div className="bg-[#082235] p-8 rounded-2xl backdrop-blur-sm">
-                            <h3 className="text-[24px] font-bold text-white mb-6">Looking for hands-on, active remediation?</h3>
-                            <p className="text-white text-[20px] font-medium leading-relaxed mb-8">
+                        <div className="bg-[#082235] p-4 md:p-8 rounded-2xl backdrop-blur-sm">
+                            <h3 className="text-xl md:text-[24px] font-bold text-white mb-6">Looking for hands-on, active remediation?</h3>
+                            <p className="text-white text-sm md:text-[20px] font-medium leading-relaxed mb-8">
                                 If you need a fully managed service where our SOC takes direct action to contain and remediate threats,
                                 explore our flagship ThreatRemediate™ service.
                             </p>
-                            <p className="text-[#00AEEF] text-[18px] leading-relaxed mb-6">
+                            <p className="text-[#00AEEF] text-sm md:text-[20px] leading-relaxed mb-6">
                                 ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
                                 and neutralizes threats in real-time while you sleep.
                             </p>
                             <button
-                                className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                                className="p-2 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
                                 }}>
 
-                                <span className="uppercase">learn about threat remediate</span>
+                                <span className="uppercase text-sm md:text-2xl">learn about threat remediate</span>
                                 <div className="w-6 h-6  flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="12" cy="12" r="10"></circle>
@@ -185,7 +185,7 @@ export default function Component() {
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-5xl font-bold tracking-tight text-white">
+                        <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-white">
                             From Detection to Guided Resolution
                         </h2>
                         <p className="mt-4 text-[18px] text-white">
@@ -193,7 +193,7 @@ export default function Component() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {cardData.map((item, index) => (
                             <SecurityCard key={index} data={item} />
                         ))}
@@ -206,7 +206,7 @@ export default function Component() {
             <section className="container mx-auto px-6 py-20 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white mb-3">
+                        <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white mb-3">
                             Questions About Guided Response?
                         </h2>
                         <p className="text-[20px] text-white">Ask Jen AI, our 24/7 AI-powered Cyber Security Sales Agent.</p>
@@ -216,7 +216,7 @@ export default function Component() {
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             {/* Left Side - Chat Interface */}
                             <div className="space-y-6">
-                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-[60px]">
+                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-4 md:p-[60px]">
                                     <div
                                         className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                         style={{
@@ -228,16 +228,16 @@ export default function Component() {
                                         }}
                                     />
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center"
+                                        <div className="w-[45px] md:w-[60px]  h-[30px] md:h-[60px] rounded-full flex items-center justify-center"
                                             style={{
                                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
-                 linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
+                                                    linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
                                             }}>
                                             <span className="text-white font-bold text-sm">JN</span>
                                         </div>
                                         <div>
-                                            <h3 className="text-white font-bold text-[20px]">JEN AI</h3>
-                                            <p className="text-[#00AEEF] text-[13px] font-medium">Cyber security Sales Agent</p>
+                                            <h3 className="text-white font-bold text-sm md:text-[20px]">JEN AI</h3>
+                                            <p className="text-[#00AEEF] text-xs md:text-[13px] font-medium">Cyber security Sales Agent</p>
                                         </div>
                                     </div>
                                     <div className="relative bg-[#00AEEF4D] p-6 rounded-[16px] w-fit flex justify-center items-center mx-auto">
@@ -266,7 +266,7 @@ export default function Component() {
 
                             {/* Right Side - Suggested Questions */}
                             <div className=" space-y-5">
-                                <h3 className="text-[40px] font-bold text-white">Try asking Jen AI:</h3>
+                                <h3 className="text-2xl md:text-[40px] font-bold text-white">Try asking Jen AI:</h3>
                                 <div className="space-y-4">
                                     {[1, 2, 3, 4, 5].map((index) => (
                                         <div
@@ -297,11 +297,11 @@ export default function Component() {
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-[40px] font-bold tracking-tight text-white">Ready to Empower Your Team?</h2>
+                        <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">Ready to Empower Your Team?</h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center">
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
@@ -329,7 +329,7 @@ export default function Component() {
                             </button>
                         </div>
 
-                        <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center" >
+                        <div className="relative bg-[#00AEEF3D] p-4 md:p-8 rounded-[24px] text-center" >
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
@@ -340,7 +340,7 @@ export default function Component() {
                                     maskComposite: "exclude"
                                 }}
                             />
-                            <div className="py-8">
+                            <div className="py-8 px-5">
                                 <h3 className="text-[24px] font-medium text-white mb-4">Get a ThreatRespond Quote</h3>
                                 <p className="text-white text-[18px] mb-6">
                                     Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
@@ -362,7 +362,7 @@ export default function Component() {
                             </button>
                         </div>
 
-                        <div className=" relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
+                        <div className=" relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center">
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
