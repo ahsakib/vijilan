@@ -10,7 +10,7 @@ const EmergencyBanner = () => {
           backgroundImage: "linear-gradient(to right, #F89B29, #FF0F7B)",
         }}>
         <span className="text-white text-[18px]">Under Attack or Suspect a Breach?</span>
-        <button className="bg-white text-[13px] text-[#082235] hover:bg-gray-100 rounded-[8px] font-medium py-[12px] px-[14px]">
+        <button className="bg-white text-[13px] !text-[#082235] hover:bg-gray-100 rounded-[8px] font-medium py-[12px] px-[14px]">
           GET HELP NOW
         </button>
       </div>

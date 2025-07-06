@@ -30,7 +30,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className='w-full fixed z-50 top-4'>
+    <div className='w-full fixed z-50 top-4'> 
       {location.pathname === '/' && <EmergencyBanner />}
 
       <header className={`w-[1160px] mx-auto rounded-[24px] h-[96px] flex items-center backdrop-blur-sm border-b border-slate-700 mt-4 transition-all duration-300 ease-in-out 
@@ -48,7 +48,7 @@ const Header = () => {
             </div>
 
             <div className='flex items-center gap-6'>
-              <nav className="hidden md:flex space-x-6">
+              <nav className="flex space-x-6">
                 <div className="relative group">
                   <a href="#" className="text-white text-[16px] flex items-center space-x-1">
                     <span>Solutions</span>

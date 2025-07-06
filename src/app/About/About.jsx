@@ -76,7 +76,7 @@ export default function About() {
 
             {/* Mission, Vision, Values */}
 
-            <section className="mt-96 md:mt-5 px-1 md:px-4 py-16">
+            <section className="mt-30 md:mt-5 px-1 md:px-4 py-16 max-w-7xl mx-auto">
                 <div className="  mx-auto px-6">
                     <h2 className="text-[40px] font-bold text-center text-white mb-12">
                         <span className="text-[#00AEEF]">Our Mission</span>, Vision, and Values
@@ -109,7 +109,7 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="relative z-10 px-6 py-16">
+            <section className="relative z-10 px-6 py-16 max-w-7xl mx-auto">
                 <div className=" mx-auto px-6">
                     <h2 className="text-[40px] font-bold text-center text-white mb-12">Meet Our Leadership</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -132,10 +132,7 @@ export default function About() {
                 headingWithDesign={true}
                 smHeading={`Our SOC's Tier 2 certified Security Operations Center is the operational center for your defense. Staffed around the clock by our expert security analysts and powered by advanced AI for incident response, our team leverages our advanced platform to protect your business with unparalleled vigilance.`}
                 videoPart={true}
-
             />
-
-           
         </div>
     )
 }
