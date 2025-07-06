@@ -55,6 +55,7 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
+                 // responsive done
                 path: "/",
                 element: <Home />,
             },
@@ -161,7 +162,8 @@ const router = createBrowserRouter([
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
-            {
+            { 
+                // responsive done
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },
@@ -187,42 +189,53 @@ const router = createBrowserRouter([
             },
 
             {
+                 // responsive done
                 path: "dashbord",
                 element: <Dashbord />
             },
             {
+                 // responsive done
                 path: "case-success",
                 element: <Success_study_case />
             },
             {
+                 // responsive done
                 path: "resilience-case",
                 element: <Resilience_case />
             },
+
             {
+                 // responsive done
                 path: "federal-cmmc-case",
                 element: <Federal_cmmc_case />
             },
             {
+                 // responsive done
                 path: "financial-complianc-case",
                 element: <Financial_Compliance_Case />
             },
             {
+                 // responsive done
                 path: "msp-ogscale-case-study",
                 element: <MSP_logscale_case />
             },
             {
+                 // responsive done
                 path: "smb-runsomware-case-study",
                 element: <SMB_Runsomware />
             },
             {
+                 // responsive done
                 path: "health-compliance",
                 element: <HealthCare_Complain_case />
             },
             {
+                 // responsive done
                 path: "msp-growth-case",
                 element: <MSP_growth_case />
             },
             {
+                 // responsive done
                 path: "smb",
                 element: <SMB />
             },
