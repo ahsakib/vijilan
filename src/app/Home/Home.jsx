@@ -71,26 +71,21 @@ const Home = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* partnership section */}
-        {/* <Partnership/> */}
-
-        {/* quote section */}
-        {/* <Quotes/> */}
+        
 
         {/* Tailored Solutions Section */}
-        <section className="container mx-auto pb-16">
-          <div className="min-h-screen px-4 py-12">
-            <div className="max-w-6xl mx-auto">
+        <section className="container mx-auto pb-20">
+            <div className="">
               {/* Header */}
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-[40px] font-bold text-[#00AEEF] mb-4">
+              <div className="text-center mb-10">
+                <h1 className="text-3xl md:text-[40px] font-bold mb-4" style={{ color: "#00AEEF" }}>
                   Tailored Cybersecurity Solutions
                 </h1>
                 <h2 className="text-4xl md:text-[40px] font-bold text-white">For Your Needs </h2>
               </div>
 
               {/* Cards Container */}
-              <div className="grid md:grid-cols-2 gap-8 mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
                 {/* Left Card - MSPs */}
 
                 <CardContent
@@ -98,7 +93,8 @@ const Home = () => {
                   head="For MSPs, VARs & MSSPs"
                   sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
                   buttonText="EMPOWER YOUR MSP/VAR/MSSP"
-                />
+                  isLeft={true}
+                  />
 
                 {/* Right Card - SMBs */}
                 <CardContent
@@ -107,10 +103,10 @@ const Home = () => {
                   sub="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
                     tailored to your size and industry needs."
                   buttonText="SECURE YOUR BUSINESS"
+                  isLeft={true}
                 />
               </div>
             </div>
-          </div>
         </section>
 
 
@@ -191,9 +187,9 @@ const Home = () => {
               Secure. Compliant. Partner-Focused.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 1st */}
-            <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -213,7 +209,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -233,7 +229,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -253,7 +249,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:-mt-[40px] lg:h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -273,7 +269,7 @@ const Home = () => {
               </p>
             </div>
             {/* 5th */}
-            <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:-mt-[130px] lg:h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -293,7 +289,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative lg:h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -604,7 +600,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="ml-[230px] mt-5">
+          <div className="flex items-center justify-center mx-auto mt-5">
             <button
               className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
               style={{
@@ -670,7 +666,7 @@ const Home = () => {
                 <div className=" mb-4">{item.icon}</div>
                 <h3 className="text-[24px] text-center font-medium text-white mb-3">{item.title}</h3>
                 <p className="text-white text-[18px] mb-4 leading-relaxed text-center">{item.description}</p>
-                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium text-[#082235] ">
+                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{color:"#082235"}}>
                   {item.buttonText}
                 </button>
               </div>

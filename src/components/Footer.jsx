@@ -23,11 +23,9 @@ const Footer = () => {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            <div className="container mx-auto px-6 relative z-10"
-                
-            >
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="pt-24">
-                    <div className="grid md:grid-cols-5 gap-8 mb-12">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
                         <div className="">
                             {/* Footer Logo */}
                             <div className=" flex flex-col mb-6">
@@ -76,8 +74,7 @@ const Footer = () => {
                                 className="px-[24px] py-[16px] font-medium text-[18px] rounded-[8px] text-white h-fit"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                }}
-                            >
+                                }}>
                                 CONTACT US
                             </button>
 
