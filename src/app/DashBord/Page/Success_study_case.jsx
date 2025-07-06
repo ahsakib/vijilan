@@ -1,10 +1,12 @@
+// responsive complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight, Section } from 'lucide-react';
 import React from 'react';
 import NumberShow from '../component/NumberShow';
 import DashBoardCard from '../component/DashBoardCard';
 import { benefitsData, ExucativeSummary, SalesProcess, SMBCard } from '@app/Constant/Constant';
-import CardContent from '@components/CardContent'; 
+import CardContent from '@components/CardContent';
 import ProfileHRCard from '../component/ProfileHRCard';
 import DashboardSideCard from '../component/DashboardSideCard';
 import DashboardSideText from '../component/DashboardSideText';
@@ -141,14 +143,14 @@ const Success_study_case = () => {
             {/* top part */}
             <section className="container mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">blog</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-400 text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
                     </nav>
                 </div>
 
@@ -182,7 +184,6 @@ const Success_study_case = () => {
                     <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12'>
 
                         <div className='text-left'>
-                            {/* <img src='../../../Assets/trade.png' alt="trade" /> */}
                             <h1 className='font-semibold my-5'>📈 Executive Summary</h1>
                             <p className='my-5'>    A mid-sized Value-Added Reseller with a strong sales focus needed a cybersecurity solution that would complement their technology solutions and hardware sales without adding operational complexity. They required a "hands-off" security offering that was easy to sell, provided clear client value, and opened new recurring revenue streams.
 
@@ -190,8 +191,8 @@ const Success_study_case = () => {
                         </div>
 
                         <div className='my-8'>
-                            <h1 className='text-3xl font-semibold mt-3  mb-5 text-center'>ThreatRemotediate Complete /  Silver Tier Results</h1>
-                            <div className='grid grid-cols-2  gap-5'>
+                            <h1 className='text-lg md:text-2xl lg:text-3xl font-semibold mt-3  mb-5 text-center'>ThreatRemotediate Complete /  Silver Tier Results</h1>
+                            <div className='grid grid-cols-1 lg:grid-cols-2  gap-5'>
                                 {ExucativeSummary.map(card => <DashBoardCard
                                     icon={card.icon}
                                     head={card.label}
@@ -212,7 +213,7 @@ const Success_study_case = () => {
                     />
 
                     <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-8 px-12 mt-12'>
-                        <h1 className='text-center mt-8 font-semibold'>🛡️ ThreatRemediate Complete: The Perfect VAR Solution</h1>
+                        <h1 className='text-lg md:text-xl text-center mt-8 font-semibold'>🛡️ ThreatRemediate Complete: The Perfect VAR Solution</h1>
 
                         <p className='text-left my-8'>
                             Vijilan deployed ThreatRemediate Complete with Silver Tier partnership benefits, specifically designed for sales-focused VARs needing a comprehensive yet simple security offering:
@@ -237,7 +238,7 @@ const Success_study_case = () => {
 
                     <div className='mt-8'>
                         <h1 className='my-4 text-center font-semibold'>Accelerated Sales Process</h1>
-                        <div className='mx-16 grid grid-cols-2 gap-5'>
+                        <div className='mx-6 lg:mx-16 grid grid-cols-1 md:grid-cols-2 gap-5'>
                             {
                                 SalesProcess.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} />)
                             }
@@ -248,9 +249,12 @@ const Success_study_case = () => {
 
 
 
-                    <CommonTextCard array={fitForSales}
-                        heading="🎯  Perfect Fit for Sales-Focused VARs"
-                    />
+                    <div className='mt-5'>
+                        <CommonTextCard
+                            array={fitForSales}
+                            heading="🎯  Perfect Fit for Sales-Focused VARs"
+                        />
+                    </div>
 
 
                 </div>
@@ -277,21 +281,27 @@ const Success_study_case = () => {
                     />
 
 
-                    <MesurableComponentDashboard
-                        heading="Measurable Sales & Business Impact"
-                        array={MeasurabeCard}
-                    />
+                    <div className='mt-5'>
+                        <MesurableComponentDashboard
+                            heading="Measurable Sales & Business Impact"
+                            array={MeasurabeCard}
+                        />
+                    </div>
 
-                    <DashboardSideText
-                        desc="Vijilan's ThreatRemediate Complete is the perfect solution for a sales-focused VAR. It's easy to sell, requires zero post-sale management from our team, and our margins have never been better. The partner enablement toolkit had our team closing deals in the first week. It's a true 'sell it and forget it' model with recurring revenue."
-                        author="Director of Sales, VAR Partner"
-                    />
+                    <div className='mt-5'>
+                        <DashboardSideText
+                            desc="Vijilan's ThreatRemediate Complete is the perfect solution for a sales-focused VAR. It's easy to sell, requires zero post-sale management from our team, and our margins have never been better. The partner enablement toolkit had our team closing deals in the first week. It's a true 'sell it and forget it' model with recurring revenue."
+                            author="Director of Sales, VAR Partner"
+                        />
+                    </div>
 
+                    <div className='mt-5'>
 
-                    <CommonTextCard
-                        array={businessModel}
-                        heading="📊 Business Model Transformation"
-                    />
+                        <CommonTextCard
+                            array={businessModel}
+                            heading="📊 Business Model Transformation"
+                        />
+                    </div>
                 </div>
             </div>
 

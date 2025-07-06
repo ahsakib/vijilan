@@ -1,3 +1,5 @@
+// Responsive complete 
+
 import { benefitsData, SMBCard } from '@app/Constant/Constant';
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
@@ -29,7 +31,7 @@ const SMB = () => {
 
                 />
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
                         SMBCard.map((card, index) =>
                             <DashBoardCard
@@ -42,23 +44,23 @@ const SMB = () => {
 
                 {/* checkbox and text area */}
 
-                <div className='bg-gradient-to-t to-[#063853] from-[#082235] p-8 rounded-xl mt-12 '>
+                <div className='bg-gradient-to-t to-[#063853] from-[#082235] p-5 lg:p-8 rounded-3xl mt-12 '>
                     <Heading_Btn
                         h1="Find a Trusted IT & Security Partner"
                         desc="Tell us what you need. We'll connect you with the right experts."
                     />
 
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
-                        <div className='col-span-2  '>
-                            <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                        <div className='col-span-1 md:col-span-2 justify-evenly px-0 md:px-8 lg:px-5'>
+                            <div className='grid grid-cols-1 lg:grid-cols-2 '>
                                 {
                                     checkBox.map(box => <p className='my-1'><span className='h-1 w-1 px-2 mr-2 bg-white '></span>{box}</p>)
                                 }
                             </div>
 
                         </div>
-                        <div>
-                            <p> What services are you looking for?</p>
+                        <div className='mt-5'>
+                            <p className='text-xl'> What services are you looking for?</p>
                             <textarea rows={7} className='rounded-xl p-3 w-full  bg-[#2A4C64] border-none' id=""></textarea>
                         </div>
                     </div>
@@ -79,7 +81,7 @@ const SMB = () => {
                         desc="Join our marketplace to connect with qualified SMBs and leverage our ecosystem to enhance your service offerings. Receive Qualified Leads"
                     />
 
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {benefitsData.map(card => <CardContent
                             icon={card.icon}
                             head={card.title}

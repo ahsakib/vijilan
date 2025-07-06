@@ -24,9 +24,9 @@ const InfoSection = ({ position = "right", width, height, design1, design2, head
             {
                 design2 && (
                     <div class="max-w-2xl bg-transparent text-white">
-                        <h1 class="text-5xl text-[#00AEEF] font-bold mb-2 leading-tight">{heading}</h1>
+                        <h1 class="text-2xl md:text-4xl lg:text-5xl !text-[#00AEEF] font-bold mb-2 leading-tight">{heading}</h1>
 
-                        <p class="text-lg mb-8 mt-4 font-bold">
+                        <p class="text-lg mb-8 mt-4 font-semibold">
                             {subtitle}
                         </p>
 
@@ -34,10 +34,7 @@ const InfoSection = ({ position = "right", width, height, design1, design2, head
                             {desc}
                         </p>
 
-                        <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md 
-border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
-transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
-text-center select-none uppercase">
+                        <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md  border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
                             {btnText}
                         </div>
                     </div>
@@ -53,7 +50,7 @@ text-center select-none uppercase">
     );
 
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${design1 ? "max-w-6xl" :"max-w-7xl"} mx-auto`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 items-center ${design1 ? "max-w-6xl" : "max-w-7xl"} mx-auto`}>
             {position === "left" ? (
                 <>
                     {image}

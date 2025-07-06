@@ -1,3 +1,5 @@
+// Responsive complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -95,16 +97,16 @@ const Financial_Compliance_Case = () => {
     return (
         <div className='max-w-[90%] mx-auto'>
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className="  mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">blog</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-400 text-[13px] font-medium">Financial Service Compliance</span>
                     </nav>
                 </div>
             </section>
@@ -158,7 +160,7 @@ const Financial_Compliance_Case = () => {
 
 
 
-                    <div>
+                    <div className='mt-5'>
                         <CommonTextCard
                             // array={securityArray}
                             card={financialService}
@@ -175,39 +177,47 @@ const Financial_Compliance_Case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
-                        h1="Financial Institution Profile"
-                        l1l="Institution Type"
-                        l1r="Regional Bank"
-                        l2l="Size"
-                        l2r="Mid-Sized"
-                        l3l="Locations"
-                        l3r="Multiple Branches"
-                        l4l="Regulators"
-                        l4r="SEC, FDIC"
-                        l5l="Compliance Focus"
-                        l5r="GLBA, SEC"
-                        l6l="Service Level"
-                        l6r="Gold Tier"
-                    />
+                    <div className='mt-5'>
+                        <ProfileHRCard
+                            h1="Financial Institution Profile"
+                            l1l="Institution Type"
+                            l1r="Regional Bank"
+                            l2l="Size"
+                            l2r="Mid-Sized"
+                            l3l="Locations"
+                            l3r="Multiple Branches"
+                            l4l="Regulators"
+                            l4r="SEC, FDIC"
+                            l5l="Compliance Focus"
+                            l5r="GLBA, SEC"
+                            l6l="Service Level"
+                            l6r="Gold Tier"
+                        />
+                    </div>
 
 
 
-                    <MesurableComponentDashboard
-                        heading="Financial Service & Compliance Results"
-                        array={financialServiceCard}
-                    />
+                    <div className='mt-5'>
+                        <MesurableComponentDashboard
+                            heading="Financial Service & Compliance Results"
+                            array={financialServiceCard}
+                        />
+                    </div>
 
-                    <DashboardSideText
+                  <div className='mt-5'>
+                      <DashboardSideText
                         desc="For us, compliance isn't optional—it's foundational to our business. Vijilan's ThreatRemediate Ultimate service not only hardened our defenses against sophisticated attacks but also transformed our audit process. The detailed compliance reporting they provide is a game-changer. We went into our last audit more prepared and confident than ever before."
                         author="Chief Compliance Officer, Regional Bank"
                     />
+                  </div>
 
 
-                    <CommonTextCard
+                  <div className='mt-5'>
+                      <CommonTextCard
                         array={excelList}
                         heading="🏦 Why Vijilan Excels in Financial Services Security"
                     />
+                  </div>
                 </div>
             </div>
 

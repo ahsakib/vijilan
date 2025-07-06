@@ -1,3 +1,5 @@
+// Responsive complete
+
 import Heading_Btn from "@components/Heading_Btn";
 import React from "react";
 import security from "../../Assets/security.svg";
@@ -67,7 +69,7 @@ const EnterpriseLanding = ({ }) => {
             <section className="px-6 py-16">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-5xl font-bold tracking-tight text-white">
+                        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-white">
                             From Detection to Guided Resolution
                         </h2>
                         <p className="mt-4 text-[18px] text-white">
@@ -75,7 +77,7 @@ const EnterpriseLanding = ({ }) => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {strategicCardData.map((item, index) => (
                             <SecurityCard key={index} data={item} />
                         ))}
@@ -84,7 +86,7 @@ const EnterpriseLanding = ({ }) => {
             </section>
             <section className="px-6 py-16">
                 <div className="text-center">
-                    <h2 className="text-5xl font-bold tracking-tight text-white">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                         Comprehensive Solutions for Your Entire Attack Surface
                     </h2>
                 </div>
@@ -127,16 +129,16 @@ const EnterpriseLanding = ({ }) => {
             </section>
             <section className="px-6 py-16 max-w-8xl mx-auto">
                 <NavyBlueBackground>
-                    <div class="flex flex-col items-center justify-center gap-8 text-center px-4 py-12">
-                        <div class="flex items-center justify-center w-[256.96px] h-[62.29px] bg-transparent border-2 border-[#00AEEF] rounded-full shadow-sm font-sans hover:bg-[#00AEEF]/10 transition-colors duration-200">
+                    <div class="flex flex-col items-center justify-center gap-8 text-center  py-12">
+                        <div class="flex items-center justify-center  px-2 md:px-8    py-6 bg-transparent border-2 border-[#00AEEF] rounded-full shadow-sm font-sans hover:bg-[#00AEEF]/10 transition-colors duration-200">
                             <span class="text-white font-bold text-xl tracking-wide">SOC 2 Type II Certified</span>
                         </div>
 
-                        <div class="space-y-6 max-w-4xl">
-                            <h1 class="font-bold text-5xl text-white leading-tight">
+                        <div class="space-y-6 max-w-4xl ">
+                            <h1 class="font-bold text-xl md:text-3xl lg:text-5xl text-white">
                                 Achieve and Maintain Compliance with Confidence
                             </h1>
-                            <p class="text-lg text-white/80 leading-relaxed">
+                            <p class="text-sm  md:text-lg text-white/80 leading-relaxed">
                                 Our services are designed to help you meet rigorous regulatory standards.
                                 We provide detailed, audit-ready reporting and long-term log retention to support your
                                 compliance needs for HIPAA, GDPR, PCI DSS, CMMC, and more.

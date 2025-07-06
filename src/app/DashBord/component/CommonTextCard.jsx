@@ -3,11 +3,13 @@ import React from 'react';
 import DashBoardCard from './DashBoardCard';
 
 const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border, borderColor, listHead, listTop, grid_4, p1, p2, card, list, numCard, li, list_p, list_key, chart }) => {
+
+
   return (
-    <div className={`${bg ? "bg-gradient-to-t to-[#063853] from-[#082235]" : "bg-transparent"} py-5 px-12 `} >
-      <h1 className='text-center mt-8 font-semibold'>{heading}</h1>
+    <div className={`${bg ? "bg-gradient-to-t to-[#063853] from-[#082235]" : "bg-transparent"} py-5 px-8 md:px-4  `} >
+      <h1 className='text-center mt-8 font-semibold  '>{heading}</h1>
       <h1 className='  mb-4 text-left mt-8 font-semibold'>{heading1}</h1>
-      <p className=' my-3'>{p1}</p>
+      <p className=' my-3 sm:p-2 md:px-5'>{p1}</p>
       <p className=' my-3'>{p2}</p>
       {
         listTop &&
@@ -30,7 +32,7 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8'>
             {card.map(card => <DashBoardCard
-            Number={card.metric}
+              Number={card.metric}
               icon={card.icon}
               head={card.label}
               desc={card.text}

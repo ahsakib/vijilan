@@ -1,3 +1,5 @@
+// responsive complete
+
 import React from 'react';
 import NumberShow from '../component/NumberShow';
 import { ChevronRight } from 'lucide-react';
@@ -142,14 +144,14 @@ const HealthCare_Complain_case = () => {
                 {/* top part */}
                 <section className="container mx-auto px-6">
                     <div className="mb-8">
-                        <nav className="flex items-center text-[12px]">
+                        <nav className="flex flex-wrap items-center text-[12px]">
                             <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
                             <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
                             <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
+                            <span className="!text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
                         </nav>
                     </div>
                 </section>
@@ -184,44 +186,43 @@ const HealthCare_Complain_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <CommonTextCard
-                        heading1="🏥 Executive Summary"
-                        h
-                        p1=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
-                        heading2="HIPAA Compliance Achievement"
-                        card={complianceArray}
-                        border={true}
-                        borderColor="green"
+                    <div className='mt-5'>
+                        <CommonTextCard
+                            heading1="🏥 Executive Summary"
+                            p1=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
+                            heading2="HIPAA Compliance Achievement"
+                            card={complianceArray}
+                            border={true}
+                            borderColor="green"
 
-                    />
-
-
-
+                        />
+                    </div>
 
 
-                    <CommonTextCard
-
-                        heading=" ⚕️ Healthcare Security Challenges"
-
-                        p1="Healthcare organizations face unique cybersecurity challenges that combine patient safety concerns with strict regulatory requirements:"
-                        listTop={list}
-                        heading2="Healthcare Threat Protection Matrix"
-                        card={healthcareArray}
-                        border={true}
-                        borderColor="green"
-                    />
 
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+
+                    <div className='mt-5'>
+                        <CommonTextCard
+                            heading=" ⚕️ Healthcare Security Challenges"
+                            p1="Healthcare organizations face unique cybersecurity challenges that combine patient safety concerns with strict regulatory requirements:"
+                            listTop={list}
+                            heading2="Healthcare Threat Protection Matrix"
+                            card={healthcareArray}
+                            border={true}
+                            borderColor="green"
+                        />
+                    </div>
+
+
+                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-8 lg:px-12 mt-12'>
                         <h1 className='  mb-4 text-left mt-8 font-semibold'>🛡️ Comprehensive Healthcare Security Solution</h1>
                         <p className=' my-3'>Vijilan deployed a multi-layered security solution specifically tailored for the healthcare environment, centered on proactive defense and identity protection:</p>
 
                         <h4 className='text-center text-2xl mb-5'>Healthcare Security Architecture</h4>
 
 
-
-
-                        <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                        <div className='grid sm:grid-cols-1 lg:grid-cols-2   gap-5'>
                             {healthcareSecurity.map((card, index) => (
                                 <div key={index} className='flex  items-center justify-center'>
                                     <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
@@ -235,7 +236,7 @@ const HealthCare_Complain_case = () => {
                         </div>
 
 
-                        <div>
+                        <div className='mt-8'>
                             <CommonTextCard
                                 bg={false}
                                 array={healthcareServices}
@@ -244,24 +245,11 @@ const HealthCare_Complain_case = () => {
                         </div>
                     </div >
 
-                    <CommonTextCard
-                        array={healthcareContinuity}
-                        heading="⚙️ Healthcare-Focused Implementation"
-
-                    />
-
-
-
-                    {/* <div className='mt-12'>
-
+                    <div className='mt-5'>
                         <CommonTextCard
-                            heading1="🛡️ Comprehensive Healthcare Security Solution"
-                            p1="Vijilan deployed a multi-layered security solution specifically tailored for the healthcare environment, centered on proactive defense and identity protection:"
-                            heading2="Healthcare Security Architecture"
-                            card={threatProtectionArray}
-
-                        />
-                    </div> */}
+                            array={healthcareContinuity}
+                            heading="⚙️ Healthcare-Focused Implementation" />
+                    </div>
 
 
 
@@ -285,25 +273,31 @@ const HealthCare_Complain_case = () => {
                         l6r="High-Target Industry"
                     />
 
+                    <div className='mt-5'>
 
-                    <MesurableComponentDashboard
-                        heading=" Healthcare Security & Compliance Results"
+                        <MesurableComponentDashboard
+                            heading=" Healthcare Security & Compliance Results"
 
-                        array={HIPAA_results}
-                    />
+                            array={HIPAA_results}
+                        />
+                    </div>
 
-                    <DashboardSideText
-                        desc="In healthcare, a data breach isn't just a financial event—it's a fundamental violation of patient trust. Vijilan's focus on identity protection and proactive exposure management gave us the confidence that we were securing our patient data at the highest level. Their compliance reporting made our HIPAA audits smoother and faster than we ever thought possible."
-                        author="CISO, Regional Healthcare System"
+                    <div className='mt-5'>
+                        <DashboardSideText
+                            desc="In healthcare, a data breach isn't just a financial event—it's a fundamental violation of patient trust. Vijilan's focus on identity protection and proactive exposure management gave us the confidence that we were securing our patient data at the highest level. Their compliance reporting made our HIPAA audits smoother and faster than we ever thought possible."
+                            author="CISO, Regional Healthcare System"
 
-                    />
+                        />
+                    </div>
 
 
-                    <CommonTextCard
-                        array={healthcareValue}
-                        heading=" 🏥 Why Vijilan Excels in Healthcare Security"
+                    <div className='mt-5'>
+                        <CommonTextCard
+                            array={healthcareValue}
+                            heading=" 🏥 Why Vijilan Excels in Healthcare Security"
 
-                    />
+                        />
+                    </div>
                 </div>
 
             </div>

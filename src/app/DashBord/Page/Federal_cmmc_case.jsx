@@ -1,3 +1,5 @@
+//  Responsive complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -105,16 +107,16 @@ const Federal_cmmc_case = () => {
     return (
         <div className='max-w-[90%] mx-auto'>
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className=" mx-auto px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">blog</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-700 text-[13px]  ">The Rise of Malware-Free Attacks</span>
                     </nav>
                 </div>
             </section>
@@ -142,7 +144,11 @@ const Federal_cmmc_case = () => {
 
             <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
                 {
-                    numberArray.map(card => <NumberShow link={card.label} number={card.metric} />)
+                    numberArray.map(card => <NumberShow
+                        link={card.label}
+                        number={card.text}
+
+                    />)
                 }
             </div>
 
@@ -154,7 +160,7 @@ const Federal_cmmc_case = () => {
 
                 <div className='grid-cols-1'>
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12'>
+                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] '>
 
                         <CommonTextCard
                             heading1="Us Executive Summary"
@@ -169,7 +175,7 @@ const Federal_cmmc_case = () => {
 
                     </div>
                     {/* ⚠️ Government Compliance Challenges */}
-                    <div>
+                    <div className='mt-5'>
                         <ListComponent
                             heading="⚠️ Government Compliance Challenges "
                             p1="Federal contractors face unique cybersecurity challenges that combine complex regulatory requirements with the need to protect sensitive government information"
@@ -180,7 +186,7 @@ const Federal_cmmc_case = () => {
 
 
 
-                    <div>
+                    <div className='mt-5'>
                         <CommonTextCard
                             // array={securityArray}
                             card={awsCard}
@@ -192,7 +198,7 @@ const Federal_cmmc_case = () => {
                             list_key="Key Solution Components:"
                         />
                     </div>
-                    <div>
+                    <div className='mt-5'>
                         <Heading_Btn
 
                             h3="⏱️ 6-Week Compliance Timeline"
@@ -202,7 +208,7 @@ const Federal_cmmc_case = () => {
 
                         <div className='mt-8'>
                             <h1 className='my-4 text-center font-semibold'> 🛡️ Comprehensive IT/OT Security Solution</h1>
-                            <div className='mx-16 grid grid-cols-2 gap-5'>
+                            <div className='mx-6 md:mx-16 grid grid-cols-1 lg:grid-cols-2 gap-5'>
                                 {
                                     IT_IO.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} />)
                                 }
@@ -217,38 +223,46 @@ const Federal_cmmc_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
-                        h1="Federal Contractor Profile"
-                        l1l="Contractor Type"
-                        l1r="Defense Contractor"
-                        l2l="Size"
-                        l2r="Mid-Sized"
-                        l3l="Primary Customer"
-                        l3r="Department of Defense"
-                        l4l="Compliance Requirement"
-                        l4r="CMMC 2.0 Level 2"
-                        l5l="Data Classification"
-                        l5r="CUI Protection"
-                        l6l="Deployment"
-                        l6r="AWS Marketplace"
-                    />
+                    <div className='mt-5'>
+                        <ProfileHRCard
+                            h1="Federal Contractor Profile"
+                            l1l="Contractor Type"
+                            l1r="Defense Contractor"
+                            l2l="Size"
+                            l2r="Mid-Sized"
+                            l3l="Primary Customer"
+                            l3r="Department of Defense"
+                            l4l="Compliance Requirement"
+                            l4r="CMMC 2.0 Level 2"
+                            l5l="Data Classification"
+                            l5r="CUI Protection"
+                            l6l="Deployment"
+                            l6r="AWS Marketplace"
+                        />
+                    </div>
 
 
-                    <MesurableComponentDashboard
-                        heading="Manufacturing Security & Operational Results"
-                        array={federalCard}
-                    />
+                    <div className='mt-5'>
+                        <MesurableComponentDashboard
+                            heading="Manufacturing Security & Operational Results"
+                            array={federalCard}
+                        />
+                    </div>
 
-                    <DashboardSideText
-                        desc="The CMMC deadline was a make-or-break moment for our business. We didn't have the time or expertise to build a compliant program from scratch. Finding Vijilan on the AWS Marketplace was a lifesaver. Their team got us deployed and audit-ready in just six weeks, and we passed our assessment without a single issue. We couldn't have done it without them."
-                        author="CEO, Defense Contractor"
-                    />
+                    <div className='mt-5'>
+                        <DashboardSideText
+                            desc="The CMMC deadline was a make-or-break moment for our business. We didn't have the time or expertise to build a compliant program from scratch. Finding Vijilan on the AWS Marketplace was a lifesaver. Their team got us deployed and audit-ready in just six weeks, and we passed our assessment without a single issue. We couldn't have done it without them."
+                            author="CEO, Defense Contractor"
+                        />
+                    </div>
 
 
-                    <CommonTextCard
+                   <div className='mt-5'>
+                     <CommonTextCard
                         array={excelList}
                         heading="Why Vijilan Excels in Government  Compliance"
                     />
+                   </div>
                 </div>
             </div>
 
