@@ -30,6 +30,7 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
 
           <div className='grid grid-cols-2 gap-5 mt-8'>
             {card.map(card => <DashBoardCard
+            Number={card.metric}
               icon={card.icon}
               head={card.label}
               desc={card.text}

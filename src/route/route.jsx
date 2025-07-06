@@ -47,6 +47,7 @@ import Financial_Compliance_Case from '@app/DashBord/Page/Financial_Compliance_C
 import MSP_logscale_case from '@app/DashBord/Page/MSP_logscale_case';
 import SMB_Runsomware from '@app/DashBord/Page/SMB_Runsomware';
 import HealthCare_Complain_case from '@app/DashBord/Page/HealthCare_Complain_case';
+import MSP_growth_case from '@app/DashBord/Page/MSP_growth_case';
 
 const router = createBrowserRouter([
     {
@@ -197,6 +198,10 @@ const router = createBrowserRouter([
             {
                 path: "health-compliance",
                 element: <HealthCare_Complain_case />
+            },
+            {
+                path: "msp-growth-case",
+                element: <MSP_growth_case />
             },
             {
                 path: "smb",

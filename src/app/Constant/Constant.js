@@ -49,8 +49,10 @@ import cren from "../../Assets/cren.png";
 import parts from "../../Assets/parts.png";
 import vol from "../../Assets/vol.png";
 import signal from "../../Assets/signal.png";
+import user from "../../Assets/user.png";
+import users from "../../Assets/users.png";
+import earth from "../../Assets/earth.png";
 import threat from "../../Assets/threat.png";
-
 
 
 
@@ -826,3 +828,57 @@ export const healthcareSecurity = [
     text: "Comprehensive audit-ready documentation supporting HIPAA regulatory adherence"
   }
 ];
+
+export const ThreatRemediate_Ultimate = [
+  
+  {
+    icon: threat,
+    label: "CrowdStrike Falcon XDR",
+    text: "Advanced endpoint detection and response with AI-powered threat hunting"
+  },
+  {
+    icon: earth,
+    label: "Corelight Network Detection",
+    text: "Comprehensive network visibility and threat detection capabilities"
+  },
+  {
+    icon: parts,
+    label: "Cribl Data Optimization",
+    text: "Efficient log management and cost optimization for data ingestion"
+  },
+  {
+    icon: user,
+    label: "Identity Protection (ITDR)",
+    text: "Managed Identity Threat Detection and Response capabilities"
+  },
+  {
+    icon: pin,
+    label: "Exposure Management",
+    text: "Proactive vulnerability and exposure assessment and management"
+  },
+  {
+    icon: users,
+    label: "24/7 Expert SOC",
+    text: "US-based Security Operations Center with active remediation"
+  }
+];
+
+export const DeploymentTimeline = [
+  {
+    label: "Week 1: Discovery & Planning",
+    text: "Comprehensive assessment of existing infrastructure, client environments, and security requirements. Development of implementation roadmap and client communication strategy."
+  },
+  {
+    label: "Week 2: Platform Deployment",
+    text: "Installation and configuration of CrowdStrike Falcon agents, Corelight sensors, and Cribl data pipelines across client environments. Initial SOC integration and monitoring setup."
+  },
+  {
+    label: "Week 3: Testing & Optimization",
+    text: "Comprehensive testing of all security components, alert tuning, and optimization of data flows. Training for MSP technical team on new processes and escalation procedures."
+  },
+  {
+    label: "Week 4: Full Production",
+    text: "Complete transition to full production monitoring with Vijilan's SOC providing 24/7 threat detection, investigation, and active remediation services."
+  }
+];
+

@@ -137,42 +137,46 @@ const HealthCare_Complain_case = () => {
 
     return (
         <div className='max-w-[90%] mx-auto text-white'>
-            {/* top part */}
-            <section className="container mx-auto px-6">
-                <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
-                        <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
-                        <ChevronRight className="text-white w-4 h-4 mx-2" />
-                        <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
-                        <ChevronRight className="text-white w-4 h-4 mx-2" />
-                        <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
-                        <ChevronRight className="text-white w-4 h-4 mx-2" />
-                        <span className="text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
-                    </nav>
+            <div>
+
+                {/* top part */}
+                <section className="container mx-auto px-6">
+                    <div className="mb-8">
+                        <nav className="flex items-center text-[12px]">
+                            <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
+                            <ChevronRight className="text-white w-4 h-4 mx-2" />
+                            <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
+                            <ChevronRight className="text-white w-4 h-4 mx-2" />
+                            <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
+                            <ChevronRight className="text-white w-4 h-4 mx-2" />
+                            <span className="text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
+                        </nav>
+                    </div>
+                </section>
+
+                {/* button */}
+                <section className='flex justify-center'>
+                    <button
+                        className="py-3  px-5 text-lg  rounded-4xl text-white bg-green-500 font-semibold">
+                        Compliance Success
+                    </button>
+                    {/* heading button */}
+
+
+                </section>
+                <Heading_Btn
+                    h1="Healthcare System Achieves HIPAA Success and 3x Faster Audits with Managed ITDR & Exposure Management"
+                    desc="Discover how a regional healthcare system achieved 100% HIPAA audit success while dramatically reducing audit preparation time through proactive identity protection and exposure management."
+                />
+
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+                    {
+                        numberArray.map(card => <NumberShow link={card.text} number={card.label} />)
+                    }
                 </div>
-            </section>
-
-            {/* button */}
-            <section className='flex justify-center'>
-                <button
-                    className="py-3  px-5 text-lg  rounded-4xl text-white bg-green-500 font-semibold">
-                    Compliance Success
-                </button>
-                {/* heading button */}
 
 
-            </section>
-            <Heading_Btn
-                h1="Healthcare System Achieves HIPAA Success and 3x Faster Audits with Managed ITDR & Exposure Management"
-                desc="Discover how a regional healthcare system achieved 100% HIPAA audit success while dramatically reducing audit preparation time through proactive identity protection and exposure management."
-            />
-
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
-                {
-                    numberArray.map(card => <NumberShow link={card.text} number={card.label} />)
-                }
             </div>
-
 
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
@@ -240,13 +244,13 @@ const HealthCare_Complain_case = () => {
                         </div>
                     </div >
 
-                    <CommonTextCard 
+                    <CommonTextCard
                         array={healthcareContinuity}
                         heading="⚙️ Healthcare-Focused Implementation"
 
                     />
 
-                 
+
 
                     {/* <div className='mt-12'>
 
@@ -259,7 +263,7 @@ const HealthCare_Complain_case = () => {
                         />
                     </div> */}
 
-                   
+
 
                 </div>
                 <div className='grid-cols-1'>

@@ -206,7 +206,7 @@ const MSP_logscale_case = () => {
                                 {Datapipeline.map((card, index) => (
                                     <div key={index} className='flex  items-center justify-center'>
                                         <div className='flex justify-center flex-col items-center bg-[#2B3840] py-8 px-4 gap-5 rounded-lg text-center  '>
-                                            <img src={card.icon} alt="" />
+                                            <img src={card.icon} className=' ' alt="" />
                                             <h4>{card.label}</h4>
                                             <p>{card.text}</p>
                                         </div>
@@ -249,6 +249,7 @@ const MSP_logscale_case = () => {
 
                         </div>
                     </div >
+
 
 
                     <div>
