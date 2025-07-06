@@ -12,7 +12,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
             >
                 <div className="mx-auto max-w-7xl text-center space-y-8">
                     {h1 &&
-                        <h1 className={`${isSmallHeading ? "text-[40px]" : "text-5xl"} font-bold tracking-tight text-white`}>
+                        <h1 className={`${isSmallHeading ? "sm:text-3xl md:text-[40px]" : "sm:text-3xl md:text-5xl"} font-bold tracking-tight text-white`}>
                             {h1}
                         </h1>
 

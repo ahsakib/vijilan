@@ -1,3 +1,5 @@
+// Responsive Complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -132,16 +134,16 @@ const SMB_Runsomware = () => {
     return (
         <div className='max-w-[90%] mx-auto'>
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className="px-6">
                 <div className="mb-8">
-                    <nav className="flex items-center text-[12px]">
+                    <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Resources</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-white text-[13px] font-medium" Home  > SMB Ransomeware Recovery</span>
+                        <span className="text-blue-600  text-[13px]  "  > SMB Ransomeware Recovery</span>
                     </nav>
                 </div>
             </section>
@@ -168,7 +170,7 @@ const SMB_Runsomware = () => {
 
             {/* divided 2 cols */}
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 justify-between gap-8 mt-12'>
 
                 <div className='grid-cols-1'>
 
@@ -195,10 +197,10 @@ const SMB_Runsomware = () => {
 
                             {
                                 detectionArray.map(card =>
-                                    <div className='flex items-center justify-between gap-5'>
-                                        <p className='w-1/4 bg-[#F1511B] py-3 px-5 rounded-3xl text-center font-semibold'>{card.time}</p>
+                                    <div className='flex flex-col lg:flex-row items-center justify-between gap-5'>
+                                        <p className='w-full lg:w-1/4 bg-[#F1511B] py-3 px-5 rounded-3xl text-center font-semibold'>{card.time}</p>
 
-                                        <div className='w-3/4 bg-[#566674] p-6'>
+                                        <div className='w-full lg:w-3/4 bg-[#566674] p-6'>
                                             <h6 className='my-3 font-semibold'>{card.label}</h6>
                                             <p className='mt-3'>{card.text}</p>
                                         </div>
@@ -222,7 +224,7 @@ const SMB_Runsomware = () => {
                     </div>
 
 
-                    <div className=''>
+                    <div className='mt-5'>
                         <CommonTextCard
                             array={madeDifference}
                             li={true}
@@ -231,12 +233,15 @@ const SMB_Runsomware = () => {
                         />
 
 
-                        <CommonTextCard
-                            heading="The Power Rapid Response"
-                            numCard={card}
-                        />
+                        
 
                     </div>
+                    <div className='mt-5'>
+                            <CommonTextCard
+                                heading="The Power Rapid Response"
+                                numCard={card}
+                            />
+                        </div>
 
 
                 </div>
@@ -267,10 +272,10 @@ const SMB_Runsomware = () => {
                                 protectionStack.map(li => <li className='list-disc mt-3'>{li} </li>)
                             }
                         </div>
-                    </div> 
+                    </div>
 
 
-                    <div className="p-[1px]  rounded-lg bg-gradient-to-l to-[#F89B29] from-[#FF0F7B] mt-8">
+                    <div className="p-[1px]  my-5 rounded-lg bg-gradient-to-l to-[#F89B29] from-[#FF0F7B] mt-8">
                         <div
                             className="p-[18px] text-lg font-medium  bg-[#66637C] w-full text-white inline-flex items-center space-x-3  rounded-lg"
 
@@ -289,16 +294,18 @@ const SMB_Runsomware = () => {
 
 
 
-                    <CommonTextCard
+                    <div className='mt-5'>
+                        <CommonTextCard
                         array={protectionInsights}
                         heading=" 🚀 Why This Story Matters"
                     />
+                    </div>
                 </div>
             </div>
 
 
 
-            <div>
+            <div className='mt-5'>
                 <CommonTextCard
                     heading="The Business Impact"
                     numCard={businessImpact}

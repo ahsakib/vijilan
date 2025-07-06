@@ -1,3 +1,6 @@
+
+// Responsive Complete
+
 import Heading_Btn from '@components/Heading_Btn';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
@@ -125,7 +128,7 @@ const MSP_growth_case = () => {
                 {/* top part */}
                 <section className="container mx-auto px-6">
                     <div className="mb-8">
-                        <nav className="flex items-center text-[12px]">
+                        <nav className="flex flex-wrap items-center text-[12px]">
                             <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
                             <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
@@ -165,7 +168,7 @@ const MSP_growth_case = () => {
 
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 justify-between  items-start'>
 
                 <div className='grid-cols-1'>
 
@@ -175,8 +178,8 @@ const MSP_growth_case = () => {
 
                         p1=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
                         heading2="Key Achievement"
-                        card={MSP_Outcomes} 
-                        borderColor="green"
+                        card={MSP_Outcomes}
+
 
                     />
 
@@ -194,7 +197,7 @@ const MSP_growth_case = () => {
                         <p className=' my-3'>Vijilan deployed ThreatRemediate Ultimate, our flagship fully managed Extended Detection and Response (XDR) solution. This comprehensive platform integrated seamlessly with the MSP's existing infrastructure while providing enterprise-grade security capabilities.</p>
 
 
-                        <div className='grid sm:grid-cols-2 grid-cols-4 gap-5'>
+                        <div className='grid sm:grid-cols-1  lg:grid-cols-4 gap-5'>
                             {ThreatRemediate_Ultimate.map((card, index) => (
                                 <div key={index} className='flex  items-center justify-center'>
                                     <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
