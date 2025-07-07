@@ -63,9 +63,9 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                             </button>
                         }
                         {btn2 &&
-                            <div className="  rounded-lg  ">
+                            <div className="rounded-lg">
                                 <button
-                                    className="relative p-[18px] text-lg font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg">
+                                    className="relative p-[22px] text-lg font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg">
                                     <div
                                         className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
                                         style={{

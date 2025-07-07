@@ -85,30 +85,28 @@ const Header = () => {
       >
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
-          <div className="flex flex-col items-center">
+          <Link to="/" className="flex flex-col items-center">
             <img src={logo} alt="logo" className="w-[100px] h-[34px]" />
             <img src={logoSub} alt="sub" className="w-[56px] h-[5px] ml-[33px] -mt-[6px]" />
-          </div>
+          </Link>
 
 
           <>
             {/* desktop menu style */}
             <style>
               {`
-          .desktop-menu {
-            display: none;
-          }
+                  .desktop-menu {
+                    display: none;
+                  }
 
-          @media (min-width: 1024px) {
-            .desktop-menu {
-              display: flex !important;
-            }
-          }
-         
-        `}
+                  @media (min-width: 1024px) {
+                    .desktop-menu {
+                      display: flex !important;
+                    }
+                  }
+              `}
             </style>
-
-
+            
             {/* Desktop Menu */}
             <div className="desktop-menu items-center gap-6">
               <nav className="flex space-x-6">
@@ -121,9 +119,8 @@ const Header = () => {
                     }>
                     <a
                       href="#"
-                      className={`text-[16px] flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-[#00AEEF]" : "text-white"
-                        }`}>
-                      <span>{item.name}</span>
+                      className={`text-[16px] flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-active" : ""}`}>
+                      <span className={`${activeDropdown === item.name ? "text-active" : ""}`}>{item.name}</span>
                       <ChevronDown
                         className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px]" : ""
                           }`} />
@@ -192,7 +189,7 @@ const Header = () => {
                           ?.dropdownComponent
                       }
                     </div>
-                    )}
+                  )}
                 </div>
               ))}
               <Link to="about" className="text-white text-[16px]">About</Link>

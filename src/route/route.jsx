@@ -93,10 +93,6 @@ const router = createBrowserRouter([
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
-            // {
-            //     path: "threat-respond-service",
-            //     element: <ThreatResponse />,
-            // },
             {
                 // responsive done
                 path: "threat-respond-service-2",

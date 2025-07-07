@@ -9,34 +9,35 @@ import crib from "../../Assets/crib.png";
 import identity from "../../Assets/identity.png";
 import error from "../../Assets/error.png";
 import response from "../../Assets/response.png";
+import { Link } from 'react-router-dom';
 
 const leftColumnServices = [
     {
         icon: smallSheild,
         title: "ThreatRespond (Detection + Guided Response)",
         description: "Professional service descriptions and value propositions for your website",
-       
+        url: "threat-respond-service"
     },
     {
         icon: response,
         title: "ThreatRespond (Detection + Guided Response)",
         description:
             "Our flagship hands-off solution: 24/7 monitoring, detection, threat hunting, AND direct containment and remediation by Vijilan's expert SOC team. Powered by CrowdStrike Falcon.",
-      
+        url: "threat-respond-service-2"
     },
     {
         icon: identity,
         title: "Managed Identity Threat Detection & Response (Managed ITDR)",
         description:
             "Combat the #1 attack vector with 24/7 monitoring, detection, and real-time response to identity-based threats using CrowdStrike Falcon Identity Protection.",
-       
+
     },
     {
         icon: error,
         title: "Managed Exposure Management",
         description:
             "Proactively identify and reduce your attack surface with CrowdStrike Falcon Exposure Management, prioritizing vulnerabilities and mitigating risks.",
-        
+
     },
 ]
 
@@ -92,15 +93,18 @@ const SolutionDropdown = () => {
                     </h2>
                     <div className="space-y-8">
                         {leftColumnServices.map((service, index) => (
-                            <div key={index} className="flex gap-4">
-                                <div className="flex items-center ">
-                                    <img src={service.icon} alt="" />
+                            <Link to={`${service?.url}`} key={index} className="block">
+                                <div key={index} className="flex gap-4">
+                                    <div className="flex items-center ">
+                                        <img src={service.icon} alt="" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
+                                        <p className="text-sm leading-relaxed">{service.description}</p>
+                                    </div>
                                 </div>
-                                <div className="flex-1">
-                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
-                                    <p className="text-sm leading-relaxed">{service.description}</p>
-                                </div>
-                            </div>
+                            </Link>
+
                         ))}
                     </div>
                 </div>

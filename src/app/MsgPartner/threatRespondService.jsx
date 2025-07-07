@@ -56,7 +56,7 @@ export default function Component() {
             {/* Hero Section */}
             <Heading_Btn
                 h1=" Expert Detection. Actionable Guidance."
-                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from <br /> our expert SOC, delivering clear, step-by-step instructions for your internal team to <br /> remediate threats quickly and effectively."
+                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from  our expert SOC, delivering clear, step-by-step instructions for your internal team to remediate threats quickly and effectively."
                 btn1="Jwatch the service overview"
                 btn2="get an instant quote"
             />

@@ -503,6 +503,9 @@ body::before {
   z-index: -1;
 }
 
+.text-active {
+  color: #00AEEF !important; /* Use !important here if absolutely necessary due to strong global styles, but try without first. */
+}
 .cyber-card {
   position: relative;
   border-radius: 1.5rem;
