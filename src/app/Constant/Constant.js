@@ -358,17 +358,17 @@ export const Empower = [
   {
     title: "The Consultant's Guide to Modernizing Cybersecurity",
     button: "DOWNLOAD GUIDE",
-    icon: "/icons/consultant-guide.svg"
+    des: "Add Icon"
   },
   {
-    title: "The vCISO's Blueprint for a Future-Proof SOC",
+    title:`The vCISO's Blueprint for a Future-Proof SOC`,
     button: "DOWNLOAD BLUEPRINT",
-    icon: "/icons/vciso-blueprint.svg"
+    des: "Add Icon"
   },
   {
     title: "Quick Sell Guide: ThreatRemediate for VARs",
     button: "DOWNLOAD GUIDE",
-    icon: "/icons/threatremediate-guide.svg"
+    des: "Add Icon"
   }
 ]
 

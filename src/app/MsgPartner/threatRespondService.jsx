@@ -51,12 +51,12 @@ export default function Component() {
     ];
 
     return (
-        <div className=" max-w-[90%] mx-auto">
+        <div className="">
 
             {/* Hero Section */}
             <Heading_Btn
                 h1=" Expert Detection. Actionable Guidance."
-                desc="Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from  our expert SOC, delivering clear, step-by-step instructions for your internal team to remediate threats quickly and effectively."
+                desc={"Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from\nour expert SOC, delivering clear, step-by-step instructions for your internal team to\nremediate threats quickly and effectively."}
                 btn1="Jwatch the service overview"
                 btn2="get an instant quote"
             />
@@ -93,21 +93,9 @@ export default function Component() {
 
             {/* Service Comparison */}
             <section className="container mx-auto px-6 py-16  relative overflow-hidden">
-                {/* Background decorative elements */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-20 right-10 w-96 h-96 border border-purple-500/20 rounded-full"></div>
-                    <div className="absolute bottom-20 left-10 w-64 h-64 border border-purple-500/20 rounded-full"></div>
-                    <svg
-                        className="absolute top-40 right-1/4 w-32 h-32 text-purple-500/10"
-                        fill="currentColor"
-                        viewBox="0 0 100 100"
-                    >
-                        <path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                        <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="currentColor" strokeWidth="0.5" />
-                    </svg>
-                </div>
 
-                <div className="mx-auto max-w-7xl relative z-10">
+
+                <div className=" relative z-10">
                     <div className="text-center mb-10">
                         <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white mb-4">
                             The Right Service for Your In-House Team
@@ -150,13 +138,13 @@ export default function Component() {
                         </div>
 
                         {/* Right Card */}
-                        <div className="bg-[#082235] p-4 md:p-8 rounded-2xl backdrop-blur-sm">
+                        <div className="bg-[#082235] p-8 rounded-2xl backdrop-blur-sm">
                             <h3 className="text-xl md:text-[24px] font-bold text-white mb-6">Looking for hands-on, active remediation?</h3>
                             <p className="text-white text-sm md:text-[20px] font-medium leading-relaxed mb-8">
                                 If you need a fully managed service where our SOC takes direct action to contain and remediate threats,
                                 explore our flagship ThreatRemediate™ service.
                             </p>
-                            <p className="text-[#00AEEF] text-sm md:text-[20px] leading-relaxed mb-6">
+                            <p className=" text-sm md:text-[18px] leading-relaxed mb-6" style={{ color: "#00AEEF" }}>
                                 ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
                                 and neutralizes threats in real-time while you sleep.
                             </p>
@@ -167,7 +155,7 @@ export default function Component() {
 
                                 }}>
 
-                                <span className="uppercase text-sm md:text-2xl">learn about threat remediate</span>
+                                <span className="uppercase text-sm md:text-[18px]">learn about threat remediate</span>
                                 <div className="w-6 h-6  flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="12" cy="12" r="10"></circle>
@@ -203,7 +191,7 @@ export default function Component() {
             </section>
 
             {/* FAQ Section */}
-            <section className="container mx-auto px-6 py-20 lg:px-8">
+            <section className="container mx-auto md:px-6 py-20 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-16">
                         <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white mb-3">
@@ -228,7 +216,7 @@ export default function Component() {
                                         }}
                                     />
                                     <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-[45px] md:w-[60px]  h-[30px] md:h-[60px] rounded-full flex items-center justify-center"
+                                        <div className="w-[45px] md:w-[60px]  h-[45px] md:h-[60px] rounded-full flex items-center justify-center"
                                             style={{
                                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
                                                     linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
@@ -300,8 +288,8 @@ export default function Component() {
                         <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">Ready to Empower Your Team?</h2>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                        <div className=" overflow-hidden relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center flex flex-col">
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
@@ -319,17 +307,15 @@ export default function Component() {
                                 </p>
                             </div>
                             <button
-
-                                className="inline-block rounded-md  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
+                                className="relative z-10 inline-block rounded-md  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto" style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-
                                 }}
                             >
                                 APPLY NOW
                             </button>
                         </div>
 
-                        <div className="relative bg-[#00AEEF3D] p-4 md:p-8 rounded-[24px] text-center" >
+                        <div className=" overflow-hidden relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center flex flex-col" >
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
@@ -340,7 +326,7 @@ export default function Component() {
                                     maskComposite: "exclude"
                                 }}
                             />
-                            <div className="py-8 px-5">
+                            <div className="py-8 ">
                                 <h3 className="text-[24px] font-medium text-white mb-4">Get a ThreatRespond Quote</h3>
                                 <p className="text-white text-[18px] mb-6">
                                     Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
@@ -348,21 +334,21 @@ export default function Component() {
                             </div>
 
                             <button
-
-                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
-                                    border: "1px solid",
-                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                    borderImageSlice: 1,
-                                    borderRadius: "8px",
-                                    backgroundColor: "transparent",
-                                }}
-
-                            >
+                                className="relative z-10 inline-block rounded-[8px]  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto" >
+                                <div
+                                    className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
                                 ACCESS PRICING SIMULATOR
                             </button>
                         </div>
 
-                        <div className=" relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center">
+                        <div className=" overflow-hidden relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center flex flex-col" >
                             <div
                                 className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                 style={{
@@ -383,15 +369,17 @@ export default function Component() {
                             </div>
 
                             <button
-                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
-                                    border: "1px solid",
-                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                    borderImageSlice: 1,
-                                    borderRadius: "8px",
-                                    backgroundColor: "transparent",
-                                }}
-
+                                className="relative z-10 inline-block rounded-[8px]  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto"
                             >
+                                <div
+                                    className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
                                 CALL NOW
                             </button>
 
