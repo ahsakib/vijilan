@@ -55,116 +55,116 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                // responsive done
+                // responsive done #complete
                 path: "/",
                 element: <Home />,
             },
             {
-                // responsive complete
+                // responsive complete #complete
                 path: "blog",
                 element: <Blog />,
             },
-            {
-                path: "about", //d
+            {   // #complete
+                path: "about", 
                 element: <About />,
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "blog-landing",
                 element: <Blog_landing_page />,
             },
             {
-                // responsive done //d
+                // responsive done #complete
                 path: "serve",
                 element: <Serve />,
             },
             {
-                // responsive done //d
+                // responsive done #complete
                 path: "resources",
                 element: <Resources />,
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "visilan-msg-partner", 
                 element: <VisilanPartner />,
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "threat-respond-service-2",
                 element: <ThreatResponse2 />,
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "vijilan-vars-consultants-page",
                 element: <Vars_consultants_page />,
             },
             {
-                // responsive done //d
+                // responsive done //complete
                 path: "visilan-professional-service",
                 element: <VisislanProfessional />,
             },
             {
-                // responsive done  //problem ase onk
+                // responsive done  //kaj kora lagbe
                 path: "case-studies",
                 element: <CaseStudies />,
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "complain-solution",
                 element: <Complain_Solution />,
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "corrected-msp",
                 element: <Corrected_MSP_Program />,
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
             {
-                // responsive done
+                // responsive done kaj kora lagbe
                 path: "managed-automation",
                 element: <ManagedAutomation />,
             },
             {
-                // responsive done
+                // responsive done kaj kora lagbe
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "managed-siem-soc",
                 element: <ManagedSiemSoc />
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },

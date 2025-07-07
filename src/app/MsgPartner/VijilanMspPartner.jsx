@@ -50,7 +50,7 @@ export default function VijilianLanding() {
             </section >
 
             {/* Go-to-Market Section */}
-            < section className="relative z-10 px-6 py-16" >
+            < section className="relative z-10 py-16" >
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">Go-to-Market in Days not Months</h2>
                     <div className="grid md:grid-cols-3 gap-8">
@@ -140,12 +140,12 @@ export default function VijilianLanding() {
             </section >
 
             {/* Partnership Features */}
-            < section className="relative z-10 px-6 py-16" >
-                <div className="max-w-7xl mx-auto">
+            < section className="max-w-6xl mx-auto" >
+                <div className="">
                     <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">
                         A Partnership Designed for Your Growth
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6">
                         {
                             CardContentData1.map((card,index) => <CardContent
                                 head={card.head}

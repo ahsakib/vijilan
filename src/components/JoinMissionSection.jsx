@@ -3,7 +3,7 @@ import React from "react";
 const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) => {
   return (
     <section className="relative z-10 px-6 py-16">
-      <div className="container mx-auto px-6 ">
+      <div className="container mx-auto">
         <div
           className="h-[304px] rounded-[24px] px-[8px] py-[24px] relative overflow-hidden"
           style={{
@@ -31,7 +31,7 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) =>
 
           <div className="relative z-10 text-center ">
             <h2 className="text-lg md:text-[35px] font-bold text-white mb-4">
-              {title} <span className="text-[#00AEEF]">{highlightedText}</span>
+              {title} <span className="!text-[#00AEEF]">{highlightedText}</span>
             </h2>
             <p className="text-[16px] font-medium text-white mb-8 leading-relaxed max-w-2xl mx-auto">
               {subtitle}

@@ -75,14 +75,14 @@ const Tier1Landing = () => {
                 title: "Always Updated",
                 description: `Content is regularly refreshed to reflect the latest threats, compliance requirements, and market trends.`,
                 height: "335px",
-                marginTop: "40px",
+                marginTop: "-45px",
             },
             {
                 icon: note,
                 title: "Scalable for Every MSP",
                 description: `From solo operators to large-scale service providers, our kits flex to fit your growth strategy.`,
                 height: "405px",
-                marginTop: "130px",
+                marginTop: "-120px",
             },
             {
                 icon: boxTick,

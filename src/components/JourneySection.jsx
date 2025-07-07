@@ -6,6 +6,7 @@ const JourneySection = ({
   headingWithDesign,
   smHeading,
   videoPart,
+  extraPaddingNeed,
 }) => {
   return (
     <section className="relative z-10 px-4 sm:px-6 py-12 sm:py-16">
@@ -23,7 +24,7 @@ const JourneySection = ({
           <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-800/80"></div>
 
           <div className="relative z-10 p-6 sm:p-8 lg:p-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center ${extraPaddingNeed ? extraPaddingNeed:""}`}>
               <div>
                 {heading && (
                   <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
