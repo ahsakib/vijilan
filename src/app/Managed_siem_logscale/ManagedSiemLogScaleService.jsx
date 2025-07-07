@@ -11,6 +11,7 @@ import dashboard from "../../Assets/dashbaord.png";
 import training from "../../Assets/training.png";
 import workflow from "../../Assets/workflow.png";
 import backgroundPattern from "../../Assets/Background pattern.png";
+import Heading_Btn from '@components/Heading_Btn';
 
 
 
@@ -115,35 +116,31 @@ const ManagedSiemLogScaleService = () => {
         <div className='container mx-auto px-6 py-16'>
             {/* Hero Section */}
             <section className="">
-                <div className=" text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">Modernize Your Security Operations with a Managed Next-Gen SIEM</h1>
-                    <p className="text-[18px] text-white max-w-3xl mx-auto mb-14">
-                        Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR.
-                    </p>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-5">
-                        <GradientButton children={"REQUEST A SCOPING CALL"} />
-                        <OutlineGradientButton children={"LEARN ABOUT LOGINGEST"} />
-                    </div>
+                <Heading_Btn
+                    h1="Modernize Your Security Operations with a Managed Next-Gen SIEM"
+                    desc=" Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR."
+                    btn1="REQUEST A SCOPING CALL"
+                    btn2="LEARN ABOUT LOGINGEST"
 
-                </div>
+                />
+
 
             </section>
 
             <section className="py-16">
-                <div className="max-w-6xl w-full rounded-[24px] p-12" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                <div className="max-w-6xl w-full rounded-[24px] p-4  md:p-12" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                     <div className="text-center mb-12">
-                        <h1 className="text-4xl md:text-[40px] font-bold text-white mb-6">Are You Facing These SIEM Challenges?</h1>
-                        <p className="text-[18px] text-center text-white">
+                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-6">Are You Facing These SIEM Challenges?</h1>
+                        <p className="text-sm text-[18px] text-center text-white">
                             Modern enterprises struggle with legacy SIEM limitations. Vijilan's LogScale expertise solves <br /> these critical
                             pain points.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {/* Card 1 */}
-                        <div className="relative bg-[#00AEEF3D] rounded-[14px] p-6 text-center">
+                        <div className="relative bg-[#00AEEF3D] rounded-[14px] p-3  md:p-6 text-center">
                             <div
                                 className="absolute inset-0 rounded-[14px] p-[2px] z-0"
                                 style={{
@@ -164,7 +161,7 @@ const ManagedSiemLogScaleService = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="relative bg-[#00AEEF3D] rounded-[14px] p-6 text-center">
+                        <div className="relative bg-[#00AEEF3D] rounded-[14px]  p-3 md:p-6 text-center">
                             <div
                                 className="absolute inset-0 rounded-[14px] p-[2px] z-0"
                                 style={{
@@ -185,7 +182,7 @@ const ManagedSiemLogScaleService = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="relative bg-[#00AEEF3D] rounded-[14px] p-6 text-center">
+                        <div className="relative bg-[#00AEEF3D] rounded-[14px]  p-3 md:p-6 text-center">
                             <div
                                 className="absolute inset-0 rounded-[14px] p-[2px] z-0"
                                 style={{
@@ -231,10 +228,10 @@ const ManagedSiemLogScaleService = () => {
 
 
             <section className="py-16">
-                <h1 className='text-[40px] font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
+                <h1 className='  text-2xl md:text-4xl  font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
                 <p className='text-[18px] text-center mb-12'>Project-based implementation services to get your LogScale SIEM operational quickly and <br /> effectively</p>
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {pricingData.map((plan) => (
                             <div
                                 key={plan.id}
@@ -263,7 +260,7 @@ const ManagedSiemLogScaleService = () => {
 
                                 {/* Pricing */}
                                 <div className="text-center mb-8">
-                                    <h3 className="text-[#00AEEF] text-[40px] font-bold leading-tight">
+                                    <h3 className="text-[#00AEEF]   text-2xl md:text-4xl  font-bold leading-tight">
                                         Contact for
                                         <br />
                                         Pricing
@@ -357,14 +354,14 @@ const ManagedSiemLogScaleService = () => {
 
 
             <section className="py-16">
-                <h1 className='text-[40px] font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
+                <h1 className='text-2xl md:text-[40px] font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
                 <p className='text-[18px] text-center mb-12'>Project-based implementation services to get your LogScale SIEM operational quickly and <br /> effectively</p>
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {pricingData.map((plan) => (
                             <div
                                 key={plan.id}
-                                className="relative bg-[#00AEEF3D] rounded-[16px] p-8"
+                                className="relative bg-[#00AEEF3D] rounded-[16px]  p-4 md:p-6"
                                 style={{
                                     boxShadow: "0 0 20px rgba(34, 211, 238, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
                                 }}>
@@ -389,7 +386,7 @@ const ManagedSiemLogScaleService = () => {
 
                                 {/* Pricing */}
                                 <div className="text-center mb-8">
-                                    <h3 className="text-[#00AEEF] text-[40px] font-bold leading-tight">
+                                    <h3 className="text-[#00AEEF] text-2xl md:text-[40px] font-bold leading-tight">
                                         Contact for
                                         <br />
                                         Pricing
@@ -410,7 +407,7 @@ const ManagedSiemLogScaleService = () => {
                                 </div>
 
                                 {/* Support Section */}
-                                <div className="relative bg-[#00AEEF4D] rounded-[13px] p-6 mb-8 ">
+                                <div className="relative bg-[#00AEEF4D] rounded-[13px]  p-3 md:p-6 mb-8 ">
                                     <div
                                         className="absolute inset-0 rounded-[13px] p-[1px] z-0"
                                         style={{
@@ -445,16 +442,13 @@ const ManagedSiemLogScaleService = () => {
                 </div>
             </section>
 
-            <section className='py-16 space-y-[40px]'>
-                <h1 className='text-center font-bold text-[48px] '>Ready to Build a Future-Proof SOC?</h1>
-                <p className='text-center text-[18px]'>Every environment is unique. Contact our LogScale experts for a detailed scoping call <br /> to determine the perfect package for your organization's needs.</p>
-
-                <div className='flex items-center justify-center gap-10'>
-                    <GradientButton children={"SCHEDULE A SCOPING CALL"} />
-                    <OutlineGradientButton children={"LEAN ABOUT LOGSCALE"} />
-                </div>
-
-            </section>
+            
+            <Heading_Btn
+                btn1="SCHEDULE A SCOPING CALL"
+                btn2="LEAN ABOUT LOGSCALE"
+                h1="Ready to Build a Future-Proof SOC?"
+                desc="Every environment is unique. Contact our LogScale experts for a detailed scoping call  to determine the perfect package for your organization's needs."
+            />
 
 
             <section className="relative z-10 py-16">
@@ -500,7 +494,7 @@ const ManagedSiemLogScaleService = () => {
                             }}
                         />
 
-                        <div className="relative z-10 text-center space-y-5">
+                        <div className="relative z-10 text-center space-y-5 px-5">
                             <h2 className="text-[24px] font-medium text-[#00AEEF] ">
                                 Or Talk to Our AI Sales Agent
                             </h2>

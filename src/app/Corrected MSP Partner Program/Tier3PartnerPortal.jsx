@@ -28,10 +28,10 @@ const Tier3PartnerPortal = () => {
                     }}
                 >
                     <div className="max-w-6xl mx-auto">
-                        <h1 className="text-4xl font-bold mb-8">Welcome Back! 👋</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-8">Welcome Back! 👋</h1>
 
                         <p className="font-semibold">Your Gold-level partnership is active with full access to all premium resources, training, and dedicated support.</p>
-                        <div className="flex items-center gap-4 mt-4">
+                        <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
 
                             <button className="bg-[#00B6FF] text-white font-semibold px-6 py-4 rounded">
                                 BUILD NEW QUOTE
@@ -49,7 +49,7 @@ text-center select-none uppercase">
             </div>
         </div>
         <section className="max-w-[96%] mx-auto mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
                 <div className="col-span-1">
 
                     <GradientCard>

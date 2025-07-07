@@ -109,7 +109,7 @@ const Tier1Landing = () => {
                 </div>
             </section>
             <section className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}
@@ -120,23 +120,23 @@ const Tier1Landing = () => {
                     ))}
                 </div>
             </section>
-            <section className="max-w-7xl mx-auto">
+            <section className="max-w-7xl   mx-auto">
                 <NavyBlueBackground borderCancel={true}>
-                    <div className="px-30 pt-10 pb-20">
+                    <div className=" px-0 md:px-12 lg:px-30  pt-10 pb-20">
 
-                        <div className="flex justify-center">
+                         
 
-                            <h1 className="text-4xl font-bold mb-8">📧 Email Template Preview</h1>
-                        </div>
+                            <h1 className="text-xl  md:text-4xl  font-semibold lg:font-bold mb-8">📧 Email Template Preview</h1>
+                         
                         <div>
-                            <div class="bg-transparent p-10 border rounded-2xl border-[#00AEEF] relative">
+                            <div class="bg-transparent p-3 md:p-5 lg:p-10 border rounded-2xl border-[#00AEEF] relative">
                                 <div class="absolute left-0 top-[5%] h-[90%] w-2 bg-white"></div>
 
-                                <h2 class="text-xl font-bold text-white mb-2"> Subject: Is Your Business Protected from Identity Theft?</h2>
+                                <h2 class="text-xl font-thin md:font-semibold lg:font-bold text-white mb-2"> Subject: Is Your Business Protected from Identity Theft?</h2>
                                 <p class="text-white mb-1">
                                     <span class="text-xl mb-2 font-bold">Hi [Client Name],</span>
                                 </p>
-                                <p class="text-white-400 text-xl font-semibold mb-4">
+                                <p class="text-white-400 text-xl f font-thin md:font-semibold lg:font-bold mb-4">
                                     Identity-based attacks have increased 87% this year, with cybercriminals specifically targeting businesses like yours. Many of our clients were shocked to learn how vulnerable their employees' credentials actually were...
                                 </p>
                                 <p className="font-bold text-xl">📥 Download the complete email template above</p>
@@ -148,24 +148,24 @@ const Tier1Landing = () => {
             <section>
                 <NavyBlueBackground>
                     <div class="bg-transparent text-white p-10 rounded-lg mx-auto font-sans">
-                        <h1 class="text-5xl font-bold text-center mb-10">Targeting Other Industries?</h1>
-                        <h2 class="text-xl text-center font-bold mb-6 opacity-90">Manufacturing • Legal • Education • Government • Healthcare</h2>
+                        <h1 class="text-2xl md:text-5xl font-bold text-center mb-10">Targeting Other Industries?</h1>
+                        <h2 class="text-xl text-center  font-thin md:font-semibold lg:font-bold mb-6 opacity-90">Manufacturing • Legal • Education • Government • Healthcare</h2>
 
-                        <p class="text-center mb-8 font-bold text-xl mx-auto opacity-80">
+                        <p class="text-center mb-8  font-thin md:font-semibold lg:font-bold text-xl mx-auto opacity-80">
                             Access even more ready-to-use sales kits by entering your work email below. Get the complete MSP toolkit with industry-specific content.
                         </p>
 
-                        <div class="flex flex-nowrap justify-center gap-3 mb-8 overflow-x-auto py-2">
-                            <div class="flex-shrink-0 px-6 py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                        <div class="flex flex-col md:flex-row justify-center gap-3 mb-8 overflow-x-auto py-2">
+                            <div class="flex-shrink-0 px-6 text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
                                 Healthcare compliance kit
                             </div>
-                            <div class="flex-shrink-0 px-6 py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
                                 Legal sector Templates
                             </div>
-                            <div class="flex-shrink-0 px-6 py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
                                 Manufacturing Security
                             </div>
-                            <div class="flex-shrink-0 px-6 py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
                                 Education Safety Materials
                             </div>
                         </div>
@@ -179,7 +179,7 @@ const Tier1Landing = () => {
                         </div>
 
                         <div class="text-center mb-10">
-                            <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md 
+                            <div class="inline-block cursor-pointer font-semibold px-0 md:px-6 py-3 rounded-md 
 border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
 transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
 text-center select-none uppercase">
@@ -196,12 +196,12 @@ text-center select-none uppercase">
             <section className="px-6 py-16">
                 <div className="mx-auto max-w-6xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-5xl font-bold tracking-tight text-white">
+                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
                         Why MSPs Choose Vijilan's Enablement <br /> Resources
                         </h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {strategicCardData.map((item, index) => (
                             <SecurityCard key={index} data={item} />
                         ))}

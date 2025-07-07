@@ -8,7 +8,7 @@ const GradientButton = ({ children,icon=true }) => {
         background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
       }}
     >
-      <span>{children}</span>
+      <span className="font-semibold px-1 md:px-5 ">{children}</span>
       {icon && (
         <div className="w-6 h-6 flex items-center justify-center">
           <svg

@@ -4,10 +4,10 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
 
   console.log(side_text)
   return (
-    <div className={`relative rounded-[24px] p-[2px] ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
+    <div className={`relative   rounded-[24px] p-[2px] ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
       {/* Gradient border using pseudo */}
       <div
-        className="absolute inset-0 rounded-[24px] p-[2px] z-0"
+        className="absolute  inset-0 rounded-[24px] p-[2px] z-0"
         style={
           !banner
             ? {
@@ -24,7 +24,7 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
       />
 
 
-      <div className={`relative rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
+      <div className={`relative bor2 rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
 
         {icon && <div className="icon-container flex justify-center mb-4">
           <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px]" />

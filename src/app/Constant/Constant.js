@@ -42,8 +42,12 @@ import TimeIcon from "@images/timeIcon.png"
 import chainIcon from "@images/chain-icons.png"
 import RocketIcon from "@images/rocketIcon.png"
 import sheildIcon from "../../Assets/sheildIcon.png";
-import TaskCheck from "@images/task-check.png" 
-
+import TaskCheck from "@images/task-check.png"
+import flag from "../../Assets/flag.png";
+import sun from "../../Assets/sun.png";
+import build from "../../Assets/build.png";
+import hand from "../../Assets/hand.png";
+import eye from "../../Assets/eye.png";
 
 import statistics from "../../Assets/statistics.png";
 import refresh from "../../Assets/refresh.png";
@@ -906,7 +910,7 @@ export const healthcareSecurity = [
 ];
 
 export const ThreatRemediate_Ultimate = [
-  
+
   {
     icon: threat,
     label: "CrowdStrike Falcon XDR",
@@ -958,3 +962,35 @@ export const DeploymentTimeline = [
   }
 ];
 
+export const CISOCard=[
+  {
+    "icon": eye,
+    "title": "Unify Your Security Stack",
+    "description": "We ingest and correlate data from your disparate tools, eliminating blind spots and providing true cross-domain visibility without costly rip-and-replace projects."
+  },
+  {
+    "icon": sun,
+    "title": "Extend Your SOC's Reach",
+    "description": "Our 24/7 US-Based SOC acts as a direct extension of your team, handling the noise of alert triage so your experts can focus on strategic initiatives."
+  },
+  {
+    "icon": flag,
+    "title": "Receive Actionable Incidents",
+    "description": "Leveraging AI and expert analysis, we deliver only high-fidelity, actionable incidents that require your attention, freeing your team from the noise of false positives."
+  },
+  {
+    "icon": hand,
+    "title": "Optimize Your Data Costs",
+    "description": "Demonstrate clear ROI with our data optimization services powered by Cribl. We can significantly reduce your SIEM and data storage costs while enriching your security data."
+  },
+  {
+    "icon": eye,
+    "title": "Achieve Full-Stack Visibility & Unified Defense",
+    "description": "CISOs want one pane of glass—not 17 dashboards. We consolidate telemetry and apply advanced correlation across endpoints, network, cloud, identity, and SaaS environments, enabling your team to see real threats—not isolated alerts—for better, faster decision-making."
+  },
+  {
+    "icon": build,
+    "title": "Proactive Risk Reduction & Strategic Enablement",
+    "description": "CISOs expect MDR to go beyond monitoring. Our SOC doesn't just monitor—we treat alerts as opportunities for improvement, develop playbooks, optimize SLAs, and build cost-effective frameworks that evolve with your risk posture. That's strategic partnership."
+  }
+]

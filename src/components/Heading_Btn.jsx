@@ -29,7 +29,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                         </p>}
 
                     {state && state.length > 0 && (
-                        <div className={`grid ${gridColsClass} max-w-xl mx-auto gap-4`}>
+                        <div className={`grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-xl mx-auto gap-4`}>
                             {state.map((item, index) => (
                                 <CardBorder key={index} width="166px" height="171px">
                                     <div>
@@ -46,13 +46,13 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                     <div class="flex flex-col sm:flex-row gap-10 justify-center">
                         {
                             btn1 && <button
-                                className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                                className=" p-3 md:p-[20px] text-sm md:text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
                                 }}>
 
-                                <span className='uppercase'>{btn1}</span>
+                                <span className='uppercase text-sm'>{btn1}</span>
                                 <div className="w-6 h-6  flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="12" cy="12" r="10"></circle>
@@ -65,7 +65,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                         {btn2 &&
                             <div className="rounded-lg">
                                 <button
-                                    className="relative p-[22px] text-lg font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg">
+                                    className="relative  p-5 md:p-[20px] text-sm md:text-lg  font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg">
                                     <div
                                         className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
                                         style={{

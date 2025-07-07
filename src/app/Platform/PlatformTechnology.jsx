@@ -89,7 +89,7 @@ const PlatformTechnology = ({ }) => {
 
     return <>
         <div className="max-w-[90%] mx-auto">
-            <section className="px-6 py-16">
+            <section className=" px-2 md:px-6 py-16">
                 <Heading_Btn
                     h1={`The Engine Behind Your Defense: The Vijilan Security Platform`}
                     desc={`Our platform is not a single product, but a unified technology stack that enables \n every Vijilan service. Discover how we combine the power of CrowdStrike, the \n intelligence of Cribl, and our proprietary ViSH platform to deliver security outcomes \n that are faster, smarter, and more efficient.`}
@@ -98,31 +98,32 @@ const PlatformTechnology = ({ }) => {
 
             </section>
 
-            <section className="px-6 py-16">
+            <section className="px-3 py-16">
                 <NavyBlueBackground>
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold">Unified Technology Stack</h1>
+                        <h1 className="mt-3 text-2xl md:text-[40px] pt-2 font-bold">Unified Technology Stack</h1>
                     </div>
-                    <div className="flex items-center justify-center p-8">
-                        <div className="flex items-center overflow-x-auto pb-4">
+                    <div className="flex items-center justify-center p-2 md:p-8">
+                        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-center justify-center overflow-x-auto pb-4">
                             {cards.map((card, index) => (
                                 <React.Fragment key={index}>
-                                    <CardBorder>
-                                        <div className="z-10 text-center w-full space-y-3">
-                                            <div className="flex justify-center">
-                                                <img src={card?.icon} alt="" className="h-12 w-12 object-contain" />
+                                    <div className="flex flex-col md:flex-row items-center gap-2">
+                                        <CardBorder>
+                                            <div className="z-10 text-center p-5 min-w-44 min-h-52  md:w-auto space-y-3 ">
+                                                <div className="flex justify-center items-center">
+                                                    <img src={card?.icon} alt="" className="h-12 w-12 object-contain" />
+                                                </div>
+                                                <h1 className="text-white text-lg font-semibold">{card?.title}</h1>
+                                                <p className="text-white text-sm">{card?.subtitle}</p>
                                             </div>
-                                            <h1 className="text-white text-lg font-semibold">{card?.title}</h1>
-                                            <p className="text-white text-sm">{card?.subtitle}</p>
-                                        </div>
+                                        </CardBorder>
 
-                                    </CardBorder>
-
-                                    {index < cards.length - 1 && (
-                                        <div className="mx-2 mt-12 text-[#F36E21]">
-                                            <ArrowRight className="w-6 h-6" />
-                                        </div>
-                                    )}
+                                        {index < cards.length - 1 && (
+                                            <div className=" mt-12  mx-auto">
+                                                <ArrowRight className="w-6 h-6 !text-[#F36E21] " />
+                                            </div>
+                                        )}
+                                    </div>
                                 </React.Fragment>
                             ))}
                         </div>
@@ -131,18 +132,18 @@ const PlatformTechnology = ({ }) => {
             </section>
             <section className="px-6 py-16">
                 <div className="text-center">
-                    <h1 className="font-bold mb-8 text-5xl">An Architecture Built for Speed, Scale, and Security</h1>
-                    <p className="font-bold text-xl">Three integrated technology layers work in perfect harmony to deliver superior security outcomes <br /> while reducing complexity and cost.</p>
+                    <h1 className="font-bold mb-8  text-2xl md:text-[40px] ">An Architecture Built for Speed, Scale, and Security</h1>
+                    <p className="font-bold  text-lg md:text-[30px] ">Three integrated technology layers work in perfect harmony to deliver superior security outcomes <br /> while reducing complexity and cost.</p>
                 </div>
-                <div className="flex flex-col md:flex-row items-center justify-center p-8">
+                <div className="flex flex-col  md:flex-row items-center justify-center p-2 md:p-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-x-auto pb-4">
                         {cards2.map((card, index) => (
                             <CardBorder key={index} width="291px" height="442px">
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 w-[291px] h-[442px] rounded-xl overflow-hidden shadow-lg text-center"
+                                    className="flex-shrink-0 sm:w-auto  lg::w-[291px]  h-auto  lg::h-[442px] rounded-xl overflow-hidden shadow-lg text-center"
                                 >
-                                    <div className="relative z-10 w-full h-full space-y-6 p-6 text-center flex flex-col items-center">
+                                    <div className="relative z-10 w-full h-full space-y-6 p-6 text-center flex flex-col justify-center items-center">
                                         {/* Icon at the top center */}
                                         {card.icons && (
                                             <div className="flex justify-center mb-4">
@@ -174,17 +175,17 @@ const PlatformTechnology = ({ }) => {
             </section>
             <section className="px-6 py-16">
                 <div className="text-center">
-                    <h1 className="font-bold mb-8 text-5xl">How Our Platform Delivers Tangible Benefits</h1>
-                    <p className="font-bold text-xl">Advanced technology translates directly into superior security outcomes and business value.</p>
+                    <h1 className="font-bold mb-8  text-2xl md:text-5xl">How Our Platform Delivers Tangible Benefits</h1>
+                    <p className="font-bold text-lg md:text-xl">Advanced technology translates directly into superior security outcomes and business value.</p>
                 </div>
-                <div className="grid grid-cols-2 gap-4 p-2 max-w-[1200px] mx-auto">
+                <div className="grid grid-cols-1  md:grid-cols-2 gap-4 p-2 max-w-[1200px] mx-auto">
                     {cards3.map((card, index) => (
                         <div key={index} className=""> {/* Added padding to reduce gap between cards */}
                             <CardBorder width="564.5px" height="195px">
                                 <div className="w-full h-full rounded-xl overflow-hidden text-left">
                                     <div className="w-full h-full space-y-4 p-6 flex flex-col items-start text-left"> {/* Reduced space-y and padding */}
                                         {/* Title Section */}
-                                        <h1 className="text-2xl font-bold text-white">{card.title}</h1>
+                                        <h1 className="text-xl md:text-2xl  font-bold text-white">{card.title}</h1>
                                         {/* Content Section */}
                                         <p className="text-gray-300 leading-relaxed font-bold">
                                             {card.description}
@@ -198,28 +199,28 @@ const PlatformTechnology = ({ }) => {
             </section>
             <section className="px-6 py-16">
                 <div className="text-center">
-                    <h1 className="font-bold mb-8 text-5xl">Find Success Stories Like Yours</h1>
-                    <p className="font-bold text-xl">Select your business profile to see relevant case studies and success metrics.</p>
+                    <h1 className="font-bold mb-8  text-2xl md:text-5xl ">Find Success Stories Like Yours</h1>
+                    <p className="font-bold   text-lg md:text-2xl my-2 ">Select your business profile to see relevant case studies and success metrics.</p>
                 </div>
 
-                <InfoSection design1={true} width={"495px"} height={"349px"}/>
+                <InfoSection design1={true} width={"495px"} height={"349px"} />
             </section>
-            <section className="px-6 py-16">
-                    <NavyBlueBackground w={"1160px"}>
-                        <div className="px-50 pt-10 pb-20 text-center">
+            <section className="px-2 flex flex-col items-center justify-center md:px-6 py-16">
+                <NavyBlueBackground w={"1160px"}>
+                    <div className="px-2 md:px-20 lg:mx-40 pt-10 pb-10 md:pb-20 text-center">
 
-                        <h1 className="pb-10 font-bold text-4xl">Expert Technical Guidance</h1>
-                    <SuccessCard
-                        showIcon
-                        iconText="JN"
-                        subheading="JEN AI"
-                        description={`"Want a live walkthrough of the platform \n architecture? I can connect you with a security \n architect to discuss how our unified platform can \n integrate with your specific environment."
+                        <h1 className="pb-10 font-bold  text-xl md:text-[40px] ">Expert Technical Guidance</h1>
+                        <SuccessCard
+                            showIcon
+                            iconText="JN"
+                            subheading="JEN AI"
+                            description={`"Want a live walkthrough of the platform \n architecture? I can connect you with a security \n architect to discuss how our unified platform can \n integrate with your specific environment."
 `}
-                        buttonText="connect with security architect"
-                        bgColor="transparent"
-                    />
-                        </div>
-                    </NavyBlueBackground>
+                            buttonText="connect with security architect"
+                            bgColor="transparent"
+                        />
+                    </div>
+                </NavyBlueBackground>
             </section>
             <section>
                 <Heading_Btn

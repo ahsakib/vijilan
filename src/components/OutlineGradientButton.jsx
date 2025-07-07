@@ -3,7 +3,7 @@ import React from "react";
 const OutlineGradientButton = ({ children, icon = true }) => {
   return (
     <button
-      className="relative p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
+      className="relative px-6 md:p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
       
     >
       <div
@@ -15,7 +15,7 @@ const OutlineGradientButton = ({ children, icon = true }) => {
           maskComposite: "exclude",
         }}
       />
-      <span className="uppercase">{children}</span>
+      <span className="uppercase text-sm  md:text-xl">{children}</span>
       {icon && (
         <div className="w-6 h-6 flex items-center justify-center">
           <svg
