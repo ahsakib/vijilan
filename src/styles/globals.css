@@ -11,6 +11,12 @@
   
 }
 
+.drop {
+  color:white;
+}
+.drop:hover {
+  color: #00AEEF;
+}
 
 
 

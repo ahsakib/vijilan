@@ -3,7 +3,7 @@ import React from 'react';
 
 const EmergencyBanner = () => {
   return (
-    <div className="max-w-[1160px] mx-auto mt-4">
+    <div className="w-11/12 lg:max-w-[1160px] mx-auto mt-4">
       <div
         className="flex justify-center items-center backdrop-blur-3xl h-[64px] rounded-[12px] px-6 gap-4"
         style={{

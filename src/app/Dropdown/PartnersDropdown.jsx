@@ -73,9 +73,9 @@ const PartnersDropdown = () => {
         <div className="container px-6 mx-auto rounded-[24px] my-[50px]" style={{
             background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
         }}>
-            <div className="grid lg:grid-cols-2 gap-8 p-4">
+            <div className="grid lg:grid-cols-2 gap-8 md:p-4">
                 {/* Left Column - Managed Detection & Response */}
-                <div className=" rounded-2xl p-12 ">
+                <div className=" rounded-2xl p-4 md:p-6 lg:p-12 ">
                     <h2 className="font-bold text-[24px] text-white mb-8 border-b border-[#00AEEF] pb-4">
                         Partner Programs
                     </h2>
@@ -93,7 +93,7 @@ const PartnersDropdown = () => {
                 </div>
 
                 {/* Right Column - SIEM & Data Management */}
-                <div className=" p-12   border-l border-[#CAC4D0]">
+                <div className=" p-4 md:p-6 lg:p-12   lg:border-l lg:border-[#CAC4D0]">
                     <h2 className="font-bold text-[24px] text-white mb-8 border-b border-[#00AEEF] pb-4">
                         Technology & Distribution
                     </h2>

@@ -1,16 +1,20 @@
 import React from "react";
 
-const OutlineGradientButton = ({ children,icon=true }) => {
+const OutlineGradientButton = ({ children, icon = true }) => {
   return (
     <button
-      className="p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
-      style={{
-        border: '1px solid',
-        borderImageSource: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
-        borderImageSlice: 1,
-        borderRadius: '8px',
-      }}
+      className="relative p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
+      
     >
+      <div
+        className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+        style={{
+          background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+        }}
+      />
       <span className="uppercase">{children}</span>
       {icon && (
         <div className="w-6 h-6 flex items-center justify-center">

@@ -1,14 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import EmergencyBanner from './EmergencyBanner';
 import logo from "../Assets/logo.png";
 import logoSub from "../Assets/logoSub.png";
+import SolutionDropdown from '@app/Dropdown/SolutionDropdown';
+import PartnersDropdown from '@app/Dropdown/PartnersDropdown';
+
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const dropdownRef = useRef(null);
+
+  // Outside click detection
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -23,9 +42,33 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // navlink
+  const menuItems = [
+    {
+      name: 'Solutions',
+      hasDropdown: true,
+      dropdownComponent: <SolutionDropdown />
+    },
+    {
+      name: 'Platform',
+      hasDropdown: true,
+      dropdownComponent: <PartnersDropdown />
+    },
+    {
+      name: 'Customers',
+      hasDropdown: false,
+    },
+    {
+      name: 'Insights',
+      hasDropdown: false,
+    }
+  ];
 
   return (
     <div className='w-full fixed z-50 top-0'>
@@ -33,7 +76,7 @@ const Header = () => {
 
       <header className={`mx-auto h-[96px] flex items-center transition-all duration-300 ease-in-out 
         ${scrolled ? 'bg-opacity-50 bg-white' : 'bg-transparent'} 
-        px-4 md:px-6 lg:px-0 lg:max-w-[1160px] rounded-[24px] mt-4 backdrop-blur-sm border-b border-slate-700`}
+        px-4 md:px-6 lg:px-0 w-11/12 lg:max-w-[1160px] rounded-[24px] mt-4 backdrop-blur-sm border-b border-slate-700`}
         style={{
           background: scrolled
             ? "linear-gradient(0deg, rgba(8, 34, 53, 0.8) 53.83%, rgba(0, 174, 239, 0.8) 328.5%)"
@@ -61,6 +104,7 @@ const Header = () => {
               display: flex !important;
             }
           }
+         
         `}
             </style>
 
@@ -68,14 +112,39 @@ const Header = () => {
             {/* Desktop Menu */}
             <div className="desktop-menu items-center gap-6">
               <nav className="flex space-x-6">
-                {['Solutions', 'Platform', 'Customers', 'Insights'].map((item) => (
-                  <div key={item} className="relative group">
-                    <a href="#" className="text-white text-[16px] flex items-center space-x-1">
-                      <span>{item}</span>
-                      <ChevronDown className="w-4 h-4" />
+                {menuItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative group"
+                    onMouseEnter={() =>
+                      item.hasDropdown && setActiveDropdown(item.name)
+                    }>
+                    <a
+                      href="#"
+                      className={`text-[16px] flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-[#00AEEF]" : "text-white"
+                        }`}>
+                      <span>{item.name}</span>
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px]" : ""
+                          }`} />
                     </a>
+                    {/* Dropdown Container */}
+                    {activeDropdown && (
+                      <div
+                        ref={dropdownRef}
+                        onMouseEnter={() => setActiveDropdown(activeDropdown)}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                        className="fixed top-[102px] left-0 w-full z-50 max-h-[80vh] overflow-y-auto"
+                      >
+                        {
+                          menuItems.find((item) => item.name === activeDropdown)
+                            ?.dropdownComponent
+                        }
+                      </div>
+                    )}
                   </div>
                 ))}
+
                 <Link to="about" className="text-white text-[16px]">About</Link>
                 <a href="#" className="text-white text-[16px]">Contact</a>
               </nav>
@@ -97,14 +166,34 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className={` fixed top-[96px] left-0 right-0 mx-4 bg-[#082235] px-6 py-8 z-40 rounded-b-[24px] transition-all duration-300 ease-in-out
+          <div className={`w-full mx-auto left-0 right-0 rounded-[24px] fixed top-[96px] bg-[#082235] px-6 py-8 z-40  transition-all duration-300 ease-in-out
     ${menuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 '}`}>
             <nav className="flex flex-col space-y-4">
-              {['Solutions', 'Platform', 'Customers', 'Insights'].map((item) => (
-                <a key={item} href="#" className="text-white text-[16px] flex items-center justify-between">
-                  {item}
-                  <ChevronDown className="w-4 h-4" />
-                </a>
+              {menuItems.map((item, index) => (
+                <div key={index} href="#" className="relative group text-white text-[16px] flex items-center justify-between"
+                  onMouseEnter={() =>
+                    item.hasDropdown && setActiveDropdown(item.name)
+                  }>
+                  {item.name}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px]" : ""
+                      }`} />
+
+                  {/* Dropdown Container */}
+                  {activeDropdown && (
+                    <div
+                      ref={dropdownRef}
+                      onMouseEnter={() => setActiveDropdown(activeDropdown)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                      className="fixed top-[102px] left-0 w-full z-50 max-h-[80vh] overflow-y-auto"
+                    >
+                      {
+                        menuItems.find((item) => item.name === activeDropdown)
+                          ?.dropdownComponent
+                      }
+                    </div>
+                    )}
+                </div>
               ))}
               <Link to="about" className="text-white text-[16px]">About</Link>
               <a href="#" className="text-white text-[16px]">Contact</a>
