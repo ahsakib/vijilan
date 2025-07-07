@@ -20,7 +20,7 @@ const Blog_landing_page = () => {
         <section className='text-white mb-20'>
 
             <div className='container px-6 mx-auto py-12  '>
-                <div className='grid grid-cols-1 md:grid-cols-6 justify-between '>
+                <div className='grid grid-cols-1 md:grid-cols-6 justify-between space-y-10 md:space-y-0'>
                     <div className='col-span-1 md:col-span-3 space-y-5  '>
                         <div className="">
                             <span className="inline-block bg-[#00AEEF] text-white px-2 lg:px-[24px] py-[16px] rounded-[13px] text-[16px] font-medium uppercase tracking-wide">
@@ -31,11 +31,13 @@ const Blog_landing_page = () => {
                             Threat Intelligence <br />
                             The Rise of Malware-Free Attacks: How to Defend Your Organization</h1>
 
-                        <p className='text-sm md:text-[18px]'> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
-                        <div className="p-[20px] pl-2  inline px-5 mt-5 text-[18px] md:text-3xl   rounded-[8px] font-medium ml-4 " style={{
+                        <p className='text-sm md:text-[18px] '> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
+
+                        <div className='mt-8'>
+                            <button className="p-[20px] pl-2  inline px-5 text-[18px]  rounded-[8px] font-medium ml-4 " style={{
                             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
-                        }}>
-                            Read the full story
+                        }}> Read the full story</button>
+                           
                         </div>
 
                     </div>
@@ -114,11 +116,11 @@ const Blog_landing_page = () => {
                                 }}
                             />
 
-                            <div className="relative z-10 text-center space-y-5">
-                                <h2 className="text-[40px] font-bold text-white ">
+                            <div className="relative z-10 text-center space-y-5 p-2">
+                                <h2 className="text-[20px] md:text-[40px] font-bold text-white ">
                                     Get Security Insights Delivered to Your Inbox.
                                 </h2>
-                                <p className="text-[16px] font-medium text-white  leading-relaxed max-w-2xl mx-auto">
+                                <p className="text-[15px] md:text-[16px] font-medium text-white  leading-relaxed max-w-2xl mx-auto">
                                     Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan.
                                 </p>
                                 <div className="relative max-w-2xl w-full mx-auto">

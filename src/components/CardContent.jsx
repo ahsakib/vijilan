@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed }) => {
+const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle }) => {
 
   console.log(side_text)
   return (
@@ -46,6 +46,7 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
         )}
 
 
+        {subTitle && <p className="text-[16px] md:text-[18px] text-white mb-4 " style={{ whiteSpace: 'pre-line' }}>{subTitle}</p>}
 
         {iconed && <div className={`iconed flex ${side_text ? "justify-start" : "justify-center"}  mb-4`}>
           <img src={iconed} alt="Icon" className="iconed w-[77px] text-white h-[77px]" />
@@ -66,7 +67,7 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
 
         }
 
-        <h3 className="title text-3xl md:text-4xl font-medium mb-2">{title}</h3>
+        <h3 className={`title  font-medium mb-2 ${titleSize ? "text-[20px] md:text-[24px] " : "text-3xl md:text-4xl"}`}>{title}</h3>
 
 
         {
