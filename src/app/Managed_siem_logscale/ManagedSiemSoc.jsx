@@ -8,6 +8,7 @@ import electric from "../../Assets/electric.svg";
 import hand from "../../Assets/hand.svg";
 import TestimonialCard from '@components/TestimonialCard';
 import ServiceCard from '@components/ServiceCard';
+import Heading_Btn from '@components/Heading_Btn';
 
 const cardData = [
     {
@@ -89,29 +90,26 @@ const ManagedSiemSoc = () => {
             {/* Hero Section */}
             <section className="">
                 <div className=" text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">Modernize Your Security Operations with a Managed Next-Gen SIEM</h1>
-                    <p className="text-[18px] text-white max-w-3xl mx-auto mb-14">
-                        Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR.
-                    </p>
+                     
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-5">
-                        <GradientButton children={"EXPLORE SUCCESS STORIES"} />
-                        <OutlineGradientButton children={"CALCULATE YOUR ROI"} />
-                    </div>
-
+                    <Heading_Btn
+                        h1="Modernize Your Security Operations with a Managed Next-Gen SIEM"
+                        desc=" Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR."
+                        btn1="EXPLORE SUCCESS STORIES"
+                        btn2="CALCULATE YOUR ROI"
+                    />
 
                     {/* Stats - Improved Grid */}
-                    <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                    <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4 max-w-4xl mx-auto">
 
                         <CardBorder height="171px" width="166px">
-                            <div>
+                            <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">40%</div>
                                 <div className="text-slate-300 text-sm font-medium"> Average MRR Growth</div>
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                            <div>
+                           <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">60%</div>
                                 <div className="text-slate-300 text-sm font-medium">
                                     Time to First Sale
@@ -119,7 +117,7 @@ const ManagedSiemSoc = () => {
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                            <div>
+                           <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">90%</div>
                                 <div className="text-slate-300 text-sm font-medium">
                                     Active MSP Partners
@@ -127,13 +125,13 @@ const ManagedSiemSoc = () => {
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                            <div>
+                           <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">24/7</div>
                                 <div className="text-slate-300 text-sm font-medium">Active MSP Partners</div>
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                            <div>
+                          <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">{`<5min`}</div>
                                 <div className="text-slate-300 text-sm font-medium">Active MSP Partners</div>
                             </div>
@@ -148,12 +146,12 @@ const ManagedSiemSoc = () => {
                 <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-4">
                     Is Your Current SIEM Holding You Back?
                 </h1>
-                <p className='text-[18px] text-white text-center'>Legacy SIEM platforms create more problems than they solve. High costs, slow performance, and <br /> complex management drain resources without delivering the security outcomes you need.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-14">
+                <p className='text-sm md:text-[18px] text-white text-center'>Legacy SIEM platforms create more problems than they solve. High costs, slow performance, and <br /> complex management drain resources without delivering the security outcomes you need.</p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-14">
                     {cardData.map((card, index) => (
                         <CardBorder key={index} height="290px" width="564px">
                             <div className="flex flex-col items-start gap-4 text-left text-white px-[32px] py-[40px]">
-                                <div className="bg-[#00AEEF] rounded-[8px] w-[64px] h-[64px] flex items-center justify-center">
+                                <div className="bg-[#00AEEF] rounded-[8px] w-[64px] h-[64px] flex  items-center justify-center">
                                     <img src={card.icon} alt="icon" className="w-[40px] h-[40px]" />
                                 </div>
                                 <div>
@@ -187,10 +185,10 @@ const ManagedSiemSoc = () => {
             <section className=" py-16">
                 <div className="max-w-6xl mx-auto text-center">
                     {/* Main Heading */}
-                    <h2 className="text-4xl md:text-[40px] font-bold text-white mb-3">Expert, Project-Based Onboarding</h2>
+                    <h2 className="text-2xl md:text-[40px] font-bold text-white mb-3">Expert, Project-Based Onboarding</h2>
 
                     {/* Description */}
-                    <p className="text-white text-[18px] leading-relaxed mb-10">
+                    <p className="text-white text-sm md:text-[18px] leading-relaxed mb-10">
                         We offer structured onboarding packages (Bronze, Silver, Gold) to ensure a successful deployment. <br /> From the
                         initial Solution Architecture Workshop to data source onboarding and custom content <br /> creation (dashboards,
                         parsers, and correlation rules), our team manages the entire project to meet <br /> your specific use cases.
@@ -261,11 +259,11 @@ const ManagedSiemSoc = () => {
                     <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-10">Proven Results in Complex Environments</h1>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="text-left h-full flex flex-col justify-end">
-                            <h1 className="text-5xl font-bold mb-6">
+                            <h1 className="  text-2xl md:text-4xl lg:text-5xl font-semibold md:font-bold mb-6">
                                 Success Story: How an MSSP Reduced SIEM Costs by 40%
                             </h1>
-                            <p className="text-[22px] mb-8 font-bold">
-                               Using Vijilan's LogScale Management Services, an established MSSP was able to modernize their SIEM infrastructure, achieving significant cost savings and improved performance while scaling their client base. Our expert data optimization and intelligent routing transformed their security operations.
+                            <p className="text-lg md:text-[20px] mb-8 font-thin md:font-semibold   ">
+                                Using Vijilan's LogScale Management Services, an established MSSP was able to modernize their SIEM infrastructure, achieving significant cost savings and improved performance while scaling their client base. Our expert data optimization and intelligent routing transformed their security operations.
                             </p>
                             <div className="flex space-x-4">
                                 <button
@@ -288,21 +286,21 @@ const ManagedSiemSoc = () => {
                             </div>
                         </div>
 
-                        <div className='flex flex-wrap gap-3'>
+                        <div className='flex flex-col lg:flex-row justify-between  gap-3'>
                             <CardBorder height="171px" width="166px">
-                                <div>
+                                <div className='p-8'>
                                     <div className="text-white text-[32px] font-bold mb-2">40%</div>
                                     <div className="text-slate-300 text-sm font-medium">Cost Reduction</div>
                                 </div>
                             </CardBorder>
                             <CardBorder height="171px" width="166px">
-                                <div>
+                                <div className='p-8'>
                                     <div className="text-white text-[32px] font-bold mb-2">60%</div>
                                     <div className="text-slate-300 text-sm font-medium">Faster Detection</div>
                                 </div>
                             </CardBorder>
                             <CardBorder height="171px" width="166px">
-                                <div>
+                                <div className='p-8'>
                                     <div className="text-white text-[32px] font-bold mb-2">3x</div>
                                     <div className="text-slate-300 text-sm font-medium">Query Performance</div>
                                 </div>
@@ -314,7 +312,7 @@ const ManagedSiemSoc = () => {
 
 
             {/* Ready to Scale Section */}
-            <section className="max-w-6xl mx-auto px-6 py-16">
+            <section className="max-w-6xl mx-auto px-1 md:px-6 py-16">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Side */}
                     <div className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[24px] p-12 text-center">
@@ -372,7 +370,7 @@ const ManagedSiemSoc = () => {
                             Ready to See the Future of <br /> SIEM?
                         </h3>
                         <p className="text-[16px] text-center text-white mb-6">
-                           Experience the power of CrowdStrike LogScale <br /> with Vijilan's expert management. Let's discuss <br /> how our next-generation SIEM can transform <br />your security operations while reducing costs.
+                            Experience the power of CrowdStrike LogScale <br /> with Vijilan's expert management. Let's discuss <br /> how our next-generation SIEM can transform <br />your security operations while reducing costs.
                         </p>
                         <button
                             className="p-[16px] text-[13px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"

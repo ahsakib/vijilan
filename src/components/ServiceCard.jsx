@@ -5,7 +5,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
     return (
         <div
             key={index}
-            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-8"
+            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-2 md:p-8"
         >
             {/* Gradient Border */}
             <div
@@ -23,7 +23,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             {/* Add Icon Button */}
             <div className="flex justify-center mb-6 z-10 relative">
                 <button
-                    className="bg-[#F1511B] text-white text-[10px] font-bold px-4 py-2 rounded-[15px]"
+                    className="bg-[#F1511B] text-white text-[10px] font-thin md:font-semibold px-4 py-2 rounded-[15px]"
                     onClick={onAddIcon}
                 >
                     ADD ICON
@@ -44,7 +44,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
                 service?.badge && (
 
                     <div className="flex justify-center mb-6 z-10 relative">
-                        <span className="bg-[#F1511B] text-white text-[10px] font-bold px-4 py-2 rounded-[15px]">
+                        <span className="bg-[#F1511B] text-white text-[10px] font-semibold px-4 py-2 rounded-[15px]">
                             {service.badge}
                         </span>
                     </div>
@@ -63,14 +63,14 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             {service?.designedDesc && (
 
                 <div class="max-w-md p-6 mb-10">
-                    <h2 class="text-lg font-semibold text-white mb-4">
+                    <h2 class="text-lg font-thin md:font-semibold text-white mb-4">
                         {service.designedDesc}
                     </h2>
 
                     <ul class="space-y-3">
                         {service.designFeature.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-white text-[18px]">
-                                <span className="font-bold">{feature}</span>
+                                <span className="font-thin md:font-semibold">{feature}</span>
                             </li>
                         ))}
                     </ul>

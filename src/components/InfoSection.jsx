@@ -5,13 +5,13 @@ const InfoSection = ({ position = "right", width, height, design1, design2, head
         <>
             {design1 && (
                 <div className="max-w-2xl mx-auto">
-                    <h1 className="text-3xl font-bold mb-6">From Ingestion to Action</h1>
+                    <h1 className=" mt-3 text-xl md:text-3xl  font-bold mb-6">From Ingestion to Action</h1>
 
-                    <p className="mb-8 font-bold">
+                    <p className="mb-8 text-sm font-bold">
                         Every piece of security data follows a carefully orchestrated journey through our integrated platform, ensuring maximum value and minimum noise.
                     </p>
 
-                    <ul className="space-y-4 list-disc pl-5 font-bold">
+                    <ul className="space-y-4 list-disc pl-5 font-bold text-sm md:text-lg">
                         <li>Data is ingested from a client's firewall/endpoint</li>
                         <li>It's routed through Cribl for optimization and enrichment</li>
                         <li>It's analyzed in CrowdStrike LogScale</li>

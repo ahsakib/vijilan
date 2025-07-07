@@ -89,7 +89,7 @@ const MspLaunchpad = ({ }) => {
             />
 
             <section className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div className=" col-span-1 md:col-span-2">
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -108,7 +108,7 @@ const MspLaunchpad = ({ }) => {
                             {/* First Card */}
                             <div className="">
                                 <div
-                                    className={`backdrop-blur-md rounded-3xl p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
+                                    className={`backdrop-blur-md rounded-3xl p-3 md:p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
                                     style={{
                                         background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                                     }}
@@ -143,7 +143,7 @@ const MspLaunchpad = ({ }) => {
                             {/* Second Card */}
                             <div className={``}>
                                 <div
-                                    className={`backdrop-blur-md rounded-3xl p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
+                                    className={`backdrop-blur-md rounded-3xl p-3 md:p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
                                     style={{
                                         background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                                     }}
@@ -176,7 +176,7 @@ const MspLaunchpad = ({ }) => {
                             {/* third Card */}
                             <div className={``}>
                                 <div
-                                    className={`backdrop-blur-md rounded-3xl p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
+                                    className={`backdrop-blur-md rounded-3xl p-3 md:p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
                                     style={{
                                         background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                                     }}
@@ -204,14 +204,14 @@ const MspLaunchpad = ({ }) => {
             </section>
             <section className="max-w-7xl mx-auto">
                 <div class="min-h-screen flex items-center justify-center bg-transparent p-4">
-                    <div class="w-full max-w-[993px] h-[411px] md:h-auto md:min-h-[411px] space-y-6 border-2 border-[#F0E51A] rounded-lg p-8 flex flex-col justify-center">
+                    <div class="w-full max-w-[993px] h-auto lg:h-[411px] md:h-auto md:min-h-[411px] space-y-6 border-2 border-[#F0E51A] rounded-lg p-8 flex flex-col justify-center">
                         <div class="text-center">
-                            <h1 class="text-5xl sm:text-3xl font-bold text-[#F0E51A] mb-10">Pricing Simulator</h1>
+                            <h1 class="text-2xl md:text-5xl font-bold !text-[#F0E51A] mb-10">Pricing Simulator</h1>
                             <p class="mt-2 text-xl sm:text-base text-white">Build accurate quotes and see your profit margins with our interactive pricing calculator. Access requires validation.</p>
                         </div>
 
                         <div class="flex justify-center">
-                            <button class="w-full max-w-xs flex justify-center py-6 font-bold px-4 border border-transparent rounded-md shadow-sm text-black bg-[#F0E51A] hover:bg-[#d8cc17] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F0E51A]">
+                            <button class="w-full max-w-xs flex justify-center  py-3 md:py-6 font-bold px-4 border border-transparent rounded-md shadow-sm !text-black bg-[#F0E51A] hover:bg-[#d8cc17] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F0E51A] text-sm md:text-lg">
                                 REQUEST PRICING ACCESS
                             </button>
                         </div>

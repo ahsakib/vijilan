@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                 // responsive done //d
+                // responsive done
                 path: "/",
                 element: <Home />,
             },
@@ -138,40 +138,49 @@ const router = createBrowserRouter([
                 element: <Corrected_MSP_Program />,
             },
             {
-                 // responsive done
+                // responsive done
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
             {
+                // responsive done
                 path: "managed-automation",
                 element: <ManagedAutomation />,
             },
             {
+                // responsive done
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
             {
+
+                // responsive done
                 path: "managed-siem-soc",
                 element: <ManagedSiemSoc />
             },
             {
+                // responsive done
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
-            { 
+            {
                 // responsive done
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },
             {
+
+                // responsive done
                 path: "mid-market-enterprice",
                 element: <MidMarketEnterPrice />
             },
             {
+                // responsive done
                 path: "msp-partner-program-ai",
                 element: <MspPartnerProgramAi />
             },
             {
+                // responsive done
                 path: "msp-launchpad",
                 element: <MspLaunchpad />
             },
@@ -185,53 +194,53 @@ const router = createBrowserRouter([
             },
 
             {
-                 // responsive done
+                // responsive done
                 path: "dashbord",
                 element: <Dashbord />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "case-success",
                 element: <Success_study_case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "resilience-case",
                 element: <Resilience_case />
             },
 
             {
-                 // responsive done
+                // responsive done
                 path: "federal-cmmc-case",
                 element: <Federal_cmmc_case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "financial-complianc-case",
                 element: <Financial_Compliance_Case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "msp-ogscale-case-study",
                 element: <MSP_logscale_case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "smb-runsomware-case-study",
                 element: <SMB_Runsomware />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "health-compliance",
                 element: <HealthCare_Complain_case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "msp-growth-case",
                 element: <MSP_growth_case />
             },
             {
-                 // responsive done
+                // responsive done
                 path: "smb",
                 element: <SMB />
             },

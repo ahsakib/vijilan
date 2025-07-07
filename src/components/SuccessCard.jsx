@@ -14,7 +14,7 @@ const SuccessCard = ({
     centerContent = true
 }) => {
     return (
-        <div className={`relative backdrop-blur-sm rounded-[24px] p-8 ${centerContent ? 'text-center' : ''}`} style={{ backgroundColor: bgColor }}>
+        <div className={`relative backdrop-blur-sm rounded-[24px] p-2 md:p-8 ${centerContent ? 'text-center' : ''}`} style={{ backgroundColor: bgColor }}>
             {/* Gradient Border Layer */}
             <div
                 className="absolute inset-0 rounded-[26px] p-[1px] z-0"

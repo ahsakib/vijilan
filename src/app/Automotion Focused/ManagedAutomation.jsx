@@ -98,7 +98,7 @@ const ManagedAutomation = ({ }) => {
     ];
 
     return <>
-        <div className="max-w-[90%] mx-auto">
+        <div className="max-w-[90%] mx-auto ">
             <div>
                 <Heading_Btn
                     h1="Combat the #1 Attack Vector: Identity Threats"
@@ -116,12 +116,12 @@ const ManagedAutomation = ({ }) => {
             </div>
             <section className="px-6 py-16 max-w-7xl mx-auto">
                 <div className="mx-auto text-center text-white">
-                    <h2 className="text-[40px] font-bold mb-3">Interactive Identity Risk Assessment</h2>
+                    <h2 className=" text-2xl md:text-[40px] font-bold mb-3">Interactive Identity Risk Assessment</h2>
                     <p className="text-white text-center text-[18px] mb-12">
                         Get an instant risk score and personalized recommendations for your identity infrastructure.
                     </p>
                     <div className=" backdrop-blur-sm rounded-[24px] p-8" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                        <h3 className="text-[40px] font-bold text-center">Identity Security Health Check</h3>
+                        <h3 className=" text-3xl md:text-[40px]  font-bold text-center">Identity Security Health Check</h3>
                         <p className="text-white text-center text-[18px] mb-10">Answer a few questions to assess your current identity threat exposure</p>
 
                         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto pb-10">
@@ -133,7 +133,7 @@ const ManagedAutomation = ({ }) => {
             </section>
             <section className="px-6 py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
-                    <h2 className="text-[40px] font-bold mb-3">See How Identity Attacks Unfold</h2>
+                    <h2 className=" text-3xl md:text-[40px]  font-bold mb-3">See How Identity Attacks Unfold</h2>
                     <p className="text-[18px] mb-12">
                         Interactive simulations show how attackers exploit identity vulnerabilities in real-time.
                     </p>
@@ -142,14 +142,14 @@ const ManagedAutomation = ({ }) => {
                         <div className="max-w-6xl w-full rounded-2xl p-10 text-white" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                             {/* Title */}
                             <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-[40px] font-bold mb-3">Identity Attack Scenarios</h2>
+                                <h2 className="text-2xl md:text-[40px] font-bold mb-3">Identity Attack Scenarios</h2>
                                 <p className="text-[18px]">
                                     Select a scenario to see how we detect and respond
                                 </p>
                             </div>
 
                             {/* Categories */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-14 place-items-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-14 place-items-center">
                                 {categories.map((item, index) => (
                                     <div
                                         key={index}
@@ -171,7 +171,7 @@ const ManagedAutomation = ({ }) => {
                                 ))}
                             </div>
 
-                            <div className="flex justify-center gap-5">
+                            <div className="flex flex-wrap justify-center gap-5">
                                 <GradientButton children={"request live demo"} icon={false} />
                                 <OutlineGradientButton icon={false} children={"view technology stack"} />
                             </div>
@@ -181,11 +181,11 @@ const ManagedAutomation = ({ }) => {
             </section>
             <section className="px-6 py-16 max-w-7xl mx-auto">
                 <div className="text-white text-center mb-14">
-                    <h1 className="font-bold text-4xl mb-4">Seamless Integration with Your Stack</h1>
+                    <h1 className="font-bold  text-3xl md:text-[40px]  mb-4">Seamless Integration with Your Stack</h1>
                     <p className="font-bold mb-6">CrowdStrike Falcon Identity Protection integrates with your existing identity infrastructure.</p>
-                    <h3 className="font-bold text-2xl">Check Your Integration Compatibility</h3>
+                    <h3 className="font-bold  text-2xl md:text-[35px] ">Check Your Integration Compatibility</h3>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                     {integrations.map((item, index) => (
                         <div
                             key={index}
@@ -223,7 +223,7 @@ const ManagedAutomation = ({ }) => {
                 </div>
             </section>
             <section className="px-6 py-16 max-w-7xl mx-auto">
-                    <div className="grid grid-cols-2 gap-14">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
                             <SuccessCard
                                 showIcon
                                 iconText="JN"
