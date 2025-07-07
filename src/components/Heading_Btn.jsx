@@ -46,7 +46,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                     <div class="flex flex-col sm:flex-row gap-10 justify-center">
                         {
                             btn1 && <button
-                                className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                                className="p-5 text-lg font-medium rounded-[8px] text-white flex justify-center items-center space-x-3"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 

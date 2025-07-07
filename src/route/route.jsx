@@ -51,11 +51,11 @@ import Serve from '@app/Sarve/Serve';
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/", 
         element: <App />,
         children: [
             {
-                 // responsive done
+                 // responsive done //d
                 path: "/",
                 element: <Home />,
             },
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
                 element: <Blog />,
             },
             {
-                path: "about",
+                path: "about", //d
                 element: <About />,
             },
             {
@@ -74,18 +74,18 @@ const router = createBrowserRouter([
                 element: <Blog_landing_page />,
             },
             {
-                // responsive done
+                // responsive done //d
                 path: "serve",
                 element: <Serve />,
             },
             {
-                // responsive done
+                // responsive done //d
                 path: "resources",
                 element: <Resources />,
             },
             {
                 // responsive done
-                path: "visilan-msg-partner",
+                path: "visilan-msg-partner", 
                 element: <VisilanPartner />,
             },
             {
@@ -104,12 +104,12 @@ const router = createBrowserRouter([
                 element: <Vars_consultants_page />,
             },
             {
-                // responsive done
+                // responsive done //d
                 path: "visilan-professional-service",
                 element: <VisislanProfessional />,
             },
             {
-                // responsive done
+                // responsive done  //problem ase onk
                 path: "case-studies",
                 element: <CaseStudies />,
             },

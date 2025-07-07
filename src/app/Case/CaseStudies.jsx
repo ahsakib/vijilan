@@ -1,62 +1,7 @@
-import CardBorder from "@components/CardBorder"
 import GradientButton from "@components/GradientButton"
 import Heading_Btn from "@components/Heading_Btn"
 import OutlineGradientButton from "@components/OutlineGradientButton"
-import SmallCard from "@components/SmallCard"
-import TestimonialCard from "@components/TestimonialCard"
-import { Star, ArrowRight, Menu, Play } from "lucide-react"
-
-// Custom Button Component
-const Button = ({ children, className = "", variant = "default", size = "default", ...props }) => {
-    const baseStyles =
-        "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background"
-
-    const variants = {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        outline: "border border-input hover:bg-accent hover:text-accent-foreground",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-    }
-
-    const sizes = {
-        default: "h-10 py-2 px-4",
-        sm: "h-9 px-3 rounded-md",
-        lg: "h-11 px-8 rounded-md",
-        icon: "h-10 w-10",
-    }
-
-    return (
-        <button className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
-            {children}
-        </button>
-    )
-}
-
-// Custom Input Component
-const Input = ({ className = "", ...props }) => {
-    return (
-        <input
-            className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
-            {...props}
-        />
-    )
-}
-
-// Custom Card Components
-const Card = ({ children, className = "", ...props }) => {
-    return (
-        <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`} {...props}>
-            {children}
-        </div>
-    )
-}
-
-const CardContent = ({ children, className = "", ...props }) => {
-    return (
-        <div className={`p-6 pt-0 ${className}`} {...props}>
-            {children}
-        </div>
-    )
-}
+import { ArrowRight } from "lucide-react";
 
 // Custom Badge Component
 const Badge = ({ children, className = "", ...props }) => {
@@ -70,314 +15,117 @@ const Badge = ({ children, className = "", ...props }) => {
     )
 }
 
-export default function CaseStudiesPage() {
+const TestimonialCard = ({
+    badgeText,
+    heading,
+    description,
+    stats = [],
+    buttonText = "READ THE FULL STORY",
+    onButtonClick,
+}) => {
+    const Badge = ({ children, className = "", ...props }) => {
+        return (
+            <div
+                className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${className}`}
+                {...props}
+            >
+                {children}
+            </div>
+        )
+    }
     return (
-        <div className=" max-w-[90%] mx-auto">
+        <div
+            className="p-8 rounded-[22px] backdrop-blur-sm"
+            style={{
 
-            {/* Hero Section */}
-            <section className="py-20 px-4">
-                <div className=" text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">Real-World Results, Proven Success</h1>
-                    <p className="text-[18px] text-white max-w-3xl mx-auto">
-                        Discover how our clients have achieved remarkable growth and transformed their businesses with our proven
-                        strategies and innovative solutions.
-                    </p>
+                background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
 
-                    {/* Stats - Improved Grid */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-4xl mx-auto">
+            }}
+        >
+            <Badge className="bg-[#F36E21] text-[10px] font-semibold text-white  px-[7px] py-[8px]">
+                {badgeText}
+            </Badge>
 
-                        <CardBorder height="171px" width="166px">
-                            <div>
-                                <div className="text-white text-[32px] font-bold mb-2">30%</div>
-                                <div className="text-slate-300 text-sm font-medium"> Average MRR
-                                    <br />
-                                    Growth for MSP
-                                    <br />
-                                    Partners</div>
+            <div className="px-4">
+                <h3 className="text-xl md:text-[30px] font-bold text-white mb-6 mt-4 leading-tight">
+                    {heading}
+                </h3>
+
+                <p className="text-white text-[15px] text-base leading-relaxed">{description}</p>
+
+                <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2 gap-5 justify-center  mb-10">
+                    {stats.map((stat, index) => (
+                        <CardBorder key={index} height="130px" width="100%">
+                            <div className="text-center mx-auto">
+                                <div className="text-white text-[36px] font-medium mb-2">{stat.value}</div>
+                                <div className="text-[#E6F7FD] text-[10px] font-medium">{stat.label}</div>
                             </div>
                         </CardBorder>
-                        <CardBorder height="171px" width="166px">
-                            <div>
-                                <div className="text-white text-[32px] font-bold mb-2">40%</div>
-                                <div className="text-slate-300 text-sm font-medium">
-                                    Reduction in
-                                    <br />
-                                    SIEM Costs
-                                </div>
-                            </div>
-                        </CardBorder>
-                        <CardBorder height="171px" width="166px">
-                            <div>
-                                <div className="text-white text-[32px] font-bold mb-2">60%</div>
-                                <div className="text-slate-300 text-sm font-medium">
-                                    Faster Threat
-                                    <br />
-                                    Detection
-                                </div>
-                            </div>
-                        </CardBorder>
-                        <CardBorder height="171px" width="166px">
-                            <div>
-                                <div className="text-white text-[32px] font-bold mb-2">99.9%</div>
-                                <div className="text-slate-300 text-sm font-medium">Uptime Maintained</div>
-                            </div>
-                        </CardBorder>
-                    </div>
-
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                        <GradientButton children={"EXPLORE SUCCESS STORIES"} />
-                        <OutlineGradientButton children={"CALCULATE YOUR ROI"} />
-                    </div>
-
-                    {/* Lead Form */}
-                    {/* <CardBorder  height={"130px"} width="1440px">
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-6">
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="endpoints" className="text-white text-[14px] font-medium text-left">
-                                    Filter by Industries
-                                </label>
-                                <select
-                                    id="endpoints"
-                                    className="p-3 rounded-[16px] text-[14px] bg-[#FFFFFE] border border-none focus:outline-none focus:ring-1 " defaultValue="">
-                                    <option value="" disabled className="text-black">
-                                        All Industries
-                                    </option>
-                                    <option value="1" className="text-black">1</option>
-                                    <option value="1" className="text-black">1</option>
-                                </select>
-                            </div>
-
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="endpoints" className="text-white text-[14px] font-medium text-left">
-                                    Filter by Service
-                                </label>
-                                <select
-                                    id="endpoints"
-                                    className="p-3 rounded-[16px] text-[14px] bg-[#FFFFFE] border border-none focus:outline-none focus:ring-1 " defaultValue="">
-                                    <option value="" disabled className="text-black">
-                                        All Services
-                                    </option>
-                                    <option value="1" className="text-black">1</option>
-                                    <option value="1" className="text-black">1</option>
-                                </select>
-                            </div>
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="endpoints" className="text-white text-[14px] font-medium text-left">
-                                    Filter by Result Type
-                                </label>
-                                <select
-                                    id="endpoints"
-                                    className="p-3 rounded-[16px] text-[14px] bg-[#FFFFFE] border border-none focus:outline-none focus:ring-1 " defaultValue="">
-                                    <option value="" disabled className="text-black">
-                                        All Results
-                                    </option>
-                                    <option value="1" className="text-black">1</option>
-                                    <option value="1" className="text-black">1</option>
-                                </select>
-                            </div>
-                            <OutlineGradientButton children={"CLEAR ALL FILTERS"} />
-                        </div>
-                    </CardBorder> */}
+                    ))}
                 </div>
-            </section>
+            </div>
 
-            {/* Featured Case Study */}
-            <section className="py-20 px-1 md:px-4">
-                <div className="container mx-auto">
+            <div className="border border-white hover:bg-white/10 bg-transparent w-fit text-center mx-auto rounded-[6px] transition-all duration-300">
+                <button
+                    onClick={onButtonClick}
+                    className=" p-[16px] text-[14px] font-medium  flex items-center gap-2 text-white"
+                >
+                    {buttonText}
+                    <div className="w-3 h-3 border rounded-full flex items-center justify-center">
+                        <ArrowRight className="h-2 w-2 text-white" />
+                    </div>
+                </button>
+            </div>
+        </div>
+    );
+};
+
+
+
+const CardBorder = ({
+    height = "171px",
+    width = "166px",
+    children,
+    borderSize,
+    radiusSize,
+    topBottomBorderOnly = false  // New prop to enable top/bottom-only borders
+}) => {
+    return (
+        <div className={`mt-12 relative ${topBottomBorderOnly ? 'w-full' : ''}`}>
+            {/* Main container - background remains #00AEEF3D */}
+            <div
+                className={`relative bg-[#00AEEF3D] ${topBottomBorderOnly ? 'rounded-none' : 'rounded-[26px]'} w-full flex items-center justify-center ${borderSize ? "rounded-[16px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
+                style={{
+                    height,
+                    maxWidth: width,
+                    position: 'relative',
+                    overflow: 'hidden' // Ensures pseudo-elements are contained
+                }}
+            >
+                {/* Top border gradient (matches original color) */}
+                {topBottomBorderOnly && (
                     <div
-                        className="backdrop-blur-md rounded-[24px] py-12 px-2 md:px-16 max-w-5xl mx-auto shadow-2xl border border-[#00AEEF]/40"
+                        className="absolute top-0 left-0 right-0 h-[2px]"
                         style={{
-                            background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
+                            background: 'linear-gradient(90deg, rgba(0,174,239,0) 0%, #00AEEF 50%, rgba(0,174,239,0) 100%)'
                         }}
-                    >
-                        <Badge className="bg-[#F36E21] text-[12px] text-center font-semibold text-white  px-[7px] py-[8px]">
-                            MS PARTNER SUCCESS
-                        </Badge>
+                    />
+                )}
 
-                        <div className="mt-10 relative">
-                            <div className="relative bg-[#00AEEF3D] rounded-[24px] overflow-hidden  p-2 flex items-center justify-center">
-                                {/* Gradient Border Overlay */}
-                                <div
-                                    className="absolute inset-0 rounded-[26px] p-[2px] z-0"
-                                    style={{
-                                        background:
-                                            "linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)",
-                                        WebkitMask:
-                                            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                        WebkitMaskComposite: "xor",
-                                        maskComposite: "exclude",
-                                    }}
-                                />
-
-                                {/* Main Content */}
-                                <div className="z-10 text-left px-1 md:px-10 py-12 w-full">
-                                    <h3 className="text-lg md:text-[22px] font-bold text-white mb-6 leading-tight">
-                                        How a Gold Tier MSP Increased MRR by 30% with ThreatRemediate
-                                    </h3>
-                                    <p className="text-white  text-[18px] leading-relaxed max-w-4xl mx-auto">
-                                        Discover how a Gold Tier MSP partner leveraged Vijilan's flagship
-                                        ThreatRemediate service to expand their security offerings,
-                                        increase monthly recurring revenue, and deliver hands-off
-                                        cybersecurity to their clients while reducing operational
-                                        overhead.
-                                    </p>
-
-                                    {/* Stats Grid */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-6 mb-10 px-6">
-                                        {[
-                                            { value: "30%", label: "Increase in Security MRR" },
-                                            { value: "50%", label: "Reduction in Alert Fatigue" },
-                                            { value: "95%", label: "Client Retention Rate" },
-                                            { value: "6 wks", label: "Implementation Time" },
-                                        ].map((stat, index) => (
-                                            <CardBorder>
-                                                <div className="text-[36px] font-medium text-white mb-2">
-                                                    {stat.value}
-                                                </div>
-                                                <div className="text-[#E6F7FD] text-[10px] leading-tight">
-                                                    {stat.label}
-                                                </div>
-                                            </CardBorder>
-                                        ))}
-                                    </div>
-
-                                    <OutlineGradientButton>READ THE FULL CASE STUDY</OutlineGradientButton>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Success Stories Grid */}
-            <section className="py-16 px-4 bg-transparent relative overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
-                </div>
-
-                <div className="container mx-auto relative z-10">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl md:text-[40px] font-bold text-white mb-4">
-                            Success Stories Across Industries
-                        </h2>
-                        <p className="text-lg md:text-[18px] text-white max-w-4xl mx-auto leading-relaxed">
-                            Browse our comprehensive collection of client success stories and measurable business results <br /> across
-                            diverse industries and use cases.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-                        {Array.from({ length: 8 }).map((_, index) => (
-                            <TestimonialCard
-                                badgeText={"MS PARTNER SUCCESS"}
-                                heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                                description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
-                                    deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                                stats={[
-                                    { value: "99.9%", label: "Uptime Maintained" },
-                                    { value: "30%", label: "MRR Growth" },
-                                ]}
-
-                            >
-                            </TestimonialCard>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Client Testimonials */}
-            <section className="py-16 px-4 bg-transparent">
-                <div className="container mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-[40px] font-bold text-white mb-4">
-                            What Our Clients Say
-                        </h2>
-                        <p className="text-[18px] text-white max-w-3xl mx-auto">
-                            Real feedback from security leaders who've transformed their operations with Vijilan
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                quote:
-                                    "Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier.",
-                                author: "Sarah Johnson",
-                                title: "— CISO, Manufacturing Firm",
-                            },
-                            {
-                                quote:
-                                    "When we were hit by ransomware at 2 AM, Vijilan's ThreatRemediate team was on it immediately. Their swift action isolated the threat, prevented it from spreading to our critical systems, and saved us countless hours of downtime.",
-                                author: "Michael Chen",
-                                title: "— Maria Rodriguez, IT Director, Regional Healthcare System",
-                            },
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "Emily Rodriguez",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "David Kim",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "Lisa Thompson",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "Lisa Thompson",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "Lisa Thompson",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-                            {
-                                quote:
-                                    "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
-                                author: "James Wilson",
-                                title: "— CTO, Mid-Market Logistics Company",
-                            },
-                        ].map((testimonial, index) => (
-                            <div
-                                key={index}
-                                className="backdrop-blur-sm px-4 md:px-12 py-16"
-                                style={{
-                                    borderRadius: '22.184px',
-                                    background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
-                                }}>
-                                <blockquote className="text-white text-center text-[20px] leading-relaxed mb-6">
-                                    "{testimonial.quote}"
-                                </blockquote>
-                                <div className="text-center bg-[linear-gradient(90deg,_#F89B29_0%,_#FF0F7B_186.51%)] bg-clip-text text-transparent text-[20px]">
-                                    — {testimonial.author}, {testimonial.title}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-
-            {/* ROI Calculator */}
-            <section className="py-16 px-4">
-                <div className="relative container mx-auto bg-[#00AEEF3D] ">
+                {/* Bottom border gradient (matches original color) */}
+                {topBottomBorderOnly && (
                     <div
-                        className="absolute inset-0 p-[2px] z-0 rounded-2xl "
+                        className="absolute bottom-0 left-0 right-0 h-[2px]"
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(0,174,239,0) 0%, #00AEEF 50%, rgba(0,174,239,0) 100%)'
+                        }}
+                    />
+                )}
+
+                {/* Original full border (for non-special cases) */}
+                {!topBottomBorderOnly && (
+                    <div
+                        className={`absolute inset-0 rounded-[26px] p-[2px] z-0 ${borderSize ? "rounded-[16px] p-[1px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
                         style={{
                             background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
                             WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
@@ -385,58 +133,425 @@ export default function CaseStudiesPage() {
                             maskComposite: "exclude",
                         }}
                     />
-                    <div>
-                        <div className="py-[74px] px-5 md:px-[58px] ">
-                            <div className="text-center mb-10">
-                                <h2 className="text-2xl md:text-[40px] font-bold text-white mb-3">Calculate Your Potential ROI</h2>
-                                <p className="text-white text-[18px]">See how much you could save and grow with Vijilan's cybersecurity solutions</p>
+                )}
+
+                {/* Content container */}
+                <div className="z-10 w-full px-4">
+                    {children}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default function CaseStudiesPage() {
+    return (
+        <>
+            {/* Hero Section */}
+            <section className="py-12 md:py-14">
+                <div className="text-center">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Real-World Results, <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Proven Success</span>
+                    </h1>
+                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Discover how our clients have achieved remarkable growth and transformed their businesses with our proven
+                        strategies and innovative solutions.
+                    </p>
+
+                    {/* Stats - Improved Grid */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 my-12 max-w-4xl mx-auto">
+                        <CardBorder height="171px" width="100%">
+                            <div>
+                                <div className="text-white text-3xl md:text-4xl font-bold mb-2">30%</div>
+                                <div className="text-slate-300 text-xs md:text-sm font-medium">
+                                    Average MRR Growth
+                                    <br />
+                                    for MSP Partners
+                                </div>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        </CardBorder>
+                        <CardBorder height="171px" width="100%">
+                            <div>
+                                <div className="text-white text-3xl md:text-4xl font-bold mb-2">40%</div>
+                                <div className="text-slate-300 text-xs md:text-sm font-medium">
+                                    Reduction in
+                                    <br />
+                                    SIEM Costs
+                                </div>
+                            </div>
+                        </CardBorder>
+                        <CardBorder height="171px" width="100%">
+                            <div>
+                                <div className="text-white text-3xl md:text-4xl font-bold mb-2">60%</div>
+                                <div className="text-slate-300 text-xs md:text-sm font-medium">
+                                    Faster Threat
+                                    <br />
+                                    Detection
+                                </div>
+                            </div>
+                        </CardBorder>
+                        <CardBorder height="171px" width="100%">
+                            <div>
+                                <div className="text-white text-3xl md:text-4xl font-bold mb-2">99.9%</div>
+                                <div className="text-slate-300 text-xs md:text-sm font-medium">
+                                    Uptime
+                                    <br />
+                                    Maintained
+                                </div>
+                            </div>
+                        </CardBorder>
+                    </div>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                        <GradientButton className="">EXPLORE SUCCESS STORIES</GradientButton>
+                        <OutlineGradientButton icon={false}>CALCULATE YOUR ROI</OutlineGradientButton>
+                    </div>
+
+                    {/* Lead Form */}
+                    <div className="max-w-full">
+                        <CardBorder height="auto" width="100%" topBottomBorderOnly={true}>
+                            <div className="md:ml-35">
+
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-6 py-4 md:py-6 md:h-[150px] justify-center items-center mx-auto">
                                 <div className="flex flex-col gap-1">
-                                    <label htmlFor="endpoints" className="text-white text-[14px] text-left">
-                                        Business Type
+                                    <label htmlFor="industries" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                        Filter by Industries
                                     </label>
                                     <select
-                                        id="endpoints"
-                                        className="p-3 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none focus:ring-0 " defaultValue="">
-                                        <option value="" disabled className="text-black">
-                                            Select Business Type
+                                        id="industries"
+                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled className="text-gray-500">
+                                            All Industries
                                         </option>
-                                        <option value="1" className="text-black">1</option>
-                                        <option value="1" className="text-black">1</option>
+                                        <option value="1" className="!text-black">Technology</option>
+                                        <option value="2" className="!text-black">Healthcare</option>
+                                    </select>
+                                </div>
+
+                                <div className="flex flex-col gap-1">
+                                    <label htmlFor="services" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                        Filter by Service
+                                    </label>
+                                    <select
+                                        id="services"
+                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled className="text-gray-500">
+                                            All Services
+                                        </option>
+                                        <option value="1" className="!text-black">Threat Detection</option>
+                                        <option value="2" className="!text-black">Incident Response</option>
                                     </select>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <label className="text-white text-[14px] text-left">Current Annual Revenue</label>
-                                    <input placeholder="100000" className="p-3 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none focus:ring-0" />
+                                    <label htmlFor="results" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                        Filter by Result Type
+                                    </label>
+                                    <select
+                                        id="results"
+                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                        defaultValue=""
+                                    >
+                                        <option value="" disabled className="text-gray-500">
+                                            All Results
+                                        </option>
+                                        <option value="1" className="!text-black">Cost Savings</option>
+                                        <option value="2" className="!text-black">Revenue Growth</option>
+                                    </select>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <label className="text-white text-[14px] text-left">Annual Security Budget</label>
-                                    <input placeholder="100000" className="p-3 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none focus:ring-0" />
+                                <div className="flex items-end md:mt-5">
+                                    <OutlineGradientButton className="w-full">CLEAR ALL FILTERS</OutlineGradientButton>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-                                <div className="flex flex-col gap-1">
-                                    <label className="text-white text-[14px] text-left">Number Of Employees</label>
-                                    <input placeholder="100" className="p-3 rounded-[12px] text-[14px] bg-[#FFFFFE] border border-[#6246EA] focus:outline-none focus:ring-0" />
-                                </div>
-                                {/* <Button className="bg-teal-500 hover:bg-teal-600 text-white md:mt-6">Calculate ROI</Button> */}
                             </div>
-                        </div>
+                        </CardBorder>
                     </div>
                 </div>
             </section>
+            <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[1200px] mx-auto px-4 sm:px-6">
+                {/* Featured Case Study */}
+                <section className="py-12 md:py-20">
+                    <div className="container mx-auto">
+                        <div
+                            className="backdrop-blur-md rounded-2xl md:rounded-[24px] py-8 md:py-16 px-6 md:px-16 max-w-6xl mx-auto shadow-xl border border-[#00AEEF]/40"
+                            style={{
+                                background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
+                            }}
+                        >
+                            <div className="text-left ml-7">
+                                <Badge className="bg-[#F36E21] text-xs md:text-[12px] text-center font-semibold text-white px-4 py-2 md:px-[9px] md:py-[8px]">
+                                    MS PARTNER SUCCESS
+                                </Badge>
+                            </div>
 
-            {/* Final CTA */}
+                            <div className="mt-8 md:mt-10 mx-5 md:mx-7 relative">
+                                <div className="relative bg-[#00AEEF3D] rounded-2xl md:rounded-[24px] overflow-hidden p-1 md:p-2 flex items-center justify-center">
+                                    {/* Gradient Border Overlay */}
+                                    <div
+                                        className="absolute inset-0 rounded-2xl md:rounded-[26px] p-[2px] z-0"
+                                        style={{
+                                            background:
+                                                "linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)",
+                                            WebkitMask:
+                                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                            WebkitMaskComposite: "xor",
+                                            maskComposite: "exclude",
+                                        }}
+                                    />
 
-            <Heading_Btn
-                h1={"Ready to Write Your Own Success Story?"}
-                desc={`Join hundreds of organizations that have transformed their security posture and achieved\nmeasurable business results with Vijilan's comprehensive cybersecurity solutions.`}
-                btn1={"Get Started Today"}
-                btn2={"Get a Free Consultation"}
-                isSmallHeading={true}
-            />
+                                    {/* Main Content */}
+                                    <div className="z-10 text-left px-2 md:px-10 py-6 md:py-12 w-full">
+                                        <h3 className="text-xl md:text-2xl lg:text-[22px] font-bold text-white mb-4 md:mb-6 leading-tight">
+                                            How a Gold Tier MSP Increased MRR by 30% with ThreatRemediate
+                                        </h3>
+                                        <p className="text-gray-300 text-base md:text-lg leading-relaxed mx-auto">
+                                            Discover how a Gold Tier MSP partner leveraged Vijilan's flagship
+                                            ThreatRemediate service to expand their security offerings,
+                                            increase monthly recurring revenue, and deliver hands-off
+                                            cybersecurity to their clients while reducing operational
+                                            overhead.
+                                        </p>
 
-        </div>
+                                        {/* Stats Grid */}
+                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 my-8 md:my-10">
+                                            {[
+                                                { value: "30%", label: "Increase in Security MRR" },
+                                                { value: "50%", label: "Reduction in Alert Fatigue" },
+                                                { value: "95%", label: "Client Retention Rate" },
+                                                { value: "6 wks", label: "Implementation Time" },
+                                            ].map((stat, index) => (
+                                                <CardBorder key={index} height="150px" width="100%">
+                                                    <div className="text-center">
+                                                        <div className="text-2xl md:text-3xl font-bold text-white mb-1 md:mb-2">
+                                                            {stat.value}
+                                                        </div>
+                                                        <div className="text-[#E6F7FD] text-xs leading-tight">
+                                                            {stat.label}
+                                                        </div>
+                                                    </div>
+                                                </CardBorder>
+                                            ))}
+                                        </div>
+
+                                        <div className="flex justify-center">
+                                            <OutlineGradientButton>READ THE FULL CASE STUDY</OutlineGradientButton>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Success Stories Grid */}
+                <section className="py-12 md:py-16 bg-transparent relative overflow-hidden">
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-10 pointer-events-none">
+                        <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-bl from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-3xl"></div>
+                    </div>
+
+                    <div className="container mx-auto relative z-10">
+                        <div className="text-center mb-8 md:mb-12">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
+                                Success Stories Across Industries
+                            </h2>
+                            <p className="text-gray-300 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
+                                Browse our comprehensive collection of client success stories and measurable business results across
+                                diverse industries and use cases.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+                            {Array.from({ length: 6 }).map((_, index) => (
+                                <TestimonialCard
+                                    key={index}
+                                    badgeText={"MS PARTNER SUCCESS"}
+                                    heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
+                                    description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
+                                    stats={[
+                                        { value: "30%", label: "MRR Growth" },
+                                        { value: "50%", label: "Alert Reduction" },
+                                    ]}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Client Testimonials */}
+                <section className="py-12 md:py-16 bg-transparent">
+                    <div className="container mx-auto">
+                        <div className="text-center mb-8 md:mb-12">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
+                                What Our Clients Say
+                            </h2>
+                            <p className="text-gray-300 text-base md:text-lg max-w-3xl mx-auto">
+                                Real feedback from security leaders who've transformed their operations with Vijilan
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {[
+                                {
+                                    quote: "Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier.",
+                                    author: "Sarah Johnson",
+                                    title: "CISO, Manufacturing Firm",
+                                },
+                                {
+                                    quote: "When we were hit by ransomware at 2 AM, Vijilan's ThreatRemediate team was on it immediately. Their swift action isolated the threat, prevented it from spreading to our critical systems, and saved us countless hours of downtime.",
+                                    author: "Michael Chen",
+                                    title: "IT Director, Regional Healthcare System",
+                                },
+                                {
+                                    quote: "We had a ransomware incident on a Friday night. Before our internal team could even assemble, Vijilan's SOC had already contained the threat, isolated the affected machines, and disabled the compromised user account. They solved it.",
+                                    author: "Emily Rodriguez",
+                                    title: "CTO, Mid-Market Logistics Company",
+                                },
+                                {
+                                    quote: "The transition to Vijilan's platform was seamless, and their team provided exceptional support throughout the onboarding process. We saw immediate improvements in our threat detection capabilities.",
+                                    author: "David Kim",
+                                    title: "Security Manager, Financial Services",
+                                },
+                                {
+                                    quote: "As an MSP, Vijilan has allowed us to offer enterprise-grade security services to our clients without the need for additional headcount. Their platform is a game-changer for our business model.",
+                                    author: "Lisa Thompson",
+                                    title: "CEO, Managed Services Provider",
+                                },
+                                {
+                                    quote: "The cost savings from switching to Vijilan were substantial, but what really impressed us was the improvement in our security posture. We're detecting and responding to threats faster than ever before.",
+                                    author: "James Wilson",
+                                    title: "Director of IT, Education Sector",
+                                },
+                                {
+                                    quote: "The cost savings from switching to Vijilan were substantial, but what really impressed us was the improvement in our security posture. We're detecting and responding to threats faster than ever before.",
+                                    author: "James Wilson",
+                                    title: "Director of IT, Education Sector",
+                                },
+                                {
+                                    quote: "The cost savings from switching to Vijilan were substantial, but what really impressed us was the improvement in our security posture. We're detecting and responding to threats faster than ever before.",
+                                    author: "James Wilson",
+                                    title: "Director of IT, Education Sector",
+                                },
+                            ].map((testimonial, index) => (
+                                <div
+                                    key={index}
+                                    className="backdrop-blur-sm p-12 text-center rounded-xl md:rounded-2xl h-[380px]"
+                                    style={{
+                                        background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
+                                    }}
+                                >
+                                    <blockquote className="text-white text-base md:text-lg leading-relaxed mb-4 md:mb-6">
+                                        "{testimonial.quote}"
+                                    </blockquote>
+                                    <div
+                                        className="text-center text-xl font-bold"
+                                        style={{
+                                            background: 'linear-gradient(to right, #F89B29, #FF0F7B)',
+                                            WebkitBackgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent',
+                                            MozBackgroundClip: 'text',
+                                            MozTextFillColor: 'transparent',
+                                            backgroundClip: 'text',
+                                            color: 'transparent',
+                                        }}
+                                    >
+                                        — {testimonial.author}, {testimonial.title}
+                                    </div>
+
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ROI Calculator */}
+                <section className="py-12 md:py-16">
+                    <div className="relative container mx-auto bg-[#00AEEF3D] rounded-xl md:rounded-2xl overflow-hidden">
+                        <div
+                            className="absolute inset-0 p-[2px] z-0 rounded-xl md:rounded-2xl"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }}
+                        />
+                        <div>
+                            <div className="py-20 px-20 md:py-12 md:px-12">
+                                <div className="text-center mb-8 md:mb-10">
+                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
+                                        Calculate Your Potential ROI
+                                    </h2>
+                                    <p className="text-white font-medium text-base md:text-lg">
+                                        See how much you could save and grow with Vijilan's cybersecurity solutions
+                                    </p>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                                    <div className="flex flex-col gap-1">
+                                        <label htmlFor="businessType" className="text-white text-sm md:text-[14px] text-left">
+                                            Business Type
+                                        </label>
+                                        <select
+                                            id="businessType"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            defaultValue=""
+                                        >
+                                            <option value="" disabled className="text-gray-500">
+                                                Select Business Type
+                                            </option>
+                                            <option value="msp" className="text-black">Managed Service Provider</option>
+                                            <option value="enterprise" className="text-black">Enterprise</option>
+                                        </select>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <label className="text-white text-sm md:text-[14px] text-left">Current Annual Revenue</label>
+                                        <input
+                                            placeholder="100000"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            type="number"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <label className="text-white text-sm md:text-[14px] text-left">Annual Security Budget</label>
+                                        <input
+                                            placeholder="100000"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            type="number"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                    <div className="flex flex-col gap-1">
+                                        <label className="text-white text-sm md:text-[14px] text-left">Number Of Employees</label>
+                                        <input
+                                            placeholder="100"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            type="number"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Final CTA */}
+                <section className="py-12 md:py-16">
+                    <Heading_Btn
+                        h1={"Ready to Write Your Own Success Story?"}
+                        desc={`Join hundreds of organizations that have transformed their security posture and achieved measurable business results with Vijilan's comprehensive cybersecurity solutions.`}
+                        btn1={"Get Started Today"}
+                        btn2={"Get a Free Consultation"}
+                        isSmallHeading={true}
+                    />
+                </section>
+            </div>
+        </>
+
     )
 }

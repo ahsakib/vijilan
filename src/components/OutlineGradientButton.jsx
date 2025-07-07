@@ -3,8 +3,7 @@ import React from "react";
 const OutlineGradientButton = ({ children, icon = true }) => {
   return (
     <button
-      className="relative p-[18px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
-      
+      className="relative p-5 md:p-[20px] text-lg font-medium rounded-[8px] text-white flex justify-center items-center space-x-3 bg-transparent"
     >
       <div
         className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}

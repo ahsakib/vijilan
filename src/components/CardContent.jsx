@@ -52,7 +52,7 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
         </div>}
         {
           Cardsticket && <div className='bg-[#D9D9D9] w-auto md:w-[250px] p-6 h-auto md:h-[190px] mx-auto rounded-2xl my-5 flex justify-center items-center'>
-            <h4 className='text-center text-black  text-2xl'>{Cardsticket}</h4>
+            <h4 className='text-center !text-black  text-2xl'>{Cardsticket}</h4>
           </div>
         }
 
