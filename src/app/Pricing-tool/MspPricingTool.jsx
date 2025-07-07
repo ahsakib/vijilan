@@ -5,6 +5,7 @@ import location from "../../Assets/location.png";
 import linkedin from "../../Assets/linkedin.png";
 import call from "../../Assets/call.png"
 import line from "../../Assets/line.png"
+import Heading_Btn from '@components/Heading_Btn';
 
 const MspPricingTool = () => {
     const [activeTab, setActiveTab] = useState("Sales Inquiry")
@@ -14,18 +15,18 @@ const MspPricingTool = () => {
             <section className=" flex items-center justify-center p-8">
                 <div className="max-w-7xl mx-auto text-center">
                     {/* Header */}
-                    <div className="mb-12">
-                        <h1 className="text-5xl  font-bold text-white mb-3">Let's Connect</h1>
-                        <p className="text-[18px] text-white text-center leading-relaxed">
-                            Whether you're interested in our services, want to become a partner, or need <br /> support, our team is here to
-                            help. Reach out and let's start the conversation.
-                        </p>
-                    </div>
+
+                    <Heading_Btn
+                        h1="Let's Connect"
+                        desc="  Whether you're interested in our services, want to become a partner, or need <br /> support, our team is here to
+                            help. Reach out and let's start the conversation."
+                    />
+
 
                     {/* Cards Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Sales & General Inquiries Card */}
-                        <div className="bg-[#00AEEF3D] backdrop-blur-sm  rounded-2xl p-8 relative" >
+                        <div className="bg-[#00AEEF3D] backdrop-blur-sm  rounded-2xl p-3 md:p-8 relative" >
                             <div
                                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                                 style={{
@@ -38,7 +39,7 @@ const MspPricingTool = () => {
                             <div className=" flex justify-center items-center mx-auto">
                                 <span className="bg-[#F1511B] text-white text-[10px] font-bold px-3 py-1 rounded-full">ADD ICON</span>
                             </div>
-                            <div className="mt-12">
+                            <div className="mt-5 md:mt-12">
                                 <h3 className="text-2xl font-medium text-white mb-6">Sales & General Inquiries</h3>
                                 <p className="text-white text-[18px] font-medium mb-8 leading-relaxed">
                                     Ready to explore how Vijilan can transform your security posture? Our sales team is here to help.
@@ -271,7 +272,7 @@ const MspPricingTool = () => {
 
                                     <textarea
                                         name="message"
-                                        placeholder="Enter your message..."  
+                                        placeholder="Enter your message..."
                                         rows={4}
                                         className="relative z-10 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]"
                                     />
