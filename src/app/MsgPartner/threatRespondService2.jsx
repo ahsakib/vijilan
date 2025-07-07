@@ -18,15 +18,15 @@ export default function Component() {
             {/* Hero Section */}
             <Heading_Btn
                 h1="Beyond Detection: We Stop Breaches with ThreatRemediate™"
-                desc="Our flagship fully managed XDR service. We don't just send alerts—our 24/7 expert SOC actively contains and remediates threats across your entire digital ecosystem, powered by CrowdStrike."
+                desc={"Our flagship fully managed XDR service. We don't just send alerts—our 24/7 expert\nSOC actively contains and remediates threats across your entire digital ecosystem,\npowered by CrowdStrike."}
                 btn1="watch a 2-minute  overview"
                 btn2="get an instant quote"
             />
 
 
             {/* Video Section */}
-            <section className="px-4 py-16 lg:px-8">
-                <div className="mx-auto max-w-4xl text-center">
+            <section className="container py-16 md:px-8">
+                <div className=" text-center">
                     <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white sm:text-4xl">
                         See ThreatRemediate in Action
                     </h2>
@@ -57,7 +57,7 @@ export default function Component() {
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
-                        <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-white">
+                        <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">
                             How We Deliver Complete Protection
                         </h2>
                         <p className="mt-4 text-sm md:text-[18px] text-white">
@@ -107,7 +107,7 @@ export default function Component() {
                                         }}
                                     />
                                     <div className="flex items-center gap-3 mb-3 ">
-                                        <div className="w-[45px] md:w-[60px] h-[30px] md:h-[60px] rounded-full flex flex-col md:flex-row items-center justify-center"
+                                        <div className="w-[45px] md:w-[60px] h-[45px] md:h-[60px] rounded-full flex flex-col md:flex-row items-center justify-center"
                                             style={{
                                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
                  linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
@@ -260,15 +260,16 @@ export default function Component() {
 
                             <button
 
-                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
-                                    border: "1px solid",
-                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                    borderImageSlice: 1,
-                                    borderRadius: "8px",
-                                    backgroundColor: "transparent",
-                                }}
-
-                            >
+                                className="relative inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" >
+                                <div
+                                    className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
                                 LOG IN TO PORTAL
                             </button>
                         </div>
@@ -294,15 +295,16 @@ export default function Component() {
                             </div>
 
                             <button
-                                className="inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
-                                    border: "1px solid",
-                                    borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                    borderImageSlice: 1,
-                                    borderRadius: "8px",
-                                    backgroundColor: "transparent",
-                                }}
-
-                            >
+                                className="relative inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" >
+                                <div
+                                    className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
                                 CALL NOW
                             </button>
 

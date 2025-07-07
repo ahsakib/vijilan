@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn }) => {
+const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn, descSize }) => {
     return (
         <div className={`relative w-full my-8 py-8 text-white ${background ? "bg-[#00AEEF3D]" : "bg-transparent"}  rounded-[24px]  `}>
             <div
-                className="absolute inset-0 rounded-[24px] p-[5px] z-0"
+                className="absolute inset-0 rounded-[24px] p-[2px] z-0"
                 style={
                     background
                         ? {
@@ -19,8 +19,8 @@ const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn }) => {
                 }
             />
             <div className='w-full md:w-3/4 mx-auto space-y-5'>
-                {/* <h1 className='font-bold text-center  text-lg md:text-[30px]'>{H1}</h1> */}
-                <p className='text-lg md:text-[20px] text-center '>{Desc}</p>
+                {H1 && <h1 className='font-bold text-center whitespace-pre-line  text-lg md:text-[30px]'>{H1}</h1>}
+                <p className={` ${descSize ? " text-[16px] md:text-[18px]" : "text-lg md:text-[20px]"} text-center whitespace-pre-line`}>{Desc}</p>
 
                 {Input && <div className='relative'>
                     <input className='w-full mt-2 py-5 rounded-lg' placeholder='Enter Your Email ' type="search" />

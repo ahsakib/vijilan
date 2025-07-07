@@ -41,8 +41,8 @@ export default function VijilianLanding() {
             <section className="relative z-10 px-6 py-20 text-center">
 
                 <Heading_Btn
-                    h1="Build Your Profitable Security Practice on  Our Platform"
-                    desc="Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to<br /> deliver enterprise-grade  cyber security. No minimums, no complexity, no high startup  costs."
+                    h1={"Build Your Profitable Security Practice on\nOur Platform"}
+                    desc={"Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to\ndeliver enterprise-grade  cyber security. No minimums, no complexity, no high startup\ncosts."}
                     rating="★★★★★  |  Trusted by over 200 MSPs worldwide "
                     btn1="Apply to Become a partner"
                     btn2="DOWNLOAD PARTNER KIT"
@@ -146,14 +146,13 @@ export default function VijilianLanding() {
                         A Partnership Designed for Your Growth
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6   mx-auto">
-
-
                         {
                             CardContentData1.map((card,index) => <CardContent
                                 head={card.head}
                                 Index={index}
                                 sub={card.sub}
                                 iconed={card.iconed}
+                                hFit={true}
                             />)
                         }
                     </div>
@@ -208,7 +207,7 @@ export default function VijilianLanding() {
                                     "Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is
                                     world-class, and the active remediation in ThreatRemediate is a game- changer for our clients."
                                 </blockquote>
-                                <p className="text-[#00AEEF] text-[14px] font-medium">— Alex Johnson, CEO of a Silver Tier MSP Partner</p>
+                                <p className=" text-[14px] font-medium" style={{color: "#00AEEF"}}>— Alex Johnson, CEO of a Silver Tier MSP Partner</p>
                             </CardContentData>
                         </Card>
 

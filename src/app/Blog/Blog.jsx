@@ -9,14 +9,12 @@ import { ChevronRight } from 'lucide-react';
 import mask from "../../Assets/mask.png";
 
 
-
-
 const Blog = () => {
     return (
-        <div className="text-white py-4 px-2 lg:px-8 ">
+        <div className="text-white py-4 lg:px-8 ">
 
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className="container mx-auto md:px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
@@ -25,7 +23,7 @@ const Blog = () => {
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-400 text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
+                        <span className=" !text-[13px] font-medium">The Rise of Malware-Free Attacks</span>
                     </nav>
                 </div>
 
@@ -46,7 +44,7 @@ const Blog = () => {
                     {/* Author Information */}
                     <div className="flex items-center gap-3" >
                         <div
-                            className=" rounded-full flex items-center justify-center text-white font-medium text-sm"
+                            className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-white text-[10px] font-bold"
                             style={{
                                 background: `linear-gradient(0deg, rgba(196,196,196,0.3), rgba(196,196,196,0.3)),
                  linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`
@@ -74,9 +72,9 @@ const Blog = () => {
 
             {/* middle part */}
 
-            <div className='grid grid-cols-1 md:grid-cols-2'>
+            <div className='container mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-5 gap-10'>
                 {/* Main content */}
-                {/* <div className="  ">
+                <div className="lg:col-span-3 col-span-full">
 
                     <p className="text-[18px] mb-6">
                         Modern cyber attackers are evolving rapidly, and one of the trends we’re
@@ -107,7 +105,7 @@ const Blog = () => {
                         <li>Data Exfiltration: Using legitimate file transfer utilities or cloud services to steal sensitive information.</li>
                     </ul>
 
-                    <blockquote className="bg-[#082235] h-[263px]  rounded-[10px] border-l-4 border-[#00AEEF] mb-6">
+                    <blockquote className="bg-[#082235] min-h-[263px] flex items-center  rounded-[10px] border-l-4 border-[#00AEEF] px-2 mb-6">
                         <p className="italic text-[20px] w-full h-full flex justify-center items-center">
                             “The most dangerous attacks today don’t look like attacks at all. <br />
                             They blend seamlessly into normal business operations, which is <br />
@@ -126,10 +124,10 @@ const Blog = () => {
                         Instrumentation (WMI), or even trusted applications like browsers and productivity
                         software, these signature-based approaches become largely ineffective.
                     </p>
-                </div> */}
+                </div>
 
                 {/* Sidebar */}
-                <aside className="space-y-8  ">
+                <aside className="lg:col-span-2 col-span-full space-y-8">
                     {/* social media share */}
                     <div className="relative bg-[#00AEEF3D] p-2 md:p-6 rounded-[16px] ">
                         <div
@@ -187,7 +185,7 @@ const Blog = () => {
 
 
                             <button
-                                className="py-[16px] text-lg md:text-[24px] rounded-[8px] font-medium text-white transition-opacity hover:opacity-90"
+                                className="py-[16px] px-[20px] text-[16px] md:text-lg md:px-[24px] rounded-[8px] font-medium text-white transition-opacity hover:opacity-90"
                                 style={{
                                     background: 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
                                 }}
@@ -232,27 +230,26 @@ const Blog = () => {
                     </div>
                 </aside>
             </div>
-            <div className=" mx-auto px-6 grid  grid-cols-1 md:grid-cols-2  gap-10">
-
-
+            <div className=" container mx-auto md:px-6 grid grid-cols-1 lg:grid-cols-5 gap-10">
 
                 {/* organization value */}
-                <div className='col-span-2 text-center'
+                <div className='lg:col-span-3 col-span-full text-center'
                 // style={{   background: 'linear-gradient(to right, #F89B29, #FF0F7B)'}}
                 >
                     <Blog_Subscribe_Component_Btn
-                        H1="Is your organization vulnerable to malware-free attacks?"
-                        Desc="Vijilan's ThreatRemediate™ service provides behavioral-based detection and active containment capabilities specifically designed to identify and stop these sophisticated threats. Our expert SOC doesn't just alert you—we take direct action to neutralize the threat."
+                        H1={"Is your organization vulnerable\nto malware-free attacks?"}
+                        Desc={"Vijilan's ThreatRemediate™ service provides behavioral-based detection and\nactive containment capabilities specifically designed to identify and stop\nthese sophisticated threats. Our expert SOC doesn't just alert you—we take\ndirect action to neutralize the threat."}
                         Btn=" LEARN ABOUT THREATREMEDIATE"
+                        background={true}
+                        descSize={true}
                     />
-
 
                 </div>
 
 
                 {/* article  */}
 
-                <div className='col-span-2 text-left space-y-2'>
+                <div className='lg:col-span-3 col-span-full text-left space-y-2'>
                     <div className='space-y-6'>
                         <h1 className='font-bold text-lg md:text-[32px]'>Advanced Detection Strategies That Actually Work</h1>
 
@@ -296,9 +293,6 @@ const Blog = () => {
                         </ul>
 
 
-
-
-
                     </div>
                     <div className='space-y-6'>
                         <h1 className='font-bold text-lg md:text-[32px] '> The Vijilan Approach: Active Remediation</h1>
@@ -322,13 +316,6 @@ const Blog = () => {
                                 <span className='font-semibold'>Comprehensive Investigation: </span>
                                 Our team conducts thorough forensic analysis to understand the full scope of the attack and prevent similar future incidents</li>
                         </ul>
-
-
-
-                        <div>
-
-                        </div>
-
 
                     </div>
                     <div className='space-y-6'>
@@ -362,46 +349,57 @@ const Blog = () => {
                         <li>
                             <span className='font-semibold'>   Test Your Defenses:  </span>
                             Regularly conduct red team exercises that simulate malware-free attack scenarios</li>
+                    </div>
+                </div>
+            </div>
+
+            <>
+                <style>
+                    {`
+                    .custom-mask-image {
+                        display: none;
+                }
+
+                @media (min-width: 1024px) {
+                    .custom-mask-image {
+                    display: flex;
+                    grid-column: span 1 / span 1;
+                }
+            }
+        `}
+                </style>
+                <div className='container mx-auto md:px-6 pt-6 grid grid-cols-1 lg:grid-cols-3'>
+                    <div className='space-y-6 sm:col-span-3 md:col-span-2'>
+                        <h1 className='font-bold text-lg md:text-[32px]'> 1.  Looking Forward: The Future of Threat Detection</h1>
+
+                        <p className=' text-[18px]  mx-auto my-4   '>
+                            <span> As attackers continue to evolve their techniques, organizations must stay ahead of the curve. The future of cybersecurity lies in intelligent, behavior-based detection combined with rapid, automated response capabilities. At Vijilan, we're constantly innovating our detection algorithms and response procedures to stay ahead of emerging threats.
+                            </span>
+                            <span className=' my-3 block'> The rise of malware-free attacks represents a fundamental shift in the threat landscape, but with the right approach and tools, organizations can successfully defend against these sophisticated threats. The key is moving beyond traditional signature-based detection to embrace behavioral analysis, expert human oversight, and active remediation capabilities.
+                            </span>
+                            <span>Don't wait until your organization becomes the next victim. Take action now to strengthen your defenses against the threats of tomorrow. </span>
+                        </p>
 
 
                     </div>
 
+
+                    <div className='custom-mask-image  sm:col-span-3 md:col-span-1'>
+                        <img src={mask} alt="" className='h-full w-full' />
+                    </div>
                 </div>
-
-
-            </div>
-
-            <div className='container mx-auto px-6 pt-6 grid grid-cols-1 lg:grid-cols-3'>
-                <div className='space-y-6 sm:col-span-3 md:col-span-2'>
-                    <h1 className='font-bold text-lg md:text-[32px]'> 1.  Looking Forward: The Future of Threat Detection</h1>
-
-                    <p className=' text-[18px]  mx-auto my-4   '>
-                        <span> As attackers continue to evolve their techniques, organizations must stay ahead of the curve. The future of cybersecurity lies in intelligent, behavior-based detection combined with rapid, automated response capabilities. At Vijilan, we're constantly innovating our detection algorithms and response procedures to stay ahead of emerging threats.
-                        </span>
-                        <span className=' my-3 block'> The rise of malware-free attacks represents a fundamental shift in the threat landscape, but with the right approach and tools, organizations can successfully defend against these sophisticated threats. The key is moving beyond traditional signature-based detection to embrace behavioral analysis, expert human oversight, and active remediation capabilities.
-                        </span>
-                        <span>Don't wait until your organization becomes the next victim. Take action now to strengthen your defenses against the threats of tomorrow. </span>
-                    </p>
-
-
-                </div>
-
-
-                <div className='sm:col-span-3 md:col-span-1'>
-                    <img src={mask} alt="" className='h-full w-full' />
-                </div>
-            </div>
+            </>
 
             {/* end part */}
-            <div className='container  mx-auto px-6'>
+            <div className='container  mx-auto md:px-6'>
 
                 {/* subscribe  */}
                 <div className="w-full   flex justify-center items-center  my-8 rounded-[24px] " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                    <div className='w-full  md:w-3/4 p-3 mx-auto space-y-6 '>
+                    <div className='w-full  md:w-3/4 px-2 md:px-6 py-10 mx-auto space-y-6 '>
                         <h1 className='font-bold text-lg md:text-[40px] text-center my-2'>Get Security Insights Delivered to Your Inbox.</h1>
-                        <p className='text-sm md:text-[24px] font-medium text-center'>Subscribe to our newsletter for the latest threat analysis, partner strategies, and <br /> product updates from the experts at Vijilan.</p>
+                        <p className='text-sm md:text-[16px] font-medium text-center'>Subscribe to our newsletter for the latest threat analysis, partner strategies, and <br /> product updates from the experts at Vijilan.</p>
 
-                        <div className="relative  w-full mx-auto">
+                        <div className="relative w-full lg:max-w-2xl mx-auto">
                             <input
                                 className="w-full py-[14px] pr-[130px] pl-[14px] text-[#0000007A] rounded-[10px]"
                                 placeholder="Enter Your Email"
@@ -422,8 +420,8 @@ const Blog = () => {
 
                 {/* users post */}
 
-                <div className="w-full h-auto p-4 flex justify-center items-center my-8 rounded-[24px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                    <div className="w-full  md:w-3/4 mx-auto flex  flex-col md:flex-row items-start gap-4">
+                <div className="w-full mt-10 my-8 flex justify-center items-center h-full rounded-[24px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                    <div className="w-full px-4 md:px-6 py-10 mx-auto  md:w-3/4 flex  flex-col md:flex-row items-start gap-4">
 
                         {/* Avatar */}
                         <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center" style={{
@@ -436,9 +434,9 @@ const Blog = () => {
                         {/* Text Content */}
                         <div className="flex-1 space-y-1" >
                             <h1 className="font-medium text-[13px] text-[#F1EAFA]">Kevin Nejad</h1>
-                            <p className="text-[13px] font-medium text-[#00AEEF]">Founder & CEO, Vijilan</p>
+                            <p className="text-[13px] font-medium" style={{ color: "#00AEEF" }}>Founder & CEO, Vijilan</p>
                             <p className="text-[16px] font-medium text-white">
-                                With over 20 years of experience in cybersecurity and data management, Kevin founded Vijilan to address the growing gap between complex threats and the resources available to combat them. He leads the company with a passion for innovation and a channel-first philosophy, regularly sharing insights on emerging threats and defense strategies.
+                                With over 20 years of experience in cybersecurity and data management, Kevin founded Vijilan to address the <br /> growing gap between complex threats and the resources available to combat them. He leads the company with a <br /> passion for innovation and a channel-first philosophy, regularly sharing insights on emerging threats and defense <br /> strategies.
                             </p>
                         </div>
 
@@ -446,16 +444,14 @@ const Blog = () => {
                 </div>
 
                 {/* Join Discussion  */}
-                <div className="w-full h-auto flex justify-center items-center my-8 rounded-[24px] py-3 " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
-                    <div className='w-3/4 mx-auto text-center space-y-5'>
-                        <h1 className='font-bold text-[40px]'>Join the Discussion</h1>
+                <div className="w-full h-auto mt-10 flex justify-center items-center my-8 rounded-[24px] py-3 " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                    <div className='w-3/4 mx-auto text-center py-10 space-y-5'>
+                        <h1 className='font-bold text-2xl md:text-[40px]'>Join the Discussion</h1>
                         <p className='text-[16px] font-medium text-center'>
                             Share your thoughts and experiences with malware-free attacks in the comments<br /> below.</p>
                         <p className="border border-[#00AEEF] text-[#00AEEF] px-[24px] py-[12px] rounded-[8px] w-fit mx-auto">
                             Load Comments (Disqus Integration)
                         </p>
-
-
                     </div>
                 </div>
 
