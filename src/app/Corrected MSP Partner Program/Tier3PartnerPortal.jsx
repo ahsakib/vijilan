@@ -6,7 +6,7 @@ const Tier3PartnerPortal = () => {
     const GradientCard = ({ children }) => {
         return (
             <div
-                className={`backdrop-blur-md rounded-3xl mb-4 p-12 mx-auto shadow-2xl border border-[#00AEEF]/40`}
+                className={`backdrop-blur-md rounded-3xl mb-4 p-12 mx-auto shadow-2xl border border-[#00AEEF]/40 `}
                 style={{
                     background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                 }}
@@ -37,10 +37,7 @@ const Tier3PartnerPortal = () => {
                                 BUILD NEW QUOTE
                             </button>
 
-                            <div className="inline-block cursor-pointer font-semibold px-6 py-4 rounded-md 
-border-1 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
-transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
-text-center select-none uppercase">
+                            <div className="inline-block cursor-pointer font-semibold px-6 py-4 rounded-md  border-1 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
                                 View Analytics
                             </div>
                         </div>
@@ -48,8 +45,8 @@ text-center select-none uppercase">
                 </div>
             </div>
         </div>
-        <section className="max-w-[96%] mx-auto mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <section className=" mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 <div className="col-span-1">
 
                     <GradientCard>
@@ -113,42 +110,43 @@ text-center select-none uppercase">
                     <GradientCard>
                         <div className="text-center">
 
-                            <h1 className="text-4xl font-bold mb-8">🔔 Partner Updates</h1>
+                            <h1 className="text-3xl md:text-4xl font-bold mb-8">🔔 Partner Updates</h1>
                             <div>
                                 <ul>
-                                    <li className="mb-4 text-xl font-bold">✅ Q1 Threat Report available</li>
-                                    <li className="mb-4 text-xl font-bold">🆕 New Microsoft 365 integration</li>
-                                    <li className="mb-4 text-xl font-bold">📅 Paartner webinar tomorrow 2PM EST</li>
-                                    <li className="mb-4 text-xl font-bold">🎯 New upsell playbook released</li>
+                                    <li className="mb-4 text-xl  font-thin md:font-semibold lg:font-bold">✅ Q1 Threat Report available</li>
+                                    <li className="mb-4 text-xl  font-thin md:font-semibold lg:font-bold">🆕 New Microsoft 365 integration</li>
+                                    <li className="mb-4 text-xl  font-thin md:font-semibold lg:font-bold">📅 Paartner webinar tomorrow 2PM EST</li>
+                                    <li className="mb-4 text-xl  font-thin md:font-semibold lg:font-bold">🎯 New upsell playbook released</li>
                                 </ul>
                             </div>
                         </div>
                     </GradientCard>
                 </div>
+
                 <div className="col-span-1">
                     <GradientCard>
                         <h1 className="font-bold mb-2">🔧 Select Your ThreatRemediate Modules</h1>
-                        <p className="font-semibold">ThreatRemediate Essentials: Starting at $5/endpoint - Pick and choose what you want to monitor</p>
-                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] my-8 p-8">
+                        <p className=" font-thin md:font-semibold lg:font-bold">ThreatRemediate Essentials: Starting at $5/endpoint - Pick and choose what you want to monitor</p>
+                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] my-8 p-3 md:p-8  ">
 
-                            <div className="max-w-3xl mx-auto">
+                            <div className="  mx-auto">
                                 <h1 className="text-2xl font-bold text-white mb-6">🛡️ Core TRX Modules</h1>
 
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
+                                    <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row  w-full shadow-lg">
 
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">TRX Endpoint <br /> (EDR/XDR)</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">TRX Endpoint <br /> (EDR/XDR)</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 CrowdStrike Falcon with containment & network isolation
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$5.00/endpoint</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$5.00/endpoint</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -156,20 +154,19 @@ text-center select-none uppercase">
                                     </div>
                                 </div>
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
-
+                                   <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row w-full shadow-lg">
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">TRX Identity (ITDR)</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">TRX Identity (ITDR)</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 Conditional access, bi-directional Entra ID integration
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$3.00/user</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$3.00/user</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -177,20 +174,19 @@ text-center select-none uppercase">
                                     </div>
                                 </div>
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
-
+                                    <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row w-full shadow-lg">
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">TRX Visibility (Exposure)</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">TRX Visibility (Exposure)</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 Falcon Discover + Spotlight for asset visibility
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$4.00/asset</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$4.00/asset</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -201,26 +197,25 @@ text-center select-none uppercase">
 
                             </div>
                         </div>
-                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] p-8">
+                        <div className="bg-[#557284] border rounded-2xl border-[#00AEEF] my-8 p-3 md:p-8 p">
 
                             <div className="max-w-3xl mx-auto">
                                 <h1 className="text-2xl font-bold text-white mb-6">🏢 Infrastructure Modules</h1>
 
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
-
+                               <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row w-full shadow-lg">
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">Critical Servers</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">Critical Servers</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 Domain Controllers, File Servers - Security Event Monitoring
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$30.00/server</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$30.00/server</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -228,20 +223,19 @@ text-center select-none uppercase">
                                     </div>
                                 </div>
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
-
+                               <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row w-full shadow-lg">
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">Member Servers</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">Member Servers</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 Print servers, web hosting, general purpose servers - Monitored through Falcon EDR/XDR
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$8.00/server</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$8.00/server</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -249,20 +243,19 @@ text-center select-none uppercase">
                                     </div>
                                 </div>
                                 <div className="py-4">
-                                    <div className="bg-[#8499A6] flex justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-6 w-full shadow-lg">
-
+                               <div className="bg-[#8499A6]  justify-between items-center gap-5 border-2 border-blue-400 rounded-2xl p-2 md:p-6 flex flex-col md:flex-row w-full shadow-lg">
                                         <div>
                                             <div className="border border-white w-5 h-5">
                                             </div>
                                         </div>
                                         <div className="">
-                                            <h3 className="text-lg font-semibold text-black mb-2">Security Appliances</h3>
-                                            <p className="text-sm text-black font-bold leading-relaxed">
+                                            <h3 className="text-lg font-semibold !text-black mb-2">Security Appliances</h3>
+                                            <p className="text-sm !text-black font-bold leading-relaxed">
                                                 Firewalls, Network Security with IP blocking
                                             </p>
                                         </div>
                                         <div className="flex-shrink-0 text-center">
-                                            <h2 className="block font-bold text-[#37D962]">$99.00/appliance</h2>
+                                            <h2 className="block font-bold !text-[#37D962]">$99.00/appliance</h2>
                                             <div className="mt-2 px-6 py-1 bg-white border border-gray-300 rounded-lg inline-block">
                                                 <span className="text-sm font-medium text-gray-700">0</span>
                                             </div>
@@ -276,7 +269,7 @@ text-center select-none uppercase">
                     </GradientCard>
                 </div>
                 <div className="col-span-1">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-4">
 
                         <GradientCard>
                             <div className="flex flex-col justify-center items-center text-center">
@@ -398,17 +391,17 @@ text-center select-none uppercase">
         </section>
 
         <section className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
 
-                <div className="relative border-2 border-[#37D962] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-[380px] shadow-lg">
+                <div className="relative border-2 border-[#37D962] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-auto lg:w-[380px] shadow-lg">
                     {/* Badge */}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#37D962] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
                         Essentials
                     </div>
                     <div className="mt-20">
                         {/* Pricing */}
-                        <div className="mb-12 text-center">
-                            <h1 className="text-[#37D962] font-bold text-5xl mb-2">$0.00<span className="text-xl font-semibold">/month</span></h1>
+                        <div className="mb-12 text-center ">
+                            <h1 className="!text-[#37D962] font-bold text-3xl md:text-5xl mb-2">$0.00<span className="text-4xl font-semibold !text-[#37D962]">/month</span></h1>
                         </div>
 
                         {/* Module counter */}
@@ -417,12 +410,12 @@ text-center select-none uppercase">
                         </div>
 
                         {/* CTA */}
-                        <div className="bg-white border-2 border-black-200 text-gray-700 rounded-xl text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
-                            <p className="font-medium">Select modules to see pricing breakdown</p>
+                        <div className="bg-white border-2 border-black  text-gray-700 rounded-lg text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
+                            <p className="font-medium !text-black">Select modules to see pricing breakdown</p>
                         </div>
                     </div>
                 </div>
-                <div className="relative border-2 border-[#F2981F] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-[380px] shadow-lg">
+                <div className="relative border-2 border-[#F2981F] rounded-xl p-8 mx-auto mt-12 bg-white min-h-[800px] w-auto lg:w-[380px] shadow-lg">
                     {/* Badge */}
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#F2981F] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
                         trx complete
@@ -430,8 +423,8 @@ text-center select-none uppercase">
                     <div className="mt-20">
                         {/* Pricing */}
                         <div className="mb-12 text-center">
-                            <h1 className="text-[#F2981F] font-bold text-5xl mb-2">15% Bundle Discount</h1>
-                            <h1 className="text-[#F2981F] font-bold text-5xl mb-2">$0.00<span className="text-xl font-semibold">/month</span></h1>
+                            <h1 className="!text-[#F2981F] font-bold text-3xl md:text-5xl mb-2">15% Bundle Discount</h1>
+                            <h1 className="t!ext-[#F2981F] font-bold text-3xl md:text-5xl mb-2">$0.00<span className="text-xl font-semibold">/month</span></h1>
                         </div>
 
                         {/* Module counter */}
@@ -440,8 +433,8 @@ text-center select-none uppercase">
                         </div>
 
                         {/* CTA */}
-                        <div className="bg-white border-2 border-black-200 text-gray-700 rounded-xl text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
-                            <p className="font-medium">Requires 3+ modules for discount</p>
+                        <div className="bg-white border-2 border-black text-gray-700 rounded-xl text-center px-6 py-8  transition-colors duration-200 cursor-pointer">
+                            <p className="font-medium !text-black">Requires 3+ modules for discount</p>
                         </div>
                     </div>
                 </div>
@@ -449,10 +442,10 @@ text-center select-none uppercase">
         </section>
         <section className="max-w-4xl mx-auto py-10 px-6">
 
-            <div className="bg-white border border-[#37D962] rounded-xl p-6 shadow-md space-y-4 text-center">
+            <div className="bg-white border border-[#37D962] rounded-xl p-3 md:p-6 shadow-md space-y-4 text-center">
                 <div className="mb-14">
-                    <h1 className="font-bold text-[#00AEEF] text-4xl mb-8" >Payment Options</h1>
-                    <p className="text-xl text-black">
+                    <h1 className="font-bold !text-[#00AEEF] text-4xl mb-8" >Payment Options</h1>
+                    <p className="text-xl !text-black">
                         Choose your preferred billing method to see updated pricing above
                     </p>
                 </div>
@@ -461,20 +454,20 @@ text-center select-none uppercase">
                     {/* Monthly Billing */}
                     <div className="bg-[#F3F4F6] border rounded-lg flex items-center gap-3 px-4 py-3 hover:shadow-sm cursor-pointer transition">
                         <div className="w-3 h-3 rounded-full bg-[#00AEEF]"></div>
-                        <p className="text-sm font-medium text-gray-700">Monthly Billing</p>
+                        <p className="text-sm font-medium !text-gray-700">Monthly Billing</p>
                     </div>
 
                     {/* Annual Prepay */}
                     <div className="bg-[#F3F4F6] border border-gray-300 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3 hover:shadow-sm cursor-pointer transition">
                         <div className="flex items-center gap-3">
                             <div className="w-4 h-4 rounded-full bg-[#00AEEF]"></div>
-                            <p className="text-sm font-medium text-gray-700">Annual Prepay</p>
+                            <p className="text-sm font-medium !text-gray-700">Annual Prepay</p>
                         </div>
                         <div className="flex items-center gap-3">
                             <span className="bg-[#37D962] text-white text-xs px-3 py-1 rounded-full font-semibold">
                                 Save 15%
                             </span>
-                            <span className="text-[#37D962] text-sm font-medium whitespace-nowrap">
+                            <span className="!text-[#37D962] text-sm font-medium whitespace-nowrap">
                                 $0 saved annually
                             </span>
                         </div>
@@ -485,14 +478,14 @@ text-center select-none uppercase">
         </section>
         <section className="max-w-6xl mx-auto py-10">
             <GradientCard>
-                <div className="px-20 py-10">
+                <div className="px-3 md:mx-10 lg:px-20 py-10">
                     <div className="text-center">
 
-                        <h1 className="text-4xl font-bold mb-4">🤝 Your Dedicated Support Team</h1>
-                        <p className="text-xl font-semibold">As a validated partner, you have direct access to our partner success specialists.</p>
+                        <h1 className="text-2xl md:text-4xl font-bold mb-4">🤝 Your Dedicated Support Team</h1>
+                        <p className="text-xl  font-thin md:font-semibold lg:font-bold">As a validated partner, you have direct access to our partner success specialists.</p>
                     </div>
-                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
                             <img
                                 src={name}
                                 alt="Sarah Mitchell"
@@ -511,8 +504,8 @@ text-center select-none uppercase">
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
                             <img
                                 src={name}
                                 alt="Sarah Mitchell"
@@ -531,8 +524,8 @@ text-center select-none uppercase">
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
                             <img
                                 src={name}
                                 alt="Sarah Mitchell"

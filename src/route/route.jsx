@@ -185,10 +185,12 @@ const router = createBrowserRouter([
                 element: <MspLaunchpad />
             },
             {
+                // responsive done
                 path: "tier-landing",
                 element: <Tier1Landing />
             },
             {
+                // responsive done
                 path: "tier3-partner-portal",
                 element: <Tier3PartnerPortal />
             },
