@@ -2,6 +2,7 @@ import GradientButton from '@components/GradientButton';
 import React from 'react';
 import cp1 from "../../Assets/cp1.png";
 import { Check, Clock, DollarSign, Download, Lock } from 'lucide-react';
+import Heading_Btn from '@components/Heading_Btn';
 
 
 const modules = [
@@ -135,13 +136,12 @@ const ThreadRemediateRemoteNoPricing = () => {
 
             {/*  */}
             <section className='container mx-auto px-6 py-16 '>
-                <div className='space-y-10'>
-                    <h1 className='text-[48px] font-bold text-center'>Stop Managing Security. <br />Start Growing Your MSP.</h1>
-                    <p className='text-[18px] font-medium text-center'>Complete cybersecurity for growth-focused MSPs. <br />One price. Zero complexity. Total protection.</p>
-                    <div className='flex items-center justify-center mx-auto'>
-                        <GradientButton children={"SEE HOW IT WORKS"} />
-                    </div>
-                </div>
+                <Heading_Btn
+                h1="Stop Managing Security. Start Growing Your MSP."
+                desc="Complete cybersecurity for growth-focused MSPs. One price. Zero complexity. Total protection."
+                btn1="SEE HOW IT WORKS"
+                />
+                 
             </section>
 
 
@@ -150,7 +150,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                 <div className="relative z-10 container mx-auto px-6 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold text-white mb-3">Built for Sales-Focused MSPs Like You</h1>
+                        <h1 className=" text-3xl md:text-[40px] font-bold text-white mb-3">Built for Sales-Focused MSPs Like You</h1>
                         <p className=' text-[18px]'>You're busy closing deals and growing your business. Let us handle the complex security operations <br /> AND help you win more clients.</p>
                     </div>
 
@@ -159,7 +159,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                         {modules.map((module) => (
                             <div
                                 key={module.id}
-                                className={`relative rounded-[24px] p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-[534px] mx-auto" : ""}`}>
+                                className={`relative rounded-[24px] p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-auto md:w-[534px] mx-auto" : ""}`}>
                                 <div
                                     className={`absolute inset-0 rounded-[24px] p-[1px] z-0 $`}
                                     style={{
@@ -175,7 +175,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                                         <img src={cp1} alt="" className='w-[64px] h-[64px]' />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-[24px] whitespace-pre-line font-medium text-white mb-2">{module.title}</h3>
+                                        <h3 className="text-xl md:text-[24px] whitespace-pre-line font-medium text-white mb-2">{module.title}</h3>
                                     </div>
                                 </div>
 
@@ -204,7 +204,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                         {services.map((service, index) => (
                             <div
                                 key={index}
@@ -384,14 +384,14 @@ const ThreadRemediateRemoteNoPricing = () => {
                 <div className="">
                     {/* First Section */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold mb-3">Works Seamlessly with Your PSA</h1>
+                        <h1 className="text-3xl md:text-[40px] font-bold mb-3">Works Seamlessly with Your PSA</h1>
                         <p className=" text-lg text-center">
                             Automated ticket creation, synchronized documentation, and streamlined billing.
                         </p>
                     </div>
 
                     {/* Integration Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
                         <div className="relative flex items-center justify-center rounded-[16px] p-8 text-center " style={{
                             background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))`
                         }}>
@@ -460,7 +460,7 @@ const ThreadRemediateRemoteNoPricing = () => {
             <section className='container mx-auto px-6 '>
                 {/* Second Section */}
                 <div className="text-center mb-12">
-                    <h2 className="text-[40px] font-bold mb-3">Get Your Selected Resources</h2>
+                    <h2 className="text-2xl md:text-[40px] font-bold mb-3">Get Your Selected Resources</h2>
                     <p className=" text-lg text-center ">
                         Share your thoughts and experiences with malware-free attacks in the comments <br /> below.
                     </p>
@@ -468,8 +468,8 @@ const ThreadRemediateRemoteNoPricing = () => {
 
                 {/* Resources Section */}
                 <div className="max-w-2xl mx-auto">
-                    <div className="bg-[#00AEEF] rounded-2xl py-[52px] px-[67px] mb-6">
-                        <h3 className="text-[30px] font-bold mb-4 text-white">You've selected these resources:</h3>
+                    <div className="bg-[#00AEEF] rounded-2xl py-[52px] px-6 md:px-[67px] mb-6">
+                        <h3 className="text-2xl md:text-[30px] font-bold mb-4 text-white">You've selected these resources:</h3>
                         <ul className="text-white text-[20px]">
                             <li className="flex items-center">
                                 <span className="mr-2">•</span>
@@ -504,7 +504,7 @@ const ThreadRemediateRemoteNoPricing = () => {
             {/*  */}
             <div className=" container mx-auto px-6 py-16">
                 <div className='mb-4'>
-                    <h1 className='text-[40px] font-bold text-center mb-3'>Get Your Custom Proposal</h1>
+                    <h1 className='text-3xl md:text-[40px] font-bold text-center mb-3'>Get Your Custom Proposal</h1>
                     <p className='text-[14px] text-center mb-4'>Tell us about your MSP and we'll create a customized proposal showing exactly how <br /> ThreatRemediate Remote can help you grow.</p>
 
 
@@ -538,27 +538,27 @@ const ThreadRemediateRemoteNoPricing = () => {
                     <form className="space-y-5 text-white">
                         {/* Input Fields */}
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Your Name *</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Your Name *</label>
                             <input type="text" className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Email *</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Email *</label>
                             <input type="email" className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Company Name *</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Company Name *</label>
                             <input type="text" className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Phone Number</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Phone Number</label>
                             <input type="text" className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Number of Employees in Your MSP *</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Number of Employees in Your MSP *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
                                 <option className='text-black'>Select</option>
                                 <option className='text-black'>1-10</option>
@@ -568,7 +568,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Average Client Size (Employees) *</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Average Client Size (Employees) *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
                                 <option className='text-black'>Select</option>
                                 <option className='text-black'>1-20</option>
@@ -578,12 +578,12 @@ const ThreadRemediateRemoteNoPricing = () => {
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Number of Clients</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Number of Clients</label>
                             <input type="text" className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Current PSA Platform</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Current PSA Platform</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
                                 <option className='text-black'>Select</option>
                                 <option className='text-black'>ConnectWise</option>
@@ -593,7 +593,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                         </div>
 
                         <div className='relative z-10 '>
-                            <label className='text-[20px] font-bold'>Tell us about your security challenges</label>
+                            <label className='text-[15px] md:text-[20px] font-bold'>Tell us about your security challenges</label>
                             <textarea
                                 rows="4"
                                 placeholder="What are your biggest pain points with cyber security today?"

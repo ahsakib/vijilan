@@ -1,27 +1,27 @@
 import React from 'react';
 import check from "../../images/check.svg";
 import line from "../../images/line.svg";
+import Heading_Btn from '@components/Heading_Btn';
 
 export default function Partnership() {
     return (
-        <div className='container mx-auto  px-6 py-16'>
-            <div className="text-center text-white mb-12 ">
-                <h1 className="text-5xl md:text-3xl text-[#FFFFFF] font-bold mb-4">
-                    You're One Step Away from a More <br /> Profitable Partnership.
-                </h1>
-                <p className="text-[18px] text-[#FFFFFF]">
-                    Complete the form below to join the Vijilan Partner Network. Our team will review <br />
-                    your application and grant you access to our Partner Portal, sales enablement kit, <br />
-                    and pricing simulator within the hour.
-                </p>
-            </div>
+        <div className='container mx-auto px-2 md:px-6 py-16'>
 
-            <div className="relative bg-[#00AEEF3D] rounded-[24px] p-5 sm:p-8 md:p-14 text-white w-full flex flex-col md:flex-row gap-12 items-center"  style={{
-                    border: '1px solid transparent',
-                    backgroundClip: 'padding-box',
-                    position: 'relative',
-                    overflow: 'hidden'
-                }}>
+            <Heading_Btn
+
+                h1=" You're One Step Away from a More  Profitable Partnership."
+                desc="Complete the form below to join the Vijilan Partner Network. Our team will review 
+                    your application and grant you access to our Partner Portal, sales enablement kit,  
+                    and pricing simulator within the hour."
+
+            />
+
+            <div className="relative bg-[#00AEEF3D] rounded-[24px] p-5 sm:p-8 md:p-14 text-white w-full flex flex-col md:flex-row gap-12 items-center" style={{
+                border: '1px solid transparent',
+                backgroundClip: 'padding-box',
+                position: 'relative',
+                overflow: 'hidden'
+            }}>
 
                 {/* Border Gradients */}
                 <div className="absolute inset-0 rounded-[24px] p-[1px] pointer-events-none"
@@ -34,18 +34,18 @@ export default function Partnership() {
                     }}
                 />
 
-            
+
                 {/* Left: Form */}
                 <div className="w-full">
-                    <h2 className="text-[32px] text-[#FFFFFF] font-bold mb-6">Partner Application</h2>
+                    <h2 className="text-2xl md:text-[32px] text-[#FFFFFF] font-bold mb-6">Partner Application</h2>
                     <form className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <input type="text" placeholder="First Name" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <input type="text" placeholder="Last Name" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <input type="text" placeholder="Company Name" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <input type="email" placeholder="Work Email" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <input type="text" placeholder="Phone Number" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <input type="text" placeholder="Company Website" className="p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
-                        <select className="appearance-none focus:bg-opacity-25 p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D]  border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
+                        <input type="text" placeholder="First Name" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <input type="text" placeholder="Last Name" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <input type="text" placeholder="Company Name" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <input type="email" placeholder="Work Email" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <input type="text" placeholder="Phone Number" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <input type="text" placeholder="Company Website" className="p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]" />
+                        <select className="appearance-none focus:bg-opacity-25 p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D]  border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
                             <option className='text-black'>Partner Type</option>
                             <option className='text-black'>MSP</option>
                             <option className='text-black'>MSSP</option>
@@ -86,29 +86,29 @@ export default function Partnership() {
 
                 {/* Right: Info Box */}
                 <div className="w-full space-y-6">
-                    <h2 className="text-[32px] text-[#FFFFFF] font-bold mb-6">What Happens Next?</h2>
+                    <h2 className="text-2xl md:text-[32px] text-[#FFFFFF] font-bold mb-6">What Happens Next?</h2>
                     <ul className="text-[14px] space-y-2 text-gray-200">
                         <li>
-                            <span className="font-bold text-[20px]">1- Instant Confirmation</span><br />
+                            <span className="font-bold text-sm md:text-[20px]">1- Instant Confirmation</span><br />
                             You’ll receive an email confirming we’ve received your <br /> application
                         </li>
                         <li>
-                            <span className="font-bold text-[20px]">2-  Team Review</span><br />
+                            <span className="font-bold text-sm md:text-[20px]">2-  Team Review</span><br />
                             You’ll receive an email confirming we’ve received your <br /> application
                         </li>
                         <li>
-                            <span className="font-bold text-[20px]">3- Portal Access</span><br />
+                            <span className="font-bold text-sm md:text-[20px]">3- Portal Access</span><br />
                             Upon approval, you’ll receive your login credentials for the <br /> Partner Portal.
                         </li>
                         <li>
-                            <span className="font-bold text-[20px]">4- Welcome & Onboarding</span><br />
+                            <span className="font-bold text-sm md:text-[20px]">4- Welcome & Onboarding</span><br />
                             Your dedicated Partner Manager will reach out to schedule <br /> a brief welcome call.
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div className='flex justify-end -mt-[20px] md:-mt-[50px] sm:mr-[50px]'>
+            <div className='flex justify-end mt-5 md:-mt-[20px] lg:-mt-[50px] sm:mr-[50px]'>
                 <div className="w-fit bg-[#80808080] p-4 rounded-[16px] text-white relative">
                     {/* Background element for the content */}
                     <div className="relative z-10">

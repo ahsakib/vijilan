@@ -51,7 +51,7 @@ import Serve from '@app/Sarve/Serve';
 
 const router = createBrowserRouter([
     {
-        path: "/", 
+        path: "/",
         element: <App />,
         children: [
             {
@@ -247,42 +247,62 @@ const router = createBrowserRouter([
                 element: <SMB />
             },
             {
+
+                // responsive done
                 path: "msp-pricing-tool",
                 element: <MspPricingTool />
             },
             {
+
+                // responsive done
                 path: "pricing-tool",
                 element: <PricingTool />
             },
             {
+
+                // responsive done
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail />
             },
             {
+
+                // responsive done
                 path: "threatremediate-remote-pricing",
                 element: <ThreatremediateRemotePricing />
             },
             {
+
+                // responsive done
                 path: "threatremediate-remote-no-pricing",
                 element: <ThreadRemediateRemoteNoPricing />
             },
             {
+
+                // responsive done
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },
             {
+
+                // responsive done
                 path: "access-request",
                 element: <AccessRequest />
             },
             {
+
+                // responsive done
                 path: "fixed-vijilan-portal",
                 element: <FixedVijilanPortal />
             },
             {
+
+                // responsive done
                 path: "why-vijilan-page",
                 element: <WhyVijilanPage />
             },
             {
+
+                // responsive done
                 path: "become-a-partner",
                 element: <BecomeAPartner />
             }

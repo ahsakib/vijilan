@@ -4,6 +4,7 @@ import React from 'react';
 import cp1 from "../../Assets/cp1.png";
 import GradientButton from '@components/GradientButton';
 import OutlineGradientButton from '@components/OutlineGradientButton';
+import Heading_Btn from '@components/Heading_Btn';
 const modules = [
     {
         id: 1,
@@ -97,46 +98,47 @@ const features = [
 
 const ThreatremediateEssentail = () => {
     return (
-        <div>
+        <div className='max-w-[90%] mx-auto'>
             <section className='container mx-auto px-6 py-16 '>
-                <div className='mb-3 space-y-2'>
-                    <h1 className='text-[48px] font-bold text-center'>ThreatRemediate Essentials: Flexible, Modular <br /> Security for Your Clients</h1>
-                    <p className='text-[18px] font-medium text-center'>Build the perfect cybersecurity solution by selecting the exact modules your clients <br /> need, backed by Vijilan's expert SOC.</p>
-                </div>
-                <div className='flex justify-center items-center gap-5'>
+                <Heading_Btn
+                    h1="ThreatRemediate Essentials: Flexible, Modular   Security for Your Clients"
+                    desc="Build the perfect cybersecurity solution by selecting the exact modules your clients  need, backed by Vijilan's expert SOC"
+                />
+
+                <div className='flex flex-wrap justify-center items-center gap-5'>
                     <CardBorder height="122px" width="106px" borderSize={true}>
-                        <div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
                             <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
 
                         </div>
                     </CardBorder>
                     <CardBorder height="122px" width="106px">
-                        <div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
                             <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
 
                         </div>
                     </CardBorder>
                     <CardBorder height="122px" width="106px">
-                        <div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
                             <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
 
                         </div>
                     </CardBorder>
                     <CardBorder height="122px" width="106px">
-                        <div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
                             <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
 
                         </div>
                     </CardBorder>
                     <CardBorder height="122px" width="106px">
-                        <div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
                             <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
 
                         </div>
                     </CardBorder>
                     <CardBorder height="122px" width="106px">
-                        <div>
-                            <div className="text-white text-[16px] font-medium mb-2">Add icon</div>
+                        <div className='min-h-24 min-w-24 flex justify-center items-center'>
+                            <div className="text-white text-[16px] font-medium mb-2 ">Add icon</div>
 
                         </div>
                     </CardBorder>
@@ -150,12 +152,12 @@ const ThreatremediateEssentail = () => {
             </section>
 
 
-            <section className="container mx-auto px-6 py-20" >
-                <div className="py-[75px] px-[78px] rounded-[24px]" style={{
+            <section className="container mx-auto p-2 md:px-6 py-20" >
+                <div className="py-[75px] px-10 lg:px-[78px] rounded-[24px]" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
                     {/* Main Container */}
-                    <div className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[24px] p-10">
+                    <div className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[24px] p-4 lg:p-10">
                         <div
                             className={`absolute inset-0 rounded-[24px] p-[2px] z-0 `}
                             style={{
@@ -175,31 +177,31 @@ const ThreatremediateEssentail = () => {
                         </div>
 
                         {/* Feature Cards Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 ml-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   gap-3  m-2 lg:ml-8">
 
                             <CardBorder height="171px" width="180px" className="p-2" radiusSize={true}>
-                                <div>
+                                <div className='p-5'>
                                     <div className="text-white text-[13px] font-medium mb-2">Add icon</div>
                                     <div className="text-white text-[13px] font-medium mb-2">Tailored protection</div>
                                     <div className="text-white text-[10px] font-medium">Simplified Management</div>
                                 </div>
                             </CardBorder>
                             <CardBorder height="171px" width="180px" className="p-2" radiusSize={true}>
-                                <div>
+                                <div className='p-5'>
                                     <div className="text-white text-[13px] font-medium mb-2">Add icon</div>
                                     <div className="text-white text-[13px] font-medium mb-2">Cost Optimization</div>
                                     <div className="text-white text-[10px] font-medium">Easily add modules as client needs evolve</div>
                                 </div>
                             </CardBorder>
                             <CardBorder height="171px" width="180px" className="p-2" radiusSize={true}>
-                                <div>
+                                <div className='p-5'>
                                     <div className="text-white text-[13px] font-medium mb-2">Add icon</div>
                                     <div className="text-white text-[13px] font-medium mb-2">Scalable Growth</div>
                                     <div className="text-white text-[10px] font-medium">Clients only pay for the protection they require</div>
                                 </div>
                             </CardBorder>
                             <CardBorder height="171px" width="180px" className="p-2" radiusSize={true}>
-                                <div>
+                                <div className='p-5'>
                                     <div className="text-white text-[13px] font-medium mb-2">Add icon</div>
                                     <div className="text-white text-[13px] font-medium mb-2">Simplified Management</div>
                                     <div className="text-white text-[10px] font-medium">Deliver precise security for unique client needs</div>
@@ -219,7 +221,7 @@ const ThreatremediateEssentail = () => {
                 <div className="relative z-10 container mx-auto px-6 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold text-white mb-4">ThreatRemediate Essentials: Core Modules</h1>
+                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-4">ThreatRemediate Essentials: Core Modules</h1>
                     </div>
 
                     {/* Modules Grid */}
@@ -227,7 +229,7 @@ const ThreatremediateEssentail = () => {
                         {modules.map((module) => (
                             <div
                                 key={module.id}
-                                className={`relative rounded-[24px] p-8 border bg-[#00AEEF3D] backdrop-blur-sm `}>
+                                className={`relative rounded-[24px] p-5 md:p-8 border bg-[#00AEEF3D] backdrop-blur-sm `}>
                                 <div
                                     className={`absolute inset-0 rounded-[24px] p-[1px] z-0 $`}
                                     style={{
@@ -262,20 +264,20 @@ const ThreatremediateEssentail = () => {
             </section>
 
 
-            <section className="container mx-auto px-6 py-16" >
-                <div className="rounded-[24px] py-[60px] px-[87px]" style={{
+            <section className="container mx-auto px-3 md:px-6 py-16" >
+                <div className="rounded-[24px] py-[60px] px10 md:px-[87px]" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold text-white mb-3">Build Your Custom Solution</h1>
-                        <p className=" text-lg">
+                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-3">Build Your Custom Solution</h1>
+                        <p className=" text-lg px-2">
                             Select modules and quantities to see real-time pricing with automatic discounts
                         </p>
                     </div>
 
                     {/* Module Selection Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                         {/* TRX Identity - Endpoint */}
                         <div className=" p-6">
                             <div className="flex justify-between items-center mb-2">
@@ -383,7 +385,7 @@ const ThreatremediateEssentail = () => {
 
                         <div className="text-white text-[18px] mb-8">Annual Payment (Additional 15% Discount)</div>
 
-                        <button className=" text-white font-medium p-[16px] rounded-lg text-[18px] " style={{
+                        <button className=" text-white font-medium p-3 md:p-[16px] rounded-lg text-[18px] " style={{
                             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
                         }}>
                             GET OFFICIAL PRICING AND START TRIAL
@@ -396,11 +398,11 @@ const ThreatremediateEssentail = () => {
 
             <section className='container mx-auto px-6 py-16'>
                 <div className='mb-12'>
-                    <h1 className='text-[40px] font-bold text-center mb-5'>Unlock Additional Savings</h1>
+                    <h1 className='text-2xl md:text-[40px] font-bold text-center mb-5'>Unlock Additional Savings</h1>
                     <p className='text-[18px] text-center'>Maximize your value with our transparent discount structure</p>
                 </div>
 
-                <div className=' flex gap-12'>
+                <div className=' flex flex-col md:flex-row gap-12'>
 
                     <div className='relative py-[45px] px-[51px] bg-[#00AEEF3D] rounded-[24px]'>
                         <div
@@ -421,7 +423,7 @@ const ThreatremediateEssentail = () => {
                     </div>
 
 
-                    <div className='relative py-[45px] px-[51px] bg-[#00AEEF3D] rounded-[24px]'>
+                    <div className='relative py-[45px] px-2 md:px-[51px] bg-[#00AEEF3D] rounded-[24px]'>
                         <div
                             className={`absolute inset-0 rounded-[24px] p-[2px] z-0 `}
                             style={{
@@ -443,16 +445,16 @@ const ThreatremediateEssentail = () => {
             </section>
 
 
-            <section className="container mx-auto px-6 py-16">
+            <section className="container mx-auto px-3 md:px-6 py-16">
                 <div className="">
-                    <div className=" rounded-3xl py-[50px] px-[113px]" style={{
+                    <div className=" rounded-3xl py-[50px] px-3 md:px-12 lg:px-[113px]" style={{
                         background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                     }}>
                         <h1 className="text-white text-[27px] font-bold text-center mb-12">
                             The Vijilan Advantage: Expert-Backed, Partner-Focused
                         </h1>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                             {features.map((feature, index) => (
                                 <div key={index} className="text-center text-white">
                                     <p className="text-[20px] font-medium mb-2">Add Icon</p>
@@ -469,14 +471,15 @@ const ThreatremediateEssentail = () => {
 
 
             <section className='container mx-auto px-6 py-16'>
-                <div className=''>
-                    <h1 className='text-[40px] font-bold text-center mb-5'>Build Your Custom Solution & Get Pricing</h1>
-                    <p className='text-[18px] text-center'>Ready to deliver enterprise-grade security with modular flexibility? Connect with our partner team to access official pricing, <br /> start your 30-day trial, and begin growing your security practice.</p>
-                    <div className='flex items-center justify-center mx-auto gap-5 mt-8'>
-                        <GradientButton children={"BUILD YOUR CUSTOM SOLUTION AND GET PRICING"} />
-                        <OutlineGradientButton children={"DOWNLOAD THREATREMEDIATE ESSENTIALS SOLUTION BRIEF"} />
-                    </div>
-                </div>
+                
+
+                <Heading_Btn
+                    h1="Build Your Custom Solution & Get Pricing"
+                    desc="Ready to deliver enterprise-grade security with modular flexibility? Connect with our partner team to access official pricing, <br /> start your 30-day trial, and begin growing your security practice."
+                    btn1="BUILD YOUR CUSTOM SOLUTION AND GET PRICING"
+                    btn2="DOWNLOAD THREATREMEDIATE ESSENTIALS SOLUTION BRIEF"
+
+                />
             </section>
         </div>
     );
