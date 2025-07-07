@@ -265,36 +265,44 @@ const router = createBrowserRouter([
                 element: <ThreatremediateEssentail />
             },
             {
-                
+
                 // responsive done
                 path: "threatremediate-remote-pricing",
                 element: <ThreatremediateRemotePricing />
             },
             {
-                
+
                 // responsive done
                 path: "threatremediate-remote-no-pricing",
                 element: <ThreadRemediateRemoteNoPricing />
             },
             {
-                  
+
                 // responsive done
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },
             {
+
+                // responsive done
                 path: "access-request",
                 element: <AccessRequest />
             },
             {
+
+                // responsive done
                 path: "fixed-vijilan-portal",
                 element: <FixedVijilanPortal />
             },
             {
+
+                // responsive done
                 path: "why-vijilan-page",
                 element: <WhyVijilanPage />
             },
             {
+
+                // responsive done
                 path: "become-a-partner",
                 element: <BecomeAPartner />
             }

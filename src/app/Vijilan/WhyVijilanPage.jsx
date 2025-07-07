@@ -56,7 +56,7 @@ const WhyVijilanPage = () => {
             {/*  */}
             <section className="">
                 <div className="max-w-7xl mx-auto w-full">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 justify-center items-center">
                         {/* Left Content */}
                         <div className="space-y-6">
                             <h1 className="text-4xl lg:text-5xl font-bold leading-12">
@@ -112,10 +112,10 @@ const WhyVijilanPage = () => {
 
             {/*  */}
             <section className=" relative overflow-hidden py-16">
-                <div className="relative z-10 container mx-auto px-6 py-12">
+                <div className="relative z-10 container mx-auto px-3 md:px-6 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold text-white">What Truly Sets Us Apart</h1>
+                        <h1 className="text-3xl md:text-[40px] font-bold text-white">What Truly Sets Us Apart</h1>
                     </div>
 
                     {/* Modules Grid */}
@@ -123,7 +123,7 @@ const WhyVijilanPage = () => {
                         {modules.map((module) => (
                             <div
                                 key={module.id}
-                                className={`relative rounded-[24px] p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-[534px] mx-auto" : ""}`}>
+                                className={`relative rounded-[24px] p-4 md:p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-[534px] mx-auto" : ""}`}>
                                 <div
                                     className={`absolute inset-0 rounded-[24px] p-[1px] z-0 $`}
                                     style={{
@@ -154,7 +154,7 @@ const WhyVijilanPage = () => {
             <section className='pb-16'>
                 {/* Header Section */}
                 <div className="text-center py-10 space-y-6">
-                    <h2 className="text-3xl md:text-4xl lg:text-[40px] text-center font-bold text-white ">
+                    <h2 className="text-2xl md:text-4xl lg:text-[40px] text-center font-bold text-white ">
                         Built on an Elite <span className="text-[#00AEEF]">Technology <br /> Foundation</span>
                         <br />
 
@@ -181,7 +181,7 @@ const WhyVijilanPage = () => {
                 </div>
 
                 {/* Certification Badge */}
-                <div className="relative rounded-2xl py-[48px] px-[32px] max-w-2xl mx-auto text-center mt-8" style={{
+                <div className="relative rounded-2xl py-[48px] px-5 md:px-[32px] max-w-2xl mx-auto text-center mt-8" style={{
                     background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
                     linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))`}}>
                     <div
@@ -195,7 +195,7 @@ const WhyVijilanPage = () => {
                     />
                     {/* SOC 2 Badge */}
                     <div className="relative mb-8">
-                        <div className="w-[192px] h-[192px] bg-cyan-400 rounded-full mx-auto flex items-center justify-center">
+                        <div className="w-auto md:w-[192px] h-auto md:h-[192px] bg-cyan-400 rounded-full mx-auto flex items-center justify-center">
                             <img src={soc2} alt="" />
                         </div>
                         <div className="-mt-[130px] bg-[#082235] text-white px-[40px]  py-[18px] rounded-[8px] inline-block font-medium text-[24px]">

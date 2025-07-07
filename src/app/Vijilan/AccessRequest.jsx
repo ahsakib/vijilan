@@ -6,7 +6,7 @@ const AccessRequest = () => {
             {/*  */}
             <section className="">
                 <div className='mb-12'>
-                    <h1 className='text-[48px] font-bold text-center mb-3'>Unlock the Vijilan Partner Prospect Portal</h1>
+                    <h1 className='text-2xl md:text-[48px] font-bold text-center mb-3'>Unlock the Vijilan Partner Prospect Portal</h1>
                     <p className='text-center text-[18px]'>Gain instant, exclusive access to our interactive pricing simulator, sales & marketing <br /> kits, and insider news.</p>
                 </div>
                 <div className="max-w-6xl mx-auto">
@@ -82,7 +82,7 @@ const AccessRequest = () => {
                 }}>
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className="text-[40px] font-bold text-white mb-3">Request Your Instant Access</h1>
+                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-3">Request Your Instant Access</h1>
                         <p className=" text-[18px]">Complete the form below to unlock your exclusive partner resources</p>
                     </div>
 

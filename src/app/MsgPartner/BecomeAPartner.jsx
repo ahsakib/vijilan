@@ -6,7 +6,7 @@ import React from 'react';
 
 const BecomeAPartner = () => {
     return (
-        <div>
+        <div className='max-w-[90%] mx-auto'>
 
             <Partnership />
             <Quotes />
