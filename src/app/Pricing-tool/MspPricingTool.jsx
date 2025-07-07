@@ -41,7 +41,7 @@ const MspPricingTool = () => {
                             </div>
                             <div className="mt-5 md:mt-12">
                                 <h3 className="text-2xl font-medium text-white mb-6">Sales & General Inquiries</h3>
-                                <p className="text-white text-[18px] font-medium mb-8 leading-relaxed">
+                                <p className="text-white  text-sm md:text-lg font-medium mb-8 leading-relaxed">
                                     Ready to explore how Vijilan can transform your security posture? Our sales team is here to help.
                                 </p>
                                 <div className="space-y-4">
@@ -73,7 +73,7 @@ const MspPricingTool = () => {
                             </div>
                             <div className="mt-12">
                                 <h3 className="text-2xl font-medium text-white mb-6">Our Address</h3>
-                                <p className="text-white text-[18px] font-medium mb-8 leading-relaxed">
+                                <p className="text-white  text-sm md:text-lg font-medium mb-8 leading-relaxed">
                                     Visit us at our state-of-the-art facility in South Florida's technology corridor.
                                 </p>
                                 <div className="text-white text-[16px] space-y-2">
@@ -101,7 +101,7 @@ const MspPricingTool = () => {
                             </div>
                             <div className="mt-12">
                                 <h3 className="text-2xl font-medium text-white mb-6">Partner & Customer Support</h3>
-                                <p className="text-white text-[18px] mb-8 leading-relaxed">
+                                <p className="text-white  text-sm md:text-lg mb-8 leading-relaxed">
                                     For the fastest support, please use the official Partner Portal for tracked and prioritized
                                     assistance....
                                 </p>
@@ -132,7 +132,7 @@ const MspPricingTool = () => {
                 <div className="relative z-10 container mx-auto px-4 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <h1 className=" md:text-5xl font-bold text-white mb-4">Get in Touch with the Right Team</h1>
+                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Get in Touch with the Right Team</h1>
                         <p className="text-white text-lg ">
                             Choose the option that best fits your needs and we'll connect you with the right <br /> specialist.
                         </p>
@@ -154,43 +154,45 @@ const MspPricingTool = () => {
                                 {/* Left Side - Contact Info */}
                                 <div className="space-y-8">
                                     <div>
-                                        <h2 className="text-[32px] font-bold text-white mb-4">Get in Touch with the <br /> Right Team</h2>
-                                        <p className="text-white text-[18px] mb-8">
+                                        <h2 className="text-2xl md:text-[32px] font-bold text-white mb-4">Get in Touch with the Right Team</h2>
+                                        <p className="text-white  text-sm md:text-lg mb-8">
                                             Choose the option that best fits your needs <br /> and we'll connect you with the right <br /> specialist.
                                         </p>
                                     </div>
 
                                     <div className="space-y-6">
                                         {/* Phone */}
-                                        <div className="flex items-center space-x-4">
+                                        <div className="flex flex-col md:flex-row    items-start  space-x-4">
                                             <div className="">
-                                                <img src={call} alt="" className='w-[56px] h-[56px]' />
+                                                <img src={call} alt="" className='w-[30px] md:w-[56px] h-[30px] md:h-[56px]' />
                                             </div>
-                                            <span className="text-white text-lg">954-334-9988</span>
+                                            <span className="text-white text-sm md:text-lg">954-334-9988</span>
                                         </div>
 
                                         {/* Email */}
-                                        <div className="flex items-center space-x-4">
+                                        <div className="flex flex-col md:flex-row items-start  space-x-4">
                                             <div className="">
-                                                <img src={email} alt="" className='w-[56px] h-[56px]' />
+                                                {/* <img src={email} alt="" className='w-[30px] md:w-[56px] h-[30px] md:h-[56px]' /> */}
+
+                                                <img src={email} className='w-[30px] md:w-[56px] h-[30px] md:h-[56px]' />
                                             </div>
                                             <span className="text-white text-lg">info@vijilan.com</span>
                                         </div>
 
                                         {/* LinkedIn */}
-                                        <div className="flex items-center space-x-4">
+                                        <div className="flex flex-col md:flex-row items-start  space-x-4">
                                             <div className="">
-                                                <img src={linkedin} alt="" className='w-[56px] h-[56px]' />
+                                                <img src={linkedin} alt="" className='w-[30px] md:w-[56px] h-[30px] md:h-[56px]' />
                                             </div>
                                             <span className="text-white text-lg">www.linkedin.com/vijilan</span>
                                         </div>
 
                                         {/* Address */}
-                                        <div className="flex items-start space-x-4">
+                                        <div className="flex flex-col md:flex-row items-start  space-x-4">
                                             <div className="">
-                                                <img src={location} alt="" className='w-[56px] h-[56px]' />
+                                                <img src={location} alt="" className='w-[30px] md:w-[56px] h-[30px] md:h-[56px]' />
                                             </div>
-                                            <div className="text-white text-lg">
+                                            <div className="text-white text-lg flex">
                                                 <div>20803 Biscayne Blvd #302 -</div>
                                                 <div>Aventura, Florida 33180</div>
                                             </div>
@@ -213,7 +215,7 @@ const MspPricingTool = () => {
                                             <button
                                                 key={tab}
                                                 onClick={() => setActiveTab(tab)}
-                                                className={`flex-1 py-3 px-4 rounded-md text-[15px] font-bold ${activeTab === tab ? " text-white" : "text-[#00AEEF] border-[#00AEEF]"
+                                                className={`flex-1 py-3 px-1 md:px-4 rounded-md  text-[10px] md:text-[15px] font-bold ${activeTab === tab ? " text-white" : "text-[#00AEEF] border-[#00AEEF]"
                                                     }`}
                                             >
                                                 {tab}
