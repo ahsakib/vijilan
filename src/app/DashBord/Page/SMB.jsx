@@ -5,6 +5,7 @@ import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
 import DashBoardCard from '../component/DashBoardCard';
 import CardContent from '@components/CardContent';
+import { Link } from 'react-router-dom';
 
 const SMB = () => {
 
@@ -88,8 +89,9 @@ const SMB = () => {
                             description={card.description}
                         />)}
                     </div>
-
-                    <Heading_Btn btn4="Join or manage your market place living" />
+                    <Link to={"/mid-market-enterprice"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        <Heading_Btn btn4="Join or manage your market place living" />
+                    </Link>
 
 
                 </div>

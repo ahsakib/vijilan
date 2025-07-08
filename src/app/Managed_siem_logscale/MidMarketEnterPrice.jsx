@@ -1,5 +1,4 @@
 import GradientButton from '@components/GradientButton';
-import OutlineGradientButton from '@components/OutlineGradientButton';
 import React from 'react';
 import flag from "../../Assets/flag.png";
 import sun from "../../Assets/sun.png";
@@ -8,9 +7,6 @@ import hand from "../../Assets/hand.png";
 import eye from "../../Assets/eye.png";
 import circle from "../../Assets/circle.png";
 import Heading_Btn from '@components/Heading_Btn';
-import CardContent from '@components/CardContent';
-import { CISOCard } from '@app/Constant/Constant';
-import card from 'daisyui/components/card';
 
 
 const MidMarketEnterPrice = () => {

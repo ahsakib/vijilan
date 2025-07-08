@@ -16,6 +16,7 @@ import CardBorder from '@components/CardBorder';
 import Heading_Btn from '@components/Heading_Btn';
 import CardContent from '@components/CardContent';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const steps = [
     {
@@ -419,7 +420,9 @@ const ThreatreMediateManagedXdr = () => {
 
                 </div>
                 <div className='flex items-center justify-center mx-auto mt-10'>
-                    <GradientButton children={"COMPARE TIERS AND RUN PRICING SCENERIOS"} />
+                    <Link to={"/tier-landing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        <GradientButton children={"COMPARE TIERS AND RUN PRICING SCENERIOS"} />
+                    </Link>
                 </div>
 
             </section>

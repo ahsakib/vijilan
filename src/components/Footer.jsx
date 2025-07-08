@@ -27,6 +27,8 @@ const Footer = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className=" md:pt-24">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
                         <div className="">
                             {/* Footer Logo */}
                             <div className=" flex flex-col mb-6">
@@ -34,6 +36,7 @@ const Footer = () => {
                                 <img src={logoSub} alt="logo text" className=' w-[56px] h-[5px] ml-[38px] -mt-[6px]' />
                             </div>
                         </div>
+                        </Link>
 
                         <div>
                             <h4 className="text-[#00AEEF] text-[18px] mb-4">Insights</h4>
