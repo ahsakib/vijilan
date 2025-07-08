@@ -1,7 +1,8 @@
 import React from 'react';
 import CardBorder from './CardBorder';
+import { Link } from 'react-router-dom';
 
-const Heading_Btn = ({ isCenter, pd, size, h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, btn5, isSmallHeading, rating, state, btn2Icon = true }) => {
+const Heading_Btn = ({ isCenter, pd, size, h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, btn5, isSmallHeading, rating, state, btn2Icon = true,url }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
@@ -45,22 +46,28 @@ const Heading_Btn = ({ isCenter, pd, size, h1, h3, bg, desc, btn, btn1, btn2, bt
 
                     <div class={`flex flex-col sm:flex-row gap-10 items-center ${isCenter ? "" : "justify-center"}`}>
                         {
-                            btn1 && <button
-                                className={`p-5 md:p-[20px] ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg font-medium"} ${pd && "!p-[20px]"}   rounded-[8px] text-white inline-flex items-center space-x-3`}
-                                style={{
-                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                            btn1 && (
+                            <Link to={url ? url : ""}>
+                            
+                                <button
+                                    className={`p-5 md:p-[20px] ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg font-medium"} ${pd && "!p-[20px]"}   rounded-[8px] text-white inline-flex items-center space-x-3`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
-                                }}>
+                                    }}>
 
-                                <span className='uppercase text-sm'>{btn1}</span>
-                                <div className="w-6 h-6  flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 16 16 12 12 8"></polyline>
-                                        <line x1="8" y1="12" x2="16" y2="12"></line>
-                                    </svg>
-                                </div>
-                            </button>
+                                    <span className='uppercase text-sm'>{btn1}</span>
+                                    <div className="w-6 h-6  flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 16 16 12 12 8"></polyline>
+                                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </Link>
+                            
+                        )
                         }
                         {btn2 &&
                             <div className="rounded-lg ml-2 md:ml-0">

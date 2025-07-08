@@ -31,7 +31,7 @@ import mask from "../../Assets/mask.png";
 import lights from "../../Assets/lights.png"
 import objects from "../../Assets/objects.png";
 import dollar from "../../Assets/dollar.png"
-
+import { Link } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
@@ -602,23 +602,27 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center mx-auto mt-5">
-            <button
-              className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-              style={{
-                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-              }}>
+          <Link to={"/msp-partner-program-ai"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
 
-              <span className="uppercase">View All Partner Success Stories</span>
-              <div className="w-6 h-6  flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 16 16 12 12 8"></polyline>
-                  <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-              </div>
-            </button>
-          </div>
+
+            <div className="flex items-center justify-center mx-auto mt-5">
+              <button
+                className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                style={{
+                  background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                }}>
+
+                <span className="uppercase">View All Partner Success Stories</span>
+                <div className="w-6 h-6  flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 16 16 12 12 8"></polyline>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </Link>
         </section>
 
         {/* Deep Dive Section */}
@@ -638,6 +642,7 @@ const Home = () => {
                 description:
                   "Discover our full suite of managed security services, from mXDR and ThreatRemediate to specialized cloud and identity protection.",
                 buttonText: "Explore All Solutions",
+                url: "complain-solution"
               },
               {
                 icon: <img src={objects} alt="" className="w-[164px] h-[110px]" />,
@@ -652,6 +657,8 @@ const Home = () => {
                 description:
                   "Stay informed with our latest threat research, whitepapers, cybersecurity guides, and expert blog posts.",
                 buttonText: "Access Security Resources",
+                url: "resources",
+
               },
             ].map((item, index) => (
               <div key={index} className="relative bg-[#00AEEF3D] backdrop-blur-sm p-6 rounded-[24px] flex flex-col items-center justify-center">
@@ -659,7 +666,7 @@ const Home = () => {
                   className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
                   style={{
                     background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
-                 linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                  linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                     WebkitMaskComposite: "xor",
                     maskComposite: "exclude"
@@ -668,9 +675,9 @@ const Home = () => {
                 <div className=" mb-4">{item.icon}</div>
                 <h3 className="text-[24px] text-center font-medium text-white mb-3">{item.title}</h3>
                 <p className="text-white text-[18px] mb-4 leading-relaxed text-center">{item.description}</p>
-                <button className="mt-auto  bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{ color: "#082235" }}>
-                  {item.buttonText}
-                </button>
+                  <Link to={item.url ? item.url:"" } className="mt-auto z-10 bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{ color: "#082235" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >
+                    {item.buttonText}
+                  </Link>
               </div>
             ))}
           </div>
@@ -682,6 +689,7 @@ const Home = () => {
           highlightedText="Security"
           subtitle="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need."
           buttonText="Get Your Free Security Consultation"
+          url = "vijilan-vars-consultants-page"
         />
       </div>
     </div>

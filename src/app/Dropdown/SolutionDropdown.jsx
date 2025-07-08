@@ -30,14 +30,14 @@ const leftColumnServices = [
         title: "Managed Identity Threat Detection & Response (Managed ITDR)",
         description:
             "Combat the #1 attack vector with 24/7 monitoring, detection, and real-time response to identity-based threats using CrowdStrike Falcon Identity Protection.",
-
+        url: "threatremediate-managed-xdr"
     },
     {
         icon: error,
         title: "Managed Exposure Management",
         description:
             "Proactively identify and reduce your attack surface with CrowdStrike Falcon Exposure Management, prioritizing vulnerabilities and mitigating risks.",
-
+        url: "managed-automation"
     },
 ]
 
@@ -47,12 +47,14 @@ const rightColumnServices = [
         title: "LogIngest (CrowdStrike LogScale)",
         description:
             "Expert data collection, onboarding, parsing, and normalization from any source into LogScale for cost-effective log management.",
-    },
+        url: "msp-ogscale-case-study"
+        },
     {
         icon: logAlert,
         title: "LogAlert (Managed SIEM)",
         description:
             "Real-time threat detection and alerts within LogScale using pre-defined correlation rules and dashboards, managed by our SOC team.",
+        url: "managed-siem-soc"
     },
     {
         icon: check,
@@ -65,19 +67,22 @@ const rightColumnServices = [
         title: "LogRemediate (Full Managed Security)",
         description:
             "Complete managed security service integrating SIEM, SOC, and full remediation capabilities directly by Vijilan's expert team.",
-    },
+        url: "vijilan-vars-consultants-page"
+       },
     {
         icon: robot,
         title: "Managed Next-Gen SIEM (CrowdStrike Falcon)",
         description:
             "Expert deployment and management of CrowdStrike Falcon Next-Gen SIEM for AI-native security operations and seamless Falcon Complete readiness.",
+        url: "managed-siem-logscale-service"
     },
     {
         icon: crib,
         title: "Professional Services (Cribl, Corelight, CrowdStrike)",
         description:
             "Expert implementation, optimization, and ongoing management of leading cybersecurity technologies including Cribl data optimization and Corelight NDR.",
-    },
+        url: "visilan-professional-service"
+        },
 ]
 
 const SolutionDropdown = () => {
@@ -108,7 +113,7 @@ const SolutionDropdown = () => {
                         );
 
                         return service.url ? (
-                            <Link to={`/${service.url}`} key={index} onClick={() => window.scrollTo(0, 0)}
+                            <Link to={`/${service.url}`} key={index} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                             className="block">
                                 {content}
                             </Link>
@@ -128,17 +133,23 @@ const SolutionDropdown = () => {
                         SIEM & Data Management
                     </h2>
                     <div className="space-y-8">
-                        {rightColumnServices.map((service, index) => (
-                            <div key={index} className="flex gap-4">
-                                <div className="flex items-center ">
-                                    <img src={service.icon} alt="" className='w-[22px] h-[27px]' />
+                    {rightColumnServices.map((service, index) => (
+                        <Link to={`/${service.url || ''}`} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} key={index} className="block">
+                            <div className="flex gap-4 mb-4 p-3 rounded-lg transition">
+                                <div className="flex items-center">
+                                    <img src={service.icon} alt="" className="w-[22px] h-[27px]" />
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
-                                    <p className=" text-sm leading-relaxed">{service.description}</p>
+                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-sm leading-relaxed text-white/80">
+                                        {service.description}
+                                    </p>
                                 </div>
                             </div>
-                        ))}
+                        </Link>
+                    ))}
                     </div>
                 </div>
             </div>

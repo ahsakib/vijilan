@@ -7,6 +7,7 @@ import x from "../../Assets/x.png";
 import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
 import { ChevronRight } from 'lucide-react';
 import mask from "../../Assets/mask.png";
+import { Link } from 'react-router-dom';
 
 
 const Blog = () => {
@@ -236,13 +237,16 @@ const Blog = () => {
                 <div className='lg:col-span-3 col-span-full text-center'
                 // style={{   background: 'linear-gradient(to right, #F89B29, #FF0F7B)'}}
                 >
-                    <Blog_Subscribe_Component_Btn
-                        H1={"Is your organization vulnerable\nto malware-free attacks?"}
-                        Desc={"Vijilan's ThreatRemediate™ service provides behavioral-based detection and\nactive containment capabilities specifically designed to identify and stop\nthese sophisticated threats. Our expert SOC doesn't just alert you—we take\ndirect action to neutralize the threat."}
-                        Btn=" LEARN ABOUT THREATREMEDIATE"
-                        background={true}
-                        descSize={true}
-                    />
+                    <Link to={"/threatremediate-essentail"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    
+                        <Blog_Subscribe_Component_Btn
+                            H1={"Is your organization vulnerable\nto malware-free attacks?"}
+                            Desc={"Vijilan's ThreatRemediate™ service provides behavioral-based detection and\nactive containment capabilities specifically designed to identify and stop\nthese sophisticated threats. Our expert SOC doesn't just alert you—we take\ndirect action to neutralize the threat."}
+                            Btn=" LEARN ABOUT THREATREMEDIATE"
+                            background={true}
+                            descSize={true}
+                        />
+                    </Link>
 
                 </div>
 

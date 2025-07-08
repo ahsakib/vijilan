@@ -137,9 +137,10 @@ const ThreadRemediateRemoteNoPricing = () => {
             {/*  */}
             <section className='container mx-auto px-6 py-16 '>
                 <Heading_Btn
-                h1="Stop Managing Security. Start Growing Your MSP."
-                desc="Complete cybersecurity for growth-focused MSPs. One price. Zero complexity. Total protection."
-                btn1="SEE HOW IT WORKS"
+                    h1="Stop Managing Security. Start Growing Your MSP."
+                    desc="Complete cybersecurity for growth-focused MSPs. One price. Zero complexity. Total protection."
+                    btn1="SEE HOW IT WORKS"
+                    url = "/msp-growth-case"
                 />
                  
             </section>

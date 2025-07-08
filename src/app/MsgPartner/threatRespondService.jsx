@@ -7,6 +7,8 @@ import wa from "../../Assets/wa.png";
 import note from "../../Assets/note.png";
 import Heading_Btn from "@components/Heading_Btn";
 import SecurityCard from "@components/SecurityCard";
+import { Link } from "react-router-dom";
+
 export default function Component() {
 
     const cardData = [
@@ -59,6 +61,7 @@ export default function Component() {
                 desc={"Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from\nour expert SOC, delivering clear, step-by-step instructions for your internal team to\nremediate threats quickly and effectively."}
                 btn1="Jwatch the service overview"
                 btn2="get an instant quote"
+                url={"/msp-launchpad"}
             />
 
 
@@ -148,13 +151,13 @@ export default function Component() {
                                 ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
                                 and neutralizes threats in real-time while you sleep.
                             </p>
+                            <Link to={"/threatremediate-managed-xdr"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                             <button
                                 className="p-2 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
                                 }}>
-
                                 <span className="uppercase text-sm md:text-[18px]">learn about threat remediate</span>
                                 <div className="w-6 h-6  flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -164,6 +167,7 @@ export default function Component() {
                                     </svg>
                                 </div>
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

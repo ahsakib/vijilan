@@ -1,10 +1,9 @@
 import CardBorder from '@components/CardBorder';
-import { Plus, Shield } from 'lucide-react';
 import React from 'react';
 import cp1 from "../../Assets/cp1.png";
-import GradientButton from '@components/GradientButton';
-import OutlineGradientButton from '@components/OutlineGradientButton';
 import Heading_Btn from '@components/Heading_Btn';
+import { Link } from 'react-router-dom';
+
 const modules = [
     {
         id: 1,
@@ -143,12 +142,13 @@ const ThreatremediateEssentail = () => {
                         </div>
                     </CardBorder>
                 </div>
-
-                <div className='flex items-center justify-center mt-[60px]'>
-                    <button className='uppercase font-medium text-[18px] p-[16px] rounded-[8px]' style={{
-                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
-                    }}>access partner portal for pricing and custom builder</button>
-                </div>
+                <Link to={"access-request"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    <div className='flex items-center justify-center mt-[60px]'>
+                        <button className='uppercase font-medium text-[18px] p-[16px] rounded-[8px]' style={{
+                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                        }}>access partner portal for pricing and custom builder</button>
+                    </div>
+                </Link>
             </section>
 
 
@@ -384,12 +384,13 @@ const ThreatremediateEssentail = () => {
                         <div className="text-gray-300 text-[18px] mb-6">Choose annual payment for additional 15% discount</div>
 
                         <div className="text-white text-[18px] mb-8">Annual Payment (Additional 15% Discount)</div>
-
-                        <button className=" text-white font-medium p-3 md:p-[16px] rounded-lg text-[18px] " style={{
-                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
-                        }}>
-                            GET OFFICIAL PRICING AND START TRIAL
-                        </button>
+                        <Link to={"/threatremediate-remote-no-pricing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <button className=" text-white font-medium p-3 md:p-[16px] rounded-lg text-[18px] " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                            }}>
+                                GET OFFICIAL PRICING AND START TRIAL
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>

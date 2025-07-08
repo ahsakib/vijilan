@@ -10,6 +10,7 @@ import ListComponent from '../component/ListComponent';
 import DashboardSideText from '../component/DashboardSideText';
 import CommonTextCard from '../component/CommonTextCard';
 import { coreTechnology, DeploymentTimeline, ThreatRemediate_Ultimate } from '@app/Constant/Constant';
+import { Link } from 'react-router-dom';
 
 const MSP_growth_case = () => {
 
@@ -129,13 +130,24 @@ const MSP_growth_case = () => {
                 <section className="container mx-auto px-6">
                     <div className="mb-8">
                         <nav className="flex flex-wrap items-center text-[12px]">
-                            <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
-                            <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
-                            <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
-                            <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="!text-blue-500 text-[13px] font-medium" Home  >MSP 30% MRR Growth</span>
+                            <div className="flex items-center">
+                                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
+                                </Link>
+
+                                <ChevronRight className="text-white w-4 h-4 mx-2" />
+                                <Link to="/resources" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
+                                </Link>
+
+                                <ChevronRight className="text-white w-4 h-4 mx-2" />
+                                <Link to="/case-studies" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
+                                </Link>
+
+                                <ChevronRight className="text-white w-4 h-4 mx-2" />
+                                <span className="!text-blue-500 text-[13px] font-medium">MSP 30% MRR Growth</span>
+                            </div>
                         </nav>
                     </div>
                 </section>

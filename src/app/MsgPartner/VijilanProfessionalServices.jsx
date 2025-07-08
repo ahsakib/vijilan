@@ -78,6 +78,7 @@ export default function VijilianLanding() {
           ongoing management for CrowdStrike, CriblI, and CoreLight platforms, turning powerful tools into strategic
           assets."
           btn1="WATCH THE SERVICE OVERVIEW"
+          url={"/msp-launchpad"}
         />
       </section>
 

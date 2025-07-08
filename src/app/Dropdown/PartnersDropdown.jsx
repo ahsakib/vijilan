@@ -6,35 +6,35 @@ const leftColumnServices = [
 
         title: "MSPs (Bronze, Silver, Gold Tiers)",
         description: "Tiered partnership program designed for MSPs of all sizes - from micro-MSPs (5-15 employees) to large operations (60-100+). Grow your security portfolio profitably with our turnkey platform.",
-
+        url: "visilan-msg-partner"
     },
     {
 
         title: "VARs (Value-Added Resellers)",
         description:
             "Sales-focused partners offering hands-off, fully managed cybersecurity solutions. Clear value propositions, recurring revenue, and pre-built sales enablement materials.",
-
+        url: "vijilan-vars-consultants-page"
     },
     {
 
         title: "IT Consultants",
         description:
             "Recommend best-in-class cybersecurity solutions that deliver tangible value to your enterprise clients. Partner with us for mutually beneficial opportunities.",
-
+        url: "serve"
     },
     {
 
         title: "vCISOs (Virtual CISOs)",
         description:
             "Enhance your clients' security posture with turn-key solutions that deliver strategic oversight and operational excellence. Access deep technical expertise and broader managed services.",
-
+        url: "platform-technology"
     },
     {
 
         title: "MSSPs (Managed Security Service Providers)",
         description:
             "Augment your existing SOC capabilities, modernize your SIEM with LogScale, or leverage co-managed services to scale your operations cost-effectively.",
-
+        url: "corrected-msp"
     }
 ]
 
@@ -44,18 +44,21 @@ const rightColumnServices = [
         title: "Technology Alliance Partners",
         description:
             "Strategic partnerships with CrowdStrike, Cribl, Corelight, Fortinet, Microsoft, Google Cloud, Palo Alto Networks, and SentinelOne for comprehensive security solutions.",
+        url: "var-success-case-study"
     },
     {
 
         title: "Distribution Channel Partners",
         description:
             "Available through leading distributors including TD SYNNEX, CDW, SHI, Sherweb, Pax8, and GuidePoint for simplified procurement.",
+        url: "distribution-partner"
     },
     {
 
-        title: "Partner Locator (for SMBs",
+        title: "Partner Locator (for SMBs)",
         description:
             "Find a trusted Vijilan partner in your region. Searchable directory of certified partners providing managed cybersecurity services for small and medium businesses.",
+        url: "smb"
     },
     {
 
@@ -65,7 +68,7 @@ const rightColumnServices = [
     {
 
         title: "Partner Sales & Marketing Portal",
-        
+        url: "tier3-partner-portal"
     }
 ]
 
@@ -81,13 +84,24 @@ const PartnersDropdown = () => {
                         Partner Programs
                     </h2>
                     <div className="space-y-8">
-                        {leftColumnServices.map((service, index) => (
-                            <div key={index} className="flex gap-4">
-                                <div className="flex-1">
-                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
-                                    <p className="text-sm leading-relaxed">{service.description}</p>
-                                </div>
+                    {leftColumnServices.map((service, index) => (
+                        <Link
+                            to={`/${service.url}`}
+                            key={index}
+                            className="block hover:no-underline"
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        >
+                            <div className="flex gap-4 transition rounded-lg p-4">
+                            <div className="flex-1">
+                                <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
+                                {service.title}
+                                </h3>
+                                <p className="text-sm leading-relaxed text-white/80">
+                                {service.description}
+                                </p>
                             </div>
+                            </div>
+                        </Link>
                         ))}
                     </div>
                 </div>
@@ -102,7 +116,7 @@ const PartnersDropdown = () => {
                         <div key={index} className="flex gap-4">
                             <div className="flex-1">
                             {service.url ? (
-                                <Link to={`/${service.url}`}>
+                                <Link to={`/${service.url}`} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                 <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
                                     {service.title}
                                 </h3>

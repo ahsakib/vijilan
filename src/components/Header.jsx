@@ -85,7 +85,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center w-full">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-center">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex flex-col items-center">
             <img src={logo} alt="logo" className="w-[100px] h-[34px]" />
             <img src={logoSub} alt="sub" className="w-[56px] h-[5px] ml-[33px] -mt-[6px]" />
           </Link>
@@ -142,8 +142,10 @@ const Header = () => {
                   </div>
                 ))}
 
-                <Link to="about" className="text-white text-[16px]">About</Link>
-                <a href="#" className="text-white text-[16px]">Contact</a>
+                <Link to="about" className="text-white text-[16px]" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>About</Link>
+                <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-white text-[16px]">
+                  Contact
+                </Link>
               </nav>
               <button className="text-white text-[16px] px-[24px] py-[12px] font-semibold rounded-lg" style={{
                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",

@@ -7,6 +7,7 @@ import { Blog_landing_Data } from '@app/Constant/Constant';
 import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_Btn';
 import backgroundPattern from "../../images/Background pattern.png";
 import vector from '../../Assets/Vector.png';
+import { Link } from 'react-router-dom';
 
 const tabs = [
     " All posts", " Threat and Intelligence", "Enterprise Security", "Compliance and Risk", "Product & Partner News"
@@ -32,13 +33,15 @@ const Blog_landing_page = () => {
                             The Rise of Malware-Free Attacks: How to Defend Your Organization</h1>
 
                         <p className='text-sm md:text-[18px] '> Modern cyber attackers are increasingly leveraging legitimate tools and processes to infiltrate networks without deploying traditional malware. Learn the advanced detection strategies your organization needs to defend against these sophisticated threats.</p>
-
-                        <div className='mt-8'>
-                            <button className="p-[20px] pl-2  inline px-5 text-[18px]  rounded-[8px] font-medium ml-4 " style={{
-                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
-                        }}> Read the full story</button>
-                           
-                        </div>
+                        <Link to={"/blog-landing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
+                            <div className='mt-8'>
+                                <button className="p-[20px] pl-2  inline px-5 text-[18px]  rounded-[8px] font-medium ml-4 " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                            }}> Read the full story</button>
+                            
+                            </div>
+                        </Link>
 
                     </div>
 

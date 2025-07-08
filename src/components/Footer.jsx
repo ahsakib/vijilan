@@ -39,7 +39,7 @@ const Footer = () => {
                             <h4 className="text-[#00AEEF] text-[18px] mb-4">Insights</h4>
                             <div className="space-y-2 text-gray-300">
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> All Categories</p>
-                                <Link to={"/blog"} onClick={() => window.scrollTo(0, 0)}
+                                <Link to={"/blog"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                                 >
                                     <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Blog</p>
                                 </Link>
@@ -54,25 +54,40 @@ const Footer = () => {
                         <div>
                             <h4 className="text-[#00AEEF] text-[18px] mb-4">Platform</h4>
                             <div className="space-y-2 text-gray-300">
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> About Us</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Become a partner</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Contact us</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Pricing</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Request a Demo</p>
-                            </div>
+                        {[
+                            { to: "/about", label: "About Us" },
+                            { to: "/become-a-partner", label: "Become a Partner" },
+                            { to: "/contact", label: "Contact Us" },
+                            { to: "/threatremediate-remote-pricing", label: "Pricing" },
+                            { to: "/access-request", label: "Request a Demo" }
+                        ].map((item, index) => (
+                            <Link
+                            key={index}
+                            to={item.to}
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                            className="flex gap-2 text-[16px] items-center"
+                            >
+                            <img src={smallVendor} alt="vendor" className="h-[15px]" />
+                            {item.label}
+                            </Link>
+                        ))}
+                        </div>
+
                         </div>
 
                         <div>
                             <h4 className="text-[#00AEEF] text-[18px] mb-4">Others</h4>
                             <div className="space-y-2 text-gray-300 mb-6">
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> FAQ</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Information Security</p>
+                                <Link to={"resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Information Security</p>
+                                </Link>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Privacy Policy</p>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Terms and Conditions</p>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Cookie Policy</p>
                             </div>
                         </div>
-
+                        <Link to={"contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <div className="md:flex justify-end">
                             <button
                                 className=" px-[24px] py-[16px] font-medium text-[18px] md:text-[16px] lg:text-[18px] rounded-[8px] text-white h-fit"
@@ -83,6 +98,7 @@ const Footer = () => {
                             </button>
 
                         </div>
+                        </Link>
                     </div>
 
                     <img src={vendor} alt="vendor" className="w-full h-[1px]" />

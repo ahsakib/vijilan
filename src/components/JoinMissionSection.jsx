@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) => {
+const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText,url }) => {
   return (
     <section className="relative z-10 px-6 py-16">
       <div className="container mx-auto">
@@ -36,21 +37,23 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText }) =>
             <p className="text-[16px] font-medium text-white mb-8 leading-relaxed max-w-2xl mx-auto">
               {subtitle}
             </p>
-            <button
-              className="p-3 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
-              style={{
-                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
-              }}
-            >
+            <Link to={url? url : ""}>
+              <button
+                className="p-3 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
+                style={{
+                  background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                  boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
+                }}
+              >
 
-              <span className="text-sm md:text-lg">{buttonText}</span>
-              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </button>
+                <span className="text-sm md:text-lg">{buttonText}</span>
+                <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

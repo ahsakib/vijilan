@@ -1,5 +1,5 @@
 import Blog from '@app/Blog/Blog';
-import Blog_landing_page from '@app/Blog/Blog_landing_page';
+import AllBlog from '@app/Blog/Blog_landing_page';
 import Home from '@app/Home/Home';
 import About from '@app/About/About';
 import React from 'react';
@@ -55,61 +55,61 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                // responsive done #complete
+                // responsive done #complete   l
                 path: "/",
                 element: <Home />,
             },
             {
-                // responsive complete #complete
-                path: "blog",
+                // responsive complete #complete   l
+                path: "blog-landing",
                 element: <Blog />,
             },
-            {   // #complete
+            {   // #complete   l
                 path: "about", 
                 element: <About />,
             },
             {
-                // responsive done #complete
-                path: "blog-landing",
-                element: <Blog_landing_page />,
+                // responsive done #complete l
+                path: "blog",
+                element: <AllBlog />,
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "serve",
                 element: <Serve />,
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "resources",
                 element: <Resources />,
             },
             {
-                // responsive done //complete
+                // responsive done //complete l
                 path: "visilan-msg-partner", 
                 element: <VisilanPartner />,
             },
             {
-                // responsive done //complete
+                // responsive done //complete  l
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
             {
-                // responsive done //complete
+                // responsive done //complete   l
                 path: "threat-respond-service-2",
                 element: <ThreatResponse2 />,
             },
             {
-                // responsive done //complete
+                // responsive done //complete l
                 path: "vijilan-vars-consultants-page",
                 element: <Vars_consultants_page />,
             },
             {
-                // responsive done //complete
+                // responsive done //complete l
                 path: "visilan-professional-service",
                 element: <VisislanProfessional />,
             },
             {
-                // responsive done //->Complete
+                // responsive done //->Complete l
                 path: "case-studies",
                 element: <CaseStudies />,
             },
@@ -127,39 +127,39 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done //->complete
+                // responsive done //->complete l
                 path: "complain-solution",
                 element: <Complain_Solution />,
             },
             {
 
-                // responsive done //kaj kora lagbe//->check 3rd section
+                // responsive done //kaj kora lagbe//->check 3rd section l
                 path: "corrected-msp",
                 element: <Corrected_MSP_Program />,
             },
             {
-                // responsive done //->complete
+                // responsive done //->complete l
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
             {
-                // responsive done kaj kora lagbe//->complete  //responsive last two section
+                // responsive done kaj kora lagbe//->complete  //responsive last two section  l
                 path: "managed-automation",
                 element: <ManagedAutomation />,
             },
             {
-                // responsive done //->complete
+                // responsive done //->complete  l
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
             {
 
-                // responsive done //kaj kora lagbe//->complete #responsive ey button niye kaj kora lagbe
-                path: "managed-siem-soc",
+                // responsive done //kaj kora lagbe//->complete #responsive ey button niye kaj kora lagbe l
+                path: "managed-siem-soc", 
                 element: <ManagedSiemSoc />
             },
             {
-                // responsive done //kaj kora lagbe->complete //button gula niye kaj kora lagbe
+                // responsive done //kaj kora lagbe->complete //button gula niye kaj kora lagbe  l
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
@@ -175,12 +175,12 @@ const router = createBrowserRouter([
                 element: <MidMarketEnterPrice />
             },
             {
-                // responsive done //kaj kora lagbe, card thikh kora lagbe
+                // responsive done //kaj kora lagbe, card thikh kora lagbe l
                 path: "msp-partner-program-ai",
                 element: <MspPartnerProgramAi />
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "msp-launchpad",
                 element: <MspLaunchpad />
             },
@@ -190,7 +190,7 @@ const router = createBrowserRouter([
                 element: <Tier1Landing />
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "tier3-partner-portal",
                 element: <Tier3PartnerPortal />
             },
@@ -201,7 +201,7 @@ const router = createBrowserRouter([
                 element: <Dashbord />
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "var-success-case-study",
                 element: <Success_study_case />
             },
@@ -222,7 +222,7 @@ const router = createBrowserRouter([
                 element: <Financial_Compliance_Case />
             },
             {
-                // responsive done #complete
+                // responsive done #complete   l
                 path: "msp-ogscale-case-study",
                 element: <MSP_logscale_case />
             },
@@ -237,19 +237,19 @@ const router = createBrowserRouter([
                 element: <HealthCare_Complain_case />
             },
             {
-                // responsive done #kaj kora lagbe
+                // responsive done #kaj kora lagbe l
                 path: "msp-growth-case",
                 element: <MSP_growth_case />
             },
             {
-                // responsive done #complete
+                // responsive done #complete l
                 path: "smb",
                 element: <SMB />
             },
             {
 
-                // responsive done #complete
-                path: "msp-pricing-tool",
+                // responsive done #complete l
+                path: "contact",
                 element: <MspPricingTool />
             },
             {
@@ -260,31 +260,31 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete l
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail />
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete l
                 path: "threatremediate-remote-pricing",
                 element: <ThreatremediateRemotePricing />
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete l
                 path: "threatremediate-remote-no-pricing",
                 element: <ThreadRemediateRemoteNoPricing />
             },
             {
 
-                // responsive done #card thikh kora lagbe
+                // responsive done #card thikh kora lagbe l
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete l
                 path: "access-request",
                 element: <AccessRequest />
             },
@@ -302,7 +302,7 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete   l
                 path: "become-a-partner",
                 element: <BecomeAPartner />
             }
