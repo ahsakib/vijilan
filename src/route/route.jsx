@@ -84,22 +84,22 @@ const router = createBrowserRouter([
                 element: <Resources />,
             },
             {
-                // responsive done //six card kaj kora lagbe
+                // responsive done //complete
                 path: "visilan-msg-partner", 
                 element: <VisilanPartner />,
             },
             {
-                // responsive done //six card kaj kora lagbe
+                // responsive done //complete
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
             {
-                // responsive done //six card kaj kora lagbe
+                // responsive done //complete
                 path: "threat-respond-service-2",
                 element: <ThreatResponse2 />,
             },
             {
-                // responsive done //six card kaj kora lagbe
+                // responsive done //complete
                 path: "vijilan-vars-consultants-page",
                 element: <Vars_consultants_page />,
             },
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
                 element: <VisislanProfessional />,
             },
             {
-                // responsive done  //kaj kora lagbe//->Complete
+                // responsive done //->Complete
                 path: "case-studies",
                 element: <CaseStudies />,
             },
@@ -121,13 +121,13 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done //four card kaj kora lagbe -> cardContent component
+                // responsive done //->complete
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
             {
 
-                // responsive done //kaj kora lagbe//->complete
+                // responsive done //->complete
                 path: "complain-solution",
                 element: <Complain_Solution />,
             },
@@ -138,7 +138,7 @@ const router = createBrowserRouter([
                 element: <Corrected_MSP_Program />,
             },
             {
-                // responsive done //kaj kora lagbe//->complete
+                // responsive done //->complete
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
@@ -148,7 +148,7 @@ const router = createBrowserRouter([
                 element: <ManagedAutomation />,
             },
             {
-                // responsive done kaj kora lagbe//->complete
+                // responsive done //->complete
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
@@ -164,7 +164,7 @@ const router = createBrowserRouter([
                 element: <ManagedSiemLogScaleService />
             },
             {
-                // responsive done //kaj kora lagbe//->complete
+                // responsive done //->complete
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },

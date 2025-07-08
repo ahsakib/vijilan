@@ -3,6 +3,12 @@ import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_B
 import CardContent from '@components/CardContent';
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
+import v1 from "../../Assets/v1.png";
+import v2 from "../../Assets/v2.png";
+import v3 from "../../Assets/v3.png";
+import v4 from "../../Assets/v4.png";
+import v5 from "../../Assets/v5.png";
+import v6 from "../../Assets/v6.png";
 
 const Vars_consultants_page = () => {
 
@@ -20,17 +26,107 @@ const Vars_consultants_page = () => {
 
             {/* Recommendation */}
 
-            <div className='container mx-auto py-16'>
+            <div className='container mx-auto md:px-6 py-16'>
                 <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center m-12'>Recommend with Confidence, Deliver with Ease</h1>
                 <div className='  '>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5'>
-                        {Recommend.map(((card, index) => <CardContent
-                            Index={index}
-                            icon={card.icon}
-                            title={card.title}
-                            description={card.description}
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[389px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v1} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Recommend the Best</h3>
+                            <p className="text-white text-center">Confidently recommend our solutions, built on elite technology from CrowdStrike, Cribl, and Corelight, and validated by our SOC 2 Type 2 certification.</p>
+                        </div>
 
-                        />))}
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[360px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v2} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Focus on the Sale, Not the SOC</h3>
+                            <p className="text-white text-center">For VARs, our flagship ThreatRemediate™ service is a 'hands-off' solution. We handle the 24/7 monitoring and remediation, you maintain the client relationship.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[434px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v3} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Enhance Your Strategic Role</h3>
+                            <p className="text-white text-center">For vCISOs and Consultants, our solutions provide the strategic oversight and operational excellence needed to elevate your clients' security posture and simplify compliance.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[335px] lg:-mt-[43px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v4} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">A Partnership That Pays</h3>
+                            <p className="text-white text-center">Our channel-first model is designed to be a win-win, rewarding you for bringing industry-leading security and data management solutions to your clients.</p>
+                        </div>
+
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[405px] lg:-mt-[70px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v5} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Stay Ahead of Threats</h3>
+                            <p className="text-white text-center"> Strengthen your advisory reputation with real-time insights and proactive threat intelligence from Vijilan's dedicated research team. We empower you to stay informed about emerging threats, guide your clients confidently, and proactively manage their cybersecurity posture.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[419px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={v6} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Confirm & Close</h3>
+                            <p className="text-white text-center">Vijilan handles the heavy lifting—from streamlined onboarding, automated reporting, and ongoing operational support, to dedicated service delivery. With our expert team managing security operations, you can effortlessly deliver high-value outcomes without complexity, freeing your team to focus fully on strategic advisory and client growth.</p>
+                        </div>
                     </div>
                 </div>
             </div>
