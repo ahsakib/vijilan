@@ -113,13 +113,13 @@ const services = [
 
 const ManagedSiemLogScaleService = () => {
     return (
-        <div className='container mx-auto px-6 py-16'>
+        <div className='container mx-auto px-6 pb-16'>
             {/* Hero Section */}
             <section className="">
 
                 <Heading_Btn
-                    h1="Modernize Your Security Operations with a Managed Next-Gen SIEM"
-                    desc=" Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR."
+                    h1={`Modernize Your SOC with CrowdStrike\nLogScale & Next-Gen SIEM`}
+                    desc={`Leverage Vijilan's expert-led services to deploy, manage, and optimize the world's\nmost advanced, AI-native SIEM. Transform your data chaos into strategic clarity and\nstop threats faster.`}
                     btn1="REQUEST A SCOPING CALL"
                     btn2="LEARN ABOUT LOGINGEST"
 
@@ -129,9 +129,9 @@ const ManagedSiemLogScaleService = () => {
             </section>
 
             <section className="py-16">
-                <div className="max-w-6xl w-full rounded-[24px] p-4  md:p-12" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+                <div className="max-w-6xl w-full rounded-[24px] px-[30px] py-[40px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
                     <div className="text-center mb-12">
-                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-6">Are You Facing These SIEM Challenges?</h1>
+                        <h1 className="text-2xl md:text-[40px] font-bold text-white mb-3">Are You Facing These SIEM Challenges?</h1>
                         <p className="text-sm text-[18px] text-center text-white">
                             Modern enterprises struggle with legacy SIEM limitations. Vijilan's LogScale expertise solves <br /> these critical
                             pain points.
@@ -228,7 +228,7 @@ const ManagedSiemLogScaleService = () => {
 
 
             <section className="py-16">
-                <h1 className='  text-2xl md:text-4xl  font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
+                <h1 className='  text-2xl md:text-[40px]  font-bold text-center mb-3'>Next-Gen SIEM Onboarding Packages</h1>
                 <p className='text-[18px] text-center mb-12'>Project-based implementation services to get your LogScale SIEM operational quickly and <br /> effectively</p>
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -260,7 +260,7 @@ const ManagedSiemLogScaleService = () => {
 
                                 {/* Pricing */}
                                 <div className="text-center mb-8">
-                                    <h3 className="text-[#00AEEF]   text-2xl md:text-4xl  font-bold leading-tight">
+                                    <h3 className="text-[#00AEEF]   text-2xl md:text-4xl  font-bold leading-tight" style={{ color: "#00AEEF" }}>
                                         Contact for
                                         <br />
                                         Pricing
@@ -297,18 +297,27 @@ const ManagedSiemLogScaleService = () => {
 
                                 {/* CTA Button */}
                                 <div className="flex justify-center">
-                                    <button
-
-                                        className={`
-                    px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300
-                    ${plan.isPopular
-                                                ? "bg-orange-500 hover:bg-orange-600 text-white border-0"
-                                                : "bg-transparent border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400"
-                                            }
-                  `}
+                                    {plan.isPopular && <button className={` px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300 `} style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                    }}
                                     >
                                         {plan.buttonText}
-                                    </button>
+                                    </button>}
+
+                                    {!plan.isPopular && <button className={`relative px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300 `}
+                                    >
+                                        <div
+                                            className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                            style={{
+                                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                                WebkitMaskComposite: "xor",
+                                                maskComposite: "exclude",
+                                            }}
+                                        />
+                                        {plan.buttonText}
+                                    </button>}
+
                                 </div>
                             </div>
                         ))}
@@ -319,7 +328,7 @@ const ManagedSiemLogScaleService = () => {
             <section className="py-16 ">
                 <div className="max-w-7xl mx-auto text-center">
                     {/* Header */}
-                    <div className="mb-10">
+                    <div className="mb-12">
                         <h1 className="text-3xl md:text-[40px] font-bold text-white mb-3">Services Add-ons</h1>
                         <p className="text-[18px] text-white max-w-2xl mx-auto">
                             Enhance any package with additional specialized services
@@ -344,7 +353,7 @@ const ManagedSiemLogScaleService = () => {
                                     <h3 className="text-white font-bold text-[18px] mb-4 leading-tight">{service.title}</h3>
 
                                     {/* Status */}
-                                    <div className="text-[#F1511B] font-bold text-[18px] tracking-wider">{service.status}</div>
+                                    <div className="text-[#F1511B] font-bold text-[18px] tracking-wider" style={{ color: "#F1511B" }}>{service.status}</div>
                                 </div>
                             )
                         })}
@@ -423,26 +432,35 @@ const ManagedSiemLogScaleService = () => {
 
                                 {/* CTA Button */}
                                 <div className="flex justify-center">
-                                    <button
-
-                                        className={`
-                    px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300
-                    ${plan.isPopular
-                                                ? "bg-orange-500 hover:bg-orange-600 text-white border-0"
-                                                : "bg-transparent border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400"
-                                            }
-                  `}
+                                    {plan.isPopular && <button className={` px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300 `} style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                    }}
                                     >
                                         {plan.buttonText}
-                                    </button>
-                                </div>
+                                    </button>}
+
+                                    {!plan.isPopular && <button className={`relative px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300 `}
+                                    >
+                                        <div
+                                            className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                            style={{
+                                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                                WebkitMaskComposite: "xor",
+                                                maskComposite: "exclude",
+                                            }}
+                                        />
+                                        {plan.buttonText}
+                                    </button>}
+                               
+                            </div>
                             </div>
                         ))}
-                    </div>
                 </div>
-            </section>
+        </div>
+            </section >
 
-            
+
             <Heading_Btn
                 btn1="SCHEDULE A SCOPING CALL"
                 btn2="LEAN ABOUT LOGSCALE"
@@ -507,7 +525,7 @@ const ManagedSiemLogScaleService = () => {
                 </div>
             </section>
 
-        </div>
+        </div >
     );
 };
 

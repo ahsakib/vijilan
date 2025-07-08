@@ -2,6 +2,7 @@ import GradientButton from "@components/GradientButton"
 import Heading_Btn from "@components/Heading_Btn"
 import OutlineGradientButton from "@components/OutlineGradientButton"
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 // Custom Badge Component
 const Badge = ({ children, className = "", ...props }) => {
@@ -145,13 +146,15 @@ const CardBorder = ({
 };
 
 export default function CaseStudiesPage() {
+    const [selectedIndustry, setSelectedIndustry] = useState("");
+
     return (
         <>
             {/* Hero Section */}
             <section className="py-12 md:py-14">
                 <div className="text-center">
                     <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                        Real-World Results, <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Proven Success</span>
+                        Real-World Results, Proven Success
                     </h1>
                     <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                         Discover how our clients have achieved remarkable growth and transformed their businesses with our proven
@@ -159,7 +162,7 @@ export default function CaseStudiesPage() {
                     </p>
 
                     {/* Stats - Improved Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 my-12 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mt-3 mb-12 max-w-4xl mx-auto">
                         <CardBorder height="171px" width="100%">
                             <div>
                                 <div className="text-white text-3xl md:text-4xl font-bold mb-2">30%</div>
@@ -210,80 +213,79 @@ export default function CaseStudiesPage() {
 
                     {/* Lead Form */}
                     <div className="max-w-full">
+                        
                         <CardBorder height="auto" width="100%" topBottomBorderOnly={true}>
                             <div className="md:ml-35">
 
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-6 py-4 md:py-6 md:h-[150px] justify-center items-center mx-auto">
-                                <div className="flex flex-col gap-1">
-                                    <label htmlFor="industries" className="text-white text-sm md:text-[14px] font-medium text-left">
-                                        Filter by Industries
-                                    </label>
-                                    <select
-                                        id="industries"
-                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                        defaultValue=""
-                                    >
-                                        <option value="" disabled className="text-gray-500">
-                                            All Industries
-                                        </option>
-                                        <option value="1" className="!text-black">Technology</option>
-                                        <option value="2" className="!text-black">Healthcare</option>
-                                    </select>
-                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-6 py-4 md:py-6 md:h-[150px] justify-center items-center mx-auto">
+                                    <div className="relative z-10 flex flex-col gap-1">
+                                        <label htmlFor="industries" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                            Filter by Industries
+                                        </label>
+                                        <select
+                                            id="industries"
+                                            className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500 " style={{color: "black"}}>
+                                            <option value="" className="text-black">
+                                                All Industries
+                                            </option>
+                                            <option value="1" className="!text-black">Technology</option>
+                                            <option value="2" className="!text-black">Healthcare</option>
+                                        </select>
+                                    </div>
 
-                                <div className="flex flex-col gap-1">
-                                    <label htmlFor="services" className="text-white text-sm md:text-[14px] font-medium text-left">
-                                        Filter by Service
-                                    </label>
-                                    <select
-                                        id="services"
-                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                        defaultValue=""
-                                    >
-                                        <option value="" disabled className="text-gray-500">
-                                            All Services
-                                        </option>
-                                        <option value="1" className="!text-black">Threat Detection</option>
-                                        <option value="2" className="!text-black">Incident Response</option>
-                                    </select>
+                                    <div className="flex flex-col gap-1">
+                                        <label htmlFor="services" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                            Filter by Service
+                                        </label>
+                                        <select
+                                            id="services"
+                                            className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500" style={{color: "black"}}
+                                            defaultValue="">
+                                            <option value="" disabled className="text-gray-500">
+                                                All Services
+                                            </option>
+                                            <option value="1" className="!text-black">Threat Detection</option>
+                                            <option value="2" className="!text-black">Incident Response</option>
+                                        </select>
+                                    </div>
+                                    <div className="flex flex-col gap-1">
+                                        <label htmlFor="results" className="text-white text-sm md:text-[14px] font-medium text-left">
+                                            Filter by Result Type
+                                        </label>
+                                        <select
+                                            id="results"
+                                            className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500" style={{color: "black"}}
+                                            defaultValue=""
+                                        >
+                                            <option value="" disabled className="text-gray-500">
+                                                All Results
+                                            </option>
+                                            <option value="1" className="!text-black">Cost Savings</option>
+                                            <option value="2" className="!text-black">Revenue Growth</option>
+                                        </select>
+                                    </div>
+                                    <div className="flex items-end md:mt-5">
+                                        <OutlineGradientButton className="w-full">CLEAR ALL FILTERS</OutlineGradientButton>
+                                    </div>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <label htmlFor="results" className="text-white text-sm md:text-[14px] font-medium text-left">
-                                        Filter by Result Type
-                                    </label>
-                                    <select
-                                        id="results"
-                                        className="p-2 md:p-5 rounded-lg md:rounded-[16px] text-sm md:text-[14px] bg-white border-none focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                        defaultValue=""
-                                    >
-                                        <option value="" disabled className="text-gray-500">
-                                            All Results
-                                        </option>
-                                        <option value="1" className="!text-black">Cost Savings</option>
-                                        <option value="2" className="!text-black">Revenue Growth</option>
-                                    </select>
-                                </div>
-                                <div className="flex items-end md:mt-5">
-                                    <OutlineGradientButton className="w-full">CLEAR ALL FILTERS</OutlineGradientButton>
-                                </div>
-                            </div>
                             </div>
                         </CardBorder>
                     </div>
                 </div>
             </section>
-            <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[1200px] mx-auto px-4 sm:px-6">
+
+            <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[1200px] mx-auto  sm:px-6">
                 {/* Featured Case Study */}
                 <section className="py-12 md:py-20">
                     <div className="container mx-auto">
                         <div
-                            className="backdrop-blur-md rounded-2xl md:rounded-[24px] py-8 md:py-16 px-6 md:px-16 max-w-6xl mx-auto shadow-xl border border-[#00AEEF]/40"
+                            className="backdrop-blur-md rounded-2xl md:rounded-[24px] py-8 md:py-16 px-2 md:px-16 max-w-6xl mx-auto shadow-xl border border-[#00AEEF]/40"
                             style={{
                                 background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                             }}
                         >
                             <div className="text-left ml-7">
-                                <Badge className="bg-[#F36E21] text-xs md:text-[12px] text-center font-semibold text-white px-4 py-2 md:px-[9px] md:py-[8px]">
+                                <Badge className="bg-[#F36E21] border-none text-xs md:text-[12px] text-center font-semibold text-white px-4 py-2 md:px-[9px] md:py-[8px]">
                                     MS PARTNER SUCCESS
                                 </Badge>
                             </div>
@@ -317,7 +319,7 @@ export default function CaseStudiesPage() {
                                         </p>
 
                                         {/* Stats Grid */}
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 my-8 md:my-10">
+                                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 my-8 md:my-10">
                                             {[
                                                 { value: "30%", label: "Increase in Security MRR" },
                                                 { value: "50%", label: "Reduction in Alert Fatigue" },
@@ -337,8 +339,9 @@ export default function CaseStudiesPage() {
                                             ))}
                                         </div>
 
-                                        <div className="flex justify-center">
-                                            <OutlineGradientButton>READ THE FULL CASE STUDY</OutlineGradientButton>
+                                        <div className="">
+                                           
+                                            <OutlineGradientButton children={"READ THE FULL CASE STUDY"}/>
                                         </div>
                                     </div>
                                 </div>
@@ -386,7 +389,7 @@ export default function CaseStudiesPage() {
                 {/* Client Testimonials */}
                 <section className="py-12 md:py-16 bg-transparent">
                     <div className="container mx-auto">
-                        <div className="text-center mb-8 md:mb-12">
+                        <div className="text-center mb-12">
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
                                 What Our Clients Say
                             </h2>
@@ -492,46 +495,46 @@ export default function CaseStudiesPage() {
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                                    <div className="flex flex-col gap-1">
+                                    <div className="relative z-10 flex flex-col gap-1">
                                         <label htmlFor="businessType" className="text-white text-sm md:text-[14px] text-left">
                                             Business Type
                                         </label>
                                         <select
                                             id="businessType"
-                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border  focus:outline-none focus:border-[#6246EA]" style={{color: "black"}}
                                             defaultValue=""
                                         >
-                                            <option value="" disabled className="text-gray-500">
+                                            <option value="" disabled className="" style={{color: "black"}}>
                                                 Select Business Type
                                             </option>
-                                            <option value="msp" className="text-black">Managed Service Provider</option>
-                                            <option value="enterprise" className="text-black">Enterprise</option>
+                                            <option value="msp" className="text-black" style={{color: "black"}}>Managed Service Provider</option>
+                                            <option value="enterprise" className="text-black" style={{color: "black"}}>Enterprise</option>
                                         </select>
                                     </div>
-                                    <div className="flex flex-col gap-1">
+                                    <div className="relative z-10 flex flex-col gap-1">
                                         <label className="text-white text-sm md:text-[14px] text-left">Current Annual Revenue</label>
                                         <input
                                             placeholder="100000"
-                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                            type="number"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border focus:outline-none focus:border-[#6246EA]"
+                                            type="number"  style={{color: "black"}}
                                         />
                                     </div>
-                                    <div className="flex flex-col gap-1">
+                                    <div className="relative z-10 flex flex-col gap-1">
                                         <label className="text-white text-sm md:text-[14px] text-left">Annual Security Budget</label>
                                         <input
                                             placeholder="100000"
-                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                            type="number"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border  focus:outline-none focus:border-[#6246EA]"
+                                            type="number"  style={{color: "black"}}
                                         />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                                    <div className="flex flex-col gap-1">
+                                    <div className="relative z-10 flex flex-col gap-1">
                                         <label className="text-white text-sm md:text-[14px] text-left">Number Of Employees</label>
                                         <input
                                             placeholder="100"
-                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border border-[#6246EA] focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                            type="number"
+                                            className="p-2 md:p-3 rounded-lg text-sm md:text-[14px] bg-white border  focus:outline-none focus:border-[#6246EA]"
+                                            type="number" style={{color: "black"}}
                                         />
                                     </div>
                                 </div>
@@ -544,7 +547,7 @@ export default function CaseStudiesPage() {
                 <section className="py-12 md:py-16">
                     <Heading_Btn
                         h1={"Ready to Write Your Own Success Story?"}
-                        desc={`Join hundreds of organizations that have transformed their security posture and achieved measurable business results with Vijilan's comprehensive cybersecurity solutions.`}
+                        desc={`Join hundreds of organizations that have transformed their security posture and achieved\nmeasurable business results with Vijilan's comprehensive cybersecurity solutions.`}
                         btn1={"Get Started Today"}
                         btn2={"Get a Free Consultation"}
                         isSmallHeading={true}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle }) => {
+const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle }) => {
 
   return (
     <div className={`relative   rounded-[24px] p-[2px] ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
@@ -23,7 +23,7 @@ const CardContent = ({ icon, banner, Cardsticket,iconColor, linkBtn, Number, Col
       />
 
 
-      <div className={`relative bor2 rounded-[24px] ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
+      <div className={`relative bor2 rounded-[24px]  ${banner ? "bg-transparent" : "card-content text-center p-6"}`} >
 
         {icon && <div className="icon-container flex justify-center mb-4">
           <img src={icon} alt="Cybersecurity Illustration" className="icon w-[100px] h-[100px]" />

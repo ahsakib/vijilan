@@ -5,8 +5,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
     return (
         <div
             key={index}
-            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-2 md:p-8"
-        >
+            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-2 md:p-8">
             {/* Gradient Border */}
             <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -100,14 +99,16 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
                 </div>
             ) : (
                 <div
-                    className="flex justify-center items-center mx-auto w-fit z-10 relative"
-                    style={{
-                        border: "1px solid",
-                        borderImageSource: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                        borderImageSlice: 1,
-                        borderRadius: "8px",
-                    }}
-                >
+                    className="flex justify-center items-center mx-auto w-fit z-10 relative">
+                    <div
+                        className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                        style={{
+                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "xor",
+                            maskComposite: "exclude",
+                        }}
+                    />
                     <button className="font-medium text-[16px] text-white px-8 py-3 rounded-[7px]">
                         LEARN MORE
                     </button>

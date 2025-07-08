@@ -29,7 +29,7 @@ const SuccessCard = ({
             {/* Optional Icon */}
             {showIcon && (
                 <div
-                    className="w-[61px] h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
+                    className=" w-[45px] h-[45px] md:w-[61px] md:h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
                     style={{
                         background: `linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)),linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`,
                         backgroundBlendMode: "overlay"

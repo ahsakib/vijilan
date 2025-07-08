@@ -86,21 +86,20 @@ const services = [
 
 const ManagedSiemSoc = () => {
     return (
-        <div className='container mx-auto px-6 py-16'>
+        <div className='container mx-auto px-6 '>
             {/* Hero Section */}
-            <section className="">
+            <section className="pb-16">
                 <div className=" text-center">
-                     
 
                     <Heading_Btn
-                        h1="Modernize Your Security Operations with a Managed Next-Gen SIEM"
-                        desc=" Skip the static brochures. Use our interactive calculators, quote builders, and automated sales tools to close deals faster and grow your MRR."
+                        h1={`Modernize Your Security Operations with\na Managed Next-Gen SIEM`}
+                        desc={` Skip the static brochures. Use our interactive calculators, quote builders, and\nautomated sales tools to close deals faster and grow your MRR.`}
                         btn1="EXPLORE SUCCESS STORIES"
                         btn2="CALCULATE YOUR ROI"
                     />
 
                     {/* Stats - Improved Grid */}
-                    <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4 max-w-4xl mx-auto">
+                    <div className="-mt-[50px] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4 max-w-4xl mx-auto">
 
                         <CardBorder height="171px" width="166px">
                             <div className='py-5'>
@@ -109,7 +108,7 @@ const ManagedSiemSoc = () => {
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                           <div className='py-5'>
+                            <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">60%</div>
                                 <div className="text-slate-300 text-sm font-medium">
                                     Time to First Sale
@@ -117,7 +116,7 @@ const ManagedSiemSoc = () => {
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                           <div className='py-5'>
+                            <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">90%</div>
                                 <div className="text-slate-300 text-sm font-medium">
                                     Active MSP Partners
@@ -125,13 +124,13 @@ const ManagedSiemSoc = () => {
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                           <div className='py-5'>
+                            <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">24/7</div>
                                 <div className="text-slate-300 text-sm font-medium">Active MSP Partners</div>
                             </div>
                         </CardBorder>
                         <CardBorder height="171px" width="166px">
-                          <div className='py-5'>
+                            <div className='py-5'>
                                 <div className="text-white text-[32px] font-bold mb-2">{`<5min`}</div>
                                 <div className="text-slate-300 text-sm font-medium">Active MSP Partners</div>
                             </div>
@@ -142,7 +141,7 @@ const ManagedSiemSoc = () => {
             </section>
 
             {/*  */}
-            <section className="bg-transparent max-w-7xl mx-auto py-20">
+            <section className="bg-transparent max-w-7xl mx-auto py-16">
                 <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-4">
                     Is Your Current SIEM Holding You Back?
                 </h1>
@@ -166,9 +165,9 @@ const ManagedSiemSoc = () => {
 
             {/* the logscale journey */}
 
-            <div className="max-w-7xl mx-auto">
-                <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-4">The LogScale Journey with Vijilan</h1>
-                <p className='text-[18px] text-white text-center mb-12'>We offer a tiered service model, allowing you to choose the level of management and response that best fits your operational needs. Start with data ingestion and scale up to full remediation capabilities.</p>
+            <div className="max-w-7xl mx-auto py-16">
+                <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-3">Is Your Current SIEM Holding You Back?</h1>
+                <p className='text-[18px] text-white text-center mb-12'>Legacy SIEM platforms create more problems than they solve. High costs, slow performance, and <br /> complex management drain resources without delivering the security outcomes you need.</p>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <ServiceCard
@@ -249,7 +248,9 @@ const ManagedSiemSoc = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <GradientButton children={"VIEW ONBOARDING PROJECTS"} />
+                    <div className='flex items-center justify-center'>
+                        <GradientButton children={"VIEW ONBOARDING PROJECTS"} />
+                    </div>
                 </div>
             </section>
 
@@ -325,7 +326,7 @@ const ManagedSiemSoc = () => {
                                 maskComposite: "exclude",
                             }}
                         />
-                        <div className="w-[61px] h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
+                        <div className=" w-[45px] h-[45px] md:w-[61px] md:h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
                             style={{
                                 background: `linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)),linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`,
                                 backgroundBlendMode: "overlay"

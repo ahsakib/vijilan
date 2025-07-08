@@ -84,7 +84,7 @@ export default function Component() {
             {/* FAQ Section */}
             <section className="container mx-auto px-6 py-20 lg:px-8">
                 <div className="mx-auto max-w-7xl">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-12">
                         <h2 className=" text-xl md:text-[40px] font-bold tracking-tight text-white mb-3">
                             Questions About Guided Response?
                         </h2>
@@ -95,7 +95,7 @@ export default function Component() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             {/* Left Side - Chat Interface */}
                             <div className="space-y-6 ">
-                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-5 md:p-[60px]">
+                                <div className="relative bg-[#00AEEF3D] rounded-[24px] px-[15px] md:px-[20px] py-[60px]">
                                     <div
                                         className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                         style={{
@@ -119,7 +119,7 @@ export default function Component() {
                                             <p className="text-[#00AEEF]  text-sm md:text-[20px] font-medium">Cyber security Sales Agent</p>
                                         </div>
                                     </div>
-                                    <div className="relative bg-[#00AEEF4D] p-6 rounded-[16px] w-fit flex justify-center items-center mx-auto">
+                                    <div className="relative bg-[#00AEEF4D] p-[20px] md:p-[40px] rounded-[16px] w-fit flex justify-center items-center mx-auto">
                                         <div
                                             className="absolute inset-0 rounded-[16px] p-[1px] z-0"
                                             style={{
@@ -175,14 +175,14 @@ export default function Component() {
 
             <section className="container mx-auto px-6 py-20 lg:px-8 text-center">
                 <div className="mx-auto max-w-7xl">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-4">
                         <h2 className=" text-2xl md:text-[40px] font-bold tracking-tight text-white mb-3">
                             A Package for Every Need
                         </h2>
                         <p className=" text-sm md:text-[20px] text-white">Choose the ThreatRemediate tier that matches your security requirements</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                         <CardContent
                             title={"Core"}
                             description={"Essential EDR/XDR for comprehensive endpoint protection with 24/7 monitoring and active remediation."}
@@ -198,7 +198,9 @@ export default function Component() {
 
                     </div>
 
-                    <GradientButton children={"compare Tiers and run pricing scenerios"} />
+                    <div className="flex items-center justify-center">
+                        <GradientButton children={"compare Tiers and run pricing scenerios"} />
+                    </div>
 
                 </div>
             </section>
@@ -207,7 +209,7 @@ export default function Component() {
             {/* Final CTA */}
             <section className="px-6 py-16 lg:px-8">
                 <div className="mx-auto max-w-7xl">
-                    <div className="text-center mb-10">
+                    <div className="text-center mb-12">
                         <h2 className=" text-2xl md:text-[40px] font-bold tracking-tight text-white">Ready to Get Started?</h2>
                     </div>
 

@@ -16,6 +16,7 @@ import google from "../../Assets/google.png";
 import GradientButton from "@components/GradientButton";
 import OutlineGradientButton from "@components/OutlineGradientButton";
 import SuccessCard from "@components/SuccessCard";
+import CardBorder from "@components/CardBorder";
 
 const ManagedAutomation = ({ }) => {
     const businessFields = [
@@ -99,22 +100,45 @@ const ManagedAutomation = ({ }) => {
 
     return <>
         <div className="max-w-[90%] mx-auto ">
-            <div>
+            <div className="pb-16">
                 <Heading_Btn
                     h1="Combat the #1 Attack Vector: Identity Threats"
-                    desc="Attackers don't break in—they log in. Our Managed ITDR service, powered by CrowdStrike Falcon Identity Protection, provides 24/7 monitoring and real-time response to stop breaches that start with compromised credentials."
-                    btn1="start risk assessment"
-                    btn2="see threat simulation"
-                    state={[
-                        { percentage: "30%", description: "Average MRR\nGrowth for MSP\nPartners" },
-                        { percentage: "40%", description: "Revenue Increase\nYear over Year\nPerformance" },
-                        { percentage: "50%", description: "Customer Retention\nAcross All\nSolutions" },
-                    ]}
-                    btn2Icon={false}
+                    desc={`Attackers don't break in—they log in. Our Managed ITDR service, powered by\ncrowdStrike Falcon Identity Protection, provides 24/7 monitoring and real-time\nresponse to stop breaches that start with compromised credentials.`}
 
                 />
+                <div className="max-w-4xl mx-auto -mt-[70px] grid grid-cols1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <CardBorder height="171px" width="166px">
+                        <div className='px-6 py-10'>
+                            <div className="text-white text-[32px] font-bold mb-2">80%</div>
+                            <div className=" text-[10px] font-medium px-10">
+                                of breaches involve identity
+                            </div>
+                        </div>
+                    </CardBorder>
+                    <CardBorder height="171px" width="166px">
+                        <div className='px-6 py-10'>
+                            <div className="text-white text-[32px] font-bold mb-2">5mins</div>
+                            <div className="text-[10px] font-medium px-10">
+                                average containment time
+                            </div>
+                        </div>
+                    </CardBorder>
+                    <CardBorder height="171px" width="166px">
+                        <div className='px-6 py-10'>
+                            <div className="text-white text-[32px] font-bold mb-2">24/7</div>
+                            <div className="text-[10px] font-medium px-10">
+                                expert monitoring
+                            </div>
+                        </div>
+                    </CardBorder>
+                </div>
+                <div className="flex gap-10 mt-14 items-center justify-center mx-auto ">
+                    <GradientButton children={"START RISK ASSESSMENT"} />
+                    <OutlineGradientButton children={"SEE THREAT SIMULATION"} />
+                </div>
             </div>
-            <section className="px-6 py-16 max-w-7xl mx-auto">
+
+            <section className="md:px-6 py-16 container mx-auto">
                 <div className="mx-auto text-center text-white">
                     <h2 className=" text-2xl md:text-[40px] font-bold mb-3">Interactive Identity Risk Assessment</h2>
                     <p className="text-white text-center text-[18px] mb-12">
@@ -131,7 +155,8 @@ const ManagedAutomation = ({ }) => {
                     </div>
                 </div>
             </section>
-            <section className="px-6 py-16">
+
+            <section className="md:px-6 container mx-auto py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
                     <h2 className=" text-3xl md:text-[40px]  font-bold mb-3">See How Identity Attacks Unfold</h2>
                     <p className="text-[18px] mb-12">
@@ -153,8 +178,7 @@ const ManagedAutomation = ({ }) => {
                                 {categories.map((item, index) => (
                                     <div
                                         key={index}
-                                        className="relative bg-[#00AEEF3D] rounded-[10px] px-4 py-6 flex flex-col justify-center items-center space-y-1 w-[235.85px] h-[150.31px]"
-                                    >
+                                        className="relative bg-[#00AEEF3D] rounded-[10px] px-4 py-6 flex flex-col justify-center items-center space-y-1 w-[235.85px] h-[150.31px]">
                                         <div
                                             className="absolute inset-0 rounded-[10px] p-[1px] z-0 h-full"
                                             style={{
@@ -182,8 +206,8 @@ const ManagedAutomation = ({ }) => {
             <section className="px-6 py-16 max-w-7xl mx-auto">
                 <div className="text-white text-center mb-14">
                     <h1 className="font-bold  text-3xl md:text-[40px]  mb-4">Seamless Integration with Your Stack</h1>
-                    <p className="font-bold mb-6">CrowdStrike Falcon Identity Protection integrates with your existing identity infrastructure.</p>
-                    <h3 className="font-bold  text-2xl md:text-[35px] ">Check Your Integration Compatibility</h3>
+                    <p className="text-[18px] mb-6">CrowdStrike Falcon Identity Protection integrates with your existing identity infrastructure.</p>
+                    <h3 className="font-bold text-[19px] ">Check Your Integration Compatibility</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                     {integrations.map((item, index) => (
@@ -202,13 +226,13 @@ const ManagedAutomation = ({ }) => {
                             </div>
                             <div className="flex-1">
                                 <h3
-                                    className={`text-white font-semibold text-lg leading-tight ${item.uppercase ? "uppercase" : ""
+                                    className={`text-white font-bold text-[16px] leading-tight ${item.uppercase ? "uppercase" : ""
                                         }`}
                                 >
                                     {item.title}
                                 </h3>
                                 <p
-                                    className={`text-gray-400 text-sm font-medium mt-1 ${item.uppercase ? "uppercase" : ""
+                                    className={`text-[#BCBEC0] text-[15px] font-light mt-1 ${item.uppercase ? "uppercase" : ""
                                         }`}
                                 >
                                     {item.description}
@@ -219,28 +243,28 @@ const ManagedAutomation = ({ }) => {
                 </div>
                 <div className="flex justify-center mt-14">
 
-                <GradientButton children={"GET CUSTOM INTEGRATION QUOTE"} icon={false}/>
+                    <GradientButton children={"GET CUSTOM INTEGRATION QUOTE"} icon={false} />
                 </div>
             </section>
-            <section className="px-6 py-16 max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
-                            <SuccessCard
-                                showIcon
-                                iconText="JN"
-                                subheading="JEN AI"
-                                description={`"Ask me how Managed ITDR integrates with \n your Okta or Azure AD environment. I can \n provide technical specifications and pricing in\n real-time."`}
-                                buttonText="Find my success story"
-                                bgColor="transparent"
-                            />
-                             <SuccessCard
-                                heading={`Ready to Secure Your Identities?`}
-                                description={`Stop identity-based attacks before they \n become breaches. Our experts will design a \n custom ITDR solution for your environment.`}
-                                buttonText="schedule a expert consultation"
-                                isOutlineButton
-                                outlineButtonText="explore full xdr platform"
-                                bgColor="transparent"
-                            />
-                    </div>
+            <section className="container mx-auto md:px-6 py-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+                    <SuccessCard
+                        showIcon
+                        iconText="JN"
+                        subheading="JEN AI"
+                        description={`"Ask me how Managed ITDR integrates with \n your Okta or Azure AD environment. I can \n provide technical specifications and pricing in\n real-time."`}
+                        buttonText="Find my success story"
+                        bgColor="transparent"
+                    />
+                    <SuccessCard
+                        heading={`Ready to Secure Your Identities?`}
+                        description={`Stop identity-based attacks before they \n become breaches. Our experts will design a \n custom ITDR solution for your environment.`}
+                        buttonText="schedule a expert consultation"
+                        isOutlineButton
+                        outlineButtonText="explore full xdr platform"
+                        bgColor="transparent"
+                    />
+                </div>
             </section>
         </div>
     </>

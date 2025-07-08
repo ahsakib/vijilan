@@ -71,37 +71,42 @@ export default function Component() {
         <div className="bg-transparent max-w-[90%] mx-auto">
 
             {/* Hero Section */}
-            <section className="px-6 py-16 text-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
+            <section className="container md:px-6 py-16 text-white">
+                <div className="">
+                    <div className="grid lg:grid-cols-2 h-full">
 
-                        <Heading_Btn
-                            h1="Real-World Results
+                        <div className="flex flex-col justify-end self-end h-full">
+                            <Heading_Btn
+                                h1="Real-World Results
                                 Proven Success"
-                            desc={`Discover how MSPs grow their business and enterprises achieve resilient security posture. Calculate your potential success with our interactive tools.`}
-                            btn1={"Get Started Today"}
-                            btn2={"Watch Success Stories"}
-                        />
+                                desc={`Discover how MSPs grow their business and enterprises\nachieve resilient security posture. Calculate your\npotential success with our interactive tools.`}
+                                btn1={"CALCULATE YOUR SUCCESS"}
+                                btn2={"BROWS SUCCESS STORIES"}
+                                size={true}
+                            />
+                        </div>
 
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
+                        <div className="">
+                            <TestimonialCard
+                                badgeText={"MS PARTNER SUCCESS"}
+                                heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
+                                description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and
                                     deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
-                            ]}
+                                stats={[
+                                    { value: "30%", label: "MRR Growth", size: true },
+                                    { value: "50%", label: "Alert Reduction", size: true },
+                                ]}
 
-                        >
-                        </TestimonialCard>
+                            >
+                            </TestimonialCard>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Calculator Section */}
-            <section className="px-6 py-16">
-                <div className="max-w-4xl mx-auto text-center text-white">
+            <section className="container md:px-6 py-16">
+                <div className=" text-center text-white">
                     <h2 className="text-3xl md:text-[40px] font-bold mb-3">Calculate Your Potential Success</h2>
                     <p className="text-white text-center text-[18px] mb-12">
                         Use our interactive calculator to estimate your potential results based on companies similar to <br /> yours.
@@ -118,7 +123,7 @@ export default function Component() {
                 </div>
             </section>
             {/* Organization Type Section */}
-            <section className="px-6 py-16">
+            <section className="md:px-6 py-16">
                 <div className="max-w-6xl mx-auto text-center text-white">
                     <h2 className="text-3xl md:text-[40px]  font-bold mb-3">Find Success Stories Like Yours</h2>
                     <p className="text-[18px] mb-12">
@@ -190,9 +195,9 @@ export default function Component() {
             </section>
 
             {/* Success Stories Grid */}
-            <section className="px-6 py-16">
+            <section className="md:px-6 py-16">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center text-white mb-3">All Success Stories</h2>
+                    <h2 className="text-3xl md:text-[40px] font-bold text-center text-white mb-3">All Success Stories</h2>
                     <p className="text-[18px] text-center text-white mb-12">Browse our complete collection of client success stories and measurable business results.</p>
                     <div className="grid md:grid-cols-2 gap-8">
                         <TestimonialCard
@@ -200,64 +205,64 @@ export default function Component() {
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
                         <TestimonialCard
                             badgeText={"MS PARTNER SUCCESS"}
                             heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
                             description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
                             stats={[
-                                { value: "99.9%", label: "Uptime Maintained" },
-                                { value: "30%", label: "MRR Growth" },
+                                { value: "30%", label: "MRR Growth", size: true },
+                                { value: "50%", label: "Alert Reduction", size: true },
                             ]} />
 
                     </div>
@@ -265,10 +270,10 @@ export default function Component() {
             </section>
 
             {/* CTA Section */}
-            <section className="container mx-auto px-6 py-16">
+            <section className="container mx-auto md:px-6 py-16">
                 <div className="">
                     <div
-                        className="backdrop-blur-sm px-16 py-16"
+                        className="backdrop-blur-sm px-6 md:px-16 py-16"
                         style={{
                             borderRadius: '22.184px',
                             background: 'linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)',
@@ -276,7 +281,13 @@ export default function Component() {
                         <blockquote className="text-white text-center text-[20px] leading-relaxed mb-6">
                             "Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with <br /> Cribl and provide active remediation has freed up my internal resources to focus on bigger picture <br /> risks. It's a true force multiplier."
                         </blockquote>
-                        <div className="text-center bg-[linear-gradient(90deg,_#F89B29_0%,_#FF0F7B_186.51%)] bg-clip-text text-transparent text-[20px]">
+                        <div className="text-center text-[20px] bg-clip-text text-transparent"
+                            style={{
+
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent"
+                            }}>
                             — CISO, Manufacturing Firm
                         </div>
                     </div>
@@ -284,7 +295,7 @@ export default function Component() {
             </section>
 
             {/* Ready to Scale Section */}
-            <section className="max-w-6xl mx-auto px-6 py-16">
+            <section className="max-w-6xl mx-auto md:px-6 py-16">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
 
 

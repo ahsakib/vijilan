@@ -1,8 +1,8 @@
 
-const NavyBlueBackground = ({ children, borderCancel,h,w }) => {
+const NavyBlueBackground = ({ children, borderCancel,h,w, smallPadding }) => {
     return <>
 
-        <section className="py-20 px-4 ">
+        <section className={`py-20 ${smallPadding ? "px-1" : "px-4 "}`}>
             <div className={`container mx-auto ${w ? `w-[${w}]` : ""}`}>
                 <div
                     className={`backdrop-blur-md rounded-3xl p-3 md:p-12 mx-auto}  ${borderCancel ? "" : "shadow-2xl border border-[#00AEEF]/40"} `}

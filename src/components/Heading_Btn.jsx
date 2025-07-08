@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
+const Heading_Btn = ({ isCenter,pd,size,h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
@@ -10,7 +10,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
             <section className="px-6 py-16 relative z-10 sm:py-32 lg:px-8"
                 style={{ backgroundColor: bg }}
             >
-                <div className="mx-auto max-w-7xl text-center space-y-8">
+                <div className={`mx-auto max-w-7xl ${isCenter ? "text-start" : "text-center"} space-y-8 `}>
                     {h1 &&
                         <h1 className={`${isSmallHeading ? "sm:text-4xl md:text-[40px]" : "sm:text-4xl md:text-5xl"} font-bold tracking-tight text-white whitespace-pre-line`}>
                             {h1}
@@ -43,10 +43,10 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                         </div>
                     )}
 
-                    <div class="flex flex-col sm:flex-row gap-10 justify-center">
+                    <div class={`flex flex-col sm:flex-row gap-10 ${isCenter ? "" : "justify-center"}`}>
                         {
                             btn1 && <button
-                                className=" p-3 md:p-[20px] text-sm md:text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                                className={`p-3 md:p-[20px] ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg font-medium"} ${pd && "!p-[20px]"}   rounded-[8px] text-white inline-flex items-center space-x-3`}
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
@@ -65,7 +65,7 @@ const Heading_Btn = ({ h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHea
                         {btn2 &&
                             <div className="rounded-lg">
                                 <button
-                                    className="relative  p-5 md:p-[20px] text-sm md:text-lg  font-medium  text-white inline-flex items-center space-x-3 bg-transparent rounded-lg">
+                                    className={`relative  p-5 md:p-[20px]    text-white ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg  font-medium"} inline-flex items-center space-x-3 bg-transparent rounded-lg`}>
                                     <div
                                         className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
                                         style={{

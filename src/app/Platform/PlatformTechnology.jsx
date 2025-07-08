@@ -89,19 +89,19 @@ const PlatformTechnology = ({ }) => {
 
     return <>
         <div className="max-w-[90%] mx-auto">
-            <section className=" px-2 md:px-6 py-16">
+            <section className=" px-2 md:px-6 ">
                 <Heading_Btn
-                    h1={`The Engine Behind Your Defense: The Vijilan Security Platform`}
+                    h1={`The Engine Behind Your Defense: The\nVijilan Security Platform`}
                     desc={`Our platform is not a single product, but a unified technology stack that enables \n every Vijilan service. Discover how we combine the power of CrowdStrike, the \n intelligence of Cribl, and our proprietary ViSH platform to deliver security outcomes \n that are faster, smarter, and more efficient.`}
                     btn1={"request a technical deep dive"}
                 />
 
             </section>
 
-            <section className="px-3 py-16">
+            <section className="container mx-auto md:px-1">
                 <NavyBlueBackground>
                     <div className="text-center">
-                        <h1 className="mt-3 text-2xl md:text-[40px] pt-2 font-bold">Unified Technology Stack</h1>
+                        <h1 className="mt-5 text-2xl md:text-[40px] pt-2 font-bold">Unified Technology Stack</h1>
                     </div>
                     <div className="flex items-center justify-center p-2 md:p-8">
                         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-center justify-center overflow-x-auto pb-4">
@@ -120,7 +120,7 @@ const PlatformTechnology = ({ }) => {
 
                                         {index < cards.length - 1 && (
                                             <div className=" mt-12  mx-auto">
-                                                <ArrowRight className="w-6 h-6 !text-[#F36E21] " />
+                                                <ArrowRight className="w-6 h-6 !text-[#F36E21] " style={{ color: "#F36E21" }} />
                                             </div>
                                         )}
                                     </div>
@@ -130,18 +130,28 @@ const PlatformTechnology = ({ }) => {
                     </div>
                 </NavyBlueBackground>
             </section>
-            <section className="px-6 py-16">
+
+            <section className="container mx-auto py-16">
                 <div className="text-center">
                     <h1 className="font-bold mb-8  text-2xl md:text-[40px] ">An Architecture Built for Speed, Scale, and Security</h1>
-                    <p className="font-bold  text-lg md:text-[30px] ">Three integrated technology layers work in perfect harmony to deliver superior security outcomes <br /> while reducing complexity and cost.</p>
+                    <p className=" text-lg  ">Three integrated technology layers work in perfect harmony to deliver superior security outcomes <br /> while reducing complexity and cost.</p>
                 </div>
                 <div className="flex flex-col  md:flex-row items-center justify-center p-2 md:p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-x-auto pb-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto pb-4">
                         {cards2.map((card, index) => (
-                            <CardBorder key={index} width="291px" height="442px">
+                            <div key={index} className="relative  bg-[#00AEEF3D] rounded-[16px]">
+                                <div
+                                    className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
+                                    style={{
+                                        background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 sm:w-auto  lg::w-[291px]  h-auto  lg::h-[442px] rounded-xl overflow-hidden shadow-lg text-center"
+                                    className=" rounded-xl overflow-hidden text-center"
                                 >
                                     <div className="relative z-10 w-full h-full space-y-6 p-6 text-center flex flex-col justify-center items-center">
                                         {/* Icon at the top center */}
@@ -153,57 +163,70 @@ const PlatformTechnology = ({ }) => {
 
                                         {/* Title Section */}
                                         <div>
-                                            <h1 className="text-2xl font-bold text-white">{card.title}</h1>
+                                            <h1 className="text-2xl font-medium text-white">{card.title}</h1>
                                             {card.subtitle && (
-                                                <h2 className="text-xl font-semibold text-white mt-1">{card.subtitle}</h2>
+                                                <h2 className="text-xl text-white mt-1">{card.subtitle}</h2>
                                             )}
                                         </div>
 
                                         {/* Content Section */}
                                         <div className="space-y-4 flex-grow flex flex-col">
-                                            <p className="text-lg font-medium text-[#F1511B]">{card.sectionTitle}</p>
-                                            <p className="text-sm text-gray-300 leading-relaxed flex-grow">
+                                            <p className="text-lg font-medium text-[#F1511B]" style={{ color: "#F1511B" }}>{card.sectionTitle}</p>
+                                            <p className="text-[16px] leading-relaxed flex-grow">
                                                 {card.description}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </CardBorder>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
-            <section className="px-6 py-16">
-                <div className="text-center">
-                    <h1 className="font-bold mb-8  text-2xl md:text-5xl">How Our Platform Delivers Tangible Benefits</h1>
-                    <p className="font-bold text-lg md:text-xl">Advanced technology translates directly into superior security outcomes and business value.</p>
+
+            <section className="container mx-auto md:px-3 py-16">
+                <div className="text-center mb-12">
+                    <h1 className="font-bold mb-3  text-2xl md:text-[40px]">How Our Platform Delivers Tangible Benefits</h1>
+                    <p className="text-lg ">Advanced technology translates directly into superior security outcomes and business value.</p>
                 </div>
                 <div className="grid grid-cols-1  md:grid-cols-2 gap-4 p-2 max-w-[1200px] mx-auto">
                     {cards3.map((card, index) => (
-                        <div key={index} className=""> {/* Added padding to reduce gap between cards */}
-                            <CardBorder width="564.5px" height="195px">
-                                <div className="w-full h-full rounded-xl overflow-hidden text-left">
-                                    <div className="w-full h-full space-y-4 p-6 flex flex-col items-start text-left"> {/* Reduced space-y and padding */}
-                                        {/* Title Section */}
-                                        <h1 className="text-xl md:text-2xl  font-bold text-white">{card.title}</h1>
-                                        {/* Content Section */}
-                                        <p className="text-gray-300 leading-relaxed font-bold">
-                                            {card.description}
-                                        </p>
-                                    </div>
+                        <div key={index} className="relative bg-[#00AEEF3D] rounded-[24px]">
+                            <div
+                                className={`absolute inset-0 rounded-[24px] p-[2px] z-0`}
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }}
+                            />
+
+                            <div className="w-full h-full rounded-xl overflow-hidden text-left">
+                                <div className="w-full h-full space-y-4 p-6 flex flex-col items-start text-left">
+                                    {/* Title Section */}
+                                    <h1 className="text-xl md:text-2xl  font-bold text-white">{card.title}</h1>
+                                    {/* Content Section */}
+                                    <p className="text-gray-300 leading-relaxed font-bold">
+                                        {card.description}
+                                    </p>
                                 </div>
-                            </CardBorder>
+                            </div>
+
                         </div>
                     ))}
                 </div>
             </section>
-            <section className="px-6 py-16">
-                <div className="text-center">
-                    <h1 className="font-bold mb-8  text-2xl md:text-5xl ">Find Success Stories Like Yours</h1>
-                    <p className="font-bold   text-lg md:text-2xl my-2 ">Select your business profile to see relevant case studies and success metrics.</p>
+
+            <section className="px-6 pt-16">
+                <div className="text-center mb-8">
+                    <h1 className="font-bold text-2xl md:text-[40px] mb-3">Find Success Stories Like Yours</h1>
+                    <p className="text-lg  ">Select your business profile to see relevant case studies and success metrics.</p>
                 </div>
 
-                <InfoSection design1={true} width={"495px"} height={"349px"} />
+                <div className="">
+                    <InfoSection design1={true} modify={true} width={"495px"} height={"349px"} />
+                </div>
             </section>
             <section className="px-2 flex flex-col items-center justify-center md:px-6 py-16">
                 <NavyBlueBackground w={"1160px"}>
@@ -225,7 +248,7 @@ const PlatformTechnology = ({ }) => {
             <section>
                 <Heading_Btn
                     h1={"Ready for a Deeper Dive?"}
-                    desc={"Schedule a live, technical demo with one of our security architects to see how the Vijilan platform can integrate with your specific environment."}
+                    desc={"Schedule a live, technical demo with one of our security architects to see how the\nVijilan platform can integrate with your specific environment."}
                     btn1={"schedule a platform demo"}
                 />
             </section>

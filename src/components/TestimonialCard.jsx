@@ -43,7 +43,7 @@ const TestimonialCard = ({
         <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2 gap-5 justify-center  mb-10">
           {stats.map((stat, index) => (
             <CardBorder  key={index} height="171px" width="166px">
-              <div className="mx-auto">
+              <div className={`mx-auto ${stat.size && "p-4"}`}>
                 <div className="text-white text-[36px] font-medium mb-2">{stat.value}</div>
                 <div className="text-[#E6F7FD] text-[10px] font-medium">{stat.label}</div>
               </div>
