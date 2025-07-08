@@ -164,7 +164,7 @@ const router = createBrowserRouter([
                 element: <ManagedSiemLogScaleService />
             },
             {
-                // responsive done //kaj kora lagbe//
+                // responsive done //kaj kora lagbe//->complete
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },
