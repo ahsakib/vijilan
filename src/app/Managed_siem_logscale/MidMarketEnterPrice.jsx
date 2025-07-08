@@ -12,14 +12,15 @@ import CardContent from '@components/CardContent';
 import { CISOCard } from '@app/Constant/Constant';
 import card from 'daisyui/components/card';
 
+
 const MidMarketEnterPrice = () => {
     return (
-        <div className='container mx-auto px-6 py-16'>
+        <div className='container mx-auto md:px-6'>
             {/* Hero Section */}
             <section className="">
                 <Heading_Btn
-                    h1="From Data Chaos to Strategic Clarity:  Secure Your Enterprise."
-                    desc="Vijilan provides comprehensive, 24/7 managed detection, response, and remediation,  designed to augment your security team, unify your disparate tools, and  demonstrably reduce risk across your entire attack surface."
+                    h1={"From Data Chaos to Strategic Clarity:\nSecure Your Enterprise."}
+                    desc={"Vijilan provides comprehensive, 24/7 managed detection, response, and\nremediation,  designed to augment your security team, unify your disparate tools, and\ndemonstrably reduce risk across your entire attack surface."}
                     btn1="REQUEST A CUSTOM DEMO"
                     btn2="DOWNLOAD THE CISO HANDBOOK"
 
@@ -31,24 +32,108 @@ const MidMarketEnterPrice = () => {
 
             <section className="container mx-auto  px-2 md:px-6 py-16">
                 <div className="text-center mb-12">
-                    <h2 className="text-2xl md:text-[40px] font-bold text-white mb-4">
-                        <span className="text-[#00AEEF]"> The Vijilan Advantage</span>:<br />
-                        Secure. Compliant. Partner-Focused.
+                    <h2 className="text-2xl md:text-[40px] font-bold text-white">
+                        Solving the Modern CISO's Dilemma
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {
-                        CISOCard.map((card, index) =>
-                            <CardContent
-                                icon={card.icon}
-                                head={card.title}
-                                description={card.description}
-                                Index={index}
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[389px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={circle} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Unify Your Security Stack</h3>
+                        <p className="text-white text-center">We ingest and correlate data from your disparate tools, eliminating blind spots and providing true cross-domain visibility without costly rip-and-replace projects.</p>
+                    </div>
 
-                            />
-                        )
-                    }
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[297px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
 
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={sun} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Extend Your SOC's Reach</h3>
+                        <p className="text-white text-center">Our 24/7 US-Based SOC acts as a direct extension of your team, handling the noise of alert triage so your experts can focus on strategic initiatives.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[434px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={flag} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Receive Actionable Incidents</h3>
+                        <p className="text-white text-center">Leveraging AI and expert analysis, we deliver only high-fidelity, actionable incidents that require your attention, freeing your team from the noise of false positives.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[392px] lg:-mt-[43px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={hand} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Optimize Your Data Costs</h3>
+                        <p className="text-white text-center">Demonstrate clear ROI with our data optimization services powered by Cribl. We can significantly reduce your SIEM and data storage costs while enriching your security data.</p>
+                    </div>
+
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[441px] lg:-mt-[135px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={eye} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Achieve Full-Stack Visibility & Unified Defense</h3>
+                        <p className="text-white text-center">CISOs want one pane of glass—not 17 dashboards. We consolidate telemetry and apply advanced correlation across endpoints, network, cloud, identity, and SaaS environments, enabling your team to see real threats—not isolated alerts—for better, faster decision-making.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[486px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={build} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Proactive Risk Reduction & Strategic Enablement</h3>
+                        <p className="text-white text-center">CISOs expect MDR to go beyond monitoring. Our SOC doesn't just monitor—we treat alerts as opportunities for improvement, develop playbooks, optimize SLAs, and build cost-effective frameworks that evolve with your risk posture. That's strategic partnership.</p>
+                    </div>
 
 
 
@@ -231,7 +316,7 @@ const MidMarketEnterPrice = () => {
 
 
 
-            <section className='py-20 space-y-[40px] flex flex-col items-center justify-center'>
+            <section className='py-16 space-y-[40px] flex flex-col items-center justify-center'>
                 <h1 className='text-3xl md:text-[48px] font-bold text-center'>Ready to Build a More Resilient Security br
                     Posture?</h1>
                 <p className='text-[18px]'> See exactly how Vijilan can integrate with your environment and augment your team. <br /> Schedule a technical, no-obligation demo with one of our security architects.</p>

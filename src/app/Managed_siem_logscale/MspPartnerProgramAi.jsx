@@ -133,11 +133,11 @@ const MspPartnerProgramAi = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative z-10 px-6 py-20 text-center">
+            <section className="relative z-10 md:px-6 text-center">
 
 
                 <Heading_Btn
-                    h1=" Transform Your MSP with Elite   Cybersecurity"
+                    h1={" Transform Your MSP with Elite\nCybersecurity"}
                     desc="No minimums, no complexity, no high startup costs."
                     rating="★★★★★ | Trusted by over 500 MSPs worldwide"
                     btn1="APPLY TO BECOME A PARTNER"
@@ -147,7 +147,7 @@ const MspPartnerProgramAi = () => {
             </section >
 
             {/* Go-to-Market Section */}
-            < section className="relative z-10 px-6 py-16" >
+            < section className="relative z-10 md:px-6 py-16" >
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">Go-to-Market in Days not Months</h2>
                     <div className="grid md:grid-cols-3 gap-8">
@@ -238,24 +238,110 @@ const MspPartnerProgramAi = () => {
 
 
             {/* Vijilan Advantage Section */}
-            <section className="container mx-auto px-6 py-16">
+            <section className="container mx-auto md:px-6 py-16">
                 <div className="text-center mb-12">
                     <h2 className="text-2xl md:text-[40px] font-bold text-white mb-4">
                         Why MSPs Choose Vijilan
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[389px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={lock} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Unlock New MRR</h3>
+                        <p className="text-white text-center">Add high-margin security services to your portfolio. Our model is built to maximize your Monthly Recurring Revenue and profitability.</p>
+                    </div>
 
-                    {
-                        cardData.map((card, index) =>
-                            <CardContent
-                            Index={index}
-                                icon={card.icon}
-                                head={card.title}
-                                description={card.description}
-                            />
-                        )
-                    }
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[297px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={timeIcon} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Your Instant 24/7 SOC</h3>
+                        <p className="text-white text-center">Gain an immediate, SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts become an extension of your team.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[434px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={rocketIcon} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Go-to-Market Enablement</h3>
+                        <p className="text-white text-center">Access our comprehensive ThreatRemediate™ Enablement Kit with co-brandable materials, sales decks, and proposal generators to win more deals.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[335px] lg:-mt-[43px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={sheildIcon} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Radical Flexibility & No Risk</h3>
+                        <p className="text-white text-center">Benefit from our channel-first approach with no minimum commitments, full white-labeling, and a 30-day risk-free opt-out trial.</p>
+                    </div>
+
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[405px] lg:-mt-[135px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={task} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Simplified Compliance</h3>
+                        <p className="text-white text-center">Effortlessly support your clients' compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC. Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your workload and minimizing regulatory risks.</p>
+                    </div>
+
+                    <div className={`relative bg-[#00AEEF3D] lg:h-[419px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                        <div
+                            className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                            style={{
+                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                            }} />
+                        <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                            <img src={chaiIcon} alt="" className="" />
+                        </div>
+                        <h3 className="text-[24px] font-bold text-white mb-3 text-center">Vendor-Agnostic Integration</h3>
+                        <p className="text-white text-center">Seamlessly integrate with your clients' existing security tools and infrastructure. Vijilan supports extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving you unmatched flexibility without vendor lock-in.</p>
+                    </div>
 
 
                 </div>
@@ -265,7 +351,7 @@ const MspPartnerProgramAi = () => {
 
             <div className="relative overflow-hidden">
 
-                <div className=" container mx-auto px-6 py-16">
+                <div className=" container mx-auto md:px-6 py-16">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className="text-2xl md:text-4xl lg:text-[40px] font-bold text-white mb-3 leading-tight">
@@ -395,7 +481,7 @@ const MspPartnerProgramAi = () => {
 
 
 
-            <section className="container mx-auto px-6">
+            <section className="container mx-auto md:px-6 py-16">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl md:text-[40px] font-bold text-white text-center mb-12">What Our Partners Say</h2>
 
@@ -438,7 +524,7 @@ const MspPartnerProgramAi = () => {
             </section>
 
             {/* FAQ Section */}
-            < section className="relative z-10 px-6 py-16" >
+            < section className="relative z-10 md:px-6 py-16" >
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
                     <div className="space-y-4">
@@ -474,7 +560,7 @@ const MspPartnerProgramAi = () => {
 
 
             {/* end */}
-            <section className='container mx-auto px-6 py-16 ' style={{
+            <section className='container mx-auto md:px-6 pb-16 ' style={{
                 backgroundImage: `url(${backgroundPattern})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'right center',
@@ -484,9 +570,10 @@ const MspPartnerProgramAi = () => {
 
                 <Heading_Btn
                     h1="Ready to Transform Your MSP?"
-                    desc="Join over 500 MSPs who've already discovered the Vijilan advantage. Apply now and   start growing your security practice today."
+                    desc={"Join over 500 MSPs who've already discovered the Vijilan advantage. Apply now and\nstart growing your security practice today."}
                     btn1="APPLY TO BECOME A PARTNER"
                     btn2="DOWNLOAD PARTNER KIT"
+                    isSmallHeading={true}
                 />
             </section>
         </div>

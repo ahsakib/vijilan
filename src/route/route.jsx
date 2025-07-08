@@ -170,12 +170,12 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done //kaj kora lagbe, card thikh kora lagbe
+                // responsive done //kaj kora lagbe, card thikh kora lagbe//-done
                 path: "mid-market-enterprice",
                 element: <MidMarketEnterPrice />
             },
             {
-                // responsive done //kaj kora lagbe, card thikh kora lagbe
+                // responsive done //kaj kora lagbe, card thikh kora lagbe//-done
                 path: "msp-partner-program-ai",
                 element: <MspPartnerProgramAi />
             },
@@ -185,7 +185,7 @@ const router = createBrowserRouter([
                 element: <MspLaunchpad />
             },
             {
-                // responsive done //kaj kora lagbe, card thikh kora lagbe
+                // responsive done //kaj kora lagbe, card thikh kora lagbe//-done
                 path: "tier-landing",
                 element: <Tier1Landing />
             },
@@ -278,7 +278,7 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #card thikh kora lagbe
+                // responsive done #card thikh kora lagbe//complete
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },
