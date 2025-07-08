@@ -14,6 +14,8 @@ import TaskCheck from "@images/task-check.png"
 import TimeIcon from "@images/timeIcon.png"
 import Heading_Btn from "@components/Heading_Btn"
 import { CardContentData1 } from "@app/Constant/Constant"
+import RocketIcon from "@images/rocketIcon.png"
+import lockIcon from "../../Assets/lock.png"
 
 // Custom Card Component
 const Card = ({ children, className = "", ...props }) => {
@@ -75,7 +77,7 @@ export default function VijilianLanding() {
                             <CardContentData className="p-0 relative z-10">
                                 <div className="flex items-center gap-5 mb-4">
                                     <img src={Clipboard} alt="" className="w-[40px] h-[50px]" />
-                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>1. Apply Online</span>
+                                    <span className=" text-[18px]" style={{ color: "#00AEEF" }}>1. Apply Online</span>
                                 </div>
                                 <p className="text-[16px] text-[#FFFFFF]">
                                     Our simple, no-obligation application takes less than 5 minutes to complete.
@@ -102,7 +104,7 @@ export default function VijilianLanding() {
                                 <div className="flex items-center mb-4 gap-5">
                                     <img src={rocket} alt="" className="w-[34px] h-[40px]" />
 
-                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>2. Fast Onboarding</span>
+                                    <span className=" text-[18px]" style={{ color: "#00AEEF" }}>2. Fast Onboarding</span>
                                 </div>
                                 <p className="text-[16px] text-[#FFFFFF]" >
                                     Get access to our partner portal, training, and sales materials within 24 hours.
@@ -128,7 +130,7 @@ export default function VijilianLanding() {
                                 <div className="flex items-center mb-4 gap-5">
                                     <img src={GraphReport} alt="" className="w-[36px] h-[50px] " />
 
-                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>3. Start Selling</span>
+                                    <span className=" text-[18px]" style={{ color: "#00AEEF" }}>3. Start Selling</span>
                                 </div>
                                 <p className="text-[16px] text-[#FFFFFF]">
                                     Use our comprehensive sales enablement kit to close your first deal this week.
@@ -140,21 +142,107 @@ export default function VijilianLanding() {
             </section >
 
             {/* Partnership Features */}
-            < section className="max-w-6xl mx-auto py-16" >
+            < section className="max-w-6xl md:px-6 mx-auto py-16" >
                 <div className="">
                     <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">
                         A Partnership Designed for Your Growth
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6">
-                        {
-                            CardContentData1.map((card,index) => <CardContent
-                                head={card.head}
-                                Index={index}
-                                sub={card.sub}
-                                iconed={card.iconed}
-                                hFit={true}
-                            />)
-                        }
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[389px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={lockIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Unlock New MRR</h3>
+                            <p className="text-white text-center">Add high-margin security services to your portfolio. Our model is built to maximize your Monthly Recurring Revenue and profitability.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[297px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={TimeIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Your Instant 24/7 SOC</h3>
+                            <p className="text-white text-center">Gain an immediate SOC 2 Type 2 certified Security Operations Center without the overhead. Our experts become an extension of your team.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[434px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={RocketIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Go-to-Market Enablement</h3>
+                            <p className="text-white text-center">Access our comprehensive \"ThreatRemediator™\" Enablement Kit with co-brandable materials, sales decks, and proposal generators to win more deals.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[345px] lg:-mt-[43px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={sheildIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Radical Flexibility & No Risk</h3>
+                            <p className="text-white text-center">Benefit from our channel-first approach with no minimum commitments. Full white-labeling, and a 30-day risk-free opt-out trial.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:-mt-[140px] lg:h-[405px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={TaskCheck} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Simplified Compliance</h3>
+                            <p className="text-white text-center">Effortlessly support your clients' compliance requirements, including HIPAA, GDPR, PCI DSS, and CMMC. Vijilan provides detailed reporting, audit-ready documentation, and compliance expertise—reducing your workload and minimizing regulatory risks.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[419px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={chainIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Vendor-Agnostic Integration</h3>
+                            <p className="text-white text-center">Seamlessly integrate with your clients' existing security tools and infrastructure. Vijilan supports extensive integrations across firewalls, endpoints, cloud platforms, and identity solutions, giving you unmatched flexibility without vendor lock-in.</p>
+                        </div>
                     </div>
                 </div>
             </section >
@@ -207,7 +295,7 @@ export default function VijilianLanding() {
                                     "Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is
                                     world-class, and the active remediation in ThreatRemediate is a game- changer for our clients."
                                 </blockquote>
-                                <p className=" text-[14px] font-medium" style={{color: "#00AEEF"}}>— Alex Johnson, CEO of a Silver Tier MSP Partner</p>
+                                <p className=" text-[14px] font-medium" style={{ color: "#00AEEF" }}>— Alex Johnson, CEO of a Silver Tier MSP Partner</p>
                             </CardContentData>
                         </Card>
 

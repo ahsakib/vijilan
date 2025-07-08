@@ -113,7 +113,7 @@ const Heading_Btn = ({ isCenter, pd, size, h1, h3, bg, desc, btn, btn1, btn2, bt
 
 
                         {btn5 && <div className="  rounded-lg  ">
-                            <button className="p-[18px] uppercase   m-[2px] text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
                                 {btn5}
                             </button>

@@ -10,6 +10,7 @@ import CardContent from "@components/CardContent";
 import GradientButton from "@components/GradientButton";
 import { processSteps } from "@app/Constant/Constant";
 
+
 export default function Component() {
 
     return (
@@ -54,7 +55,7 @@ export default function Component() {
             </section>
 
             {/* Process Flow */}
-            <section className="px-6 py-16 lg:px-8">
+            <section className=" container md:px-6 py-16">
                 <div className="mx-auto max-w-7xl">
                     <div className="text-center mb-10">
                         <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">
@@ -66,16 +67,101 @@ export default function Component() {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {
-                            processSteps.map((card, index) => <CardContent
-                                iconColor={card.icon}
-                                head={card.head}
-                                sub={card.text}
-                                Index={index}
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[389px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={shield} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Prepare & Prevent</h3>
+                            <p className="text-white text-center">We build your playbooks, train teams, and implement preventive controls to stop incidents before they start</p>
+                        </div>
 
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[297px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={detect} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Detect</h3>
+                            <p className="text-white text-center">Our platform uses AI-powered detection across all vectors—endpoints, cloud, identity, and network—to identify threats in real-time.</p>
+                        </div>
 
-                            />)
-                        }
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[434px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={investigation} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Investigate</h3>
+                            <p className="text-white text-center">Our 24/7 SOC analysts instantly investigate and confirm every potential threat, eliminating false positives so your team isn't disturbed.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[334px] lg:-mt-[43px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={thumsup} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">We Take Action</h3>
+                            <p className="text-white text-center">Our SOC takes direct, hands-on action: isolating endpoints, disabling compromised accounts, blocking malicious processes, and actively neutralizing the threat.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[324px] lg:-mt-[135px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={reportIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Report & Harden</h3>
+                            <p className="text-white text-center">We provide a full incident report detailing the attack, the actions taken, and expert recommendations to harden your defenses against future attacks.</p>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[419px] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
+                                <img src={EyeIcon} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Review & Refine</h3>
+                            <p className="text-white text-center">Post-incident, we analyze outcomes and continuously improve your detection, response, and prevention capabilities for ever-increasing resilience.</p>
+                        </div>
 
                     </div>
                 </div>

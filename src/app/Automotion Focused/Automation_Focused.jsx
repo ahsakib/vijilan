@@ -5,6 +5,10 @@ import CardBorder from '@components/CardBorder';
 import CardContent from '@components/CardContent';
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
+import a1 from "../../Assets/a1.png";
+import a2 from "../../Assets/a2.png";
+import a3 from "../../Assets/a3.png";
+import a4 from "../../Assets/a4.png";
 
 const cardData = [
     {
@@ -50,7 +54,7 @@ const Automation_Focused = () => {
 
                     <Heading_Btn
                         btn1="Explore Success Stories"
-                        btn2="Calculate Your Roi"/>
+                        btn2="Calculate Your Roi" />
 
                 </div>
             </div>
@@ -66,13 +70,94 @@ const Automation_Focused = () => {
 
                 <div className='  '>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5  '>
-                        {Automation.map((card, index) => <CardContent
-                            iconed={card.icon}
-                            Index={index + 2}
-                            title={card.title}
-                            description={card.description}
-                            grdBtn={card.buttonText}
-                        />)}
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[603px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-[100px] h-[100px] flex items-center justify-center my-4">
+                                <img src={a1} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Live Pricing Calculator</h3>
+                            <p className="text-white text-center">Generate accurate quotes instantly.<br/>  Input client assets and get real-time <br/> pricing with margin calculations.</p>
+                            <div className="mt-10  rounded-lg  ">
+                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
+                                LAUNCH CALCULATOR
+                            </button>
+                            </div>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[503px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-[100px] h-[100px] flex items-center justify-center my-4">
+                                <img src={a2} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Quote Builder & Proposal Generator</h3>
+                            <p className="text-white text-center">Build professional proposals in <br/> minutes. Automated formatting, co- <br/>branding, and instant PDF generation.</p>
+                            <div className="mt-10  rounded-lg  ">
+                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
+                                BUILD QUOTE
+                            </button>
+                            </div>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[592px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-[100px] h-[100px] flex items-center justify-center my-4">
+                                <img src={a3} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Partner ROI Calculator</h3>
+                            <p className="text-white text-center">Show prospects their security ROI and<br/> payback period. Interactive financial<br/> modeling built-in.</p>
+                            <div className="mt-10  rounded-lg  ">
+                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
+                                CALCULATE ROI
+                            </button>
+                            </div>
+                        </div>
+
+                        <div className={`relative bg-[#00AEEF3D] lg:h-[495px] lg:-mt-[98px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
+                            <div
+                                className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }} />
+                            <div className="w-[100px] h-[100px] flex items-center justify-center my-4">
+                                <img src={a4} alt="" className="" />
+                            </div>
+                            <h3 className="text-[24px] font-bold text-white mb-3 text-center">Jen AI Sales Assistant</h3>
+                            <p className="text-white text-center">Get instant answers about pricing,<br/> technical specs, and competitive <br/> positioning. Available 24/7.</p>
+                            <div className="mt-10  rounded-lg  ">
+                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
+                                START CHAT
+                            </button>
+                            </div>
+                            
+                        </div>
                     </div>
 
                 </div>
