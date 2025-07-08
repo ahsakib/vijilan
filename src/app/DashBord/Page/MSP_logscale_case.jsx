@@ -216,15 +216,17 @@ const MSP_logscale_case = () => {
                             <h4 className='text-center text-xl md:text-2xl mb-5'>Intelligent Data Pipeline Architecture</h4>
                             <div className='grid sm:grid-cols-1  lg:grid-cols-4 gap-5 justify-center'>
                                 {Datapipeline.map((card, index) => (
-                                    <div key={index} className='flex  items-center justify-center'>
-                                        <div className='flex justify-center flex-col items-center bg-[#2B3840] py-8 px-4 gap-5 rounded-lg text-center  '>
-                                            <img src={card.icon} className=' ' alt="" />
+                                    <div key={index} className="flex flex-col md:flex-row items-center">
+                                        <div className="flex-1 flex flex-col items-center bg-[#2B3840] py-8 px-4 gap-5 rounded-lg text-center h-full">
+                                            <img src={card.icon} className="" alt="" />
                                             <h4>{card.label}</h4>
                                             <p>{card.text}</p>
                                         </div>
                                         {/* Show arrow only if not last card */}
                                         {index !== Datapipeline.length - 1 && (
-                                            <FaArrowRight className='mx-2 text-2xl text-black' />
+                                            <div className="my-4 md:my-0 md:mx-2 flex items-center justify-center">
+                                                <FaArrowRight className="text-2xl text-black transform md:rotate-0 rotate-90" />
+                                            </div>
                                         )}
                                     </div>
                                 ))}
@@ -232,16 +234,11 @@ const MSP_logscale_case = () => {
 
                         </div>
 
-
-
-
                         <ListComponent
                             LeftHeading=" Core Technology Components"
                             bg={false}
                             array={list2}
                         />
-
-
 
                         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'>
                             {coreTechnology.map((card, index) => (
@@ -261,8 +258,6 @@ const MSP_logscale_case = () => {
 
                         </div>
                     </div >
-
-
 
                     <div className='mt-5'>
                         <CommonTextCard

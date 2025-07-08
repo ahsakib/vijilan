@@ -115,7 +115,7 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done //kaj kora lagbe//->complete
+                // responsive done //kaj kora lagbe//->complete //responsive properly
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
@@ -143,7 +143,7 @@ const router = createBrowserRouter([
                 element: <DistributionPartner />,
             },
             {
-                // responsive done kaj kora lagbe//->complete
+                // responsive done kaj kora lagbe//->complete  //responsive last two section
                 path: "managed-automation",
                 element: <ManagedAutomation />,
             },
@@ -154,12 +154,12 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done //kaj kora lagbe//->complete
+                // responsive done //kaj kora lagbe//->complete #responsive ey button niye kaj kora lagbe
                 path: "managed-siem-soc",
                 element: <ManagedSiemSoc />
             },
             {
-                // responsive done //kaj kora lagbe->complete
+                // responsive done //kaj kora lagbe->complete //button gula niye kaj kora lagbe
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
@@ -196,7 +196,7 @@ const router = createBrowserRouter([
             },
 
             {
-                // responsive done //kaj kora lagbe
+                // responsive done #complete
                 path: "dashbord",
                 element: <Dashbord />
             },
@@ -248,19 +248,19 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #kaj kora lagbe
+                // responsive done #complete
                 path: "msp-pricing-tool",
                 element: <MspPricingTool />
             },
             {
 
-                // responsive done #kaj kora lagbe
+                // responsive done #complete
                 path: "pricing-tool",
                 element: <PricingTool />
             },
             {
 
-                // responsive done #kaj kora lagbe
+                // responsive done #complete
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail />
             },
@@ -278,7 +278,7 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #kaj kora lagbe
+                // responsive done #card thikh kora lagbe
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },

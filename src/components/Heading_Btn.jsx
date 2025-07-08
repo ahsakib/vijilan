@@ -43,10 +43,10 @@ const Heading_Btn = ({ isCenter,pd,size,h1, h3, bg, desc, btn, btn1, btn2, btn3,
                         </div>
                     )}
 
-                    <div class={`flex flex-col sm:flex-row gap-10 ${isCenter ? "" : "justify-center"}`}>
+                    <div class={`flex flex-col sm:flex-row gap-10 items-center ${isCenter ? "" : "justify-center"}`}>
                         {
                             btn1 && <button
-                                className={`p-3 md:p-[20px] ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg font-medium"} ${pd && "!p-[20px]"}   rounded-[8px] text-white inline-flex items-center space-x-3`}
+                                className={`p-5 md:p-[20px] ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg font-medium"} ${pd && "!p-[20px]"}   rounded-[8px] text-white inline-flex items-center space-x-3`}
                                 style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
@@ -63,9 +63,9 @@ const Heading_Btn = ({ isCenter,pd,size,h1, h3, bg, desc, btn, btn1, btn2, btn3,
                             </button>
                         }
                         {btn2 &&
-                            <div className="rounded-lg">
+                            <div className="rounded-lg ml-2 md:ml-0">
                                 <button
-                                    className={`relative  p-5 md:p-[20px]    text-white ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg  font-medium"} inline-flex items-center space-x-3 bg-transparent rounded-lg`}>
+                                    className={`relative p-5 md:p-[20px] text-white ${size ? "text-[11px] font-bold lg:mt-10" : "text-sm md:text-lg  font-medium"} inline-flex items-center space-x-3 bg-transparent rounded-lg`}>
                                     <div
                                         className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
                                         style={{

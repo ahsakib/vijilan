@@ -143,7 +143,7 @@ const SMB_Runsomware = () => {
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="text-blue-600  text-[13px]  "  > SMB Ransomeware Recovery</span>
+                        <span className="!text-blue-600  text-[13px]" > SMB Ransomeware Recovery</span>
                     </nav>
                 </div>
             </section>
@@ -213,7 +213,7 @@ const SMB_Runsomware = () => {
                     </div >
 
 
-                    {/*  ⚠️ Traditional Security */}
+                    {/*  Traditional Security */}
                     <div>
                         <ListComponent
                             heading="⚠️ Why Traditional Security Failed"
@@ -231,9 +231,6 @@ const SMB_Runsomware = () => {
                             heading="💡 How Vijilan Made the Difference"
                             p1="The MSP had proactively deployed Vijilan's ThreatRemediate service across their client base, providing enterprise-grade protection at SMB-friendly pricing:"
                         />
-
-
-                        
 
                     </div>
                     <div className='mt-5'>
@@ -287,7 +284,6 @@ const SMB_Runsomware = () => {
                                 btn1="Become A partner"
                                 btn2="Learn More"
                             />
-
                         </div>
                     </div>
 

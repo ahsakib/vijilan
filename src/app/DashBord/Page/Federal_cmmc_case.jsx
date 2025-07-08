@@ -112,11 +112,11 @@ const Federal_cmmc_case = () => {
                     <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="hover:text-white cursor-pointer">blog</span>
+                        <span className="hover:text-white cursor-pointer">Resources</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
+                        <span className="hover:text-white cursor-pointer">Case Studies</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-700 text-[13px]  ">The Rise of Malware-Free Attacks</span>
+                        <span className="!text-blue-700 text-[13px]  ">Federal CMMC Success</span>
                     </nav>
                 </div>
             </section>

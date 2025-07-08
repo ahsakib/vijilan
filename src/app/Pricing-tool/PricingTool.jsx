@@ -102,7 +102,7 @@ const PricingTool = () => {
                             }}
                         />
                         <div className="mb-8">
-                            <h1 className="text-[24px] font-medium text-white -mt-12 z-10 mb-4">Vijilan Pricing Calculator</h1>
+                            <h1 className="text-[24px] font-medium text-white -mt-12 z-10 mb-4 relative">Vijilan Pricing Calculator</h1>
                             <p className="text-white text-[12px] md:text-[16px]">
                                 Enter the number of assets for your client to generate an <br /> estimated monthly cost.
                             </p>

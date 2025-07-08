@@ -142,7 +142,7 @@ const HealthCare_Complain_case = () => {
             <div>
 
                 {/* top part */}
-                <section className="container mx-auto px-6">
+                <section className="px-6">
                     <div className="mb-8">
                         <nav className="flex flex-wrap items-center text-[12px]">
                             <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>

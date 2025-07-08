@@ -102,11 +102,11 @@ const Financial_Compliance_Case = () => {
                     <nav className="flex flex-wrap items-center text-[12px]">
                         <span className="hover:text-white cursor-pointer">Home</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="hover:text-white cursor-pointer">blog</span>
+                        <span className="hover:text-white cursor-pointer">Resources</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
+                        <span className="hover:text-white cursor-pointer">Case Studies</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-400 text-[13px] font-medium">Financial Service Compliance</span>
+                        <span className="!text-blue-400 text-[13px] font-medium">Financial Services Compliance</span>
                     </nav>
                 </div>
             </section>

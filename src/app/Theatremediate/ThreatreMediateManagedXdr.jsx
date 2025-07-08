@@ -160,44 +160,38 @@ const ThreatreMediateManagedXdr = () => {
                     </div>
 
                     {/* Flow Diagram */}
-                    <div className=" grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-6 lg:gap-4">
+                    <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
                         {steps.map((step, index) => (
-                            <div key={index} className="flex items-center">
-                                {/* Step Card */}
-                                <div className=' flex gap-2 items-center justify-center'>
-
-                                    <div className="w-[180px] h-[150px] relative backdrop-blur-sm rounded-lg px-[10px] py-[16px] flex flex-col items-center justify-center text-center">
-                                        <div
-                                            className={`absolute inset-0 rounded-[8px] p-[1px] z-0 $`}
-                                            style={{
-                                                background: `linear-gradient(0deg, #8C0909, #8C0909), linear-gradient(0deg, #ED1C24, #ED1C24)`,
-                                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                                WebkitMaskComposite: "xor",
-                                                maskComposite: "exclude",
-                                            }}
-                                        />
-                                        {/* Icon */}
-                                        <img src={step.icon} alt="" className='w-[50px] h-[50px]  mb-2' />
-
-                                        {/* Content */}
-                                        <h3 className=" text-white font-medium text-[12px] mb-2">{step.title}</h3>
-                                        <p className="whitespace-pre-line text-[12px] leading-relaxed">{step.description}</p>
-                                    </div>
-                                    {index < steps.length - 1 && (
-                                        <div className="lg:hidden flex items-center justify-center my-4 rotate-90">
-
-                                            <FaArrowRight style={{ color: '#ED1C24' }} className="w-6 h-6 !text-red-500 -rotate-90" />
-                                        </div>
-                                    )}
-                                </div>
-
-
-
-                                {/* Mobile Arrow (except for last item) */}
-
+                        <React.Fragment key={index}>
+                            {/* Card */}
+                            <div className="w-[180px] h-[150px] relative backdrop-blur-sm rounded-lg px-[10px] py-[16px] flex flex-col items-center justify-center text-center">
+                            <div
+                                className="absolute inset-0 rounded-[8px] p-[1px] z-0"
+                                style={{
+                                background: `linear-gradient(0deg, #8C0909, #8C0909), linear-gradient(0deg, #ED1C24, #ED1C24)`,
+                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                WebkitMaskComposite: "xor",
+                                maskComposite: "exclude",
+                                }}
+                            />
+                            <img src={step.icon} alt="" className="w-[50px] h-[50px] mb-2" />
+                            <h3 className="text-white font-medium text-[12px] mb-2">{step.title}</h3>
+                            <p className="whitespace-pre-line text-[12px] leading-relaxed">{step.description}</p>
                             </div>
+                    
+                            {/* Arrow - show only between cards */}
+                            {index < steps.length - 1 && (
+                            <div className="flex items-center justify-center">
+                                {/* Vertical for mobile, horizontal for lg */}
+                                <div className="flex items-center justify-center">
+                                <FaArrowRight
+                                    className="text-red-500 w-6 h-6 transform rotate-90 lg:rotate-0"
+                                />
+                                </div>
+                            </div>
+                            )}
+                        </React.Fragment>
                         ))}
-
                     </div>
                 </div>
             </div>

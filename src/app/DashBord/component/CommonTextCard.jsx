@@ -45,7 +45,8 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
 
       {numCard &&
 
-        <div className={`grid grid-cols-2 ${grid_4 ? 'grid-cols-4' : ""} gap-5 mt-8`}>
+        // <div className={`grid grid-cols-2 ${grid_4 ? 'grid-cols-4' : ""} gap-5 mt-8`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${grid_4 ? 'lg:grid-cols-4' : "lg:grid-cols-2"} gap-5 mt-8`}>
           {numCard.map(card =>
 
             <div

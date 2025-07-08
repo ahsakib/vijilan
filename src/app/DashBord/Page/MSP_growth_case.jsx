@@ -135,7 +135,7 @@ const MSP_growth_case = () => {
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
                             <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
                             <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
+                            <span className="!text-blue-500 text-[13px] font-medium" Home  >MSP 30% MRR Growth</span>
                         </nav>
                     </div>
                 </section>
@@ -197,7 +197,7 @@ const MSP_growth_case = () => {
                         <p className=' my-3'>Vijilan deployed ThreatRemediate Ultimate, our flagship fully managed Extended Detection and Response (XDR) solution. This comprehensive platform integrated seamlessly with the MSP's existing infrastructure while providing enterprise-grade security capabilities.</p>
 
 
-                        <div className='grid sm:grid-cols-1  lg:grid-cols-4 gap-5'>
+                        <div className='grid sm:grid-cols-1  md:grid-cols-2 gap-5'>
                             {ThreatRemediate_Ultimate.map((card, index) => (
                                 <div key={index} className='flex  items-center justify-center'>
                                     <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>

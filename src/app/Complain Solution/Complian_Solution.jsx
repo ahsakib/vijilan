@@ -3,11 +3,6 @@ import CardContent from '@components/CardContent';
 import Heading_Btn from '@components/Heading_Btn';
 import React from 'react';
 
-
-
-
-
-
 const Complain_Solution = () => {
     return (
         <div className='max-w-[90%] mx-auto'>
