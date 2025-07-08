@@ -204,7 +204,7 @@ export default function Component() {
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             {/* Left Side - Chat Interface */}
                             <div className="space-y-6">
-                                <div className="relative bg-[#00AEEF3D] rounded-[24px] p-4 md:p-[60px]">
+                                <div className="relative bg-[#00AEEF3D] rounded-[24px] px-[20px] py-[60px]">
                                     <div
                                         className="absolute inset-0 rounded-[24px] p-[1px] z-0"
                                         style={{
@@ -228,7 +228,7 @@ export default function Component() {
                                             <p className="text-[#00AEEF] text-xs md:text-[13px] font-medium">Cyber security Sales Agent</p>
                                         </div>
                                     </div>
-                                    <div className="relative bg-[#00AEEF4D] p-6 rounded-[16px] w-fit flex justify-center items-center mx-auto">
+                                    <div className="relative bg-[#00AEEF4D] p-[40px] rounded-[16px] w-fit flex justify-center items-center mx-auto">
                                         <div
                                             className="absolute inset-0 rounded-[16px] p-[1px] z-0"
                                             style={{

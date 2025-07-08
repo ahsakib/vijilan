@@ -1,17 +1,17 @@
 import NavyBlueBackground from "./NavyBlueBackground";
 
-const InfoSection = ({ position = "right", width, height, design1, design2, heading, subtitle, desc, btnText }) => {
+const InfoSection = ({ position = "right", width, height, design1, design2, heading, subtitle, desc, btnText, modify }) => {
     const content = (
         <>
             {design1 && (
                 <div className="max-w-2xl mx-auto">
                     <h1 className=" mt-3 text-xl md:text-3xl  font-bold mb-6">From Ingestion to Action</h1>
 
-                    <p className="mb-8 text-sm font-bold">
+                    <p className={` ${modify ? "text-[18px] mb-3" : "text-sm font-bold mb-8 "}`}>
                         Every piece of security data follows a carefully orchestrated journey through our integrated platform, ensuring maximum value and minimum noise.
                     </p>
 
-                    <ul className="space-y-4 list-disc pl-5 font-bold text-sm md:text-lg">
+                    <ul className={` list-disc ${modify ? "text-[18px] space-y-3 " : "font-bold text-sm md:text-lg space-y-4"} pl-5 `}>
                         <li>Data is ingested from a client's firewall/endpoint</li>
                         <li>It's routed through Cribl for optimization and enrichment</li>
                         <li>It's analyzed in CrowdStrike LogScale</li>

@@ -19,12 +19,12 @@ const Card = ({ children, className = "", ...props }) => {
 };
 const Corrected_MSP_Program = () => {
     const CardContentData = ({ children, className = "", ...props }) => {
-    return (
-        <div className={` ${className}`} {...props}>
-            {children}
-        </div>
-    );
-};
+        return (
+            <div className={` ${className}`} {...props}>
+                {children}
+            </div>
+        );
+    };
 
     return (
         <div className='max-w-[90%] mx-auto '>
@@ -34,20 +34,21 @@ const Corrected_MSP_Program = () => {
 
             <div>
                 <Heading_Btn
-                    h1="Build Your Profitable Security Practice on Our Platform"
-                    desc="Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to deliver enterprise-grade cybersecurity. No minimums, no complexity, no high startup costs."
+                    h1={`Build Your Profitable Security Practice on\nOur Platform`}
+                    desc={`Leverage our 24/7 US-Based SOC, AI-driven technology, and channel-first model to\ndeliver enterprise-grade cybersecurity. No minimums, no complexity, no high startup\ncosts.`}
                     rating="★★★★★ | Trusted by over 500 MSPs worldwide"
                     btn1="Apply to become a partner"
                     btn2="download partner kit"
                 />
             </div>
 
-            <div>
+            <div className='container mx-auto md:px-6 pb-16'>
                 <Heading_Btn
                     h1="Your Path to Market Leadership"
-                    desc="Our proven go-to-market strategy helps partners achieve sustained growth and market differentiation."
+                    desc={`Our proven go-to-market strategy helps partners achieve sustained growth and market\ndifferentiation.`}
+                    isSmallHeading={true}
                 />
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5 rounded-lg'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-5 rounded-lg -mt-[60px]'>
                     {partnerShip.map((card, index) =>
                         <SimpleCard
                             title={card.title}
@@ -60,19 +61,20 @@ const Corrected_MSP_Program = () => {
 
             {/* Partner Ship design */}
 
-            <div>
+            <div className='container mx-auto md:px-6'>
                 <Heading_Btn
                     h1="A partnerShip designed for your growth"
                     desc="everything you need to build,scale and differentiate your practice"
+                    isSmallHeading={true}
                 />
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-10 -mt-[20px]'>
                     {
                         partnerShipDesign.map((card, index) =>
 
 
                             <div className='text-white text-center my-2 p-5'>
-                                {/* <{card.icon}/> */}
+                                {/* <img src={card.icon} alt="" /> */}
                                 <h3 className='text-2xl font-semibold my-2'>{card.title}</h3>
                                 <p>{card.description}</p>
                             </div>
@@ -84,21 +86,37 @@ const Corrected_MSP_Program = () => {
 
 
             </div>
+
             {/* A Partnership Tier for Every Stage of Your Growth */}
-            <div>
+            <div className='container mx-auto md:px-6 py-16'>
                 <Heading_Btn
-                    h1="A Partnership Tier for Every Stage of Your Growth"
-                    desc="Our program is designed to meet you where you are and help you scale your security offerings profitably."
+                    h1={`A Partnership Tier for Every Stage of\nYour Growth`}
+                    desc={`Our program is designed to meet you where you are and help you scale your security offerings\nprofitably.`}
+                    isSmallHeading={true}
                 />
 
-                <div className='grid grid-cols-1 md:grid-cols-2  gap-5 justify-between'>
-                    <CardContent
-                        head="Partner Tier Comparison"
-                        description="A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining services, support, and benefits for each level as defined in the development plan."
-                    />
+                <div className='grid grid-cols-1 md:grid-cols-2  gap-5 -mt-[20px]'>
+                    <div className='relative bg-[#00AEEF3D] rounded-[8px] h-fit py-16 px-3 md:px-10'>
+                        <div
+                            className="absolute  inset-0 rounded-[8px] p-[2px] z-0"
+                            style={
+                                {
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude"
+                                }
+                            }
+
+                        />
+
+                        <h1 className='text-[24px] font-bold text-center mb-3'>Partner Tier Comparison</h1>
+                        <p className='text-[18px] text-center'>A detailed comparison table of Bronze, Silver, and Gold Tiers would be presented here, outlining services, support, and benefits for each level as defined in the development plan.</p>
+                    </div>
+
                     <div className=' p-5 flex flex-col items-center justify-center border-[3px] rounded-2xl border-[#035882]'>
                         <div className='-mb-10 flex flex-col items-center justify-center  gap-3'>
-                            <div className='bg-gradient-to-t h-24 w-24  rounded-full flex justify-center items-center text-white text-lg font-bold from-[#07ADE9] to-[#EB9C33]'>
+                            <div className='bg-gradient-to-t h-[45px] w-[45px] md:h-24 md:w-24  rounded-full flex justify-center items-center text-white text-lg font-bold from-[#07ADE9] to-[#EB9C33]'>
                                 JN </div>
                             <h3 className='font-bold text-xl text-white'>JEN AI</h3>
                         </div>
@@ -114,24 +132,26 @@ const Corrected_MSP_Program = () => {
 
             {/* feedback */}
 
-            <div className='grid grid-cols-1 md:grid-cols-2  gap-5 justify-between'>
-                {
-                    partnerFeedback.map((card, index) =>
-                        <CardContent
-                            head={card.sectionTitle}
-                            description={card.testimonial}
-                            cardFooter={`- ${card.author}`}
-                        />)
-                }
+            <div className='container mx-auto md:px-6 py-16'>
+                <div className='grid grid-cols-1 md:grid-cols-2  gap-5 justify-between'>
+                    <div className='bg-[#082235] rounded-[10px] py-10'>
+                        <h1 className='text-[24px] font-medium text-center mb-3'>What Our Partners say</h1>
+                        <p className='text-[20px] mb-3 border-l-4 border-[#00AEEF] text-center'>"Our security MRR increased by 30% within 6 months of partnering with Vijilan. Their SOC is world-class, and the active remediation in ThreatRemediate is a game-changer for our clients."</p>
+                        <h4 className='text-[14px] font-medium text-center ' style={{ color: "#00AEEF" }}>Alex Johnson, CEO of a Silver Tier MSP Partner</h4>
+                    </div>
+                    <div className='bg-[#082235] rounded-[10px] p-10'>
+                        <h1 className='text-[24px] font-medium text-center mb-3'>A Message to Our Future Partners</h1>
+                        <p className='text-[20px] text-center mb-3'>"We built our partner program on a foundation of trust and mutual success. We succeed when you succeed. That's why we provide the best technology, an expert SOC, and the GTM support you need to win."</p>
+
+                    </div>
+                </div>
             </div>
 
             {/* Question and answer */}
 
 
-            <div className=' mt-16 pt-8  '>
-
-                <h1 className='text-5xl font-bold text-center my-4 py-5'>Frequently Asked Questions</h1>
-
+            <div className='container mx-auto  '>
+                
                 {/* FAQ Section */}
                 < section className="relative z-10 px-6 py-16" >
                     <div className="max-w-3xl mx-auto">

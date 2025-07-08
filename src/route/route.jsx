@@ -84,22 +84,22 @@ const router = createBrowserRouter([
                 element: <Resources />,
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //six card kaj kora lagbe
                 path: "visilan-msg-partner", 
                 element: <VisilanPartner />,
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //six card kaj kora lagbe
                 path: "threat-respond-service",
                 element: <ThreatResponse />,
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //six card kaj kora lagbe
                 path: "threat-respond-service-2",
                 element: <ThreatResponse2 />,
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //six card kaj kora lagbe
                 path: "vijilan-vars-consultants-page",
                 element: <Vars_consultants_page />,
             },
@@ -109,62 +109,62 @@ const router = createBrowserRouter([
                 element: <VisislanProfessional />,
             },
             {
-                // responsive done  //kaj kora lagbe
+                // responsive done  //kaj kora lagbe//->Complete
                 path: "case-studies",
                 element: <CaseStudies />,
             },
             {
 
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//->complete
                 path: "automation-case-studies",
                 element: <AutomationCaseStudies />,
             },
             {
 
-                // responsive done //kaj kora lagbe
+                // responsive done //four card kaj kora lagbe -> cardContent component
                 path: "automation-focused",
                 element: <Automation_Focused />,
             },
             {
 
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//->complete
                 path: "complain-solution",
                 element: <Complain_Solution />,
             },
             {
 
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//->check 3rd section
                 path: "corrected-msp",
                 element: <Corrected_MSP_Program />,
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//->complete
                 path: "distribution-partner",
                 element: <DistributionPartner />,
             },
             {
-                // responsive done kaj kora lagbe
+                // responsive done kaj kora lagbe//->complete
                 path: "managed-automation",
                 element: <ManagedAutomation />,
             },
             {
-                // responsive done kaj kora lagbe
+                // responsive done kaj kora lagbe//->complete
                 path: "platform-technology",
                 element: <PlatformTechnology />,
             },
             {
 
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//->complete
                 path: "managed-siem-soc",
                 element: <ManagedSiemSoc />
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe->complete
                 path: "managed-siem-logscale-service",
                 element: <ManagedSiemLogScaleService />
             },
             {
-                // responsive done //kaj kora lagbe
+                // responsive done //kaj kora lagbe//
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },

@@ -47,7 +47,7 @@ const DestribuationPartner = ({ }) => {
 
     return <>
         <div className=" max-w-[90%] mx-auto px-6 py-16">
-            <section className="bg-transparent max-w-7xl mx-auto">
+            <section className="bg-transparent container mx-auto md:px-6 pb-16">
                 <div className="text-center text-white font-bold mb-12">
                     <h1 className="text-3xl md:text-[40px] font-bold mb-4">
                         Procure Vijilan Through Your Preferred  <br /> Distributor
@@ -56,7 +56,7 @@ const DestribuationPartner = ({ }) => {
                         We partner with the industry's leading technology distributors to make quoting, purchasing, <br /> and deploying our managed security solutions seamless and efficient for our enterprise clients <br /> and channel partners.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 justify-items-center  ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-10 justify-items-center  ">
                     {distributors.map((icon, index) => (
                         <SimpleCard
                             key={index}
@@ -68,7 +68,8 @@ const DestribuationPartner = ({ }) => {
                     ))}
                 </div>
             </section>
-            <section className="bg-transparent  mx-auto py-20">
+
+            <section className="bg-transparent container mx-auto md:px-6 py-16">
                 <h1 className="text-3xl md:text-[40px] font-bold text-white text-center mb-4">
                     Streamlined Procurement, Simplified Billing
                 </h1>
@@ -88,13 +89,14 @@ const DestribuationPartner = ({ }) => {
                     ))}
                 </div>
             </section>
-            <section className="bg-transparent max-w-7xl mx-auto">
+
+            <section className="bg-transparent container mx-auto md:px-6 py-16">
                 <div className="text-center text-white font-bold mb-12">
                     <h1 className="text-3xl md:text-[40px] mb-4">
                         Our Esteemed Distribution Partners
                     </h1>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 justify-items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-10 justify-items-center">
                     {titles.map((title, index) => (
                         <SimpleCard
                             key={index}
@@ -105,7 +107,8 @@ const DestribuationPartner = ({ }) => {
                     ))}
                 </div>
             </section>
-            <section className="bg-transparent max-w-7xl mx-auto py-20">
+
+            <section className="bg-transparent container mx-auto md:px-6 py-16">
                 <div className="text-center text-white font-bold mb-6">
                     <h1 className="text-3xl md:text-[40px]">
                         Getting Started is Easy
@@ -114,26 +117,27 @@ const DestribuationPartner = ({ }) => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 justify-items-center">
                     <CardBorder width="567px" height="279px">
-                        <div className="text-white p-4">
+                        <div className="text-white px-[10px] md:px-[30px] py-[50px]">
                             <h1 className="font-medium text-[24px] mb-4">Contact Your Distributor</h1>
                             <p className="text-left text-[18px]">Reach out to your account manager at any of our listed <br /> distribution partners and ask for Vijilan's managed security <br /> services and solutions.</p>
                         </div>
                     </CardBorder>
                     <CardBorder width="567px" height="279px">
-                        <div className="text-white p-4">
+                        <div className="text-white px-[10px] md:px-[30px] py-[50px]">
                             <h1 className="font-medium text-[24px] mb-4">Connect with Us</h1>
                             <p className="text-left text-[18px]">Your distributor's representative will work directly with our <br /> channel team to scope your specific needs and generate a <br /> quote through their system.</p>
                         </div>
                     </CardBorder>
                 </div>
             </section>
-            <section className="bg-transparent   mx-auto">
 
-                <NavyBlueBackground borderCancel={true}>
-                    <div>
-                        <div className="grid grid-cols-1 md:grid-cols-2">
+            <section className="bg-transparent container mx-auto md:px-6">
+
+                <NavyBlueBackground borderCancel={true} smallPadding={true}>
+                    <div className="  md:p-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <div className='px-2 md:px-5 py-8 flex flex-col items-center justify-center border-[1px] rounded-2xl border-[#00AEEF3D]'>
-                                <div className="w-[61px] h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
+                                <div className=" w-[45px] h-[45px] md:w-[61px] md:h-[61px] rounded-full flex items-center justify-center mx-auto mb-2"
                                     style={{
                                         background: `linear-gradient(0deg, rgba(196, 196, 196, 0.5), rgba(196, 196, 196, 0.5)),linear-gradient(180deg, #F89B29 0%, #00AEEF 100%)`,
                                         backgroundBlendMode: "overlay"

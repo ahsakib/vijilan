@@ -505,7 +505,8 @@ export const partnerFeedback = [
   {
     sectionTitle: "A Message to Our Future Partners",
     testimonial: "We built our partner program on a foundation of trust and mutual success. We succeed when you succeed. That's why we provide the best technology, an expert SOC, and the GTM support you need to win.",
-    author: "Alex Johnson, CEO of a Silver Tier MSP Partner"
+    author: "Alex Johnson, CEO of a Silver Tier MSP Partner",
+    show: true
   }
 ]
 

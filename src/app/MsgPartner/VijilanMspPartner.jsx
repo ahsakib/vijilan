@@ -8,7 +8,7 @@ import GraphReport from "@images/Graph Report.png"
 import CardContent from "@components/CardContent"
 
 import chainIcon from "@images/chain-icons.png"
-import RocketIcon from "@images/rocketIcon.png"
+import rocket from "../../Assets/Rocket.png"
 import sheildIcon from "../../Assets/sheildIcon.png";
 import TaskCheck from "@images/task-check.png"
 import TimeIcon from "@images/timeIcon.png"
@@ -38,7 +38,7 @@ export default function VijilianLanding() {
         <div className="min-h-screen">
 
             {/* Hero Section */}
-            <section className="relative z-10 px-6 py-20 text-center">
+            <section className="relative z-10 px-6  text-center">
 
                 <Heading_Btn
                     h1={"Build Your Profitable Security Practice on\nOur Platform"}
@@ -52,7 +52,7 @@ export default function VijilianLanding() {
             {/* Go-to-Market Section */}
             < section className="relative z-10 py-16" >
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">Go-to-Market in Days not Months</h2>
+                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">Go-to-Market in Days not Months</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <Card
                             className="relative p-6 rounded-[24px] overflow-hidden"
@@ -75,7 +75,7 @@ export default function VijilianLanding() {
                             <CardContentData className="p-0 relative z-10">
                                 <div className="flex items-center gap-5 mb-4">
                                     <img src={Clipboard} alt="" className="w-[40px] h-[50px]" />
-                                    <span className="text-[#00AEEF] text-[18px]">1. Apply Online</span>
+                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>1. Apply Online</span>
                                 </div>
                                 <p className="text-[16px] text-[#FFFFFF]">
                                     Our simple, no-obligation application takes less than 5 minutes to complete.
@@ -100,11 +100,11 @@ export default function VijilianLanding() {
                             />
                             <CardContentData className="p-0">
                                 <div className="flex items-center mb-4 gap-5">
-                                    <img src={RocketIcon} alt="" className="w-[34px] h-[40px]" />
+                                    <img src={rocket} alt="" className="w-[34px] h-[40px]" />
 
-                                    <span className="text-[#00AEEF] text-[18px]">2. Fast Onboarding</span>
+                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>2. Fast Onboarding</span>
                                 </div>
-                                <p className="text-[16px] text-[#FFFFFF]">
+                                <p className="text-[16px] text-[#FFFFFF]" >
                                     Get access to our partner portal, training, and sales materials within 24 hours.
                                 </p>
                             </CardContentData>
@@ -128,7 +128,7 @@ export default function VijilianLanding() {
                                 <div className="flex items-center mb-4 gap-5">
                                     <img src={GraphReport} alt="" className="w-[36px] h-[50px] " />
 
-                                    <span className="text-[#00AEEF] text-[18px]">3. Start Selling</span>
+                                    <span className=" text-[18px]" style={{color: "#00AEEF"}}>3. Start Selling</span>
                                 </div>
                                 <p className="text-[16px] text-[#FFFFFF]">
                                     Use our comprehensive sales enablement kit to close your first deal this week.
@@ -140,9 +140,9 @@ export default function VijilianLanding() {
             </section >
 
             {/* Partnership Features */}
-            < section className="max-w-6xl mx-auto" >
+            < section className="max-w-6xl mx-auto py-16" >
                 <div className="">
-                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-10 text-white">
+                    <h2 className="text-2xl md:text-[40px] font-bold text-center mb-12 text-white">
                         A Partnership Designed for Your Growth
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6">
@@ -167,7 +167,7 @@ export default function VijilianLanding() {
                         <br />
                         Your Growth
                     </h2>
-                    <p className="text-[18px] text-[#FFFFFF] mb-10">
+                    <p className="text-[18px] text-[#FFFFFF] mb-12">
                         Our program is designed to meet you where you are and help you scale your security offerings <br /> profitably.
                     </p>
                     <Card

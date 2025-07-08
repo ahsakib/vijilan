@@ -20,7 +20,7 @@ const Vars_consultants_page = () => {
 
             {/* Recommendation */}
 
-            <div className='container mx-auto'>
+            <div className='container mx-auto py-16'>
                 <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center m-12'>Recommend with Confidence, Deliver with Ease</h1>
                 <div className='  '>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5'>
@@ -38,7 +38,7 @@ const Vars_consultants_page = () => {
             {/* A Simple Path to Partnership */}
 
             <div className='container mx-auto py-16'>
-                <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center m-12'>
+                <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center mb-4'>
                     A Simple Path to Partnership
                 </h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -54,8 +54,8 @@ const Vars_consultants_page = () => {
 
             {/* Key Offerings for Your Clientele */}
 
-            <div className='container mx-auto px-6'>
-                <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center m-12'>
+            <div className='container mx-auto px-6 py-16'>
+                <h1 className='text-2xl md:text-[40px] font-bold  text-white text-center mb-12'>
                     Key Offerings for Your Clientele
                 </h1>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2  gap-8'>
@@ -80,8 +80,8 @@ const Vars_consultants_page = () => {
 
             {/* Ready To Empower Your Team? */}
 
-            <div className='container mx-auto px-6'>
-                <h1 className='text-2xl md:text-[40px] w-full mx-auto  font-bold  text-white text-center m-12'>
+            <div className='container mx-auto px-6 py-16'>
+                <h1 className='text-2xl md:text-[40px] w-full mx-auto  font-bold  text-white text-center mb-12'>
                     Ready To Empower Your Team?
                 </h1>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8'>
@@ -101,7 +101,7 @@ const Vars_consultants_page = () => {
 
             {/* apply */}
 
-            <div className='py-20'>
+            <div className='py-16'>
                 <div className='space-y-5'>
                     <h1 className='text-[30px] md:text-[40px] font-bold text-center'>Ready to Become a Trusted Security Advisor? </h1>
                     <p className='text-[18px] text-center'>Join Vijilan's network of elite partners and start delivering superior security value to your clients.</p>
