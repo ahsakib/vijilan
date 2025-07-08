@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBorder from './CardBorder';
 
-const Heading_Btn = ({ isCenter,pd,size,h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, isSmallHeading, rating, state, btn2Icon = true }) => {
+const Heading_Btn = ({ isCenter, pd, size, h1, h3, bg, desc, btn, btn1, btn2, btn3, btn4, btn5, isSmallHeading, rating, state, btn2Icon = true }) => {
     const colCount = Math.min(state?.length || 1, 6);
     const gridColsClass = `grid-cols-${colCount}`;
 
@@ -108,6 +108,14 @@ const Heading_Btn = ({ isCenter,pd,size,h1, h3, bg, desc, btn, btn1, btn2, btn3,
                         {btn4 && <div className="bg-[#0784c3]  rounded-lg  ">
                             <button className="p-[18px] uppercase   m-[2px] text-lg rounded-[8px] text-white border-2 border-white  ">
                                 {btn4}
+                            </button>
+                        </div>}
+
+
+                        {btn5 && <div className="  rounded-lg  ">
+                            <button className="p-[18px] uppercase   m-[2px] text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
+                                {btn5}
                             </button>
                         </div>}
 
