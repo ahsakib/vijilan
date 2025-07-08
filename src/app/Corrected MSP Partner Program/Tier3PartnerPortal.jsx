@@ -291,7 +291,7 @@ const Tier3PartnerPortal = () => {
                             </div>
                         </GradientCard>
                         <GradientCard>
-                            <div className="flex flex-col justify-center items-center text-center">
+                            <div className="flex flex-col justify-center items-center text-center px-6 md:px-0 lg:px-0">
 
                                 <h4 className="font-semibold mb-2">add icon</h4>
                                 <h3 className="font-semibold mb-2">Competitive Battlecards</h3>
@@ -310,7 +310,7 @@ const Tier3PartnerPortal = () => {
                             </div>
                         </GradientCard>
                         <GradientCard>
-                            <div className="flex flex-col justify-center items-center text-center">
+                            <div className="flex flex-col justify-center items-center text-center px-6 md:px-0 lg:px-0">
 
                                 <h4 className="font-semibold mb-2">add icon</h4>
                                 <h3 className="font-semibold mb-2">ROI Calculator</h3>
@@ -348,7 +348,7 @@ const Tier3PartnerPortal = () => {
                             </div>
                         </GradientCard>
                         <GradientCard>
-                            <div className="flex flex-col justify-center items-center text-center">
+                            <div className="flex flex-col justify-center items-center text-center px-6 md:px-0 lg:px-0">
 
                                 <h4 className="font-semibold mb-2">add icon</h4>
                                 <h3 className="font-semibold mb-2">Upsell Playbook</h3>
@@ -367,7 +367,7 @@ const Tier3PartnerPortal = () => {
                             </div>
                         </GradientCard>
                         <GradientCard>
-                            <div className="flex flex-col justify-center items-center text-center">
+                            <div className="flex flex-col justify-center items-center text-center px-4 md:px-0 lg:px-0">
 
                                 <h4 className="font-semibold mb-2">add icon</h4>
                                 <h3 className="font-semibold mb-2">Technical Guides</h3>
@@ -478,73 +478,41 @@ const Tier3PartnerPortal = () => {
         </section>
         <section className="max-w-6xl mx-auto py-10">
             <GradientCard>
-                <div className="px-3 md:mx-10 lg:px-20 py-10">
-                    <div className="text-center">
+            <div className="px-3 md:mx-10 lg:px-20 py-10">
+  <div className="text-center">
+    <h1 className="text-2xl md:text-4xl font-bold mb-4">🤝 Your Dedicated Support Team</h1>
+    <p className="text-xl font-thin md:font-semibold lg:font-bold">
+      As a validated partner, you have direct access to our partner success specialists.
+    </p>
+  </div>
 
-                        <h1 className="text-2xl md:text-4xl font-bold mb-4">🤝 Your Dedicated Support Team</h1>
-                        <p className="text-xl  font-thin md:font-semibold lg:font-bold">As a validated partner, you have direct access to our partner success specialists.</p>
-                    </div>
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-                            <img
-                                src={name}
-                                alt="Sarah Mitchell"
-                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
-                            />
-                            <div className="text-white">
-                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
-                                <p class="font-medium">Partner Success Manager</p>
-                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
-                            </div>
-                        </div>
+  {[1, 2, 3].map((_, i) => (
+    <div
+      key={i}
+      className="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10"
+    >
+      <div className="flex flex-col md:flex-row items-center justify-center gap-5 text-center md:text-left">
+        <img
+          src={name}
+          alt="Sarah Mitchell"
+          className="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-0 md:mr-5"
+        />
+        <div className="text-white">
+          <h1 className="text-xl font-semibold">Sarah Mitchell</h1>
+          <p className="font-medium">Partner Success Manager</p>
+          <p className="text-sm mt-1">Onboarding, training, and account growth</p>
+        </div>
+      </div>
 
-                        <div>
-                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
-                                contact sarah
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-                            <img
-                                src={name}
-                                alt="Sarah Mitchell"
-                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
-                            />
-                            <div className="text-white">
-                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
-                                <p class="font-medium">Partner Success Manager</p>
-                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
-                            </div>
-                        </div>
+      <div>
+        <button className="bg-[#00AEEF] text-white px-6 rounded text-sm uppercase py-3 transition-colors">
+          contact sarah
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
 
-                        <div>
-                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
-                                contact sarah
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mt-10">
-                        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-                            <img
-                                src={name}
-                                alt="Sarah Mitchell"
-                                class="w-20 h-20 rounded-full object-cover border-2 border-gray-100 mr-5"
-                            />
-                            <div className="text-white">
-                                <h1 class="text-xl font-semibold">Sarah Mitchell</h1>
-                                <p class="font-medium">Partner Success Manager</p>
-                                <p class="text-sm mt-1">Onboarding, training, and account growth</p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <button class="bg-[#00AEEF]  text-white px-6 rounded text-sm uppercase py-3 transition-colors">
-                                contact sarah
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
             </GradientCard>
         </section>

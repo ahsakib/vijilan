@@ -170,139 +170,139 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done
+                // responsive done //kaj kora lagbe, card thikh kora lagbe
                 path: "mid-market-enterprice",
                 element: <MidMarketEnterPrice />
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe, card thikh kora lagbe
                 path: "msp-partner-program-ai",
                 element: <MspPartnerProgramAi />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "msp-launchpad",
                 element: <MspLaunchpad />
             },
             {
-                // responsive done
+                // responsive done //kaj kora lagbe, card thikh kora lagbe
                 path: "tier-landing",
                 element: <Tier1Landing />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "tier3-partner-portal",
                 element: <Tier3PartnerPortal />
             },
 
             {
-                // responsive done
+                // responsive done //kaj kora lagbe
                 path: "dashbord",
                 element: <Dashbord />
             },
             {
-                // responsive done
-                path: "case-success",
+                // responsive done #complete
+                path: "var-success-case-study",
                 element: <Success_study_case />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "resilience-case",
                 element: <Resilience_case />
             },
 
             {
-                // responsive done
+                // responsive done #complete
                 path: "federal-cmmc-case",
                 element: <Federal_cmmc_case />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "financial-complianc-case",
                 element: <Financial_Compliance_Case />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "msp-ogscale-case-study",
                 element: <MSP_logscale_case />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "smb-runsomware-case-study",
                 element: <SMB_Runsomware />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "health-compliance",
                 element: <HealthCare_Complain_case />
             },
             {
-                // responsive done
+                // responsive done #kaj kora lagbe
                 path: "msp-growth-case",
                 element: <MSP_growth_case />
             },
             {
-                // responsive done
+                // responsive done #complete
                 path: "smb",
                 element: <SMB />
             },
             {
 
-                // responsive done
+                // responsive done #kaj kora lagbe
                 path: "msp-pricing-tool",
                 element: <MspPricingTool />
             },
             {
 
-                // responsive done
+                // responsive done #kaj kora lagbe
                 path: "pricing-tool",
                 element: <PricingTool />
             },
             {
 
-                // responsive done
+                // responsive done #kaj kora lagbe
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail />
             },
             {
 
-                // responsive done
+                // responsive done #complete
                 path: "threatremediate-remote-pricing",
                 element: <ThreatremediateRemotePricing />
             },
             {
 
-                // responsive done
+                // responsive done #complete
                 path: "threatremediate-remote-no-pricing",
                 element: <ThreadRemediateRemoteNoPricing />
             },
             {
 
-                // responsive done
+                // responsive done #kaj kora lagbe
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },
             {
 
-                // responsive done
+                // responsive done #complete
                 path: "access-request",
                 element: <AccessRequest />
             },
             {
 
-                // responsive done
+                // responsive done #complete
                 path: "fixed-vijilan-portal",
                 element: <FixedVijilanPortal />
             },
             {
 
-                // responsive done
+                // responsive done #compelte
                 path: "why-vijilan-page",
                 element: <WhyVijilanPage />
             },
             {
 
-                // responsive done
+                // responsive done #complete
                 path: "become-a-partner",
                 element: <BecomeAPartner />
             }

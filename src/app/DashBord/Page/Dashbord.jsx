@@ -95,7 +95,7 @@ const Dashbord = () => {
                     <div className='col-span-1  '>
                         <div className='mt-8 flex flex-col md:flex-row  gap-5'>
                             <button className='text-white bg-[#00AEEF] px-8 py-3 rounded-xl z-10  '>Modular Essentials</button>
-                            <button className='text-gray-400 bg-white px-8 py-3 rounded-xl ml-0 md:-ml-5  '>User Based (Remote)</button>
+                            <button className='text-gray-400 bg-white px-8 py-3 rounded-xl ml-0 md:-ml-8  '>User Based (Remote)</button>
                         </div>
 
 
