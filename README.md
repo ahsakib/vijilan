@@ -1,39 +1,177 @@
-# 🚀 React and Tailwind Starter Kit
+# Vijilan - Cybersecurity Solutions Platform
 
-Quickly set up a new `React.js` project with Tailwind CSS using the [starter kit](https://github.com/labnol/react-tailwind). The project was bootstrapped with Vite (replacing Create React App) and it uses the `singlefile` plugin to inline all the JavaScript and CSS files into a single minified file.
+A comprehensive React-based web application for Vijilan, a cybersecurity company specializing in MSP (Managed Service Provider) solutions, threat response services, and compliance solutions.
 
-The latest version of the starter kit is built with React 19 and Tailwind CSS 4.
+## 🚀 Features
 
-## Live Demo
+- **Multi-page Application** with 50+ routes covering various cybersecurity services
+- **Responsive Design** built with Tailwind CSS
+- **MSP Partner Programs** and automation-focused solutions
+- **Case Studies** showcasing successful implementations
+- **Blog System** with landing pages and post management
+- **Dashboard** with analytics and reporting capabilities
+- **Pricing Tools** for MSP services
+- **Resource Center** with documentation and guides
+- **Professional Services** portfolio
 
-The [Digital Inspiration](https://digitalinspiration.com/) website is built with the Tailwind CSS, React.js and Vite. You can test the starter kit by opening the project in [StackBlitz](https://stackblitz.com/github/labnol/react-tailwind) or [CodeSandbox](https://codesandbox.io/p/sandbox/github/labnol/react-tailwind).
+## 🛠️ Technologies Used
 
-[![Screenshot](screenshot.png)](https://stackblitz.com/github/labnol/react-tailwind)
+- **Frontend Framework:** React 18
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router (implied from route structure)
+- **Package Manager:** npm
 
-[![Open in StackBlitz](https://img.shields.io/badge/Open_In_StackBlitz-blue.svg?logo=stackblitz&style=flat-square)](https://stackblitz.com/github/labnol/react-tailwind) [![Open in CodeSandbox](https://img.shields.io/badge/Open_In_CodeSandbox-000000?logo=codesandbox&style=flat-square)](https://codesandbox.io/p/sandbox/github/labnol/react-tailwind)
+## 📁 Project Structure
 
-### Available `npm` commands
+```
+src/
+├── app/                          # Main application pages
+│   ├── About/                    # About page components
+│   ├── Automotion Focused/       # Automation-focused MSP pages
+│   ├── Blog/                     # Blog system
+│   ├── Case/                     # Case studies
+│   ├── Complain Solution/        # Compliance solutions
+│   ├── DashBord/                 # Dashboard components
+│   ├── Enterprise/               # Enterprise solutions
+│   ├── Home/                     # Homepage components
+│   ├── MsgPartner/               # MSP partner programs
+│   ├── Platform/                 # Platform technology
+│   ├── Pricing-tool/             # Pricing calculators
+│   ├── Resources/                # Resource center
+│   └── Vijilan/                  # Core Vijilan pages
+├── components/                   # Reusable UI components
+├── Assets/                       # Images, icons, and media files
+├── images/                       # Additional image assets
+├── route/                        # Routing configuration
+└── styles/                       # CSS and styling files
+```
 
-In the project directory, you can run:
+## 🚦 Getting Started
 
-#### `npm run start`
+### Prerequisites
 
-Runs the app in the development mode.
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-Open `http://localhost:5173` to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
+### Installation
 
-#### `npm run build`
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd react-tailwind
+```
 
-Builds the React app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+```bash
+npm install
+```
 
-#### `npm run inline`
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This command will inline all the JavaScript and CSS files from the production build into a single minified file.
+4. Open your browser and navigate to `http://localhost:5173`
 
-## Connect with me
+## 📋 Available Scripts
 
-The React and Tailwind CSS starter is written by [Amit Agarwal](https://www.labnol.org/about).
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run linting (if configured)
 
-[![X](https://img.shields.io/badge/Twitter-black.svg?logo=X&logoColor=white&style=flat)](https://x.com/labnol) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white&style=flat)](https://www.youtube.com/labnol) [![Google](https://img.shields.io/badge/Google-black.svg?logo=Google&logoColor=white&style=flat)](https://g.dev/amit) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white&style=flat)](https://instagram.com/labnol) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white&style=flat)](https://linkedin.com/in/labnol) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white&style=flat)](https://stackoverflow.com/users/512127/amit-agarwal)
+## 🗺️ Available Routes
 
-If you have any questions or feedback, send an email at [amit@labnol.org](mailto:amit@labnol.org?subject=Tailwind+React).
+The application includes 50+ routes covering:
+
+### Core Pages
+- **Home** (`/`) - Main landing page
+- **About** (`/about`) - Company information
+- **Why Vijilan** (`/why-vijilan-page`) - Value proposition
+
+### Services
+- **MSP Partner Programs** - Various partnership tiers and programs
+- **Threat Response Services** - Security incident response
+- **Compliance Solutions** - Regulatory compliance tools
+- **Managed SIEM/SOC** - Security monitoring services
+- **Platform Technology** - Core technology stack
+
+### Resources
+- **Blog** (`/blog`) - Industry insights and updates
+- **Case Studies** (`/case-studies`) - Success stories
+- **Resources** (`/resources`) - Documentation and guides
+- **Pricing Tools** (`/pricing-tool`) - Service calculators
+
+### Specialized Solutions
+- **Enterprise Landing** - Large organization solutions
+- **SMB Solutions** - Small/medium business focus
+- **Healthcare Compliance** - HIPAA and healthcare security
+- **Financial Compliance** - Financial sector solutions
+- **Federal CMMC** - Government compliance
+
+## 🎨 Styling
+
+The project uses Tailwind CSS for styling with custom configurations:
+
+- **Custom CSS** - Located in `src/styles/custom.css`
+- **Global Styles** - Located in `src/styles/globals.css`
+- **Tailwind Config** - Customized for brand colors and components
+
+## 🧩 Key Components
+
+### Reusable Components
+- `CardBorder` - Styled card containers
+- `GradientButton` - Brand-styled buttons
+- `TestimonialCard` - Customer testimonials
+- `SecurityCard` - Security feature highlights
+- `ServiceCard` - Service offering displays
+
+### Specialized Components
+- `CalculatorInput` - Pricing tool inputs
+- `DashBoardCard` - Analytics displays
+- `EmergencyBanner` - Alert notifications
+- `JoinMissionSection` - Call-to-action sections
+
+## 🔧 Configuration
+
+### Vite Configuration
+The project uses Vite for fast development and building. Configuration can be found in `vite.config.js`.
+
+### JSConfig
+JavaScript configuration is set up in `jsconfig.json` for better IDE support and path resolution.
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+- Desktop computers
+- Tablets
+- Mobile devices
+- Various screen sizes and orientations
+
+## 📄 License
+
+This project is licensed under the terms specified in the LICENSE file.
+
+## 🆘 Support
+
+For support and questions:
+- Check the documentation in the `/resources` section
+- Review case studies for implementation examples
+- Contact the development team
+
+## 🔄 Updates
+
+The project is actively maintained with regular updates for:
+- Security patches
+- New service offerings
+- UI/UX improvements
+- Performance optimizations
+
+---
+
+**Built with ❤️ for cybersecurity professionals and MSP partners**
+```
+
+This README.md file provides a comprehensive overview of your Vijilan project, including installation instructions, project structure, available routes, and key features. It's structured to help both developers and stakeholders understand the project's scope and capabilities.
+
