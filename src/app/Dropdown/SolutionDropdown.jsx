@@ -92,20 +92,33 @@ const SolutionDropdown = () => {
                         Managed Detection & Response
                     </h2>
                     <div className="space-y-8">
-                        {leftColumnServices.map((service, index) => (
-                            <Link to={`${service?.url}`} key={index} className="block">
-                                <div key={index} className="flex gap-4">
-                                    <div className="flex items-center ">
-                                        <img src={service.icon} alt="" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
-                                        <p className="text-sm leading-relaxed">{service.description}</p>
-                                    </div>
+                    {leftColumnServices.map((service, index) => {
+                        const content = (
+                            <div key={index} className="flex gap-4">
+                                <div className="flex items-center">
+                                    <img src={service.icon} alt="" />
                                 </div>
-                            </Link>
+                                <div className="flex-1">
+                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-sm leading-relaxed">{service.description}</p>
+                                </div>
+                            </div>
+                        );
 
-                        ))}
+                        return service.url ? (
+                            <Link to={`/${service.url}`} key={index} onClick={() => window.scrollTo(0, 0)}
+                            className="block">
+                                {content}
+                            </Link>
+                        ) : (
+                            <div key={index} className="block cursor-default">
+                                {content}
+                            </div>
+                        );
+                    })}
+
                     </div>
                 </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const leftColumnServices = [
     {
@@ -59,7 +60,7 @@ const rightColumnServices = [
     {
 
         title: "Become a Partner",
-       
+        url:"become-a-partner",
     },
     {
 
@@ -82,7 +83,6 @@ const PartnersDropdown = () => {
                     <div className="space-y-8">
                         {leftColumnServices.map((service, index) => (
                             <div key={index} className="flex gap-4">
-                                
                                 <div className="flex-1">
                                     <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
                                     <p className="text-sm leading-relaxed">{service.description}</p>
@@ -99,13 +99,24 @@ const PartnersDropdown = () => {
                     </h2>
                     <div className="space-y-8">
                         {rightColumnServices.map((service, index) => (
-                            <div key={index} className="flex gap-4">
-                                
-                                <div className="flex-1">
-                                    <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">{service.title}</h3>
-                                    <p className=" text-sm leading-relaxed">{service.description}</p>
-                                </div>
+                        <div key={index} className="flex gap-4">
+                            <div className="flex-1">
+                            {service.url ? (
+                                <Link to={`/${service.url}`}>
+                                <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
+                                    {service.title}
+                                </h3>
+                                </Link>
+                            ) : (
+                                <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
+                                {service.title}
+                                </h3>
+                            )}
+                            {service.description && (
+                                <p className="text-sm leading-relaxed">{service.description}</p>
+                            )}
                             </div>
+                        </div>
                         ))}
                     </div>
                 </div>

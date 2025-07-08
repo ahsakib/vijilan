@@ -11,6 +11,7 @@ import logoSub from "../Assets/logoSub.png";
 import footerBg from "../Assets/footer_bg_logo.png";
 import vendor from "../Assets/vendor.png";
 import smallVendor from "../Assets/smallVendor.png";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -38,7 +39,10 @@ const Footer = () => {
                             <h4 className="text-[#00AEEF] text-[18px] mb-4">Insights</h4>
                             <div className="space-y-2 text-gray-300">
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> All Categories</p>
-                                <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Blog</p>
+                                <Link to={"/blog"} onClick={() => window.scrollTo(0, 0)}
+                                >
+                                    <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Blog</p>
+                                </Link>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Events</p>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Papers</p>
                                 <p className="flex gap-2 text-[16px] items-center"> <img src={smallVendor} alt="vendor" className="h-[15px]" /> Podcast</p>
