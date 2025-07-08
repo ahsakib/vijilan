@@ -125,19 +125,16 @@ const features = [
 ];
 
 
-
 const ThreatreMediateManagedXdr = () => {
     return (
-        <div className='container mx-auto px-6 '>
+        <div className='container mx-auto md:px-6 '>
 
             {/*  */}
-            <section className='py-16'>
-
-
+            <section className=''>
                 <Heading_Btn
 
                     h1="Beyond Detection: We Stop Breaches"
-                    desc="Vijilan's ThreatRemediate™ is a fully managed XDR service that doesn't just send alerts—our 24/7 expert SOC actively contains and remediates threats across your  endpoints, cloud, and identity, powered by CrowdStrike."
+                    desc={"Vijilan's ThreatRemediate™ is a fully managed XDR service that doesn't just send\nalerts—our 24/7 expert SOC actively contains and remediates threats across your\nendpoints, cloud, and identity, powered by CrowdStrike."}
                     btn1="SEE THREATREMEDIATE IN ACTION (REQUEST DEMO)"
                     btn2="DOWNLOAD THE THREATREMEDIATE DATESHEET"
                 />
@@ -162,35 +159,35 @@ const ThreatreMediateManagedXdr = () => {
                     {/* Flow Diagram */}
                     <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
                         {steps.map((step, index) => (
-                        <React.Fragment key={index}>
-                            {/* Card */}
-                            <div className="w-[180px] h-[150px] relative backdrop-blur-sm rounded-lg px-[10px] py-[16px] flex flex-col items-center justify-center text-center">
-                            <div
-                                className="absolute inset-0 rounded-[8px] p-[1px] z-0"
-                                style={{
-                                background: `linear-gradient(0deg, #8C0909, #8C0909), linear-gradient(0deg, #ED1C24, #ED1C24)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                                }}
-                            />
-                            <img src={step.icon} alt="" className="w-[50px] h-[50px] mb-2" />
-                            <h3 className="text-white font-medium text-[12px] mb-2">{step.title}</h3>
-                            <p className="whitespace-pre-line text-[12px] leading-relaxed">{step.description}</p>
-                            </div>
-                    
-                            {/* Arrow - show only between cards */}
-                            {index < steps.length - 1 && (
-                            <div className="flex items-center justify-center">
-                                {/* Vertical for mobile, horizontal for lg */}
-                                <div className="flex items-center justify-center">
-                                <FaArrowRight
-                                    className="text-red-500 w-6 h-6 transform rotate-90 lg:rotate-0"
-                                />
+                            <React.Fragment key={index}>
+                                {/* Card */}
+                                <div className="w-[180px] h-[150px] relative backdrop-blur-sm rounded-lg px-[10px] py-[16px] flex flex-col items-center justify-center text-center">
+                                    <div
+                                        className="absolute inset-0 rounded-[8px] p-[1px] z-0"
+                                        style={{
+                                            background: `linear-gradient(0deg, #8C0909, #8C0909), linear-gradient(0deg, #ED1C24, #ED1C24)`,
+                                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                            WebkitMaskComposite: "xor",
+                                            maskComposite: "exclude",
+                                        }}
+                                    />
+                                    <img src={step.icon} alt="" className="w-[50px] h-[50px] mb-2" />
+                                    <h3 className="text-white font-medium text-[12px] mb-2">{step.title}</h3>
+                                    <p className="whitespace-pre-line text-[12px] leading-relaxed">{step.description}</p>
                                 </div>
-                            </div>
-                            )}
-                        </React.Fragment>
+
+                                {/* Arrow - show only between cards */}
+                                {index < steps.length - 1 && (
+                                    <div className="flex items-center justify-center">
+                                        {/* Vertical for mobile, horizontal for lg */}
+                                        <div className="flex items-center justify-center">
+                                            <FaArrowRight
+                                                className="text-red-500 w-6 h-6 transform rotate-90 lg:rotate-0"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>
@@ -205,19 +202,7 @@ const ThreatreMediateManagedXdr = () => {
                     </h2>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-                    {
-                        features.map((card, index) =>
-                            <CardContent
-                                icon={card.icon}
-                                head={card.title}
-                                Index={index}
-                                description={card.description}
-                            />
-                        )
-                    }
-                    {/* 1st
+                    
                     <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -297,7 +282,7 @@ const ThreatreMediateManagedXdr = () => {
                             Our SOC takes direct, hands-on action: <br /> isolating endpoints, disabling <br />compromised accounts, blocking <br /> malicious processes, and actively <br /> neutralizing the threat.
                         </p>
                     </div>
-                    
+
                     <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -336,7 +321,7 @@ const ThreatreMediateManagedXdr = () => {
                         <p className="text-white text-center text-[14px]">
                             Post-incident, we analyze outcomes <br /> and continuously improve your <br />detection, response, and prevention <br /> capabilities for ever-increasing <br /> resilience.
                         </p>
-                    </div> */}
+                    </div>
                 </div>
             </section>
 
@@ -452,24 +437,24 @@ const ThreatreMediateManagedXdr = () => {
                     </h1>
                     <div className="max-w-4xl w-full mx-auto">
                         {/* Card */}
-                        <div className="bg-[#082235] border-t border-r border-b border-l-0 border-solid border-[#6BC063] backdrop-blur-sm rounded-[10px] py-[26px] px-5 md:px-[54px] ">
+                        <div className="bg-[#082235] border-t border-r border-b border-l-0 border-solid border-[#6BC063] backdrop-blur-sm rounded-[10px] py-[26px] ">
 
                             {/* Success story header with icon */}
                             <div className="text-center mb-6">
-                                <h2 className="text-[#6BC063] text-[20px] text-bold">
+                                <h2 className=" text-[20px] text-bold" style={{color: "#6BC063"}}>
                                     Success Story: Ransomware Attack Stopped in Minutes
                                 </h2>
                             </div>
                             {/* Quote content */}
                             <div className="">
-                                <blockquote className="text-white text-[20px] leading-relaxed mb-4">
+                                <blockquote className="border-l-4 border-[#6BC063] text-white text-[20px] leading-relaxed mb-4 px-2 md:px-10">
                                     "The most dangerous attacks today don't look like attacks at all. <br /> They blend seamlessly into normal
                                     business operations, which is <br /> exactly what makes them so effective—and so challenging to <br /> defend
                                     against."
                                 </blockquote>
 
                                 {/* Attribution */}
-                                <cite className="text-[#00AEEF] text-[16px]">
+                                <cite className=" text-[16px] px-2 md:px-10" style={{color: "#00AEEF"}}>
                                     — CTO, Mid-Market Logistics Company
                                 </cite>
                             </div>
@@ -480,11 +465,11 @@ const ThreatreMediateManagedXdr = () => {
 
 
             {/*  */}
-            <section className='container mx-auto px-6 py-16'>
+            <section className='container mx-auto px-6 pb-16'>
 
                 <Heading_Btn
                     h1="Stop Reacting. Start Remediating."
-                    desc="See how our expert SOC team can become your hands-on defense against cyber  threats. Schedule a live, personalized demo of ThreatRemediate today."
+                    desc={"See how our expert SOC team can become your hands-on defense against cyber\nthreats. Schedule a live, personalized demo of ThreatRemediate today."}
                     btn1="request a live  demo"
                 />
 
