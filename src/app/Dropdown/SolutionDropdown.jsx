@@ -19,25 +19,18 @@ const leftColumnServices = [
         url: "threat-respond-service"
     },
     {
-        icon: response,
-        title: "ThreatRespond (Detection + Guided Response)",
-        description:
-            "Our flagship hands-off solution: 24/7 monitoring, detection, threat hunting, AND direct containment and remediation by Vijilan's expert SOC team. Powered by CrowdStrike Falcon.",
-        url: "threat-respond-service-2"
-    },
-    {
         icon: identity,
         title: "Managed Identity Threat Detection & Response (Managed ITDR)",
         description:
             "Combat the #1 attack vector with 24/7 monitoring, detection, and real-time response to identity-based threats using CrowdStrike Falcon Identity Protection.",
-        url: "threatremediate-managed-xdr"
+        url: "managed-automation"
     },
     {
         icon: error,
         title: "Managed Exposure Management",
         description:
             "Proactively identify and reduce your attack surface with CrowdStrike Falcon Exposure Management, prioritizing vulnerabilities and mitigating risks.",
-        url: "managed-automation"
+        url: "#"
     },
 ]
 
@@ -47,7 +40,7 @@ const rightColumnServices = [
         title: "LogIngest (CrowdStrike LogScale)",
         description:
             "Expert data collection, onboarding, parsing, and normalization from any source into LogScale for cost-effective log management.",
-        url: "msp-ogscale-case-study"
+        url: "managed-siem-logscale-service"
         },
     {
         icon: logAlert,
@@ -61,20 +54,21 @@ const rightColumnServices = [
         title: "LogRespond (Enhanced Investigation)",
         description:
             "Deeper investigation and analysis by our SOC team with guided response recommendations for your internal team.",
-    },
+        url:"#"
+      },
     {
         icon: security,
         title: "LogRemediate (Full Managed Security)",
         description:
             "Complete managed security service integrating SIEM, SOC, and full remediation capabilities directly by Vijilan's expert team.",
-        url: "vijilan-vars-consultants-page"
+        url: "#"
        },
     {
         icon: robot,
         title: "Managed Next-Gen SIEM (CrowdStrike Falcon)",
         description:
             "Expert deployment and management of CrowdStrike Falcon Next-Gen SIEM for AI-native security operations and seamless Falcon Complete readiness.",
-        url: "managed-siem-logscale-service"
+        url: "#"
     },
     {
         icon: crib,

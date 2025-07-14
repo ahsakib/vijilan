@@ -6,7 +6,7 @@ const leftColumnServices = [
 
         title: "MSPs (Bronze, Silver, Gold Tiers)",
         description: "Tiered partnership program designed for MSPs of all sizes - from micro-MSPs (5-15 employees) to large operations (60-100+). Grow your security portfolio profitably with our turnkey platform.",
-        url: "visilan-msg-partner"
+        url: "msp-partner-program-ai"
     },
     {
 
@@ -20,21 +20,21 @@ const leftColumnServices = [
         title: "IT Consultants",
         description:
             "Recommend best-in-class cybersecurity solutions that deliver tangible value to your enterprise clients. Partner with us for mutually beneficial opportunities.",
-        url: "serve"
+        url: "#"
     },
     {
 
         title: "vCISOs (Virtual CISOs)",
         description:
             "Enhance your clients' security posture with turn-key solutions that deliver strategic oversight and operational excellence. Access deep technical expertise and broader managed services.",
-        url: "platform-technology"
+        url: "#"
     },
     {
 
         title: "MSSPs (Managed Security Service Providers)",
         description:
             "Augment your existing SOC capabilities, modernize your SIEM with LogScale, or leverage co-managed services to scale your operations cost-effectively.",
-        url: "corrected-msp"
+        url: "#"
     }
 ]
 
@@ -44,7 +44,7 @@ const rightColumnServices = [
         title: "Technology Alliance Partners",
         description:
             "Strategic partnerships with CrowdStrike, Cribl, Corelight, Fortinet, Microsoft, Google Cloud, Palo Alto Networks, and SentinelOne for comprehensive security solutions.",
-        url: "var-success-case-study"
+        url: "platform-technology"
     },
     {
 
@@ -58,7 +58,7 @@ const rightColumnServices = [
         title: "Partner Locator (for SMBs)",
         description:
             "Find a trusted Vijilan partner in your region. Searchable directory of certified partners providing managed cybersecurity services for small and medium businesses.",
-        url: "smb"
+        url: "#"
     },
     {
 
@@ -68,7 +68,7 @@ const rightColumnServices = [
     {
 
         title: "Partner Sales & Marketing Portal",
-        url: "tier3-partner-portal"
+        url: "#"
     }
 ]
 

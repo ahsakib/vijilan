@@ -1,7 +1,4 @@
-import CardBorder from "@components/CardBorder"
 import Heading_Btn from "@components/Heading_Btn"
-import TestimonialCard from "@components/TestimonialCard"
-import { Calculator, Users, Building, Shield, Zap, Globe, Settings, Award, Play } from "lucide-react"
 import enterprise from "../../Assets/enterprise.png";
 import government from "../../Assets/governmet.png";
 import growth from "../../Assets/growth.png";
@@ -12,6 +9,8 @@ import menu from "../../Assets/manu.png";
 import heathCare from "../../Assets/heathcare.png";
 import InputSection from "@components/InputSection";
 import SuccessCard from "@components/SuccessCard";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 
 const categories = [
@@ -63,6 +62,232 @@ const businessFields2 = [
         label: "Industry",
         placeholder: "Select Your Industry",
         options: [{ value: "1", label: "1M+" }, { value: "2", label: "500K-1M" }],
+    },
+];
+
+
+const TestimonialCard = ({
+    badgeText,
+    heading,
+    description,
+    stats = [],
+    buttonText = "READ THE FULL STORY",
+    onButtonClick,
+    badgeBg,
+    url,
+}) => {
+    const Badge = ({ children, className = "", ...props }) => {
+        return (
+            <div
+                className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${className}`}
+                {...props}
+            >
+                {children}
+            </div>
+        )
+    }
+    return (
+        <div
+            className="p-8 rounded-[22px] backdrop-blur-sm"
+            style={{
+
+                background: "linear-gradient(0deg, #191624 16.11%, #00AEEF 328.5%)",
+
+            }}
+        >
+            <Badge className={`text-[10px] font-semibold text-white  px-[7px] py-[8px]`}   style={{ backgroundColor: badgeBg }}
+            >
+                {badgeText}
+            </Badge>
+
+            <div className="px-4">
+                <h3 className="text-xl md:text-[30px] font-bold text-white mb-6 mt-4 leading-tight">
+                    {heading}
+                </h3>
+
+                <p className="text-white text-[15px] text-base leading-relaxed">{description}</p>
+
+                <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2 gap-5 justify-center  mb-10">
+                    {stats.map((stat, index) => (
+                        <CardBorder key={index} height="130px" width="100%">
+                            <div className="text-center mx-auto">
+                                <div className="text-white text-[36px] font-medium mb-2">{stat.value}</div>
+                                <div className="text-[#E6F7FD] text-[10px] font-medium">{stat.label}</div>
+                            </div>
+                        </CardBorder>
+                    ))}
+                </div>
+            </div>
+            <Link to={url} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <div className="border border-white hover:bg-white/10 bg-transparent w-fit text-center mx-auto rounded-[6px] transition-all duration-300">
+                <button
+                    onClick={onButtonClick}
+                    className=" p-[16px] text-[14px] font-medium  flex items-center gap-2 text-white"
+                >
+                    {buttonText}
+                    <div className="w-3 h-3 border rounded-full flex items-center justify-center">
+                        <ArrowRight className="h-2 w-2 text-white" />
+                    </div>
+                </button>
+            </div>
+            </Link>
+        </div>
+    );
+};
+
+
+
+const CardBorder = ({
+    height = "171px",
+    width = "166px",
+    children,
+    borderSize,
+    radiusSize,
+    topBottomBorderOnly = false  // New prop to enable top/bottom-only borders
+}) => {
+    return (
+        <div className={`mt-12 relative ${topBottomBorderOnly ? 'w-full' : ''}`}>
+            {/* Main container - background remains #00AEEF3D */}
+            <div
+                className={`relative bg-[#00AEEF3D] ${topBottomBorderOnly ? 'rounded-none' : 'rounded-[26px]'} w-full flex items-center justify-center ${borderSize ? "rounded-[16px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
+                style={{
+                    height,
+                    maxWidth: width,
+                    position: 'relative',
+                    overflow: 'hidden' // Ensures pseudo-elements are contained
+                }}
+            >
+                {/* Top border gradient (matches original color) */}
+                {topBottomBorderOnly && (
+                    <div
+                        className="absolute top-0 left-0 right-0 h-[2px]"
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(0,174,239,0) 0%, #00AEEF 50%, rgba(0,174,239,0) 100%)'
+                        }}
+                    />
+                )}
+
+                {/* Bottom border gradient (matches original color) */}
+                {topBottomBorderOnly && (
+                    <div
+                        className="absolute bottom-0 left-0 right-0 h-[2px]"
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(0,174,239,0) 0%, #00AEEF 50%, rgba(0,174,239,0) 100%)'
+                        }}
+                    />
+                )}
+
+                {/* Original full border (for non-special cases) */}
+                {!topBottomBorderOnly && (
+                    <div
+                        className={`absolute inset-0 rounded-[26px] p-[2px] z-0 ${borderSize ? "rounded-[16px] p-[1px]" : ""} ${radiusSize ? "rounded-[14px]" : ""}`}
+                        style={{
+                            background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "xor",
+                            maskComposite: "exclude",
+                        }}
+                    />
+                )}
+
+                {/* Content container */}
+                <div className="z-10 w-full px-4">
+                    {children}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+
+const testimonialData = [
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#BCBEC0",
+        heading: "VAR Achieves 2x Attach Rate & 40% Margin Growth",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/var-success-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F4CE41",
+        heading: "Manufacturing Firm Secures OT Assets and Ensures 99.9%",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/resilience-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "Federal Contractor Achieves CMMC 2.0 Readiness in 6 Weeks",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/federal-cmmc-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F4CE41",  
+        heading: "Regional Bank Achieves Zero Audit Findings",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/financial-complianc-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "MSSP Achieves 40% SIEM Cost Reduction and 3x Faster",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/msp-ogscale-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "MSP Achieves 30% MRR Growth with ThreatRemediate",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/msp-growth-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "SMB Ransomware Recovery: From Active Attack",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/smb-runsomware-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#00EF14",
+        heading: "Healthcare System Achieves HIPAA Success and 3x Faster",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/health-compliance"
     },
 ];
 
@@ -199,72 +424,19 @@ export default function Component() {
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-[40px] font-bold text-center text-white mb-3">All Success Stories</h2>
                     <p className="text-[18px] text-center text-white mb-12">Browse our complete collection of client success stories and measurable business results.</p>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
-                        <TestimonialCard
-                            badgeText={"MS PARTNER SUCCESS"}
-                            heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                            description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                            stats={[
-                                { value: "30%", label: "MRR Growth", size: true },
-                                { value: "50%", label: "Alert Reduction", size: true },
-                            ]} />
 
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+                        {testimonialData.map((item, index) => (
+                                <TestimonialCard
+                                    key={index}
+                                    badgeText={item.badgeText}
+                                    heading={item.heading}
+                                    description={item.description}
+                                    stats={item.stats}
+                                    url={item.url}
+                                    badgeBg={item.badgeBg}
+                                />
+                            ))}
                     </div>
                 </div>
             </section>

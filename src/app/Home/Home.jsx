@@ -96,6 +96,7 @@ const Home = () => {
                 sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
                 buttonText="EMPOWER YOUR MSP/VAR/MSSP"
                 isLeft={true}
+                url="visilan-msg-partner"
               />
 
               {/* Right Card - SMBs */}
@@ -106,6 +107,7 @@ const Home = () => {
                     tailored to your size and industry needs."
                 buttonText="SECURE YOUR BUSINESS"
                 isLeft={true}
+                url="smb"
               />
             </div>
           </div>
@@ -141,6 +143,7 @@ const Home = () => {
                   <br />
                   a New Defense
                 </h2>
+                <Link to={"contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 <button
                   className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                   style={{
@@ -156,6 +159,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </button>
+                </Link>
               </div>
               <div className="relative text-white text-[18px] bg-[#00AEEF3D] rounded-[24px] p-[24px] space-y-4 leading-relaxed overflow-hidden">
                 <div

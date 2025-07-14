@@ -3,6 +3,8 @@ import Heading_Btn from "@components/Heading_Btn"
 import OutlineGradientButton from "@components/OutlineGradientButton"
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import clsx from 'clsx';
+import { Link } from "react-router-dom";
 
 // Custom Badge Component
 const Badge = ({ children, className = "", ...props }) => {
@@ -23,6 +25,8 @@ const TestimonialCard = ({
     stats = [],
     buttonText = "READ THE FULL STORY",
     onButtonClick,
+    badgeBg,
+    url,
 }) => {
     const Badge = ({ children, className = "", ...props }) => {
         return (
@@ -43,7 +47,8 @@ const TestimonialCard = ({
 
             }}
         >
-            <Badge className="bg-[#F36E21] text-[10px] font-semibold text-white  px-[7px] py-[8px]">
+            <Badge className={`text-[10px] font-semibold text-white  px-[7px] py-[8px]`}   style={{ backgroundColor: badgeBg }}
+            >
                 {badgeText}
             </Badge>
 
@@ -65,7 +70,7 @@ const TestimonialCard = ({
                     ))}
                 </div>
             </div>
-
+            <Link to={url} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <div className="border border-white hover:bg-white/10 bg-transparent w-fit text-center mx-auto rounded-[6px] transition-all duration-300">
                 <button
                     onClick={onButtonClick}
@@ -77,6 +82,7 @@ const TestimonialCard = ({
                     </div>
                 </button>
             </div>
+            </Link>
         </div>
     );
 };
@@ -144,6 +150,98 @@ const CardBorder = ({
         </div>
     );
 };
+
+const testimonialData = [
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#BCBEC0",
+        heading: "VAR Achieves 2x Attach Rate & 40% Margin Growth",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/var-success-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F4CE41",
+        heading: "Manufacturing Firm Secures OT Assets and Ensures 99.9%",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/resilience-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "Federal Contractor Achieves CMMC 2.0 Readiness in 6 Weeks",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/federal-cmmc-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F4CE41",  
+        heading: "Regional Bank Achieves Zero Audit Findings",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/financial-complianc-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "MSSP Achieves 40% SIEM Cost Reduction and 3x Faster",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/msp-ogscale-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "MSP Achieves 30% MRR Growth with ThreatRemediate",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/msp-growth-case"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#F36E21",
+        heading: "SMB Ransomware Recovery: From Active Attack",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/smb-runsomware-case-study"
+    },
+    {
+        badgeText: "MS PARTNER SUCCESS",
+        badgeBg:"#00EF14",
+        heading: "Healthcare System Achieves HIPAA Success and 3x Faster",
+        description: "See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.",
+        stats: [
+            { value: "30%", label: "MRR Growth" },
+            { value: "50%", label: "Alert Reduction" },
+        ],
+        url: "/health-compliance"
+    },
+];
+
 
 export default function CaseStudiesPage() {
     const [selectedIndustry, setSelectedIndustry] = useState("");
@@ -340,7 +438,6 @@ export default function CaseStudiesPage() {
                                         </div>
 
                                         <div className="">
-                                           
                                             <OutlineGradientButton children={"READ THE FULL CASE STUDY"}/>
                                         </div>
                                     </div>
@@ -370,16 +467,15 @@ export default function CaseStudiesPage() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-                            {Array.from({ length: 6 }).map((_, index) => (
+                        {testimonialData.map((item, index) => (
                                 <TestimonialCard
                                     key={index}
-                                    badgeText={"MS PARTNER SUCCESS"}
-                                    heading={"MSP Achieves 30% MRR Growth with ThreatRemediate"}
-                                    description={`See how this partner leveraged our flagship XDR service to build a profitable security practice and deliver hands-off cybersecurity to their clients while reducing operational overhead.`}
-                                    stats={[
-                                        { value: "30%", label: "MRR Growth" },
-                                        { value: "50%", label: "Alert Reduction" },
-                                    ]}
+                                    badgeText={item.badgeText}
+                                    heading={item.heading}
+                                    description={item.description}
+                                    stats={item.stats}
+                                    url={item.url}
+                                    badgeBg={item.badgeBg}
                                 />
                             ))}
                         </div>

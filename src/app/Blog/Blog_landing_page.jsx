@@ -67,17 +67,6 @@ const Blog_landing_page = () => {
                     ))}
                 </div>
 
-
-                {/* Subscribe Button  */}
-
-                {/* <Blog_Subscribe /> */}
-                {/* <Blog_Subscribe_Component_Btn H1="Get Security Insights Delivered to Your Inbox."
-
-                    Desc="Subscribe to our newsletter for the latest threat analysis, partner strategies, and product updates from the experts at Vijilan."
-                    // BtInn="Subscribe"
-                    Input="Subscribe"
-                /> */}
-
                 <section className="relative z-10 py-16">
                     <div className="container mx-auto ">
                         <div
@@ -152,6 +141,8 @@ const Blog_landing_page = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {Blog_landing_Data.map((card, index) => (
+                        <Link to={"/blog-landing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
                         <LandingPageCard
                             key={index}
                             banner={card.banner}
@@ -161,6 +152,7 @@ const Blog_landing_page = () => {
                             date={card.date}
 
                         />
+                        </Link>
                     ))}
                 </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle }) => {
+const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle,url="#" }) => {
 
   return (
     <div className={`relative   rounded-[24px] p-[2px] ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
@@ -140,11 +141,13 @@ const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Nu
             </div>
           )
         }
+        <Link to={url} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
         {buttonText && (
           <button className={`${banner ? "text-blue-600" : "cta-button px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition"}`}>
             {buttonText}
           </button>
         )}
+        </Link>
       </div>
     </div >
   );

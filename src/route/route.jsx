@@ -153,7 +153,6 @@ const router = createBrowserRouter([
                 element: <PlatformTechnology />,
             },
             {
-
                 // responsive done  l
                 path: "managed-siem-soc", 
                 element: <ManagedSiemSoc />
