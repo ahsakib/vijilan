@@ -48,6 +48,15 @@ import SMB_Runsomware from '@app/DashBord/Page/SMB_Runsomware';
 import HealthCare_Complain_case from '@app/DashBord/Page/HealthCare_Complain_case';
 import MSP_growth_case from '@app/DashBord/Page/MSP_growth_case';
 import Serve from '@app/Sarve/Serve';
+import VideosLibrary from '@app/privacy/VideosLibrary';
+import RequestDemoVijilan from '@app/privacy/RequestDemoVijilan';
+import PodcastSecurity from '@app/privacy/PodcastSecurity';
+import PrivacyPolicy from '@app/privacy/PrivacyPolicy';
+import TermCondition from '@app/privacy/TermCondition';
+import InformationSecurity from '@app/privacy/InformationSecurity';
+import EventPage from '@app/privacy/EventPage';
+import PricingPage from '@app/privacy/PricingPage';
+import CookiePrivacy from '@app/privacy/CookiePrivacy';
 
 const router = createBrowserRouter([
     {
@@ -305,6 +314,42 @@ const router = createBrowserRouter([
                 // responsive done #complete   l
                 path: "become-a-partner",
                 element: <BecomeAPartner />
+            },
+            {
+                path:"videos-library",
+                element: <VideosLibrary/>
+            },
+            {
+                path:"request-demo-vijilan",
+                element:<RequestDemoVijilan/>
+            },
+            {
+                path:"podcast-security",
+                element:<PodcastSecurity/>
+            },
+            {
+                path:"privacy-policy",
+                element:<PrivacyPolicy/>
+            },
+            {
+                path:"term-condition",
+                element:<TermCondition/>
+            },
+            {
+                path:"information-security",
+                element:<InformationSecurity/>
+            },
+            {
+                path:"event-page",
+                element:<EventPage/>
+            },
+            {
+                path:"pricing-page",
+                element:<PricingPage/>
+            },
+            {
+                path:"cookie-privacy",
+                element:<CookiePrivacy/>
             }
         ],
     },
