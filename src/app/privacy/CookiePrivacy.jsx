@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cookie } from "lucide-react"
 import Checkbox from 'daisyui/components/checkbox';
+import Heading_Btn from '@components/Heading_Btn';
 
 const CookiePrivacy = () => {
     return (
@@ -28,9 +29,9 @@ const CookiePrivacy = () => {
                 <div className="py-10 mt-10" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
-                    <div className="max-w-4xl mx-auto ">
+                    <div className="">
                         {/* Section 1: What Are Cookies */}
-                        <section>
+                        <section className='px-3 md:px-12'>
                             <h2 className="text-[24px] font-medium mb-4 text-white">1. What Are Cookies</h2>
                             <p className="text-[16px]">
                                 Cookies are small text files that are placed on your device (computer, smartphone, tablet, or other
@@ -44,10 +45,7 @@ const CookiePrivacy = () => {
                                 <li>Information about your browsing activity and preferences</li>
                                 <li>Expiration date for the cookie</li>
                             </ul>
-                        </section>
 
-                        {/* Section 2: Types of Cookies We Use */}
-                        <section>
                             <h2 className="text-[24px] font-medium mb-4 text-white mt-5">2. Types of Cookies We Use</h2>
                             <h3 className="text-[16px]">Essential Cookies</h3>
                             <p className="text-[16px]">
@@ -55,7 +53,10 @@ const CookiePrivacy = () => {
                                 are usually set in response to actions you take, such as setting privacy preferences, logging in, or filling
                                 out forms.
                             </p>
+                        </section>
 
+                        {/* Section 2: Types of Cookies We Use */}
+                        <section className=''>
                             {/* Essential Cookies Table */}
                             <div className="overflow-x-auto my-8">
                                 <table className="w-full" style={{
@@ -72,19 +73,19 @@ const CookiePrivacy = () => {
                                     <tbody>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">vijillan_session</td>
-                                            <td className="py-3 px-4">maintains user session and authentication</td>
+                                            <td className="py-3 px-4">maintains user session and <br /> authentication</td>
                                             <td className="py-3 px-4">SESSION</td>
                                             <td className="py-3 px-4">essential</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">security_token</td>
-                                            <td className="py-3 px-4">csrf protection and form security</td>
+                                            <td className="py-3 px-4">csrf protection and form <br /> security</td>
                                             <td className="py-3 px-4">SESSION</td>
                                             <td className="py-3 px-4">essential</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">cookie_consent</td>
-                                            <td className="py-3 px-4">remembers your cookie preferences</td>
+                                            <td className="py-3 px-4">remembers your cookie <br /> preferences</td>
                                             <td className="py-3 px-4">1 YEAR</td>
                                             <td className="py-3 px-4">essential</td>
                                         </tr>
@@ -114,19 +115,19 @@ const CookiePrivacy = () => {
                                     <tbody>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">_ga</td>
-                                            <td className="py-3 px-4">google analytics - distinguishes unique users</td>
+                                            <td className="py-3 px-4">google analytics - <br /> distinguishes unique users</td>
                                             <td className="py-3 px-4">2 YEARS</td>
                                             <td className="py-3 px-4">google</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">_gid</td>
-                                            <td className="py-3 px-4">google analytics - distinguishes unique users</td>
+                                            <td className="py-3 px-4">google analytics - <br /> distinguishes unique users</td>
                                             <td className="py-3 px-4">24 HOURS</td>
                                             <td className="py-3 px-4">google</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">_gat</td>
-                                            <td className="py-3 px-4">google analytics - throttles request rate</td>
+                                            <td className="py-3 px-4">google analytics - throttles <br /> request rate</td>
                                             <td className="py-3 px-4">1 MINUTE</td>
                                             <td className="py-3 px-4">google</td>
                                         </tr>
@@ -156,19 +157,19 @@ const CookiePrivacy = () => {
                                     <tbody>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">theme_preference</td>
-                                            <td className="py-3 px-4">remembers your light/dark theme choice</td>
+                                            <td className="py-3 px-4">remembers your light/dark <br /> theme choice</td>
                                             <td className="py-3 px-4">6 MONTHS</td>
                                             <td className="py-3 px-4">functional</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">language_pref</td>
-                                            <td className="py-3 px-4">stores your language preference</td>
+                                            <td className="py-3 px-4">stores your language <br /> preference</td>
                                             <td className="py-3 px-4">1 YEAR</td>
                                             <td className="py-3 px-4">functional</td>
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">demo_viewed</td>
-                                            <td className="py-3 px-4">tracks demo completion for better user experience</td>
+                                            <td className="py-3 px-4">tracks demo completion for <br /> better user experience</td>
                                             <td className="py-3 px-4">30 DAYS</td>
                                             <td className="py-3 px-4">functional</td>
                                         </tr>
@@ -184,7 +185,7 @@ const CookiePrivacy = () => {
                             </p>
 
                             {/* Opt-In Required Card */}
-                            <div className=" border rounded-[24px] mb-2">
+                            <div className=" border rounded-[24px] mb-3 mt-2">
                                 <div className="p-6 text-center">
                                     <h4 className="text-[24px] font-medium mb-2 text-white">Opt-In Required</h4>
                                     <p className="text-[16px]">
@@ -210,7 +211,7 @@ const CookiePrivacy = () => {
                                     <tbody>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">linkedin insight tag</td>
-                                            <td className="py-3 px-4">conversion tracking and retargeting</td>
+                                            <td className="py-3 px-4">conversion tracking and <br />retargeting</td>
                                             <td className="py-3 px-4">2 YEARS</td>
                                             <td className="py-3 px-4">
                                                 <a href="#" className="underline text-blue-400">
@@ -220,7 +221,7 @@ const CookiePrivacy = () => {
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">google ads</td>
-                                            <td className="py-3 px-4">conversion tracking and remarketing</td>
+                                            <td className="py-3 px-4">conversion tracking and <br />remarketing</td>
                                             <td className="py-3 px-4">90 DAYS</td>
                                             <td className="py-3 px-4">
                                                 <a href="#" className="underline text-blue-400">
@@ -230,7 +231,7 @@ const CookiePrivacy = () => {
                                         </tr>
                                         <tr className="border text-[15px] font-medium">
                                             <td className="py-3 px-4">facebook pixel</td>
-                                            <td className="py-3 px-4">conversion tracking and custom audiences</td>
+                                            <td className="py-3 px-4">conversion tracking and <br /> custom audiences</td>
                                             <td className="py-3 px-4">90 DAYS</td>
                                             <td className="py-3 px-4">
                                                 <a href="#" className="underline text-blue-400">
@@ -244,7 +245,7 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 3: Similar Technologies */}
-                        <section>
+                        <section className='pl-3'>
                             <h2 className="text-[24px] font-medium text-white">3. similar technologies</h2>
                             <h3 className="text-[16px] font-medium text-white">web beacons and pixel tags</h3>
                             <p className="text-[16px]">
@@ -265,7 +266,7 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 4: How We Use Cookies */}
-                        <section>
+                        <section className='pl-3'>
                             <h2 className="text-[24px] font-medium mt-4 text-white">4. How We Use Cookies</h2>
                             <p className="text-[16px]">We use cookies and similar technologies for the following purposes:</p>
                             <span className="text-[16px] font-medium">Essential Website Operations</span>
@@ -304,63 +305,61 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 5: Legal Basis for Cookie Use */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">5. Legal Basis for Cookie Use</h2>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Consent</h3>
-                            <p className="mb-4">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium mb-4 text-white">5. Legal Basis for Cookie Use</h2>
+                            <p className='text-[16px]'>Our legal basis for using cookies depends on the type of cookie and the purpose for which it is used:</p>
+                            <h3 className="text-[16px] font-medium text-white">Consent</h3>
+                            <p className="text-[16px]">
                                 For non-essential cookies, particularly marketing and analytics cookies, we rely on your explicit consent.
                                 You can withdraw this consent at any time through our cookie preference center.
                             </p>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Legitimate Interest</h3>
-                            <p className="mb-4">
+                            <h3 className="text-[16px] font-medium text-white">Legitimate Interest</h3>
+                            <p className="text-[16px]">
                                 For certain analytics and functional cookies, we may rely on legitimate interest where the processing is
                                 necessary for our legitimate business purposes and does not override your fundamental rights and freedoms.
                             </p>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Contractual Necessity</h3>
-                            <p className="mb-4">
+                            <h3 className="text-[16px] font-medium text-white">Contractual Necessity</h3>
+                            <p className="text-[16px] mb-4">
                                 Essential cookies that are necessary for providing our services are used based on contractual necessity and
                                 our legitimate interest in operating our website securely and effectively.
                             </p>
                         </section>
 
                         {/* Section 6: Third-Party Cookies */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">6. Third-Party Cookies</h2>
-                            <p className="mb-2">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium text-white">6. Third-Party Cookies</h2>
+                            <p className="text-[16px]">
                                 Our website may contain content from third-party services that set their own cookies. These include:
                             </p>
+                            <span className="font-semibold">Social Media Platforms</span>
                             <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>
-                                    <span className="font-semibold">Social Media Platforms</span>
-                                    <ul className="list-disc list-inside ml-4 space-y-1">
-                                        <li>LinkedIn: Social sharing buttons and professional networking features</li>
-                                        <li>Twitter: Tweet embedding and social sharing functionality</li>
-                                        <li>YouTube: Video content embedding and playback</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Analytics Services</span>
-                                    <ul className="list-disc list-inside ml-4 space-y-1">
-                                        <li>Google Analytics: Website traffic analysis and user behavior tracking</li>
-                                        <li>Hotjar: User experience analytics and heat mapping</li>
-                                        <li>Mixpanel: Product analytics and user engagement tracking</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Marketing Platforms</span>
-                                    <ul className="list-disc list-inside ml-4 space-y-1">
-                                        <li>Hubspot: CRM integration and marketing automation</li>
-                                        <li>Salesforce: Customer relationship management</li>
-                                        <li>Pardot: B2B marketing automation and lead tracking</li>
-                                    </ul>
-                                </li>
+                                <li>LinkedIn: Social sharing buttons and professional networking features</li>
+                                <li>Twitter: Tweet embedding and social sharing functionality</li>
+                                <li>YouTube: Video content embedding and playback</li>
+                            </ul>
+                            <span className="font-semibold">Analytics Services</span>
+                            <ul className="list-disc list-inside ml-4 space-y-1">
+                                <li>Google Analytics: Website traffic analysis and user behavior tracking</li>
+                                <li>Hotjar: User experience analytics and heat mapping</li>
+                                <li>Mixpanel: Product analytics and user engagement tracking</li>
                             </ul>
 
+                            <span className="font-semibold">Marketing Platforms</span>
+                            <ul className="list-disc list-inside ml-4 space-y-1">
+                                <li>Hubspot: CRM integration and marketing automation</li>
+                                <li>Salesforce: Customer relationship management</li>
+                                <li>Pardot: B2B marketing automation and lead tracking</li>
+                            </ul>
+
+
+                        </section>
+
+                        <section>
                             {/* Third-Party Responsibility Card */}
-                            <div className="bg-[#1a1a3a] border border-[#2a2a5a] text-gray-200 mt-8">
-                                <div className="p-6 text-center">
-                                    <h4 className="text-xl font-bold mb-2 text-white">Third-Party Responsibility</h4>
-                                    <p className="text-sm">
+                            <div className="border rounded-[24px] my-8">
+                                <div className="px-3 md:px-14 py-6">
+                                    <h4 className="text-[24px] font-medium mb-2 text-white text-center">Third-Party Responsibility</h4>
+                                    <p className="text-[16px]">
                                         Third-party cookies are governed by the respective privacy policies of those companies. We encourage you
                                         to review their policies to understand how they collect and use your information.
                                     </p>
@@ -369,18 +368,20 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 7: Your Cookie Choices and Controls */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">7. Your Cookie Choices and Controls</h2>
-                            <p className="mb-4">
-                                You can manage your cookie preferences at any time through our cookie preference center, accessible from the
-                                footer of our website or by clicking the &quot;Cookie Settings&quot; link.
-                            </p>
+                        <section className=''>
+                            <div className='pl-3'>
+                                <h2 className="text-[24px] font-medium mb-4 text-white">7. Your Cookie Choices and Controls</h2>
+                                <h3 className='text-[16px] font-medium'>Cookie Preference Center</h3>
+                                <p className="mb-4">
+                                    You can manage your cookie preferences at any time through our cookie preference center, accessible from the
+                                    footer of our website or by clicking the &quot;Cookie Settings&quot; link.
+                                </p>
+                            </div>
 
                             {/* Cookie Preferences Card */}
-                            <div className="bg-[#1a1a3a] border border-[#2a2a5a] text-gray-200 mb-8">
-                                <div className="flex flex-row items-center gap-3 pb-4">
-                                    <Cookie className="w-6 h-6 text-orange-400" />
-                                    <h1 className="text-white">Cookie Preferences</h1>
+                            <div className="px-3 md:px-14 border rounded-[24px] my-8 p-2">
+                                <div className=" pb-4">
+                                    <h1 className="text-white text-center">🍪 Cookie Preferences</h1>
                                 </div>
                                 <div className="space-y-4">
                                     <p className="text-sm mb-2">
@@ -388,125 +389,125 @@ const CookiePrivacy = () => {
                                         want to accept:
                                     </p>
                                     <div className="space-y-2">
-                                        <div className="flex items-center space-x-2">
-
-                                            <input
-                                                id="essential"
-                                                checked
-                                                disabled
-                                                className="border-gray-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white"
-                                            />
-                                            <label
-                                                htmlFor="essential"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                <span className="font-bold">Essential:</span> Required for website functionality (always active)
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center space-x-2">
-                                            <input
-                                                id="analytics"
-                                                className="border-gray-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white"
-                                            />
-                                            <label
-                                                htmlFor="analytics"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                <span className="font-bold">Analytics:</span> Help us understand website usage
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center space-x-2">
-                                            <input
-                                                id="functional"
-                                                className="border-gray-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white"
-                                            />
-                                            <label
-                                                htmlFor="functional"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                <span className="font-bold">Functional:</span> Remember your preferences
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center space-x-2">
-                                            <input
-                                                id="marketing"
-                                                className="border-gray-500 data-[state=checked]:bg-green-500 data-[state=checked]:text-white"
-                                            />
-                                            <label
-                                                htmlFor="marketing"
-                                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                            >
-                                                <span className="font-bold">Marketing:</span> Provide relevant advertisements
-                                            </label>
-                                        </div>
+                                        <ul className='list-disc list-inside ml-4 space-y-1'>
+                                            <li className=''>
+                                                <div className="inline-flex items-center space-x-2">
+                                                    <input
+                                                        type="checkbox" defaultChecked className="checkbox" />
+                                                    <label
+                                                        htmlFor="essential"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                    >
+                                                        <span className="font-bold">Essential:</span> Required for website functionality (always active)
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="inline-flex items-center space-x-2">
+                                                    <input
+                                                        type="checkbox" defaultChecked className="checkbox" />
+                                                    <label
+                                                        htmlFor="analytics"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                    >
+                                                        <span className="font-bold">Analytics:</span> Help us understand website usage
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="inline-flex items-center space-x-2">
+                                                    <input
+                                                        type="checkbox" defaultChecked className="checkbox" />
+                                                    <label
+                                                        htmlFor="functional"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                                        <span className="font-bold">Functional:</span> Remember your preferences
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="inline-flex items-center space-x-2">
+                                                    <input
+                                                        type="checkbox" defaultChecked className="checkbox" />
+                                                    <label
+                                                        htmlFor="marketing"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                    >
+                                                        <span className="font-bold">Marketing:</span> Provide relevant advertisements
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <p className="text-sm mt-4">You can change these settings at any time in our Cookie Preference Center.</p>
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Browser Controls</h3>
-                            <p className="mb-4">
-                                Most web browsers allow you to control cookies through their settings preferences. Here&apos;s how to manage
-                                cookies in popular browsers:
-                            </p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>
-                                    <span className="font-semibold">Chrome:</span> Settings &rarr; Privacy & Security &rarr; Cookies and other
-                                    site data
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Firefox:</span> Settings &rarr; Privacy & Security &rarr; Cookies and Site
-                                    Data
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Safari:</span> Preferences &rarr; Privacy &rarr; Manage Website Data
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Edge:</span> Settings &rarr; Cookies and site permissions &rarr; Cookies
-                                    and site data
-                                </li>
-                            </ul>
+                            <div className='pl-3'>
+                                <h3 className="text-[24px] font-medium text-white">Browser Controls</h3>
+                                <p className=" text-[16px]">
+                                    Most web browsers allow you to control cookies through their settings preferences. Here&apos;s how to manage
+                                    cookies in popular browsers:
+                                </p>
+                                <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
+                                    <li>
+                                        <span className="font-semibold">Chrome:</span> Settings &rarr; Privacy & Security &rarr; Cookies and other
+                                        site data
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold">Firefox:</span> Settings &rarr; Privacy & Security &rarr; Cookies and Site
+                                        Data
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold">Safari:</span> Preferences &rarr; Privacy &rarr; Manage Website Data
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold">Edge:</span> Settings &rarr; Cookies and site permissions &rarr; Cookies
+                                        and site data
+                                    </li>
+                                </ul>
 
-                            <h3 className="text-2xl font-semibold mb-3 mt-6 text-white">Opt-Out Tools</h3>
-                            <p className="mb-4">You can opt out of certain third-party tracking through these industry tools:</p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>
-                                    <a href="#" className="underline text-blue-400">
-                                        Digital Advertising Alliance Opt-Out
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="underline text-blue-400">
-                                        Network Advertising Initiative Opt-Out
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="underline text-blue-400">
-                                        Your Online Choices (EU)
-                                    </a>
-                                </li>
-                            </ul>
+                                <h3 className="text-[24px] font-medium mt-4 text-white">Opt-Out Tools</h3>
+                                <p className="text-[16px]">You can opt out of certain third-party tracking through these industry tools:</p>
+                                <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
+                                    <li>
+                                        <a href="#" className="underline text-blue-400">
+                                            Digital Advertising Alliance Opt-Out
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="underline text-blue-400">
+                                            Network Advertising Initiative Opt-Out
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="underline text-blue-400">
+                                            Your Online Choices (EU)
+                                        </a>
+                                    </li>
+                                </ul>
 
-                            <h3 className="text-2xl font-semibold mb-3 mt-6 text-white">Mobile Device Controls</h3>
-                            <p className="mb-4">On mobile devices, you can control tracking through device settings:</p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>
-                                    <span className="font-semibold">iOS:</span> Settings &rarr; Privacy & Security &rarr; Tracking &rarr;
-                                    Limit Ad Tracking
-                                </li>
-                                <li>
-                                    <span className="font-semibold">Android:</span> Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads
-                                    Personalization
-                                </li>
-                            </ul>
+                                <h3 className="text-[24px] font-medium mt-4 text-white">Mobile Device Controls</h3>
+                                <p className="text-[16px]">On mobile devices, you can control tracking through device settings:</p>
+                                <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
+                                    <li>
+                                        <span className="font-semibold">iOS:</span> Settings &rarr; Privacy & Security &rarr; Tracking &rarr;
+                                        Limit Ad Tracking
+                                    </li>
+                                    <li>
+                                        <span className="font-semibold">Android:</span> Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads
+                                        Personalization
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
 
                         {/* Section 8: Cookie Retention and Data Security */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">8. Cookie Retention and Data Security</h2>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Retention Periods</h3>
-                            <p className="mb-4">Different types of cookies have different retention periods:</p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-bold mt-4 mb-6 text-white">8. Cookie Retention and Data Security</h2>
+                            <h3 className="text-[24px] font-medium text-white">Retention Periods</h3>
+                            <p className="text-[16px]">Different types of cookies have different retention periods:</p>
+                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
                                 <li>Session Cookies: Deleted when you close your browser</li>
                                 <li>Persistent Cookies: Remain until expiration date or manual deletion</li>
                                 <li>Essential Cookies: Typically 1 session to 1 year</li>
@@ -514,9 +515,9 @@ const CookiePrivacy = () => {
                                 <li>Marketing Cookies: Typically 30 days to 2 years</li>
                             </ul>
 
-                            <h3 className="text-2xl font-semibold mb-3 mt-6 text-white">Data Security</h3>
-                            <p className="mb-4">We implement appropriate technical and organizational measures to protect cookie data:</p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
+                            <h3 className="text-[24px] font-medium mt-4 text-white">Data Security</h3>
+                            <p className="text-[16px]">We implement appropriate technical and organizational measures to protect cookie data:</p>
+                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
                                 <li>Encryption of sensitive cookie data</li>
                                 <li>Secure transmission protocols (HTTPS)</li>
                                 <li>Regular security assessments and updates</li>
@@ -526,13 +527,13 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 9: International Data Transfers */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">9. International Data Transfers</h2>
-                            <p className="mb-4">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium mt-4 text-white">9. International Data Transfers</h2>
+                            <p className="text-[16px]">
                                 Some of our third-party cookie providers may transfer data to countries outside your jurisdiction. We ensure
                                 appropriate safeguards are in place:
                             </p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
+                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
                                 <li>Adequacy Decisions</li>
                                 <p className="ml-4">
                                     We ensure data transfers to countries with adequacy decisions from relevant data protection authorities.
@@ -551,15 +552,15 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 10: Children's Privacy */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">10. Children&apos;s Privacy</h2>
-                            <p className="mb-4">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium mt-4 text-white">10. Children&apos;s Privacy</h2>
+                            <p className="text-[16px]">
                                 Our website and services are not directed to children under 18 years of age. We do not knowingly collect
                                 personal information from children through cookies or any other means. If we become aware that we have
                                 collected information from a child under 18, we will take steps to delete such information promptly.
                             </p>
-                            <p className="mb-2">Parents and guardians can help protect children&apos;s privacy by:</p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
+                            <p className="text-[16px]">Parents and guardians can help protect children&apos;s privacy by:</p>
+                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
                                 <li>Supervising children&apos;s online activities</li>
                                 <li>Using parental control software</li>
                                 <li>Configuring browser settings to block or limit cookies</li>
@@ -568,56 +569,82 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 11: Updates to This Cookie Policy */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">11. Updates to This Cookie Policy</h2>
-                            <p className="mb-4">
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium mt-4 text-white">11. Updates to This Cookie Policy</h2>
+                            <p className="text-[16px]">
                                 We may update this Cookie Policy from time to time to reflect changes in our practices, legal requirements,
                                 or the technologies we use. When we make material changes, we will:
                             </p>
-                            <ul className="list-disc list-inside ml-4 space-y-1">
+                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
                                 <li>Post the updated policy on our website</li>
                                 <li>Update the &quot;Last Updated&quot; date at the top of this policy</li>
                                 <li>Notify you through our website banner or email if required by law</li>
                                 <li>Request new consent for new types of cookies if required</li>
                             </ul>
-                            <p className="mt-4">
+                            <p className="text-[16px]">
                                 We encourage you to review this Cookie Policy periodically to stay informed about our cookie practices.
                             </p>
                         </section>
 
                         {/* Section 12: Contact Us */}
-                        <section>
-                            <h2 className="text-3xl font-bold mb-4 text-white">12. Contact Us</h2>
-                            <h3 className="text-2xl font-semibold mb-3 text-white">Cookie and Privacy Questions</h3>
-                            <p className="mb-4">
-                                If you have questions about this Cookie Policy or wish to exercise your rights regarding cookies and
-                                tracking technologies, please contact us:
-                            </p>
-                            <p className="mb-2">
-                                <span className="font-semibold">Email:</span>{" "}
-                                <a href="mailto:privacy@vijillan.com" className="underline text-blue-400">
-                                    privacy@vijillan.com
-                                </a>
-                            </p>
-                            <p className="mb-2">
-                                <span className="font-semibold">Cookie Preferences:</span>{" "}
-                                <a href="#" className="underline text-blue-400">
-                                    Manage Cookie Settings
-                                </a>
-                            </p>
-                            <p className="mb-2">
-                                <span className="font-semibold">Mail:</span>
-                            </p>
-                            <address className="not-italic ml-4 space-y-1">
-                                <p>Vijillan Security - Privacy Office</p>
-                                <p>Aventura Onyx Tower</p>
-                                <p>1010 S Federal Hwy Suite 1205</p>
-                                <p>Aventura, FL 33180</p>
-                            </address>
-                            <p className="mt-4">
-                                <span className="font-semibold">Phone:</span> 1-800-VIJILLAN (1-800-845-4526)
-                            </p>
+                        <section className='pl-3'>
+                            <h2 className="text-[24px] font-medium mt-4 mb-4 text-white">12. Contact Us</h2>
+                            <div className='border-l-4 border-[#00AEEF] pl-2'>
+                                <h3 className="text-[16px] font-medium mb-3 text-white">Cookie and Privacy Questions</h3>
+                                <p className="mb-4 text-[16px]">
+                                    If you have questions about this Cookie Policy or wish to exercise your rights regarding cookies and
+                                    tracking technologies, please contact us:
+                                </p>
+                                <p className="mb-4 text-[16px]">
+                                    <span className="font-semibold">Email:</span>{" "}
+                                    <a href="mailto:privacy@vijillan.com" style={{ textDecoration: "underline" }}>
+                                        privacy@vijillan.com
+                                    </a>
+                                </p>
+                                <p className="mb-4 text-[16px]">
+                                    <span className="font-semibold">Cookie Preferences:</span>{" "}
+                                    <a href="#" className="" style={{ textDecoration: "underline" }}>
+                                        Manage Cookie Settings
+                                    </a>
+                                </p>
+                                <p className="mb-2 text-[16px]">
+                                    <span className="font-semibold">Mail:</span>
+                                </p>
+                                <address className="not-italic ml-4 text-[16px] space-y-1">
+                                    <p>Vijillan Security - Privacy Office</p>
+                                    <p>Aventura Onyx Tower</p>
+                                    <p>1010 S Federal Hwy Suite 1205</p>
+                                    <p>Aventura, FL 33180</p>
+                                </address>
+                                <p className="mt-4 text-[16px]">
+                                    <span className="font-semibold">Phone:</span> 1-800-VIJILLAN (1-800-845-4526)
+                                </p>
+                            </div>
                         </section>
+
+                        <section className='my-10 pl-2'>
+                            <div className='border border-[#00AEEF] rounded-[24px] py-5'>
+                                <h1 className='text-[24px] font-medium mb-2 text-center'>Data Protection Officer</h1>
+                                <p className='text-[16px] pl-2 md:pl-12'>For EU residents or other regions with data protection regulations, you may contact our Data Protection Officer at dpo@vijilan.com for assistance with cookie-related privacy matters.</p>
+                            </div>
+                        </section>
+
+                        <section className='pl-3'>
+                            <div className='relative rounded-[24px] py-5'>
+                                <div
+                                    className={`absolute inset-0 rounded-[24px] p-[1px] z-0`}
+                                    style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                        WebkitMaskComposite: "xor",
+                                        maskComposite: "exclude",
+                                    }}
+                                />
+                                <h1 className='text-[24px] mb-2 font-medium text-center'>Legal Disclaimer</h1>
+                                <p className='text-[16px] pl-2 md:pl-12'>This Cookie Policy is provided for informational purposes and forms part of our overall privacy framework. For comprehensive information about how we handle your personal data, please also review our Privacy Policy and Terms and Conditions.</p>
+                            </div>
+                        </section>
+
                     </div>
                 </div>
             </section>
