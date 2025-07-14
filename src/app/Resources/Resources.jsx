@@ -3,6 +3,7 @@ import Blog_Subscribe_Component_Btn from '@components/Blog_Subscribe_Component_B
 import CardContent from '@components/CardContent';
 import SearchBtn from '@components/SearchBtn';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const tabs = [
@@ -79,14 +80,14 @@ const Resources = () => {
                 </div>
 
                 {/* apply */}
-                <div>
+                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                     <Blog_Subscribe_Component_Btn
 
                         H1="Ready to Apply These Insights?"
                         Desc="Knowledge is power, but action is key. Let's discuss how Vijilan's services can turn these strategies into a reality for your organization or your clients."
                         Btn="schedule a Strategic consultation"
                     />
-                </div>
+                </Link>
             </div>
         </section>);
 };

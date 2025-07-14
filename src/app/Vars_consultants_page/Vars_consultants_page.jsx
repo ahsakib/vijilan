@@ -9,6 +9,7 @@ import v3 from "../../Assets/v3.png";
 import v4 from "../../Assets/v4.png";
 import v5 from "../../Assets/v5.png";
 import v6 from "../../Assets/v6.png";
+import { Link } from 'react-router-dom';
 
 const Vars_consultants_page = () => {
 
@@ -22,6 +23,7 @@ const Vars_consultants_page = () => {
                 desc={"Partner with Vijilan to recommend and deliver elite, fully managed cybersecurity\nsolutions. We provide the technology, expertise, and support you need to become an\nindispensable security advisor for your clients."}
                 btn1="Join our partner network"
                 btn2="download consultant guide"
+                url={"/become-a-partner"}
             />
 
             {/* Recommendation */}
@@ -202,9 +204,11 @@ const Vars_consultants_page = () => {
                     <h1 className='text-[30px] md:text-[40px] font-bold text-center'>Ready to Become a Trusted Security Advisor? </h1>
                     <p className='text-[18px] text-center'>Join Vijilan's network of elite partners and start delivering superior security value to your clients.</p>
                     <div className='flex justify-center pt-5'>
-                        <button className=" mx-auto py-2 md:py-[20px] p-2 md:px-[24px] mt-1 rounded-[8px] text-[18px] font-medium  text-white transition-opacity hover:opacity-90" style={{ background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)" }}>
-                            apply to our partner network
-                        </button>
+                        <Link to={"/become-a-partner"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <button className=" mx-auto py-2 md:py-[20px] p-2 md:px-[24px] mt-1 rounded-[8px] text-[18px] font-medium  text-white transition-opacity hover:opacity-90" style={{ background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)" }}>
+                                apply to our partner network
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

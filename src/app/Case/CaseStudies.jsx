@@ -305,8 +305,12 @@ export default function CaseStudiesPage() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <GradientButton className="">EXPLORE SUCCESS STORIES</GradientButton>
-                        <OutlineGradientButton icon={false}>CALCULATE YOUR ROI</OutlineGradientButton>
+                        <Link to={"/automation-case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <GradientButton className="">EXPLORE SUCCESS STORIES</GradientButton>
+                        </Link>
+                        <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <OutlineGradientButton icon={false}>CALCULATE YOUR ROI</OutlineGradientButton>  
+                        </Link>
                     </div>
 
                     {/* Lead Form */}
@@ -437,9 +441,9 @@ export default function CaseStudiesPage() {
                                             ))}
                                         </div>
 
-                                        <div className="">
+                                        <Link to={"/automation-case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                             <OutlineGradientButton children={"READ THE FULL CASE STUDY"}/>
-                                        </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -647,6 +651,8 @@ export default function CaseStudiesPage() {
                         btn1={"Get Started Today"}
                         btn2={"Get a Free Consultation"}
                         isSmallHeading={true}
+                        url={"/contact"}
+                        url2={"/contact"}
                     />
                 </section>
             </div>

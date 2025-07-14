@@ -48,6 +48,7 @@ export default function VijilianLanding() {
                     rating="★★★★★  |  Trusted by over 200 MSPs worldwide "
                     btn1="Apply to Become a partner"
                     btn2="DOWNLOAD PARTNER KIT"
+                    url={"/become-a-partner"}
                 />
             </section >
 

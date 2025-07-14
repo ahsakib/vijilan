@@ -59,9 +59,10 @@ export default function Component() {
             <Heading_Btn
                 h1=" Expert Detection. Actionable Guidance."
                 desc={"Vijilan ThreatRespond™ service provides 24/7 monitoring and threat detection from\nour expert SOC, delivering clear, step-by-step instructions for your internal team to\nremediate threats quickly and effectively."}
-                btn1="Jwatch the service overview"
+                btn1="Watch the service overview"
                 btn2="get an instant quote"
-                url={"/msp-launchpad"}
+                url={"/videos-library"}
+                url2={"/contact"}
             />
 
 
@@ -151,7 +152,7 @@ export default function Component() {
                                 ThreatRemediate goes beyond guidance—our SOC actively isolates endpoints, disables compromised accounts,
                                 and neutralizes threats in real-time while you sleep.
                             </p>
-                            <Link to={"/threatremediate-managed-xdr"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <Link to={"/threat-respond-service-2"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                             <button
                                 className="p-2 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                                 style={{
@@ -404,13 +405,15 @@ export default function Component() {
                                     Start the application <br /> process now. Get <br /> access to our portal <br /> and resources in <br /> minutes
                                 </p>
                             </div>
-                            <button
-                                className="relative z-10 inline-block rounded-md  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto" style={{
-                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                }}
-                            >
-                                APPLY NOW
-                            </button>
+                            <Link to={"/become-a-partner"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <button
+                                    className="relative z-10 inline-block rounded-md  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto" style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                    }}
+                                >
+                                    SIGN UP NOW
+                                </button>
+                            </Link>
                         </div>
 
                         <div className=" overflow-hidden relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center flex flex-col" >
@@ -430,7 +433,8 @@ export default function Component() {
                                     Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
                                 </p>
                             </div>
-
+                            <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            
                             <button
                                 className="relative z-10 inline-block rounded-[8px]  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto" >
                                 <div
@@ -444,6 +448,7 @@ export default function Component() {
                                 />
                                 ACCESS PRICING SIMULATOR
                             </button>
+                            </Link>
                         </div>
 
                         <div className=" overflow-hidden relative bg-[#00AEEF3D] p-2 md:p-8 rounded-[24px] text-center flex flex-col" >
@@ -465,7 +470,8 @@ export default function Component() {
                                 </p>
                                 <p className="text-[#00AEEF] text-[18px] ">1 (954) 440-7608</p>
                             </div>
-
+                            <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            
                             <button
                                 className="relative z-10 inline-block rounded-[8px]  px-[26px] py-[16px] text-[16px] sm:text-[18px] font-medium text-white mt-auto"
                             >
@@ -480,6 +486,7 @@ export default function Component() {
                                 />
                                 CALL NOW
                             </button>
+                            </Link>
 
                         </div>
                     </div>

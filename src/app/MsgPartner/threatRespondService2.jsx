@@ -9,6 +9,7 @@ import Heading_Btn from "@components/Heading_Btn";
 import CardContent from "@components/CardContent";
 import GradientButton from "@components/GradientButton";
 import { processSteps } from "@app/Constant/Constant";
+import { Link } from "react-router-dom";
 
 
 export default function Component() {
@@ -22,6 +23,8 @@ export default function Component() {
                 desc={"Our flagship fully managed XDR service. We don't just send alerts—our 24/7 expert\nSOC actively contains and remediates threats across your entire digital ecosystem,\npowered by CrowdStrike."}
                 btn1="watch a 2-minute  overview"
                 btn2="get an instant quote"
+                url={"/videos-library"}
+                url2={"/contact"}
             />
 
 
@@ -284,9 +287,9 @@ export default function Component() {
 
                     </div>
 
-                    <div className="flex items-center justify-center">
+                    <Link to={"/pricing-page"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center justify-center">
                         <GradientButton children={"compare Tiers and run pricing scenerios"} />
-                    </div>
+                    </Link>
 
                 </div>
             </section>
@@ -317,15 +320,17 @@ export default function Component() {
                                     Start the application <br /> process now. Get <br /> access to our portal <br /> and resources in <br /> minutes
                                 </p>
                             </div>
+                            <Link to={"/become-a-partner"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                             <button
 
-                                className="inline-block rounded-md  px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
+                                className="inline-block rounded-md relative z-10 px-[26px] py-[16px] text-[18px] font-medium text-white" style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
                                 }}
                             >
-                                APPLY NOW
+                                SIGN UP NOW
                             </button>
+                            </Link>
                         </div>
 
                         <div className="relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center" >
@@ -345,21 +350,23 @@ export default function Component() {
                                     Already a partner? Log <br /> in to our portal to build <br /> custom quotes and <br /> explore pricing <br /> scenarios.
                                 </p>
                             </div>
+                            <Link to={"/become-a-partner"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
 
-                            <button
+                                <button
 
-                                className="relative inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" >
-                                <div
-                                    className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
-                                    style={{
-                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                        WebkitMaskComposite: "xor",
-                                        maskComposite: "exclude",
-                                    }}
-                                />
-                                LOG IN TO PORTAL
-                            </button>
+                                    className="relative inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" >
+                                    <div
+                                        className={`absolute inset-0 rounded-[8px] p-[1px] z-0`}
+                                        style={{
+                                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                            WebkitMaskComposite: "xor",
+                                            maskComposite: "exclude",
+                                        }}
+                                    />
+                                    LOG IN TO PORTAL
+                                </button>
+                            </Link>
                         </div>
 
                         <div className=" relative bg-[#00AEEF3D] p-8 rounded-[24px] text-center">
@@ -381,6 +388,7 @@ export default function Component() {
                                 </p>
                                 <p className="text-[#00AEEF] text-[18px] ">1 (954) 440-7608</p>
                             </div>
+                            <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
 
                             <button
                                 className="relative inline-block rounded-[8px]  px-[26px] py-[16px] text-[18px] font-medium text-white" >
@@ -395,7 +403,7 @@ export default function Component() {
                                 />
                                 CALL NOW
                             </button>
-
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -144,21 +144,21 @@ const Home = () => {
                   a New Defense
                 </h2>
                 <Link to={"contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                <button
-                  className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-                  style={{
-                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                  }}>
+                  <button
+                    className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                    style={{
+                      background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                    }}>
 
-                  <span>GET STARTED FREE</span>
-                  <div className="w-6 h-6  flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 16 16 12 12 8"></polyline>
-                      <line x1="8" y1="12" x2="16" y2="12"></line>
-                    </svg>
-                  </div>
-                </button>
+                    <span>GET STARTED FREE</span>
+                    <div className="w-6 h-6  flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 16 16 12 12 8"></polyline>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                      </svg>
+                    </div>
+                  </button>
                 </Link>
               </div>
               <div className="relative text-white text-[18px] bg-[#00AEEF3D] rounded-[24px] p-[24px] space-y-4 leading-relaxed overflow-hidden">
@@ -470,7 +470,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-5">
+        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center justify-center mt-5">
           <button
             className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
             style={{
@@ -486,7 +486,7 @@ const Home = () => {
               </svg>
             </div>
           </button>
-        </div>
+        </Link>
 
         {/* Integrations Section */}
         <section className="container mx-auto px-6 py-16">
@@ -546,21 +546,23 @@ const Home = () => {
             <p className="text-gray-300 mb-5">
               Don't see your security tool listed? Our platform supports hundreds of integrations <br /> through APIs, syslog, and custom connectors.
             </p>
-            <button
-              className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
-              style={{
-                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-              }}>
+            <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <button
+                className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                style={{
+                  background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                }}>
 
-              <span className="uppercase">Request Integration Consultation</span>
-              <div className="w-6 h-6  flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 16 16 12 12 8"></polyline>
-                  <line x1="8" y1="12" x2="16" y2="12"></line>
-                </svg>
-              </div>
-            </button>
+                <span className="uppercase">Request Integration Consultation</span>
+                <div className="w-6 h-6  flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 16 16 12 12 8"></polyline>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+            </Link>
           </div>
         </section>
 
@@ -606,7 +608,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <Link to={"/msp-partner-program-ai"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
 
 
             <div className="flex items-center justify-center mx-auto mt-5">
@@ -646,7 +648,7 @@ const Home = () => {
                 description:
                   "Discover our full suite of managed security services, from mXDR and ThreatRemediate to specialized cloud and identity protection.",
                 buttonText: "Explore All Solutions",
-                url: "complain-solution"
+                url: "resources"
               },
               {
                 icon: <img src={objects} alt="" className="w-[164px] h-[110px]" />,
@@ -654,6 +656,7 @@ const Home = () => {
                 description:
                   "Learn how our platform, powered by CrowdStrike, AI, and extensive integrations (Fortinet, Palo Alto, Microsoft 365, etc.), delivers unparalleled visibility and control.",
                 buttonText: "View Our Integrations",
+                url: "resources"
               },
               {
                 icon: <img src={dollar} alt="" className="w-[100px] h-[110px]" />,
@@ -679,9 +682,9 @@ const Home = () => {
                 <div className=" mb-4">{item.icon}</div>
                 <h3 className="text-[24px] text-center font-medium text-white mb-3">{item.title}</h3>
                 <p className="text-white text-[18px] mb-4 leading-relaxed text-center">{item.description}</p>
-                  <Link to={item.url ? item.url:"" } className="mt-auto z-10 bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{ color: "#082235" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >
-                    {item.buttonText}
-                  </Link>
+                <Link to={item.url ? item.url : ""} className="mt-auto z-10 bg-[#FFFFFF] rounded-[8px] p-[16px] text-[18px] font-medium  " style={{ color: "#082235" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} >
+                  {item.buttonText}
+                </Link>
               </div>
             ))}
           </div>
@@ -693,7 +696,7 @@ const Home = () => {
           highlightedText="Security"
           subtitle="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need."
           buttonText="Get Your Free Security Consultation"
-          url = "vijilan-vars-consultants-page"
+          url="contact"
         />
       </div>
     </div>

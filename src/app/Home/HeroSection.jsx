@@ -12,7 +12,7 @@ const HeroSection = () => {
       <p className="text-[16px] sm:text-[18px] text-[#FFFFFF] mb-8 max-w-2xl mx-auto leading-relaxed">
         Expert-Led Threat Detection, Response & Active Remediation from our SOC 2 Type 2 Certified, US-based Security Operations Center. Delivering turnkey cybersecurity solutions for MSPs and comprehensive protection for enterprises through AI-driven, fully managed security services.
       </p>
-      <Link to={"vijilan-vars-consultants-page"}>
+      <Link to={"contact"}>
       
         <button className=" text-white rounded-[8px] p-[24px] font-medium text-[18px] flex items-center justify-center gap-2 mx-auto" style={{
           background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",

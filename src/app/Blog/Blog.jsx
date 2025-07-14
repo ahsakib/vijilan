@@ -18,9 +18,13 @@ const Blog = () => {
             <section className="container mx-auto md:px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                        <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">Home</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="hover:text-white cursor-pointer">blog</span>
+                        <Link to={"/blog"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">blog</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="hover:text-white cursor-pointer">Threat Intelligence</span>
                         <ChevronRight className="w-4 h-4 mx-2" />
@@ -237,8 +241,8 @@ const Blog = () => {
                 <div className='lg:col-span-3 col-span-full text-center'
                 // style={{   background: 'linear-gradient(to right, #F89B29, #FF0F7B)'}}
                 >
-                    <Link to={"/threatremediate-essentail"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                    
+                    <Link to={"/threat-respond-service-2"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+
                         <Blog_Subscribe_Component_Btn
                             H1={"Is your organization vulnerable\nto malware-free attacks?"}
                             Desc={"Vijilan's ThreatRemediate™ service provides behavioral-based detection and\nactive containment capabilities specifically designed to identify and stop\nthese sophisticated threats. Our expert SOC doesn't just alert you—we take\ndirect action to neutralize the threat."}
@@ -453,9 +457,12 @@ const Blog = () => {
                         <h1 className='font-bold text-2xl md:text-[40px]'>Join the Discussion</h1>
                         <p className='text-[16px] font-medium text-center'>
                             Share your thoughts and experiences with malware-free attacks in the comments<br /> below.</p>
-                        <p className="border border-[#00AEEF] text-[#00AEEF] px-[24px] py-[12px] rounded-[8px] w-fit mx-auto">
-                            Load Comments (Disqus Integration)
-                        </p>
+                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
+                            <p className="border border-[#00AEEF] text-[#00AEEF] px-[24px] py-[12px] rounded-[8px] w-fit mx-auto">
+                                Load Comments (Disqus Integration)
+                            </p>
+                        </Link>
                     </div>
                 </div>
 

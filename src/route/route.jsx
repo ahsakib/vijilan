@@ -319,7 +319,7 @@ const router = createBrowserRouter([
                 element: <VideosLibrary/>
             },
             {
-                path:"request-demo-vijilan",
+                path:"request-demo",
                 element:<RequestDemoVijilan/>
             },
             {

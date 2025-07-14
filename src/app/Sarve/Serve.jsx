@@ -3,6 +3,7 @@ import CardContent from '@components/CardContent';
 import React from 'react';
 import play from "../../Assets/play.png";
 import backgroundPattern from "../../Assets/Background pattern.png";
+import { Link } from 'react-router-dom';
 
 const Serve = () => {
     return (
@@ -77,16 +78,6 @@ const Serve = () => {
                     </div>
                 </div>
 
-                {/* where to start */}
-
-                {/* <div className=' mt-5 md:mt-16'>
-                    <Blog_Subscribe_Component_Btn
-                        H1='Not Sure Where to Start?'
-                        Desc="Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need to focus on growing your business."
-                        Btn='Get Your Free Security Consultation'
-                    />
-                </div> */}
-
                 <section className="relative z-10 py-16">
                     <div className="container mx-auto ">
                         <div
@@ -137,23 +128,25 @@ const Serve = () => {
                                 <p className="text-[16px] font-medium text-white  leading-relaxed max-w-2xl mx-auto">
                                     Let's discuss your unique cybersecurity challenges and how Vijilan can provide the protection and peace of mind you need to focus on growing your business.
                                 </p>
-                                <button
-                                    className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
-                                    style={{
-                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                                        boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
-                                    }}
-                                >
+                                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <button
+                                        className="p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
+                                        style={{
+                                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                                            boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
+                                        }}
+                                    >
 
-                                    <span>Get Your Free Security Consultation</span>
-                                    <div className="w-6 h-6 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="12 16 16 12 12 8"></polyline>
-                                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                                        </svg>
-                                    </div>
-                                </button>
+                                        <span>Get Your Free Security Consultation</span>
+                                        <div className="w-6 h-6 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polyline points="12 16 16 12 12 8"></polyline>
+                                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

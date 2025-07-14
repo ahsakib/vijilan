@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronDown, Play, Settings, TrendingUp, Shield, ExternalLink, Section } from "lucide-react";
 import Heading_Btn from "@components/Heading_Btn";
+import { Link } from "react-router-dom";
 
 
 const ButtonWithGeradiant = ({ btn }) => {
@@ -78,7 +79,7 @@ export default function VijilianLanding() {
           ongoing management for CrowdStrike, CriblI, and CoreLight platforms, turning powerful tools into strategic
           assets."
           btn1="WATCH THE SERVICE OVERVIEW"
-          url={"/msp-launchpad"}
+          url={"/videos-library"}
         />
       </section>
 
@@ -146,9 +147,9 @@ export default function VijilianLanding() {
                 <li>• Agent Aggregation with CriblI Edge</li>
                 <li>• Kubernetes Instrumentation</li>
               </ul>
-              <ButtonWithGeradiant btn="REQUEST A CRIBL CONSULTATION"
-
-              />
+              <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <ButtonWithGeradiant btn="REQUEST A CRIBL CONSULTATION" />
+              </Link>
             </CardContent>
           </Card>
 
@@ -168,9 +169,9 @@ export default function VijilianLanding() {
                 <li>• Falcon LogScale Implementation & Management</li>
                 <li>• Platform Health Checks & Optimization</li>
               </ul>
-              <ButtonWithGeradiant btn="OPTIMIZE YOUR CROWDSTRIKE DEPLOYMENT"
-
-              />
+              <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <ButtonWithGeradiant btn="OPTIMIZE YOUR CROWDSTRIKE DEPLOYMENT"/>
+              </Link>
             </CardContent>
           </Card>
 
@@ -188,9 +189,9 @@ export default function VijilianLanding() {
                 <li>• Network Traffic Analysis</li>
                 <li>• Threat Hunting Workshops</li>
               </ul>
-              <ButtonWithGeradiant btn="DISCUSS YOUR NDR PROJECT"
-
-              />
+              <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <ButtonWithGeradiant btn="DISCUSS YOUR NDR PROJECT"/>
+              </Link>
             </CardContent>
           </Card>
 
@@ -211,9 +212,9 @@ export default function VijilianLanding() {
                 <li>• Incident Response with Network Forensics</li>
                 <li>• Integration with SIEM & XDR Platforms</li>
               </ul>
-              <ButtonWithGeradiant btn="REQUEST A CORELIGHT CONSULTATION"
-
-              />
+              <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <ButtonWithGeradiant btn="REQUEST A CORELIGHT CONSULTATION"/>
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -250,10 +251,12 @@ export default function VijilianLanding() {
               </div>
 
               <div className="text-center">
-                <Button variant="outline">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  READ THE FULL CASE STUDY
-                </Button>
+                <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                  <Button variant="outline">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    READ THE FULL CASE STUDY
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -267,7 +270,7 @@ export default function VijilianLanding() {
         desc=" Whether you're migrating your SIEM, deploying new sensors, or looking to optimize your data strategy, our
           experts are here to help. Schedule a free, no-obligation architectural review today."
         btn1="SCHEDULE ARCHITECTURE REVIEW"
-
+        url={"/contact"}
       />
 
     </div >

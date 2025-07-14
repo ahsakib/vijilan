@@ -223,6 +223,7 @@ const WhyVijilanPage = () => {
                 highlightedText="Security"
                 subtitle="Ready to see how our unique approach can transform your security posture or your MSP business? Schedule a call with one of our security strategists today"
                 buttonText="SCHEDULE A STRATEGIC CALL"
+                url={"/contact"}
             />
         </div >
     );
