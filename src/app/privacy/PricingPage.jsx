@@ -73,25 +73,25 @@ const pricingData = [
         service: "managed itdr",
         monthly: "$5/ASSET",
         annual: "$4.25/ASSET",
-        description: "identity threat detection and response",
+        description: `identity threat\ndetection and\nresponse`,
     },
     {
-        service: "managed exposure management",
+        service: `managed exposure\nmanagement`,
         monthly: "$6/ASSET",
         annual: "$5.10/ASSET",
-        description: "continuous exposure assessment and remediation",
+        description: `continuous exposure\nassessment and\nremediation`,
     },
     {
-        service: "managed exposure management",
+        service: `managed exposure\nmanagement`,
         monthly: "$6/ASSET",
         annual: "$2.55/GB",
-        description: "high-speed log ingestion and management",
+        description: `high-speed log ingestion\nand management`,
     },
     {
         service: "additional users",
         monthly: "$25/USER",
         annual: "$21.25/USER",
-        description: "extra portal access beyond included users",
+        description: `extra portal access\nbeyond included users`,
     },
 ]
 
@@ -257,12 +257,12 @@ const PricingPage = () => {
 
             {/*  */}
             <section className='py-16'>
-                <div className=" overflow-hidden">
-                    <table className="w-full " style={{
+                <div className=" overflow-x-auto">
+                    <table className="w-full" style={{
                         background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                     }}>
                         <thead className=''>
-                            <tr className='text-center'>
+                            <tr className='text-left'>
                                 <th
                                     scope="col"
                                     className="py-4 px-4 uppercase text-[17px] font-medium text-white">
@@ -288,7 +288,7 @@ const PricingPage = () => {
                         <tbody>
                             {pricingData.map((row, index) => (
                                 <tr key={index} className="text-white border">
-                                    <td className="py-4 px-4 text-[17px]  font-medium ">
+                                    <td className="py-4 px-4 text-[17px] whitespace-pre-line  font-medium ">
                                         {row.service}
                                     </td>
                                     <td className="py-4 px-4 text-[17px] font-medium ">
@@ -297,7 +297,7 @@ const PricingPage = () => {
                                     <td className="py-4 px-4 text-[17px] font-medium ">
                                         {row.annual}
                                     </td>
-                                    <td className="py-4 px-4 text-[17px] font-medium ">
+                                    <td className="py-4 px-4 text-[17px] whitespace-pre-line font-medium ">
                                         {row.description}
                                     </td>
                                 </tr>

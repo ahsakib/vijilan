@@ -221,61 +221,61 @@ const InformationSecurity = () => {
                 </div>
 
                 {/* security all content */}
-                <div className="max-w-4xl mx-auto ">
+                <div className=" ">
                     {/* Information Security Program Scope */}
-                    <section>
-                        <h1 className="text-[24px] font-medium">information security program scope</h1>
-                        <p className="text-[15px]">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-medium" style={{color: "#FFFFFFCC"}}>information security program scope</h1>
+                        <p className="text-[15px]" style={{color: "#FFFFFFCC"}}>
                             our comprehensive information security program applies to all aspects of our operations and extends to our
                             entire ecosystem:
                         </p>
 
-                        <h2 className="text-[15px] font-medium">organizational scope</h2>
+                        <h2 className="text-[15px] font-medium" style={{color: "#FFFFFFCC"}}>organizational scope</h2>
                         <ul className="list-disc list-inside space-y-2 text-[15px] pl-4">
-                            <li>
+                            <li style={{color: "#FFFFFFCC"}}>
                                 all vijilan employees: every team member is responsible for protecting company and customer information
                                 assets
                             </li>
-                            <li>
+                            <li style={{color: "#FFFFFFCC"}}>
                                 third-party vendors: contractors and service providers must meet our security standards and undergo
                                 security assessments
                             </li>
-                            <li>
+                            <li style={{color: "#FFFFFFCC"}}>
                                 customer environments: security controls extend to all customer data and systems under our management
                             </li>
-                            <li>
+                            <li style={{color: "#FFFFFFCC"}}>
                                 business partners: channel partners and technology integrators participate in our security ecosystem
                             </li>
                         </ul>
 
-                        <h2 className="text-[15px] font-medium">technical scope</h2>
+                        <h2 className="text-[15px] font-medium " style={{color: "#FFFFFFCC"}}>technical scope</h2>
                         <ul className="list-disc list-inside space-y-2 text-[15px] pl-4">
-                            <li>information systems: all systems operated by vijilan or contracted with third parties</li>
-                            <li>cloud infrastructure: aws-hosted environments with comprehensive security controls</li>
-                            <li>customer data: all information provided by or collected from customers</li>
-                            <li>network infrastructure: complete network security including perimeter and internal controls</li>
+                            <li style={{color: "#FFFFFFCC"}}>information systems: all systems operated by vijilan or contracted with third parties</li>
+                            <li style={{color: "#FFFFFFCC"}}>cloud infrastructure: aws-hosted environments with comprehensive security controls</li>
+                            <li style={{color: "#FFFFFFCC"}}>customer data: all information provided by or collected from customers</li>
+                            <li style={{color: "#FFFFFFCC"}}>network infrastructure: complete network security including perimeter and internal controls</li>
                         </ul>
 
-                        <h2 className="text-[15px] font-medium">risk-based security approach</h2>
-                        <p className="text-[15px]">
+                        <h2 className="text-[15px] font-medium" style={{color: "#FFFFFFCC"}}>risk-based security approach</h2>
+                        <p className="text-[15px]" style={{color: "#FFFFFFCC"}}>
                             vijilan employs a systematic, risk-based approach to information security that enables us to prioritize
                             resources and focus on the most critical threats to our operations and customer data.
                         </p>
 
-                        <h2 className="text-[15px] font-medium">risk assessment process</h2>
+                        <h2 className="text-[15px] font-medium" style={{color: "#FFFFFFCC"}}>risk assessment process</h2>
                         <ul className="list-disc list-inside space-y-2 text-[15px] pl-4">
-                            <li>asset identification: comprehensive inventory of all information assets and their business value</li>
-                            <li>threat analysis: regular assessment of current and emerging threats to our environment</li>
-                            <li>vulnerability assessment: systematic identification of potential security weaknesses</li>
-                            <li>impact analysis: evaluation of potential business impact from security incidents</li>
-                            <li>risk treatment: implementation of appropriate controls based on risk levels</li>
+                            <li style={{color: "#FFFFFFCC"}}>asset identification: comprehensive inventory of all information assets and their business value</li>
+                            <li style={{color: "#FFFFFFCC"}}>threat analysis: regular assessment of current and emerging threats to our environment</li>
+                            <li style={{color: "#FFFFFFCC"}}>vulnerability assessment: systematic identification of potential security weaknesses</li>
+                            <li style={{color: "#FFFFFFCC"}}>impact analysis: evaluation of potential business impact from security incidents</li>
+                            <li style={{color: "#FFFFFFCC"}}>risk treatment: implementation of appropriate controls based on risk levels</li>
                         </ul>
                     </section>
 
                     {/* Continuous Risk Monitoring Callout */}
-                    <div className=" rounded-[24px] p-2 text-center border my-6">
-                        <h2 className="text-[15px] font-medium mb-3">Continuous Risk Monitoring</h2>
-                        <p className="text-[15px]">
+                    <div className=" rounded-[24px] py-4  border my-6" style={{color: "#FFFFFFCC"}}>
+                        <h2 className="text-[24px] font-medium text-center mb-3" >Continuous Risk Monitoring</h2>
+                        <p className="text-[15px] px-4 max-w-5xl mx-auto" style={{color: "#FFFFFFCC"}}>
                             Our security team continuously monitors the threat landscape and adjusts our security posture accordingly.
                             We conduct quarterly risk assessments and annual comprehensive security reviews to ensure our controls
                             remain effective against evolving threats.
@@ -283,65 +283,65 @@ const InformationSecurity = () => {
                     </div>
 
                     {/* Security Awareness and Training */}
-                    <section>
-                        <h1 className="text-[24px] font-bold ">Security Awareness and Training</h1>
-                        <p className="text-[16px] mb-2">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold " style={{color: "#FFFFFFCC"}}>Security Awareness and Training</h1>
+                        <p className="text-[16px] mb-2" style={{color: "#FFFFFFCC"}}>
                             Human factors are often the weakest link in cybersecurity. Vijilan maintains a comprehensive security
                             awareness program to ensure all personnel understand their role in protecting information assets.
                         </p>
 
-                        <h2 className="text-[24px] font-medium">Training Program Components</h2>
+                        <h2 className="text-[24px] font-medium" style={{color: "#FFFFFFCC"}}>Training Program Components</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>Annual Security Training: Mandatory online security awareness training for all employees</li>
-                            <li>New Employee Onboarding: Security awareness sessions during employee induction process</li>
-                            <li>Role-Specific Training: Specialized training for employees with access to sensitive systems</li>
-                            <li>Phishing Simulation: Regular simulated phishing exercises to test and improve awareness</li>
-                            <li>Incident Response Training: Specialized training for security team members</li>
+                            <li style={{color: "#FFFFFFCC"}}>Annual Security Training: Mandatory online security awareness training for all employees</li>
+                            <li style={{color: "#FFFFFFCC"}}>New Employee Onboarding: Security awareness sessions during employee induction process</li>
+                            <li style={{color: "#FFFFFFCC"}}>Role-Specific Training: Specialized training for employees with access to sensitive systems</li>
+                            <li style={{color: "#FFFFFFCC"}}>Phishing Simulation: Regular simulated phishing exercises to test and improve awareness</li>
+                            <li style={{color: "#FFFFFFCC"}}>Incident Response Training: Specialized training for security team members</li>
                         </ul>
                     </section>
 
                     {/* Continuous Improvement */}
-                    <section>
-                        <h1 className="text-[24px] font-bold">Continuous Improvement</h1>
-                        <p className="text-[16px]">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Continuous Improvement</h1>
+                        <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                             Security is not a destination but a journey. Vijilan is committed to continuously enhancing our security
                             posture through systematic improvement processes.
                         </p>
 
-                        <h2 className="text-[16px] font-medium ">Improvement Initiatives</h2>
+                        <h2 className="text-[16px] font-medium " style={{color: "#FFFFFFCC"}}>Improvement Initiatives</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>Policy Enhancement: Regular review and update of security policies and procedures</li>
-                            <li>Best Practice Alignment: Ongoing alignment with ISO/IEC 27001 and other industry standards</li>
-                            <li>Proactive Security: Shift from reactive to proactive security measures</li>
-                            <li>Measurable Security: Implementation of security metrics and KPIs for data-driven decisions</li>
-                            <li>Technology Innovation: Adoption of emerging security technologies and methodologies</li>
+                            <li style={{color: "#FFFFFFCC"}}>Policy Enhancement: Regular review and update of security policies and procedures</li>
+                            <li style={{color: "#FFFFFFCC"}}>Best Practice Alignment: Ongoing alignment with ISO/IEC 27001 and other industry standards</li>
+                            <li style={{color: "#FFFFFFCC"}}>Proactive Security: Shift from reactive to proactive security measures</li>
+                            <li style={{color: "#FFFFFFCC"}}>Measurable Security: Implementation of security metrics and KPIs for data-driven decisions</li>
+                            <li style={{color: "#FFFFFFCC"}}>Technology Innovation: Adoption of emerging security technologies and methodologies</li>
                         </ul>
                     </section>
 
                     {/* Legal and Contractual Compliance */}
-                    <section>
-                        <h1 className="text-[24px] font-bold ">Legal and Contractual Compliance</h1>
-                        <p className="text-[16px]">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold " style={{color: "#FFFFFFCC"}}>Legal and Contractual Compliance</h1>
+                        <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                             Vijilan is committed to protecting sensitive information from unauthorized disclosure and ensuring
                             compliance with all applicable legal and contractual requirements.
                         </p>
 
-                        <h2 className="text-[16px] font-medium ">Regulatory Compliance</h2>
+                        <h2 className="text-[16px] font-medium " style={{color: "#FFFFFFCC"}}>Regulatory Compliance</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4">
-                            <li>International Standards: Compliance with current international information security standards</li>
-                            <li>Regional Regulations: Adherence to data protection laws in all jurisdictions where we operate</li>
-                            <li>
+                            <li style={{color: "#FFFFFFCC"}}>International Standards: Compliance with current international information security standards</li>
+                            <li style={{color: "#FFFFFFCC"}}>Regional Regulations: Adherence to data protection laws in all jurisdictions where we operate</li>
+                            <li style={{color: "#FFFFFFCC"}}>
                                 Industry Requirements: Compliance with sector-specific security requirements (healthcare, financial
                                 services, etc.)
                             </li>
-                            <li>Customer Contracts: Meeting all security obligations specified in customer agreements</li>
+                            <li style={{color: "#FFFFFFCC"}}>Customer Contracts: Meeting all security obligations specified in customer agreements</li>
                         </ul>
                     </section>
 
                     {/* Regulatory Change Management Callout */}
-                    <div className="p-2 text-center border rounded-[24px] my-6">
-                        <h2 className="text-[16px] font-medium mb-3">Regulatory Change Management</h2>
-                        <p className="text-[16px]">
+                    <div className="py-4  border rounded-[24px] my-6">
+                        <h2 className="text-[24px] font-medium mb-3 text-center">Regulatory Change Management</h2>
+                        <p className="text-[16px] px-4 max-w-5xl mx-auto" style={{color: "#FFFFFFCC"}}>
                             We actively monitor changes in regulations and international standards, incorporating new requirements into
                             our processes to ensure continuous compliance. Our legal and compliance team conducts quarterly reviews of
                             regulatory changes affecting our operations.
@@ -349,118 +349,120 @@ const InformationSecurity = () => {
                     </div>
 
                     {/* Incident Response and Business Continuity */}
-                    <section>
-                        <h1 className="text-[24px] font-bold">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>
                             Incident Response and Business Continuity
                         </h1>
-                        <p className="text-[16px] mb-2">
+                        <p className="text-[16px] mb-2" style={{color: "#FFFFFFCC"}}>
                             Vijilan maintains comprehensive incident response and business continuity capabilities to ensure minimal
                             impact from security events and operational disruptions.
                         </p>
 
-                        <h2 className="text-[24px] font-medium">Incident Response Capabilities</h2>
+                        <h2 className="text-[24px] font-medium" style={{color: "#FFFFFFCC"}}>Incident Response Capabilities</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>24x7 SOC: Round-the-clock security operations center with expert analysts</li>
-                            <li>Automated Response: Advanced automation for rapid threat containment and remediation</li>
-                            <li>Forensic Analysis: Digital forensics capabilities for incident investigation</li>
-                            <li>Communication Plans: Structured communication procedures for stakeholder notification</li>
-                            <li>Recovery Procedures: Comprehensive procedures for system and data recovery</li>
+                            <li style={{color: "#FFFFFFCC"}}>24x7 SOC: Round-the-clock security operations center with expert analysts</li>
+                            <li style={{color: "#FFFFFFCC"}}>Automated Response: Advanced automation for rapid threat containment and remediation</li>
+                            <li style={{color: "#FFFFFFCC"}}>Forensic Analysis: Digital forensics capabilities for incident investigation</li>
+                            <li style={{color: "#FFFFFFCC"}}>Communication Plans: Structured communication procedures for stakeholder notification</li>
+                            <li style={{color: "#FFFFFFCC"}}>Recovery Procedures: Comprehensive procedures for system and data recovery</li>
                         </ul>
                     </section>
 
                     {/* Vendor Risk Management */}
-                    <section>
-                        <h1 className="text-[24px] font-bold">Vendor Risk Management</h1>
-                        <p className="text-[16px] mb-2">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Vendor Risk Management</h1>
+                        <p className="text-[16px] mb-2" style={{color: "#FFFFFFCC"}}>
                             Our supply chain security program ensures that third-party vendors meet our security standards and do not
                             introduce additional risk to our operations or customer data.
                         </p>
 
-                        <h2 className="text-[24px] font-bold">Vendor Security Requirements</h2>
+                        <h2 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Vendor Security Requirements</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>Security Assessments: Comprehensive security evaluations for all critical vendors</li>
-                            <li>Contractual Obligations: Security requirements included in all vendor agreements</li>
-                            <li>Ongoing Monitoring: Regular reassessment of vendor security posture</li>
-                            <li>Incident Coordination: Procedures for managing security incidents involving vendors</li>
+                            <li style={{color: "#FFFFFFCC"}}>Security Assessments: Comprehensive security evaluations for all critical vendors</li>
+                            <li style={{color: "#FFFFFFCC"}}>Contractual Obligations: Security requirements included in all vendor agreements</li>
+                            <li style={{color: "#FFFFFFCC"}}>Ongoing Monitoring: Regular reassessment of vendor security posture</li>
+                            <li style={{color: "#FFFFFFCC"}}>Incident Coordination: Procedures for managing security incidents involving vendors</li>
                         </ul>
                     </section>
 
                     {/* Data Protection and Privacy */}
-                    <section>
-                        <h1 className="text-[24px] font-bold">Data Protection and Privacy</h1>
-                        <p className="text-[16px] mb-2">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Data Protection and Privacy</h1>
+                        <p className="text-[16px] mb-2" style={{color: "#FFFFFFCC"}}>
                             Customer data protection is at the core of our security program. We implement comprehensive controls to
                             ensure customer information remains secure and private.
                         </p>
 
-                        <h2 className="text-[24px] font-bold">Data Protection Measures</h2>
+                        <h2 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Data Protection Measures</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>Encryption: End-to-end encryption for data in transit and at rest</li>
-                            <li>Access Controls: Strict role-based access controls with principle of least privilege</li>
-                            <li>Data Classification: Systematic classification and handling of sensitive information</li>
-                            <li>Retention Policies: Clear data retention and disposal procedures</li>
-                            <li>Privacy by Design: Privacy considerations integrated into all system designs</li>
+                            <li style={{color: "#FFFFFFCC"}}>Encryption: End-to-end encryption for data in transit and at rest</li>
+                            <li style={{color: "#FFFFFFCC"}}>Access Controls: Strict role-based access controls with principle of least privilege</li>
+                            <li style={{color: "#FFFFFFCC"}}>Data Classification: Systematic classification and handling of sensitive information</li>
+                            <li style={{color: "#FFFFFFCC"}}>Retention Policies: Clear data retention and disposal procedures</li>
+                            <li style={{color: "#FFFFFFCC"}}>Privacy by Design: Privacy considerations integrated into all system designs</li>
                         </ul>
                     </section>
 
                     {/* Security Enforcement */}
-                    <section>
-                        <h1 className="text-[24px] font-bold">Security Enforcement</h1>
-                        <p className="text-[16px] mb-2">
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Security Enforcement</h1>
+                        <p className="text-[16px] mb-2" style={{color: "#FFFFFFCC"}}>
                             Vijilan maintains clear enforcement mechanisms to ensure compliance with security policies and procedures
                             across the organization.
                         </p>
 
-                        <h2 className="text-[24px] font-bold">Enforcement Mechanisms</h2>
+                        <h2 className="text-[24px] font-bold" style={{color: "#FFFFFFCC"}}>Enforcement Mechanisms</h2>
                         <ul className="list-disc list-inside space-y-2 text-[16px] pl-4 mb-2">
-                            <li>Policy Violations: Disciplinary action for employees who violate security policies</li>
-                            <li>Access Reviews: Regular review of user access rights and privileges</li>
-                            <li>Security Audits: Internal and external audits to verify compliance</li>
-                            <li>Performance Metrics: Security performance indicators tied to employee evaluations</li>
+                            <li style={{color: "#FFFFFFCC"}}>Policy Violations: Disciplinary action for employees who violate security policies</li>
+                            <li style={{color: "#FFFFFFCC"}}>Access Reviews: Regular review of user access rights and privileges</li>
+                            <li style={{color: "#FFFFFFCC"}}>Security Audits: Internal and external audits to verify compliance</li>
+                            <li style={{color: "#FFFFFFCC"}}>Performance Metrics: Security performance indicators tied to employee evaluations</li>
                         </ul>
                     </section>
 
                     {/* Security Questions and Concerns */}
-                    <section>
-                        <h1 className="text-[24px] font-medium mb-3 mt-6">Security Questions and Concerns</h1>
+                    <section className='px-4 max-w-5xl mx-auto'>
+                        <h1 className="text-[24px] font-medium mb-3 mt-6" style={{color: "#FFFFFFCC"}}>Security Questions and Concerns</h1>
 
 
                         <div className="space-y-2 pl-4 border-l-4 border-[#00AEEF]">
-                            <p className="mb-6 text-[20px]">
+                            <p className="mb-6 text-[20px]" >
                                 If you have questions about our information security program or need to report a security concern, please
                                 contact our security team:
                             </p>
-                            <p className='text-[20px]'>
+                            <p className='text-[20px]' >
                                 Security Team:{" "}
-                                <a href="mailto:security@vijilan.com" className="text-blue-400 hover:underline">
+                                <a href="mailto:security@vijilan.com" className="text-blue-400 hover:underline" >
                                     security@vijilan.com
                                 </a>
                             </p>
-                            <p className='text-[20px]'>
+                            <p className='text-[20px]' >
                                 Security Incidents:{" "}
-                                <a href="mailto:incident@vijilan.com" className="text-blue-400 hover:underline">
+                                <a href="mailto:incident@vijilan.com" className="text-blue-400 hover:underline" >
                                     incident@vijilan.com
                                 </a>
                             </p>
-                            <p className='text-[20px]'>
+                            <p className='text-[20px]' >
                                 Compliance Questions:{" "}
-                                <a href="mailto:compliance@vijilan.com" className="text-blue-400 hover:underline">
+                                <a href="mailto:compliance@vijilan.com" className="text-blue-400 hover:underline" >
                                     compliance@vijilan.com
                                 </a>
                             </p>
-                            <p className="text-[20px] font-medium mt-4">Mailing Address:</p>
-                            <p className='text-[20px]'>Vijilan Security - Information Security Office</p>
-                            <p className='text-[20px]'>Aventura Onyx Tower</p>
-                            <p className='text-[20px]'>1010 S Federal Hwy Suite 1205</p>
-                            <p className='text-[20px]'>Aventura, FL 33180</p>
-                            <p className='text-[20px] pt-6 mb-6'>Phone: 1-800-VIJILAN (1-800-845-4526)</p>
-                            <p className='text-[20px]'>For urgent security matters, please include "URGENT - Security Issue" in your subject line and call our 24x7 SOC at the number above.</p>
+                            <p className="text-[20px] font-medium mt-4" >Mailing Address:</p>
+                            <p className='text-[20px]' >Vijilan Security - Information Security Office</p>
+                            <p className='text-[20px]' >Aventura Onyx Tower</p>
+                            <p className='text-[20px]' >1010 S Federal Hwy Suite 1205</p>
+                            <p className='text-[20px]' >Aventura, FL 33180</p>
+                            <p className='text-[20px] pt-6 mb-6' >Phone: 1-800-VIJILAN (1-800-845-4526)</p>
+                            <p className='text-[20px]' >For urgent security matters, please include "URGENT - Security Issue" in your subject line and call our 24x7 SOC at the number above.</p>
                         </div>
                     </section>
 
-                    <div className='border border-[#00AEEF] rounded-[24px] p-2 my-10'>
-                        <h2 className='text-[24px] font-medium mb-3'>Security Documentation Request</h2>
-                        <p className='text-[20px]'>Customers and prospective customers can request copies of our security certifications, audit reports, and compliance documentation by contacting our compliance team. All requests are processed within 5 business days subject to appropriate confidentiality agreements.</p>
+                    <div className='px-10'>
+                        <div className=' border border-[#00AEEF] rounded-[24px] py-4 my-10'>
+                        <h2 className='text-[24px] font-medium mb-3 text-center'>Security Documentation Request</h2>
+                        <p className='text-[20px] px-4 max-w-5xl mx-auto'>Customers and prospective customers can request copies of our security certifications, audit reports, and compliance documentation by contacting our compliance team. All requests are processed within 5 business days subject to appropriate confidentiality agreements.</p>
+                    </div>
                     </div>
                 </div>
             </section>

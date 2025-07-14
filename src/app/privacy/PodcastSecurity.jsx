@@ -108,7 +108,7 @@ const PodcastSecurity = () => {
                 }}>
                     <div className="w-full max-w-4xl mx-auto">
                         {/* Main Title */}
-                        <h1 className="text-white text-2xl sm:text-3xl md:text-[36px] font-bold text-center mb-8 leading-tight">
+                        <h1 className="text-[#FFFFFFCC] text-2xl sm:text-3xl md:text-[36px] font-bold text-center mb-8 leading-tight" style={{color: "#FFFFFFCC"}}>
                             FEATURED EPISODE: THE PSYCHOLOGY OF SOCIAL <br /> ENGINEERING
                         </h1>
 
@@ -225,11 +225,11 @@ const PodcastSecurity = () => {
                         </p>
 
                         {/* Email Subscription Form */}
-                        <div className="relative z-10 bg-white rounded-[10px] p-2 flex items-center w-full md:max-w-md mx-auto mb-8 ">
+                        <div className="relative z-20 bg-white rounded-[10px] p-2 flex items-center w-full md:max-w-xl mx-auto mb-8">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
-                                className="w-full flex-1 px-6 py-2 text-gray-700 placeholder-gray-400 bg-transparent border-none outline-none text-lg"
+                                className="w-full flex-1 px-6 py-2 text-gray-700 placeholder-gray-400  border-none focus:ring-1 outline-none text-lg"
                             />
                             <button className=" text-white px-8 py-3 text-[16px] rounded-[16px] font-bold " style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
@@ -239,7 +239,7 @@ const PodcastSecurity = () => {
                         </div>
 
                         {/* Action Buttons */}
-                        <div className="flex flex-col md:flex-row gap-4 justify-center items-center -mt-[80px]">
+                        <div className="flex flex-col md:flex-row justify-center items-center -mt-[80px]">
                             <Heading_Btn
                                 btn6={"GET EMAIL NOTIFICATIONS"}
                                
