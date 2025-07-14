@@ -88,9 +88,8 @@ const RequestDemoVijilan = () => {
                                         <div className="relative">
                                             <select
                                                 name="jobTitle"
-                                                className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]"
-                                                required
-                                            >
+                                                className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80] "
+                                                required>
                                                 <option value="">Select</option>
                                                 <option value="ciso">CISO</option>
                                                 <option value="it-director">IT Director</option>
@@ -222,7 +221,7 @@ const RequestDemoVijilan = () => {
                                             Customized walkthrough based on your specific security environment
                                         </li>
                                         <li className="">
-                                            Deep dive into our advanced AI-powered security capabilities
+                                            Real-world attack scenarios and response capabilities
                                         </li>
                                         <li className="">
                                             Integration showcase with your existing security stack
@@ -262,7 +261,7 @@ const RequestDemoVijilan = () => {
                                 </div>
 
                                 {/* Compliance Badges */}
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="bg-[#CDCDD466] rounded-lg px-[24px] py-[12px] text-center">
                                         <div className="text-[16px] font-bold">🛡️ SOC 2 Type II</div>
                                     </div>
@@ -275,12 +274,14 @@ const RequestDemoVijilan = () => {
                                     <div className="bg-[#CDCDD466] rounded-lg px-[24px] py-[12px] text-center">
                                         <div className="text-[16px] font-bold">💳 PCI DSS</div>
                                     </div>
-                                    <div className="bg-[#CDCDD466] rounded-lg px-[24px] py-[12px] text-center">
-                                    <div className="text-[16px] font-bold">💳 PCI DSS</div>
                                 </div>
 
+                                <div className='flex items-center -mt-[15px] justify-center md:w-[264px] mx-auto'>
+                                    <div className="bg-[#CDCDD466] w-full rounded-lg px-[24px] py-[12px] text-center">
+                                        <div className="text-[16px] font-bold">💳 PCI DSS</div>
+                                    </div>
                                 </div>
-                                
+
 
                                 {/* Testimonial */}
                                 <div className="border-l-4 border-[#00AEEF] pl-2">

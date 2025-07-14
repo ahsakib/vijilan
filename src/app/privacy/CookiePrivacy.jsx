@@ -26,7 +26,7 @@ const CookiePrivacy = () => {
 
 
                 {/* policy content */}
-                <div className="py-10 mt-10" style={{
+                <div className="py-20 mt-10" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
                     <div className="">
@@ -245,20 +245,20 @@ const CookiePrivacy = () => {
                         </section>
 
                         {/* Section 3: Similar Technologies */}
-                        <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium text-white">3. similar technologies</h2>
-                            <h3 className="text-[16px] font-medium text-white">web beacons and pixel tags</h3>
-                            <p className="text-[16px]">
+                        <section className='pl-3' style={{color: "#FFFFFFCC"}}>
+                            <h2 className="text-[24px] font-medium " style={{color: "#FFFFFFCC"}}>3. similar technologies</h2>
+                            <h3 className="text-[16px] font-medium " style={{color: "#FFFFFFCC"}}>web beacons and pixel tags</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 we may use web beacons (also known as pixel gifs) to track user interactions with our emails and certain
                                 pages on our website. these help us understand email effectiveness and user engagement.
                             </p>
-                            <h3 className="text-[16px] font-medium text-white">local storage</h3>
-                            <p className="text-[16px]">
+                            <h3 className="text-[16px] font-medium " style={{color: "#FFFFFFCC"}}>local storage</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 on website may use local storage technologies to store information locally on your device. this information
                                 is used to enhance functionality and provide a better user experience.
                             </p>
-                            <h3 className="text-[16px] font-medium text-white">server logs</h3>
-                            <p className="text-[16px]">
+                            <h3 className="text-[16px] font-medium " style={{color: "#FFFFFFCC"}}>server logs</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 our servers automatically collect certain information when you visit our website, including your IP address,
                                 browser type, operating system, and pages visited. this information is used for security, analytics, and
                                 performance optimization.
@@ -267,59 +267,59 @@ const CookiePrivacy = () => {
 
                         {/* Section 4: How We Use Cookies */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mt-4 text-white">4. How We Use Cookies</h2>
-                            <p className="text-[16px]">We use cookies and similar technologies for the following purposes:</p>
-                            <span className="text-[16px] font-medium">Essential Website Operations</span>
+                            <h2 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>4. How We Use Cookies</h2>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>We use cookies and similar technologies for the following purposes:</p>
+                            <span className="text-[16px] font-medium" style={{color: "#FFFFFFCC"}}>Essential Website Operations</span>
 
                             <ul className="list-disc list-inside ml-4 space-y-1 mb-3">
-                                <li>Maintaining user sessions and authentication</li>
-                                <li>Providing security features and preventing fraud</li>
-                                <li>Remembering your preferences and settings</li>
-                                <li>Enabling core website functionality</li>
+                                <li style={{color: "#FFFFFFCC"}}>Maintaining user sessions and authentication</li>
+                                <li style={{color: "#FFFFFFCC"}}>Providing security features and preventing fraud</li>
+                                <li style={{color: "#FFFFFFCC"}}>Remembering your preferences and settings</li>
+                                <li style={{color: "#FFFFFFCC"}}>Enabling core website functionality</li>
                             </ul>
 
-                            <span className="text-[16px] font-medium">Performance and Analytics</span>
+                            <span className="text-[16px] font-medium" style={{color: "#FFFFFFCC"}}>Performance and Analytics</span>
                             <ul className="list-disc list-inside ml-4 space-y-1 mb-3">
-                                <li>Understanding how visitors use our website</li>
-                                <li>Identifying areas for website improvement</li>
-                                <li>Measuring the effectiveness of our content</li>
-                                <li>Detecting and preventing technical issues</li>
+                                <li style={{color: "#FFFFFFCC"}}>Understanding how visitors use our website</li>
+                                <li style={{color: "#FFFFFFCC"}}>Identifying areas for website improvement</li>
+                                <li style={{color: "#FFFFFFCC"}}>Measuring the effectiveness of our content</li>
+                                <li style={{color: "#FFFFFFCC"}}>Detecting and preventing technical issues</li>
                             </ul>
 
-                            <span className="text-[16px] font-medium">Personalization</span>
+                            <span className="text-[16px] font-medium" style={{color: "#FFFFFFCC"}}>Personalization</span>
                             <ul className="list-disc list-inside ml-4 space-y-1 mb-3">
-                                <li>Customizing content based on your interests</li>
-                                <li>Remembering your preferences across visits</li>
-                                <li>Providing relevant product recommendations</li>
-                                <li>Adapting the user interface to your needs</li>
+                                <li style={{color: "#FFFFFFCC"}}>Customizing content based on your interests</li>
+                                <li style={{color: "#FFFFFFCC"}}>Remembering your preferences across visits</li>
+                                <li style={{color: "#FFFFFFCC"}}>Providing relevant product recommendations</li>
+                                <li style={{color: "#FFFFFFCC"}}>Adapting the user interface to your needs</li>
                             </ul>
 
-                            <span className="text-[16px] font-medium">Marketing and Communication</span>
+                            <span className="text-[16px] font-medium" style={{color: "#FFFFFFCC"}}>Marketing and Communication</span>
                             <ul className="list-disc list-inside ml-4 space-y-1 mb-3">
-                                <li>Delivering targeted advertising content</li>
-                                <li>Measuring advertising campaign effectiveness</li>
-                                <li>Building audience segments for marketing</li>
-                                <li>Preventing ad fraud and invalid traffic</li>
+                                <li style={{color: "#FFFFFFCC"}}>Delivering targeted advertising content</li>
+                                <li style={{color: "#FFFFFFCC"}}>Measuring advertising campaign effectiveness</li>
+                                <li style={{color: "#FFFFFFCC"}}>Building audience segments for marketing</li>
+                                <li style={{color: "#FFFFFFCC"}}>Preventing ad fraud and invalid traffic</li>
                             </ul>
 
                         </section>
 
                         {/* Section 5: Legal Basis for Cookie Use */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mb-4 text-white">5. Legal Basis for Cookie Use</h2>
-                            <p className='text-[16px]'>Our legal basis for using cookies depends on the type of cookie and the purpose for which it is used:</p>
-                            <h3 className="text-[16px] font-medium text-white">Consent</h3>
-                            <p className="text-[16px]">
+                            <h2 className="text-[24px] font-medium mb-4 text-white" style={{color: "#FFFFFFCC"}}>5. Legal Basis for Cookie Use</h2>
+                            <p className='text-[16px]' style={{color: "#FFFFFFCC"}}>Our legal basis for using cookies depends on the type of cookie and the purpose for which it is used:</p>
+                            <h3 className="text-[16px] font-medium text-white" style={{color: "#FFFFFFCC"}}>Consent</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 For non-essential cookies, particularly marketing and analytics cookies, we rely on your explicit consent.
                                 You can withdraw this consent at any time through our cookie preference center.
                             </p>
-                            <h3 className="text-[16px] font-medium text-white">Legitimate Interest</h3>
-                            <p className="text-[16px]">
+                            <h3 className="text-[16px] font-medium text-white" style={{color: "#FFFFFFCC"}}>Legitimate Interest</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 For certain analytics and functional cookies, we may rely on legitimate interest where the processing is
                                 necessary for our legitimate business purposes and does not override your fundamental rights and freedoms.
                             </p>
-                            <h3 className="text-[16px] font-medium text-white">Contractual Necessity</h3>
-                            <p className="text-[16px] mb-4">
+                            <h3 className="text-[16px] font-medium text-white" style={{color: "#FFFFFFCC"}}>Contractual Necessity</h3>
+                            <p className="text-[16px] mb-4" style={{color: "#FFFFFFCC"}}>
                                 Essential cookies that are necessary for providing our services are used based on contractual necessity and
                                 our legitimate interest in operating our website securely and effectively.
                             </p>
@@ -327,28 +327,28 @@ const CookiePrivacy = () => {
 
                         {/* Section 6: Third-Party Cookies */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium text-white">6. Third-Party Cookies</h2>
-                            <p className="text-[16px]">
+                            <h2 className="text-[24px] font-medium text-white" style={{color: "#FFFFFFCC"}}>6. Third-Party Cookies</h2>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 Our website may contain content from third-party services that set their own cookies. These include:
                             </p>
-                            <span className="font-semibold">Social Media Platforms</span>
+                            <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Social Media Platforms</span>
                             <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>LinkedIn: Social sharing buttons and professional networking features</li>
-                                <li>Twitter: Tweet embedding and social sharing functionality</li>
-                                <li>YouTube: Video content embedding and playback</li>
+                                <li style={{color: "#FFFFFFCC"}}>LinkedIn: Social sharing buttons and professional networking features</li>
+                                <li style={{color: "#FFFFFFCC"}}>Twitter: Tweet embedding and social sharing functionality</li>
+                                <li style={{color: "#FFFFFFCC"}}>YouTube: Video content embedding and playback</li>
                             </ul>
-                            <span className="font-semibold">Analytics Services</span>
+                            <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Analytics Services</span>
                             <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>Google Analytics: Website traffic analysis and user behavior tracking</li>
-                                <li>Hotjar: User experience analytics and heat mapping</li>
-                                <li>Mixpanel: Product analytics and user engagement tracking</li>
+                                <li style={{color: "#FFFFFFCC"}}>Google Analytics: Website traffic analysis and user behavior tracking</li>
+                                <li style={{color: "#FFFFFFCC"}}>Hotjar: User experience analytics and heat mapping</li>
+                                <li style={{color: "#FFFFFFCC"}}>Mixpanel: Product analytics and user engagement tracking</li>
                             </ul>
 
-                            <span className="font-semibold">Marketing Platforms</span>
+                            <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Marketing Platforms</span>
                             <ul className="list-disc list-inside ml-4 space-y-1">
-                                <li>Hubspot: CRM integration and marketing automation</li>
-                                <li>Salesforce: Customer relationship management</li>
-                                <li>Pardot: B2B marketing automation and lead tracking</li>
+                                <li style={{color: "#FFFFFFCC"}}>Hubspot: CRM integration and marketing automation</li>
+                                <li style={{color: "#FFFFFFCC"}}>Salesforce: Customer relationship management</li>
+                                <li style={{color: "#FFFFFFCC"}}>Pardot: B2B marketing automation and lead tracking</li>
                             </ul>
 
 
@@ -358,8 +358,8 @@ const CookiePrivacy = () => {
                             {/* Third-Party Responsibility Card */}
                             <div className="border rounded-[24px] my-8">
                                 <div className="px-3 md:px-14 py-6">
-                                    <h4 className="text-[24px] font-medium mb-2 text-white text-center">Third-Party Responsibility</h4>
-                                    <p className="text-[16px]">
+                                    <h4 className="text-[24px] font-medium mb-2 text-white text-center" >Third-Party Responsibility</h4>
+                                    <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                         Third-party cookies are governed by the respective privacy policies of those companies. We encourage you
                                         to review their policies to understand how they collect and use your information.
                                     </p>
@@ -370,9 +370,9 @@ const CookiePrivacy = () => {
                         {/* Section 7: Your Cookie Choices and Controls */}
                         <section className=''>
                             <div className='pl-3'>
-                                <h2 className="text-[24px] font-medium mb-4 text-white">7. Your Cookie Choices and Controls</h2>
-                                <h3 className='text-[16px] font-medium'>Cookie Preference Center</h3>
-                                <p className="mb-4">
+                                <h2 className="text-[24px] font-medium mb-4 text-white" style={{color: "#FFFFFFCC"}}>7. Your Cookie Choices and Controls</h2>
+                                <h3 className='text-[16px] font-medium' >Cookie Preference Center</h3>
+                                <p className="mb-4" style={{color: "#FFFFFFCC"}}>
                                     You can manage your cookie preferences at any time through our cookie preference center, accessible from the
                                     footer of our website or by clicking the &quot;Cookie Settings&quot; link.
                                 </p>
@@ -384,7 +384,7 @@ const CookiePrivacy = () => {
                                     <h1 className="text-white text-center">🍪 Cookie Preferences</h1>
                                 </div>
                                 <div className="space-y-4">
-                                    <p className="text-sm mb-2">
+                                    <p className="text-sm mb-2" style={{color: "#FFFFFFCC"}}>
                                         We use cookies to enhance your experience on our website. You can choose which categories of cookies you
                                         want to accept:
                                     </p>
@@ -396,9 +396,9 @@ const CookiePrivacy = () => {
                                                         type="checkbox" defaultChecked className="checkbox" />
                                                     <label
                                                         htmlFor="essential"
-                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" style={{color: "#FFFFFFCC"}}
                                                     >
-                                                        <span className="font-bold">Essential:</span> Required for website functionality (always active)
+                                                        <span className="font-bold" style={{color: "#FFFFFFCC"}}>Essential:</span> Required for website functionality (always active)
                                                     </label>
                                                 </div>
                                             </li>
@@ -408,9 +408,9 @@ const CookiePrivacy = () => {
                                                         type="checkbox" defaultChecked className="checkbox" />
                                                     <label
                                                         htmlFor="analytics"
-                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" style={{color: "#FFFFFFCC"}}
                                                     >
-                                                        <span className="font-bold">Analytics:</span> Help us understand website usage
+                                                        <span className="font-bold" style={{color: "#FFFFFFCC"}}>Analytics:</span> Help us understand website usage
                                                     </label>
                                                 </div>
                                             </li>
@@ -420,8 +420,8 @@ const CookiePrivacy = () => {
                                                         type="checkbox" defaultChecked className="checkbox" />
                                                     <label
                                                         htmlFor="functional"
-                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                                                        <span className="font-bold">Functional:</span> Remember your preferences
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" style={{color: "#FFFFFFCC"}}>
+                                                        <span className="font-bold" style={{color: "#FFFFFFCC"}}>Functional:</span> Remember your preferences
                                                     </label>
                                                 </div>
                                             </li>
@@ -431,71 +431,71 @@ const CookiePrivacy = () => {
                                                         type="checkbox" defaultChecked className="checkbox" />
                                                     <label
                                                         htmlFor="marketing"
-                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" style={{color: "#FFFFFFCC"}}
                                                     >
-                                                        <span className="font-bold">Marketing:</span> Provide relevant advertisements
+                                                        <span className="font-bold" style={{color: "#FFFFFFCC"}}>Marketing:</span> Provide relevant advertisements
                                                     </label>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
-                                    <p className="text-sm mt-4">You can change these settings at any time in our Cookie Preference Center.</p>
+                                    <p className="text-sm mt-4" style={{color: "#FFFFFFCC"}}>You can change these settings at any time in our Cookie Preference Center.</p>
                                 </div>
                             </div>
 
                             <div className='pl-3'>
-                                <h3 className="text-[24px] font-medium text-white">Browser Controls</h3>
-                                <p className=" text-[16px]">
+                                <h3 className="text-[24px] font-medium text-white" style={{color: "#FFFFFFCC"}}>Browser Controls</h3>
+                                <p className=" text-[16px]" style={{color: "#FFFFFFCC"}}>
                                     Most web browsers allow you to control cookies through their settings preferences. Here&apos;s how to manage
                                     cookies in popular browsers:
                                 </p>
                                 <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                    <li>
-                                        <span className="font-semibold">Chrome:</span> Settings &rarr; Privacy & Security &rarr; Cookies and other
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Chrome:</span> Settings &rarr; Privacy & Security &rarr; Cookies and other
                                         site data
                                     </li>
-                                    <li>
-                                        <span className="font-semibold">Firefox:</span> Settings &rarr; Privacy & Security &rarr; Cookies and Site
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Firefox:</span> Settings &rarr; Privacy & Security &rarr; Cookies and Site
                                         Data
                                     </li>
-                                    <li>
-                                        <span className="font-semibold">Safari:</span> Preferences &rarr; Privacy &rarr; Manage Website Data
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Safari:</span> Preferences &rarr; Privacy &rarr; Manage Website Data
                                     </li>
-                                    <li>
-                                        <span className="font-semibold">Edge:</span> Settings &rarr; Cookies and site permissions &rarr; Cookies
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Edge:</span> Settings &rarr; Cookies and site permissions &rarr; Cookies
                                         and site data
                                     </li>
                                 </ul>
 
-                                <h3 className="text-[24px] font-medium mt-4 text-white">Opt-Out Tools</h3>
-                                <p className="text-[16px]">You can opt out of certain third-party tracking through these industry tools:</p>
+                                <h3 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>Opt-Out Tools</h3>
+                                <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>You can opt out of certain third-party tracking through these industry tools:</p>
                                 <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                    <li>
-                                        <a href="#" className="underline text-blue-400">
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <a href="#" className="underline text-blue-400" style={{color: "#FFFFFFCC", textDecoration: "underline"}}>
                                             Digital Advertising Alliance Opt-Out
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#" className="underline text-blue-400">
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <a href="#" className="underline text-blue-400" style={{color: "#FFFFFFCC", textDecoration: "underline"}}>
                                             Network Advertising Initiative Opt-Out
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#" className="underline text-blue-400">
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <a href="#" className="underline text-blue-400" style={{color: "#FFFFFFCC", textDecoration: "underline"}}>
                                             Your Online Choices (EU)
                                         </a>
                                     </li>
                                 </ul>
 
-                                <h3 className="text-[24px] font-medium mt-4 text-white">Mobile Device Controls</h3>
-                                <p className="text-[16px]">On mobile devices, you can control tracking through device settings:</p>
+                                <h3 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>Mobile Device Controls</h3>
+                                <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>On mobile devices, you can control tracking through device settings:</p>
                                 <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                    <li>
-                                        <span className="font-semibold">iOS:</span> Settings &rarr; Privacy & Security &rarr; Tracking &rarr;
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>iOS:</span> Settings &rarr; Privacy & Security &rarr; Tracking &rarr;
                                         Limit Ad Tracking
                                     </li>
-                                    <li>
-                                        <span className="font-semibold">Android:</span> Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads
+                                    <li style={{color: "#FFFFFFCC"}}>
+                                        <span className="font-semibold" style={{color: "#FFFFFFCC"}}>Android:</span> Settings &rarr; Google &rarr; Ads &rarr; Opt out of Ads
                                         Personalization
                                     </li>
                                 </ul>
@@ -504,93 +504,93 @@ const CookiePrivacy = () => {
 
                         {/* Section 8: Cookie Retention and Data Security */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-bold mt-4 mb-6 text-white">8. Cookie Retention and Data Security</h2>
-                            <h3 className="text-[24px] font-medium text-white">Retention Periods</h3>
-                            <p className="text-[16px]">Different types of cookies have different retention periods:</p>
+                            <h2 className="text-[24px] font-bold mt-4 mb-6 text-white" style={{color: "#FFFFFFCC"}}>8. Cookie Retention and Data Security</h2>
+                            <h3 className="text-[24px] font-medium text-white" style={{color: "#FFFFFFCC"}}>Retention Periods</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>Different types of cookies have different retention periods:</p>
                             <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                <li>Session Cookies: Deleted when you close your browser</li>
-                                <li>Persistent Cookies: Remain until expiration date or manual deletion</li>
-                                <li>Essential Cookies: Typically 1 session to 1 year</li>
-                                <li>Analytics Cookies: Typically 24 hours to 2 years</li>
-                                <li>Marketing Cookies: Typically 30 days to 2 years</li>
+                                <li style={{color: "#FFFFFFCC"}}>Session Cookies: Deleted when you close your browser</li>
+                                <li style={{color: "#FFFFFFCC"}}>Persistent Cookies: Remain until expiration date or manual deletion</li>
+                                <li style={{color: "#FFFFFFCC"}}>Essential Cookies: Typically 1 session to 1 year</li>
+                                <li style={{color: "#FFFFFFCC"}}>Analytics Cookies: Typically 24 hours to 2 years</li>
+                                <li style={{color: "#FFFFFFCC"}}>Marketing Cookies: Typically 30 days to 2 years</li>
                             </ul>
 
-                            <h3 className="text-[24px] font-medium mt-4 text-white">Data Security</h3>
-                            <p className="text-[16px]">We implement appropriate technical and organizational measures to protect cookie data:</p>
+                            <h3 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>Data Security</h3>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>We implement appropriate technical and organizational measures to protect cookie data:</p>
                             <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                <li>Encryption of sensitive cookie data</li>
-                                <li>Secure transmission protocols (HTTPS)</li>
-                                <li>Regular security assessments and updates</li>
-                                <li>Access controls and audit logging</li>
-                                <li>Compliance with industry security standards</li>
+                                <li style={{color: "#FFFFFFCC"}}>Encryption of sensitive cookie data</li>
+                                <li style={{color: "#FFFFFFCC"}}>Secure transmission protocols (HTTPS)</li>
+                                <li style={{color: "#FFFFFFCC"}}>Regular security assessments and updates</li>
+                                <li style={{color: "#FFFFFFCC"}}>Access controls and audit logging</li>
+                                <li style={{color: "#FFFFFFCC"}}>Compliance with industry security standards</li>
                             </ul>
                         </section>
 
                         {/* Section 9: International Data Transfers */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mt-4 text-white">9. International Data Transfers</h2>
-                            <p className="text-[16px]">
+                            <h2 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>9. International Data Transfers</h2>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 Some of our third-party cookie providers may transfer data to countries outside your jurisdiction. We ensure
                                 appropriate safeguards are in place:
                             </p>
-                            <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                <li>Adequacy Decisions</li>
-                                <p className="ml-4">
+                           
+                                <p style={{color: "#FFFFFFCC"}}>Adequacy Decisions</p>
+                                <p className="" style={{color: "#FFFFFFCC"}}>
                                     We ensure data transfers to countries with adequacy decisions from relevant data protection authorities.
                                 </p>
-                                <li>Standard Contractual Clauses</li>
-                                <p className="ml-4">
+                                <p style={{color: "#FFFFFFCC"}}>Standard Contractual Clauses</p>
+                                <p className="" style={{color: "#FFFFFFCC"}}>
                                     For transfers to countries without adequacy decisions, we use Standard Contractual Clauses (SCCs) or
                                     similar mechanisms to ensure adequate protection.
                                 </p>
-                                <li>Certification Programs</li>
-                                <p className="ml-4">
+                                <p style={{color: "#FFFFFFCC"}}>Certification Programs</p>
+                                <p className="" style={{color: "#FFFFFFCC"}}>
                                     We work with providers that participate in recognized certification programs such as the EU-US Data
                                     Privacy Framework where applicable.
                                 </p>
-                            </ul>
+                           
                         </section>
 
                         {/* Section 10: Children's Privacy */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mt-4 text-white">10. Children&apos;s Privacy</h2>
-                            <p className="text-[16px]">
+                            <h2 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>10. Children&apos;s Privacy</h2>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 Our website and services are not directed to children under 18 years of age. We do not knowingly collect
                                 personal information from children through cookies or any other means. If we become aware that we have
                                 collected information from a child under 18, we will take steps to delete such information promptly.
                             </p>
-                            <p className="text-[16px]">Parents and guardians can help protect children&apos;s privacy by:</p>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>Parents and guardians can help protect children&apos;s privacy by:</p>
                             <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                <li>Supervising children&apos;s online activities</li>
-                                <li>Using parental control software</li>
-                                <li>Configuring browser settings to block or limit cookies</li>
-                                <li>Educating children about online privacy</li>
+                                <li style={{color: "#FFFFFFCC"}}>Supervising children&apos;s online activities</li>
+                                <li style={{color: "#FFFFFFCC"}}>Using parental control software</li>
+                                <li style={{color: "#FFFFFFCC"}}>Configuring browser settings to block or limit cookies</li>
+                                <li style={{color: "#FFFFFFCC"}}>Educating children about online privacy</li>
                             </ul>
                         </section>
 
                         {/* Section 11: Updates to This Cookie Policy */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mt-4 text-white">11. Updates to This Cookie Policy</h2>
-                            <p className="text-[16px]">
+                            <h2 className="text-[24px] font-medium mt-4 text-white" style={{color: "#FFFFFFCC"}}>11. Updates to This Cookie Policy</h2>
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 We may update this Cookie Policy from time to time to reflect changes in our practices, legal requirements,
                                 or the technologies we use. When we make material changes, we will:
                             </p>
                             <ul className="list-disc list-inside text-[16px] ml-4 space-y-1">
-                                <li>Post the updated policy on our website</li>
-                                <li>Update the &quot;Last Updated&quot; date at the top of this policy</li>
-                                <li>Notify you through our website banner or email if required by law</li>
-                                <li>Request new consent for new types of cookies if required</li>
+                                <li style={{color: "#FFFFFFCC"}}>Post the updated policy on our website</li>
+                                <li style={{color: "#FFFFFFCC"}}>Update the &quot;Last Updated&quot; date at the top of this policy</li>
+                                <li style={{color: "#FFFFFFCC"}}>Notify you through our website banner or email if required by law</li>
+                                <li style={{color: "#FFFFFFCC"}}>Request new consent for new types of cookies if required</li>
                             </ul>
-                            <p className="text-[16px]">
+                            <p className="text-[16px]" style={{color: "#FFFFFFCC"}}>
                                 We encourage you to review this Cookie Policy periodically to stay informed about our cookie practices.
                             </p>
                         </section>
 
                         {/* Section 12: Contact Us */}
                         <section className='pl-3'>
-                            <h2 className="text-[24px] font-medium mt-4 mb-4 text-white">12. Contact Us</h2>
+                            <h2 className="text-[24px] font-medium mt-4 mb-4 text-white" style={{color: "#FFFFFFCC"}}>12. Contact Us</h2>
                             <div className='border-l-4 border-[#00AEEF] pl-2'>
-                                <h3 className="text-[16px] font-medium mb-3 text-white">Cookie and Privacy Questions</h3>
+                                <h3 className="text-[16px] font-medium mb-3 text-white" >Cookie and Privacy Questions</h3>
                                 <p className="mb-4 text-[16px]">
                                     If you have questions about this Cookie Policy or wish to exercise your rights regarding cookies and
                                     tracking technologies, please contact us:
@@ -625,7 +625,7 @@ const CookiePrivacy = () => {
                         <section className='my-10 pl-2'>
                             <div className='border border-[#00AEEF] rounded-[24px] py-5'>
                                 <h1 className='text-[24px] font-medium mb-2 text-center'>Data Protection Officer</h1>
-                                <p className='text-[16px] pl-2 md:pl-12'>For EU residents or other regions with data protection regulations, you may contact our Data Protection Officer at dpo@vijilan.com for assistance with cookie-related privacy matters.</p>
+                                <p className='text-[16px] pl-2 md:pl-12' style={{color: "#FFFFFFCC"}}>For EU residents or other regions with data protection regulations, you may contact our Data Protection Officer at dpo@vijilan.com for assistance with cookie-related privacy matters.</p>
                             </div>
                         </section>
 
@@ -641,7 +641,7 @@ const CookiePrivacy = () => {
                                     }}
                                 />
                                 <h1 className='text-[24px] mb-2 font-medium text-center'>Legal Disclaimer</h1>
-                                <p className='text-[16px] pl-2 md:pl-12'>This Cookie Policy is provided for informational purposes and forms part of our overall privacy framework. For comprehensive information about how we handle your personal data, please also review our Privacy Policy and Terms and Conditions.</p>
+                                <p className='text-[16px] pl-2 md:pl-12' style={{color: "#FFFFFFCC"}}>This Cookie Policy is provided for informational purposes and forms part of our overall privacy framework. For comprehensive information about how we handle your personal data, please also review our Privacy Policy and Terms and Conditions.</p>
                             </div>
                         </section>
 
