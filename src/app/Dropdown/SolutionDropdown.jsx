@@ -19,6 +19,12 @@ const leftColumnServices = [
         url: "threat-respond-service"
     },
     {
+        icon: response,
+        title: "ThreatRemediate (Fully managed XDR with active Remediation)",
+        description: "Our flagship hands-off solution: 24/7 monitoring, detection, threat hunting, AND direct containment and remediation by Vijilan's expert SOC team. Powered by CrowdStrike Falcon.",
+        url: "threat-respond-service-2"
+    },
+    {
         icon: identity,
         title: "Managed Identity Threat Detection & Response (Managed ITDR)",
         description:
@@ -30,7 +36,7 @@ const leftColumnServices = [
         title: "Managed Exposure Management",
         description:
             "Proactively identify and reduce your attack surface with CrowdStrike Falcon Exposure Management, prioritizing vulnerabilities and mitigating risks.",
-        url: "#"
+        url: "tier3-partner-portal"
     },
 ]
 
@@ -54,21 +60,21 @@ const rightColumnServices = [
         title: "LogRespond (Enhanced Investigation)",
         description:
             "Deeper investigation and analysis by our SOC team with guided response recommendations for your internal team.",
-        url:"#"
+        url:"threatremediate-essentail"
       },
     {
         icon: security,
         title: "LogRemediate (Full Managed Security)",
         description:
             "Complete managed security service integrating SIEM, SOC, and full remediation capabilities directly by Vijilan's expert team.",
-        url: "#"
+        url: "threatremediate-managed-xdr"
        },
     {
         icon: robot,
         title: "Managed Next-Gen SIEM (CrowdStrike Falcon)",
         description:
             "Expert deployment and management of CrowdStrike Falcon Next-Gen SIEM for AI-native security operations and seamless Falcon Complete readiness.",
-        url: "#"
+        url: "enterprise-landing"
     },
     {
         icon: crib,

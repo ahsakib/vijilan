@@ -20,21 +20,21 @@ const leftColumnServices = [
         title: "IT Consultants",
         description:
             "Recommend best-in-class cybersecurity solutions that deliver tangible value to your enterprise clients. Partner with us for mutually beneficial opportunities.",
-        url: "#"
+        url: "msp-launchpad"
     },
     {
 
         title: "vCISOs (Virtual CISOs)",
         description:
             "Enhance your clients' security posture with turn-key solutions that deliver strategic oversight and operational excellence. Access deep technical expertise and broader managed services.",
-        url: "#"
+        url: "automation-focused"
     },
     {
 
         title: "MSSPs (Managed Security Service Providers)",
         description:
             "Augment your existing SOC capabilities, modernize your SIEM with LogScale, or leverage co-managed services to scale your operations cost-effectively.",
-        url: "#"
+        url: "threatremediate-remote-no-pricing"
     }
 ]
 
@@ -58,7 +58,7 @@ const rightColumnServices = [
         title: "Partner Locator (for SMBs)",
         description:
             "Find a trusted Vijilan partner in your region. Searchable directory of certified partners providing managed cybersecurity services for small and medium businesses.",
-        url: "#"
+        url: "threatremediate-remote-pricing"
     },
     {
 
@@ -68,7 +68,7 @@ const rightColumnServices = [
     {
 
         title: "Partner Sales & Marketing Portal",
-        url: "#"
+        url: "tier-landing"
     }
 ]
 
@@ -115,20 +115,13 @@ const PartnersDropdown = () => {
                         {rightColumnServices.map((service, index) => (
                         <div key={index} className="flex gap-4">
                             <div className="flex-1">
-                            {service.url ? (
                                 <Link to={`/${service.url}`} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                                 <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
                                     {service.title}
                                 </h3>
-                                </Link>
-                            ) : (
-                                <h3 className="text-white font-medium text-[16px] mb-2 leading-tight">
-                                {service.title}
-                                </h3>
-                            )}
-                            {service.description && (
                                 <p className="text-sm leading-relaxed">{service.description}</p>
-                            )}
+                                </Link>
+                              
                             </div>
                         </div>
                         ))}

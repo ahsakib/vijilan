@@ -1,5 +1,7 @@
 /* Home.css - Custom styles for the Vijilan landing page */
-
+.chevron-colored path {
+  color: #00AEEF !important;
+}
  *{
   color: white;
   /* border: 2px solid white; */

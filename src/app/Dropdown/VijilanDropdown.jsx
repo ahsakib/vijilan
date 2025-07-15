@@ -8,7 +8,7 @@ const serveData = [
     },
     {
         title: "Our Expertise (SOC & Team) ",
-         url: "#"
+         url: "managed-siem-soc"
     },
     {
         title: "Trust & Compliance (SOC 2)",
@@ -16,11 +16,11 @@ const serveData = [
     },
     {
         title: "Supported Integrations",
-        url: "#"
+        url: "contact"
     },
     {
         title: "Customer Success Stories",
-        url: "#"
+        url: "case-studies"
     },
 ]
 

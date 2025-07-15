@@ -17,6 +17,7 @@ const Header = () => {
   const location = useLocation();
   const [activeDropdown, setActiveDropdown] = useState(null);
   const dropdownRef = useRef(null);
+  const [openDropdown,setOpenDropdown] = useState(false)
 
   // Outside click detection
   useEffect(() => {
@@ -97,9 +98,13 @@ const Header = () => {
     },
   ];
 
+  const showEmergencyBannerRoutes = ['/', '/serve','/resources','/complain-solution'];
+
+
   return (
     <div className='w-full fixed z-50 top-0'>
-      {location.pathname === '/' && <EmergencyBanner />}
+      {showEmergencyBannerRoutes.includes(location.pathname) && <EmergencyBanner />}
+
 
       <header className={`mx-auto h-[96px] flex items-center transition-all duration-300 ease-in-out 
         ${scrolled ? 'bg-opacity-50 bg-white' : 'bg-transparent'} 
@@ -146,44 +151,33 @@ const Header = () => {
                   <div
                     key={index}
                     className="relative group"
-                    onMouseEnter={() =>
-                      item.hasDropdown && setActiveDropdown(item.name)
-                    }>
+                    onClick={() =>
+                    {
+                      item.hasDropdown &&
+                      setActiveDropdown(prev => prev === item.name ? null : item.name)
+                    }
+                    }
+                  >
                     <a
                       href="#"
                       className={`fontSize text-[16px]  flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-active" : ""}`}>
                       <span className={`${activeDropdown === item.name ? "text-active" : ""}`}>{item.name}</span>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px] !text-[#00AEEF]" : ""
+                        className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px] chevron-colored" : ""
                           }`} />
                     </a>
-                    {/* Dropdown Container */}
-                    {/* {activeDropdown && (
-                      <div
-                        ref={dropdownRef}
-                        onMouseEnter={() => setActiveDropdown(activeDropdown)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                        className="fixed top-[102px] left-0 w-full z-50 max-h-[80vh] overflow-y-auto"
-                      >
-                        {
-                          menuItems.find((item) => item.name === activeDropdown)
-                            ?.dropdownComponent
-                        }
-                      </div>
-                    )} */}
 
                     {activeDropdown === item.name && (
                       <div
                         ref={dropdownRef}
-                        className={`z-50 mt-2 ${item.isFullWidth
-                          ? "fixed top-[96px] left-0 w-full overflow-y-auto max-h-[80vh]"
+                        className={`z-50 mt-[43px] ${item.isFullWidth
+                          ? "fixed left-0 w-full overflow-y-auto max-h-[80vh]"
                           : "absolute top-full left-1/2 w-max min-w-[200px] max-w-[calc(100vw-20px)] overflow-auto -translate-x-1/2"
                           }`}
                       >
                         {item.dropdownComponent}
                       </div>
                     )}
-
 
                   </div>
                 ))}
