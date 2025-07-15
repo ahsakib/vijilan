@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SuccessCard = ({
     bgColor = '#00AEEF3D',
@@ -11,7 +12,8 @@ const SuccessCard = ({
     buttonGradient = 'linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)',
     outlineButtonText = '',
     isOutlineButton = false,
-    centerContent = true
+    centerContent = true,
+    url
 }) => {
     return (
         <div className={`relative backdrop-blur-sm rounded-[24px] p-2 md:p-8 ${centerContent ? 'text-center' : ''}`} style={{ backgroundColor: bgColor }}>
@@ -48,8 +50,9 @@ const SuccessCard = ({
 
             {/* Main Gradient Button */}
             {buttonText && (
+                <Link to={url ? url : ""}>
                 <button
-                    className="p-[16px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                    className="p-[16px] text-lg relative z-10 font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                     style={{
                         background: buttonGradient
                     }}
@@ -63,6 +66,7 @@ const SuccessCard = ({
                         </svg>
                     </div>
                 </button>
+                </Link>
             )}
 
             {/* Outline Button */}

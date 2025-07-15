@@ -15,6 +15,7 @@ import CardBorder from "@components/CardBorder";
 import NavyBlueBackground from "@components/NavyBlueBackground";
 import Heading_Btn from "@components/Heading_Btn";
 import GradientButton from "@components/GradientButton";
+import { Link } from "react-router-dom";
 
 const DestribuationPartner = ({ }) => {
 
@@ -156,12 +157,15 @@ const DestribuationPartner = ({ }) => {
                                 </div>
                             </div>
                             <div class="w-full p-3 md:p-8  rounded-lg ">
-                                <h1 class="text-2xl md:text-[40px] font-bold text-white mb-5">Don't See Your Distributor?</h1>
+                                <h1 class="text-2xl md:text-[36px] font-bold text-white mb-5">Don't See Your Distributor?</h1>
                                 <p class="text-white text-[18px] text-center mb-6 leading-relaxed">
                                     We're always expanding our distribution network. <br />
                                     Contact our channel team to discuss adding your <br /> preferred distributor or to learn more about our <br /> procurement options.
                                 </p>
-                                <GradientButton children={"Schedule a compliance strategy call"} />
+                                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                
+                                    <GradientButton children={"Schedule a compliance strategy call"} />
+                                </Link>
                             </div>
                         </div>
                     </div>

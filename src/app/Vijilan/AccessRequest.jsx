@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AccessRequest = () => {
     return (
@@ -158,7 +159,7 @@ const AccessRequest = () => {
 
                     </div>
 
-                    <div className='flex items-center justify-center mx-auto mt-5'>
+                    <Link to={"/dashbord"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='flex items-center justify-center mx-auto mt-5'>
 
                         {/* Submit Button */}
                         <button
@@ -168,7 +169,7 @@ const AccessRequest = () => {
                             }}>
                             GET INSTANT ACCESS
                         </button>
-                    </div>
+                    </Link>
 
 
                     {/* Footer Text */}

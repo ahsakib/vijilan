@@ -5,6 +5,7 @@ import { Check, Download } from 'lucide-react';
 import CardContent from '@components/CardContent';
 import CardBorder from '@components/CardBorder';
 import Heading_Btn from '@components/Heading_Btn';
+import { Link } from 'react-router-dom';
 
 
 
@@ -331,11 +332,14 @@ const ThreatremediateRemotePricing = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <button className="w-full text-white font-bold py-[18px] px-8 md:px-[65px] rounded-[4px] text-sm" style={{
-                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
-                        }}>
-                            Get your custom quote
-                        </button>
+                        <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
+                            <button className="w-full text-white font-bold py-[18px] px-8 md:px-[65px] rounded-[4px] text-sm" style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                            }}>
+                                Get your custom quote
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

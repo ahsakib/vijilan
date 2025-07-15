@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import NavyBlueBackground from "./NavyBlueBackground";
 
-const InfoSection = ({ position = "right", width, height, design1, design2, heading, subtitle, desc, btnText, modify }) => {
+const InfoSection = ({ position = "right", width, height, design1, design2, heading, subtitle, desc, btnText, modify, url }) => {
     const content = (
         <>
             {design1 && (
@@ -34,9 +35,9 @@ const InfoSection = ({ position = "right", width, height, design1, design2, head
                             {desc}
                         </p>
 
-                        <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md  border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
+                        <Link to={url ? url : ""} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md  border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
                             {btnText}
-                        </div>
+                        </Link>
                     </div>
                 )
             }

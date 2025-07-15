@@ -11,6 +11,7 @@ import ListComponent from '../component/ListComponent';
 import { SecurityCardData } from '@app/Constant/Constant';
 import MesurableComponentDashboard from '../component/MesurableComponentDashboard';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Resilience_case = () => {
 
@@ -153,11 +154,17 @@ const Resilience_case = () => {
             <section className="container mx-auto px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                        <span className="hover:text-white cursor-pointer">Home</span>
+                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">Home</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Resources</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="!text-blue-400 text-[13px] font-medium">Manufacturing Resilience</span>
                     </nav>

@@ -94,6 +94,7 @@ const PlatformTechnology = ({ }) => {
                     h1={`The Engine Behind Your Defense: The\nVijilan Security Platform`}
                     desc={`Our platform is not a single product, but a unified technology stack that enables \n every Vijilan service. Discover how we combine the power of CrowdStrike, the \n intelligence of Cribl, and our proprietary ViSH platform to deliver security outcomes \n that are faster, smarter, and more efficient.`}
                     btn1={"request a technical deep dive"}
+                    url={"/contact"}
                 />
 
             </section>
@@ -250,6 +251,7 @@ const PlatformTechnology = ({ }) => {
                     h1={"Ready for a Deeper Dive?"}
                     desc={"Schedule a live, technical demo with one of our security architects to see how the\nVijilan platform can integrate with your specific environment."}
                     btn1={"schedule a platform demo"}
+                    url={"/contact"}
                 />
             </section>
         </div>

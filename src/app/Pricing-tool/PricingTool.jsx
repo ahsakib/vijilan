@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Search } from "lucide-react"
 import investigate from "../../Assets/Investigate.png";
+import { Link } from 'react-router-dom';
 
 const PricingTool = () => {
     const tools = [
@@ -79,10 +80,12 @@ const PricingTool = () => {
                     <p className="text-white text-[12px] md:text-[16px] mb-8 font-medium leading-relaxed">
                         You've seen the pricing and the resources. The next step is to join our network of <br /> successful partners.
                     </p>
-
+                    <Link to={"/become-a-partner"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    
                     <button className="bg-white !text-[#F1511B] font-bold text-[16px] px-3 md:px-8 py-4 rounded-[8px] ">
                         Become an Official Partner Now
                     </button>
+                    </Link>
                 </div>
             </section>
 

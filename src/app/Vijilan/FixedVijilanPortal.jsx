@@ -2,6 +2,7 @@ import { Monitor, Shield } from 'lucide-react';
 import React from 'react';
 import pc from "../../Assets/pc.png";
 import Heading_Btn from '@components/Heading_Btn';
+import { Link } from 'react-router-dom';
 
 const FixedVijilanPortal = () => {
     return (
@@ -148,11 +149,11 @@ const FixedVijilanPortal = () => {
 
                 <hr className='bg-[#CAC4D0] mb-10' />
                 {/* Continue Button */}
-                <div className="flex justify-end max-w-6xl mx-auto">
+                <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex justify-end max-w-6xl mx-auto">
                     <button className="bg-[#00AEEF] text-white text-[16px] font-bold py-[12px] px-[24px] rounded-lg ">
                         CONTINUE TO QUOTE BUILDER
                     </button>
-                </div>
+                </Link>
             </div>
         </div>
     );

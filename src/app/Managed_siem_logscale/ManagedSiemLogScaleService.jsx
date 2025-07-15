@@ -12,7 +12,7 @@ import training from "../../Assets/training.png";
 import workflow from "../../Assets/workflow.png";
 import backgroundPattern from "../../Assets/Background pattern.png";
 import Heading_Btn from '@components/Heading_Btn';
-
+import { Link } from 'react-router-dom';
 
 
 const pricingData = [
@@ -122,7 +122,7 @@ const ManagedSiemLogScaleService = () => {
                     desc={`Leverage Vijilan's expert-led services to deploy, manage, and optimize the world's\nmost advanced, AI-native SIEM. Transform your data chaos into strategic clarity and\nstop threats faster.`}
                     btn1="REQUEST A SCOPING CALL"
                     btn2="LEARN ABOUT LOGINGEST"
-
+                    url={"/contact"}
                 />
 
 
@@ -296,7 +296,7 @@ const ManagedSiemLogScaleService = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <div className="flex justify-center">
+                                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex justify-center">
                                     {plan.isPopular && <button className={` px-8 py-3 font-semibold text-sm rounded-lg transition-all duration-300 `} style={{
                                         background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
                                     }}
@@ -318,7 +318,7 @@ const ManagedSiemLogScaleService = () => {
                                         {plan.buttonText}
                                     </button>}
 
-                                </div>
+                                </Link>
                             </div>
                         ))}
                     </div>
@@ -466,7 +466,8 @@ const ManagedSiemLogScaleService = () => {
                 btn2="LEAN ABOUT LOGSCALE"
                 h1="Ready to Build a Future-Proof SOC?"
                 desc="Every environment is unique. Contact our LogScale experts for a detailed scoping call  to determine the perfect package for your organization's needs."
-            />
+                url={"/contact"}
+           />
 
 
             <section className="relative z-10 py-16">

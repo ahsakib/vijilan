@@ -39,6 +39,7 @@ const Corrected_MSP_Program = () => {
                     rating="★★★★★ | Trusted by over 500 MSPs worldwide"
                     btn1="Apply to become a partner"
                     btn2="download partner kit"
+                    url={"/become-a-partner"}
                 />
             </div>
 
@@ -124,6 +125,7 @@ const Corrected_MSP_Program = () => {
                         <Heading_Btn
                             desc='"Ask me which Vijilan services are best suited for meeting HIPAA compliance requirements, or how we can help you achieve CMMC Level 2 certification."'
                             btn1="start a chat"
+                            url={"/contact"}
                         />
                     </div>
 

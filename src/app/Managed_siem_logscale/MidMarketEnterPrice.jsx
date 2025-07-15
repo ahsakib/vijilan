@@ -7,6 +7,7 @@ import hand from "../../Assets/hand.png";
 import eye from "../../Assets/eye.png";
 import circle from "../../Assets/circle.png";
 import Heading_Btn from '@components/Heading_Btn';
+import { Link } from 'react-router-dom';
 
 
 const MidMarketEnterPrice = () => {
@@ -19,7 +20,7 @@ const MidMarketEnterPrice = () => {
                     desc={"Vijilan provides comprehensive, 24/7 managed detection, response, and\nremediation,  designed to augment your security team, unify your disparate tools, and\ndemonstrably reduce risk across your entire attack surface."}
                     btn1="REQUEST A CUSTOM DEMO"
                     btn2="DOWNLOAD THE CISO HANDBOOK"
-
+                    url={"/contact"}
                 />
 
 
@@ -177,9 +178,11 @@ const MidMarketEnterPrice = () => {
                                 </p>
 
                                 <div className="border-2 w-fit p-[16px] border-[#00AEEF] rounded-[8px]">
-                                    <button className=" w-fit   text-[18px] font-medium">
-                                        VIEW THREATREMEDIATE DETAILS
-                                    </button>
+                                    <Link to={"/threat-respond-service-2"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                        <button className=" w-fit   text-[18px] font-medium">
+                                            VIEW THREATREMEDIATE DETAILS
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -197,9 +200,11 @@ const MidMarketEnterPrice = () => {
                                 </p>
 
                                 <div className="border-2 w-fit p-[16px] border-[#00AEEF] rounded-[8px]">
-                                    <button className=" w-fit   text-[18px] font-medium uppercase">
-                                        explore siem services
-                                    </button>
+                                    <Link to={"/managed-siem-logscale-service"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                        <button className=" w-fit   text-[18px] font-medium uppercase">
+                                            explore siem services
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -246,9 +251,11 @@ const MidMarketEnterPrice = () => {
                                 </p>
 
                                 <div className="border-2 w-fit p-[16px] border-[#00AEEF] rounded-[8px]">
-                                    <button className=" w-fit   text-[18px] font-medium uppercase">
-                                        view professional services
-                                    </button>
+                                    <Link to={"/visilan-professional-service"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                        <button className=" w-fit   text-[18px] font-medium uppercase">
+                                            view professional services
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -302,9 +309,12 @@ const MidMarketEnterPrice = () => {
 
                     {/* CTA Button */}
                     <div className='border border-[#00AEEF] rounded-[8px] w-fit flex items-center justify-center mx-auto'>
+                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
                         <button className=" text-[#00AEEF] px-8 py-4 font-medium text-lg  uppercase ">
                             Request a Compliance Consultation
                         </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -316,7 +326,10 @@ const MidMarketEnterPrice = () => {
                 <h1 className='text-3xl md:text-[48px] font-bold text-center'>Ready to Build a More Resilient Security br
                     Posture?</h1>
                 <p className='text-[18px]'> See exactly how Vijilan can integrate with your environment and augment your team. <br /> Schedule a technical, no-obligation demo with one of our security architects.</p>
+                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                
                 <GradientButton children={"SCHEDULE A SECURITY ARCHITECT DEMO"} />
+                </Link>
             </section>
         </div>
     );

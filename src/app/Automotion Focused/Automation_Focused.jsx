@@ -9,6 +9,7 @@ import a1 from "../../Assets/a1.png";
 import a2 from "../../Assets/a2.png";
 import a3 from "../../Assets/a3.png";
 import a4 from "../../Assets/a4.png";
+import { Link } from 'react-router-dom';
 
 const cardData = [
     {
@@ -54,7 +55,9 @@ const Automation_Focused = () => {
 
                     <Heading_Btn
                         btn1="Explore Success Stories"
-                        btn2="Calculate Your Roi" />
+                        btn2="Calculate Your Roi"
+                        url={"/complain-solution"}
+                    />
 
                 </div>
             </div>
@@ -83,12 +86,16 @@ const Automation_Focused = () => {
                                 <img src={a1} alt="" className="" />
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3 text-center">Live Pricing Calculator</h3>
-                            <p className="text-white text-center">Generate accurate quotes instantly.<br/>  Input client assets and get real-time <br/> pricing with margin calculations.</p>
+                            <p className="text-white text-center">Generate accurate quotes instantly.<br />  Input client assets and get real-time <br /> pricing with margin calculations.</p>
                             <div className="mt-10  rounded-lg  ">
-                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
-                                LAUNCH CALCULATOR
-                            </button>
+                                <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+
+                                    <button className="p-[18px] relative z-10 uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                    }}>
+                                        LAUNCH CALCULATOR
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
@@ -105,12 +112,13 @@ const Automation_Focused = () => {
                                 <img src={a2} alt="" className="" />
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3 text-center">Quote Builder & Proposal Generator</h3>
-                            <p className="text-white text-center">Build professional proposals in <br/> minutes. Automated formatting, co- <br/>branding, and instant PDF generation.</p>
+                            <p className="text-white text-center">Build professional proposals in <br /> minutes. Automated formatting, co- <br />branding, and instant PDF generation.</p>
                             <div className="mt-10  rounded-lg  ">
-                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
-                                BUILD QUOTE
-                            </button>
+                                <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                }}>
+                                    BUILD QUOTE
+                                </button>
                             </div>
                         </div>
 
@@ -127,12 +135,13 @@ const Automation_Focused = () => {
                                 <img src={a3} alt="" className="" />
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3 text-center">Partner ROI Calculator</h3>
-                            <p className="text-white text-center">Show prospects their security ROI and<br/> payback period. Interactive financial<br/> modeling built-in.</p>
+                            <p className="text-white text-center">Show prospects their security ROI and<br /> payback period. Interactive financial<br /> modeling built-in.</p>
                             <div className="mt-10  rounded-lg  ">
-                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
-                                CALCULATE ROI
-                            </button>
+                                <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                }}>
+                                    CALCULATE ROI
+                                </button>
                             </div>
                         </div>
 
@@ -149,14 +158,15 @@ const Automation_Focused = () => {
                                 <img src={a4} alt="" className="" />
                             </div>
                             <h3 className="text-[24px] font-bold text-white mb-3 text-center">Jen AI Sales Assistant</h3>
-                            <p className="text-white text-center">Get instant answers about pricing,<br/> technical specs, and competitive <br/> positioning. Available 24/7.</p>
+                            <p className="text-white text-center">Get instant answers about pricing,<br /> technical specs, and competitive <br /> positioning. Available 24/7.</p>
                             <div className="mt-10  rounded-lg  ">
-                            <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
-                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
-                                START CHAT
-                            </button>
+                                <button className="p-[18px] uppercase font-medium text-lg rounded-[8px] text-white border-2 border-white  " style={{
+                                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                                }}>
+                                    START CHAT
+                                </button>
                             </div>
-                            
+
                         </div>
                     </div>
 
