@@ -54,40 +54,46 @@ const Header = () => {
   // navlink
   const menuItems = [
     {
+      key: "solutions",
       name: 'Solutions',
       hasDropdown: true,
       dropdownComponent: <SolutionDropdown />,
-      leftValue: "left-0"
+      isFullWidth: true
     },
     {
+      key: "serve",
       name: 'Who we serve',
       hasDropdown: true,
       dropdownComponent: <ServeDropdown />,
-      leftValue: "left-1/6"
+      isFullWidth: false
     },
     {
+      key: 'vijilan',
       name: 'Why Vijilan',
       hasDropdown: true,
       dropdownComponent: <VijilanDropdown />,
-      leftValue: "left-2/7"
+      isFullWidth: false
     },
     {
+      key: 'partners',
       name: 'Partners',
       hasDropdown: true,
       dropdownComponent: <PartnersDropdown />,
-      leftValue: "left-0"
+      isFullWidth: true
     },
     {
+      key: 'resources',
       name: 'Resources',
       hasDropdown: true,
       dropdownComponent: <ResourceDropdown />,
-      leftValue: "left-2/4"
+      isFullWidth: false
     },
     {
+      key: 'about',
       name: 'About us',
       hasDropdown: true,
       dropdownComponent: <AboutDropdown />,
-      leftValue: "left-2/3"
+      isFullWidth: false
     },
   ];
 
@@ -123,12 +129,19 @@ const Header = () => {
                       display: flex !important;
                     }
                   }
+                  
+                  /* 🔽 Custom range: 1024px to 1240px */
+                  @media (min-width: 1024px) and (max-width: 1240px) {
+                    .fontSize {
+                      font-size: 14px !important;
+                    }
+                  }
               `}
             </style>
-            
+
             {/* Desktop Menu */}
-            <div className="desktop-menu items-center gap-6">
-              <nav className="flex space-x-6">
+            <div className="desktop-menu items-center gap-4">
+              <nav className="relative flex lg:space-x-3 xl:space-x-6 ">
                 {menuItems.map((item, index) => (
                   <div
                     key={index}
@@ -138,7 +151,7 @@ const Header = () => {
                     }>
                     <a
                       href="#"
-                      className={`text-[16px] flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-active" : ""}`}>
+                      className={`fontSize text-[16px]  flex items-center space-x-1 transition-all duration-200 ${activeDropdown === item.name ? "text-active" : ""}`}>
                       <span className={`${activeDropdown === item.name ? "text-active" : ""}`}>{item.name}</span>
                       <ChevronDown
                         className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? "rotate-180 scale-125 -translate-y-[2px] !text-[#00AEEF]" : ""
@@ -158,24 +171,23 @@ const Header = () => {
                         }
                       </div>
                     )} */}
-                    {activeDropdown && (() => {
-                      const activeItem = menuItems.find((item) => item.name === activeDropdown);
-                      const leftClass = activeItem?.leftValue;
 
-                      return (
-                        <div
-                          ref={dropdownRef}
-                          onMouseEnter={() => setActiveDropdown(activeDropdown)}
-                          onMouseLeave={() => setActiveDropdown(null)}
-                          className={`fixed top-[102px] left-0 lg:${leftClass} z-50 max-h-[80vh] overflow-y-auto w-fit`}
-                        >
-                          {activeItem?.dropdownComponent}
-                        </div>
-                      );
-                    })()}
+                    {activeDropdown === item.name && (
+                      <div
+                        ref={dropdownRef}
+                        className={`z-50 mt-2 ${item.isFullWidth
+                          ? "fixed top-[96px] left-0 w-full overflow-y-auto max-h-[80vh]"
+                          : "absolute top-full left-1/2 w-max min-w-[200px] max-w-[calc(100vw-20px)] overflow-auto -translate-x-1/2"
+                          }`}
+                      >
+                        {item.dropdownComponent}
+                      </div>
+                    )}
+
 
                   </div>
                 ))}
+
                 <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-white text-[16px]">
                   Contact
                 </Link>
@@ -186,15 +198,15 @@ const Header = () => {
                 }}>
                   BOOK A CALL
                 </button>
-            </Link>
+              </Link>
             </div>
 
           </>
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
-              <button onClick={toggleMenu} className="text-white">
-                {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+            <button onClick={toggleMenu} className="text-white">
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
 
@@ -219,7 +231,7 @@ const Header = () => {
                       ref={dropdownRef}
                       onMouseEnter={() => setActiveDropdown(activeDropdown)}
                       onMouseLeave={() => setActiveDropdown(null)}
-                      className="fixed top-[102px] left-0 w-full z-50 max-h-[80vh] overflow-y-auto"
+                      className="fixed top-[102px] left-0 w-fit z-50 max-h-[80vh] overflow-y-auto"
                     >
                       {
                         menuItems.find((item) => item.name === activeDropdown)
