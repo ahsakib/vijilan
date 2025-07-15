@@ -138,6 +138,7 @@ const ThreatreMediateManagedXdr = () => {
                     desc={"Vijilan's ThreatRemediate™ is a fully managed XDR service that doesn't just send\nalerts—our 24/7 expert SOC actively contains and remediates threats across your\nendpoints, cloud, and identity, powered by CrowdStrike."}
                     btn1="SEE THREATREMEDIATE IN ACTION (REQUEST DEMO)"
                     btn2="DOWNLOAD THE THREATREMEDIATE DATESHEET"
+                    url={"/threat-respond-service-2"}
                 />
             </section>
 
@@ -420,7 +421,7 @@ const ThreatreMediateManagedXdr = () => {
 
                 </div>
                 <div className='flex items-center justify-center mx-auto mt-10'>
-                    <Link to={"/tier-landing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    <Link to={"/pricing-page"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <GradientButton children={"COMPARE TIERS AND RUN PRICING SCENERIOS"} />
                     </Link>
                 </div>
@@ -474,6 +475,7 @@ const ThreatreMediateManagedXdr = () => {
                     h1="Stop Reacting. Start Remediating."
                     desc={"See how our expert SOC team can become your hands-on defense against cyber\nthreats. Schedule a live, personalized demo of ThreatRemediate today."}
                     btn1="request a live  demo"
+                    url={"/contact"}
                 />
 
             </section>

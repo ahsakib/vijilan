@@ -9,6 +9,7 @@ import hand from "../../Assets/hand.svg";
 import TestimonialCard from '@components/TestimonialCard';
 import ServiceCard from '@components/ServiceCard';
 import Heading_Btn from '@components/Heading_Btn';
+import { Link } from 'react-router-dom';
 
 const cardData = [
     {
@@ -96,6 +97,7 @@ const ManagedSiemSoc = () => {
                         desc={` Skip the static brochures. Use our interactive calculators, quote builders, and\nautomated sales tools to close deals faster and grow your MRR.`}
                         btn1="EXPLORE SUCCESS STORIES"
                         btn2="CALCULATE YOUR ROI"
+                        url={"/become-a-partner"}
                     />
 
                     {/* Stats - Improved Grid */}
@@ -266,7 +268,7 @@ const ManagedSiemSoc = () => {
                             <p className="text-lg md:text-[20px] mb-8 font-thin md:font-semibold   ">
                                 Using Vijilan's LogScale Management Services, an established MSSP was able to modernize their SIEM infrastructure, achieving significant cost savings and improved performance while scaling their client base. Our expert data optimization and intelligent routing transformed their security operations.
                             </p>
-                            <div className="flex space-x-4">
+                            <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex space-x-4">
                                 <button
                                     className="p-[16px] text-[11px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                                     style={{
@@ -284,7 +286,7 @@ const ManagedSiemSoc = () => {
                                     </div>
                                 </button>
 
-                            </div>
+                            </Link>
                         </div>
 
                         <div className='flex flex-col lg:flex-row justify-between  gap-3'>
@@ -373,8 +375,10 @@ const ManagedSiemSoc = () => {
                         <p className="text-[16px] text-center text-white mb-6">
                             Experience the power of CrowdStrike LogScale <br /> with Vijilan's expert management. Let's discuss <br /> how our next-generation SIEM can transform <br />your security operations while reducing costs.
                         </p>
+                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        
                         <button
-                            className="p-[16px] text-[13px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                            className="p-[16px] relative z-10 text-[13px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                             style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
@@ -389,6 +393,7 @@ const ManagedSiemSoc = () => {
                                 </svg>
                             </div>
                         </button>
+                        </Link>
                         <button
                             className="mt-[16px] p-[16px] text-[13px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3 bg-transparent w-fit"
                             style={{

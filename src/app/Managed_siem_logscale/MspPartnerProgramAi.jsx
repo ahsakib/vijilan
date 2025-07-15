@@ -142,7 +142,7 @@ const MspPartnerProgramAi = () => {
                     rating="★★★★★ | Trusted by over 500 MSPs worldwide"
                     btn1="APPLY TO BECOME A PARTNER"
                     btn2="DOWNLOAD PARTNER KIT"
-
+                    url={"/become-a-partner"}
                 />
             </section >
 
@@ -574,6 +574,7 @@ const MspPartnerProgramAi = () => {
                     btn1="APPLY TO BECOME A PARTNER"
                     btn2="DOWNLOAD PARTNER KIT"
                     isSmallHeading={true}
+                    url={"/become-a-partner"}
                 />
             </section>
         </div>

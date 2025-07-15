@@ -3,6 +3,7 @@ import Heading_Btn from "@components/Heading_Btn";
 import NavyBlueBackground from "@components/NavyBlueBackground";
 import ServiceCard from "@components/ServiceCard";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MspLaunchpad = ({ }) => {
 
@@ -210,11 +211,11 @@ const MspLaunchpad = ({ }) => {
                             <p class="mt-2 text-xl sm:text-base text-white">Build accurate quotes and see your profit margins with our interactive pricing calculator. Access requires validation.</p>
                         </div>
 
-                        <div class="flex justify-center">
+                        <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="flex justify-center">
                             <button class="w-full max-w-xs flex justify-center  py-3 md:py-6 font-bold px-4 border border-transparent rounded-md shadow-sm !text-black bg-[#F0E51A] hover:bg-[#d8cc17] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F0E51A] text-sm md:text-lg">
                                 REQUEST PRICING ACCESS
                             </button>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>

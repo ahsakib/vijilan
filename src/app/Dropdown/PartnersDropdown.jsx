@@ -63,7 +63,7 @@ const rightColumnServices = [
     {
 
         title: "Become a Partner",
-        url:"become-a-partner",
+        url:"access-request",
     },
     {
 

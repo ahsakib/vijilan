@@ -142,7 +142,7 @@ const ThreatremediateEssentail = () => {
                         </div>
                     </CardBorder>
                 </div>
-                <Link to={"access-request"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                     <div className='flex items-center justify-center mt-[60px]'>
                         <button className='uppercase font-medium text-[18px] p-[16px] rounded-[8px]' style={{
                             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
@@ -384,7 +384,7 @@ const ThreatremediateEssentail = () => {
                         <div className="text-gray-300 text-[18px] mb-6">Choose annual payment for additional 15% discount</div>
 
                         <div className="text-white text-[18px] mb-8">Annual Payment (Additional 15% Discount)</div>
-                        <Link to={"/threatremediate-remote-no-pricing"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                             <button className=" text-white font-medium p-3 md:p-[16px] rounded-lg text-[18px] " style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
                             }}>
@@ -479,7 +479,7 @@ const ThreatremediateEssentail = () => {
                     desc="Ready to deliver enterprise-grade security with modular flexibility? Connect with our partner team to access official pricing, <br /> start your 30-day trial, and begin growing your security practice."
                     btn1="BUILD YOUR CUSTOM SOLUTION AND GET PRICING"
                     btn2="DOWNLOAD THREATREMEDIATE ESSENTIALS SOLUTION BRIEF"
-
+                    url={"/pricing-tool"}
                 />
             </section>
         </div>

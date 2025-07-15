@@ -10,6 +10,7 @@ import CommonTextCard from '../component/CommonTextCard';
 import ListComponent from '../component/ListComponent';
 import { detectionArray } from '@app/Constant/Constant';
 import DashBoardCard from '../component/DashBoardCard';
+import { Link } from 'react-router-dom';
 
 const SMB_Runsomware = () => {
 
@@ -137,11 +138,17 @@ const SMB_Runsomware = () => {
             <section className="px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                        <span className="hover:text-white cursor-pointer">Home</span>
+                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">Home</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Resources</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="!text-blue-600  text-[13px]" > SMB Ransomeware Recovery</span>
                     </nav>
@@ -283,6 +290,7 @@ const SMB_Runsomware = () => {
                                 desc=" The MSP became the hero by providing enterprise-grade security through Vijilan's partnership."
                                 btn1="Become A partner"
                                 btn2="Learn More"
+                                url={"/become-a-partner"}
                             />
                         </div>
                     </div>
@@ -324,8 +332,8 @@ const SMB_Runsomware = () => {
                 h1="Don't Wait for Your Ransomware Story"
                 desc="Whether you're an MSP looking to protect your clients or a business seeking better security through your IT provider, Vijilan has the solution."
                 btn1="msps become a partner"
-                btn2="buissness find protection
-"
+                btn2="buissness find protection"    
+                url={"/become-a-partner"}           
             />
         </div>
     );

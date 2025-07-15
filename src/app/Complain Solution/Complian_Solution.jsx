@@ -13,6 +13,7 @@ const Complain_Solution = () => {
                     desc={`Navigate complex regulatory landscapes with ease. Vijilan's managed security\nand compliance solutions provide the technology, expertise, and audit-ready\ndocumentation you need to meet your obligations and protect sensitive data.\nrequest a compliance Consultation`}
                     btn1="Request A complaince Consultation"
                     pd={true}
+                    url={"/contact"}
                 />
 
 
@@ -86,6 +87,7 @@ const Complain_Solution = () => {
                             btn1="schedule a compliance strategy call"
                             isSmallHeading={true}
                             isCenter={true}
+                            url={"/contact"}
                         />
                     </div>
                 </div>

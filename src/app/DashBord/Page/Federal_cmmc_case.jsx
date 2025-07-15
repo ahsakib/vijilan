@@ -11,6 +11,7 @@ import ListComponent from '../component/ListComponent';
 import DashBoardCard from '../component/DashBoardCard';
 import ProfileHRCard from '../component/ProfileHRCard';
 import DashboardSideText from '../component/DashboardSideText';
+import { Link } from 'react-router-dom';
 
 const Federal_cmmc_case = () => {
     const numberArray = [
@@ -110,11 +111,17 @@ const Federal_cmmc_case = () => {
             <section className=" mx-auto px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                        <span className="hover:text-white cursor-pointer">Home</span>
+                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">Home</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Resources</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="!text-blue-700 text-[13px]  ">Federal CMMC Success</span>
                     </nav>
@@ -279,6 +286,7 @@ const Federal_cmmc_case = () => {
                 desc=" Discover how Vijilan's AWS Marketplace solution can help your federal contracting business achieve CMMC 2.0 compliance in record time while securing critical government contracts."
                 btn1="Get started on aws market place"
                 btn2=" schedule  cmmc consultation"
+                url={"/mid-market-enterprice"}
             />
         </div>
     );

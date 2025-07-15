@@ -13,6 +13,7 @@ import DashboardSideText from '../component/DashboardSideText';
 import CommonTextCard from '../component/CommonTextCard';
 import ListComponent from '../component/ListComponent';
 import MesurableComponentDashboard from '../component/MesurableComponentDashboard';
+import { Link } from 'react-router-dom';
 
 const Success_study_case = () => {
 
@@ -144,11 +145,17 @@ const Success_study_case = () => {
             <section className="container mx-auto px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                        <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className="hover:text-white cursor-pointer">Home</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Resources</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
+                        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         <span className="hover:text-white cursor-pointer">Case Studies</span>
+                        </Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
                         <span className="!text-blue-400 text-[13px] font-medium">Var Growth Success</span>
                     </nav>
@@ -316,6 +323,7 @@ const Success_study_case = () => {
 Explore var  partner ship"
                     btn1="Explore var partnership"
                     btn2="schedule sale  consultation"
+                    url={"/visilan-msg-partner"}
                 />
             </div>
 

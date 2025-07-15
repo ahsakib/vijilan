@@ -17,6 +17,7 @@ import GradientButton from "@components/GradientButton";
 import OutlineGradientButton from "@components/OutlineGradientButton";
 import SuccessCard from "@components/SuccessCard";
 import CardBorder from "@components/CardBorder";
+import { Link } from "react-router-dom";
 
 const ManagedAutomation = ({ }) => {
     const businessFields = [
@@ -133,8 +134,12 @@ const ManagedAutomation = ({ }) => {
                     </CardBorder>
                 </div>
                 <div className="flex gap-10 mt-14 items-center justify-center mx-auto ">
-                    <GradientButton children={"START RISK ASSESSMENT"} />
-                    <OutlineGradientButton children={"SEE THREAT SIMULATION"} />
+                    <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        <GradientButton children={"START RISK ASSESSMENT"} />
+                    </Link>
+                    <Link to={"/threat-respond-service"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                        <OutlineGradientButton children={"SEE THREAT SIMULATION"} />
+                    </Link>
                 </div>
             </div>
 
@@ -196,7 +201,9 @@ const ManagedAutomation = ({ }) => {
                             </div>
 
                             <div className="flex flex-wrap justify-center gap-5">
-                                <GradientButton children={"request live demo"} icon={false} />
+                                <Link to={"/request-demo"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <GradientButton children={"request live demo"} icon={false} />
+                                </Link>
                                 <OutlineGradientButton icon={false} children={"view technology stack"} />
                             </div>
                         </div>
@@ -241,10 +248,10 @@ const ManagedAutomation = ({ }) => {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-center mt-14">
+                <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex justify-center mt-14">
 
                     <GradientButton children={"GET CUSTOM INTEGRATION QUOTE"} icon={false} />
-                </div>
+                </Link>
             </section>
             <section className="container mx-auto md:px-6 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
@@ -255,6 +262,7 @@ const ManagedAutomation = ({ }) => {
                         description={`"Ask me how Managed ITDR integrates with \n your Okta or Azure AD environment. I can \n provide technical specifications and pricing in\n real-time."`}
                         buttonText="Find my success story"
                         bgColor="transparent"
+                        url={"/case-studies"}
                     />
                     <SuccessCard
                         heading={`Ready to Secure Your Identities?`}
@@ -263,6 +271,7 @@ const ManagedAutomation = ({ }) => {
                         isOutlineButton
                         outlineButtonText="explore full xdr platform"
                         bgColor="transparent"
+                        url={"/contact"}
                     />
                 </div>
             </section>

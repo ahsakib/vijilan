@@ -11,6 +11,7 @@ import riskRed from "../../Assets/risk-reduation.svg";
 import SecurityCard from "@components/SecurityCard";
 import InfoSection from "@components/InfoSection";
 import NavyBlueBackground from "@components/NavyBlueBackground";
+import { Link } from "react-router-dom";
 
 const EnterpriseLanding = ({ }) => {
 
@@ -63,6 +64,7 @@ const EnterpriseLanding = ({ }) => {
                         desc={`Vijilan's managed XDR and SIEM services augment your security team, unifying\nvisibility across your complex environment and delivering expert-led, active\nremediation 24/7.`}
                         btn1={"request a custom demo"}
                         btn2={"download the ciso handbook"}
+                        url={"/contact"}
                     />
                 </div>
             </section>
@@ -194,11 +196,12 @@ const EnterpriseLanding = ({ }) => {
                     subtitle={"Fully Managed Detection, Response & Remediation"}
                     btnText={"view threatremediate details"}
                     position="left"
+                    url={"/threat-respond-service-2"}
                 />
 
             </section>
 
-            <section className="container mx-auto md:px-5 ">
+            <section className="container mx-auto md:px-5 pt-16 md:pt-0">
                 <InfoSection
                     design2={true}
                     width={"495px"}
@@ -207,6 +210,7 @@ const EnterpriseLanding = ({ }) => {
                     desc={"Let our experts deploy, manage, and optimize CrowdStrike LogScale, powered by our unique Cribl integration. Gain unparalleled visibility and control over your data while reducing costs."}
                     subtitle={"Modernize Your SOC with LogScale & Cribl"}
                     btnText={"explore siem services"}
+                    url={"/managed-siem-soc"}
                 />
 
             </section>
@@ -221,6 +225,7 @@ const EnterpriseLanding = ({ }) => {
                     subtitle={"Expert Implementation & Management"}
                     btnText={"view professional services"}
                     position="left"
+                    url={"/visilan-professional-service"}
                 />
 
             </section>
@@ -267,14 +272,14 @@ const EnterpriseLanding = ({ }) => {
                             </div>
                         </div>
 
-                        <div class="mt-10">
+                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="mt-10">
                             <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md 
 border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
 transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
 text-center select-none uppercase">
                                 request a compliance consultation
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </NavyBlueBackground>
 
@@ -285,6 +290,7 @@ text-center select-none uppercase">
                     h1={"Ready to Build a More Resilient Security\nPosture?"}
                     desc={"See exactly how Vijilan can integrate with your environment and augment your team.\nSchedule a technical, no-obligation demo with one of our security architects."}
                     btn5={"schedule a security architect demo"}
+                    
                 />
                 
             </section>

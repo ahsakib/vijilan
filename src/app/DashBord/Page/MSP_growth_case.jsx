@@ -127,7 +127,6 @@ const MSP_growth_case = () => {
             <div>
 
                 {/* top part */}
-                <section className="container mx-auto px-6">
                     <div className="mb-8">
                         <nav className="flex flex-wrap items-center text-[12px]">
                             <div className="flex items-center">
@@ -150,7 +149,6 @@ const MSP_growth_case = () => {
                             </div>
                         </nav>
                     </div>
-                </section>
 
                 {/* button */}
                 <section className='flex justify-center'>
