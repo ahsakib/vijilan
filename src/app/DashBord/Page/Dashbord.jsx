@@ -46,7 +46,8 @@ const Dashbord = () => {
 
             <div className=''>
                 <Heading_Btn
-                    h1="Partner Dashboard"
+                    // h1="Partner Dashboard"
+                     h1={<><span>Partner </span><span className="bg-yellow-300 text-black px-2 rounded" style={{color:'black'}}>Dashboard</span></>}
                     desc="Your central hub for sales, metrics, and support."
                     ColorHeading="Build a Quote"
                     description=" Use our advanced simulator to create custom quotes and start a POC."
