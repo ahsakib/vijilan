@@ -12,7 +12,7 @@ export const InputField = ({ heading, desc, Input, number }) => {
             <h1 className='text-left sm:text-sm md:text-xl font-semibold'>{heading}</h1>
             <div className='flex justify-between mt-2 mb-4 '>
                 <p className='text-left font-thin text-gray-400'>{desc}</p>
-                <p className='text-blue-600'>${number}</p>
+                <p style={{color:'#00aeef'}}>${number}</p>
             </div>
 
             <div className="mb-4 flex gap-5 items-center   justify-between">
@@ -47,7 +47,7 @@ const Dashbord = () => {
             <div className=''>
                 <Heading_Btn
                     // h1="Partner Dashboard"
-                     h1={<><span>Partner </span><span className="bg-yellow-300 text-black px-2 rounded" style={{color:'black'}}>Dashboard</span></>}
+                    h1={<><span>Partner </span><span className="bg-yellow-300 text-black px-2 rounded" style={{ color: 'black' }}>Dashboard</span></>}
                     desc="Your central hub for sales, metrics, and support."
                     ColorHeading="Build a Quote"
                     description=" Use our advanced simulator to create custom quotes and start a POC."
@@ -65,19 +65,22 @@ const Dashbord = () => {
                         side_text={true}
                         ColorHeading="Active Client"
                         Number="12"
-                        linkBtn="+2 this month"
+                        // linkBtn="+2 this month"
+                        linkBtn={<> <span className="" style={{ color: 'hsla(136, 74%, 65%, 1)' }}>+2 this month</span></>}
                     />
                     <CardContent
                         side_text={true}
                         ColorHeading="Endpoints Protected"
                         Number="347"
-                        linkBtn="+Across all clients"
+
+                        linkBtn={<> <span className="" style={{ color: 'hsla(136, 74%, 65%, 1)' }}>+Across all clients</span></>}
                     />
                     <CardContent
                         side_text={true}
                         ColorHeading="Monthly Recurring"
                         Number="$4,280"
-                        linkBtn="Projected revenue"
+                        // linkBtn="Projected revenue"
+                        linkBtn={<> <span className="" style={{ color: 'hsla(136, 74%, 65%, 1)' }}>Projected revenue</span></>}
                     />
                 </div>
 
@@ -106,6 +109,7 @@ const Dashbord = () => {
                                 desc="CrowdStrike Falcon with containment & network isolation"
                                 Input="Quantity"
                                 number="5"
+                                
                             />
                             <InputField
                                 heading=" TRX Identity (ITDR)"
@@ -152,7 +156,7 @@ const Dashbord = () => {
 
                     </div>
 
-                    <div className='col-span-1 min-h-80 border-2 border-[#064462] p-4 rounded-3xl  sm:mt-2 md:mt-16 flex lg:mt-24 flex-col justify-between'>
+                    <div className='col-span-1 min-h-[400px] border-2 border-[#064462] p-4 rounded-3xl  sm:mt-2 md:mt-16 flex lg:mt-24 flex-col justify-between'>
                         <p className='font-semibold text-left mt-3'>Quote Summary</p>
 
                         <div className='mb-6'>
@@ -182,7 +186,7 @@ const Dashbord = () => {
                     {tabs.map((tab, index) => (
                         <p
                             key={index}
-                            className={`inline px-8 py-3 cursor-pointer font-bold text-[14px] rounded-2xl border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
+                            className={`inline px-8 py-3 cursor-pointer font-bold text-[14px] rounded-4xl border border-[#00AEEF] ${index === 0 ? 'bg-[#00AEEF] text-white' : ''
                                 }`}
                         >
                             {tab}
