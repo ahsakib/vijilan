@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText,url }) => {
   return (
-    <section className="relative z-10 px-6 py-16">
-      <div className="container mx-auto">
+    <section className="relative z-10 sm:px-4 md:px-0 py-16">
+      <div className="container mx-auto ">
         <div
-          className="h-auto md:h-[320px] rounded-[24px] px-[8px] py-[24px] relative overflow-hidden"
+          className="h-auto md:h-[320px] flex flex-col items-center justify-center rounded-[24px] px-[8px] py-[24px] relative overflow-hidden"
           style={{
             background: "linear-gradient(90deg, #082135 0%, #082135 40%, #1a3a4f 60%, #1a3a4f 100%)",
           }}
@@ -39,7 +39,7 @@ const JoinMissionSection = ({ title, highlightedText, subtitle, buttonText,url }
             </p>
             <Link to={url? url : ""}>
               <button
-                className="p-3 md:p-[20px] text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
+                className="p-[16px] md:p-[24px] text-[16px] md:text-lg font-medium rounded-[8px] text-white inline-flex items-center space-x-3 transition hover:scale-105"
                 style={{
                   background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                   boxShadow: "0 8px 32px rgba(255, 107, 53, 0.3)",
