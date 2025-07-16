@@ -33,7 +33,7 @@ const Blog_Subscribe_Component_Btn = ({ H1, background, Desc, Input, Btn, descSi
 
                 {
                     Btn && <div className='flex justify-center'>
-                        <button className=" mx-auto py-2 md:py-[20px] p-2 md:px-[24px] mt-1 rounded-[8px] text-[18px] font-medium  text-white transition-opacity hover:opacity-90" style={{ background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)" }}>
+                        <button className=" mx-auto p-[18px] md:p-[24px] mt-1 rounded-[8px] text-[16px] md:text-[18px] font-medium  text-white transition-opacity hover:opacity-90" style={{ background: " linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)" }}>
                             {Btn}
                         </button>
                     </div>

@@ -32,6 +32,8 @@ import lights from "../../Assets/lights.png"
 import objects from "../../Assets/objects.png";
 import dollar from "../../Assets/dollar.png"
 import { Link } from "react-router-dom";
+import leftIcon from "../../Assets/leftIcon.png";
+import rightIcon from "../../Assets/rightIcon.png"
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
@@ -64,7 +66,7 @@ const data = [
 
 const Home = () => {
   return (
-    <div className="max-w-[90%] mx-auto">
+    <div className="container mx-auto md:px-6">
       {/* Background Pattern */}
 
       {/* Content Overlay */}
@@ -76,11 +78,11 @@ const Home = () => {
 
 
         {/* Tailored Solutions Section */}
-        <section className="container mx-auto pb-20">
+        <section className="py-16 ">
           <div className="">
             {/* Header */}
-            <div className="text-center mb-10">
-              <h1 className="text-3xl md:text-[40px] font-bold mb-4" style={{ color: "#00AEEF" }}>
+            <div className="text-center mb-12">
+              <h1 className="text-3xl md:text-[40px] font-bold mb-3" style={{ color: "#00AEEF" }}>
                 Tailored Cybersecurity Solutions
               </h1>
               <h2 className="text-4xl md:text-[40px] font-bold text-white">For Your Needs </h2>
@@ -88,27 +90,58 @@ const Home = () => {
 
             {/* Cards Container */}
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Left Card - MSPs */}
+              <div className="relative bg-[#00AEEF3D] rounded-[24px] lg:h-[453px] py-5 px-2 md:py-10">
+                <div
+                  className="absolute  inset-0 rounded-[24px] p-[2px] z-0"
+                  style={
+                    {
+                      background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+                        linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+                      WebkitMask:
+                        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                      WebkitMaskComposite: "xor",
+                      maskComposite: "exclude"
+                    }
+                  }
 
-              <CardContent
-                icon={GroupIcon}
-                head="For MSPs, VARs & MSSPs"
-                sub="Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service portfolio, and drive profitable growth."
-                buttonText="EMPOWER YOUR MSP/VAR/MSSP"
-                isLeft={true}
-                url="visilan-msg-partner"
-              />
+                />
+                <div className="flex justify-center mb-5 items-center">
+                  <img src={GroupIcon} alt="" className="w-[136px] h-[144px] " />
+                </div>
+                <h1 className="text-[24px] font-medium text-center">For MSPs, VARs & MSSPs</h1>
+                <p className="text-[18px] text-center mt-5 md:px-5">Elevate Your Cybersecurity Offerings. Partner with Vijilan to deliver enterprise-grade security, enhance your service  portfolio, and drive profitable growth.</p>
+                <div className="flex items-center justify-center mx-auto mt-5">
+                  <button className=" text-[16px] md:text-[18px] rounded-[8px] font-medium p-[18px] bg-white md:p-[24px]" style={{ color: "#082235" }}>EMPOWER YOUR MSP/VAR/MSSP</button>
+                </div>
+              </div>
 
-              {/* Right Card - SMBs */}
-              <CardContent
-                icon={GroupIcon2}
-                head="For SMBs & Mid-Market Enterprises"
-                sub="Affordable, Expert Protection. Secure your business with our comprehensive managed security services,
-                    tailored to your size and industry needs."
-                buttonText="SECURE YOUR BUSINESS"
-                isLeft={true}
-                url="smb"
-              />
+              <div className="relative bg-[#00AEEF3D] rounded-[24px] lg:h-[453px] py-5 px-2 md:py-10">
+                <div
+                  className="absolute  inset-0 rounded-[24px] p-[2px] z-0"
+                  style={
+                    {
+                      background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+                        linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+                      WebkitMask:
+                        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                      WebkitMaskComposite: "xor",
+                      maskComposite: "exclude"
+                    }
+                  }
+
+                />
+                <div className="flex justify-center mb-5 items-center">
+                  <img src={GroupIcon2} alt="" className="w-[136px] h-[144px] " />
+                </div>
+                <h1 className="text-[24px] font-medium text-center">For SMBs & Mid-Market Enterprises</h1>
+                <p className="text-[18px] text-center mt-5 md:px-5">Affordable, Expert Protection. Secure your business with our  comprehensive managed security services,
+                  tailored to your  size and industry needs.</p>
+                <div className="flex items-center justify-center mx-auto mt-5">
+                  <button className=" text-[16px] md:text-[18px] rounded-[8px] font-medium p-[18px] bg-white md:p-[24px]" style={{ color: "#082235" }}>SECURE YOUR BUSINESS</button>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </section>
@@ -117,68 +150,72 @@ const Home = () => {
 
         {/* Threat Landscape Section */}
         <section
-          className="relative container mx-auto px-6 rounded-[24px] overflow-hidden">
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 "
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-          ></div>
+          className="">
+          <div className="relative sm:container mx-auto sm:px-6 rounded-[24px] overflow-hidden">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 "
+              style={{
+                backgroundImage: `url(${image})`,
+              }}
+            ></div>
 
-          {/* Gradient Overlay */}
-          <div
-            className="absolute inset-0 z-10"
-            style={{
-              background: "linear-gradient(0deg, rgba(8,34,53,0.8) 53.83%, rgba(0,174,239,0.8) 328.5%)",
-            }}
-          ></div>
-          <div className="relative z-20 container mx-auto px-6 py-16 rounded-[24px]">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-5xl font-bold text-white mb-6">
-                  The Evolving Threat
-                  <br />
-                  Landscape Demands
-                  <br />
-                  a New Defense
-                </h2>
-                <Link to={"contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                  <button
-                    className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+            {/* Gradient Overlay */}
+            <div
+              className="absolute inset-0 z-10"
+              style={{
+                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)",
+              }}
+            ></div>
+
+
+            <div className="relative z-20 container mx-auto px-6 py-16 rounded-[24px] min-h-[593px]">
+              <div className="grid md:grid-cols-2 gap-12 ">
+                <div>
+                  <h2 className="text-[30px] md:text-5xl font-bold text-white mb-6">
+                    The Evolving Threat
+                    <br />
+                    Landscape Demands
+                    <br />
+                    a New Defense
+                  </h2>
+                  <Link to={"contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    <button
+                      className=" p-[18px] md:p-[24px] text-lg mt-[20px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                      style={{
+                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                      }}>
+
+                      <span>GET STARTED FREE</span>
+                      <div className="w-6 h-6  flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 16 16 12 12 8"></polyline>
+                          <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                      </div>
+                    </button>
+                  </Link>
+                </div>
+                <div className="relative text-white text-[18px] bg-[#00AEEF3D] rounded-[24px] p-[24px] space-y-4 leading-relaxed overflow-hidden xl:min-w-[490px] min-h-[444]">
+                  <div
+                    className="absolute inset-0 rounded-[24px] p-[1px] z-0 h-full "
                     style={{
-                      background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
-                    }}>
-
-                    <span>GET STARTED FREE</span>
-                    <div className="w-6 h-6  flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 16 16 12 12 8"></polyline>
-                        <line x1="8" y1="12" x2="16" y2="12"></line>
-                      </svg>
-                    </div>
-                  </button>
-                </Link>
-              </div>
-              <div className="relative text-white text-[18px] bg-[#00AEEF3D] rounded-[24px] p-[24px] space-y-4 leading-relaxed overflow-hidden">
-                <div
-                  className="absolute inset-0 rounded-[24px] p-[1px] z-0 h-full "
-                  style={{
-                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
+                      background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
                  linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    WebkitMaskComposite: "xor",
-                    maskComposite: "exclude"
-                  }}
-                />
-                <p>
-                  Modern cyber threats are more sophisticated and faster than ever. Adversaries execute complex cross-domain attacks, exploiting vulnerabilities across endpoints, identities, and cloud environments simultaneously. A staggering 75% of attacks are now malware-free, often leveraging stolen credentials to bypass traditional defenses. Siloed security tools can't keep up, leaving your organization exposed.
-                </p>
+                      WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                      WebkitMaskComposite: "xor",
+                      maskComposite: "exclude"
+                    }}
+                  />
+                  <p>
+                    Modern cyber threats are more sophisticated and faster than ever. Adversaries execute complex cross-domain attacks, exploiting vulnerabilities across endpoints, identities, and cloud environments simultaneously. A staggering 75% of attacks are now malware-free, often leveraging stolen credentials to bypass traditional defenses. Siloed security tools can't keep up, leaving your organization exposed.
+                  </p>
 
-                <p>
-                  <span className="text-[#00AEEF]">Vijilan's Unified Security Platform</span> – powered by industry leaders like CrowdStrike, Fortinet, Corelight, Cribl, and an extensive integration ecosystem – combined with our 24/7 Expert Services, provides the comprehensive answer.
-                </p>
+                  <p>
+                    <span className="" style={{ color: "#00AEEF" }}>Vijilan's Unified Security Platform</span> – powered by industry leaders like CrowdStrike, Fortinet, Corelight, Cribl, and an extensive integration ecosystem – combined with our 24/7 Expert Services, provides the comprehensive answer.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -186,16 +223,16 @@ const Home = () => {
 
 
         {/* Vijilan Advantage Section */}
-        <section className="container mx-auto px-6 py-16">
+        <section className=" py-16">
           <div className="text-center mb-12">
             <h2 className="text-[40px] font-bold text-white mb-4">
               <span className="text-[#00AEEF]"> The Vijilan Advantage</span>:<br />
               Secure. Compliant. Partner-Focused.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* 1st */}
-            <div className="relative lg:h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -206,7 +243,7 @@ const Home = () => {
                   maskComposite: "exclude"
                 }}
               />
-              <div className="w-[110px] h-[110px]  rounded-lg flex items-center justify-center mb-4">
+              <div className="w-[110px] h-[102px]  rounded-lg flex items-center justify-center mb-4">
                 <img src={target} alt="" />
               </div>
               <h3 className="text-[24px] font-medium text-white mb-3">24/7 US-Based SOC</h3>
@@ -215,7 +252,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative lg:h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -235,7 +272,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative lg:h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:h-[454px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -255,7 +292,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative lg:-mt-[40px] lg:h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:-mt-[63px] xl:h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -275,7 +312,7 @@ const Home = () => {
               </p>
             </div>
             {/* 5th */}
-            <div className="relative lg:-mt-[130px] lg:h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:-mt-[118px] xl:h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -295,7 +332,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="relative lg:h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+            <div className="relative xl:h-[344px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
               <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                 style={{
@@ -318,7 +355,13 @@ const Home = () => {
         </section>
 
         {/* Innovation Section */}
-        <div className="relative container mx-auto overflow-hidden " style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+        <div className="relative container mx-auto py-16 overflow-hidden rounded-[24px]" style={{ background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)" }}>
+
+          {/* Background decorative circles */}
+          <div className="absolute top-0 w-[243px] h-[152px] z-10 mix-blend-soft-light opacity-40" >
+            <img src={quote} alt="" style={{ color: "#E6F7FD" }} />
+          </div>
+
           {/* Left side solid background */}
           <div
             className="absolute inset-0"
@@ -327,6 +370,7 @@ const Home = () => {
                 "linear-gradient(90deg, #082135 0%, #082135 50%, rgba(23, 51, 71, 0.8) 70%, rgba(23, 51, 71, 0.4) 100%)",
             }}
           />
+
 
           {/* Right side pattern with smooth blend */}
           <div
@@ -345,28 +389,25 @@ const Home = () => {
           />
 
           {/* Overlay for color consistency */}
-          <div
+          {/* <div
             className="absolute inset-0"
             style={{
               background:
                 "linear-gradient(90deg, rgba(23, 51, 71, 0.9) 0%, rgba(23, 51, 71, 0.7) 40%, rgba(26, 58, 79, 0.5) 60%, rgba(26, 58, 79, 0.3) 100%)",
             }}
-          />
+          /> */}
 
-          {/* Background decorative circles */}
-          <div className="absolute w-[243px] h-[152px]">
-            <img src={quote} alt="" />
-          </div>
+
 
 
           <div className="relative max-w-6xl mx-auto px-8">
             {/* Header Section */}
             <div className="text-center py-10 space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white ">
-                <span className="text-[#00AEEF]">Trusted by Leaders,</span>
-                <br />
-                <span className="text-white">Powered by Innovation</span>
-              </h2>
+              <div className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white ">
+                <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white mb-2" style={{ color: "#00AEEF" }}>Trusted by Leaders,</h1>
+
+                <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-white">Powered by Innovation</h1>
+              </div>
 
               {/* Company Logos */}
               <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
@@ -400,7 +441,7 @@ const Home = () => {
               <div className=" mx-auto max-w-md ">
                 <div className="flex flex-col space-y-5 text-left">
                   <div className=" gap-4">
-                    <div className="text-left w-16 h-16 rounded-full overflow-hidden ">
+                    <div className="text-left w-[52px] h-[52px] rounded-full overflow-hidden ">
                       <img
                         src={avater}
                         alt="Customer testimonial"
@@ -420,20 +461,20 @@ const Home = () => {
                   <div>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-2 h-2 fill-[#FFD300] text-[#FFD300]" />
+                        <Star key={i} className="w-2 h-2 fill-[#FFD300]" style={{ color: "#FFD300" }} />
                       ))}
                     </div>
                   </div>
 
-                  <p className="text-[#00AEEF] text-[15px]">Leading MSP Partner</p>
+                  <p className="text-[#00AEEF] text-[15px]" style={{ color: "#00AEEF" }}>Leading MSP Partner</p>
                 </div>
               </div>
 
               {/* Certification Badge */}
               <div className=" flex justify-center">
-                <div className="relative  bg-[#00AEEF3D] py-[50px] rounded-[24px] px-[24px] text-center backdrop-blur-sm space-y-3">
+                <div className="relative  bg-[#00AEEF3D] py-[50px] rounded-[24px] px-[24px] text-center backdrop-blur-sm space-y-3 min-h-[294px]">
                   <div
-                    className="absolute inset-0 rounded-[24px] p-[1px] z-0 h-full"
+                    className="absolute inset-0 rounded-[24px] p-[2px] z-0 h-full"
                     style={{
                       background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%),
                  linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
@@ -456,12 +497,12 @@ const Home = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex ml-[110px]  gap-4 mt-5">
-              <div className='bg-[#00AEEF] rounded-[6px] p-2'>
-                <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+            <div className="flex ml-[95px]  gap-4 mt-5">
+              <div className=''>
+                <img src={leftIcon} alt="" className='w-[44px] h-[44px] flex justify-center items-center' />
               </div>
-              <div className='bg-[#00AEEF] rounded-[6px] p-2'>
-                <img src={vector} alt="" className='w-[22px] h-[22px] flex justify-center items-center' />
+              <div className=''>
+                <img src={rightIcon} alt="" className='w-[44px] h-[44px] flex justify-center items-center' />
               </div>
             </div>
             {/* vendor image */}
@@ -472,7 +513,7 @@ const Home = () => {
         </div>
         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center justify-center mt-5">
           <button
-            className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+            className=" p-[18px] md:p-[24px] text-[16px] md:text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
             style={{
               background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
             }}>
@@ -488,28 +529,27 @@ const Home = () => {
           </button>
         </Link>
 
+
         {/* Integrations Section */}
-        <section className="container mx-auto px-6 py-16">
+        <section className=" pt-32 pb-16">
           <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-[40px] font-bold text-white mb-4">
-              <span className="text-[#00AEEF]">Comprehensive Security</span>
+            <h2 className="text-3xl lg:text-[40px] font-bold text-white mb-4">
+              <span className="text-[#00AEEF]" style={{ color: "#00AEEF" }}>Comprehensive Security</span>
               <br />
               Ecosystem Integrations
             </h2>
             <p className="text-[18px] text-white">Vijilan seamlessly integrates with your existing security infrastructure, providing <br /> unified visibility and management across all your security tools and platforms.</p>
           </div>
-          <div className="max-w-7xl mx-auto px-6 ">
-            <div className="grid md:grid-cols-2 gap-10">
+          <div className="px-2 sm:px-4 md:px-0">
+            <div className="grid md:grid-cols-5 gap-10">
               {/* Left Side - Categories */}
-              <div className="flex flex-col gap-4">
+              <div className="col-span-5 md:col-span-2 flex flex-col gap-2">
                 {data.map((section, index) => (
                   <div
                     key={index}
-                    className={`relative rounded-md px-4 py-3 text-white font-medium text-sm ${index === 0
-                      ? "bg-[#0A7FBF] text-white"
-                      : "bg-[#2D2D2D] border border-[#00AEEF80]"
-                      }`} style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))` }}
-                  >
+                    className={`group relative rounded-md p-[18px] text-white text-[18px] 
+                       bg-[#2D2D2D] 
+                      `} style={{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))` }}>
                     <div
                       className="absolute inset-0 rounded-[8px] p-[1px] z-0"
                       style={{
@@ -518,20 +558,42 @@ const Home = () => {
                         WebkitMaskComposite: "xor",
                         maskComposite: "exclude",
 
+                      }} />
+
+                    {/* Border Overlay for hover */}
+                    <div
+                      className="pointer-events-none absolute inset-0 rounded-[8px] p-[1px] z-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                      style={{
+                        background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8, 34, 53, 0) 50%),
+                       linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8, 34, 53, 0) 66.77%)`,
+                        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                        WebkitMaskComposite: "xor",
+                        maskComposite: "exclude",
                       }}
                     />
-                    {section.category}
+
+                    {/* Hover background overlay */}
+                    <div
+                      className="absolute inset-0 z-0 rounded-[8px] opacity-0 group-hover:opacity-100 transition-all duration-300"
+                      style={{
+                        backgroundColor: "#00AEEF3D",
+                      }}
+                    />
+
+                    <div className="relative z-10">
+                      {section.category}
+                    </div>
                   </div>
                 ))}
               </div>
 
               {/* Right Side - Tags */}
-              <div className="flex flex-wrap gap-3 items-start">
+              <div className="col-span-5 md:col-span-3 flex flex-wrap gap-[16px] items-start">
                 {data.map((section) =>
                   section.items.map((item, i) => (
                     <div
                       key={item + i}
-                      className="bg-[#00AEEF] text-white text-[16px] px-[16px] py-[10px] rounded-[8px]"
+                      className="bg-[#00AEEF] text-white text-[16px] px-[24px] py-[16px] rounded-[8px]"
                     >
                       {item}
                     </div>
@@ -542,13 +604,14 @@ const Home = () => {
 
 
           </div>
+
           <div className="text-center mt-10">
             <p className="text-gray-300 mb-5">
               Don't see your security tool listed? Our platform supports hundreds of integrations <br /> through APIs, syslog, and custom connectors.
             </p>
             <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               <button
-                className="p-[20px] text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
+                className=" p-[18px] md:p-[24px] text-[16px] md:text-lg mt-[12px] font-medium rounded-[8px] text-white inline-flex items-center space-x-3"
                 style={{
                   background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                 }}>
@@ -567,13 +630,27 @@ const Home = () => {
         </section>
 
         {/* Success Stories Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-10">
+        <section className="relative py-16">
+          {/* Right side pattern with smooth blend */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${mask})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.8,
+              maskImage:
+                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+              WebkitMaskImage:
+                "linear-gradient(90deg, transparent 0%, transparent 30%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,1) 100%)",
+            }} />
+          <div className="text-center mb-12">
             <h2 className="text-[40px] font-bold text-white">
-              Our Partners' <span className="text-[#00AEEF]">Success Stories</span>
+              Our Partners' <span className="" style={{ color: "#00AEEF" }}>Success Stories</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-4 md:px-0 lg:px-3 xl:px-0">
             {[
               {
                 title: "MSP Achieves 300% Growth with Vijilan",
@@ -604,7 +681,7 @@ const Home = () => {
                 />
                 <h3 className="text-[24px] font-medium text-white mb-3 text-center">{story.title}</h3>
                 <p className="text-white text-[15px] mb-4 leading-relaxed text-center">{story.description}</p>
-                <div className="text-[#00AEEF] text-[15px] cursor-pointer text-center">Read Full Story →</div>
+                <div className="text-[#00AEEF] text-[15px] cursor-pointer text-center" style={{ color: "#00AEEF" }}>Read Full Story →</div>
               </div>
             ))}
           </div>
@@ -632,15 +709,15 @@ const Home = () => {
         </section>
 
         {/* Deep Dive Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-10">
+        <section className=" py-16">
+          <div className="text-center mb-12">
             <h2 className="text-[40px] font-bold text-white">
-              <span className="text-[#00AEEF]">Dive Deeper</span> Into Vijilan's
+              <span className="" style={{ color: "#00AEEF" }}>Dive Deeper</span> Into Vijilan's
               <br />
               Cybersecurity Ecosystem
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 sm:px-4 md:px-0">
             {[
               {
                 icon: <img src={lights} alt="" className="w-[164px] h-[110px]" />,
