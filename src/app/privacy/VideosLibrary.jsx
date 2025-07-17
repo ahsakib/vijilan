@@ -161,7 +161,7 @@ const VideosLibrary = () => {
                                 </div>
 
                                 {/* Video Info */}
-                                <div className="p-6 space-y-4">
+                                <div className="p-6 space-y-4 " style={{background:'#576675'}}>
                                     {/* Date */}
                                     <div className="text-[#00AEEF] text-[12px] font-medium tracking-wide">{video.date}</div>
 
