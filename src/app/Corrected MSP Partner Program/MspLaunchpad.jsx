@@ -85,7 +85,9 @@ const MspLaunchpad = ({ }) => {
     return <>
         <div className="max-w-[90%] mx-auto">
             <Heading_Btn
-                h1={"🚀 Welcome to MSP Launchpad!"}
+                // h1={"🚀 Welcome to MSP Launchpad!"}
+                    h1={<><span>Welcome to  </span><span className="bg-yellow-300 text-black px-2 rounded" style={{ color: 'black' }}>MSP Launchpad!</span></>}
+
                 desc={"Your complete toolkit for selling cybersecurity services across multiple industries. Download everything you need to start generating leads and closing deals."}
             />
 

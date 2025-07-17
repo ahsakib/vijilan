@@ -246,6 +246,7 @@ const Success_study_case = () => {
                     <div className='mt-8'>
                         <h1 className='my-4 text-center font-semibold'>Accelerated Sales Process</h1>
                         <div className='mx-6 lg:mx-16 grid grid-cols-1 md:grid-cols-2 gap-5'>
+                           
                             {
                                 SalesProcess.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} />)
                             }

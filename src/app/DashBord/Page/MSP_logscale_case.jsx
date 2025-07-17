@@ -213,7 +213,7 @@ const MSP_logscale_case = () => {
                     </div>
 
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12 '>
                         {/* <h1 className='text-center mt-8 font-semibold'>{heading}</h1> */}
                         <h1 className='  mb-4 text-left mt-8 font-semibold'>🚀 Advanced SIEM Modernization Solution</h1>
                         <p className=' my-3'>Vijilan implemented a comprehensive SIEM modernization strategy that addressed both technology and data economics through a sophisticated, integrated approach:</p>

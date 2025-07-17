@@ -17,7 +17,7 @@ const DashBoardCard = ({ icon,title,bg,Number, heading,desc, btn,head,text,linkU
                 }}
             />
             {
-                icon && <div className={`w-12 h-12 ${bg?"bg-cyan-400":"bg-transparent"}  rounded-lg flex items-center justify-center mb-4`}>
+                icon && <div className={`whitespace-pre-line w-12 h-12 ${bg?"bg-cyan-400":"bg-transparent"}  rounded-lg flex items-center justify-center mb-4`}>
                     <img src={icon}   alt={title} />
 
                 </div>
@@ -25,9 +25,9 @@ const DashBoardCard = ({ icon,title,bg,Number, heading,desc, btn,head,text,linkU
 
 
             <p className='text-white text-sm'>{txtIcon}</p>
-            <h3 className="text-3xl text-center font-bold   mb-3">{Number}</h3>
-            <h3 className="text-xl text-center font-bold text-[#00AEEF] mb-3">{heading}</h3>
-            <h3 className="text-lg lg:text-xl text-center font-bold   mb-3">{head}</h3>
+            <h3 className="text-2xl text-center mb-3">{Number}</h3>
+            <h4 className="text-[12px] text-center font-bold text-[#00AEEF] mb-3">{heading}</h4>
+            <h3 className="text-lg  text-center   mb-3">{head}</h3>
            {
             btn && <p className='bg-[#00AEEF] px-6 py-2 rounded-lg uppercase'>{btn}</p>
            }

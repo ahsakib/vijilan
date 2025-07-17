@@ -182,7 +182,7 @@ const Dashbord = () => {
                     desc="Your one-stop shop for all sales, marketing, technical, and legal collateral."
                 />
 
-                <div className="  flex flex-wrap justify-between gap-3 md:gap-7">
+                <div className="  flex flex-wrap justify-center gap-[8px] md:gap-[15px]">
                     {tabs.map((tab, index) => (
                         <p
                             key={index}
@@ -194,7 +194,7 @@ const Dashbord = () => {
                     ))}
                 </div>
 
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-4 mt-12'>
+                <div className=' grid grid-cols-2 md:grid-cols-[1fr_1fr_1fr]  gap-4 mt-12 lg:max-w-4xl mx-auto'>
                     {
                         dashbordTabs.map(card =>
                             <DashBoardCard

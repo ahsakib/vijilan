@@ -517,11 +517,13 @@ export const dashbordTabs = [
     title: "Upsell Playbook",
     action: "access"
   },
+  
   {
     type: "add icon",
-    title: "Competitive Battlecards",
+    title: "Competitive of Battlecards",
     action: "access"
   },
+
   {
     type: "add icon",
     title: "Technical Guides",

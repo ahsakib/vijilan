@@ -128,9 +128,9 @@ const PodcastSecurity = () => {
 
                             {/* Progress Bar */}
                             <div className="mb-6">
-                                <div className="w-full bg-[#EBEBEB] rounded-full h-1">
+                                <div className="w-full bg-[#EBEBEB]  h-[5px]">
                                     <div
-                                        className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full"
+                                        className="bg-gradient-to-r from-orange-500 to-red-500 h-[5px]"
 
                                         style={{
                                             background: "linear-gradient(90deg, #00AEEF 0%, #F24E1E 100%)", width: "25%"
