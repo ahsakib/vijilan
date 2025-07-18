@@ -15,7 +15,7 @@ const OutlineGradientButton = ({ children, icon = true }) => {
           maskComposite: "exclude",
         }}
       />
-      <span className="uppercase text-sm  md:text-xl">{children}</span>
+      <span className="uppercase text-sm md:text-lg">{children}</span>
       {icon && (
         <div className="w-6 h-6 flex items-center justify-center">
           <svg

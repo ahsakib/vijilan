@@ -6,6 +6,8 @@ import CardContent from '@components/CardContent';
 import CardBorder from '@components/CardBorder';
 import Heading_Btn from '@components/Heading_Btn';
 import { Link } from 'react-router-dom';
+import fourCircle from "../../Assets/four-circle.png"
+import subtract from "../../Assets/Subtract.png"
 
 
 
@@ -150,20 +152,22 @@ const features = [
 
 const ThreatremediateRemotePricing = () => {
     return (
-        <div className='container mx-auto px-6'>
+        <div className='container mx-auto px-2  sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             {/*  */}
             <section className='container mx-auto px-6 py-16 '>
-                <Heading_Btn
-                    h1="Stop Managing Security. Start Growing Your MSP."
-                    desc="Complete cybersecurity for growth-focused MSPs. One price. Zero complexity. Total protection."
-                    btn1="Show How It WOrk"
-                />
+                <div className='mb-10'>
+                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8    leading-14 md:leading-16'>Stop Managing Security. <br /> Start Growing Your MSP.</h1>
+                    <p className='text-[18px] font-medium text-center'>Complete cybersecurity for growth-focused MSPs. <br /> One price. Zero complexity. Total protection.</p>
+                </div>
+                <div className='flex justify-center mx-auto'>
+                    <GradientButton children={"SEE HOW IT WORKS"}/>
+                </div>
                 
             </section>
 
             {/*  */}
             <section className=" relative overflow-hidden">
-                <div className="relative z-10 container mx-auto px-3 md:px-6 py-12">
+                <div className="relative z-10 py-12">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className="text-3xl md:text-[40px] font-bold text-white mb-3">Built for Sales-Focused MSPs Like You</h1>
@@ -175,9 +179,9 @@ const ThreatremediateRemotePricing = () => {
                         {modules.map((module) => (
                             <div
                                 key={module.id}
-                                className={`relative rounded-[24px] p-3 md:p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-auto md:w-[534px] mx-auto" : ""}`}>
+                                className={`relative rounded-[24px] px-[15px] py-[40px] md:px-[32px] bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-auto md:w-[534px] mx-auto" : ""}`}>
                                 <div
-                                    className={`absolute inset-0 rounded-[24px] p-[1px] z-0 $`}
+                                    className={`absolute inset-0 rounded-[24px] p-[2px] z-0 $`}
                                     style={{
                                         background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
                                         WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
@@ -186,7 +190,7 @@ const ThreatremediateRemotePricing = () => {
                                     }}
                                 />
                                 {/* Icon and Header */}
-                                <div className="flex flex-col lg:flex-row items-start gap-4 mb-6">
+                                <div className="flex flex-row items-center gap-4 mb-6">
                                     <div className="">
                                         <img src={cp1} alt="" className='w-[64px] h-[64px]' />
                                     </div>
@@ -208,7 +212,7 @@ const ThreatremediateRemotePricing = () => {
 
             {/*  */}
             <section className=" relative overflow-hidden">
-                <div className="relative z-10 container mx-auto px-4 py-16">
+                <div className="relative z-10 py-16">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className="text-3xl md:text-[40px] text-center font-bold text-white mb-3">
@@ -242,7 +246,7 @@ const ThreatremediateRemotePricing = () => {
                                 </div>
 
                                 {/* Content */}
-                                <div className="pt-8">
+                                <div className="pt-5">
                                     <h3 className="text-[24px] text-center font-medium text-white mb-4 leading-tight">
                                         {service.title}
                                     </h3>
@@ -251,19 +255,19 @@ const ThreatremediateRemotePricing = () => {
                                         {service.description}
                                     </p>
 
-                                    <ul className="space-y-3 mb-8">
+                                    <ul className="space-y-2 pl-3 mb-8">
                                         {service.features.map((feature, featureIndex) => (
                                             <li key={featureIndex} className="flex items-start ">
-                                                <span className=" mr-3">•</span>
+                                                <span className=" mr-2">•</span>
                                                 <span className='text-[18px]'>{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
 
                                     {/* Download Link */}
-                                    <div className="flex items-center justify-center text-[#00AEEF]  mt-auto">
-                                        <Download className="w-4 h-4 mr-2" />
-                                        <span className="text-[16px] ">
+                                    <div className="flex items-center justify-center gap-0.5  mt-auto">
+                                        <img src={fourCircle} alt="" className='w-[13px] h-[11px]' />
+                                        <span className="text-[16px] " style={{color: '#00AEEF'}}>
                                             {service.downloadText}
                                         </span>
                                     </div>
@@ -276,7 +280,7 @@ const ThreatremediateRemotePricing = () => {
 
 
             {/*  */}
-            <div className="container mx-auto px-6 py-16">
+            <div className=" py-16">
                 <div className="">
                     {/* Header */}
                     <div className="text-center mb-12">
@@ -289,11 +293,11 @@ const ThreatremediateRemotePricing = () => {
                         background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                     }}>
                         {/* Product Name */}
-                        <h2 className="text-lg md:text-[20px] font-bold text-center mb-6">ThreatRemediate Remote</h2>
+                        <h2 className="text-lg md:text-[20px] font-bold text-center mb-2">ThreatRemediate Remote</h2>
 
                         {/* Price */}
                         <div className="text-center mb-6">
-                            <div className="text-[66px] font-semibold mb-2" style={{
+                            <div className="text-[66px] font-semibold " style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
@@ -322,8 +326,8 @@ const ThreatremediateRemotePricing = () => {
                             {features.map((feature, index) => (
                                 <div key={index} className="flex items-center gap-3">
                                     <div className="flex-shrink-0">
-                                        <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                                            <Check className="w-3 h-3 text-teal-800" />
+                                        <div className=" flex items-center justify-center">
+                                            <img src={subtract} alt="" className='w-[20px] h-[20px]' />
                                         </div>
                                     </div>
                                     <span className="text-sm text-[#F5F5F5]">{feature}</span>
@@ -334,7 +338,7 @@ const ThreatremediateRemotePricing = () => {
                         {/* CTA Button */}
                         <Link to={"/pricing-tool"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                         
-                            <button className="w-full text-white font-bold py-[18px] px-8 md:px-[65px] rounded-[4px] text-sm" style={{
+                            <button className="w-full text-white font-bold py-[18px] px-[65px] rounded-[4px] text-[15px]" style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
                             }}>
                                 Get your custom quote
@@ -346,7 +350,7 @@ const ThreatremediateRemotePricing = () => {
 
 
             {/*  */}
-            <section className="container mx-auto px-6 py-16">
+            <section className=" py-16">
 
                 <div className="">
                     {/* First Section */}
@@ -425,7 +429,7 @@ const ThreatremediateRemotePricing = () => {
 
 
             {/*  */}
-            <section className='container mx-auto px-6'>
+            <section className='py-16'>
                 {/* Second Section */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-[40px] font-bold mb-3">Get Your Selected Resources</h2>
@@ -459,8 +463,8 @@ const ThreatremediateRemotePricing = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <div className='w-full border text-center border-[#00AEEF] text-[#00AEEF] py-[12px] px-[24px] rounded-[8px]'>
-                        <button className=" font-semibold text-[14px]">
+                    <div className='w-full border text-center border-[#00AEEF] py-[12px] px-[24px] rounded-[8px]'>
+                        <button className=" font-semibold text-[14px]" style={{color: "#00AEEF"}}>
                             Send me these Resources
                         </button>
                     </div>
@@ -471,12 +475,12 @@ const ThreatremediateRemotePricing = () => {
 
 
             {/*  */}
-            <section className=" container mx-auto px-6 py-16">
+            <section className=" py-16">
                 <div className='mb-12'>
                     <h1 className='text-3xl md:text-[40px] font-bold text-center mb-3'>Get Your Custom Proposal</h1>
                     <p className='text-[14px] text-center'>Tell us about your MSP and we'll create a customized proposal showing exactly how <br /> ThreatRemediate Remote can help you grow.</p>
                 </div>
-                <div className="relative bg-[#00AEEF3D] p-6 rounded-[24px] w-full max-w-lg mx-auto">
+                <div className="relative bg-[#00AEEF3D] p-5 md:p-10 rounded-[24px] w-full md:max-w-lg mx-auto">
                     <div
                         className={`absolute inset-0 rounded-[24px] p-[2px] z-0`}
                         style={{
@@ -511,20 +515,20 @@ const ThreatremediateRemotePricing = () => {
                         <div className='relative z-10 '>
                             <label className='text-lg md:text-[20px] font-bold'>Number of Employees in Your MSP *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>1-10</option>
-                                <option className='text-black'>11-50</option>
-                                <option className='text-black'>51-100</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>1-10</option>
+                                <option className='text-black' style={{color: "black"}}>11-50</option>
+                                <option className='text-black' style={{color: "black"}}>51-100</option>
                             </select>
                         </div>
 
                         <div className='relative z-10 '>
                             <label className='text-lg md:text-[20px] font-bold'>Average Client Size (Employees) *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>1-20</option>
-                                <option className='text-black'>21-100</option>
-                                <option className='text-black'>100+</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>1-20</option>
+                                <option className='text-black' style={{color: "black"}}>21-100</option>
+                                <option className='text-black' style={{color: "black"}}>100+</option>
                             </select>
                         </div>
 
@@ -536,10 +540,10 @@ const ThreatremediateRemotePricing = () => {
                         <div className='relative z-10 '>
                             <label className='text-lg md:text-[20px] font-bold'>Current PSA Platform</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>ConnectWise</option>
-                                <option className='text-black'>Autotask</option>
-                                <option className='text-black'>Other</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>ConnectWise</option>
+                                <option className='text-black' style={{color: "black"}}>Autotask</option>
+                                <option className='text-black' style={{color: "black"}}>Other</option>
                             </select>
                         </div>
 

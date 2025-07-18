@@ -172,7 +172,7 @@ const router = createBrowserRouter([
                 element: <ManagedSiemLogScaleService />
             },
             {
-                // responsive done //->complete
+                // responsive done //->complete//done
                 path: "enterprise-landing",
                 element: <EnterpriseLanding />
             },
@@ -188,12 +188,12 @@ const router = createBrowserRouter([
                 element: <MspPartnerProgramAi />
             },
             {
-                // responsive done #complete l
+                // responsive done #complete l//done
                 path: "msp-launchpad",
                 element: <MspLaunchpad />
             },
             {
-                // responsive done  l
+                // responsive done  l//done
                 path: "tier-landing",
                 element: <Tier1Landing />
             },
@@ -209,23 +209,23 @@ const router = createBrowserRouter([
                 element: <Dashbord />
             },
             {
-                // responsive done #complete l
+                // responsive done #complete l//done
                 path: "var-success-case-study",
                 element: <Success_study_case />
             },
             {
-                // responsive done #complete
+                // responsive done #complete//done
                 path: "resilience-case",
                 element: <Resilience_case />
             },
 
             {
-                // responsive done #complete
+                // responsive done #complete//done
                 path: "federal-cmmc-case",
                 element: <Federal_cmmc_case />
             },
             {
-                // responsive done #complete
+                // responsive done #complete//done
                 path: "financial-complianc-case",
                 element: <Financial_Compliance_Case />
             },
@@ -235,17 +235,17 @@ const router = createBrowserRouter([
                 element: <MSP_logscale_case />
             },
             {
-                // responsive done #complete
+                // responsive done #complete//done
                 path: "smb-runsomware-case-study",
                 element: <SMB_Runsomware />
             },
             {
-                // responsive done #complete
+                // responsive done #complete//done
                 path: "health-compliance",
                 element: <HealthCare_Complain_case />
             },
             {
-                // responsive done #kaj kora lagbe l
+                // responsive done #kaj kora lagbe l//done
                 path: "msp-growth-case",
                 element: <MSP_growth_case />
             },
@@ -256,37 +256,37 @@ const router = createBrowserRouter([
             },
             {
 
-                // responsive done #complete l
+                // responsive done #complete l//->vector icon hidden check
                 path: "contact",
                 element: <MspPricingTool />
             },
             {
 
-                // responsive done #complete
+                // responsive done #complete//done->1st section width check
                 path: "pricing-tool",
                 element: <PricingTool />
             },
             {
 
-                // responsive done #complete l
+                // responsive done #complete l//done
                 path: "threatremediate-essentail",
                 element: <ThreatremediateEssentail />
             },
             {
 
-                // responsive done #complete l
+                // responsive done #complete l//done
                 path: "threatremediate-remote-pricing",
                 element: <ThreatremediateRemotePricing />
             },
             {
 
-                // responsive done #complete l
+                // responsive done #complete l//done
                 path: "threatremediate-remote-no-pricing",
                 element: <ThreadRemediateRemoteNoPricing />
             },
             {
 
-                // responsive done #card thikh kora lagbe l
+                // responsive done #card thikh kora lagbe l//done
                 path: "threatremediate-managed-xdr",
                 element: <ThreatreMediateManagedXdr />
             },

@@ -2,27 +2,27 @@ import { ExucativeSummary } from '@app/Constant/Constant';
 import React from 'react';
 import DashBoardCard from './DashBoardCard';
 
-const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border, borderColor, listHead, listTop, grid_4, p1, p2, card, list, numCard, li, list_p, list_key, chart }) => {
+const CommonTextCard = ({ array,SizeControl,listSize,namMenuSize, bg = true, heading, heading1, heading2, border, borderColor, listHead, listTop, grid_4,textSize, p1, p2, card, list, numCard, li, list_p, list_key, chart }) => {
 
 
   return (
-    <div className={`${bg ? "bg-gradient-to-t to-[#063853] from-[#082235]" : "bg-transparent"} py-5 px-8 md:px-4  `} >
-      <h1 className='text-center mt-8 font-semibold  '>{heading}</h1>
-      <h1 className='  mb-4 text-left mt-8 font-semibold'>{heading1}</h1>
-      <p className=' my-3 sm:p-2 md:px-5'>{p1}</p>
-      <p className=' my-3'>{p2}</p>
+    <div className={`${bg ? "bg-gradient-to-t to-[#063853] from-[#082235]" : "bg-transparent"} py-5 px-8 md:px-4  `}  >
+      <h1 className={`text-center mt-8 whitespace-pre-line   ${SizeControl ? "text-[24px] font-medium" : "font-semibold"}`}>{heading}</h1>
+      <h1 className={`mb-4 text-left mt-8 ${SizeControl ? "text-[24px] font-medium" : "font-semibold"}`}>{heading1}</h1>
+      <p className={`my-3 sm:p-2 md:px-5 text-[16px] ${textSize ? "font-medium" : ""}`}>{p1}</p>
+      <p className=' my-3 whitespace-pre-line'>{p2}</p>
       {
         listTop &&
         <ul className='mt-4 list-item'>
           <p className='font-semibold'>{list_key}</p>
           {listTop.map((li, index) => (
-            <li key={index} className='list-disc mt-3 ml-4'>
+            <li key={index} className='list-disc mt-3 ml-8'>
               {li}
             </li>
           ))}
         </ul>
       }
-      <div className={`${border ? "p-8 border-2   rounded-lg mt-5" : ""}`}
+      <div className={`${border ? "p-8 border   rounded-lg mt-5" : ""}`}
         style={{ borderColor: borderColor }}
       >
         <h3 className='my-5 text-xl text-center font-semibold'>{heading2}</h3>
@@ -36,6 +36,9 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
               icon={card.icon}
               head={card.label}
               desc={card.text}
+              mainTitle={card.mainTitle}
+              subTitle={card.subTitle}
+              iconSize={true}
             />)}
           </div>
         }
@@ -64,13 +67,12 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
                 }}
               />
 
-
-
-              <h3 className="text-3xl text-center font-bold   mb-3">{card.label}</h3>
+              <h3 className={` text-center  ${namMenuSize ? "text-[25px] md:text-[36px] font-bold" : "text-3xl font-bold"}  mb-3`}>{card.label}</h3>
 
               {/* <p className='text-[#00AEEF]  mt-2 text-sm'>{card.text}</p> */}
-              {/* <p className='text-white text-sm'>{card.desc}</p> */}
-              <p className='text-white text-sm text-center'>{card.text}</p>
+             
+              <p className={`text-white  text-center whitespace-pre-line ${namMenuSize ? "text-[16px] !text-[#00AEEF] font-medium" : "text-sm"}`} >{card.text}</p>
+               <p className={`text-white  text-center whitespace-pre-line ${namMenuSize ? "text-[16px] " : "text-sm"}`}>{card.desc}</p>
             </div>
           )
 
@@ -85,7 +87,7 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
             <div key={index} className='mt-3  '>
 
               {
-                li ? <p className={`font-extrabold mb-1`}><li className='list-disc ml-4'>{list.label}</li></p> : <p className={`font-extrabold mb-1 `}>{list.label}</p>
+                li ? <p className={`font-bold mb-1`}><li className='list-disc ml-4'>{list.label}</li></p> : <p className={`font-bold mb-1 `}>{list.label}</p>
               }
               <p>{list.text}</p>
             </div>
@@ -104,7 +106,7 @@ const CommonTextCard = ({ array, bg = true, heading, heading1, heading2, border,
         <ul className='mt-4 list-item'>
           <p className='font-semibold'>{list_key}</p>
           {list.map((li, index) => (
-            <li key={index} className='list-disc mt-3 ml-4'>
+            <li key={index} className={`list-disc ${listSize ? "ml-6" : "ml-4"}`}>
               {li}
             </li>
           ))}

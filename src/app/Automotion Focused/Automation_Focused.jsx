@@ -28,7 +28,7 @@ const cardData = [
 ]
 const Automation_Focused = () => {
     return (
-        <div className='max-w-[90%] mx-auto  '>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6 '>
 
             <div className='text-center'>
                 <Heading_Btn h1="Build Your Security Practice with Automated Tools"
@@ -36,7 +36,7 @@ const Automation_Focused = () => {
                 />
 
                 {/* Stats - Improved Grid */}
-                <div className='-mt-[80px]'>
+                <div className='-mt-[90px]'>
                     <div className="flex flex-wrap justify-center gap-4 mb-4 max-w-4xl mx-auto">
 
                         {
@@ -53,25 +53,28 @@ const Automation_Focused = () => {
 
                     </div>
 
-                    <Heading_Btn
+                    <div className='-mt-[10px]'>
+                        <Heading_Btn
                         btn1="Explore Success Stories"
-                        btn2="Calculate Your Roi"
+                        btn8="Calculate Your Roi"
                         url={"/complain-solution"}
                     />
+                    </div>
 
                 </div>
             </div>
 
             {/* Business Automation */}
 
-            <div className='container md:px-6 mx-auto pb-16'>
+            <div className=' pb-16'>
 
                 <Heading_Btn
                     h1="Business Automation Tools That Drive Results"
                     desc={`Stop wasting time on manual processes. These interactive tools help you quote faster, sell smarter,\nand grow profitably.`}
+                    isSmallHeading={true}
                 />
 
-                <div className='  '>
+                <div className='  -mt-[25px]'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5  '>
                         <div className={`relative bg-[#00AEEF3D] lg:h-[603px]  py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
                             <div

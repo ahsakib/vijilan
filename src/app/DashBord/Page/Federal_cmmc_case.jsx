@@ -106,24 +106,24 @@ const Federal_cmmc_case = () => {
     ]
 
     return (
-        <div className='max-w-[90%] mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             {/* top part */}
-            <section className=" mx-auto px-6">
+            <section className=" ">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Home</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
                         <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Resources</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"  style={{ color: "#7E7E7E" }}/>
                         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Case Studies</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-700 text-[13px]  ">Federal CMMC Success</span>
+                        <ChevronRight className="w-4 h-4 mx-2"style={{ color: "#7E7E7E" }} />
+                        <span className=" text-[13px]  " style={{ color: "#00AEEF" }}>Federal CMMC Success</span>
                     </nav>
                 </div>
             </section>
@@ -131,7 +131,7 @@ const Federal_cmmc_case = () => {
             {/* button */}
             <section className='flex justify-center'>
                 <button
-                    className="py-3  px-5 text-lg font-medium rounded-4xl text-white inline-flex items-center space-x-3"
+                    className="py-[15px]  p-[25px] md:px-[40px] text-[14px] font-bold rounded-[40px] text-white inline-flex items-center space-x-3"
                     style={{
                         background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
 
@@ -142,14 +142,13 @@ const Federal_cmmc_case = () => {
             </section>
 
             {/* heading button */}
+            <div className='mb-16'>
+                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>Federal Contractor Achieves CMMC <br /> 2.0 Readiness in 6 Weeks</h1>
+                <p className='text-[18px] text-center'>Discover how a defense contractor achieved CMMC 2.0 Level 2 compliance in record <br /> time through Vijilan's AWS Marketplace solution, securing critical DoD contracts with <br /> 100% audit success.</p>
+            </div>
 
-            <Heading_Btn
-                h1="Federal Contractor Achieves CMMC 2.0 Readiness in 6 Weeks"
-                desc="Discover how a defense contractor achieved CMMC 2.0 Level 2 compliance in record time through Vijilan's AWS Marketplace solution, securing critical DoD contracts with 100% audit success."
-            />
 
-
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+            <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                 {
                     numberArray.map(card => <NumberShow
                         link={card.label}
@@ -167,7 +166,9 @@ const Federal_cmmc_case = () => {
 
                 <div className='grid-cols-1'>
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] '>
+                    <div className='mt-5' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
 
                         <CommonTextCard
                             heading1="Us Executive Summary"
@@ -182,42 +183,45 @@ const Federal_cmmc_case = () => {
 
                     </div>
                     {/* ⚠️ Government Compliance Challenges */}
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <ListComponent
                             heading="⚠️ Government Compliance Challenges "
                             p1="Federal contractors face unique cybersecurity challenges that combine complex regulatory requirements with the need to protect sensitive government information"
                             array={list1}
+                            headingSize={true}
                         />
                     </div>
 
 
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             // array={securityArray}
                             card={awsCard}
-                            heading="☁️ AWS Marketplace Deployment Advantage"
+                            heading1="☁️ AWS Marketplace Deployment Advantage"
                             p1="The contractor procured Vijilan's ThreatRemediate service directly through the AWS Marketplace, which significantly streamlined and accelerated both the procurement and deployment process:"
                             listHead="Comprehensive CMMC-Mapped Security Program"
                             list_p="The solution provided a complete security program that mapped directly to CMMC 2.0 controls, eliminating guesswork and ensuring comprehensive coverage of all 110 required security controls."
                             list={list2}
                             list_key="Key Solution Components:"
+                            SizeControl={true}
+                            listSize={true}
                         />
                     </div>
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <Heading_Btn
 
                             h3="⏱️ 6-Week Compliance Timeline"
-                            desc="   Vijilan's streamlined deployment process enabled the contractor to achieve full CMMC 2.0 Level 2 compliance in just 6 weeks:"
+                            desc={"Vijilan's streamlined deployment process enabled the contractor to achieve full CMMC 2.0 Level 2 compliance in just 6 weeks:"}
                         />
 
 
-                        <div className='mt-8'>
-                            <h1 className='my-4 text-center font-semibold'> 🛡️ Comprehensive IT/OT Security Solution</h1>
+                        <div className='-mt-[70px]'>
+                            <h1 className='mb-8 text-center font-semibold'> 🛡️ Comprehensive IT/OT Security Solution</h1>
                             <div className='mx-6 md:mx-16 grid grid-cols-1 lg:grid-cols-2 gap-5'>
                                 {
-                                    IT_IO.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} />)
+                                    IT_IO.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} iconSize={true} />)
                                 }
                             </div>
                         </div>
@@ -228,8 +232,6 @@ const Federal_cmmc_case = () => {
                 </div>
 
                 <div className='grid-cols-1'>
-
-
                     <div className='mt-5'>
                         <ProfileHRCard
                             h1="Federal Contractor Profile"
@@ -245,18 +247,20 @@ const Federal_cmmc_case = () => {
                             l5r="CUI Protection"
                             l6l="Deployment"
                             l6r="AWS Marketplace"
+                            SizeModify={true}
                         />
                     </div>
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <MesurableComponentDashboard
                             heading="Manufacturing Security & Operational Results"
                             array={federalCard}
+                            isColor={true}
                         />
                     </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <DashboardSideText
                             desc="The CMMC deadline was a make-or-break moment for our business. We didn't have the time or expertise to build a compliant program from scratch. Finding Vijilan on the AWS Marketplace was a lifesaver. Their team got us deployed and audit-ready in just six weeks, and we passed our assessment without a single issue. We couldn't have done it without them."
                             author="CEO, Defense Contractor"
@@ -264,30 +268,27 @@ const Federal_cmmc_case = () => {
                     </div>
 
 
-                   <div className='mt-5'>
-                     <CommonTextCard
-                        array={excelList}
-                        heading="Why Vijilan Excels in Government  Compliance"
-                    />
-                   </div>
+                    <div className='mt-10'>
+                        <CommonTextCard
+                            array={excelList}
+                            heading="Why Vijilan Excels in Government  Compliance"
+                        />
+                    </div>
                 </div>
             </div>
 
 
             {/* last section  */}
 
-
-
-
-
-
-            <Heading_Btn
-                h1="Achieve CMMC Compliance Fast"
-                desc=" Discover how Vijilan's AWS Marketplace solution can help your federal contracting business achieve CMMC 2.0 compliance in record time while securing critical government contracts."
+           <div className='py-16'>
+             <Heading_Btn
+                h1={"Achieve CMMC Compliance\nFast"}
+                desc={" Discover how Vijilan's AWS Marketplace solution can help your federal contracting\nbusiness achieve CMMC 2.0 compliance in record time while securing critical\ngovernment contracts."}
                 btn1="Get started on aws market place"
-                btn2=" schedule  cmmc consultation"
+                btn9=" schedule  cmmc consultation"
                 url={"/mid-market-enterprice"}
             />
+           </div>
         </div>
     );
 };

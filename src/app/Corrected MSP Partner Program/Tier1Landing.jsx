@@ -14,8 +14,8 @@ const Tier1Landing = () => {
 
     const services = [
         {
-            title: "Sample Identity Protection Email",
-            description: `Ready-to-send email campaign to introduce identity protection services to your clients`,
+            title: `Sample Identity\nProtection Email`,
+            description: `Ready-to-send email campaign to\nintroduce identity protection services\nto your clients`,
             designBtn: "download email template",
             btnIcon: false
         },
@@ -26,26 +26,26 @@ const Tier1Landing = () => {
             btnIcon: false
         },
         {
-            title: `"Guarding the Vault" Guide`,
-            description: `Client-facing lead magnet specifically designed for financial services`,
+            title: `"Guarding the Vault"\nGuide`,
+            description: `Client-facing lead magnet specifically\ndesigned for financial services`,
             designBtn: "download pdf guide",
             btnIcon: false
         },
         {
             title: "Website Copy Snippets",
-            description: `Professional service descriptions and value propositions for your website`,
+            description: `Professional service descriptions and\nvalue propositions for your website`,
             designBtn: "download copy kit",
             btnIcon: false
         },
         {
             title: "Sample Landing Page Copy",
-            description: `Copy-and-paste website content to promote identity protection services`,
+            description: `Copy-and-paste website content to\npromote identity protection services`,
             designBtn: "download page copy",
             btnIcon: false
         },
         {
-            title: `"Guarding the Vault" Guide`,
-            description: `Client-facing lead magnet specifically designed for financial services`,
+            title: `"Guarding the Vault"\nGuide`,
+            description: `Client-facing lead magnet specifically\ndesigned for financial services`,
             designBtn: "download pdf guide",
             btnIcon: false
         },
@@ -92,24 +92,29 @@ const Tier1Landing = () => {
         },
     ];
     return <>
-        <div className="max-w-[90%] mx-auto">
+        <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6">
             <section>
 
-                <div>
-                    <Heading_Btn
-                        h1={"Sales & Marketing Enablement for MSPs"}
-                        desc={"Help your clients. Grow your business. Access ready-to-use cybersecurity marketing \n kits."}
-                    />
+                <div className="text-center mb-[70px]">
+                    <h1 className="text-white text-3xl md:text-[40px] lg:text-5xl font-bold mb-5 leading-tight">
+                        Sales & Marketing Enablement for MSPs
+                    </h1>
+                    <p className="text-white text-16px leading-relaxed">
+                        Help your clients. Grow your business. Access ready-to-use cybersecurity marketing <br /> kits.
+                    </p>
+
                 </div>
-                <div>
-                    <Heading_Btn
-                        h1={"🚀 Start Using These Resources Right Now"}
-                        desc={"No email required. Download and start growing your business today."}
-                    />
+                <div className="text-center mb-12">
+                    <h1 className="text-white text-3xl md:text-[40px] lg:text-5xl font-bold mb-5 leading-tight">
+                        🚀 Start Using These Resources Right Now
+                    </h1>
+                    <p className="text-white text-16px leading-relaxed">
+                        No email required. Download and start growing your business today.
+                    </p>
                 </div>
             </section>
 
-            <section className="container mx-auto md:px-6">
+            <section className="pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {services.map((service, index) => (
                         <ServiceCard
@@ -117,61 +122,69 @@ const Tier1Landing = () => {
                             index={index}
                             service={service}
                             onAddIcon={() => alert(`Add icon clicked for ${service.title}`)}
+                            textStart={true}
                         />
                     ))}
                 </div>
             </section>
 
-            <section className="container mx-auto md:px-3 pt-16">
-                <NavyBlueBackground borderCancel={true}>
+            <section className=" py-16">
+               <div className="rounded-[24px]" style={{background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)"}}>
                     <div className=" px-0 md:px-12 lg:px-30  pt-10 pb-20">
 
                         <h1 className="text-xl  md:text-4xl text-center font-semibold lg:font-bold mb-8">📧 Email Template Preview</h1>
 
                         <div>
-                            <div class="bg-transparent p-3 md:p-5 lg:p-10 border rounded-2xl border-[#00AEEF] relative">
+                            <div class="bg-transparent p-5 border rounded-2xl border-[#00AEEF] relative">
                                 <div class="absolute left-0 top-[5%] h-[90%] w-1 bg-[#30A1F6]"></div>
 
                                 <h2 class="text-lg font-thin md:font-semibold lg:font-bold text-white mb-2"> Subject: Is Your Business Protected from Identity Theft?</h2>
                                 <p class="text-white mb-1">
                                     <span class="text-xl mb-2 font-bold">Hi [Client Name],</span>
                                 </p>
-                                <p class="text-white-400 text-[16px] font-medium mb-4">
-                                    Identity-based attacks have increased 87% this year, with cybercriminals specifically targeting businesses like yours. Many of our clients were shocked to learn how vulnerable their employees' credentials actually were...
+                                <p class="text-white-400 text-[16px] font-medium mb-2">
+                                    Identity-based attacks have increased 87% this year, with cybercriminals <br /> specifically targeting businesses like yours. Many of our clients were <br /> shocked to learn how vulnerable their employees' credentials actually <br /> were...
                                 </p>
                                 <p className="font-bold text-xl">📥 Download the complete email template above</p>
                             </div>
                         </div>
                     </div>
-                </NavyBlueBackground>
+                </div>
             </section>
 
-            <section className="container mx-auto md:px-1">
-                <NavyBlueBackground>
+            <section className="py-16">
+
+                <div className="rounded-[24px] " style={{
+                    background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                }}>
                     <div class="bg-transparent text-white p-10 rounded-lg mx-auto font-sans">
-                        <h1 class="text-2xl md:text-5xl font-bold text-center mb-10">Targeting Other Industries?</h1>
+                        <h1 class="text-2xl md:text-5xl font-bold text-center mb-10 mt-5">Targeting Other Industries?</h1>
                         <h2 class="text-xl text-center  font-thin md:font-semibold lg:font-bold mb-6 opacity-90">Manufacturing • Legal • Education • Government • Healthcare</h2>
 
                         <p class="text-center mb-8  font-thin md:font-semibold lg:font-bold text-xl mx-auto opacity-80">
-                            Access even more ready-to-use sales kits by entering your work email below. Get the complete MSP toolkit with industry-specific content.
+                            Access even more ready-to-use sales kits by entering your work email below. Get the complete MSP toolkit <br /> with industry-specific content.
                         </p>
 
                         <div class="flex flex-col md:flex-row justify-center gap-3 mb-8 overflow-x-auto py-2">
-                            <div class="flex-shrink-0 px-6 text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div className="flex-shrink-0 px-[24px] text-[18px] font-bold py-[15px] border border-[#F5F5F5] rounded-[65px]  cursor-pointer" style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"}}>
                                 Healthcare compliance kit
                             </div>
-                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div className="flex-shrink-0 px-[24px] text-[18px] font-bold py-[15px] border border-[#F5F5F5] rounded-[65px]  cursor-pointer" style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"}}>
                                 Legal sector Templates
                             </div>
-                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div className="flex-shrink-0 px-[24px] text-[18px] font-bold py-[15px] border border-[#F5F5F5] rounded-[65px]  cursor-pointer" style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"}}>
                                 Manufacturing Security
                             </div>
-                            <div class="flex-shrink-0 px-6  text-sm py-2 border border-white rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+                            <div className="flex-shrink-0 px-[24px] text-[18px] font-bold py-[15px] border border-[#F5F5F5] rounded-[65px]  cursor-pointer" style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"}}>
                                 Education Safety Materials
                             </div>
                         </div>
 
-                        <div class="max-w-xs mx-auto mb-10">
+                        <div class="max-w-sm mx-auto mb-10">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
@@ -190,10 +203,11 @@ const Tier1Landing = () => {
                             Instant access to expanded sales kits • No spam, ever.
                         </p>
                     </div>
-                </NavyBlueBackground>
+                </div>
+
             </section>
 
-            <section className="px-6 py-16">
+            <section className=" py-16">
                 <div className="mx-auto max-w-6xl">
                     <div className="text-center mb-12">
                         <h2 className="text-2xl md:text-4xl lg:text-[40px] font-bold tracking-tight text-white">

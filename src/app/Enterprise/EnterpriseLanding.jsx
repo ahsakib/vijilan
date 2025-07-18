@@ -57,7 +57,7 @@ const EnterpriseLanding = ({ }) => {
     ];
     return <>
 
-        <div className="max-w-[90%] mx-auto">
+        <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6">
             <section className="md:px-6">
                 <div className='text-center'>
                     <Heading_Btn h1={`Stop Chasing Alerts. Start Neutralizing\nThreats.`}
@@ -69,18 +69,15 @@ const EnterpriseLanding = ({ }) => {
                 </div>
             </section>
 
-            <section className="container mx-auto md:px-6 py-16">
-                <div className="mx-auto max-w-7xl">
+            <section className="py-16">
+                <div className="mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">
-                            From Detection to Guided Resolution
+                        <h2 className="text-3xl md:text-[40px] font-bold tracking-tight text-white">
+                            From Data Chaos to Strategic Clarity
                         </h2>
-                        <p className="mt-3 text-[18px] text-white">
-                            Our comprehensive security process helps keep your organization secure from end to end.
-                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className={`relative bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center`}>
                             <div
                                 className="absolute inset-0 rounded-[16px] p-[2px] z-0 text-center"
@@ -89,7 +86,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={security} alt="" className="" />
                             </div>
@@ -105,7 +102,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={soc} alt="" />
                             </div>
@@ -121,7 +118,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={actionable} alt="" />
                             </div>
@@ -137,7 +134,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={data} alt="" />
                             </div>
@@ -153,7 +150,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={fullstack} alt="" />
                             </div>
@@ -169,7 +166,7 @@ const EnterpriseLanding = ({ }) => {
                                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                                     WebkitMaskComposite: "xor",
                                     maskComposite: "exclude",
-                                }}/>
+                                }} />
                             <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center my-4">
                                 <img src={riskRed} alt="" />
                             </div>
@@ -181,7 +178,7 @@ const EnterpriseLanding = ({ }) => {
                 </div>
             </section>
 
-            <section className="container mx-auto md:px-1 pt-16">
+            <section className=" pt-16">
                 <div className="text-center">
                     <h2 className="text-2xl md:text-[40px] font-bold tracking-tight text-white">
                         Comprehensive Solutions for Your Entire Attack Surface
@@ -189,8 +186,8 @@ const EnterpriseLanding = ({ }) => {
                 </div>
                 <InfoSection
                     design2={true}
-                    width={"495px"}
-                    height={"495px"}
+                    width={"511px"}
+                    height={"511px"}
                     heading={"ThreatRemediate™ Ultimate"}
                     desc={"Our flagship managed XDR service provides full-lifecycle, hands-on remediation. We don't just alert—we contain and neutralize threats across your endpoints, cloud, identity, and network."}
                     subtitle={"Fully Managed Detection, Response & Remediation"}
@@ -201,11 +198,11 @@ const EnterpriseLanding = ({ }) => {
 
             </section>
 
-            <section className="container mx-auto md:px-5 pt-16 md:pt-0">
+            <section className="pt-16 md:pt-0 ">
                 <InfoSection
                     design2={true}
-                    width={"495px"}
-                    height={"495px"}
+                    width={"511px"}
+                    height={"511px"}
                     heading={"Managed SIEM & Data Optimization"}
                     desc={"Let our experts deploy, manage, and optimize CrowdStrike LogScale, powered by our unique Cribl integration. Gain unparalleled visibility and control over your data while reducing costs."}
                     subtitle={"Modernize Your SOC with LogScale & Cribl"}
@@ -215,11 +212,11 @@ const EnterpriseLanding = ({ }) => {
 
             </section>
 
-            <section className="container mx-auto md:px-3">
+            <section className="pb-16">
                 <InfoSection
                     design2={true}
-                    width={"495px"}
-                    height={"495px"}
+                    width={"511px"}
+                    height={"511px"}
                     heading={"Professional Services"}
                     desc={"Augment your team with our certified experts for seamless implementation and ongoing management of leading technologies, including Cribl, Corelight, and the full CrowdStrike Falcon platform."}
                     subtitle={"Expert Implementation & Management"}
@@ -229,59 +226,76 @@ const EnterpriseLanding = ({ }) => {
                 />
 
             </section>
+           
 
-            <section className="container md:px-2  mx-auto">
-                <NavyBlueBackground>
+
+            <section className="py-16">
+                <div className="rounded-[24px] w-full" style={{
+                    background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                }}>
                     <div class="flex flex-col items-center justify-center gap-8 text-center  py-12">
-                        <div class="flex items-center justify-center  px-2 md:px-8    py-6 bg-transparent border-2 border-[#00AEEF] rounded-full shadow-sm font-sans hover:bg-[#00AEEF]/10 transition-colors duration-200">
-                            <span class="text-white font-bold text-xl tracking-wide">SOC 2 Type II Certified</span>
+                        <div class="flex items-center justify-center  px-[16px]   py-[14px] bg-transparent border-2 border-[#00AEEF] rounded-[29px] font-sans hover:bg-[#00AEEF]/10 transition-colors duration-200">
+                            <span class="text-white font-semibold text-xl tracking-wide">SOC 2 Type II Certified</span>
                         </div>
 
-                        <div class="space-y-6 max-w-4xl ">
+                        <div class="space-y-8 max-w-4xl ">
                             <h1 class="font-bold text-xl md:text-3xl lg:text-5xl text-white">
                                 Achieve and Maintain Compliance with Confidence
                             </h1>
-                            <p class="text-sm  md:text-lg text-white/80 leading-relaxed">
+                            <p class="text-sm  md:text-lg text-[#FFFFFF] leading-relaxed">
                                 Our services are designed to help you meet rigorous regulatory standards.
-                                We provide detailed, audit-ready reporting and long-term log retention to support your
+                                We <br /> provide detailed, audit-ready reporting and long-term log retention to support your <br />
                                 compliance needs for HIPAA, GDPR, PCI DSS, CMMC, and more.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap items-center justify-center gap-3 mt-8 max-w-4xl">
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">HIPAA</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">HIPAA</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">GDPR</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">GDPR</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">PCI DSS</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">PCI DSS</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">CMMC</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">CMMC</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">SOX</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">SOX</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">NIST</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">NIST</span>
                             </div>
-                            <div class="flex items-center justify-center px-6 h-[36px] bg-transparent border border-white rounded-full hover:bg-white/10 transition-colors duration-200">
-                                <span class="text-white font-bold text-sm tracking-wide">ISO 27001</span>
+                            <div class="flex items-center justify-center px-[24px] h-[40px] border border-[#F5F5F5] rounded-[65px] text-[#FFFFFFCC] " style={{
+                                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                            }}>
+                                <span class="text-white font-bold text-[18px] tracking-wide">ISO 27001</span>
                             </div>
                         </div>
 
-                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="mt-10">
-                            <div class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md 
-border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent
-transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90
-text-center select-none uppercase">
+                        <Link to={"/contact"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="mt-8">
+                            <div class="inline-block cursor-pointer font-semibold p-[18px] md:p-[24px] rounded-[8px] 
+                            border-2 border-solid border-[#00AEEF] text-[#00AEEF] 
+                            text-center select-none uppercase" style={{ color: "#00AEEF" }}>
                                 request a compliance consultation
                             </div>
                         </Link>
                     </div>
-                </NavyBlueBackground>
+                </div>
 
             </section>
 
@@ -290,9 +304,9 @@ text-center select-none uppercase">
                     h1={"Ready to Build a More Resilient Security\nPosture?"}
                     desc={"See exactly how Vijilan can integrate with your environment and augment your team.\nSchedule a technical, no-obligation demo with one of our security architects."}
                     btn5={"schedule a security architect demo"}
-                    
+
                 />
-                
+
             </section>
         </div>
     </>

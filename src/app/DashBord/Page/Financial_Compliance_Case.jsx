@@ -96,24 +96,24 @@ const Financial_Compliance_Case = () => {
     ]
 
     return (
-        <div className='max-w-[90%] mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             {/* top part */}
-            <section className="  mx-auto px-6">
+            <section className="">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Home</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{ color: "#7E7E7E" }} />
                         <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Resources</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{ color: "#7E7E7E" }} />
                         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Case Studies</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-400 text-[13px] font-medium">Financial Services Compliance</span>
+                        <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }}/>
+                        <span className=" text-[13px] font-medium" style={{ color: "#00AEEF" }}>Financial Services Compliance</span>
                     </nav>
                 </div>
             </section>
@@ -121,20 +121,31 @@ const Financial_Compliance_Case = () => {
             {/* button */}
             <section className='flex justify-center'>
                 <button
-                    className="py-3  px-5 text-lg  rounded-4xl text-white bg-yellow-400 font-semibold">
-                    Financial Services Impact
+                    className="relative py-[15px]  p-[25px] md:px-[40px] text-[14px] font-bold rounded-[40px] text-white inline-flex items-center space-x-3 bg-[#F4CE41]">
+                    <div
+                        className={`absolute inset-0 rounded-[40px] p-[1px] z-0`}
+                        style={{
+                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
+                            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "xor",
+                            maskComposite: "exclude",
+                        }}
+                    />
+
+                    Financial Service impact
                 </button>
                 {/* heading button */}
 
 
             </section>
-            <Heading_Btn
-                h1="Regional Bank Achieves Zero Audit Findings with ThreatRemediate Ultimate"
-                desc="Discover how a regional bank achieved zero SEC and GLBA audit findings with 60% faster incident response through comprehensive financial services security and compliance automation."
-            />
+
+            <div className='mb-16 mt-4'>
+                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>Regional Bank Achieves Zero Audit <br /> Findings with ThreatRemediate <br />Ultimate</h1>
+                <p className='text-[18px] text-center'>Discover how a regional bank achieved zero SEC and GLBA audit findings with 60% <br /> faster incident response through comprehensive financial services security and <br /> compliance automation.</p>
+            </div>
 
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+            <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                 {
                     numberArray.map(card => <NumberShow link={card.label} number={card.metric} />)
                 }
@@ -147,13 +158,30 @@ const Financial_Compliance_Case = () => {
 
                 <div className='grid-cols-1'>
 
-                    <CommonTextCard
-                        heading1="Us Executive Summary"
-                        p1="A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
-                        heading2="Regular compliance Achievement"
-                        card={usExucativeSummary}
-
-                    />
+                    <div className='mt-5' style={{
+                            background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                        }}>
+                        <div >
+                            <div className=''>
+                                <CommonTextCard
+                                    heading1="Us Executive Summary"
+                                    p1="A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
+                                    bg={false}
+                                />
+                            </div>
+                            <div className='pb-16'>
+                                <div className='border border-[#F4CE41] rounded-[10px] p-[10px] mx-5 md:mx-10 '>
+                                <div className='-mt-[40px]'>
+                                    <CommonTextCard
+                                    heading2="Regular compliance Achievement"
+                                    card={usExucativeSummary}
+                                    bg={false}
+                                />
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                     {/*  ⚠️ Financial Institution Security Challenges */}
                     <div>
                         <ListComponent
@@ -164,17 +192,15 @@ const Financial_Compliance_Case = () => {
                     </div>
 
 
-
-
-
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             // array={securityArray}
                             card={financialService}
-                            heading="Financial Service Threat Landscape"
+                            heading={"Financial Service Threat\nLandscape"}
 
                             // list={list2}
-                            list_key="Key Solution Components:"
+                            //list_key="Key Solution Components:"
+                            
                         />
                     </div>
 
@@ -199,48 +225,47 @@ const Financial_Compliance_Case = () => {
                             l5r="GLBA, SEC"
                             l6l="Service Level"
                             l6r="Gold Tier"
+                            SizeModify={true}
                         />
                     </div>
 
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <MesurableComponentDashboard
                             heading="Financial Service & Compliance Results"
                             array={financialServiceCard}
+                             isColor={true}
                         />
                     </div>
 
-                  <div className='mt-5'>
-                      <DashboardSideText
-                        desc="For us, compliance isn't optional—it's foundational to our business. Vijilan's ThreatRemediate Ultimate service not only hardened our defenses against sophisticated attacks but also transformed our audit process. The detailed compliance reporting they provide is a game-changer. We went into our last audit more prepared and confident than ever before."
-                        author="Chief Compliance Officer, Regional Bank"
-                    />
-                  </div>
+                    <div className='mt-10'>
+                        <DashboardSideText
+                            desc="For us, compliance isn't optional—it's foundational to our business. Vijilan's ThreatRemediate Ultimate service not only hardened our defenses against sophisticated attacks but also transformed our audit process. The detailed compliance reporting they provide is a game-changer. We went into our last audit more prepared and confident than ever before."
+                            author="Chief Compliance Officer, Regional Bank"
+                        />
+                    </div>
 
 
-                  <div className='mt-5'>
-                      <CommonTextCard
-                        array={excelList}
-                        heading="🏦 Why Vijilan Excels in Financial Services Security"
-                    />
-                  </div>
+                    <div className='mt-10'>
+                        <CommonTextCard
+                            array={excelList}
+                            heading="🏦 Why Vijilan Excels in Financial Services Security"
+                        />
+                    </div>
                 </div>
             </div>
 
 
             {/* last section  */}
 
-            <div>
-
-
-
+            <div className='py-16'>
 
                 <Heading_Btn
-                    h1=" Achieve Perfect Financial Compliance & Security"
-                    desc="  Discover how Vijilan's ThreatRemediate Ultimate can protect your financial institution while ensuring zero audit findings and streamlined regulatory compliance."
+                    h1={"Achieve Perfect Financial\nCompliance & Security"}
+                    desc={"Discover how Vijilan's ThreatRemediate Ultimate can protect your financial\ninstitution while ensuring zero audit findings and streamlined regulatory compliance."}
                     btn1="explore financial solutions"
-                    btn2="  schedule  compliance assessment"
+                    btn9="  schedule  compliance assessment"
                 />
             </div>
 

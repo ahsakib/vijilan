@@ -3,9 +3,9 @@ import { ChevronDown, Shield, Clock, Users, Award, CheckCircle } from "lucide-re
 
 const RequestDemoVijilan = () => {
     return (
-        <div>
+        <div className='container mx-auto px-2'>
             {/* hero section */}
-            <section className='container mx-auto md:px-6 py-16'>
+            <section className=' py-16'>
                 {/* content */}
                 <div className=''>
                     <h1 className=' text-3xl md:text-4xl lg:text-[48px] font-bold text-center'>See Vijilan in Action</h1>
@@ -14,9 +14,9 @@ const RequestDemoVijilan = () => {
             </section>
 
             {/* input and content */}
-            <section className='container mx-auto md:px-6'>
+            <section className=''>
                 <div className="">
-                    <div className="container mx-auto px-4 py-8">
+                    <div className="container mx-auto sm:px-4 lg:px-8 xl:px-4 py-8">
                         <div className='max-w-xl mb-12'>
                             <h1 className='text-center text-3xl md:text-[40px] font-bold mb-3'>Request a Demo</h1>
                             <p className='text-[18px] text-center'>Fill out the form below and we'll schedule a personalized demonstration tailored to your specific security needs and business requirements.</p>
@@ -90,12 +90,12 @@ const RequestDemoVijilan = () => {
                                                 name="jobTitle"
                                                 className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80] "
                                                 required>
-                                                <option value="">Select</option>
-                                                <option value="ciso">CISO</option>
-                                                <option value="it-director">IT Director</option>
-                                                <option value="security-manager">Security Manager</option>
-                                                <option value="it-manager">IT Manager</option>
-                                                <option value="other">Other</option>
+                                                <option value="" style={{color: "black"}}>Select</option>
+                                                <option value="ciso" style={{color: "black"}}>CISO</option>
+                                                <option value="it-director" style={{color: "black"}}>IT Director</option>
+                                                <option value="security-manager" style={{color: "black"}}>Security Manager</option>
+                                                <option value="it-manager" style={{color: "black"}}>IT Manager</option>
+                                                <option value="other" style={{color: "black"}}>Other</option>
                                             </select>
                                             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                         </div>
@@ -109,11 +109,11 @@ const RequestDemoVijilan = () => {
 
                                                 className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]"
                                             >
-                                                <option value="">Select</option>
-                                                <option value="1-50">1-50 employees</option>
-                                                <option value="51-200">51-200 employees</option>
-                                                <option value="201-1000">201-1000 employees</option>
-                                                <option value="1000+">1000+ employees</option>
+                                                <option value="" style={{color: "black"}}>Select</option>
+                                                <option value="1-50" style={{color: "black"}}>1-50 employees</option>
+                                                <option value="51-200" style={{color: "black"}}>51-200 employees</option>
+                                                <option value="201-1000" style={{color: "black"}}>201-1000 employees</option>
+                                                <option value="1000+" style={{color: "black"}}>1000+ employees</option>
                                             </select>
                                             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                         </div>
@@ -129,11 +129,11 @@ const RequestDemoVijilan = () => {
                                                 className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]"
                                                 required
                                             >
-                                                <option value="">Select</option>
-                                                <option value="decision-maker">Decision Maker</option>
-                                                <option value="influencer">Influencer</option>
-                                                <option value="end-user">End User</option>
-                                                <option value="consultant">Consultant</option>
+                                                <option value="" style={{color: "black"}}> Select</option>
+                                                <option value="decision-maker" style={{color: "black"}}>Decision Maker</option>
+                                                <option value="influencer" style={{color: "black"}}>Influencer</option>
+                                                <option value="end-user" style={{color: "black"}}>End User</option>
+                                                <option value="consultant" style={{color: "black"}}>Consultant</option>
                                             </select>
                                             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                         </div>
@@ -149,11 +149,11 @@ const RequestDemoVijilan = () => {
                                                 className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]"
                                                 required
                                             >
-                                                <option value="">Select Primary Interest</option>
-                                                <option value="threat-detection">Threat Detection</option>
-                                                <option value="incident-response">Incident Response</option>
-                                                <option value="compliance">Compliance</option>
-                                                <option value="managed-services">Managed Services</option>
+                                                <option value="" style={{color: "black"}}>Select Primary Interest</option>
+                                                <option value="threat-detection" style={{color: "black"}}>Threat Detection</option>
+                                                <option value="incident-response" style={{color: "black"}}>Incident Response</option>
+                                                <option value="compliance" style={{color: "black"}}>Compliance</option>
+                                                <option value="managed-services" style={{color: "black"}}>Managed Services</option>
                                             </select>
                                             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                         </div>
@@ -176,10 +176,10 @@ const RequestDemoVijilan = () => {
                                                 name="demoTime"
 
                                                 className="w-full p-3 rounded-[16px] text-sm md:text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                                <option value="">Select preferred time</option>
-                                                <option value="morning">Morning (9 AM - 12 PM)</option>
-                                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
-                                                <option value="evening">Evening (5 PM - 8 PM)</option>
+                                                <option value=""style={{color: "black"}}>Select preferred time</option>
+                                                <option value="morning" style={{color: "black"}}>Morning (9 AM - 12 PM)</option>
+                                                <option value="afternoon" style={{color: "black"}}>Afternoon (12 PM - 5 PM)</option>
+                                                <option value="evening" style={{color: "black"}}>Evening (5 PM - 8 PM)</option>
                                             </select>
                                             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                                         </div>
@@ -211,25 +211,25 @@ const RequestDemoVijilan = () => {
                             {/* Right Side - Information */}
                             <div className="space-y-8">
                                 {/* What You'll Experience */}
-                                <div>
-                                    <h2 className="text-[24px] font-bold mb-4">What You'll Experience</h2>
-                                    <ul className="space-y-3 text-[16px] list-disc list-inside">
-                                        <li className="">
+                                <div >
+                                    <h2 className="text-[24px] font-bold mb-4" style={{color: "#FFFFFFCC"}}>What You'll Experience</h2>
+                                    <ul className="space-y-3 text-[16px] list-disc list-inside" >
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Live demonstration of threat detection and automated remediation
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Customized walkthrough based on your specific security environment
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Real-world attack scenarios and response capabilities
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Integration showcase with your existing security stack
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             ROI analysis and deployment timeline discussion
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Q&A with our cybersecurity experts
                                         </li>
                                     </ul>
@@ -237,24 +237,24 @@ const RequestDemoVijilan = () => {
 
                                 {/* Why Choose Vijilan */}
                                 <div>
-                                    <h2 className="text-[24px] font-bold mb-4">Why Choose Vijilan?</h2>
+                                    <h2 className="text-[24px] font-bold mb-4" style={{color: "#FFFFFFCC"}}>Why Choose Vijilan?</h2>
                                     <ul className="space-y-3 text-[16px] list-disc list-inside">
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Beyond Detection. We actively stop breaches, not just alert
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             <span>24/7/365 expert-led security operations center</span>
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Seamless integration with 300+ security tools
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Transparent, predictable pricing with no hidden costs
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Partner-first approach with white-label options
                                         </li>
-                                        <li className="">
+                                        <li className="" style={{color: "#FFFFFFCC"}}>
                                             Compliance-ready documentation and reporting
                                         </li>
                                     </ul>

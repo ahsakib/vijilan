@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed,  hFit,titleSize,subTitle,url="#",  }) => {
+const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Number, ColorHeading, side_text, Index, badge, title, description, buttonText, designDescription, cardFooter, head, sub, grdBtn, iconed, isButton,  hFit,titleSize,subTitle,url="#",  }) => {
 
   return (
     <div className={`relative   rounded-[24px] p-[2px]  ${Index % 2 !== 0 ? "m-2 md:mt-10 md:ml-5" : "m-2 md:mb-10 md:ml-5"}`} >
@@ -60,9 +60,9 @@ const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Nu
         {head && <h3 className={`head text-[25px] text-white font-medium mb-2 ${side_text ? "text-left" : "text-center"} `}>{head}</h3>}
         {
           side_text && <>
-            <h1 className="text-left text-[#00aeef]">{ColorHeading} </h1>
-            <h3 className="text-left text-[37px] font-bold mb-2">{Number}</h3>
-            <p className="text-left text-green-500">{linkBtn}</p>
+            <h1 className="text-left" style={{color: "#00aeef"}}>{ColorHeading} </h1>
+            <h3 className="text-left text-3xl md:text-4xl lg:text-5xl font-bold mb-8 mt-1">{Number}</h3>
+            <p className="text-left" style={{color: "#37D962D6"}}>{linkBtn}</p>
           </>
 
         }
@@ -91,7 +91,7 @@ const CardContent = ({ isMiddle,icon, banner, Cardsticket,iconColor, linkBtn, Nu
           )
         }
         {
-          grdBtn && <button className="w-auto grdBtn mt-16 text-white  px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto" style={{
+          grdBtn && <button className={`w-auto grdBtn ${isButton ? "mt-0": "mt-16"} uppercase text-white  px-[24px] py-[16px] rounded-[8px] flex justify-center items-center mx-auto`} style={{
             background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
           }}>{grdBtn}</button>
         }
