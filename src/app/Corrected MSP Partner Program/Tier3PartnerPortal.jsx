@@ -28,7 +28,7 @@ const Tier3PartnerPortal = () => {
         <div className=" pb-16">
             <div>
                 <div
-                    className={"backdrop-blur-md p-12 -mx-4 shadow-2xl"}
+                    className={"backdrop-blur-md p-12 -mx-4 "}
                     style={{
                         background: "linear-gradient(0deg, #082235 54%, #00AEEF 328%)",
                     }}
