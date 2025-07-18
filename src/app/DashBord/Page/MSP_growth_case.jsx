@@ -100,76 +100,74 @@ const MSP_growth_case = () => {
     const MSP_Outcomes = [
         {
             "metric": "30%",
-            "label": "Revenue Growth",
-            "text": "Increased monthly recurring revenue through premium security services"
+            "mainTitle": "Revenue Growth",
+            "subTitle": "Increased monthly recurring revenue through premium security services"
         },
         {
             "metric": "50%",
-            "label": "Alert Reduction",
-            "text": "Dramatically reduced technical team burnout and improved efficiency"
+            "mainTitle": "Alert Reduction",
+            "subTitle": "Dramatically reduced technical team burnout and improved efficiency"
         },
         {
             "metric": "95%",
-            "label": "Client Retention",
-            "text": "Enhanced client satisfaction with proactive security services"
+            "mainTitle": "Client Retention",
+            "subTitle": "Enhanced client satisfaction with proactive security services"
         },
         {
             "metric": "100%",
-            "label": "Implementation",
-            "text": "Rapid deployment without disrupting existing operations"
+            "mainTitle": "Implementation",
+            "subTitle": "Rapid deployment without disrupting existing operations"
         }
     ];
 
 
 
     return (
-        <div className='max-w-[90%] mx-auto text-white'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             <div>
 
                 {/* top part */}
-                    <div className="mb-8">
-                        <nav className="flex flex-wrap items-center text-[12px]">
-                            <div className="flex items-center">
-                                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                    <span className="text-white hover:text-blue-600 cursor-pointer">Home</span>
-                                </Link>
+                <div className="mb-8">
+                    <nav className="flex flex-wrap items-center text-[12px]">
+                        <div className="flex items-center">
+                            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Home</span>
+                            </Link>
 
-                                <ChevronRight className="text-white w-4 h-4 mx-2" />
-                                <Link to="/resources" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                    <span className="text-white hover:text-blue-600 cursor-pointer">Resources</span>
-                                </Link>
+                            <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <Link to="/resources" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Resources</span>
+                            </Link>
 
-                                <ChevronRight className="text-white w-4 h-4 mx-2" />
-                                <Link to="/case-studies" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                                    <span className="text-white hover:text-blue-600 cursor-pointer">Case Studies</span>
-                                </Link>
+                            <ChevronRight className=" w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <Link to="/case-studies" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Case Studies</span>
+                            </Link>
 
-                                <ChevronRight className="text-white w-4 h-4 mx-2" />
-                                <span className="!text-blue-500 text-[13px] font-medium">MSP 30% MRR Growth</span>
-                            </div>
-                        </nav>
-                    </div>
+                            <ChevronRight className=" w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <span className=" text-[13px] font-medium" style={{ color: "#00AEEF" }}>MSP 30% MRR Growth</span>
+                        </div>
+                    </nav>
+                </div>
 
                 {/* button */}
                 <section className='flex justify-center'>
-                    <button
-                        className="py-3  px-5 text-lg  rounded-4xl text-white bg-green-500 font-semibold">
-                        Compliance Success
+                    <button className="py-[15px]  p-[25px] md:px-[40px] text-[14px] font-bold rounded-[40px] text-white inline-flex items-center space-x-3" style={{
+                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                    }}>
+                        MSP Partner Success
                     </button>
                     {/* heading button */}
-
-
                 </section>
 
 
+                <div className='mb-16 mt-4'>
+                    <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>How a Gold Tier MSP Achieved 30% <br /> MRR Growth with ThreatRemediate <br /> Ultimate</h1>
+                    <p className='text-[18px] text-center'>Discover how our flagship managed XDR solution transformed an established MSP's <br /> security practice, driving significant revenue growth while reducing operational <br /> overhead.</p>
+                </div>
 
 
-                <Heading_Btn
-                    h1="How a Gold Tier MSP Achieved 30% MRR Growth with ThreatRemediate Ultimate"
-                    desc="Discover how our flagship managed XDR solution transformed an established MSP's security practice, driving significant revenue growth while reducing operational overhead."
-                />
-
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+                <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                     {
                         numberArray.map(card => <NumberShow link={card.text} number={card.label} />)
                     }
@@ -181,17 +179,15 @@ const MSP_growth_case = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 justify-between  items-start'>
 
                 <div className='grid-cols-1'>
-
-
-                    <CommonTextCard
+                    <div className='mt-5'>
+                        <CommonTextCard
                         heading1="🏥 Executive Summary"
-
-                        p1=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
+                        p1=" A Gold Tier MSP with over 100 clients faced mounting challenges in scaling their security services profitably. Alert fatigue, operational complexity, and competitive pressure threatened their growth. By implementing Vijilan's ThreatRemediate Ultimate, they achieved remarkable results within six months:"
                         heading2="Key Achievement"
                         card={MSP_Outcomes}
-
-
+                        SizeControl={true}
                     />
+                    </div>
 
 
                     <ListComponent
@@ -199,11 +195,14 @@ const MSP_growth_case = () => {
                         p1="As a successful Gold Tier MSP managing over 100 clients across various industries, the company faced several critical obstacles that threatened their continued growth and profitability:"
                         array={list}
                         p2="The MSP's CEO explained:  We were at a crossroads. Our clients needed more sophisticated security, but we couldn't scale our current approach without dramatically increasing costs and complexity. We needed a solution that would let us grow our security practice without overwhelming our team."
+                        headingSize={true}
                     />
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+                    <div className=' py-5 px-12 mt-10' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
                         {/* <h1 className='text-center mt-8 font-semibold'>{heading}</h1> */}
-                        <h1 className='  mb-4 text-left mt-8 font-semibold'>💡 The Solution: ThreatRemediate Ultimate</h1>
+                        <h1 className='  mb-4 text-left mt-8 text-[24px] font-medium'>💡 The Solution: ThreatRemediate Ultimate</h1>
                         <p className=' my-3'>Vijilan deployed ThreatRemediate Ultimate, our flagship fully managed Extended Detection and Response (XDR) solution. This comprehensive platform integrated seamlessly with the MSP's existing infrastructure while providing enterprise-grade security capabilities.</p>
 
 
@@ -212,8 +211,8 @@ const MSP_growth_case = () => {
                                 <div key={index} className='flex  items-center justify-center'>
                                     <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
                                         <img src={card.icon} alt="" />
-                                        <h4 className='font-semibold'>{card.label}</h4>
-                                        <p>{card.text}</p>
+                                        <h4 className='text-[16px] font-bold'>{card.label}</h4>
+                                        <p className='text-[16px]'>{card.text}</p>
                                     </div>
 
                                 </div>
@@ -227,43 +226,34 @@ const MSP_growth_case = () => {
                     </div >
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
 
                         <CommonTextCard
                             array={DeploymentTimeline}
                             heading=" ⏱️ Implementation Timeline"
 
-                            p1="The implementation was designed for minimal disruption while maximizing speed to value:"
+                            p2="The implementation was designed for minimal disruption while maximizing speed to value:"
+                            li={true}
 
                         />
                     </div>
-                    <div className='mt-5'>
+                    <div className='mt-10'>
 
                         <ListComponent
                             heading="📈 Results & Business Impact"
                             p11="Revenue Growth (30% MRR Increase)"
                             p22="Operational Efficiency (50% Alert Reduction)"
                             p3="Client Satisfaction (95% Retention Rate)"
+                            p30="The MSP's security MRR grew by 30% within six months, driven by their ability to offer differentiated, comprehensive cybersecurity services. This growth came from:"
+                            p31="The dramatic reduction in alert fatigue freed up internal technical resources:"
+                            p32="The comprehensive security coverage and proactive threat response significantly improved client relationships:"
                             array={list1}
                             array2={list2}
                             array3={list3}
-                            p1="The transformation was both immediate and sustained, with measurable improvements across all key business metrics:"
+                            p4="The transformation was both immediate and sustained, with measurable improvements across all key business metrics:"
 
                         />
                     </div>
-
-
-
-                    {/* <div className='mt-12'>
-
-                        <CommonTextCard
-                            heading1="🛡️ Comprehensive Healthcare Security Solution"
-                            p1="Vijilan deployed a multi-layered security solution specifically tailored for the healthcare environment, centered on proactive defense and identity protection:"
-                            heading2="Healthcare Security Architecture"
-                            card={threatProtectionArray}
-
-                        />
-                    </div> */}
 
 
 
@@ -273,7 +263,8 @@ const MSP_growth_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
+                   <div className='mt-5'>
+                     <ProfileHRCard
                         h1="Company Profile"
                         l1l="Company Type"
                         l1r="MSP (Gold Tier)"
@@ -287,45 +278,45 @@ const MSP_growth_case = () => {
                         l5r="25-50 Employees"
                         l6l="Partnership Level"
                         l6r="Vijilan Gold Partner"
+                        SizeModify={true}
                     />
+                   </div>
 
                     <ListComponent
                         heading="Solution Components"
                         array={solutionComponents}
+                        isColor={true}
                     />
 
+                    <div className='mt-10'>
 
+                        <DashboardSideText
+                            desc="Integrating Vijilan's ThreatRemediate Ultimate transformed our managed security practice. We grew revenue quickly, cut alert noise dramatically, and improved our team's efficiency and morale. Vijilan is now a cornerstone of our growth strategy."
+                            author="CEO, Gold Tier MSP Partner"
 
-
-
-                    <DashboardSideText
-                        desc="Integrating Vijilan's ThreatRemediate Ultimate transformed our managed security practice. We grew revenue quickly, cut alert noise dramatically, and improved our team's efficiency and morale. Vijilan is now a cornerstone of our growth strategy."
-                        author="CEO, Gold Tier MSP Partner"
-
-                    />
-
-
-                    <CommonTextCard
-                        array={synergyBenefits}
-                        heading="🎯 Why This Partnership Succeeded"
-
-                    />
-
-
-                    <div className='mt-8'>
-                        <Heading_Btn
-                            bg="#615F6A"
-                            h1="Download Resources "
-                            desc="Get the complete case study with detailed metrics and implementation guides."
-                            btn1=" download case study"
-                            btn="schedule  consultation"
                         />
                     </div>
 
 
+                   <div className='mt-10'>
+                     <CommonTextCard
+                        array={synergyBenefits}
+                        heading="🎯 Why This Partnership Succeeded"
+
+                    />
+                   </div>
 
 
-
+                    <div className='mt-10'>
+                        <Heading_Btn
+                            bg="#615F6A"
+                            h1="Download Resources "
+                            desc={"Get the complete case study with\ndetailed metrics and implementation\nguides."}
+                            btn1=" download case study"
+                            btn="schedule  consultation"
+                            isSmallHeading={true}
+                        />
+                    </div>
 
                 </div>
 

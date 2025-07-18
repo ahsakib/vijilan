@@ -75,8 +75,6 @@ const Home = () => {
         {/* Hero Section */}
         <HeroSection />
 
-
-
         {/* Tailored Solutions Section */}
         <section className="py-16 ">
           <div className="">
@@ -145,7 +143,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
 
 
         {/* Threat Landscape Section */}

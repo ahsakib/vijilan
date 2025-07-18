@@ -3,6 +3,8 @@ import React from 'react';
 import cp1 from "../../Assets/cp1.png";
 import { Check, Clock, DollarSign, Download, Lock } from 'lucide-react';
 import Heading_Btn from '@components/Heading_Btn';
+import fourCircle from "../../Assets/four-circle.png";
+import subtract from "../../Assets/Subtract.png";
 
 
 const modules = [
@@ -132,23 +134,24 @@ const services = [
 
 const ThreadRemediateRemoteNoPricing = () => {
     return (
-        <div className='container px-6 mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
 
             {/*  */}
-            <section className='container mx-auto px-6 py-16 '>
-                <Heading_Btn
-                    h1="Stop Managing Security. Start Growing Your MSP."
-                    desc="Complete cybersecurity for growth-focused MSPs. One price. Zero complexity. Total protection."
-                    btn1="SEE HOW IT WORKS"
-                    url = "/msp-growth-case"
-                />
-                 
+            <section className=' py-16 '>
+                <div className='mb-10'>
+                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8    leading-14 md:leading-16'>Stop Managing Security. <br /> Start Growing Your MSP.</h1>
+                    <p className='text-[18px] font-medium text-center'>Complete cybersecurity for growth-focused MSPs. <br /> One price. Zero complexity. Total protection.</p>
+                </div>
+                <div className='flex justify-center mx-auto'>
+                    <GradientButton children={"SEE HOW IT WORKS"} />
+                </div>
+
             </section>
 
 
             {/*  */}
-            <section className=" relative overflow-hidden">
-                <div className="relative z-10 container mx-auto px-6 py-12">
+            <section className=" relative overflow-hidden py-16">
+                <div className="relative z-10">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className=" text-3xl md:text-[40px] font-bold text-white mb-3">Built for Sales-Focused MSPs Like You</h1>
@@ -160,9 +163,9 @@ const ThreadRemediateRemoteNoPricing = () => {
                         {modules.map((module) => (
                             <div
                                 key={module.id}
-                                className={`relative rounded-[24px] p-8 border bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-auto md:w-[534px] mx-auto" : ""}`}>
+                                className={`relative rounded-[24px] p-8 bg-[#00AEEF3D] backdrop-blur-sm ${module.middle ? "md:col-span-2 flex flex-col justify-center w-auto md:w-[534px] mx-auto" : ""}`}>
                                 <div
-                                    className={`absolute inset-0 rounded-[24px] p-[1px] z-0 $`}
+                                    className={`absolute inset-0 rounded-[24px] p-[2px] z-0 $`}
                                     style={{
                                         background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
                                         WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
@@ -192,8 +195,8 @@ const ThreadRemediateRemoteNoPricing = () => {
 
 
             {/*  */}
-            <section className=" relative overflow-hidden">
-                <div className="relative z-10 container mx-auto px-4 py-16">
+            <section className=" relative overflow-hidden py-16">
+                <div className="relative z-10 ">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className="text-[40px] text-center font-bold text-white mb-3">
@@ -227,7 +230,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                                 </div>
 
                                 {/* Content */}
-                                <div className="pt-8">
+                                <div className="pt-5">
                                     <h3 className="text-[24px] text-center font-medium text-white mb-4 leading-tight">
                                         {service.title}
                                     </h3>
@@ -236,19 +239,19 @@ const ThreadRemediateRemoteNoPricing = () => {
                                         {service.description}
                                     </p>
 
-                                    <ul className="space-y-3 mb-8">
+                                    <ul className="space-y-2 pl-3 mb-8">
                                         {service.features.map((feature, featureIndex) => (
                                             <li key={featureIndex} className="flex items-start ">
-                                                <span className=" mr-3">•</span>
+                                                <span className=" mr-2">•</span>
                                                 <span className='text-[18px]'>{feature}</span>
                                             </li>
                                         ))}
                                     </ul>
 
                                     {/* Download Link */}
-                                    <div className="flex items-center justify-center text-[#00AEEF]  mt-auto">
-                                        <Download className="w-4 h-4 mr-2" />
-                                        <span className="text-[16px] ">
+                                    <div className="flex items-center justify-center gap-1  mt-auto">
+                                        <img src={fourCircle} alt="" className='w-[13px] h-[11px]' />
+                                        <span className="text-[16px] " style={{ color: "#00AEEF" }}>
                                             {service.downloadText}
                                         </span>
                                     </div>
@@ -260,7 +263,7 @@ const ThreadRemediateRemoteNoPricing = () => {
             </section>
 
 
-            <div className="">
+            <div className="py-16">
                 <div className="max-w-md w-full mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12" >
@@ -269,12 +272,12 @@ const ThreadRemediateRemoteNoPricing = () => {
                     </div>
 
                     {/* Main Card */}
-                    <div className=" rounded-[9px] p-6 text-white" style={{
+                    <div className=" p-6 text-white" style={{
                         background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                     }}>
                         {/* Card Header */}
                         <div className="text-center mb-6">
-                            <h2 className="text-[24px] font-bold  mb-2" style={{
+                            <h2 className="text-[24px] font-bold  mb-8" style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
@@ -283,19 +286,19 @@ const ThreadRemediateRemoteNoPricing = () => {
                                 <br />
                                 Security Bundle
                             </h2>
-                            <div className="mb-4">
+                            <div className="mb-5">
                                 <div className="text-[24px] font-bold" style={{
                                     background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                 }}>Less than a daily latte</div>
-                                <div className="text-sm font-bold">Per employee, per Month</div>
+                                <div className="text-sm font-bold" style={{ color: "#F5F5F5" }}>Per employee, per Month</div>
                             </div>
 
                             {/* Lock and Money Icons */}
-                            <div className="space-y-2 mb-6">
+                            <div className="space-y-1 mb-6">
                                 <div className="flex items-center justify-center gap-2 text-sm">
-                                    
+
                                     <span className="text-[14px] font-medium" style={{
                                         background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                         WebkitBackgroundClip: "text",
@@ -312,7 +315,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                             </div>
 
                             {/* Why This Insane Deal */}
-                            <div className="flex flex-col items-center justify-center mx-auto relative w-fit rounded-[8px] py-[10px] px-[19px] mb-6">
+                            <div className="flex flex-col items-center justify-center mx-auto relative w-fit rounded-[8px] py-[10px] px-[20px] md:px-[39px] mb-6">
                                 <h3 className="text-[24px] font-semibold mb-2 text-center">Why This Insane Deal?</h3>
                                 <p className="text-[10px] font-light text-center leading-relaxed">
                                     We're selecting 10 growth-minded MSPs to be our flagship <br /> partners. We get enterprise security at startup
@@ -343,11 +346,11 @@ const ThreadRemediateRemoteNoPricing = () => {
                                 "No setup or onboarding fees",
                                 "Monthly billing available",
                             ].map((feature, index) => (
-                                <div key={index} className="flex items-center gap-3">
-                                    <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Check className="w-3 h-3 text-gray-600" />
+                                <div key={index} className="flex items-center gap-3 md:px-16">
+                                    <div className=" flex items-center justify-center flex-shrink-0">
+                                        <img src={subtract} alt="" className='w-5 h-5' />
                                     </div>
-                                    <span className="text-sm text-[#F5F5F5]">{feature}</span>
+                                    <span className="text-sm " style={{ color: "#F5F5F5" }}>{feature}</span>
                                 </div>
                             ))}
                         </div>
@@ -358,14 +361,17 @@ const ThreadRemediateRemoteNoPricing = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <button className="w-full rounded-[3px]  text-white font-bold py-[18px] px-[63px] text-[15px] " style={{
-                            background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"}}>
-                            Claim my Founders Spot
-                        </button>
+                        <div className='flex justify-center mx-auto'>
+                            <button className="w-fit rounded-[3px]  text-white font-bold py-[18px] px-[63px] text-[15px] " style={{
+                                background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                            }}>
+                                Claim my Founders Spot
+                            </button>
 
+                        </div>
                         {/* Expiration Notice */}
-                        <div className="text-center mt-4 flex items-center">⏰
-                            <p className="text-[14px] font-medium" style={{
+                        <div className="text-center flex justify-center mt-4 items-center">⏰
+                            <p className="text-[14px] font-medium text-center" style={{
                                 background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
@@ -376,11 +382,8 @@ const ThreadRemediateRemoteNoPricing = () => {
             </div>
 
 
-
-
-
             {/*  */}
-            <section className="container mx-auto px-6 py-16">
+            <section className=" py-16">
 
                 <div className="">
                     {/* First Section */}
@@ -392,7 +395,7 @@ const ThreadRemediateRemoteNoPricing = () => {
                     </div>
 
                     {/* Integration Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-20">
                         <div className="relative flex items-center justify-center rounded-[16px] p-8 text-center " style={{
                             background: `linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2))`
                         }}>
@@ -458,7 +461,7 @@ const ThreadRemediateRemoteNoPricing = () => {
 
 
             {/*  */}
-            <section className='container mx-auto px-6 '>
+            <section className='pb-16 '>
                 {/* Second Section */}
                 <div className="text-center mb-12">
                     <h2 className="text-2xl md:text-[40px] font-bold mb-3">Get Your Selected Resources</h2>
@@ -469,7 +472,7 @@ const ThreadRemediateRemoteNoPricing = () => {
 
                 {/* Resources Section */}
                 <div className="max-w-2xl mx-auto">
-                    <div className="bg-[#00AEEF] rounded-2xl py-[52px] px-6 md:px-[67px] mb-6">
+                    <div className="bg-[#00AEEF] rounded-2xl py-[52px] px-8 md:px-[67px] mb-6">
                         <h3 className="text-2xl md:text-[30px] font-bold mb-4 text-white">You've selected these resources:</h3>
                         <ul className="text-white text-[20px]">
                             <li className="flex items-center">
@@ -492,8 +495,8 @@ const ThreadRemediateRemoteNoPricing = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <div className='w-full border text-center border-[#00AEEF] text-[#00AEEF] py-[12px] px-[24px] rounded-[8px]'>
-                        <button className=" font-semibold text-[14px]">
+                    <div className='w-full border text-center border-[#00AEEF] py-[12px] px-[24px] rounded-[8px]'>
+                        <button className=" font-semibold text-[14px]" style={{color: "#00AEEF"}}>
                             Send me these Resources
                         </button>
                     </div>
@@ -503,7 +506,7 @@ const ThreadRemediateRemoteNoPricing = () => {
 
 
             {/*  */}
-            <div className=" container mx-auto px-6 py-16">
+            <div className="  py-16">
                 <div className='mb-4'>
                     <h1 className='text-3xl md:text-[40px] font-bold text-center mb-3'>Get Your Custom Proposal</h1>
                     <p className='text-[14px] text-center mb-4'>Tell us about your MSP and we'll create a customized proposal showing exactly how <br /> ThreatRemediate Remote can help you grow.</p>
@@ -561,20 +564,20 @@ const ThreadRemediateRemoteNoPricing = () => {
                         <div className='relative z-10 '>
                             <label className='text-[15px] md:text-[20px] font-bold'>Number of Employees in Your MSP *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>1-10</option>
-                                <option className='text-black'>11-50</option>
-                                <option className='text-black'>51-100</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>1-10</option>
+                                <option className='text-black' style={{color: "black"}}>11-50</option>
+                                <option className='text-black' style={{color: "black"}}>51-100</option>
                             </select>
                         </div>
 
                         <div className='relative z-10 '>
                             <label className='text-[15px] md:text-[20px] font-bold'>Average Client Size (Employees) *</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>1-20</option>
-                                <option className='text-black'>21-100</option>
-                                <option className='text-black'>100+</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>1-20</option>
+                                <option className='text-black' style={{color: "black"}}>21-100</option>
+                                <option className='text-black' style={{color: "black"}}>100+</option>
                             </select>
                         </div>
 
@@ -586,10 +589,10 @@ const ThreadRemediateRemoteNoPricing = () => {
                         <div className='relative z-10 '>
                             <label className='text-[15px] md:text-[20px] font-bold'>Current PSA Platform</label>
                             <select className="mt-1 w-full p-3 rounded-[16px] text-[16px] bg-[#97D0FA3D] focus:bg-[#00AEEF3D] border border-none focus:border-1 focus:outline-none focus:ring-1 focus:ring-[#FFFFFF80]">
-                                <option className='text-black'>Select</option>
-                                <option className='text-black'>ConnectWise</option>
-                                <option className='text-black'>Autotask</option>
-                                <option className='text-black'>Other</option>
+                                <option className='text-black' style={{color: "black"}}>Select</option>
+                                <option className='text-black' style={{color: "black"}}>ConnectWise</option>
+                                <option className='text-black' style={{color: "black"}}>Autotask</option>
+                                <option className='text-black' style={{color: "black"}}>Other</option>
                             </select>
                         </div>
 

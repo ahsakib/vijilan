@@ -17,6 +17,7 @@ import Heading_Btn from '@components/Heading_Btn';
 import CardContent from '@components/CardContent';
 import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import arrowRight from "../../Assets/arrow-right.png";
 
 const steps = [
     {
@@ -128,7 +129,7 @@ const features = [
 
 const ThreatreMediateManagedXdr = () => {
     return (
-        <div className='container mx-auto md:px-6 '>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
 
             {/*  */}
             <section className=''>
@@ -182,10 +183,8 @@ const ThreatreMediateManagedXdr = () => {
                                 {index < steps.length - 1 && (
                                     <div className="flex items-center justify-center">
                                         {/* Vertical for mobile, horizontal for lg */}
-                                        <div className="flex items-center justify-center">
-                                            <FaArrowRight
-                                                className="text-red-500 w-6 h-6 transform rotate-90 lg:rotate-0"
-                                            />
+                                        <div className="flex items-center justify-center" style={{ color: "#ED1C24" }}>
+                                            <img src={arrowRight} alt="" className='w-[23px] h-[18px] transform rotate-90 lg:rotate-0' />
                                         </div>
                                     </div>
                                 )}
@@ -197,15 +196,15 @@ const ThreatreMediateManagedXdr = () => {
 
 
             {/* Vijilan Advantage Section */}
-            <section className="container mx-auto px-6 py-16">
+            <section className="py-16">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-[40px] font-bold text-white">
                         Our Solution: The Full Security Lifecycle
                     </h2>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <div className="relative h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+
+                    <div className="relative lg:h-[390px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -225,7 +224,7 @@ const ThreatreMediateManagedXdr = () => {
                         </p>
                     </div>
 
-                    <div className="relative h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                    <div className="relative lg:h-[300px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -245,7 +244,7 @@ const ThreatreMediateManagedXdr = () => {
                         </p>
                     </div>
 
-                    <div className="relative h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                    <div className="relative lg:h-[434px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -265,7 +264,7 @@ const ThreatreMediateManagedXdr = () => {
                         </p>
                     </div>
 
-                    <div className="relative -mt-[40px] h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                    <div className="relative lg:-mt-[40px] lg:h-[335px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -285,7 +284,7 @@ const ThreatreMediateManagedXdr = () => {
                         </p>
                     </div>
 
-                    <div className="relative -mt-[130px] h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                    <div className="relative lg:-mt-[130px] lg:h-[405px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -305,7 +304,7 @@ const ThreatreMediateManagedXdr = () => {
                         </p>
                     </div>
 
-                    <div className="relative h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
+                    <div className="relative lg:h-[420px] bg-[#00AEEF3D] py-[32px] px-[21px] rounded-[16px] flex flex-col justify-center items-center">
                         <div
                             className="absolute inset-0 rounded-[16px] p-[2px] z-0"
                             style={{
@@ -328,7 +327,7 @@ const ThreatreMediateManagedXdr = () => {
             </section>
 
             <section className="py-16">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-4xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h1 className="text-3xl md:text-[40px] font-bold text-white mb-4">
@@ -337,7 +336,7 @@ const ThreatreMediateManagedXdr = () => {
                     </div>
 
                     {/* Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {platformData.map((item) => {
                             return (
                                 <div
@@ -371,61 +370,63 @@ const ThreatreMediateManagedXdr = () => {
 
 
             {/*  */}
-            <section className='container mx-auto px-6 py-16'>
-                <div className='mb-10'>
-                    <h1 className='text-3xl lg:text-[40px] font-bold text-center mb-6'>A Package for Every Need</h1>
-                    <p className='text-[18px] text-center'>Choose the ThreatRemediate tier that matches your security requirements</p>
-                </div>
-
-                {/* card */}
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center mx-auto'>
-                    <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
-                        <div
-                            className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
-                            style={{
-                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                            }}
-                        />
-                        <h1 className='text-[24px] font-medium text-center'>Core</h1>
-                        <p className='text-[16px] text-center'>Essential EDR/XDR for <br /> comprehensive endpoint <br /> protection with 24/7 <br /> monitoring and active <br /> remediation.</p>
-                    </div>
-                    <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
-                        <div
-                            className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
-                            style={{
-                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                            }}
-                        />
-                        <h1 className='text-[24px] font-medium text-center'>Complete</h1>
-                        <p className='text-[16px] text-center'>Expands Core to include <br /> cloud workload security and <br /> foundational identity threat <br /> detection for hybrid <br /> environments.</p>
-                    </div>
-                    <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
-                        <div
-                            className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
-                            style={{
-                                background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
-                                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                                WebkitMaskComposite: "xor",
-                                maskComposite: "exclude",
-                            }}
-                        />
-                        <h1 className='text-[24px] font-medium text-center'>Unlimited</h1>
-                        <p className='text-[16px] text-center'>Our most comprehensive <br /> offering, adding advanced <br /> Identity Protection and <br /> Managed Exposure <br /> Management.</p>
+            <section className='py-16'>
+                <div className='max-w-4xl mx-auto'>
+                    <div className='mb-12'>
+                        <h1 className='text-3xl lg:text-[40px] font-bold text-center mb-5'>A Package for Every Need</h1>
+                        <p className='text-[18px] text-center'>Choose the ThreatRemediate tier that matches your security requirements</p>
                     </div>
 
-                </div>
-                <div className='flex items-center justify-center mx-auto mt-10'>
-                    <Link to={"/pricing-page"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <GradientButton children={"COMPARE TIERS AND RUN PRICING SCENERIOS"} />
-                    </Link>
-                </div>
+                    {/* card */}
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 items-center justify-center mx-auto'>
+                        <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
+                            <div
+                                className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }}
+                            />
+                            <h1 className='text-[24px] font-medium text-center'>Core</h1>
+                            <p className='text-[16px] text-center'>Essential EDR/XDR for comprehensive endpoint protection with 24/7 monitoring and active remediation.</p>
+                        </div>
+                        <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
+                            <div
+                                className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }}
+                            />
+                            <h1 className='text-[24px] font-medium text-center'>Complete</h1>
+                            <p className='text-[16px] text-center'>Expands Core to include cloud workload security and foundational identity threat detection for hybrid <br /> environments.</p>
+                        </div>
+                        <div className='relative bg-[#00AEEF3D] rounded-[16px] p-10'>
+                            <div
+                                className={`absolute inset-0 rounded-[16px] p-[2px] z-0`}
+                                style={{
+                                    background: `linear-gradient(146.58deg, #00AEEF 0.86%, rgba(8,34,53,0) 50%), linear-gradient(326.95deg, #00AEEF 0.69%, rgba(8,34,53,0) 66.77%)`,
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "xor",
+                                    maskComposite: "exclude",
+                                }}
+                            />
+                            <h1 className='text-[24px] font-medium text-center'>Unlimited</h1>
+                            <p className='text-[16px] text-center'>Our most comprehensive offering, adding advanced  Identity Protection and  Managed Exposure Management.</p>
+                        </div>
 
+                    </div>
+                    <div className='flex items-center justify-center mx-auto mt-10'>
+                        <Link to={"/pricing-page"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <GradientButton children={"COMPARE TIERS AND RUN PRICING SCENERIOS"} />
+                        </Link>
+                    </div>
+
+                </div>
             </section>
 
 
@@ -433,10 +434,10 @@ const ThreatreMediateManagedXdr = () => {
             <div className="py-16" >
 
                 {/* Main content */}
-                <div className="p-5 md:p-10 rounded-[16px]" style={{
+                <div className="px-5 md:px-10 py-16 rounded-[16px]" style={{
                     background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
                 }}>
-                    <h1 className="text-white text-3xl  md:text-[40px] font-bold text-center mb-10">
+                    <h1 className="text-white text-3xl  md:text-[40px] font-bold text-center mb-5">
                         Real-World Remediation in Action
                     </h1>
                     <div className="max-w-4xl w-full mx-auto">
@@ -445,7 +446,7 @@ const ThreatreMediateManagedXdr = () => {
 
                             {/* Success story header with icon */}
                             <div className="text-center mb-6">
-                                <h2 className=" text-[20px] text-bold" style={{color: "#6BC063"}}>
+                                <h2 className=" text-[20px] text-bold" style={{ color: "#6BC063" }}>
                                     Success Story: Ransomware Attack Stopped in Minutes
                                 </h2>
                             </div>
@@ -458,7 +459,7 @@ const ThreatreMediateManagedXdr = () => {
                                 </blockquote>
 
                                 {/* Attribution */}
-                                <cite className=" text-[16px] px-2 md:px-10" style={{color: "#00AEEF"}}>
+                                <cite className=" text-[16px] px-2 md:px-10" style={{ color: "#00AEEF" }}>
                                     — CTO, Mid-Market Logistics Company
                                 </cite>
                             </div>
@@ -474,7 +475,7 @@ const ThreatreMediateManagedXdr = () => {
                 <Heading_Btn
                     h1="Stop Reacting. Start Remediating."
                     desc={"See how our expert SOC team can become your hands-on defense against cyber\nthreats. Schedule a live, personalized demo of ThreatRemediate today."}
-                    btn1="request a live  demo"
+                    btn5="request a live  demo"
                     url={"/contact"}
                 />
 

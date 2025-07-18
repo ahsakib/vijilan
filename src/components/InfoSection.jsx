@@ -35,7 +35,7 @@ const InfoSection = ({ position = "right", width, height, design1, design2, head
                             {desc}
                         </p>
 
-                        <Link to={url ? url : ""} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="inline-block cursor-pointer font-semibold px-6 py-3 rounded-md  border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
+                        <Link to={url ? url : ""} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="inline-block cursor-pointer font-medium p-[18px] md:p-[24px] rounded-[8px] text-[16px] md:text-[18px] border-2 border-solid border-[#00AEEF] text-[#00AEEF] bg-transparent transition-all duration-200 hover:bg-[#00AEEF]/10 hover:border-[#00AEEF]/90 text-center select-none uppercase">
                             {btnText}
                         </Link>
                     </div>

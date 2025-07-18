@@ -148,37 +148,44 @@ const Resilience_case = () => {
     ]
 
     return (
-        <div className='max-w-[90%] mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
 
             {/* top part */}
-            <section className="container mx-auto px-6">
+            <section className="">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Home</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{color: "#7E7E7E"}} />
                         <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Resources</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{color: "#7E7E7E"}} />
                         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Case Studies</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-400 text-[13px] font-medium">Manufacturing Resilience</span>
+                        <ChevronRight className="w-4 h-4 mx-2"style={{color: "#7E7E7E"}} />
+                        <span className=" text-[13px] font-medium" style={{ color: "#00AEEF" }}>Manufacturing Resilience</span>
                     </nav>
                 </div>
             </section>
+
             <section>
 
+                <div className='flex items-center justify-center mx-auto mb-6'>
+                    <button className='text-[14px] font-bold px-[25px] md:px-[40px] py-[15px] rounded-[40px]' style={{
+                        background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                    }}>Manufacturing Security Success</button>
+                </div>
 
-                <Heading_Btn
-                    h1=" Manufacturing Firm Secures OT Assets and Ensures 99.9% Uptime"
-                    desc=" Discover how a global manufacturing company achieved comprehensive IT/OT security with 99.9% production uptime and 80% faster threat containment through Vijilan's unified security platform."
-                />
+                <div className='mb-16'>
+                    <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>Manufacturing Firm Secures OT Assets <br /> and Ensures 99.9% Uptime</h1>
+                    <p className='text-[18px] text-center'>Discover how a global manufacturing company achieved comprehensive IT/OT <br /> security with 99.9% production uptime and 80% faster threat containment through Vijilan's unified security platform.</p>
+                </div>
 
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+
+                <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                     {
                         numberArray.map(card => <NumberShow link={card.label} number={card.metric} />)
                     }
@@ -188,26 +195,31 @@ const Resilience_case = () => {
             {/* Summary */}
 
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 gap-8 mt-12'>
 
                 <div className='grid-cols-1'>
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12'>
+                    <div className='mt-5 py-5 px-12' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
 
                         <div className='text-left'>
                             {/* <img src='../../../Assets/trade.png' alt="trade" /> */}
-                            <h1 className='font-semibold my-5'>📈 Executive Summary</h1>
-                            <p className='my-5'>     A large global manufacturing firm with multiple production facilities faced the critical challenge of securing their complex, converged IT and Operational Technology (OT) environment. With production uptime directly tied to revenue, any security incident that could halt production lines represented not just a cybersecurity risk, but a potential financial catastrophe.
+                            <h1 className='font-medium text-[24px] my-5'>📈 Executive Summary</h1>
+                            <p className='my-5 text-[16px]'>     A large global manufacturing firm with multiple production facilities faced the critical challenge of securing their complex, converged IT and Operational Technology (OT) environment. With production uptime directly tied to revenue, any security incident that could halt production lines represented not just a cybersecurity risk, but a potential financial catastrophe.
                                 The manufacturer needed a comprehensive security solution that could provide unified visibility across both corporate IT systems and sensitive production OT networks, while ensuring that security measures would never interfere with critical manufacturing operations.</p>
                         </div>
 
-                        <div className='my-8'>
+                        <div className='mb-8'>
+
+                            <h2 className='text-[20px] font-medium text-center my-8'>Production Continuity Achievement</h2>
 
                             <div className='grid grid-cols-1 md:grid-cols-2  gap-5'>
                                 {productionArray.map(card => <DashBoardCard
                                     heading={card.label}
                                     Number={card.metric}
                                     desc={card.text}
+                                    isSize={true}
                                 />)}
                             </div>
                         </div>
@@ -220,53 +232,57 @@ const Resilience_case = () => {
                             heading="⚠️ Industrial Security Challenges"
                             p1="Manufacturing environments present unique cybersecurity challenges where traditional IT security approaches can be inadequate or even dangerous to production operations:"
                             array={list1}
+                            headingSize={true}
                         />
                     </div>
 
-                    <div className=' bg-gradient-to-t to-[#523825] from-[#191624] py-5 px-12 my-12'>
-                        <h1 className='text-3xl my-5  text-center '> Converged IT/OT Network Environment</h1>
+                    <div className=' py-5 px-12 my-12' style={{
+                        background: "linear-gradient(0deg, #191624 16.11%, #F89B29 328.5%)"
+                    }}>
+
+                        <h1 className='text-[24px] font-medium my-5  text-center '> Converged IT/OT Network Environment</h1>
 
                         <div className='flex flex-col lg:flex-row gap-5'>
-                            <div className='w-full lg:w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
-                                <h1 className='text-xl text-center'>Corporate IT Network</h1>
+                            <div className='w-full lg:w-1/2 bg-[#CDCDD466] py-5 px-8 rounded-lg'>
+                                <h1 className='text-xl font-medium mb-2'>Corporate IT Network</h1>
 
 
                                 <ul>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Enterprise Application
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Office Workstations
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Enterprise Application
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Business Systems
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Cloud Connections
                                     </li>
                                 </ul>
                             </div>
-                            <div className='w-full lg:w-1/2 bg-gradient-to-t to-[#7A6E6A] from-[#615F6A] py-5 px-8 rounded-lg'>
-                                <h1 className='text-xl text-center'>Corporate IT Network</h1>
+                            <div className='w-full lg:w-1/2 bg-[#CDCDD466] py-5 px-8 rounded-lg'>
+                                <h1 className='text-xl font-medium mb-2'>Operational Technology (OT)</h1>
 
 
                                 <ul>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Enterprise Application
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Office Workstations
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Enterprise Application
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Business Systems
                                     </li>
-                                    <li className='list-disc border-b pb-1 border-gray-300 text-gray-300'>
+                                    <li className='list-disc border-b pb-1 border-[#FFFFFF42]'>
                                         Cloud Connections
                                     </li>
                                 </ul>
@@ -281,6 +297,7 @@ const Resilience_case = () => {
                             card={SecurityCardData}
                             heading="🛡️ Comprehensive IT/OT Security Solution"
                             p1="Vijilan deployed an integrated security platform specifically designed for complex manufacturing environments, providing unified protection across both IT and OT networks:"
+                            
                         />
                     </div>
 
@@ -294,7 +311,8 @@ const Resilience_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
+                    <div className='mt-5'>
+                        <ProfileHRCard
                         h1="VAR Profile"
                         l1l="Business type"
                         l1r="Value Added Reseller"
@@ -308,16 +326,19 @@ const Resilience_case = () => {
                         l5r="SMB & Mid-Market"
                         l6l="Geographic Region"
                         l6r="Regional"
+                        SizeModify={true}
                     />
+                    </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <MesurableComponentDashboard
                             heading="Manufacturing Security & Operational Results"
                             array={MeasurabeCard}
+                            isColor={true}
                         />
                     </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <DashboardSideText
                             desc="Vijilan's team functions as a seamless extension of our own. Their ability to manage our data with Cribl and provide active remediation has freed up my internal resources to focus on bigger picture risks. It's a true force multiplier"
                             author="CISO, Manufacturing Firm"
@@ -325,10 +346,11 @@ const Resilience_case = () => {
                     </div>
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             array={excelList}
-                            heading=" 🏭 Why Vijilan Excels in Manufacturing Security"
+                            heading={"🏭 Why Vijilan Excels in\nManufacturing Security"}
+                            SizeControl={true}
                         />
                     </div>
                 </div>
@@ -339,12 +361,14 @@ const Resilience_case = () => {
 
 
 
-            <Heading_Btn
-                h1="Secure Your Manufacturing Operations"
-                desc="Discover how Vijilan's specialized IT/OT security solutions can protect your production environment while ensuring 99.9% uptime and operational continuity."
+           <div className='py-16'>
+             <Heading_Btn
+                h1={"Secure Your Manufacturing\nOperations"}
+                desc={"Discover how Vijilan's specialized IT/OT security solutions can protect your\nproduction environment while ensuring 99.9% uptime and operational continuity."}
                 btn1="explore manufacturing solutions"
-                btn2="schedule  ot security assessment"
+                btn9="schedule  ot security assessment"
             />
+           </div>
         </div>
     );
 };

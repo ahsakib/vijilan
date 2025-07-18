@@ -1,11 +1,12 @@
 import React from "react";
 import OutlineGradientButton from "./OutlineGradientButton";
 
-const ServiceCard = ({ service, index, onAddIcon }) => {
+
+const ServiceCard = ({ service, index, onAddIcon,marginSmall,textStart }) => {
     return (
         <div
             key={index}
-            className="relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-2 md:p-8">
+            className={`relative bg-[#00AEEF3D] backdrop-blur-sm rounded-[16px] p-2 md:p-8 ${marginSmall ? "p-5 md:p-8" : "p-2 md:p-8"}`}>
             {/* Gradient Border */}
             <div
                 className="absolute inset-0 rounded-[16px] p-[2px] z-0"
@@ -20,7 +21,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             />
 
             {/* Add Icon Button */}
-            <div className="flex justify-center mb-6 z-10 relative">
+            <div className={`flex justify-center ${marginSmall ? "mb-4" : "mb-6"} z-10 relative`}>
                 <button
                     className="bg-[#F1511B] text-white text-[10px] font-thin md:font-semibold px-4 py-2 rounded-[15px]"
                     onClick={onAddIcon}
@@ -32,7 +33,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             {/* Title */}
             {
                 service?.title && (
-                    <h2 className="text-white text-[24px] font-medium text-center mb-4 z-10 relative">
+                    <h2 className="text-white whitespace-pre-line text-[24px] font-medium text-center mb-4 z-10 relative">
                         {service.title}
                     </h2>
                 )
@@ -53,7 +54,7 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
             {/* Description */}
             {
                 service?.description && (
-                    <p className="text-white text-center text-[16px] mb-8 leading-relaxed z-10 relative">
+                    <p className={`text-white  whitespace-pre-line text-[16px] mb-8 leading-relaxed z-10 relative ${textStart ? "text-start" : "text-center"}`}>
                         {service.description}
                     </p>
                 )
@@ -61,15 +62,15 @@ const ServiceCard = ({ service, index, onAddIcon }) => {
 
             {service?.designedDesc && (
 
-                <div class="max-w-md p-6 mb-10">
-                    <h2 class="text-lg font-thin md:font-semibold text-white mb-4">
+                <div class={`max-w-md ${marginSmall ? "p-0" : "p-5"} mb-4`}>
+                    <h2 class="text-lg text-white mb-1">
                         {service.designedDesc}
                     </h2>
 
-                    <ul class="space-y-3">
+                    <ul class="space-y-1">
                         {service.designFeature.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-white text-[18px]">
-                                <span className="font-thin md:font-semibold">{feature}</span>
+                                <span className="">{feature}</span>
                             </li>
                         ))}
                     </ul>

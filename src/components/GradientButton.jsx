@@ -3,7 +3,7 @@ import React from "react";
 const GradientButton = ({ children,icon=true }) => {
   return (
     <button
-      className=" p-3 md:p-[20px] text-lg font-medium rounded-[8px] text-white flex justify-center items-center space-x-3"
+      className=" p-[18px] md:p-[24px] text-[16px] md:text-lg font-medium rounded-[8px] text-white flex justify-center items-center space-x-3"
       style={{
         background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)",
       }}

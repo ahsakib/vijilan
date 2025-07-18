@@ -769,17 +769,17 @@ export const usExucativeSummary = [
 export const financialService = [
   {
     icon: p1,
-    "label": "Financial Fraud",
+    "text": "Financial Fraud",
     "metric": "Prevented"
   },
   {
     icon: p1,
-    "label": "APT Groups",
+    "text": "APT Groups",
     "metric": "Detected"
   },
   {
     icon: p1,
-    "label": "Credential Theft",
+    "text": "Credential Theft",
     "metric": "Monitored"
   },
   {

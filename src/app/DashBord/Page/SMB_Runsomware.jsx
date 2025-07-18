@@ -64,23 +64,23 @@ const SMB_Runsomware = () => {
     const card = [
         {
             label: "2",
-            text: "Minutes to Detection",
-            desc: "From attack start to SOC alert"
+            text: `Minutes to\Detection`,
+            desc: `From attack start to\nSOC alert`
         },
         {
             label: "5",
-            text: "Minutes to Containment",
-            desc: "Preventing lateral spread"
+            text: `Minutes to\nContainment`,
+            desc: `Preventing lateral\nspread`
         },
         {
             label: "28",
-            text: "Minutes to Remediation",
-            desc: "Complete threat elimination"
+            text: `Minutes to\Remediation`,
+            desc: `Complete threat\nelimination`
         },
         {
             label: "< 4",
             text: "Hours Total",
-            desc: "To full business recovery"
+            desc: `To full business\nrecovery`
         }
     ];
 
@@ -133,42 +133,48 @@ const SMB_Runsomware = () => {
 
 
     return (
-        <div className='max-w-[90%] mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             {/* top part */}
             <section className="px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
-                    <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
+                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Home</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
                         <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Resources</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
                         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
+                            <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Case Studies</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <span className="!text-blue-600  text-[13px]" > SMB Ransomeware Recovery</span>
+                        <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                        <span className="  text-[13px]" style={{ color: "#00AEEF" }}> SMB Ransomeware Recovery</span>
                     </nav>
                 </div>
             </section>
 
             {/* button */}
             <section className='flex justify-center'>
-                <button className="py-3 bg-gradient-to-l from-[#FF0F7B] to-[#F89B29]  px-5 text-lg font-medium rounded-4xl text-white inline-flex items-center space-x-3" >  Ransomware Response
+                <button className="py-[15px]  p-[25px] md:px-[40px] text-[14px] font-bold rounded-[40px] text-white inline-flex items-center space-x-3" style={{
+                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                }}>
+                    Ransomware Response
                 </button>
                 {/* heading button */}
 
 
             </section>
-            <Heading_Btn
-                h1="SMB Ransomware Recovery: From Active Attack to Full Recovery in 4 Hours"
-                desc="Discover how a small business avoided catastrophic damage when their MSP, powered by Vijilan, stopped a ransomware attack overnight - proving the value of 24/7 managed security.."
-            />
 
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+
+            <div className='mb-16 mt-4'>
+                <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>SMB Ransomware Recovery: From <br /> Active Attack to Full Recovery in 4 <br />Hours</h1>
+                <p className='text-[18px] text-center'>Discover how a small business avoided catastrophic damage when their MSP, <br /> powered by Vijilan, stopped a ransomware attack overnight - proving the value of <br /> 24/7 managed security.</p>
+            </div>
+
+
+            <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                 {
                     numberArray.map(card => <NumberShow link={card.link} number={card.number} />)
                 }
@@ -182,41 +188,39 @@ const SMB_Runsomware = () => {
                 <div className='grid-cols-1'>
 
 
-                    <CommonTextCard
+                    <div className='mt-5'>
+                        <CommonTextCard
                         heading1="🛡️ The Story That Every Small Business Needs to Hear"
-                        p1="It was 2:17 AM on a Monday night when the ransomware began its attack. The small professional services firm's employees were sleeping, unaware that a sophisticated threat actor had bypassed their traditional antivirus and was actively encrypting files on an endpoint.This is the nightmare scenario that keeps business owners awake at night. But for this company, their story had a different ending - thanks to their local MSP's partnership with Vijilan."
-                        p2="Within minutes of the attack beginning, Vijilan's 24/7 SOC detected the suspicious encryption behavior. What happened next demonstrates the critical difference between traditional security tools and active, expert-led protection."
+                        p2={"It was 2:17 AM on a Monday night when the ransomware began its attack. The small professional services firm's employees were sleeping, unaware that a sophisticated threat actor had bypassed their traditional antivirus and was actively encrypting files on an endpoint.This is the nightmare scenario that keeps business owners awake at night. But for this company, their story had a different ending - thanks to their local MSP's partnership with Vijilan.\nWithin minutes of the attack beginning, Vijilan's 24/7 SOC detected the suspicious encryption behavior. What happened next demonstrates the critical difference between traditional security tools and active, expert-led protection."}
 
                     />
+                    </div>
 
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
+                    <div className=' py-5 px-12 mt-10' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
 
-
-
-                        <h1 className='  mb-4 text-left mt-8 font-semibold'>⏱️ The 4-Hour Incident Timeline</h1>
-                        <p className=' my-3'>Every second counts in a ransomware attack. Here's how Vijilan's rapid response saved this business:
+                        <h1 className='  mb-4 text-center mt-8 text-[24px] font-medium'>⏱️ The 4-Hour Incident Timeline</h1>
+                        <p className=' my-3 text-left text-[16px]'>Every second counts in a ransomware attack. Here's how Vijilan's rapid response saved this business:
                         </p>
 
-                        <h3 className='my-5 text-xl text-center font-semibold'>From Detection to Full Recovery </h3>
+                        <h3 className='mt-4 mb-8 text-[24px] text-center font-medium'>From Detection to Full Recovery </h3>
 
                         <div className='flex flex-col gap-5'  >
-
                             {
                                 detectionArray.map(card =>
                                     <div className='flex flex-col lg:flex-row items-center justify-between gap-5'>
-                                        <p className='w-full lg:w-1/4 bg-[#F1511B] py-3 px-5 rounded-3xl text-center font-semibold'>{card.time}</p>
+                                        <p className='flex-1 w-1/4 bg-[#F1511B] py-[4px] px-[px] rounded-[18px] text-center font-semibold'>{card.time}</p>
 
-                                        <div className='w-full lg:w-3/4 bg-[#566674] p-6'>
-                                            <h6 className='my-3 font-semibold'>{card.label}</h6>
-                                            <p className='mt-3'>{card.text}</p>
+                                        <div className=' w-3/4 bg-[#CDCDD466] p-5'>
+                                            <h6 className='my-3 text-[12px] font-medium'>{card.label}</h6>
+                                            <p className='mt-3 text-[12px]'>{card.text}</p>
                                         </div>
                                     </div>
                                 )
                             }
                         </div>
-
-
                     </div >
 
 
@@ -227,33 +231,36 @@ const SMB_Runsomware = () => {
                             bg={true}
                             p1="Like many small businesses, this professional services firm faced common but critical security challenges:"
                             array={list1}
+                            headingSize={true}
                         />
                     </div>
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             array={madeDifference}
                             li={true}
                             heading="💡 How Vijilan Made the Difference"
                             p1="The MSP had proactively deployed Vijilan's ThreatRemediate service across their client base, providing enterprise-grade protection at SMB-friendly pricing:"
+                            headingSize={true}
+                            textSize={true}
                         />
 
                     </div>
-                    <div className='mt-5'>
-                            <CommonTextCard
-                                heading="The Power Rapid Response"
-                                numCard={card}
-                            />
-                        </div>
-
+                    <div className='mt-10'>
+                        <CommonTextCard
+                            heading="The Power Rapid Response"
+                            numCard={card}
+                            namMenuSize={true}
+                        />
+                    </div>
 
                 </div>
 
                 <div className='grid-cols-1'>
 
-
-                    <ProfileHRCard
+                    <div className='mt-5'>
+                        <ProfileHRCard
                         h1="Client Profile"
                         l1l="Industry"
                         l1r="Professional Services"
@@ -267,49 +274,50 @@ const SMB_Runsomware = () => {
                         l5r="Ransomware"
                         l6l="Attack Time"
                         l6r="2:17 AM Monday"
+                        SizeModify={true}
                     />
+                    </div>
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12 mt-12'>
-                        <h1 className='text-center mt-8 font-semibold my-6'>Protection Stack</h1>
-                        <div className='w-2/4 mx-auto'>
+                    <div className=' py-5 px-12 mt-10' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
+                        <h1 className='text-center mt-8 text-[24px] font-medium my-6'>Protection Stack</h1>
+                        <div className='w-3/4 mx-auto'>
                             {
-                                protectionStack.map(li => <li className='list-disc mt-3'>{li} </li>)
+                                protectionStack.map(li => <li className='list-disc mt-3 text-[24px]'>{li} </li>)
                             }
                         </div>
                     </div>
 
 
-                    <div className="p-[1px]  my-5 rounded-lg bg-gradient-to-l to-[#F89B29] from-[#FF0F7B] mt-8">
+                    <div className="p-[1px]  my-5 rounded-lg bg-[#CDCDD466] mt-10">
                         <div
-                            className="p-[18px] text-lg font-medium  bg-[#66637C] w-full text-white inline-flex items-center space-x-3  rounded-lg"
-
-                        >
+                            className="p-[18px] text-lg font-medium w-full text-white inline-flex justify-center items-center space-x-3  rounded-lg">
                             <Heading_Btn
                                 h1="MSP as Hero"
-                                h3="Partner Success"
-                                desc=" The MSP became the hero by providing enterprise-grade security through Vijilan's partnership."
+                                h4="Partner Success"
+                                desc={" The MSP became the hero by\nproviding enterprise-grade security\nthrough Vijilan's partnership."}
                                 btn1="Become A partner"
-                                btn2="Learn More"
+                                btn="Learn More"
                                 url={"/become-a-partner"}
+                                isSmallHeading={true}
                             />
                         </div>
                     </div>
 
-
-
-
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
-                        array={protectionInsights}
-                        heading=" 🚀 Why This Story Matters"
-                    />
+                            array={protectionInsights}
+                            heading=" 🚀 Why This Story Matters"
+                            SizeControl={true}
+                        />
                     </div>
                 </div>
             </div>
 
 
 
-            <div className='mt-5'>
+            <div className='mt-10'>
                 <CommonTextCard
                     heading="The Business Impact"
                     numCard={businessImpact}
@@ -319,22 +327,39 @@ const SMB_Runsomware = () => {
             <DashboardSideText
                 desc="We came in Tuesday morning to an alert that we had been saved from a ransomware attack overnight. Our MSP and Vijilan stopped it before we even knew it was happening. They didn't just save our data; they saved our business"
                 author="Owner, Small Business Client"
+                fontSize={true}
             />
             <DashboardSideText
                 desc="This is exactly why we partner with Vijilan. We can provide our SMB clients with affordable, enterprise-grade protection and the peace of mind that comes from a 24/7 SOC. When the inevitable happens, Vijilan's active remediation makes us look like rockstars."
                 author="CEO, Managed Service Provider"
+                fontSize
             />
 
 
+            <div className='px-8 md:px-16 py-16 mt-10' style={{
+                background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+            }}>
+                <h1 className='text-[24px] font-bold text-center mb-8'>The MSP as Security Hero</h1>
+                <p className='text-[20px] font-medium text-center mb-10'>This case perfectly illustrates Vijilan's core philosophy: "We protect your business by empowering your trusted IT <br /> partner." The MSP became the hero to their client, delivering enterprise-grade security outcomes that would <br /> typically require a full security team. <br /> For MSPs, this partnership model means being able to say "yes" to security requirements, win more deals, and <br /> sleep better knowing their clients are protected 24/7.</p>
+                <div className='py-[16px] px-[24px] rounded-[8px] w-fit flex justify-center mx-auto' style={{
+                    background: "linear-gradient(90deg, #F89B29 0%, #FF0F7B 186.51%)"
+                }}>
+                    <button className='text-[16px] md:text-[18px] font-medium'>learn about  our msp program</button>
+                </div>
+            </div>
 
 
-            <Heading_Btn
-                h1="Don't Wait for Your Ransomware Story"
-                desc="Whether you're an MSP looking to protect your clients or a business seeking better security through your IT provider, Vijilan has the solution."
+
+
+            <div className='py-16'>
+                <Heading_Btn
+                h1={"Don't Wait for Your\nRansomware Story"}
+                desc={"Whether you're an MSP looking to protect your clients or a business seeking better\nsecurity through your IT provider, Vijilan has the solution."}
                 btn1="msps become a partner"
-                btn2="buissness find protection"    
-                url={"/become-a-partner"}           
+                btn9="buissness find protection"
+                url={"/become-a-partner"}
             />
+            </div>
         </div>
     );
 };

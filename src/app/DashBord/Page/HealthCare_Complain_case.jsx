@@ -139,46 +139,47 @@ const HealthCare_Complain_case = () => {
 
 
     return (
-        <div className='max-w-[90%] mx-auto text-white'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             <div>
 
                 {/* top part */}
                 <section className="px-6">
                     <div className="mb-8">
                         <nav className="flex flex-wrap items-center text-[12px]">
-                        <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
-                        </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
-                        </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
-                        <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
-                        </Link>
-                            <ChevronRight className="text-white w-4 h-4 mx-2" />
-                            <span className="!text-blue-500 text-[13px] font-medium" Home  >Health Compliance Success</span>
+                            <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Home</span>
+                            </Link>
+                            <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Resources</span>
+                            </Link>
+                            <ChevronRight className="w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                <span className=" cursor-pointer" style={{ color: "#7E7E7E" }}>Case Studies</span>
+                            </Link>
+                            <ChevronRight className=" w-4 h-4 mx-2" style={{ color: "#7E7E7E" }} />
+                            <span className=" text-[13px] font-medium" style={{ color: "#00AEEF" }}  >Health Compliance Success</span>
                         </nav>
                     </div>
                 </section>
 
                 {/* button */}
                 <section className='flex justify-center'>
-                    <button
-                        className="py-3  px-5 text-lg  rounded-4xl text-white bg-green-500 font-semibold">
+                    <button className="py-[15px]  p-[25px] md:px-[40px] text-[14px] font-bold rounded-[40px] text-white bg-[#00EF14] inline-flex items-center space-x-3" >
                         Compliance Success
                     </button>
                     {/* heading button */}
 
 
                 </section>
-                <Heading_Btn
-                    h1="Healthcare System Achieves HIPAA Success and 3x Faster Audits with Managed ITDR & Exposure Management"
-                    desc="Discover how a regional healthcare system achieved 100% HIPAA audit success while dramatically reducing audit preparation time through proactive identity protection and exposure management."
-                />
 
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+                <div className='mb-16 mt-4'>
+                    <h1 className='text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-14'>Healthcare System Achieves HIPAA <br /> Success and 3x Faster Audits with <br /> Managed ITDR & Exposure <br /> Management</h1>
+                    <p className='text-[18px] text-center'>Discover how a regional healthcare system achieved 100% HIPAA audit success while <br /> dramatically reducing audit preparation time through proactive identity protection <br /> and exposure management.</p>
+                </div>
+
+
+                <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5'>
                     {
                         numberArray.map(card => <NumberShow link={card.text} number={card.label} />)
                     }
@@ -196,46 +197,48 @@ const HealthCare_Complain_case = () => {
                     <div className='mt-5'>
                         <CommonTextCard
                             heading1="🏥 Executive Summary"
-                            p1=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
+                            p2=" A regional bank with multiple branches faced intense regulatory pressure and sophisticated cyber threats targeting financial institutions. Subject to stringent oversight from the SEC and GLBA regulations, they needed to elevate their security posture to protect sensitive customer financial data, prevent fraud, and demonstrate compliance to auditors.The bank required a solution that would not only defend against advanced persistent threats and financial fraud attempts, but also streamline their audit preparation process and provide the comprehensive documentation required by financial regulators."
                             heading2="HIPAA Compliance Achievement"
                             card={complianceArray}
                             border={true}
-                            borderColor="green"
+                            borderColor="#00EF14"
 
                         />
                     </div>
 
 
-
-
-
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             heading=" ⚕️ Healthcare Security Challenges"
-                            p1="Healthcare organizations face unique cybersecurity challenges that combine patient safety concerns with strict regulatory requirements:"
+                            p2="Healthcare organizations face unique cybersecurity challenges that combine patient safety concerns with strict regulatory requirements:"
                             listTop={list}
                             heading2="Healthcare Threat Protection Matrix"
                             card={healthcareArray}
                             border={true}
-                            borderColor="green"
+                            borderColor="#00EF14"
+                            SizeControl={true}
                         />
                     </div>
 
 
-                    <div className='bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-8 lg:px-12 mt-12'>
-                        <h1 className='  mb-4 text-left mt-8 font-semibold'>🛡️ Comprehensive Healthcare Security Solution</h1>
-                        <p className=' my-3'>Vijilan deployed a multi-layered security solution specifically tailored for the healthcare environment, centered on proactive defense and identity protection:</p>
+                    <div className=' py-5 px-8 lg:px-12 mt-10' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
+                        <h1 className='  mb-4 text-center mt-8 text-[24px] font-medium'>🛡️ Comprehensive Healthcare Security Solution</h1>
+                        <p className=' my-3 text-[16px] text-left'>Vijilan deployed a multi-layered security solution specifically tailored for the healthcare environment, centered on proactive defense and identity protection:</p>
 
-                        <h4 className='text-center text-2xl mb-5'>Healthcare Security Architecture</h4>
+                        <h4 className='text-center text-[24px] font-medium mb-5'>Healthcare Security Architecture</h4>
 
 
                         <div className='grid sm:grid-cols-1 lg:grid-cols-2   gap-5'>
                             {healthcareSecurity.map((card, index) => (
-                                <div key={index} className='flex  items-center justify-center'>
-                                    <div className='flex justify-center flex-col items-center bg-[#576675] py-8 px-4 gap-5 rounded-lg text-center  '>
+                                <div key={index} className={`flex items-center justify-center ${index === 2 ? 'lg:col-span-2 lg:max-w-[238px] mx-auto' : ''
+                                    }`}>
+
+                                    <div className='flex justify-center flex-col items-center bg-[#CDCDD466] py-8 px-4 gap-5 rounded-lg text-center '>
                                         <img src={card.icon} alt="" />
-                                        <h4 className='font-semibold'>{card.label}</h4>
-                                        <p>{card.text}</p>
+                                        <h4 className='text-[16px] font-bold'>{card.label}</h4>
+                                        <p className='text-[16px]'>{card.text}</p>
                                     </div>
 
                                 </div>
@@ -243,7 +246,7 @@ const HealthCare_Complain_case = () => {
                         </div>
 
 
-                        <div className='mt-8'>
+                        <div className='-mt-6'>
                             <CommonTextCard
                                 bg={false}
                                 array={healthcareServices}
@@ -252,10 +255,12 @@ const HealthCare_Complain_case = () => {
                         </div>
                     </div >
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             array={healthcareContinuity}
-                            heading="⚙️ Healthcare-Focused Implementation" />
+                            heading1="⚙️ Healthcare-Focused Implementation" 
+                            SizeControl={true}
+                            />
                     </div>
 
 
@@ -264,7 +269,8 @@ const HealthCare_Complain_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
+                   <div className='mt-5'>
+                     <ProfileHRCard
                         h1="Healthcare System Profile"
                         l1l="Organization Type"
                         l1r="Regional Healthcare"
@@ -278,30 +284,33 @@ const HealthCare_Complain_case = () => {
                         l5r="PHI Protection"
                         l6l="Risk Level"
                         l6r="High-Target Industry"
+                        SizeModify={true}
                     />
+                   </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
 
                         <MesurableComponentDashboard
-                            heading=" Healthcare Security & Compliance Results"
+                            heading={"Healthcare Security &\nCompliance Results"}
 
                             array={HIPAA_results}
+                            isColor={true}
                         />
                     </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <DashboardSideText
                             desc="In healthcare, a data breach isn't just a financial event—it's a fundamental violation of patient trust. Vijilan's focus on identity protection and proactive exposure management gave us the confidence that we were securing our patient data at the highest level. Their compliance reporting made our HIPAA audits smoother and faster than we ever thought possible."
-                            author="CISO, Regional Healthcare System"
+                            author2="CISO, Regional Healthcare System"
 
                         />
                     </div>
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             array={healthcareValue}
-                            heading=" 🏥 Why Vijilan Excels in Healthcare Security"
+                            heading={" 🏥 Why Vijilan Excels in Healthcare\nSecurity"}
 
                         />
                     </div>
@@ -310,13 +319,13 @@ const HealthCare_Complain_case = () => {
             </div>
 
 
-            <div>
+            <div className='py-16'>
 
                 <Heading_Btn
-                    h1="Protect Your Patients and Achieve HIPAA Compliance"
-                    desc="Discover how Vijilan's healthcare-specialized security solutions can protect your patient data while streamlining compliance and reducing operational burden."
+                    h1={"Protect Your Patients and\nAchieve HIPAA Compliance"}
+                    desc={"Discover how Vijilan's healthcare-specialized security solutions can protect your\npatient data while streamlining compliance and reducing operational burden."}
                     btn1="explore healthcare solutions"
-                    btn2="schedule hippa assessment"
+                    btn9="schedule hippa assessment"
                 />
             </div>
 

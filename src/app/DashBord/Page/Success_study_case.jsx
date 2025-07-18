@@ -140,41 +140,41 @@ const Success_study_case = () => {
 
 
     return (
-        <div className='max-w-[90%] mx-auto'>
+        <div className='container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-6'>
             {/* top part */}
             <section className="container mx-auto px-6">
                 <div className="mb-8">
                     <nav className="flex flex-wrap items-center text-[12px]">
                         <Link to={"/"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                            <span className="hover:text-white cursor-pointer">Home</span>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Home</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{color: "#7E7E7E"}} />
                         <Link to={"/resources"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Resources</span>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Resources</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2"style={{color: "#7E7E7E"}} />
                         <Link to={"/case-studies"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                        <span className="hover:text-white cursor-pointer">Case Studies</span>
+                            <span className=" cursor-pointer" style={{color: "#7E7E7E"}}>Case Studies</span>
                         </Link>
-                        <ChevronRight className="w-4 h-4 mx-2" />
+                        <ChevronRight className="w-4 h-4 mx-2" style={{color: "#7E7E7E"}}/>
                         <span className="!text-blue-400 text-[13px] font-medium">Var Growth Success</span>
                     </nav>
                 </div>
-
 
             </section>
 
             {/* hero section */}
             <section>
                 <div className='flex justify-center '>
-                    <h6 className='bg-gray-400 px-5 py-3 rounded-4xl '>VAR Growth Outcomes</h6>
+                    <h6 className='bg-[#BCBEC0] px-[20px] md:px-[40px] py-[15px] rounded-[40px] text-[14px] font-bold '>VAR Growth Outcomes</h6>
                 </div>
 
                 <Heading_Btn
-                    h1="VAR Achieves 2x Attach Rate & 40% Margin Growth with ThreatRemediate Complete"
-                    desc="Discover how a sales-focused Value-Added Reseller transformed their business with the perfect 'hands-off' cybersecurity solution that's easy to sell and highly profitable."
+                    h1={"VAR Achieves 2x Attach Rate & 40% Margin\nGrowth with ThreatRemediate\nComplete"}
+                    desc={"Discover how a sales-focused Value-Added Reseller transformed their business with\nthe perfect 'hands-off' cybersecurity solution that's easy to sell and highly\nprofitable."}
+                    isLeading={true}
                 />
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+                <div className='w-full max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 -mt-10'>
                     {
                         NumberArray.map(card => <NumberShow number={card.label}
                             link={card.text}
@@ -188,22 +188,25 @@ const Success_study_case = () => {
 
                 {/* left col */}
                 <div className='grid-cols-1'>
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-5 px-12'>
+                    <div className='mt-5 py-5 px-12' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
 
                         <div className='text-left'>
-                            <h1 className='font-semibold my-5'>📈 Executive Summary</h1>
-                            <p className='my-5'>    A mid-sized Value-Added Reseller with a strong sales focus needed a cybersecurity solution that would complement their technology solutions and hardware sales without adding operational complexity. They required a "hands-off" security offering that was easy to sell, provided clear client value, and opened new recurring revenue streams.
+                            <h1 className='text-[24px] font-medium my-5'>📈 Executive Summary</h1>
+                            <p className='my-5 text-[16px]'>    A mid-sized Value-Added Reseller with a strong sales focus needed a cybersecurity solution that would complement their technology solutions and hardware sales without adding operational complexity. They required a "hands-off" security offering that was easy to sell, provided clear client value, and opened new recurring revenue streams.
 
                                 Traditional security offerings were too complex to package and sell effectively, often slowing down sales cycles and creating post-sale management burdens that drained resources from core sales activities. The VAR needed a credible, market-leading solution to compete effectively with established players like Arctic Wolf.</p>
                         </div>
 
                         <div className='my-8'>
-                            <h1 className='text-lg md:text-2xl lg:text-3xl font-semibold mt-3  mb-5 text-center'>ThreatRemotediate Complete /  Silver Tier Results</h1>
+                            <h1 className='text-[20px] font-medium mt-3  mb-12 text-center'>ThreatRemotediate Complete /  Silver Tier Results</h1>
                             <div className='grid grid-cols-1 lg:grid-cols-2  gap-5'>
                                 {ExucativeSummary.map(card => <DashBoardCard
                                     icon={card.icon}
                                     head={card.label}
                                     desc={card.text}
+                                    iconSize={true}
                                 />)}
                             </div>
                         </div>
@@ -217,25 +220,29 @@ const Success_study_case = () => {
                         heading="🎯Sales & Operational Challenges"
                         p1="As a sales-focused VAR, the company faced unique challenges in adding cybersecurity to their portfolio"
                         array={list1}
+                        p2={`The Director of Sales emphasized: "We're great at selling technology solutions, but security was always a challenge. The products were too complex, the margins weren't predictable, and we didn't have the expertise to manage them post-sale. We needed something that played to our strengths as a sales organization."`}
+                        spaceHandling={true}
                     />
 
-                    <div className='  bg-gradient-to-t to-[#063853] from-[#082235] py-8 px-12 mt-12'>
-                        <h1 className='text-lg md:text-xl text-center mt-8 font-semibold'>🛡️ ThreatRemediate Complete: The Perfect VAR Solution</h1>
+                    <div className=' py-8 px-10 mt-10' style={{
+                        background: "linear-gradient(0deg, #082235 53.83%, #00AEEF 328.5%)"
+                    }}>
+                        <h1 className='text-[24px] text-center mt-8 font-medium'>🛡️ ThreatRemediate Complete: The Perfect <br /> VAR Solution</h1>
 
-                        <p className='text-left my-8'>
+                        <p className='text-left my-8 text-[16px'>
                             Vijilan deployed ThreatRemediate Complete with Silver Tier partnership benefits, specifically designed for sales-focused VARs needing a comprehensive yet simple security offering:
                         </p>
-                        <p className='mt-2 font-extrabold'>Core Service Components</p>
+                        <p className='mt-2 text-[16px] font-bold'>Core Service Components</p>
                         <ul className=' list-item'>
                             {
-                                list2.map(li => <li className='list-disc mt-3 ml-6'>{li}</li>)
+                                list2.map(li => <li className='list-disc mt-3 ml-5 md:ml-10'>{li}</li>)
                             }
                         </ul>
 
-                        <p className='mt-6 font-extrabold'>Silver Tier Sales Enablement</p>
+                        <p className='mt-6 text-[16px] font-bold'>Silver Tier Sales Enablement</p>
                         <ul className=' list-item'>
                             {
-                                list3.map(li => <li className='list-disc mt-3 ml-6'>{li}</li>)
+                                list3.map(li => <li className='list-disc mt-3 ml-5 md:ml-10'>{li}</li>)
                             }
                         </ul>
 
@@ -243,11 +250,11 @@ const Success_study_case = () => {
 
                     {/* card */}
 
-                    <div className='mt-8'>
-                        <h1 className='my-4 text-center font-semibold'>Accelerated Sales Process</h1>
+                    <div className=''>
+                        <h1 className='my-8 text-center text-[20px] font-medium'>Accelerated Sales Process</h1>
                         <div className='mx-6 lg:mx-16 grid grid-cols-1 md:grid-cols-2 gap-5'>
                             {
-                                SalesProcess.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} />)
+                                SalesProcess.map(card => <DashBoardCard icon={card.icon} head={card.label} desc={card.text} iconSize={true} />)
                             }
                         </div>
                     </div>
@@ -256,10 +263,11 @@ const Success_study_case = () => {
 
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <CommonTextCard
                             array={fitForSales}
                             heading="🎯  Perfect Fit for Sales-Focused VARs"
+                            SizeControl={true}
                         />
                     </div>
 
@@ -271,7 +279,8 @@ const Success_study_case = () => {
                 <div className='grid-cols-1'>
 
 
-                    <ProfileHRCard
+                    <div className='mt-5'>
+                        <ProfileHRCard
                         h1="VAR Profile"
                         l1l="Business type"
                         l1r="Value Added Reseller"
@@ -285,24 +294,27 @@ const Success_study_case = () => {
                         l5r="SMB & Mid-Market"
                         l6l="Geographic Region"
                         l6r="Regional"
+                        SizeModify={true}
                     />
+                    </div>
 
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <MesurableComponentDashboard
-                            heading="Measurable Sales & Business Impact"
+                            heading={"Measurable Sales &\nBusiness Impact"}
                             array={MeasurabeCard}
+                            isColor={true}
                         />
                     </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
                         <DashboardSideText
                             desc="Vijilan's ThreatRemediate Complete is the perfect solution for a sales-focused VAR. It's easy to sell, requires zero post-sale management from our team, and our margins have never been better. The partner enablement toolkit had our team closing deals in the first week. It's a true 'sell it and forget it' model with recurring revenue."
                             author="Director of Sales, VAR Partner"
                         />
                     </div>
 
-                    <div className='mt-5'>
+                    <div className='mt-10'>
 
                         <CommonTextCard
                             array={businessModel}
@@ -313,14 +325,10 @@ const Success_study_case = () => {
             </div>
 
 
-            <div>
-
-
-
+            <div className='py-16'>
                 <Heading_Btn
-                    h1="Ready to Transform Your VAR Business?"
-                    desc="Discover how ThreatRemediate Complete and our Silver Tier VAR program can drive similar growth and profitability for your technology reseller business.
-Explore var  partner ship"
+                    h1={"Ready to Transform Your VAR\nBusiness?"}
+                    desc={"Discover how ThreatRemediate Complete and our Silver Tier VAR program can drive\nsimilar growth and profitability for your technology reseller business.Explore var  partner ship"}
                     btn1="Explore var partnership"
                     btn2="schedule sale  consultation"
                     url={"/visilan-msg-partner"}
